@@ -5,3 +5,4 @@ Some editors take snippet libraries in one file.
 Other editors require the each snippet resides in a separate file. 
 The user downloads the desired file or folder and reinstalls the snippets following the protocol for that particular editor.
 
+Videos that demonstrate representatives from each class of snippet are planned. 
