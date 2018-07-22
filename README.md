@@ -10,7 +10,7 @@ Videos that demonstrate the installation of the snippets for each editor are pla
 **Sublime text 3**
 This is my favorite gui based editor. 
 It starts up much faster than the other text editors for coders.
-Move the folder **pymolsnips** to "~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/".
+Move the folder **pymolsnips** to \url{~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/}.
 You may have to create the snippets subfolder. 
 You can ignore that step and just move **pymolsnips** to "~/Library/Application Support/Sublime\ Text\ 3/Packages/User/" and it should still work.
 Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab.
