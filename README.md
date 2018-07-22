@@ -16,3 +16,24 @@ You can ignore that step and just move **pymolsnips** to "~/Library/Application 
 Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab.
 16 lines of code should appear.
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
+
+
+Snippet categories:
+
+- "Molecular representation"
+- "Label format"
+- "Specialized figure"
+- "Color scheme"
+- "Label placement"
+- "Coordinate covalent bonds"
+- "H-bonds"
+- "Electron density"
+- "Fetch file from PDB"
+- "Print coordinates of selection"
+- "Alternate locators"
+- "Format label"
+- "Measurement surface area"
+- "Print sequence"
+- "Label position"
+- "Change orientation"
+- "Stereo"
