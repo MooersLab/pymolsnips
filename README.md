@@ -20,20 +20,20 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 Snippet categories:
 
-- Molecular representation
-- Label format
-- Specialized figure
+- Alternate locators
+- Change orientation
 - Color scheme
-- Label placement
 - Coordinate covalent bonds
-- H-bonds
 - Electron density
 - Fetch file from PDB
-- Print coordinates of selection
-- Alternate locators
 - Format label
-- Measurement surface area
-- Print sequence
+- H-bonds
+- Label format
+- Label placement
 - Label position
-- Change orientation
+- Measurement surface area
+- Molecular representation
+- Print coordinates of selection
+- Print sequence
+- Specialized figure
 - Stereo
