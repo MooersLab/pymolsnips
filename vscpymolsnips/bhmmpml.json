@@ -1,0 +1,575 @@
+{
+"ao": {
+    "prefix": "ao",
+    "body": "set_color oxygen, [1.0,0.4,0.4]; 
+set_color nitrogen, [0.5,0.5,1.0];
+remove solvent;
+as spheres;
+util.cbaw;
+bg white;
+set light_count,10;
+set spec_count,1;
+set shininess, 10;
+set specular,0.25;
+set ambient,0;
+set direct,0;
+set reflect,1.5;
+set ray_shadow_decay_factor, 0.1;
+set ray_shadow_decay_range, 2;
+unset depth_cue;
+ray",
+    "description": "Ambient occlussion.",
+    "scope": "text.pml"
+},
+"ellipcol": {
+    "prefix": "ellipcol",
+    "body": "set ellipsoid_color, ${1:color}",
+    "description": "Set ellipsoid color.",
+    "scope": "text.pml"
+},
+"sigdist": {
+    "prefix": "sigdist",
+    "body": "set label_distance_digits, ${1:2}",
+    "description": "set distance labels to display 2 decimals
+",
+    "scope": "text.pml"
+},
+"sigang": {
+    "prefix": "sigang",
+    "body": "set label_angle_digits, ${1:2}",
+    "description": "Set angle labels to display 2 decimals places",
+    "scope": "text.pml"
+},
+"bs": {
+    "prefix": "bs",
+    "body": "show sticks;\\nset stick_radius, 0.12;\\nset stick_ball, on;\\n set stick_ball_ratio, 1.9;\\nshow nb_spheres;\\nset nb_spheres_size=0.33;\\n$0",
+    "description": "Ball and stick representation. ",
+    "scope": "text.pml"
+},
+"stack": {
+    "prefix": "stack",
+    "body": "delete all;
+fetch ${1:4PCO}, type=pdb,async=0;
+
+select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );
+hide everything, element h; 
+
+remove not ${2:G2G3};
+
+bg_color white;
+
+show sticks;
+set stick_radius=0.14;
+set stick_ball, on; 
+set stick_ball_ratio,1.9;
+
+set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
+hide everything, element H;
+
+select carbon1, element C and (resi ${4:3} or resi ${5:8}) 
+
+# select lower base pair;
+
+select carbon2, element C and (resi ${3:2} or resi ${6:9}) 
+
+#select upper base pair;
+color gray70,carbon1;
+color gray10,carbon2;
+
+space cmyk;
+
+distance hbond1,/${1:4PCO}//B/U`9/N3,/${1:4PCO}//A/G`2/O6;
+distance hbond2,/${1:4PCO}//B/U`9/O2,/${1:4PCO}//A/G`2/N1;
+distance hbond3,/${1:4PCO}//A/U`3/N3,/${1:4PCO}//B/G`8/O6;
+distance hbond4,/${1:4PCO}//A/U`3/O2,/${1:4PCO}//B/G`8/N1;
+
+color black, hbond1;
+color black, hbond2;
+color gray70, hbond3;
+color gray70, hbond4;
+show nb_spheres;
+
+set nb_spheres_size, 0.35;
+hide labels;
+ray 1600,1000;
+png ${1:4PCO}.png
+$0",
+    "description": "Base-stacking figure.",
+    "scope": "text.pml"
+},
+"bu": {
+    "prefix": "bu",
+    "body": "run ~/Scripts/PyMOLScripts/quat.py; quat
+$0",
+    "description": "Biological unit.",
+    "scope": "text.pml"
+},
+"doubleBond": {
+    "prefix": "doubleBond",
+    "body": "set valence, 1 
+set valence_mode, 1
+$0",
+    "description": "Valence bond. ",
+    "scope": "text.pml"
+},
+"cblind": {
+    "prefix": "cblind",
+    "body": "run ~/Pymol-script-repo/colorblindfriendly.py;
+as cartoon;
+color cb_red, ss H;
+color cb_yellow,ss S;
+color cb_green, ss L+; 
+$0",
+    "description": "Color blindness.",
+    "scope": "text.pml"
+},
+"centerpi": {
+    "prefix": "centerpi",
+    "body": "pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;
+dist pi_cent////ps1, b/${4:U`15}/${5:aaa};
+$0",
+    "description": "Center pi.",
+    "scope": "text.pml"
+},
+"cribbon": {
+    "prefix": "cribbon",
+    "body": "as cartoon;
+color red, ss H;
+color yellow,ss S;
+color green, ss L+; 
+$0",
+    "description": "Color ribbon H red, strand yellow, loop green",
+    "scope": "text.pml"
+},
+"cspheres": {
+    "prefix": "cspheres",
+    "body": "as spheres;    
+color gray30, chain %0;    
+color white, chain %1;    
+color green, name CL;    
+color brown, resn NAG;    
+color red, resi 381;    
+remove solvent;    
+unset specular;    
+set ray_trace_gain, 0;    
+set ray_trace_mode, 3;    
+bg_color white;    
+set ray_trace_color, black;    
+unset depth_cue;    
+$0",
+    "description": "Colored spheres.",
+    "scope": "text.pml"
+},
+"coordinate": {
+    "prefix": "coordinate",
+    "body": "viewport 900,600;    
+fetch 3nd4, type=pdb, async=0;    
+run ~/Scripts/PyMOLScripts/quat.py;    
+quat 3nd4;    
+show sticks;    
+set stick_radius=0.125;    
+hide everything, name H*;    
+bg_color white;        
+create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));        
+bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);    
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);    
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);    
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);    
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);        
+distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);    
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);    
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);    
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);    
+show nb_spheres;     
+set nb_spheres_size, .35;        
+distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;    
+distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;    
+distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;   
+distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;    
+distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;    
+distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    
+distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;    
+distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;    
+distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;    
+distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;    
+distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;    
+distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
+distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
+distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
+ distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
+distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
+distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
+distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
+set depth_cue=0;    
+set ray_trace_fog=0;    
+set dash_color, black;    
+set label_font_id, 5;    
+set label_size, 36;   
+ 
+set label_position, (0.5, 1.0, 2.0);   
+set label_color, black;    
+set dash_gap, 0.2;    
+set dash_width, 2.0;    
+set dash_length, 0.2;    
+set label_color, black;    
+set dash_gap, 0.2;   
+set dash_width, 2.0;   
+set dash_length, 0.2;    
+select carbon, element C;    
+color yellow, carbon;    
+disable carbon;    
+set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)    
+$0",
+    "description": "Coordinate covalent bonds to metals and H-bonds friom RNA.",
+    "scope": "text.pml"
+},
+"distance": {
+    "prefix": "distance",
+    "body": "distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+color ${1:dist3}, ${4:black}
+$0",
+    "description": "H-bond distances.",
+    "scope": "text.pml"
+},
+"drawHbonds": {
+    "prefix": "drawHbonds",
+    "body": "hide everything, hydrogens
+hide labels
+set dash_color, ${1:black}${2:yelow} 
+set dash_gap, 0.4
+set dash_radius, 0.08
+$0",
+    "description": "Draw H-bonds. ",
+    "scope": "text.pml"
+},
+"curvedDensity": {
+    "prefix": "curvedDensity",
+    "body": "delete all;
+fetch 4dgr, type=pdb, async=0;
+fetch 4dgr, type=2fofc, async=0;
+select LongGlycan, resi 469:477;
+orient LongGlycan;
+remove not LongGlycan;
+remove name H*;
+isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+color density, 2fofcmap; 
+show sticks;show spheres;
+set stick_radius, .07;
+set sphere_scale, .19;
+set sphere_scale, .13, elem H;
+set bg_rgb=[1, 1, 1];
+set stick_quality, 50;
+set sphere_quality, 4;
+color gray85, elem C;
+color red, elem O;
+color slate, elem N;
+color gray98, elem H;
+set stick_color, gray50;
+set ray_trace_mode, 1;
+set ray_texture, 2;
+set antialias, 3;
+set ambient, 0.5;
+set spec_count, 5;
+set shininess, 50;
+set specular, 1;
+set reflect, .1;
+set dash_gap, 0;
+set dash_color, black;
+set dash_gap, .15;
+set dash_length, .05;
+set dash_round_ends, 0;
+set dash_radius, .05;
+set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
+preset.ball_and_stick("all",mode=1);
+draw 
+$0",
+    "description": "Curved electron density. ",
+    "scope": "text.pml"
+},
+"fetch2FoFc": {
+    "prefix": "fetch2FoFc",
+    "body": "fetch ${1:3nd4}, type=2fofc, async=0
+$0",
+    "description": "fetch 2FoFc",
+    "scope": "text.pml"
+},
+"fetchCIF": {
+    "prefix": "fetchCIF",
+    "body": "fetch ${1:3nd3}, type=cif, async=0;
+$0",
+    "description": "Fetch cif file.",
+    "scope": "text.pml"
+},
+"fetchFoFc": {
+    "prefix": "fetchFoFc",
+    "body": "fetch ${1:3nd4}, type=FoFc, async=0
+$0",
+    "description": "Fetch fofc",
+    "scope": "text.pml"
+},
+"filledRing": {
+    "prefix": "filledRing",
+    "body": "show sticks;set cartoon_ring_mode, 3;
+set cartoon_ring_finder, 1;
+set cartoon_ladder_mode, 1;
+set cartoon_nucleic_acid_mode, 4;
+set cartoon_ring_transparency, 0.5;
+as cartoon;
+$0",
+    "description": "Filled rings in nucleic acids. ",
+    "scope": "text.pml"
+},
+"getCoordinates": {
+    "prefix": "getCoordinates",
+    "body": "print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}')
+$0
+",
+    "description": "Get coordinates. ",
+    "scope": "text.pml"
+},
+"hbonddash": {
+    "prefix": "hbonddash",
+    "body": "hide everything, hydrogens
+hide labels
+set dash_color, black 
+set dash_gap, 0.4
+set dash_radius, 0.08
+$0",
+    "description": "H-bond dashes",
+    "scope": "text.pml"
+},
+"hbond": {
+    "prefix": "hbond",
+    "body": "hide labels;
+set dash_color, black ;
+set dash_length, ${1:0.15};
+set dash_gap, ${2:0.35};
+set dash_width,  ${3:3.0};
+$0",
+    "description": "Hbond setup. ",
+    "scope": "text.pml"
+},
+"hidealtloc": {
+    "prefix": "hidealtloc",
+    "body": "select altconf, alt ${1:b}  # select B alternative locators
+hide everything, altconf  # hide alt B locators
+$0",
+    "description": "Hide alt loc",
+    "scope": "text.pml"
+},
+"labelAtom": {
+    "prefix": "labelAtom",
+    "body": "label name ca, "%s%s" %(one_letter[${1:resn}],${2:resi})
+$0",
+    "description": "labelCA",
+    "scope": "text.pml"
+},
+"labelResn": {
+    "prefix": "labelResn",
+    "body": "label name ca, "%s:%s" %(one_letter[%0],%1)label name ca, "" one_letter[${3:resn}],${4:resi})
+$0",
+    "description": "Label residue number.",
+    "scope": "text.pml"
+},
+"labelSS": {
+    "prefix": "labelSS",
+    "body": "alter ${1:}, ss='%1';
+label (%2),"%3";
+$0",
+    "description": "Label SS. ",
+    "scope": "text.pml"
+},
+"loadPDBbs": {
+    "prefix": "loadPDBbs",
+    "body": "fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+hide (name H*);
+hide lines;
+show sticks;
+set stick_radius, ${2:1.2};
+set nb_sphere_radius, ${3:0.35};
+orient;
+$0",
+    "description": "Load PDB ball-and-stick.",
+    "scope": "text.pml"
+},
+"loadPDBnb": {
+    "prefix": "loadPDBnb",
+    "body": "fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
+orient;
+set stick_radius, ${2:1.2};
+hide (name H*);
+set nb_sphere_size, ${3:0.35};
+set nb_spheres_quality, ${4:1};
+show nb_spheres;
+$0",
+    "description": "Load PDB nb spheres. ",
+    "scope": "text.pml"
+},
+"ms": {
+    "prefix": "ms",
+    "body": "fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+select ${2:temp}, ${3:3nd3} and chain A;
+run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
+calc_msms_area ${2:temp};
+$0",
+    "description": "Measure surface area. ",
+    "scope": "text.pml"
+},
+"molscriptRibbon": {
+    "prefix": "molscriptRibbon",
+    "body": "set cartoon_highlight_color, grey;
+show cartoon;
+set cartoon_flat_sheets, 0;
+set cartoon_smooth_loops, 0;
+set cartoon_fancy_helices, 1;
+$0",
+    "description": "Molscript ribbons.",
+    "scope": "text.pml"
+},
+"oneLetter": {
+    "prefix": "oneLetter",
+    "body": "one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%
+'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%
+'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%
+$0",
+    "description": "One letter amino acid. ",
+    "scope": "text.pml"
+},
+"fasta": {
+    "prefix": "fasta",
+    "body": "print cmd.get_fastastr('all')
+$0",
+    "description": "Print Fasta from PDB file. ",
+    "scope": "text.pml"
+},
+"pseudolabel": {
+    "prefix": "pseudolabel",
+    "body": "pseudoatom ${1:forLabel};
+label ${1:forLabel}, "%0";
+set label_color, ${2:red};
+$0",
+    "description": "Position label with pseudoatom. ",
+    "scope": "text.pml"
+},
+"rotate": {
+    "prefix": "rotate",
+    "body": "rotate ${1:x}, ${2:45}, ${3:pept}
+$0",
+    "description": "Rotate about axis.",
+    "scope": "text.pml"
+},
+"stereoDraw": {
+    "prefix": "stereoDraw",
+    "body": "stereo walleye; 
+set ray_shadow, off; 
+#draw 3200,2000;
+draw ${1:1600,1000}; 
+png ${2:aaa}.png
+$0
+",
+    "description": "Stereo draw.",
+    "scope": "text.pml"
+},
+"stereoRay": {
+    "prefix": "stereoRay",
+    "body": "stereo; 
+set ray_shadow, off;
+ray ${1:2400,1200};
+png ${2:aaa}.png
+$0",
+    "description": "Stereo ray.",
+    "scope": "text.pml"
+},
+"threeMaps": {
+    "prefix": "threeMaps",
+    "body": "load ${1:4dgr}.pdb
+# Make sure to rename map file so that 
+# the root filename differs from pdb root filename
+load ${1:4dgr}_2fofc.ccp4, 2fofc;
+load ${1:4dgr}_fofc.ccp4, fofc;
+select  ${2:glycan}, resid 200 or (resid 469:477);
+isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};
+color density, ${3:mesh1};
+isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
+color green, ${4:mesh2};
+isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+color red, ${5:mesh2};
+${0}
+
+",
+    "description": "Three electron density. ",
+    "scope": "text.pml"
+},
+"turnAboutAxis": {
+    "prefix": "turnAboutAxis",
+    "body": "turn ${1:x},${2:90}
+$0",
+    "description": "Turn about axis. ",
+    "scope": "text.pml"
+},
+"volumeRamp": {
+    "prefix": "volumeRamp",
+    "body": "cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
+$0",
+    "description": "Volume ramp.",
+    "scope": "text.pml"
+},
+"solventRadius": {
+    "prefix": "solventRadius",
+    "body": "set solvent_radius, ${1:1.55}
+${0}",
+    "description": "Set radius of ball used to make solvent accessible surface",
+    "scope": "text.pml"
+},
+"scaleRadiusColor": {
+    "prefix": "scaleRadiusColor",
+    "body": "bg_color white
+hide everything
+show spheres
+set  stick_radius = 0.1
+hide everything, HET
+show spheres, HET
+set sphere_quality=3
+show sticks, resi 1102
+from pymol import stored
+# set the stored array equal to the b−va lue s ; or use your own va lue s
+s t o r ed . bb = [ ]
+i t e r a t e  , s t o r ed . bb . append (b)
+# execute a python−block
+python
+# s c a l e the b−va lue s
+M = max( s t o r ed . bb)
+scaledBB = map( lambda x : f l o a t ( x/M) , s t o r ed . bb)
+count = 0
+# s e t the sphere r a d i i independently
+f o r x in scaledBB :
+cmd . s e t ( " sphe r e_s cal e " , x , " ID %s " % count )
+count = count + 1
+python end
+spectrum b , s e l e c t i o n=4gdx
+space cmyk
+s e t spe cul a r_int ens i t y , 0.25",
+    "description": "Scale the radius and color of atoms as spheres by property in the B-value column.",
+    "scope": "text.pml"
+},
+"rv": {
+    "prefix": "rv",
+    "body": "run roundview.py",
+    "description": "Return settings in rounded format.",
+    "scope": "text.pml"
+},
+"spng": {
+    "prefix": "spng",
+    "body": "python
+import datetime
+from pymol import cmd 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M")
+s = str(DT) 
+cmd.save(stemName+s+".png") 
+end python
+$0
+",
+    "description": "Save png flle with timestamp",
+    "scope": "text.pml"
+},
+}
