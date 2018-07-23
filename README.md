@@ -38,17 +38,18 @@ This is my defult gui-based editor for many reasions. The free trial period is i
 
 Move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/**. You may have to create the snippets subfolder. You can ignore that step and just move **pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/** and it should still work. Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab. 16 lines of code should appear. You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
+<!--
 #<h3>TextMate (Mac only)</h3>
 <h3>Visual Code Studio (Universal)</h3>
+-->
 
 From the above folder **vscpymolsnips**, move the file **pml.json** to **~/Library/Application Support/Code/User/snippets**. You may have to install a snippets manager package first, if you have not done so already.
  
 
 
+<!--
+<h2>Text editors that are ready out of the box</h2>
 
-#<h2>Text editors that are ready out of the box</h2>
-
-
-#<h2>Terminal based text editors</h2>
-#In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
-
+<h2>Terminal based text editors</h2>
+In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
+-->
