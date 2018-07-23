@@ -44,10 +44,8 @@ Move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Te
 
 <h3>Visual Code Studio (Universal)</h3>
 
-Move the file **pml.json** to  **~/Library/Application Support/Code/User/snippets**. You may have to install a snippets manager package first, if you have not done so already.
-
-<h3>Atom (Universal)</h3>
-
+From the above folder **vscpymolsnips**, move the file **pml.json** to **~/Library/Application Support/Code/User/snippets**. You may have to install a snippets manager package first, if you have not done so already.
+ 
 
 
 
