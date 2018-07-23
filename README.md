@@ -7,7 +7,7 @@ The user downloads the desired file or folder and reinstalls the snippets follow
 
 Videos that demonstrate the installation of the snippets for each editor are planned.
 
-<h3>Sublime text 3<\h3>
+<h3>Sublime text 3</h3>
 
 This is my favorite gui based editor. 
 It starts up much faster than the other text editors for coders.
