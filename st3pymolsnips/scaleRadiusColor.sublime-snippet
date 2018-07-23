@@ -9,21 +9,21 @@ show spheres, HET
 set sphere_quality=3
 show sticks, resi 1102
 from pymol import stored
-# set the stored array equal to the b−values ; or use your own values 
+# set the stored array equal to the b−values; or use your own values 
 stored.bb = [ ]
-iterate, stored.bb.append (b)
+iterate, stored.bb.append(b)
 # execute a python−block
 python
 # scale the b−values
 M = max(stored.bb)
-scaledBB = map( lambda x : f l o a t ( x/M) , s t o r ed . bb)
+scaledBB = map(lambda x: float (x/M), stored.bb)
 count = 0
-# s e t the sphere r a d i i independently
+# set the sphere radii independently
 for x in scaledBB:
   cmd.set("sphere_scale", x ,"ID %s"%count)
   count = count + 1
 python end
-spectrum b,selection=4gdx
+spectrum b, selection=4gdx
 space cmyk
 set specular_intensity , 0.25
 ]]></content>
