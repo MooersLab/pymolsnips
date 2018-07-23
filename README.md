@@ -38,7 +38,7 @@ This is my defult gui-based editor for many reasions. The free trial period is i
 
 Move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/**. You may have to create the snippets subfolder. You can ignore that step and just move **pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/** and it should still work. Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab. 16 lines of code should appear. You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
-<h3>TextMate (Mac only)</h3>
+# <h3>TextMate (Mac only)</h3>
 
 
 
