@@ -1,0 +1,13 @@
+<snippet>
+<content><![CDATA[
+run ~/Pymol-script-repo/colorblindfriendly.py;
+as cartoon;
+color cb_red, ss H;
+color cb_yellow,ss S;
+color cb_green, ss L+; 
+$0
+]]></content>
+<tabTrigger>cblind</tabTrigger>
+<scope></scope>
+<description>Color blindness.</description>
+</snippet>

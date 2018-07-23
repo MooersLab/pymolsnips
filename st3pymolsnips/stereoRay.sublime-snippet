@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+stereo; 
+set ray_shadow, off;
+ray ${1:2400,1200};
+png ${2:aaa}.png
+$0
+]]></content>
+<tabTrigger>stereoRay</tabTrigger>
+<scope></scope>
+<description>Stereo ray.</description>
+</snippet>

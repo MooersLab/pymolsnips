@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+label name ca, "%s%s" %(one_letter[${1:resn}],${2:resi})
+$0
+]]></content>
+<tabTrigger>labelAtom</tabTrigger>
+<scope></scope>
+<description>labelCA</description>
+</snippet>

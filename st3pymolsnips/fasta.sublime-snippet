@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+print cmd.get_fastastr('all')
+$0
+]]></content>
+<tabTrigger>fasta</tabTrigger>
+<scope></scope>
+<description>Print Fasta from PDB file. </description>
+</snippet>

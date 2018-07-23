@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+turn ${1:x},${2:90}
+$0
+]]></content>
+<tabTrigger>turnAboutAxis</tabTrigger>
+<scope></scope>
+<description>Turn about axis. </description>
+</snippet>

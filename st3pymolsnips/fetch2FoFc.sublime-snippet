@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+fetch ${1:3nd4}, type=2fofc, async=0
+$0
+]]></content>
+<tabTrigger>fetch2FoFc</tabTrigger>
+<scope></scope>
+<description>fetch 2FoFc</description>
+</snippet>

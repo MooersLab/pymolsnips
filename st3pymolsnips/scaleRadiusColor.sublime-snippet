@@ -1,0 +1,33 @@
+<snippet>
+<content><![CDATA[
+bg_color white
+hide everything
+show spheres
+set  stick_radius = 0.1
+hide everything, HET
+show spheres, HET
+set sphere_quality=3
+show sticks, resi 1102
+from pymol import stored
+# set the stored array equal to the b−va lue s ; or use your own va lue s
+s t o r ed . bb = [ ]
+i t e r a t e  , s t o r ed . bb . append (b)
+# execute a python−block
+python
+# s c a l e the b−va lue s
+M = max( s t o r ed . bb)
+scaledBB = map( lambda x : f l o a t ( x/M) , s t o r ed . bb)
+count = 0
+# s e t the sphere r a d i i independently
+f o r x in scaledBB :
+cmd . s e t ( " sphe r e_s cal e " , x , " ID %s " % count )
+count = count + 1
+python end
+spectrum b , s e l e c t i o n=4gdx
+space cmyk
+s e t spe cul a r_int ens i t y , 0.25
+]]></content>
+<tabTrigger>scaleRadiusColor</tabTrigger>
+<scope></scope>
+<description>Scale the radius and color of atoms as spheres by property in the B-value column.</description>
+</snippet>

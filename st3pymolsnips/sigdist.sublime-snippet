@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+set label_distance_digits, ${1:2}
+]]></content>
+<tabTrigger>sigdist</tabTrigger>
+<scope></scope>
+<description>set distance labels to display 2 decimals
+</description>
+</snippet>

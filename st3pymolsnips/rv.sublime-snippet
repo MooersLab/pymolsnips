@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+run roundview.py
+]]></content>
+<tabTrigger>rv</tabTrigger>
+<scope></scope>
+<description>Return settings in rounded format.</description>
+</snippet>

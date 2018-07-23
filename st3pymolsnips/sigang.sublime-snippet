@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+set label_angle_digits, ${1:2}
+]]></content>
+<tabTrigger>sigang</tabTrigger>
+<scope></scope>
+<description>Set angle labels to display 2 decimals places</description>
+</snippet>

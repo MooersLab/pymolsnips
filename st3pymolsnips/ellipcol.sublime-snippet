@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+set ellipsoid_color, ${1:color}
+]]></content>
+<tabTrigger>ellipcol</tabTrigger>
+<scope></scope>
+<description>Set ellipsoid color.</description>
+</snippet>
