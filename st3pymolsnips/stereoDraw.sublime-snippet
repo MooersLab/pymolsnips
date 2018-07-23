@@ -6,7 +6,6 @@ set ray_shadow, off;
 draw ${1:1600,1000}; 
 png ${2:aaa}.png
 $0
-
 ]]></content>
 <tabTrigger>stereoDraw</tabTrigger>
 <scope></scope>

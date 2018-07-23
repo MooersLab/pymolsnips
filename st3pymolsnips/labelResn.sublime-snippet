@@ -1,9 +1,0 @@
-<snippet>
-<content><![CDATA[
-label name ca, "%s:%s" %(one_letter[%0],%1)label name ca, "" one_letter[${3:resn}],${4:resi})
-$0
-]]></content>
-<tabTrigger>labelResn</tabTrigger>
-<scope></scope>
-<description>Label residue number.</description>
-</snippet>

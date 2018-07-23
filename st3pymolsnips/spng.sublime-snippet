@@ -8,7 +8,6 @@ s = str(DT)
 cmd.save(stemName+s+".png") 
 end python
 $0
-
 ]]></content>
 <tabTrigger>spng</tabTrigger>
 <scope></scope>

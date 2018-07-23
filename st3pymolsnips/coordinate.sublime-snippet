@@ -34,7 +34,7 @@ distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;
 distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
 distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
 distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
- distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
+distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
 distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
 distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
 distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
@@ -43,7 +43,6 @@ set ray_trace_fog=0;
 set dash_color, black;    
 set label_font_id, 5;    
 set label_size, 36;   
- 
 set label_position, (0.5, 1.0, 2.0);   
 set label_color, black;    
 set dash_gap, 0.2;    
