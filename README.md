@@ -29,6 +29,7 @@ The user downloads the desired file or folder and reinstalls the snippets follow
 
 <h2>Gallery of snippet names and example output</h2>
 
+![Alt text](Gallery.png?raw=true "Gallery")
 
 <h2>Videos</h2>
 
@@ -55,8 +56,6 @@ Visual Code Studio (VSC) is free, open source, easy to like, and easy (<a href="
 
 From the above folder **vscpymolsnips**, move the file **pml.json** to **~/Library/Application Support/Code/User/snippets**. You may have to install a snippets manager package first, if you have not done so already.
  
-
-
 <!--
 <h2>Text editors that are ready out of the box</h2>
 
