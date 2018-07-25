@@ -52,7 +52,7 @@ On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support
 -->
 <h3>Visual Code Studio (Universal)</h3>
 
-Visual Code Studio (VSC) is free, open source, easy to like, and easy (<a href="https://code.visualstudio.com/download"> to install</a>). VSC starts up about as fast as ST3 on the mac. VSC provides similar support for snippets except that the tab trigger will also display the code before it is inserted by hitting tab. 
+Visual Code Studio (VSC) is free, open source, easy to like, and easy <a href="https://code.visualstudio.com/download"> to install</a>. VSC starts up about as fast as ST3 on the mac. VSC provides similar support for snippets except that the tab trigger will also display the code before it is inserted by hitting tab. 
 
 From the above folder **vscpymolsnips**, move the file **pml.json** to **~/Library/Application Support/Code/User/snippets**. You may have to install a snippets manager package first, if you have not done so already.
  
