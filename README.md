@@ -20,6 +20,12 @@ Other editors require that each snippet resides in a separate file.
 Most editors have their own format. 
 The user downloads the desired file or folder and installs the snippets following the protocol for that particular editor as described below.
 
+
+
+<h2>Gallery of snippet names and example output</h2>
+
+![Alt text](Gallery.png?raw=true "Gallery")
+
 <h2>Snippet categories:</h2>
 
 - Alternate locators
@@ -40,10 +46,6 @@ The user downloads the desired file or folder and installs the snippets followin
 - Specialized figure
 - Stereo
 
-
-<h2>Gallery of snippet names and example output</h2>
-
-![Alt text](Gallery.png?raw=true "Gallery")
 
 <h2>Videos</h2>
 
