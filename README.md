@@ -1,10 +1,24 @@
 <h1>pymolsnips</h1>
 
+PyMOL scripting language (pml) is used to make detailed figures or new molecular representations that are difficult to make by using the options in the pulldown menus of PyMOL's gui.
+Examples of figures that are impossible or tedious to make via the gui alone are shown in the gallery below.
+
+However, it is challenging to recall the pml syntax when you do not use PyMOL everyday which is the case for most PyMOL users.
+One solution to this problem is use a library of code fragments with a text editor.
+Most text editors allow the user to add a library of code fragments or "snippets".
+
 **pymolsnips** is a library of PyMOL scripting language (pml) code fragments that have been reformatted for several popular text editors.
+Each code fragment has a unique name that also serves as a tab trigger.
+The user enters the name of the code snippet and hits the tab key to trigger the insertion of the code into the currently open pml file.
+The code fragments have tab stops to advance the cursor to sites of parameters to be edited.
+The tab stops are mirrors when the parameters are identical.
+The editing of one sites leads to changes in the other other sites.
+The tab stops ensure that all of the required edits are made on the first try.
+
 Some editors take snippet libraries in one file. 
 Other editors require that each snippet resides in a separate file. 
 Most editors have their own format. 
-The user downloads the desired file or folder and reinstalls the snippets following the protocol for that particular editor.
+The user downloads the desired file or folder and installs the snippets following the protocol for that particular editor as described below.
 
 <h2>Snippet categories:</h2>
 
