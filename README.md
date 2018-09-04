@@ -91,7 +91,7 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
     },
 ```
 
-Restart VSC. Open a pml file. You should sse pml in the lower right on the bottom panel. You should also see syntax highlights. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
+Restart VSC. Open a pml file. You should see pml in the lower right on the bottom panel. You should also see syntax highlighting of the pml text. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
 
 <!--
 <h2>Text editors that are ready out of the box</h2>
