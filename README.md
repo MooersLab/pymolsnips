@@ -29,8 +29,8 @@ The user downloads the desired file or folder of files and installs the snippets
 
 ![Alt text](Gallery.png?raw=true "Gallery")
 
-A complete listing of the current avialable snippets can be found by entering the tab trigge **lsSnips**.
-Do this at the bottom of your file to use as a reference. 
+A complete listing of the current available snippets can be found by entering the tab trigge **lsSnips**.
+Do this at the bottom of the script file that you are editing to use as a reference. 
 
 <h2>Snippet categories:</h2>
 
