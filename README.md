@@ -29,6 +29,9 @@ The user downloads the desired file or folder of files and installs the snippets
 
 ![Alt text](Gallery.png?raw=true "Gallery")
 
+A complete listing of the current avialable snippets can be found by entering **lsSnips**.
+Do this at the bottom of your file to use as a reference. 
+
 <h2>Snippet categories:</h2>
 
 - Alternate locators
@@ -77,7 +80,7 @@ Visual Studio Code <a href="https://code.visualstudio.com/download"> (VSC)</a> i
 
 From the above folder **vscpymolsnips**, download and move the file **pml.json** to **~/Library/Application Support/Code/User/snippets** on the Mac, **$HOME/APPDATA\Code\User\snippets\pml.json** on Windows, and **$HOME/.config/Code/User/snippets/pml.json** on Linux.
 
-Next, install the  <a href="https://marketplace.visualstudio.com"> bioSyntax package </a>from the Visual Studio Code Marketplace. It is free. Just hit the Install button on the webpage to install the package. 
+Next,  install the pml language file via the <a href="https://marketplace.visualstudio.com"> bioSyntax package </a>from the Visual Studio Code Marketplace. It is free. Just hit the **Install** button on the webpage to install the package. 
 
 Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on Windows (Code <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on MacOS) as follows:
 
@@ -88,6 +91,7 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
     },
 ```
 
+Restart VSC. Open a pml file. You should sse pml in the lower right on the bottom panel. You should also see syntax highlights. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
 
 <!--
 <h2>Text editors that are ready out of the box</h2>
