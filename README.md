@@ -79,7 +79,7 @@ From the above folder **vscpymolsnips**, download and move the file **pml.json**
 
 Next, install the  <a href="https://marketplace.visualstudio.com"> bioSyntax package </a>from the Visual Studio Code Marketplace. It is free. Just hit the Install button on the webpage to install the package. 
 
-Next, edit the settings under File $\rightarrow$ Preferences on Windows (Code $\rightarrow$ Preferences on MacOS) as follows:
+Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on Windows (Code <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on MacOS) as follows:
 
 \begin{minted}{javascript}
 "[pml]": {},
