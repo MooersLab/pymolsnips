@@ -86,7 +86,7 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
     "files.associations": {
         "*.extension": "pml"
     },
-'''
+```
 
 
 <!--
