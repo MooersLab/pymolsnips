@@ -73,10 +73,22 @@ On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support
 -->
 <h3>Visual Studio Code (Universal)</h3>
 
-Visual Studio Code (VSC) is free, open source, easy to like, and easy <a href="https://code.visualstudio.com/download"> to install</a>. VSC starts up about as fast as ST3 on the mac. VSC provides similar support for snippets except that the tab trigger will also display the code before it is inserted by hitting tab. 
+Visual Studio Code <a href="https://code.visualstudio.com/download"> (VSC)</a> is free; open source; available for Mac, Windows and Linux; and easy to install. VSC starts up about as fast as Sublime Text 3 on MacOS. VSC provides similar support for snippets except that the tab trigger will also display the code before it is inserted by hitting tab. This preview feature can help the user select the right snippet. 
 
-From the above folder **vscpymolsnips**, move the file **pml.json** to **~/Library/Application Support/Code/User/snippets**. You may have to install a snippets manager package first, if you have not done so already.
- 
+From the above folder **vscpymolsnips**, download and move the file **pml.json** to **~/Library/Application Support/Code/User/snippets** on the Mac, **$HOME/APPDATA\Code\User\snippets\pml.json** on Windows, and **$HOME/.config/Code/User/snippets/pml.json** on Linux.
+
+Next, install the  <a href="https://marketplace.visualstudio.com"> bioSyntax package </a>from the Visual Studio Code Marketplace. It is free. Just hit the Install button on the webpage to install the package. 
+
+Next, edit the settings under File $\rightarrow$ Preferences on Windows (Code $\rightarrow$ Preferences on MacOS) as follows:
+
+\begin{minted}{javascript}
+"[pml]": {},
+    "files.associations": {
+        "*.extension": "pml"
+    },
+\end{minted}
+
+
 <!--
 <h2>Text editors that are ready out of the box</h2>
 
