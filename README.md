@@ -81,12 +81,12 @@ Next, install the  <a href="https://marketplace.visualstudio.com"> bioSyntax pac
 
 Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on Windows (Code <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on MacOS) as follows:
 
-\begin{minted}{javascript}
+```javascript
 "[pml]": {},
     "files.associations": {
         "*.extension": "pml"
     },
-\end{minted}
+'''
 
 
 <!--
