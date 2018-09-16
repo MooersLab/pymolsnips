@@ -35,13 +35,19 @@ Do this at the bottom of the script file that you are editing to use as a refere
 <h2>Snippet categories:</h2>
 
 - Alternate locators
+- Analysis
 - Change orientation
 - Color scheme
 - Coordinate covalent bonds
+- Database function
 - Electron density
 - Fetch file from PDB
+- File Input
+- File output
 - Format label
 - H-bonds
+- Help
+- Label
 - Label format
 - Label placement
 - Label position
@@ -49,8 +55,18 @@ Do this at the bottom of the script file that you are editing to use as a refere
 - Molecular representation
 - Print coordinates of selection
 - Print sequence
+- Pymolrc
+- Save png flle with timestamp
+- Selection
 - Specialized figure
 - Stereo
+- Unit cell display
+- Water pentagon
+- analysis
+- help
+- salt-bridge
+- selection
+- workshop
 
 
 <h2>Videos</h2>
@@ -99,7 +115,7 @@ Restart VSC. Open a **pml** file. You should see **pml** in the lower right on t
 <h2>Terminal based text editors</h2>
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
-
+# Snippets by Category
 
 ## Alternate locators:
 | Tab trigger   | Description   |
