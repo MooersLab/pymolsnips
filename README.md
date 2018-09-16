@@ -99,3 +99,269 @@ Restart VSC. Open a **pml** file. You should see **pml** in the lower right on t
 <h2>Terminal based text editors</h2>
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
+
+
+## Alternate locators:
+| Tab trigger   | Description   |
+|:--------------|:--------------|
+| hidealtloc    | Hide alt loc. |
+
+
+## Analysis:
+| Tab trigger    | Description                                                                          |
+|:---------------|:-------------------------------------------------------------------------------------|
+| averageB       | Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed. |
+| findHbonds     | Find hbonds around a residue.                                                        |
+| printBs        | Print the B-factors of a residue.                                                    |
+| printBs2digits | Print B-values for a residue with the B's rounded off to two decimal places.         |
+| printBspartB   | Print B factors of part B of a rsidues.                                              |
+
+
+## Change orientation:
+| Tab trigger   | Description                        |
+|:--------------|:-----------------------------------|
+| rotate        | Rotate about axis.                 |
+| rv            | Return settings in rounded format. |
+| turnAboutAxis | Turn about axis.                   |
+
+
+## Color scheme:
+| Tab trigger   | Description                                    |
+|:--------------|:-----------------------------------------------|
+| cblind        | Color blindness.                               |
+| cribbon       | Color ribbon H red, strand yellow, loop green. |
+| volumeRamp    | Volume ramp.                                   |
+
+
+## Coordinate covalent bonds:
+| Tab trigger   | Description                                                |
+|:--------------|:-----------------------------------------------------------|
+| coordinate    | Coordinate covalent bonds to metals and H-bonds friom RNA. |
+
+
+## Database function:
+| Tab trigger   | Description                                   |
+|:--------------|:----------------------------------------------|
+| lsSnips       | List all snips by tab trigger and description |
+
+
+## Electron density:
+| Tab trigger   | Description              |
+|:--------------|:-------------------------|
+| carvedDensity | Carved electron density. |
+| fetch2FoFc    | Fetch 2FoFc map.         |
+| threeMaps     | Three electron density.  |
+
+
+## Fetch file from PDB:
+| Tab trigger   | Description     |
+|:--------------|:----------------|
+| fetchCIF      | Fetch cif file. |
+| fetchFoFc     | Fetch fofc map. |
+
+
+## File Input:
+| Tab trigger   | Description                               |
+|:--------------|:------------------------------------------|
+| loadPDBfile   | Load a pdb file in the current directory. |
+
+
+## File output:
+| Tab trigger   | Description                                                |
+|:--------------|:-----------------------------------------------------------|
+| savePNG       | Save a png file of current scene to the current directory. |
+
+
+## Format label:
+| Tab trigger   | Description                                         |
+|:--------------|:----------------------------------------------------|
+| labelResnResi | Label CA atom with residue name and residue number. |
+| labelSS       | Label SS.                                           |
+| oneLetter     | One letter amino acid.                              |
+
+
+## H-bonds:
+| Tab trigger   | Description       |
+|:--------------|:------------------|
+| distance      | H-bond distances. |
+| drawHbonds    | Draw H-bonds.     |
+| hbond         | Hbond setup.      |
+| hbonddash     | H-bond dashes.    |
+
+
+## Help:
+| Tab trigger                | Description                                                                |
+|:---------------------------|:---------------------------------------------------------------------------|
+| writeCommandReference2HTML | Write the command reference to html file in the present working directory. |
+
+
+## Label:
+| Tab trigger    | Description                                        |
+|:---------------|:---------------------------------------------------|
+| labelCAs       | Label the CA atoms with the Ala333 style format    |
+| labelMainChain | Label the main chain atoms by resn,resi,atom name. |
+| labelWatersHOH | Label waters HOH.                                  |
+| labelWatersW   | Label waters W.                                    |
+
+
+## Label format:
+| Tab trigger   | Description                                   |
+|:--------------|:----------------------------------------------|
+| sigang        | Set angle labels to display 2 decimals places |
+| sigdist       | set distance labels to display 2 decimals     |
+
+
+## Label placement:
+| Tab trigger   | Description   |
+|:--------------|:--------------|
+| centerpi      | Center pi.    |
+
+
+## Label position:
+| Tab trigger   | Description                     |
+|:--------------|:--------------------------------|
+| pseudolabel   | Position label with pseudoatom. |
+
+
+## Measurement surface area:
+| Tab trigger   | Description           |
+|:--------------|:----------------------|
+| ms            | Measure surface area. |
+
+
+## Molecular representation:
+| Tab trigger             | Description                                                                                    |
+|:------------------------|:-----------------------------------------------------------------------------------------------|
+| ao                      | Ambient occlussion.                                                                            |
+| bs                      | Ball and stick representation.                                                                 |
+| cspheres                | Colored spheres.                                                                               |
+| discreteCartoonColoring | Turn on discrete colors between secondary structure elements.                                  |
+| doubleBond              | Valence bond.                                                                                  |
+| ellipcol                | Set ellipsoid color.                                                                           |
+| filledRing              | Filled rings in nucleic acids.                                                                 |
+| fog                     | Blur the background atoms.                                                                     |
+| loadPDBbs               | Load PDB ball-and-stick.                                                                       |
+| loadPDBnb               | Load PDB nb spheres.                                                                           |
+| molscriptRibbon         | Molscript ribbons.                                                                             |
+| pearl                   | The pearl effect is made with two spheres with the outer sphere being transparent.             |
+| puttyCartoon            | Create a putty cartoon.                                                                        |
+| ringMode                | Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.                    |
+| rmwater                 | Remove waters from molecular object.                                                           |
+| saxsEnvelope            | Display SAXS envelope                                                                          |
+| sc111                   | Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/. |
+| scaleRadiusColor        | Scale the radius and color of atoms as spheres by property in the B-value column.              |
+| setcolor                | Set color name to a RGB code.                                                                  |
+| sidehChainHelper        | In cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
+| solventRadius           | Set radius of ball used to make solvent accessible surface.                                    |
+
+
+## Print coordinates of selection:
+| Tab trigger    | Description      |
+|:---------------|:-----------------|
+| getCoordinates | Get coordinates. |
+
+
+## Print sequence:
+| Tab trigger   | Description                |
+|:--------------|:---------------------------|
+| fasta         | Print Fasta from PDB file. |
+
+
+## Pymolrc:
+| Tab trigger   | Description                                               |
+|:--------------|:----------------------------------------------------------|
+| antialias     | Set antialias to get smooth edges                         |
+| fetchPath     | Set path for location to save fetched pdb files.          |
+| lspymolrc     | Print list of active pymolrc files.                       |
+| setpath       | Set additional path for PyMOL to search on startup        |
+| sigDigits     | Set number of decimals places to show in distance labels. |
+
+
+## Save png flle with timestamp:
+| Tab trigger   | Description                  |
+|:--------------|:-----------------------------|
+| spng          | Save png flle with timestamp |
+| spse          | Save pse flle with timestamp |
+
+
+## Selection:
+| Tab trigger          | Description                                                  |
+|:---------------------|:-------------------------------------------------------------|
+| duplicateObject      | Duplicate object.                                            |
+| extractPartObj       | Create a new object from part of an existing object.         |
+| hideSelection        | Trun off magenta squares on current selection.               |
+| selectAllBut         | Select all nitrogen atom in a selelction except from lysine. |
+| selectAtomsAround    | Select atoms within a radius around a ligand.                |
+| selectChain          | Select a chain.                                              |
+| selectElement        | Select atoms by elemnt.                                      |
+| selectHelices        | Select atoms by alpha helices.                               |
+| selectLoops          | Select atoms by beta loops.                                  |
+| selectName           | Select atoms by name.                                        |
+| selectResi           | Select residues by a range of numbers.                       |
+| selectResidues       | Select residues by name.                                     |
+| selectResiduesAround | Select residues within a radius around a ligand.             |
+| selectStrands        | Select atoms by beta strands.                                |
+| undoSelection        | Undo a selection.                                            |
+
+
+## Specialized figure:
+| Tab trigger   | Description           |
+|:--------------|:----------------------|
+| bu            | Biological unit.      |
+| stack         | Base-stacking figure. |
+
+
+## Stereo:
+| Tab trigger   | Description   |
+|:--------------|:--------------|
+| stereoDraw    | Stereo draw.  |
+| stereoRay     | Stereo ray.   |
+
+
+## Unit cell display:
+| Tab trigger   | Description                                                                  |
+|:--------------|:-----------------------------------------------------------------------------|
+| sc222         | Run Tom Holder's supercell script to generate three cells in all directions. |
+
+
+## Water pentagon:
+| Tab trigger   | Description            |
+|:--------------|:-----------------------|
+| waterTriple   | triple water pentagon. |
+
+
+## analysis:
+| Tab trigger                 | Description                                                                                                               |
+|:----------------------------|:--------------------------------------------------------------------------------------------------------------------------|
+| aveB4resiX                  | AveBResiX, prints the resiude number and the average bfactor.                                                             |
+|                             | Uses reduce and lambda, builtin Python functional porgramming functions.                                                  |
+|                             | Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. |
+| printNameB4ResiX            | Print name and b-factor for a residue.                                                                                    |
+| printResiResnNameB4ResiX    | Print resn, resi, atom name, and b-factor.                                                                                |
+| printResiResnNameB4ResiXNoH | Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |
+
+
+## help:
+| Tab trigger   | Description                          |
+|:--------------|:-------------------------------------|
+| printDoc      | Print document string of a function. |
+
+
+## salt-bridge:
+| Tab trigger   | Description                               |
+|:--------------|:------------------------------------------|
+| his31asp70    | Asp70-His31 salt-bridge from T4 lysozyme. |
+
+
+## selection:
+| Tab trigger   | Description                     |
+|:--------------|:--------------------------------|
+| ligandSelect  | Make selection of ligand atoms. |
+
+
+## workshop:
+| Tab trigger      | Description                        |
+|:-----------------|:------------------------------------------------------------------------|
+| internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
+| internalGUIwidth | Set the width of the internal gui. |
+
