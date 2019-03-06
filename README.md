@@ -79,18 +79,31 @@ Videos that demonstrate the installation of the snippets for each editor are pla
 These text editors may take many hours to customize to fit your needs; however, you only need to 
 know about 5% of the options to become productive with these editors. 
 
+<h3> Atom (Universal) </h3>
+
+<h3> BBedit (Mac) </h3>
+
+<h3> gedit (Universal) </h3>
+
+<h3> snipmate (for vim, universal) </h3>
+
 <h3>Sublime Text 3 (Universal)</h3>
 
 This is my defult gui-based editor for many reasions. The free trial period is infinite, but I bought a license after several months because I thought that the software was worth it. Sublime Text 3 starts up much faster than the other text editors for programmers.  Sublime Text 3 has strong support for snippets and autocompletion of tab triggers. 
 <!--
-Sublime Text 3 strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
+Sublimeime Text 3 strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
 -->
 On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/**. You may have to create the snippets subfolder. You can ignore that step and just move **pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/** and it should still work. Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab. Sixteen lines of code should appear. You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
-<!--
-#<h3>TextMate (Mac only)</h3>
--->
-<h3>Visual Studio Code (Universal)</h3>
+<h3>TextMate (tm, Mac only)</h3>
+
+
+
+<h3> ultisnips (for vim, universal) </h3>
+
+
+<h3>Visual Studio Code (VSC, Universal)</h3>
+
 
 Visual Studio Code <a href="https://code.visualstudio.com/download"> (VSC)</a> is free; open source; available for Mac, Windows and Linux; and easy to install. VSC starts up about as fast as Sublime Text 3 on MacOS. VSC provides similar support for snippets except that the tab trigger will also display the code before it is inserted by hitting tab. This preview feature can help the user select the right snippet. 
 
@@ -108,6 +121,11 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
 ```
 
 Restart VSC. Open a **pml** file. You should see **pml** in the lower right on the bottom panel. You should also see syntax highlighting of the pml text. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
+
+
+
+<h3> yasnippets (for emacs, universal) </h3>
+
 
 <!--
 <h2>Text editors that are ready out of the box</h2>
