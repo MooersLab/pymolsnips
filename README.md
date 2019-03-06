@@ -81,11 +81,19 @@ know about 5% of the options to become productive with these editors.
 
 <h3> Atom (Universal) </h3>
 
+To be added soon. 
+
 <h3> BBedit (Mac) </h3>
+
+To be added soon. 
 
 <h3> gedit (Universal) </h3>
 
+To be added soon. 
+
 <h3> snipmate (for vim, universal) </h3>
+
+To be added soon. 
 
 <h3>Sublime Text 3 (Universal)</h3>
 
@@ -97,9 +105,11 @@ On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support
 
 <h3>TextMate (tm, Mac only)</h3>
 
-
+To be added soon. 
 
 <h3> ultisnips (for vim, universal) </h3>
+
+To be added soon. 
 
 
 <h3>Visual Studio Code (VSC, Universal)</h3>
@@ -125,6 +135,8 @@ Restart VSC. Open a **pml** file. You should see **pml** in the lower right on t
 
 
 <h3> yasnippets (for emacs, universal) </h3>
+
+To be added soon.
 
 
 <!--
