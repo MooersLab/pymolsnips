@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Label CA atom with residue name and residue number.
+# key: labelResnResi
+# group : Format label
+# --
+label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
+$0

@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+select ${1:oxygen2}, name ${2:O2}
+$0
+]]></content>
+<tabTrigger>selectName</tabTrigger>
+<scope></scope>
+<description>Select atoms by name.</description>
+</snippet>

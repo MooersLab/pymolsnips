@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select atoms by beta loops.
+# key: selectLoops
+# group : Selection
+# --
+select ${1:loops}, ss l;
+$0

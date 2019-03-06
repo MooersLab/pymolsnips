@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Blur the background atoms.
+# key: fog
+# group : Molecular representation
+# --
+set fog, 0
+$0
+

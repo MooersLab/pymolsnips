@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+remove resn HOH
+$0
+]]></content>
+<tabTrigger>rmwater</tabTrigger>
+<scope></scope>
+<description>Remove waters from molecular object.</description>
+</snippet>

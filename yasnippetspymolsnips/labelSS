@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Label SS. 
+# key: labelSS
+# group : Format label
+# --
+alter ${1:}, ss='%1';
+label (%2),'%3';
+$0"

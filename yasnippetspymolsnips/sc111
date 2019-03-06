@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Display all symmetry mates in one unit cell. Assumes that supercell.py is installed in $HOME/Scripts/PyMOLscripts/. supercell.py can be found on the PyMOL wiki.
+# key: sc111
+# group : Molecular representation
+# --
+run $HOME/Scripts/PyMOLscripts/supercell.py
+supercell 1, 1, 1, , orange, supercell1, 1
+$0
+

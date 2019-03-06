@@ -1,6 +1,6 @@
 <snippet>
 <content><![CDATA[
-set_color oxygen, [1.0,0.4,0.4]; 
+set_color oxygen, [1.0,0.4,0.4];
 set_color nitrogen, [0.5,0.5,1.0];
 remove solvent;
 as spheres;
@@ -16,8 +16,9 @@ set reflect,1.5;
 set ray_shadow_decay_factor, 0.1;
 set ray_shadow_decay_range, 2;
 unset depth_cue;
-ray
+ray;
 $0
+
 ]]></content>
 <tabTrigger>ao</tabTrigger>
 <scope></scope>

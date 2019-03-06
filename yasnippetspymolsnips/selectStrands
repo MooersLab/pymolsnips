@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select atoms by beta strands.
+# key: selectStrands
+# group : Selection
+# --
+select ${1:strands}, ss s; 
+$0

@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+set fog, 0
+$0
+
+]]></content>
+<tabTrigger>fog</tabTrigger>
+<scope></scope>
+<description>Blur the background atoms.</description>
+</snippet>

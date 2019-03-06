@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+select ${1:strands}, ss s; 
+$0
+]]></content>
+<tabTrigger>selectStrands</tabTrigger>
+<scope></scope>
+<description>Select atoms by beta strands.</description>
+</snippet>

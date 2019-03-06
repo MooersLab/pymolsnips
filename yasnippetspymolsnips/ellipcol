@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Set ellipsoid color.
+# key: ellipcol
+# group : Molecular representation
+# --
+set ellipsoid_color, ${1:color};
+$0

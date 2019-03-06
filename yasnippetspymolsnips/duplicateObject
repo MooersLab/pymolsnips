@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Duplicate object.
+# key: duplicateObject
+# group : Selection
+# --
+create ${1:t4l}, ${2:1lw9}; 
+$0

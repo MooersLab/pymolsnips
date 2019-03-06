@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+set cartoon_side_chain_helper, on;
+$0
+]]></content>
+<tabTrigger>sidehChainHelper</tabTrigger>
+<scope></scope>
+<description>In cartoons, hide the backbone atoms of selected residues when showing then as sticks.</description>
+</snippet>

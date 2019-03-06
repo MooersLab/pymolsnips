@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+set fetch_path, ${1:/Users/blaine/pdbFiles};
+$0
+]]></content>
+<tabTrigger>fetchPath</tabTrigger>
+<scope></scope>
+<description>Set path for location to save fetched pdb files. </description>
+</snippet>

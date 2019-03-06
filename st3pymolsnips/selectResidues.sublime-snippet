@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+select aromatic, resn phe+tyr+trp;
+$0
+]]></content>
+<tabTrigger>selectResidues</tabTrigger>
+<scope></scope>
+<description>Select residues by name.</description>
+</snippet>

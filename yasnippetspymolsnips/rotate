@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Rotate about axis.
+# key: rotate
+# group : Change orientation
+# --
+rotate ${1:x}, ${2:45}, ${3:pept}
+$0

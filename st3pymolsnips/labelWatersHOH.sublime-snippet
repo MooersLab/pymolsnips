@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+label resn HOH ,"%s%s" % (resn,resi);
+$0
+]]></content>
+<tabTrigger>labelWatersHOH</tabTrigger>
+<scope></scope>
+<description>Label waters HOH.</description>
+</snippet>

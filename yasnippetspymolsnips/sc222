@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Run Tom Holder's supercell script to generate three cells in all directions.
+# key: sc222
+# group : Unit cell display
+# --
+run $HOME/Scripts/PyMOLscripts/supercell.py
+supercell 2, 2, 2, , orange, supercell2, 1
+$0
+

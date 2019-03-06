@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Undo a selection.
+# key: undoSelection
+# group : Selection
+# --
+disable ${1:sele}; 
+$0

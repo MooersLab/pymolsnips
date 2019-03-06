@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Valence bond. 
+# key: doubleBond
+# group : Molecular representation
+# --
+set valence, 1; 
+set valence_mode, 1;
+$0

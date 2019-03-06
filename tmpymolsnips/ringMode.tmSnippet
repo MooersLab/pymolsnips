@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>content</key>
+<string>#Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.
+show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};
+$0</string>
+<key>keyEquivalent</key>
+<string>S</string>
+<key>ringMode</key>
+<string>solsurf</string>
+<key>scope</key>
+<string>text.pml</string>
+<key>tabTrigger</key>
+<string>ringMode</string>
+<key>uuid</key>
+<string>A9DF17B8-D501-4801-A3BD-7C8E6CAFE4AE</string>
+</dict>
+</plist>

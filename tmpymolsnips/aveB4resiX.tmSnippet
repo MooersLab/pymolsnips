@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>content</key>
+<string>#AveBResiX, prints the resiude number and the average bfactor. 
+Uses reduce and lambda, builtin Python functional porgramming functions. 
+Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
+
+""""AveBResiX, prints the resiude number and the average bfactor. 
+Uses reduce and lambda, builtin Python functional porgramming functions. 
+Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
+"""
+Bfactors = []; 
+iterate (resi ${1:133}), Bfactors.append(b);
+print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
+$0"</string>
+<key>keyEquivalent</key>
+<string>S</string>
+<key>aveB4resiX</key>
+<string>solsurf</string>
+<key>scope</key>
+<string>text.pml</string>
+<key>tabTrigger</key>
+<string>aveB4resiX</string>
+<key>uuid</key>
+<string>A9DF17B8-D501-4801-A3BD-7C8E6CAFE4AE</string>
+</dict>
+</plist>

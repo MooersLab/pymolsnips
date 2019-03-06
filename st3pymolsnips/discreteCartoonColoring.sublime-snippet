@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+set cartoon_discrete_colors, on
+$0
+]]></content>
+<tabTrigger>discreteCartoonColoring</tabTrigger>
+<scope></scope>
+<description>Turn on discrete colors between secondary structure elements.</description>
+</snippet>

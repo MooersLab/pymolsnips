@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select residues by a range of numbers.
+# key: selectResi
+# group : Selection
+# --
+select se;2. resi 1-100
+$0

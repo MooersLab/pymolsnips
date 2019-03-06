@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Fetch 2FoFc map.
+# key: fetch2FoFc
+# group : Electron density
+# --
+fetch ${1:3nd4}, type=2fofc, async=0
+$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select residues by name.
+# key: selectResidues
+# group : Selection
+# --
+select aromatic, resn phe+tyr+trp;
+$0

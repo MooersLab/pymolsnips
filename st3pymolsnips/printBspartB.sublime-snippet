@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
+$0
+]]></content>
+<tabTrigger>printBspartB</tabTrigger>
+<scope></scope>
+<description>Print B factors of part B of a rsidues. 
+</description>
+</snippet>

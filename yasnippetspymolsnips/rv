@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Return settings in rounded format.
+# key: rv
+# group : Change orientation
+# --
+run roundview.py;
+$0
+

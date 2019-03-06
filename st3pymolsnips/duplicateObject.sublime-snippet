@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+create ${1:t4l}, ${2:1lw9}; 
+$0
+]]></content>
+<tabTrigger>duplicateObject</tabTrigger>
+<scope></scope>
+<description>Duplicate object.</description>
+</snippet>

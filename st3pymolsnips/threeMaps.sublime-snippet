@@ -12,7 +12,7 @@ isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
 color green, ${4:mesh2};
 isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
 color red, ${5:mesh2};
-${0}
+$0
 ]]></content>
 <tabTrigger>threeMaps</tabTrigger>
 <scope></scope>

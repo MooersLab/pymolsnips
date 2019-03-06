@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+run $HOME/Scripts/PyMOLscripts/supercell.py
+supercell 2, 2, 2, , orange, supercell2, 1
+$0
+
+]]></content>
+<tabTrigger>sc222</tabTrigger>
+<scope></scope>
+<description>Run Tom Holder's supercell script to generate three cells in all directions.</description>
+</snippet>

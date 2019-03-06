@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Biological unit.
+# key: bu
+# group : Specialized figure
+# --
+run ~/Scripts/PyMOLScripts/quat.py; quat
+$0

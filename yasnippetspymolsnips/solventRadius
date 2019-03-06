@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Set radius of ball used to make solvent accessible surface.
+# key: solventRadius
+# group : Molecular representation
+# --
+set solvent_radius, ${1:1.55}
+$0
+

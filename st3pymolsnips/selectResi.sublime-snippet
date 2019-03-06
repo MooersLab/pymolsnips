@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+select se;2. resi 1-100
+$0
+]]></content>
+<tabTrigger>selectResi</tabTrigger>
+<scope></scope>
+<description>Select residues by a range of numbers.</description>
+</snippet>

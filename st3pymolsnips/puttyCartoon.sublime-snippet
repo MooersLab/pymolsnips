@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+show cartoon;
+cartoon putty;
+unset cartoon_smooth_loops;
+unset cartoon_flat_sheets;
+$0
+]]></content>
+<tabTrigger>puttyCartoon</tabTrigger>
+<scope></scope>
+<description>Create a putty cartoon.</description>
+</snippet>

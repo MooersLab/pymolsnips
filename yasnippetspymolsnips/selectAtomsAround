@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select atoms within a radius around a ligand.
+# key: selectAtomsAround
+# group : Selection
+# --
+select ${1:nearby}, resn ${2:drug} around ${3:5};
+$0

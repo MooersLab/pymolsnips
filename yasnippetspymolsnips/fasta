@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Print Fasta from PDB file. 
+# key: fasta
+# group : Print sequence
+# --
+print cmd.get_fastastr('all')
+$0
+

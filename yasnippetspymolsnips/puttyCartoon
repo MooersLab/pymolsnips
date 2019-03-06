@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Create a putty cartoon.
+# key: puttyCartoon
+# group : Molecular representation
+# --
+show cartoon;
+cartoon putty;
+unset cartoon_smooth_loops;
+unset cartoon_flat_sheets;
+$0

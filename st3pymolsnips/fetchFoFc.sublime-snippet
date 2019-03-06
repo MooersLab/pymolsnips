@@ -1,9 +1,9 @@
 <snippet>
 <content><![CDATA[
-fetch ${1:3nd4}, type=FoFc, async=0
+fetch ${1:3nd4}, type=fofc, async=0;
 $0
 ]]></content>
 <tabTrigger>fetchFoFc</tabTrigger>
 <scope></scope>
-<description>Fetch fofc</description>
+<description>Fetch fofc map.</description>
 </snippet>

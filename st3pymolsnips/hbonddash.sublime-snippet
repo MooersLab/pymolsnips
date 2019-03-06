@@ -1,13 +1,13 @@
 <snippet>
 <content><![CDATA[
-hide everything, hydrogens
-hide labels
-set dash_color, black 
-set dash_gap, 0.4
-set dash_radius, 0.08
+hide everything, hydrogens;
+hide labels;
+set dash_color, black; 
+set dash_gap, 0.4;
+set dash_radius, 0.08;
 $0
 ]]></content>
 <tabTrigger>hbonddash</tabTrigger>
 <scope></scope>
-<description>H-bond dashes</description>
+<description>H-bond dashes.</description>
 </snippet>

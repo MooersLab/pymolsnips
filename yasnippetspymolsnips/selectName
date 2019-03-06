@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select atoms by name.
+# key: selectName
+# group : Selection
+# --
+select ${1:oxygen2}, name ${2:O2}
+$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Remove waters from molecular object.
+# key: rmwater
+# group : Molecular representation
+# --
+remove resn HOH
+$0

@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n
+]]></content>
+<tabTrigger>github</tabTrigger>
+<scope></scope>
+<description>Print url of README.md file of the pymolsnips repository.</description>
+</snippet>

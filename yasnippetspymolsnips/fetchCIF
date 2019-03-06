@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Fetch cif file.
+# key: fetchCIF
+# group : Fetch file from PDB
+# --
+fetch ${1:3nd4}, type=cif, async=0;
+$0

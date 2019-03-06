@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Trun off magenta squares on current selection.
+# key: hideSelection
+# group : Selection
+# --
+indicate none
+$0

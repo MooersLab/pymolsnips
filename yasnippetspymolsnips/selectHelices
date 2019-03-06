@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Select atoms by alpha helices.
+# key: selectHelices
+# group : Selection
+# --
+select ${1:helices}, ss h; 
+$0

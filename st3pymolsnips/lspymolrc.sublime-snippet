@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+print invocation.options.deferred;
+$0
+]]></content>
+<tabTrigger>lspymolrc</tabTrigger>
+<scope></scope>
+<description>Print list of active pymolrc files.</description>
+</snippet>

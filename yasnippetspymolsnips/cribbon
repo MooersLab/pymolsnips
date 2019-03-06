@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Color ribbon H red, strand yellow, loop green.
+# key: cribbon
+# group : Color scheme
+# --
+as cartoon;
+color red, ss H;
+color yellow,ss S;
+color green, ss L+; 
+$0

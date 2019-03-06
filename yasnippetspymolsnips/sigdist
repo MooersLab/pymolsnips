@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: set distance labels to display 2 decimals
+# key: sigdist
+# group : Label format
+# --
+set label_distance_digits, ${1:2};
+$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Select a chain. 
+# key: selectChain
+# group : Selection
+# --
+select rna, chain B
+$0
+

@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+extract new_obj, chain A
+$0
+]]></content>
+<tabTrigger>extractPartObj</tabTrigger>
+<scope></scope>
+<description>Create a new object from part of an existing object.</description>
+</snippet>

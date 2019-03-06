@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+select ${1:loops}, ss l;
+$0
+]]></content>
+<tabTrigger>selectLoops</tabTrigger>
+<scope></scope>
+<description>Select atoms by beta loops.</description>
+</snippet>

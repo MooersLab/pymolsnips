@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Create a new object from part of an existing object.
+# key: extractPartObj
+# group : Selection
+# --
+extract new_obj, chain A
+$0

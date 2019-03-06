@@ -34,7 +34,7 @@ distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;
 distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
 distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
 distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
-distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
+ distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
 distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
 distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
 distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
@@ -42,20 +42,20 @@ set depth_cue=0;
 set ray_trace_fog=0;    
 set dash_color, black;    
 set label_font_id, 5;    
-set label_size, 36;   
+set label_size, 36;
 set label_position, (0.5, 1.0, 2.0);   
 set label_color, black;    
 set dash_gap, 0.2;    
 set dash_width, 2.0;    
-set dash_length, 0.2;    
+set dash_length, 0.2;
 set label_color, black;    
-set dash_gap, 0.2;   
-set dash_width, 2.0;   
-set dash_length, 0.2;    
-select carbon, element C;    
-color yellow, carbon;    
-disable carbon;    
-set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)    
+set dash_gap, 0.2; 
+set dash_width, 2.0;
+set dash_length, 0.2;
+select carbon, element C;
+color yellow, carbon;
+disable carbon;
+set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0) 
 $0
 ]]></content>
 <tabTrigger>coordinate</tabTrigger>

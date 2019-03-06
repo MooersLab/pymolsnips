@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Save a png file of current scene to the current directory.
+# key: savePNG
+# group : File output
+# --
+png ${1:saveMe.png}; 
+$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Turn about axis. 
+# key: turnAboutAxis
+# group : Change orientation
+# --
+turn ${1:x},${2:90};
+$0

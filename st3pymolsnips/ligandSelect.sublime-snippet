@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+select substrates, organic;
+${0}
+
+]]></content>
+<tabTrigger>ligandSelect</tabTrigger>
+<scope></scope>
+<description>Make selection of ligand atoms.</description>
+</snippet>

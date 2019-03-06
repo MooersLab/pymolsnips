@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Fetch fofc map.
+# key: fetchFoFc
+# group : Fetch file from PDB
+# --
+fetch ${1:3nd4}, type=fofc, async=0;
+$0

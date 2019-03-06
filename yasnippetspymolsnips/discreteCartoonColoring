@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Turn on discrete colors between secondary structure elements.
+# key: discreteCartoonColoring
+# group : Molecular representation
+# --
+set cartoon_discrete_colors, on
+$0
