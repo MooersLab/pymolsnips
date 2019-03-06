@@ -116,10 +116,14 @@ Restart VSC. Open a **pml** file. You should see **pml** in the lower right on t
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
 
+
+# List of the snippets by their tabtrigger name and description
+
+
 ## Alternate locators:
-| Tab trigger   | Description   |
-|:--------------|:--------------|
-| hidealtloc    | Hide alt loc. |
+| Tab trigger   | Description                                                   |
+|:--------------|:--------------------------------------------------------------|
+| hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
 
 
 ## Analysis:
