@@ -91,7 +91,7 @@ Support is planned for the following editors:
   - Light Table
   - Oni
   - Texadept
-  - Coad2
+  - Coda2
   - Eclipse
   - NetBeans
 
@@ -101,13 +101,19 @@ know about 5% of the options to become productive with these editors.
 <h3> Atom (Universal) </h3>
 
 [Atom](https://atom.io) is the darling with professional programmers because it is highly extendable and customizable.
+It integrates with github. 
+The GUI is very attractive.
 I have found that Atom's startup speed bogs down as more plugins are added. 
 The work-around is to always keep Atom open. 
 There is a very extensive collection of plugins available.
 The installation and updating of plugins can take awhile.
+You have to install the snippets package to be able to use the above pml snippets. 
+The package installer is very intuitive.
 The snippets for all languages are stored in a single file that is called snippets.cson.
 The file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
-You can concatenate the 
+You can concatenate the above file of PyMOL snippets to your existing snippets.cson file.
+A pymol lexer for atom has been developed; install the `language-pymol package`. 
+
  
 
 <h3> BBedit (Mac) </h3>
