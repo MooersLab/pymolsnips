@@ -81,41 +81,99 @@ know about 5% of the options to become productive with these editors.
 
 <h3> Atom (Universal) </h3>
 
-To be added soon. 
+Atom is the darling with professional programmers because it is highly extendable and customizable.
+I have found that Atom's startup speed bogs down as more plugins are added. 
+The work-around is to always keep Atom open. 
+There is a very extensive collection of plugins available.
+The installation and updating of plugins can take awhile.
+The snippets for all languages are stored in a single file that is called snippets.cson.
+The file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
+You can concatenate the 
+ 
 
 <h3> BBedit (Mac) </h3>
 
-To be added soon. 
+This is program requires a license and a on-time fee. 
+Major upgrades require additional money. 
+The snippets are stored as clippings. 
+The clippings are selected via a pulldown. 
+The clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
+
 
 <h3> gedit (Universal) </h3>
 
-To be added soon. 
+Gedit is often available on the computers running Linux OS at national labs. 
+Gedit provides an uncluttered gui with access to the snippets through a pulldown gui or by a tab trigger.
+The snippets are stored in a single file called pymol.xml.
+This file is stored in the home directory in a hidden folder called .config. 
+The full path is `~.config/gedit/snippets/pymol.xml`.
 
 <h3> snipmate (for vim, universal) </h3>
 
-To be added soon. 
+
+Vim is the terminal based text editor vi on steriods.
+It is free. 
+The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
+A newer branch of vim called neovim is available. 
+Either are available from software repositories like macports and fink or as stand-a-lone applications.
+The addition of a plugin requires the editing of startup .vimrc file. 
+Ultisnips is a more recent alternative to snipmate. 
+The snippets are stored in a single file that is language specific.
 
 <h3>Sublime Text 3 (Universal)</h3>
 
-This is my defult gui-based editor for many reasions. The free trial period is infinite, but I bought a license after several months because I thought that the software was worth it. Sublime Text 3 starts up much faster than the other text editors for programmers.  Sublime Text 3 has strong support for snippets and autocompletion of tab triggers. 
+This is my default gui-based editor for many reasons. 
+The free trial period is infinite, but I bought a license after several months because I thought that the software was worth it. 
+Sublime Text 3 starts up much faster than the other text editors for programmers.
+Sublime Text 3 has strong support for snippets and the autocompletion of tab triggers. 
+The snippets are stored in separate files with the file extension sublime-snippet. 
+
+
 <!--
 Sublimeime Text 3 strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
 -->
-On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/**. You may have to create the snippets subfolder. You can ignore that step and just move **pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/** and it should still work. Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab. Sixteen lines of code should appear. You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
+On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/**. 
+You may have to create the snippets subfolder. 
+You can ignore that step and just move **pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/** and it should still work. 
+Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit tab. 
+Sixteen lines of code should appear. 
+You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
+
 
 <h3>TextMate (tm, Mac only)</h3>
 
-To be added soon. 
+TextMate is now freely available but only for Mac OS.
+It is mature project with occasional updates.
+TextMate has been a pioneer in the development of snippet libraries.
+TextMate snippets can be ported to Sublime Text. 
+Each snippet is stored in a separate file with the file extension .tmSnippet.
+The snippets are stored in the user's Library folder. 
+There is a large library of plugins available. 
+
 
 <h3> ultisnips (for vim, universal) </h3>
 
-To be added soon. 
 
+
+Vim is the terminal based text editor vi on steriods.
+It is free. 
+The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
+A newer branch of vim called neovim is available. 
+Either are available from software repositories like macports and fink or as stand-a-lone applications.
+The addition of a plugin requires the editing of startup .vimrc file. 
+Ultisnips is a Plugin that manages snippets and that works with vim and neovim. 
+It is a more recent alternative to snipmate. 
+The snippets are stored in a single file that is language specific.
 
 <h3>Visual Studio Code (VSC, Universal)</h3>
-
-
-Visual Studio Code <a href="https://code.visualstudio.com/download"> (VSC)</a> is free; open source; available for Mac, Windows and Linux; and easy to install. VSC starts up about as fast as Sublime Text 3 on MacOS. VSC provides similar support for snippets except that the tab trigger will also display the code before it is inserted by hitting tab. This preview feature can help the user select the right snippet. 
+Visual Studio Code is a free editor from Microsoft. 
+Its start-up speed is between that of Sublime Text 3 and Atom.
+The installation of plugins is the most painless of the text editors that I have tested. 
+There is website featuring the plugin that are available. 
+You select the plugin that you are interested and hit an install button on the website to install the plugin on your local machine. 
+The bioSyntax plugin includes a lexer for PyMOL, so it is a good idea to install this plugin.
+The lexer will be activated when a PyMOL Macro Language (pml) file is opened. 
+Autocompletion of the snippet tab triggers and previews of the snippet's code are very helpful for avoiding the insertion of the wrong snippet. 
 
 From the above folder **vscpymolsnips**, download and move the file **pml.json** to **~/Library/Application Support/Code/User/snippets** on the Mac, **$HOME/APPDATA\Code\User\snippets\pml.json** on Windows, and **$HOME/.config/Code/User/snippets/pml.json** on Linux.
 
@@ -136,8 +194,14 @@ Restart VSC. Open a **pml** file. You should see **pml** in the lower right on t
 
 <h3> yasnippets (for emacs, universal) </h3>
 
-To be added soon.
-
+Like vim, emacs can be installed as a stand-a-lone application or via a software repository. 
+Emacs is a lifetime editor because it takes a lifetime to master it because it is so highly extensible. 
+There are several flavors of emacs.
+Spacemacs is a version that has a less steep learning curve. 
+The yasnippets package is used to manage snippets. 
+This package is installed with a builtin package manager.
+Each snippet is stored in a single file. 
+The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory. 
 
 <!--
 <h2>Text editors that are ready out of the box</h2>
