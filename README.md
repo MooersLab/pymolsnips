@@ -118,8 +118,8 @@ A pymol lexer for atom has been developed; install the `language-pymol package`.
 
 <h3> BBedit (Mac) </h3>
 
-This is program requires a license and a on-time fee. 
-Major upgrades require additional money. 
+[BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a on-time fee.
+Major upgrades require additional fees. 
 The snippets are stored as clippings. 
 The clippings are selected via a pulldown. 
 The clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
@@ -127,7 +127,7 @@ The clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
 
 <h3> gedit (Universal) </h3>
 
-Gedit is often available on the computers running Linux OS at national labs. 
+[Gedit](https://www.barebones.com/products/bbedit/index.html) is often available on the computers running Linux OS at national labs. 
 Gedit provides an uncluttered gui with access to the snippets through a pulldown gui or by a tab trigger.
 The snippets are stored in a single file called pymol.xml.
 This file is stored in the home directory in a hidden folder called .config. 
