@@ -75,13 +75,32 @@ Videos that demonstrate the installation of the snippets for each editor are pla
 
 <h1>Installation instructions</h1>
 
-<h2>Text editors that require some configuration and the installation of additional packages</h2>
-These text editors may take many hours to customize to fit your needs; however, you only need to 
+Select the library from above for your favorite text editor. 
+The installation instructions are below. 
+If your favorite editor is not listed, post a request via the 'requests' pulldown above and I will try to develop a snippet library for it.
+
+Support is planned for the following editors:
+
+  - CudaText
+  - SynTex
+  - notepadpp
+  - jedit
+  - Komodo Edit
+  - Editra
+  - Geany
+  - Light Table
+  - Oni
+  - Texadept
+  - Coad2
+  - Eclipse
+  - NetBeans
+
+Some of these text editors can take many hours to customize to fit your needs; however, you only need to 
 know about 5% of the options to become productive with these editors. 
 
 <h3> Atom (Universal) </h3>
 
-Atom is the darling with professional programmers because it is highly extendable and customizable.
+[Atom](https://atom.io) is the darling with professional programmers because it is highly extendable and customizable.
 I have found that Atom's startup speed bogs down as more plugins are added. 
 The work-around is to always keep Atom open. 
 There is a very extensive collection of plugins available.
