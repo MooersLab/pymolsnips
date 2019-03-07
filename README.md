@@ -83,8 +83,7 @@ I will try to develop a snippet library for the requested editor.
 
 Support is planned for the following editors:
 
-  - CudaText
-  - SynTex
+  - [CudaText](http://www.uvviewsoft.com/cudatext/)
   - notepadpp
   - jedit
   - Komodo Edit
@@ -127,6 +126,23 @@ Major upgrades require additional fees.
 The snippets are stored as clippings. 
 The clippings are selected via a pulldown. 
 The clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
+
+
+<!--
+<h3> CudaText (all) </h3>
+
+
+The documentation is located [online] (http://wiki.freepascal.org/CudaText).
+The snippets are stored one per file.
+The files have the extensions of .cuda-snippet or .synw-snippet. 
+
+CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
+The format is simple\footnote{\url{http://wiki.freepascal.org/CudaText#Format_of_snippet_files}}.
+CudaText snippets are stored in the user library \url{./Library/Application\ Support/CudaText/data/snippets/Std.HtmlTags} in folders of snippets for the same language. 
+
+<--
+
+
 
 
 <h3> gedit (Universal) </h3>
