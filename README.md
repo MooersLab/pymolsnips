@@ -77,7 +77,9 @@ Videos that demonstrate the installation of the snippets for each editor are pla
 
 Select the library from above for your favorite text editor. 
 The installation instructions are below. 
-If your favorite editor is not listed, post a request via the 'requests' pulldown above and I will try to develop a snippet library for it.
+If your favorite editor is not listed, please post an issue in the `issues` pulldown menu near the top of this page and make your request. 
+I will be notified immediately by e-mail. 
+I will try to develop a snippet library for the requested editor.
 
 Support is planned for the following editors:
 
@@ -94,6 +96,8 @@ Support is planned for the following editors:
   - Coda2
   - Eclipse
   - NetBeans
+
+Note that some editors that are available only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take many hours to customize to fit your needs; however, you only need to 
 know about 5% of the options to become productive with these editors. 
