@@ -3,7 +3,7 @@
 The PyMOL macro language (pml) is used to set parameter values and execute commands to make detailed figures.
 The number of commands and setting required for sophisticated figures can approach 100. 
 It is difficult to issue so many commands through the PyMOL's gui without making mistakes.
-If the commmands are not saved to an open log file or frequently saved session files (use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a>) repository to save session files with time stamps to avoid overwriting previously saved session files), the work can be lost.
+If the commmands are not saved to an open log file or frequently saved session files (use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files), the work can be lost.
 Examples of figures that are impossible or tedious to make via the gui alone are shown in the image gallery below.
 
 However, it is challenging to recall the pml syntax when you do not use PyMOL everyday, which is the case for most PyMOL users.
