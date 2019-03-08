@@ -73,7 +73,7 @@ Do this at the bottom of the script file that you are editing to use as a refere
 
 Videos that demonstrate the installation of the snippets for each editor are planned.
 
-<h1>Installation instructions</h1>
+<h2>Installation instructions</h2>
 
 Select the library from above for your favorite text editor. 
 The installation instructions are below. 
@@ -84,21 +84,21 @@ I will try to develop a snippet library for the requested editor.
 Support is planned for the following editors:
 
   - [CudaText](http://www.uvviewsoft.com/cudatext/)
-  - notepadpp
-  - jedit
-  - Komodo Edit
-  - Editra
-  - Geany
-  - Light Table
-  - Oni
-  - Texadept
-  - Coda2
-  - Eclipse
-  - NetBeans
+  - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
+  - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
+  - [Komodo Edit](https://www.activestate.com/products/komodo-edit/ )
+  - [Editra](http://www.editra.org://www.editra.org)
+  - [Geany](https://www.geany.org)
+  - [Light Table](http://lighttable.com)
+  - [Oni](https://www.onivim.io)
+  - [Texadept](https://foicica.com/textadept)
+  - [Coda2](https://panic.com/coda)
+  - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
+  - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
 
 Note that some editors that are available only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
 
-Some of these text editors can take many hours to customize to fit your needs; however, you only need to 
+Some of these text editors can take hours to customize to fit your needs; however, you only need to
 know about 5% of the options to become productive with these editors. 
 
 <h3> Atom (Universal) </h3>
