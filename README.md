@@ -156,7 +156,7 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 <h3> snipmate (for vim, universal) </h3>
 
 
-Vim is the terminal based text editor vi on steriods.
+[Vim](https://vimawesome.com) is the terminal based text editor vi on steriods.
 It is free. 
 The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
 A newer branch of vim called neovim is available. 
@@ -167,7 +167,8 @@ The snippets are stored in a single file that is language specific.
 
 <h3>Sublime Text 3 (Universal)</h3>
 
-This is my default gui-based editor for many reasons. 
+
+[Sublime Text 3](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor for many reasons. 
 The free trial period is infinite, but I bought a license after several months because I thought that the software was worth it. 
 Sublime Text 3 starts up much faster than the other text editors for programmers.
 Sublime Text 3 has strong support for snippets and the autocompletion of tab triggers. 
@@ -187,8 +188,8 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 <h3>TextMate (tm, Mac only)</h3>
 
-TextMate is now freely available but only for Mac OS.
-It is mature project with occasional updates.
+[TextMate](https://macromates.com) is now freely available but only for Mac OS.
+It is a mature project with occasional updates.
 TextMate has been a pioneer in the development of snippet libraries.
 TextMate snippets can be ported to Sublime Text. 
 Each snippet is stored in a separate file with the file extension .tmSnippet.
@@ -199,7 +200,7 @@ There is a large library of plugins available.
 <h3> ultisnips (for vim, universal) </h3>
 
 
-
+[ultisnip](https://github.com/sirver/UltiSnip)
 Vim is the terminal based text editor vi on steriods.
 It is free. 
 The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
@@ -211,6 +212,8 @@ It is a more recent alternative to snipmate.
 The snippets are stored in a single file that is language specific.
 
 <h3>Visual Studio Code (VSC, Universal)</h3>
+
+[Visual Studio Codei](https://code.visualstudio.com)
 Visual Studio Code is a free editor from Microsoft. 
 Its start-up speed is between that of Sublime Text 3 and Atom.
 The installation of plugins is the most painless of the text editors that I have tested. 
@@ -239,6 +242,7 @@ Restart VSC. Open a **pml** file. You should see **pml** in the lower right on t
 
 <h3> yasnippets (for emacs, universal) </h3>
 
+[yasnippets](https://www.emacswiki.org/emacs/Yasnippet)
 Like vim, emacs can be installed as a stand-a-lone application or via a software repository. 
 Emacs is a lifetime editor because it takes a lifetime to master it because it is so highly extensible. 
 There are several flavors of emacs.
