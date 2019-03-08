@@ -139,8 +139,7 @@ The files have the extensions of .cuda-snippet or .synw-snippet.
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
 The format is simple\footnote{\url{http://wiki.freepascal.org/CudaText#Format_of_snippet_files}}.
 CudaText snippets are stored in the user library \url{./Library/Application\ Support/CudaText/data/snippets/Std.HtmlTags} in folders of snippets for the same language. 
-
-<--
+-->
 
 
 
@@ -162,7 +161,7 @@ The vim keybindings for text editing are so useful that the they are available f
 A newer branch of vim called neovim is available. 
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
 The addition of a plugin requires the editing of startup .vimrc file. 
-Ultisnips is a more recent alternative to snipmate. 
+Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate)
 The snippets are stored in a single file that is language specific.
 
 <h3>Sublime Text 3 (Universal)</h3>
