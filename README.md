@@ -24,14 +24,14 @@ Most editors have their own format.
 The user downloads the desired file or folder of files and installs the snippets following the protocol for that particular editor as described below.
 
 
-<!--
+
 <h2> <A name="FASTLINKS">Quick links</A></h2>
   - <a href="#gallery"> Gallery of snippets and their output </a>
   - <a href="#categories"> Snippet categories</a>
   - <a href="#tutorials">Tutorial videos</a>
   - <a href="#install">Installation instructions for each editor</a>
   - <a href="#snippetList">List of snippets by category and tab trigger names</a>
--->
+
 
 
 
