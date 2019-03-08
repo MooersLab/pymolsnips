@@ -24,6 +24,16 @@ Most editors have their own format.
 The user downloads the desired file or folder of files and installs the snippets following the protocol for that particular editor as described below.
 
 
+<!--
+<h2> Quick links</h2>
+  - Gallery of snippets and their output
+  - Snippet categories
+  - Tutorial videos
+  - Installation instructions for each editor
+  - List of snippets by category and tab trigger names
+-->
+
+
 
 <h2>Gallery of snippet names and example output</h2>
 
@@ -82,6 +92,7 @@ I will be notified immediately by e-mail.
 I will try to develop a snippet library for the requested editor.
 
 Support is planned for the following editors:
+
 
   - [CudaText](http://www.uvviewsoft.com/cudatext/)
   - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
@@ -152,6 +163,21 @@ The snippets are stored in a single file called pymol.xml.
 This file is stored in the home directory in a hidden folder called .config. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
 
+
+
+<h3> micro (Universal) </h3>
+[micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
+Nonetheless, it is easier to use than vim or emacs. 
+It is a terminal based editor that has a number of plugins available including one for snippets https://github.com/tommyshem/micro-snippets-plugin.
+You do have to compile it to install it. 
+You need to have Node.js installed. 
+On the Mac, it is best to use it with the free iterm2.app terminal emulator.
+Install the snippets by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
+The snippets follow the format of the vim-snippets https://github.com/honza/vim-snippets. 
+All of the snippets for one language are in a single file. 
+The ultisnips library above should work with this editor. 
+
+
 <h3> snipmate (for vim, universal) </h3>
 
 
@@ -161,7 +187,9 @@ The vim keybindings for text editing are so useful that the they are available f
 A newer branch of vim called neovim is available. 
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
 The addition of a plugin requires the editing of startup .vimrc file. 
-Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate)
+Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate).
+Ultisnips required Python. VimL does not require Python. If you choose to install VimL, you will need the snipmate library.
+Otherwise, you should use Ultisnips. 
 The snippets are stored in a single file that is language specific.
 
 <h3>Sublime Text 3 (Universal)</h3>
