@@ -461,7 +461,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | getCoordinates | Get coordinates. |
 
 
-##3 Print sequence:
+### Print sequence:
 | Tab trigger   | Description                |
 |:--------------|:---------------------------|
 | fasta         | Print Fasta from PDB file. |
