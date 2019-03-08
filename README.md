@@ -259,10 +259,10 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 -->
 
 
-# List of the snippets by their tabtrigger name and description
+<h2> List of the snippets by their tabtrigger name and description </h2>
 
 
-## Alternate locators:
+<h3> Alternate locators:</h3>
 | Tab trigger   | Description                                                   |
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
