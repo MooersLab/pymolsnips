@@ -1,0 +1,7 @@
+name=Set angle labels to display 2 decimals places
+id=sigang
+lex=PML_
+text=
+set label_angle_digits, ${1:2};
+$0
+

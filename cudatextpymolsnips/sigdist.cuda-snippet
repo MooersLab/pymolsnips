@@ -1,0 +1,6 @@
+name=set distance labels to display 2 decimals
+id=sigdist
+lex=PML_
+text=
+set label_distance_digits, ${1:2};
+$0

@@ -1,0 +1,7 @@
+name=Print Fasta from PDB file. 
+id=fasta
+lex=PML_
+text=
+print cmd.get_fastastr('all')
+$0
+

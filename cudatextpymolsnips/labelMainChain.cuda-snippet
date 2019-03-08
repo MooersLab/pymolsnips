@@ -1,0 +1,7 @@
+name=Label the main chain atoms by resn,resi,atom name.
+id=labelMainChain
+lex=PML_
+text=
+label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
+$0
+

@@ -1,0 +1,10 @@
+name=Color blindness.
+id=cblind
+lex=PML_
+text=
+run ~/Pymol-script-repo/colorblindfriendly.py;
+as cartoon;
+color cb_red, ss H;
+color cb_yellow,ss S;
+color cb_green, ss L+; 
+$0

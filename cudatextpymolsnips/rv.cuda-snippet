@@ -1,0 +1,7 @@
+name=Return settings in rounded format.
+id=rv
+lex=PML_
+text=
+run roundview.py;
+$0
+

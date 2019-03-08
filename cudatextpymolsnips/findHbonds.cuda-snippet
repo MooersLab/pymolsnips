@@ -1,0 +1,6 @@
+name=Find hbonds around a residue.
+id=findHbonds
+lex=PML_
+text=
+remove element h; distance hbonds, all, all, 3.2, mode=2;
+$0

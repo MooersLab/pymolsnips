@@ -1,0 +1,7 @@
+name=Load a pdb file in the current directory.
+id=loadPDBfile
+lex=PML_
+text=
+load ${1:my.pdb};
+$0
+

@@ -1,0 +1,7 @@
+name=Set additional path for PyMOL to search on startup
+id=setpath
+lex=PML_
+text=
+os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
+$0
+

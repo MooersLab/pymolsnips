@@ -1,0 +1,6 @@
+name=Set ellipsoid color.
+id=ellipcol
+lex=PML_
+text=
+set ellipsoid_color, ${1:color};
+$0

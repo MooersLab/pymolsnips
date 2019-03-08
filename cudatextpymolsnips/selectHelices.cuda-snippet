@@ -1,0 +1,6 @@
+name=Select atoms by alpha helices.
+id=selectHelices
+lex=PML_
+text=
+select ${1:helices}, ss h; 
+$0

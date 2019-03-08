@@ -1,0 +1,6 @@
+name=Label waters HOH.
+id=labelWatersHOH
+lex=PML_
+text=
+label resn HOH ,"%s%s" % (resn,resi);
+$0

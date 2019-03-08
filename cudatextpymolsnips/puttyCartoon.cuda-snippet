@@ -1,0 +1,9 @@
+name=Create a putty cartoon.
+id=puttyCartoon
+lex=PML_
+text=
+show cartoon;
+cartoon putty;
+unset cartoon_smooth_loops;
+unset cartoon_flat_sheets;
+$0

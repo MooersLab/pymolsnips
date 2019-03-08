@@ -1,0 +1,6 @@
+name=Trun off magenta squares on current selection.
+id=hideSelection
+lex=PML_
+text=
+indicate none
+$0

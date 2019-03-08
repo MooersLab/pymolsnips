@@ -1,0 +1,6 @@
+name=Set path for location to save fetched pdb files. 
+id=fetchPath
+lex=PML_
+text=
+set fetch_path, ${1:/Users/blaine/pdbFiles};
+$0

@@ -1,0 +1,6 @@
+name=Select residues by name.
+id=selectResidues
+lex=PML_
+text=
+select aromatic, resn phe+tyr+trp;
+$0

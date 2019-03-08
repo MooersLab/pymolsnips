@@ -1,0 +1,6 @@
+name=Fetch fofc map.
+id=fetchFoFc
+lex=PML_
+text=
+fetch ${1:3nd4}, type=fofc, async=0;
+$0

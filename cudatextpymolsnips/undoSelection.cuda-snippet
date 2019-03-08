@@ -1,0 +1,6 @@
+name=Undo a selection.
+id=undoSelection
+lex=PML_
+text=
+disable ${1:sele}; 
+$0

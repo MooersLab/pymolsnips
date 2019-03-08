@@ -1,0 +1,8 @@
+name=Set number of decimals places to show in distance labels. 
+id=sigDigits
+lex=PML_
+text=
+set label_distance_digits, ${1:2};
+set label_angle_digits, ${2:2};
+$0
+

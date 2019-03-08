@@ -1,0 +1,12 @@
+name=Save png flle with timestamp
+id=spng
+lex=PML_
+text=
+python;
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".png"); 
+end python;
+$0

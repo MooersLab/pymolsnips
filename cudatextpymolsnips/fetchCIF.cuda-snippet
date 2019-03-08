@@ -1,0 +1,6 @@
+name=Fetch cif file.
+id=fetchCIF
+lex=PML_
+text=
+fetch ${1:3nd4}, type=cif, async=0;
+$0

@@ -1,0 +1,9 @@
+name=Color ribbon H red, strand yellow, loop green.
+id=cribbon
+lex=PML_
+text=
+as cartoon;
+color red, ss H;
+color yellow,ss S;
+color green, ss L+; 
+$0

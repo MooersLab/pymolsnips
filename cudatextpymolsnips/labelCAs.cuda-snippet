@@ -1,0 +1,7 @@
+name=Label the CA atoms with the Ala333 style format
+id=labelCAs
+lex=PML_
+text=
+label name CA,"%s%s" % (resn,resi);
+$0
+

@@ -1,0 +1,7 @@
+name=Write the command reference to html file in the present working directory. 
+id=writeCommandReference2HTML
+lex=PML_
+text=
+cmd.write_html_ref('pymol-command-ref.html');
+$0
+

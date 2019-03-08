@@ -1,0 +1,5 @@
+name=Print url of README.md file of the pymolsnips repository.
+id=github
+lex=PML_
+text=
+https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n

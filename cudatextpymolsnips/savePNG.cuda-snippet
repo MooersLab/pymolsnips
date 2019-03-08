@@ -1,0 +1,6 @@
+name=Save a png file of current scene to the current directory.
+id=savePNG
+lex=PML_
+text=
+png ${1:saveMe.png}; 
+$0

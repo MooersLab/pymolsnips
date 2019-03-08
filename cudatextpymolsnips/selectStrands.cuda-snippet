@@ -1,0 +1,6 @@
+name=Select atoms by beta strands.
+id=selectStrands
+lex=PML_
+text=
+select ${1:strands}, ss s; 
+$0
