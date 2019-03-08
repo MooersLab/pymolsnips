@@ -163,7 +163,7 @@ The files have the extensions of .cuda-snippet.
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
 CudaText snippets are stored in the user library `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder, which you may have to create. 
 
-I have to develop a lexer (syntax highlighter) for pymol for CudaText. 
+I plan to develop a lexer (syntax highlighter) for pymol for CudaText. 
 In the mean time, install and use the python lexer.
 
 
