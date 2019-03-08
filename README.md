@@ -136,9 +136,13 @@ A pymol lexer for atom has been developed; install the `language-pymol package`.
 
 [BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a on-time fee.
 Major upgrades require additional fees. 
-The snippets are stored as clippings. 
-The clippings are selected via a pulldown. 
-The clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
+The snippet system is simile and elgant.
+The snippets are stored as clippings with one snippet or clipping per file.
+The pymol pml snippets end with the file extension `*.pml`.
+The clippings can be stored in folders and nested subfolders. 
+The clippings are selected via the pulldown labeled C. 
+The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
+The disadvatages inlcude the lack of tab triggers and tab stops. 
 
 
 <h3> CudaText (all) </h3>
@@ -155,12 +159,11 @@ There are numerous plugins available.
 The plugin manager can be used to install the snippets plugin.
 
 The snippets are stored one per file.
-The files have the extensions of .cuda-snippet or .synw-snippet. 
+The files have the extensions of .cuda-snippet. 
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
-The format is simple\footnote{\url{http://wiki.freepascal.org/CudaText#Format_of_snippet_files}}.
-CudaText snippets are stored in the user library \url{./Library/Application\ Support/CudaText/data/snippets/Std.PML} folder, which you may have to create. 
+CudaText snippets are stored in the user library `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder, which you may have to create. 
 
-I have yet to develop a lexer (syntax highlighter) for pymol for CudaText. 
+I have to develop a lexer (syntax highlighter) for pymol for CudaText. 
 In the mean time, install and use the python lexer.
 
 
