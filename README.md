@@ -25,24 +25,24 @@ The user downloads the desired file or folder of files and installs the snippets
 
 
 <!--
-<h2> Quick links</h2>
-  - Gallery of snippets and their output
-  - Snippet categories
-  - Tutorial videos
-  - Installation instructions for each editor
-  - List of snippets by category and tab trigger names
+<h2> <A name="FASTLINKS">Quick links</A></h2>
+  - <a href="#gallery"> Gallery of snippets and their output </a>
+  - <a href="#categories"> Snippet categories</a>
+  - <a href="#tutorials">Tutorial videos</a>
+  - <a href="#install">Installation instructions for each editor</a>
+  - <a href="#snippetList">List of snippets by category and tab trigger names</a>
 -->
 
 
 
-<h2>Gallery of snippet names and example output</h2>
+<h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
 ![Alt text](Gallery.png?raw=true "Gallery")
 
 A complete listing of the current available snippets can be found by entering the tab trigge **lsSnips**.
 Do this at the bottom of the script file that you are editing to use as a reference. 
 
-<h2>Snippet categories:</h2>
+<h2>  <A name="categories"> Snippet categories: </A> </h2>
 
 - Alternate locators
 - Analysis
@@ -78,12 +78,13 @@ Do this at the bottom of the script file that you are editing to use as a refere
 - selection
 - workshop
 
+<A href="FASTLINKS">Return to guick links</A>
 
-<h2>Videos</h2>
+<h2> <A name="tutorials">Videos</A></h2>
 
 Videos that demonstrate the installation of the snippets for each editor are planned.
 
-<h2>Installation instructions</h2>
+<h2> <A name="install"> Installation instructions</A></h2>
 
 Select the library from above for your favorite text editor. 
 The installation instructions are below. 
@@ -286,16 +287,16 @@ The yasnippets package is used to manage snippets.
 This package is installed with a builtin package manager.
 Each snippet is stored in a single file. 
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory. 
-
+<A href="#FASTLINKS">Jump back to top </A>
 <!--
 <h2>Text editors that are ready out of the box</h2>
 
 <h2>Terminal based text editors</h2>
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
+<A href="FASTLINKS">Return to quick links above</A>
 
-
-<h2> List of the snippets by their tabtrigger name and description </h2>
+<h2> <A name="snippetList" >List of the snippets by their tabtrigger name and description </A> </h2>
 
 
 ### Alternate locators:
@@ -562,3 +563,4 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
 | internalGUIwidth | Set the width of the internal gui. |
 
+<A href="FASTLINKS">Return to quick links at top of p</A>
