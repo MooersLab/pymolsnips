@@ -166,14 +166,14 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 
 
 <h3> micro (Universal) </h3>
-[micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
+
+[Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
 Nonetheless, it is easier to use than vim or emacs. 
-It is a terminal based editor that has a number of plugins available including one for snippets https://github.com/tommyshem/micro-snippets-plugin.
+It is a terminal based editor that has a number of plugins available including one for snippets.
 You do have to compile it to install it. 
 You need to have Node.js installed. 
 On the Mac, it is best to use it with the free iterm2.app terminal emulator.
 Install the snippets by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
-The snippets follow the format of the vim-snippets https://github.com/honza/vim-snippets. 
 All of the snippets for one language are in a single file. 
 The ultisnips library above should work with this editor. 
 
