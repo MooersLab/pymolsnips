@@ -262,13 +262,13 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 <h2> List of the snippets by their tabtrigger name and description </h2>
 
 
-<h3> Alternate locators:</h3>
+### Alternate locators:
 | Tab trigger   | Description                                                   |
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
 
 
-## Analysis:
+### Analysis:
 | Tab trigger    | Description                                                                          |
 |:---------------|:-------------------------------------------------------------------------------------|
 | averageB       | Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed. |
@@ -278,7 +278,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | printBspartB   | Print B factors of part B of a rsidues.                                              |
 
 
-## Change orientation:
+### Change orientation:
 | Tab trigger   | Description                        |
 |:--------------|:-----------------------------------|
 | rotate        | Rotate about axis.                 |
@@ -286,7 +286,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | turnAboutAxis | Turn about axis.                   |
 
 
-## Color scheme:
+### Color scheme:
 | Tab trigger   | Description                                    |
 |:--------------|:-----------------------------------------------|
 | cblind        | Color blindness.                               |
@@ -294,19 +294,19 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | volumeRamp    | Volume ramp.                                   |
 
 
-## Coordinate covalent bonds:
+### Coordinate covalent bonds:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | coordinate    | Coordinate covalent bonds to metals and H-bonds friom RNA. |
 
 
-## Database function:
+### Database function:
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | lsSnips       | List all snips by tab trigger and description |
 
 
-## Electron density:
+### Electron density:
 | Tab trigger   | Description              |
 |:--------------|:-------------------------|
 | carvedDensity | Carved electron density. |
@@ -314,26 +314,26 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | threeMaps     | Three electron density.  |
 
 
-## Fetch file from PDB:
+### Fetch file from PDB:
 | Tab trigger   | Description     |
 |:--------------|:----------------|
 | fetchCIF      | Fetch cif file. |
 | fetchFoFc     | Fetch fofc map. |
 
 
-## File Input:
+### File Input:
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | loadPDBfile   | Load a pdb file in the current directory. |
 
 
-## File output:
+### File output:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | savePNG       | Save a png file of current scene to the current directory. |
 
 
-## Format label:
+### Format label:
 | Tab trigger   | Description                                         |
 |:--------------|:----------------------------------------------------|
 | labelResnResi | Label CA atom with residue name and residue number. |
@@ -341,7 +341,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | oneLetter     | One letter amino acid.                              |
 
 
-## H-bonds:
+### H-bonds:
 | Tab trigger   | Description       |
 |:--------------|:------------------|
 | distance      | H-bond distances. |
@@ -350,13 +350,13 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | hbonddash     | H-bond dashes.    |
 
 
-## Help:
+### Help:
 | Tab trigger                | Description                                                                |
 |:---------------------------|:---------------------------------------------------------------------------|
 | writeCommandReference2HTML | Write the command reference to html file in the present working directory. |
 
 
-## Label:
+### Label:
 | Tab trigger    | Description                                        |
 |:---------------|:---------------------------------------------------|
 | labelCAs       | Label the CA atoms with the Ala333 style format    |
@@ -365,32 +365,32 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | labelWatersW   | Label waters W.                                    |
 
 
-## Label format:
+### Label format:
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | sigang        | Set angle labels to display 2 decimals places |
 | sigdist       | set distance labels to display 2 decimals     |
 
 
-## Label placement:
+### Label placement:
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | centerpi      | Center pi.    |
 
 
-## Label position:
+### Label position:
 | Tab trigger   | Description                     |
 |:--------------|:--------------------------------|
 | pseudolabel   | Position label with pseudoatom. |
 
 
-## Measurement surface area:
+### Measurement surface area:
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | ms            | Measure surface area. |
 
 
-## Molecular representation:
+### Molecular representation:
 | Tab trigger             | Description                                                                                    |
 |:------------------------|:-----------------------------------------------------------------------------------------------|
 | ao                      | Ambient occlussion.                                                                            |
@@ -416,19 +416,19 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | solventRadius           | Set radius of ball used to make solvent accessible surface.                                    |
 
 
-## Print coordinates of selection:
+### Print coordinates of selection:
 | Tab trigger    | Description      |
 |:---------------|:-----------------|
 | getCoordinates | Get coordinates. |
 
 
-## Print sequence:
+##3 Print sequence:
 | Tab trigger   | Description                |
 |:--------------|:---------------------------|
 | fasta         | Print Fasta from PDB file. |
 
 
-## Pymolrc:
+### Pymolrc:
 | Tab trigger   | Description                                               |
 |:--------------|:----------------------------------------------------------|
 | antialias     | Set antialias to get smooth edges                         |
@@ -438,14 +438,14 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | sigDigits     | Set number of decimals places to show in distance labels. |
 
 
-## Save png flle with timestamp:
+### Save png flle with timestamp:
 | Tab trigger   | Description                  |
 |:--------------|:-----------------------------|
 | spng          | Save png flle with timestamp |
 | spse          | Save pse flle with timestamp |
 
 
-## Selection:
+### Selection:
 | Tab trigger          | Description                                                  |
 |:---------------------|:-------------------------------------------------------------|
 | duplicateObject      | Duplicate object.                                            |
@@ -465,33 +465,33 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | undoSelection        | Undo a selection.                                            |
 
 
-## Specialized figure:
+### Specialized figure:
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | bu            | Biological unit.      |
 | stack         | Base-stacking figure. |
 
 
-## Stereo:
+### Stereo:
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | stereoDraw    | Stereo draw.  |
 | stereoRay     | Stereo ray.   |
 
 
-## Unit cell display:
+### Unit cell display:
 | Tab trigger   | Description                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|
 | sc222         | Run Tom Holder's supercell script to generate three cells in all directions. |
 
 
-## Water pentagon:
+### Water pentagon:
 | Tab trigger   | Description            |
 |:--------------|:-----------------------|
 | waterTriple   | triple water pentagon. |
 
 
-## analysis:
+### analysis:
 | Tab trigger                 | Description                                                                                                               |
 |:----------------------------|:--------------------------------------------------------------------------------------------------------------------------|
 | aveB4resiX                  | AveBResiX, prints the resiude number and the average bfactor.                                                             |
@@ -502,25 +502,25 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | printResiResnNameB4ResiXNoH | Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |
 
 
-## help:
+### help:
 | Tab trigger   | Description                          |
 |:--------------|:-------------------------------------|
 | printDoc      | Print document string of a function. |
 
 
-## salt-bridge:
+### salt-bridge:
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | his31asp70    | Asp70-His31 salt-bridge from T4 lysozyme. |
 
 
-## selection:
+### selection:
 | Tab trigger   | Description                     |
 |:--------------|:--------------------------------|
 | ligandSelect  | Make selection of ligand atoms. |
 
 
-## workshop:
+### workshop:
 | Tab trigger      | Description                        |
 |:-----------------|:------------------------------------------------------------------------|
 | internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
