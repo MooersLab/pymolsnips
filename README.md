@@ -94,7 +94,6 @@ I will try to develop a snippet library for the requested editor.
 Support is planned for the following editors:
 
 
-  - [CudaText](http://www.uvviewsoft.com/cudatext/)
   - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
   - [Komodo Edit](https://www.activestate.com/products/komodo-edit/ )
@@ -139,18 +138,27 @@ The clippings are selected via a pulldown.
 The clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
 
 
-<!--
 <h3> CudaText (all) </h3>
 
+[CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of pascal. 
+It is fully open source.
+It is a full-featured editor.
+Its predecessor is SynWrite is no longer supported. 
+The documentation is located [online](http://wiki.freepascal.org/CudaText).
 
-The documentation is located [online] (http://wiki.freepascal.org/CudaText).
+CudaText depends on the presence of 32-bit Python3.
+On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. When I started cudatext, it found this install of Python; I did not have to edit any configuration files.
+There are numerous plugins available.
+The plugin manager can be used to install the snippets plugin.
+
 The snippets are stored one per file.
 The files have the extensions of .cuda-snippet or .synw-snippet. 
-
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
 The format is simple\footnote{\url{http://wiki.freepascal.org/CudaText#Format_of_snippet_files}}.
-CudaText snippets are stored in the user library \url{./Library/Application\ Support/CudaText/data/snippets/Std.HtmlTags} in folders of snippets for the same language. 
--->
+CudaText snippets are stored in the user library \url{./Library/Application\ Support/CudaText/data/snippets/Std.PML} folder, which you may have to create. 
+
+I have yet to develop a lexer (syntax highlighter) for pymol for CudaText. 
+In the mean time, install and use the python lexer.
 
 
 
