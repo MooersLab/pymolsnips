@@ -26,11 +26,13 @@ The user downloads the desired file or folder of files and installs the snippets
 
 
 <h2> <A name="FASTLINKS">Quick links</A></h2>
-  - <a href="#gallery"> Gallery of snippets and their output </a>
-  - <a href="#categories"> Snippet categories</a>
-  - <a href="#tutorials">Tutorial videos</a>
-  - <a href="#install">Installation instructions for each editor</a>
-  - <a href="#snippetList">List of snippets by category and tab trigger names</a>
+<ul>
+  <li><a href="#gallery"> Gallery of snippets and their output </a></li>
+  <li><a href="#categories"> Snippet categories</a></li>
+  <li><a href="#tutorials">Tutorial videos</a></li>
+  <li><a href="#install">Installation instructions for each editor</a></li>
+ <li><a href="#snippetList">List of snippets by category and tab trigger names</a></li>
+</ul>
 
 
 
@@ -78,7 +80,7 @@ Do this at the bottom of the script file that you are editing to use as a refere
 - selection
 - workshop
 
-<A href="FASTLINKS">Return to guick links</A>
+<A href=#FASTLINKS>Return to quick links section at top</A>
 
 <h2> <A name="tutorials">Videos</A></h2>
 
@@ -294,7 +296,7 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 <h2>Terminal based text editors</h2>
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
-<A href="FASTLINKS">Return to quick links above</A>
+<A href=#FASTLINKS>Return to quick links section at top</A>
 
 <h2> <A name="snippetList" >List of the snippets by their tabtrigger name and description </A> </h2>
 
@@ -563,4 +565,4 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
 | internalGUIwidth | Set the width of the internal gui. |
 
-<A href="FASTLINKS">Return to quick links at top of p</A>
+<A href=#FASTLINKS>Return to quick links section at top</A>
