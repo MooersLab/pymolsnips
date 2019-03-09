@@ -1,0 +1,301 @@
+{:modes {:+ #{:editor.python}}
+:snippets [
+           {:name "Ambient occlussion."
+            :key "ao"
+            :snippet-file "ao.snip"}
+           {:name "Set ellipsoid color."
+            :key "ellipcol"
+            :snippet-file "ellipcol.snip"}
+           {:name "set distance labels to display 2 decimals"
+            :key "sigdist"
+            :snippet-file "sigdist.snip"}
+           {:name "Set angle labels to display 2 decimals places"
+            :key "sigang"
+            :snippet-file "sigang.snip"}
+           {:name "Ball and stick representation. "
+            :key "bs"
+            :snippet-file "bs.snip"}
+           {:name "Base-stacking figure."
+            :key "stack"
+            :snippet-file "stack.snip"}
+           {:name "Biological unit."
+            :key "bu"
+            :snippet-file "bu.snip"}
+           {:name "Valence bond. "
+            :key "doubleBond"
+            :snippet-file "doubleBond.snip"}
+           {:name "Color blindness."
+            :key "cblind"
+            :snippet-file "cblind.snip"}
+           {:name "Center pi."
+            :key "centerpi"
+            :snippet-file "centerpi.snip"}
+           {:name "Color ribbon H red, strand yellow, loop green."
+            :key "cribbon"
+            :snippet-file "cribbon.snip"}
+           {:name "Colored spheres."
+            :key "cspheres"
+            :snippet-file "cspheres.snip"}
+           {:name "Coordinate covalent bonds to metals and H-bonds friom RNA."
+            :key "coordinate"
+            :snippet-file "coordinate.snip"}
+           {:name "H-bond distances."
+            :key "distance"
+            :snippet-file "distance.snip"}
+           {:name "Draw H-bonds. "
+            :key "drawHbonds"
+            :snippet-file "drawHbonds.snip"}
+           {:name "Carved electron density. "
+            :key "carvedDensity"
+            :snippet-file "carvedDensity.snip"}
+           {:name "Fetch 2FoFc map."
+            :key "fetch2FoFc"
+            :snippet-file "fetch2FoFc.snip"}
+           {:name "Fetch cif file."
+            :key "fetchCIF"
+            :snippet-file "fetchCIF.snip"}
+           {:name "Fetch fofc map."
+            :key "fetchFoFc"
+            :snippet-file "fetchFoFc.snip"}
+           {:name "Filled rings in nucleic acids. "
+            :key "filledRing"
+            :snippet-file "filledRing.snip"}
+           {:name "Get coordinates. "
+            :key "getCoordinates"
+            :snippet-file "getCoordinates.snip"}
+           {:name "H-bond dashes."
+            :key "hbonddash"
+            :snippet-file "hbonddash.snip"}
+           {:name "Hbond setup. "
+            :key "hbond"
+            :snippet-file "hbond.snip"}
+           {:name "Hide alt loc."
+            :key "hidealtloc"
+            :snippet-file "hidealtloc.snip"}
+           {:name "Label CA atom with single-letter residue name and residue number."
+            :key "labelResnResi"
+            :snippet-file "labelResnResi.snip"}
+           {:name "Label SS. "
+            :key "labelSS"
+            :snippet-file "labelSS.snip"}
+           {:name "Load PDB ball-and-stick."
+            :key "loadPDBbs"
+            :snippet-file "loadPDBbs.snip"}
+           {:name "Load PDB nb spheres. "
+            :key "loadPDBnb"
+            :snippet-file "loadPDBnb.snip"}
+           {:name "Measure surface area. "
+            :key "ms"
+            :snippet-file "ms.snip"}
+           {:name "Molscript ribbons."
+            :key "molscriptRibbon"
+            :snippet-file "molscriptRibbon.snip"}
+           {:name "One letter amino acid. "
+            :key "oneLetter"
+            :snippet-file "oneLetter.snip"}
+           {:name "Print Fasta from PDB file. "
+            :key "fasta"
+            :snippet-file "fasta.snip"}
+           {:name "Position label with pseudoatom. "
+            :key "pseudolabel"
+            :snippet-file "pseudolabel.snip"}
+           {:name "Rotate about axis."
+            :key "rotate"
+            :snippet-file "rotate.snip"}
+           {:name "Stereo draw."
+            :key "stereoDraw"
+            :snippet-file "stereoDraw.snip"}
+           {:name "Stereo ray."
+            :key "stereoRay"
+            :snippet-file "stereoRay.snip"}
+           {:name "Three electron density. "
+            :key "threeMaps"
+            :snippet-file "threeMaps.snip"}
+           {:name "Turn about axis. "
+            :key "turnAboutAxis"
+            :snippet-file "turnAboutAxis.snip"}
+           {:name "Volume ramp."
+            :key "volumeRamp"
+            :snippet-file "volumeRamp.snip"}
+           {:name "Set radius of ball used to make solvent accessible surface."
+            :key "solventRadius"
+            :snippet-file "solventRadius.snip"}
+           {:name "Scale the radius and color of atoms as spheres by property in the B-value column."
+            :key "scaleRadiusColor"
+            :snippet-file "scaleRadiusColor.snip"}
+           {:name "Return settings in rounded format."
+            :key "rv"
+            :snippet-file "rv.snip"}
+           {:name "Save png flle with timestamp"
+            :key "spng"
+            :snippet-file "spng.snip"}
+           {:name "Save pse flle with timestamp"
+            :key "spse"
+            :snippet-file "spse.snip"}
+           {:name "Run Tom Holder's supercell script to generate three cells in all directions."
+            :key "sc222"
+            :snippet-file "sc222.snip"}
+           {:name "The pearl effect is made with two spheres with the outer sphere being transparent."
+            :key "pearl"
+            :snippet-file "pearl.snip"}
+           {:name "Blur the background atoms."
+            :key "fog"
+            :snippet-file "fog.snip"}
+           {:name "Remove waters from molecular object."
+            :key "rmwater"
+            :snippet-file "rmwater.snip"}
+           {:name "Set color name to a RGB code."
+            :key "setcolor"
+            :snippet-file "setcolor.snip"}
+           {:name "Duplicate object."
+            :key "duplicateObject"
+            :snippet-file "duplicateObject.snip"}
+           {:name "Select a chain. "
+            :key "selectChain"
+            :snippet-file "selectChain.snip"}
+           {:name "Select residues by name."
+            :key "selectResidues"
+            :snippet-file "selectResidues.snip"}
+           {:name "Select residues by a range of numbers."
+            :key "selectResi"
+            :snippet-file "selectResi.snip"}
+           {:name "Select atoms by elemnt."
+            :key "selectElement"
+            :snippet-file "selectElement.snip"}
+           {:name "Select atoms by name."
+            :key "selectName"
+            :snippet-file "selectName.snip"}
+           {:name "Select atoms by alpha helices."
+            :key "selectHelices"
+            :snippet-file "selectHelices.snip"}
+           {:name "Select atoms by beta strands."
+            :key "selectStrands"
+            :snippet-file "selectStrands.snip"}
+           {:name "Select atoms by beta loops."
+            :key "selectLoops"
+            :snippet-file "selectLoops.snip"}
+           {:name "Select all nitrogen atom in a selelction except from lysine."
+            :key "selectAllBut"
+            :snippet-file "selectAllBut.snip"}
+           {:name "Select atoms within a radius around a ligand."
+            :key "selectAtomsAround"
+            :snippet-file "selectAtomsAround.snip"}
+           {:name "Select residues within a radius around a ligand."
+            :key "selectResiduesAround"
+            :snippet-file "selectResiduesAround.snip"}
+           {:name "Undo a selection."
+            :key "undoSelection"
+            :snippet-file "undoSelection.snip"}
+           {:name "Load a pdb file in the current directory."
+            :key "loadPDBfile"
+            :snippet-file "loadPDBfile.snip"}
+           {:name "Save a png file of current scene to the current directory."
+            :key "savePNG"
+            :snippet-file "savePNG.snip"}
+           {:name "Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids."
+            :key "ringMode"
+            :snippet-file "ringMode.snip"}
+           {:name "In cartoons, hide the backbone atoms of selected residues when showing then as sticks."
+            :key "sidehChainHelper"
+            :snippet-file "sidehChainHelper.snip"}
+           {:name "Create a new object from part of an existing object."
+            :key "extractPartObj"
+            :snippet-file "extractPartObj.snip"}
+           {:name "Create a putty cartoon."
+            :key "puttyCartoon"
+            :snippet-file "puttyCartoon.snip"}
+           {:name "Trun off magenta squares on current selection."
+            :key "hideSelection"
+            :snippet-file "hideSelection.snip"}
+           {:name "Turn on discrete colors between secondary structure elements."
+            :key "discreteCartoonColoring"
+            :snippet-file "discreteCartoonColoring.snip"}
+           {:name "Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc111"
+            :snippet-file "sc111.snip"}
+           {:name "Display SAXS envelope"
+            :key "saxsEnvelope"
+            :snippet-file "saxsEnvelope.snip"}
+           {:name "Set additional path for PyMOL to search on startup"
+            :key "setpath"
+            :snippet-file "setpath.snip"}
+           {:name "Set path for location to save fetched pdb files. "
+            :key "fetchPath"
+            :snippet-file "fetchPath.snip"}
+           {:name "Set antialias to get smooth edges"
+            :key "antialias"
+            :snippet-file "antialias.snip"}
+           {:name "Print list of active pymolrc files."
+            :key "lspymolrc"
+            :snippet-file "lspymolrc.snip"}
+           {:name "Set number of decimals places to show in distance labels. "
+            :key "sigDigits"
+            :snippet-file "sigDigits.snip"}
+           {:name "Label the CA atoms with the Ala333 style format"
+            :key "labelCAs"
+            :snippet-file "labelCAs.snip"}
+           {:name "Label waters HOH."
+            :key "labelWatersHOH"
+            :snippet-file "labelWatersHOH.snip"}
+           {:name "Label waters W."
+            :key "labelWatersW"
+            :snippet-file "labelWatersW.snip"}
+           {:name "Find hbonds around a residue."
+            :key "findHbonds"
+            :snippet-file "findHbonds.snip"}
+           {:name "Print the B-factors of a residue. "
+            :key "printBs"
+            :snippet-file "printBs.snip"}
+           {:name "Label the main chain atoms by resn,resi,atom name."
+            :key "labelMainChain"
+            :snippet-file "labelMainChain.snip"}
+           {:name "Print B factors of part B of a residue."
+            :key "printBspartB"
+            :snippet-file "printBspartB.snip"}
+           {:name "Print B-values for a residue with the B's rounded off to two decimal places."
+            :key "printBs2digits"
+            :snippet-file "printBs2digits.snip"}
+           {:name "Write the command reference to html file in the present working directory. "
+            :key "writeCommandReference2HTML"
+            :snippet-file "writeCommandReference2HTML.snip"}
+           {:name "Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed."
+            :key "averageB"
+            :snippet-file "averageB.snip"}
+           {:name "AveBResiX, prints the resiude number and the average bfactor. "
+            :key "aveB4resiX"
+            :snippet-file "aveB4resiX.snip"}
+           {:name "Print name and b-factor for a residue."
+            :key "printNameB4ResiX"
+            :snippet-file "printNameB4ResiX.snip"}
+           {:name "Print resn, resi, atom name, and b-factor. "
+            :key "printResiResnNameB4ResiX"
+            :snippet-file "printResiResnNameB4ResiX.snip"}
+           {:name "Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant."
+            :key "printResiResnNameB4ResiXNoH"
+            :snippet-file "printResiResnNameB4ResiXNoH.snip"}
+           {:name "Make the background of the internal gui transparent to expand viewport."
+            :key "internalGUImode2 "
+            :snippet-file "internalGUImode2 .snip"}
+           {:name "Set the width of the internal gui. 
+"
+            :key "internalGUIwidth"
+            :snippet-file "internalGUIwidth.snip"}
+           {:name "Print document string of a function."
+            :key "printDoc"
+            :snippet-file "printDoc.snip"}
+           {:name "List all snips by tab trigger and description"
+            :key "lsSnips"
+            :snippet-file "lsSnips.snip"}
+           {:name "Asp70-His31 salt-bridge from T4 lysozyme. "
+            :key "his31asp70"
+            :snippet-file "his31asp70.snip"}
+           {:name "triple water pentagon."
+            :key "waterTriple"
+            :snippet-file "waterTriple.snip"}
+           {:name "Make selection of ligand atoms."
+            :key "ligandSelect"
+            :snippet-file "ligandSelect.snip"}
+           {:name "Print url of README.md file of the pymolsnips repository."
+            :key "github"
+            :snippet-file "github.snip"}
+           ]}
