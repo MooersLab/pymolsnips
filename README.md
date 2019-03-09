@@ -162,6 +162,7 @@ The clippings can be stored in folders and nested subfolders.
 The clippings are selected via the pulldown labeled C. 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
 The disadvatages inlcude the lack of tab triggers and tab stops. 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -180,6 +181,7 @@ Click on this button to import the pymolsnippets.yml file which is available abo
 All of the snippets for PyMOL are in this single file. 
 Until the PML language is available for brackets, we will use Python.
 This means that the pml file needs a file extnesion of `.py` while editing it in bracktets. 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -203,6 +205,7 @@ CudaText snippets are stored in the user library `./Library/Application\ Support
 
 I plan to develop a lexer (syntax highlighter) for pymol for CudaText. 
 In the mean time, install and use the python lexer.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -213,6 +216,7 @@ Gedit provides an uncluttered gui with access to the snippets through a pulldown
 The snippets are stored in a single file called pymol.xml.
 This file is stored in the home directory in a hidden folder called .config. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -254,6 +258,7 @@ There is not a pml language available yet for Light Table.
 Python will have to do as the language for now. 
 Use `.py` as your file extension while editing the file in Light Table
 and then save the file with the pml extension.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -268,6 +273,7 @@ On the Mac, it is best to use it with the free iterm2.app terminal emulator.
 Install the snippets by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
 All of the snippets for one language are in a single file. 
 The ultisnips library above should work with this editor. 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -283,6 +289,7 @@ Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/v
 Ultisnips required Python. VimL does not require Python. If you choose to install VimL, you will need the snipmate library.
 Otherwise, you should use Ultisnips. 
 The snippets are stored in a single file that is language specific.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -305,6 +312,8 @@ Restart Sublime Text, open a PyMOL pml script file, and then enter "ao" and  hit
 Sixteen lines of code should appear. 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 <h3 name="TextMate">TextMate (tm, Mac only)</h3>
 
@@ -315,6 +324,7 @@ TextMate snippets can be ported to Sublime Text.
 Each snippet is stored in a separate file with the file extension .tmSnippet.
 The snippets are stored in the user's Library folder. 
 There is a large library of plugins available. 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -331,6 +341,7 @@ The addition of a plugin requires the editing of startup .vimrc file.
 Ultisnips is a Plugin that manages snippets and that works with vim and neovim. 
 It is a more recent alternative to snipmate. 
 The snippets are stored in a single file that is language specific.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
@@ -359,6 +370,7 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
 ```
 
 Restart VSC. Open a **pml** file. You should see **pml** in the lower right on the bottom panel. You should also see syntax highlighting of the pml text. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -374,6 +386,9 @@ The yasnippets package is used to manage snippets.
 This package is installed with a builtin package manager.
 Each snippet is stored in a single file. 
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory. 
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <A href="#FASTLINKS">Jump back to top </A>
 <!--
 <h2>Text editors that are ready out of the box</h2>
@@ -381,7 +396,7 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 <h2>Terminal based text editors</h2>
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 <h2> <A name="snippetList" >List of the snippets by their tabtrigger name and description </A> </h2>
 
