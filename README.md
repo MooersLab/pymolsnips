@@ -97,15 +97,15 @@ The installation instructions are below for the following editors:
   <li><a href="#bbedit"> bbedit </a></li>
   <li><a href="#brackets"> Brackets </a></li>
   <li><a href="#cudatext"> CudaText </a></li>
-  <li><a href="#gedit"> gedit </a></li>
+  <li><a href="#gedit"> Gedit </a></li>
   <li><a href="#LightTable"> Ligth Table </a></li>
-  <li><a href="#micro"> micro </a></li>
-  <li><a href="#snipmate"> snipmate (vim, neovim) </a></li>
+  <li><a href="#micro"> Micro </a></li>
+  <li><a href="#snipmate"> Snipmate (vim, neovim) </a></li>
   <li><a href="#SublimeText3"> Sublime Text 3 </a></li>
   <li><a href="#TextMate"> TextMate </a></li>
-  <li><a href="#ultisnips"> ultisnips vim, neovim) </a></li>
+  <li><a href="#ultisnips"> Ultisnips vim, neovim) </a></li>
   <li><a href="#VisualStudioCode"> Visual Studio Code </a></li>
-  <li><a href="#yasnippets"> yasnippets (emacs)</a></li>
+  <li><a href="#yasnippets"> Yasnippets (emacs)</a></li>
  </a></li>
 </ul>
 
@@ -122,9 +122,10 @@ Support is planned for the following editors:
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
   - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
   - [Editra](http://www.editra.org://www.editra.org)
+  - [Expresso](https://espressoapp.com/)
   - [Geany](https://www.geany.org)
   - [Oni](https://www.onivim.io)
-  - [Texadept](https://foicica.com/textadept)
+  - [Textadept](https://foicica.com/textadept)
   - [Coda2](https://panic.com/coda)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
