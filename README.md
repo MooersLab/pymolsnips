@@ -346,7 +346,7 @@ The snippets are stored in a single file that is language specific.
 
 <h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 
-[Visual Studio Codei](https://code.visualstudio.com)
+[Visual Studio Code](https://code.visualstudio.com)
 Visual Studio Code is a free editor from Microsoft. 
 Its start-up speed is between that of Sublime Text 3 and Atom.
 The installation of plugins is the most painless of the text editors that I have tested. 
@@ -358,7 +358,7 @@ Autocompletion of the snippet tab triggers and previews of the snippet's code ar
 
 From the above folder **vscpymolsnips**, download and move the file **pml.json** to **~/Library/Application Support/Code/User/snippets** on the Mac, **$HOME/APPDATA\Code\User\snippets\pml.json** on Windows, and **$HOME/.config/Code/User/snippets/pml.json** on Linux.
 
-Next,  install the pml language file via the <a href="https://marketplace.visualstudio.com"> bioSyntax package </a>from the Visual Studio Code Marketplace. It is free. Just hit the **Install** button on the webpage to install the package. 
+Next,  install the pml language file via the <a href="https://marketplace.visualstudio.com/search?term=bioSyntax&target=VSCode&category=All%20categories&sortBy=Relevanc"> bioSyntax </a>  package from the Visual Studio Code Marketplace. It is free. Just hit the **Install** button on the webpage to install the package. 
 
 Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on Windows (Code <a href="https://www.codecogs.com/eqnedit.php?latex=$\rightarrow$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$\rightarrow$" title="$\rightarrow$" /></a> Preferences on MacOS) as follows:
 
