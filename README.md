@@ -89,7 +89,28 @@ Videos that demonstrate the installation of the snippets for each editor are pla
 <h2> <A name="install"> Installation instructions</A></h2>
 
 Select the library from above for your favorite text editor. 
-The installation instructions are below. 
+The installation instructions are below for the following editors:
+
+<h2> <A name="FASTLINKS2">Quick links</A></h2>
+<ul>
+  <li><a href="#atom"> Atom </a></li>
+  <li><a href="#bbedit"> bbedit </a></li>
+  <li><a href="#brackets"> Brackets </a></li>
+  <li><a href="#cudatext"> CudaText </a></li>
+  <li><a href="#gedit"> gedit </a></li>
+  <li><a href="#LightTable"> Ligth Table </a></li>
+  <li><a href="#micro"> micro </a></li>
+  <li><a href="#snipmate"> snipmate (vim, neovim) </a></li>
+  <li><a href="#SublimeText3"> Sublime Text 3 </a></li>
+  <li><a href="#TextMate"> TextMate </a></li>
+  <li><a href="#ultisnips"> ultisnips vim, neovim) </a></li>
+  <li><a href="#VisualStudioCode"> Visual Studio Code </a></li>
+  <li><a href="#yasnippets"> yasnippets (emacs)</a></li>
+ </a></li>
+</ul>
+
+If you are considering switching editors, the most popular seem to be Atom, Brackets, Sublime Text3, and Visual Studio Code.
+
 If your favorite editor is not listed, please post an issue in the `issues` pulldown menu near the top of this page and make your request. 
 I will be notified immediately by e-mail. 
 I will try to develop a snippet library for the requested editor.
@@ -99,10 +120,9 @@ Support is planned for the following editors:
 
   - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
-  - [Komodo Edit](https://www.activestate.com/products/komodo-edit/ )
+  - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
   - [Editra](http://www.editra.org://www.editra.org)
   - [Geany](https://www.geany.org)
-  - [Light Table](http://lighttable.com)
   - [Oni](https://www.onivim.io)
   - [Texadept](https://foicica.com/textadept)
   - [Coda2](https://panic.com/coda)
@@ -114,7 +134,7 @@ Note that some editors that are available only for Windows like notepadpp can be
 Some of these text editors can take hours to customize to fit your needs; however, you only need to
 know about 5% of the options to become productive with these editors. 
 
-<h3> Atom (Universal) </h3>
+<h3 name="atom" > Atom (Universal) </h3>
 
 [Atom](https://atom.io) is the darling with professional programmers because it is highly extendable and customizable.
 It integrates with github. 
@@ -129,10 +149,9 @@ The snippets for all languages are stored in a single file that is called snippe
 The file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
 You can concatenate the above file of PyMOL snippets to your existing snippets.cson file.
 A pymol lexer for atom has been developed; install the `language-pymol package`. 
-
+<A href=#FASTLINKS2>Return to list of editors above.</A>
  
-
-<h3> BBedit (Mac) </h3>
+<h3 name="bbedit"> BBedit (Mac) </h3>
 
 [BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a on-time fee.
 Major upgrades require additional fees. 
@@ -143,9 +162,28 @@ The clippings can be stored in folders and nested subfolders.
 The clippings are selected via the pulldown labeled C. 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
 The disadvatages inlcude the lack of tab triggers and tab stops. 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3> CudaText (all) </h3>
+<h3 name="brackets"> Brackets (Universal) </h3>
+
+The development of Brackets is lead by a team at Adobe.
+Brackets is designed for web developers with a focus on html, css, and javascript.
+However, it now has support for a large number of languages. 
+Brackets provides quick edit and live preview so changes in the html code deployed immediately in the preview. 
+
+Go to the extension manager. 
+Search for the `brackets-snippets (by EDC)` and install it.
+This is snippet manager that has a GUI that enables the manual creation of user defined snippets.
+The `settings` tab opens a menu with an import button.
+Click on this button to import the pymolsnippets.yml file which is available above.
+All of the snippets for PyMOL are in this single file. 
+Until the PML language is available for brackets, we will use Python.
+This means that the pml file needs a file extnesion of `.py` while editing it in bracktets. 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+<h3 name="cudatext"> CudaText (all) </h3>
 
 [CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of pascal. 
 It is fully open source.
@@ -165,20 +203,20 @@ CudaText snippets are stored in the user library `./Library/Application\ Support
 
 I plan to develop a lexer (syntax highlighter) for pymol for CudaText. 
 In the mean time, install and use the python lexer.
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-
-
-<h3> gedit (Universal) </h3>
+<h3 name="gedit"> gedit (Universal) </h3>
 
 [Gedit](https://www.barebones.com/products/bbedit/index.html) is often available on the computers running Linux OS at national labs. 
 Gedit provides an uncluttered gui with access to the snippets through a pulldown gui or by a tab trigger.
 The snippets are stored in a single file called pymol.xml.
 This file is stored in the home directory in a hidden folder called .config. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3> Light Table (Universal) </h3>
+<h3 name="LightTable"> Light Table (Universal) </h3>
 
 [Table Table](http://lighttable.com/) is a highly extendable and malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
 Those that have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
@@ -216,10 +254,10 @@ There is not a pml language available yet for Light Table.
 Python will have to do as the language for now. 
 Use `.py` as your file extension while editing the file in Light Table
 and then save the file with the pml extension.
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-
-<h3> micro (Universal) </h3>
+<h3 name="micro"> micro (Universal) </h3>
 
 [Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
 Nonetheless, it is easier to use than vim or emacs. 
@@ -230,10 +268,10 @@ On the Mac, it is best to use it with the free iterm2.app terminal emulator.
 Install the snippets by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
 All of the snippets for one language are in a single file. 
 The ultisnips library above should work with this editor. 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3> snipmate (for vim, universal) </h3>
-
+<h3 name="snipmate"> snipmate (for vim, universal) </h3>
 
 [Vim](https://vimawesome.com) is the terminal based text editor vi on steriods.
 It is free. 
@@ -245,16 +283,17 @@ Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/v
 Ultisnips required Python. VimL does not require Python. If you choose to install VimL, you will need the snipmate library.
 Otherwise, you should use Ultisnips. 
 The snippets are stored in a single file that is language specific.
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h3>Sublime Text 3 (Universal)</h3>
 
+<h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
 
 [Sublime Text 3](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor for many reasons. 
 The free trial period is infinite, but I bought a license after several months because I thought that the software was worth it. 
 Sublime Text 3 starts up much faster than the other text editors for programmers.
 Sublime Text 3 has strong support for snippets and the autocompletion of tab triggers. 
 The snippets are stored in separate files with the file extension sublime-snippet. 
-
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <!--
 Sublimeime Text 3 strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
@@ -267,7 +306,7 @@ Sixteen lines of code should appear.
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
 
-<h3>TextMate (tm, Mac only)</h3>
+<h3 name="TextMate">TextMate (tm, Mac only)</h3>
 
 [TextMate](https://macromates.com) is now freely available but only for Mac OS.
 It is a mature project with occasional updates.
@@ -276,9 +315,10 @@ TextMate snippets can be ported to Sublime Text.
 Each snippet is stored in a separate file with the file extension .tmSnippet.
 The snippets are stored in the user's Library folder. 
 There is a large library of plugins available. 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3> ultisnips (for vim, universal) </h3>
+<h3 name="ultisnips"> ultisnips (for vim, universal) </h3>
 
 
 [ultisnip](https://github.com/sirver/UltiSnip)
@@ -291,8 +331,9 @@ The addition of a plugin requires the editing of startup .vimrc file.
 Ultisnips is a Plugin that manages snippets and that works with vim and neovim. 
 It is a more recent alternative to snipmate. 
 The snippets are stored in a single file that is language specific.
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h3>Visual Studio Code (VSC, Universal)</h3>
+<h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 
 [Visual Studio Codei](https://code.visualstudio.com)
 Visual Studio Code is a free editor from Microsoft. 
@@ -318,10 +359,11 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
 ```
 
 Restart VSC. Open a **pml** file. You should see **pml** in the lower right on the bottom panel. You should also see syntax highlighting of the pml text. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 
-<h3> yasnippets (for emacs, universal) </h3>
+<h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
 
 [yasnippets](https://www.emacswiki.org/emacs/Yasnippet)
 Like vim, emacs can be installed as a stand-a-lone application or via a software repository. 
@@ -339,7 +381,7 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 <h2>Terminal based text editors</h2>
 In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
-<A href=#FASTLINKS>Return to quick links section at top</A>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h2> <A name="snippetList" >List of the snippets by their tabtrigger name and description </A> </h2>
 
