@@ -150,6 +150,7 @@ The snippets for all languages are stored in a single file that is called snippe
 The file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
 You can concatenate the above file of PyMOL snippets to your existing snippets.cson file.
 A pymol lexer for atom has been developed; install the `language-pymol package`. 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
  
 <h3 name="bbedit"> BBedit (Mac) </h3>
