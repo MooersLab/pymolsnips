@@ -178,6 +178,46 @@ This file is stored in the home directory in a hidden folder called .config.
 The full path is `~.config/gedit/snippets/pymol.xml`.
 
 
+<h3> Light Table (Universal) </h3>
+
+[Table Table](http://lighttable.com/) is a highly extendable and malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+Those that have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
+Light Table is like a GUI version of emacs.
+It has very an attractive, uncluttered GIU. 
+It supports previews that enable interactive editing of code to change the output.
+For example, code chunks for generating a plot is evaluated in-line and the plot is diplayed in an adjacent window.
+The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin. 
+This documentation is usually on a GitHub website. 
+The installation of plugins is very fast. 
+The number of available plugins is not as extensive as for Atom, Sublime Text, TextMate, or Visual Studio Code. 
+You have to be prepare to do a bit of customization to get some of the plugins to work correctly. 
+
+The snippets are managed through a master file for a language 
+<--! [](https://github.com/rundis/lt-snippets). -->
+This central file has the file extension *.edn.
+This file is used to set the scope (language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension snip. 
+The snippets are stored in `~/.lighttable/User/snippets`.
+You will have to create these directories.
+Then select from the menu in the toolbar at the top `File-->Settings-->user behaviors`.
+This will open a new window with the `users.behaviors` file ready to be edited. 
+Paste inside the square brackets the following and change the path to your home directory:
+
+```ClojureScript
+;; absolute path to where you'd like your snippet root directory to be
+[:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
+"/Users/blaine/.lighttable/User/snippets"]`
+```
+
+Save this file. 
+Download the lighttablepymolsnips folder from above.
+Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`. 
+
+There is not a pml language available yet for Light Table. 
+Python will have to do as the language for now. 
+Use `.py` as your file extension while editing the file in Light Table
+and then save the file with the pml extension.
+
+
 
 <h3> micro (Universal) </h3>
 
