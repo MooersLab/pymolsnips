@@ -122,13 +122,17 @@ Support is planned for the following editors:
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
   - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
   - [Editra](http://www.editra.org://www.editra.org)
-  - [Expresso](https://espressoapp.com/)
+  - [Espresso](https://espressoapp.com/)
   - [Geany](https://www.geany.org)
   - [Oni](https://www.onivim.io)
   - [Textadept](https://foicica.com/textadept)
   - [Coda2](https://panic.com/coda)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
+  - [jed](http://jedmodes.sourceforge.net)
+  - [kate](https://kate-editor.org/get-it/)
+  - [scite](https://scintilla.org/SciTE.html)i
+  - [bluefish](http://bluefish.openoffice.nl/download.html)
 
 Note that some editors that are available only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
 
