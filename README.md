@@ -94,7 +94,7 @@ The installation instructions are below for the following editors:
 <h2> <A name="FASTLINKS2">Quick links</A></h2>
 <ul>
   <li><a href="#atom"> Atom </a></li>
-  <li><a href="#bbedit"> bbedit </a></li>
+  <li><a href="#bbedit"> BBEdit </a></li>
   <li><a href="#brackets"> Brackets </a></li>
   <li><a href="#cudatext"> CudaText </a></li>
   <li><a href="#gedit"> Gedit </a></li>
@@ -157,17 +157,17 @@ A pymol lexer for atom has been developed; install the `language-pymol package`.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
  
-<h3 name="bbedit"> BBedit (Mac) </h3>
+<h3 name="bbedit"> BBEdit (Mac) </h3>
 
 [BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a on-time fee.
 Major upgrades require additional fees. 
-The snippet system is simile and elgant.
+The snippet system is simile and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
 The pymol pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders and nested subfolders. 
 The clippings are selected via the pulldown labeled C. 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
-The disadvatages inlcude the lack of tab triggers and tab stops. 
+The disadvantages include the lack of tab triggers and tab stops. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -186,7 +186,7 @@ The `settings` tab opens a menu with an import button.
 Click on this button to import the pymolsnippets.yml file which is available above.
 All of the snippets for PyMOL are in this single file. 
 Until the PML language is available for brackets, we will use Python.
-This means that the pml file needs a file extnesion of `.py` while editing it in bracktets. 
+This means that the pml file needs a file extension of `.py` while editing it in Brackets. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -200,7 +200,8 @@ Its predecessor is SynWrite is no longer supported.
 The documentation is located [online](http://wiki.freepascal.org/CudaText).
 
 CudaText depends on the presence of 32-bit Python3.
-On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. When I started cudatext, it found this install of Python; I did not have to edit any configuration files.
+On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. 
+When I started cudatext, it found this install of Python; I did not have to edit any configuration files.
 There are numerous plugins available.
 The plugin manager can be used to install the snippets plugin.
 
@@ -242,7 +243,7 @@ You have to be prepare to do a bit of customization to get some of the plugins t
 
 The snippets are managed through a master file for a language 
 <--! [](https://github.com/rundis/lt-snippets). -->
-This central file has the file extension *.edn.
+This central file has the file extension `edn`.
 This file is used to set the scope (language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension snip. 
 The snippets are stored in `~/.lighttable/User/snippets`.
 You will have to create these directories.
@@ -420,7 +421,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | findHbonds     | Find hbonds around a residue.                                                        |
 | printBs        | Print the B-factors of a residue.                                                    |
 | printBs2digits | Print B-values for a residue with the B's rounded off to two decimal places.         |
-| printBspartB   | Print B factors of part B of a rsidues.                                              |
+| printBspartB   | Print B factors of part B of a residues.                                              |
 
 
 ### Change orientation:
@@ -442,7 +443,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 ### Coordinate covalent bonds:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
-| coordinate    | Coordinate covalent bonds to metals and H-bonds friom RNA. |
+| coordinate    | Coordinate covalent bonds to metals and H-bonds from RNA. |
 
 
 ### Database function:
@@ -491,7 +492,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 |:--------------|:------------------|
 | distance      | H-bond distances. |
 | drawHbonds    | Draw H-bonds.     |
-| hbond         | Hbond setup.      |
+| hbond         | H-bond setup.      |
 | hbonddash     | H-bond dashes.    |
 
 
@@ -595,11 +596,11 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 |:---------------------|:-------------------------------------------------------------|
 | duplicateObject      | Duplicate object.                                            |
 | extractPartObj       | Create a new object from part of an existing object.         |
-| hideSelection        | Trun off magenta squares on current selection.               |
-| selectAllBut         | Select all nitrogen atom in a selelction except from lysine. |
+| hideSelection        | Turn off magenta squares on current selection.               |
+| selectAllBut         | Select all nitrogen atom in a selection except from lysine. |
 | selectAtomsAround    | Select atoms within a radius around a ligand.                |
 | selectChain          | Select a chain.                                              |
-| selectElement        | Select atoms by elemnt.                                      |
+| selectElement        | Select atoms by element.                                      |
 | selectHelices        | Select atoms by alpha helices.                               |
 | selectLoops          | Select atoms by beta loops.                                  |
 | selectName           | Select atoms by name.                                        |
@@ -639,8 +640,8 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 ### analysis:
 | Tab trigger                 | Description                                                                                                               |
 |:----------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| aveB4resiX                  | AveBResiX, prints the resiude number and the average bfactor.                                                             |
-|                             | Uses reduce and lambda, builtin Python functional porgramming functions.                                                  |
+| aveB4resiX                  | AveBResiX, prints the residue number and the average bfactor.                                                             |
+|                             | Uses reduce and lambda, builtin Python functional programming functions.                                                  |
 |                             | Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. |
 | printNameB4ResiX            | Print name and b-factor for a residue.                                                                                    |
 | printResiResnNameB4ResiX    | Print resn, resi, atom name, and b-factor.                                                                                |
