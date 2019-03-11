@@ -125,6 +125,7 @@ Support is planned for the following editors:
   - [Espresso](https://espressoapp.com/)
   - [Geany](https://www.geany.org)
   - [Oni](https://www.onivim.io)
+  - [Oni 2](https://www.onivim.io/oin2)
   - [Textadept](https://foicica.com/textadept)
   - [Coda2](https://panic.com/coda)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
