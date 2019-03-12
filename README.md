@@ -226,7 +226,7 @@ It has a plugin manager, and it is very easy to configure.
 
 Make sure the PyMOL filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
 
-The snippets for all languages are stored in groups in single file ``~/.config/geany/snippets.conf`.
+The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
 The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use as a text editor.
 Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
 Make sure that there is only one section with the heading `[PyMOL]`.
