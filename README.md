@@ -217,6 +217,26 @@ In the mean time, install and use the python lexer.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
+<h3 name="Geany"> Geany (Universal) </h3>
+
+[Geany](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005. 
+Binaries are  available for Mac OS, Linux, and Windows.
+Source code is also available.
+It has a plugin manager, and it is very easy to configure. 
+
+Make sure the PyMOL filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
+
+The snippets for all languages are stored in groups in single file ``~/.config/geany/snippets.conf`.
+The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use as a text editor.
+Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
+Make sure that there is only one section with the heading `[PyMOL]`.
+The snippets are involved with a tab trigger and they have tab stops.
+There is no mirroring of tab stops. 
+Enter lssnips to get a list of the current PyMOL snippet tab triggers.
+I still need to develop a language define file to enable syntax highlighting of pml files. 
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <h3 name="gedit"> gedit (Universal) </h3>
 
 [Gedit](https://www.barebones.com/products/bbedit/index.html) is often available on the computers running Linux OS at national labs. 
