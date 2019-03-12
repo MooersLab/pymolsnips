@@ -97,6 +97,7 @@ The installation instructions are below for the following editors:
   <li><a href="#bbedit"> BBEdit </a></li>
   <li><a href="#brackets"> Brackets </a></li>
   <li><a href="#cudatext"> CudaText </a></li>
+  <li><a href="#geany"> Geany </a></li>
   <li><a href="#gedit"> Gedit </a></li>
   <li><a href="#LightTable"> Ligth Table </a></li>
   <li><a href="#micro"> Micro </a></li>
@@ -123,7 +124,6 @@ Support is planned for the following editors:
   - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
   - [Editra](http://www.editra.org://www.editra.org)
   - [Espresso](https://espressoapp.com/)
-  - [Geany](https://www.geany.org)
   - [Oni](https://www.onivim.io)
   - [Oni 2](https://www.onivim.io/oin2)
   - [Textadept](https://foicica.com/textadept)
@@ -217,7 +217,7 @@ In the mean time, install and use the python lexer.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3 name="Geany"> Geany (Universal) </h3>
+<h3 name="geany"> Geany (Universal) </h3>
 
 [Geany](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005. 
 Binaries are  available for Mac OS, Linux, and Windows.
@@ -225,6 +225,9 @@ Source code is also available.
 It has a plugin manager, and it is very easy to configure. 
 
 Make sure the PyMOL filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
+In addition, you need to edit the keybinding preferences  **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. 
+Without making this edit, you will not be able to advance to the second and later tab stops. 
+I used <Cntrl>Shift_L, that is the left control and left shift. 
 
 The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
 The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use as a text editor.
