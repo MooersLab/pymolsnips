@@ -1,9 +1,9 @@
 <h1>pymolsnips</h1>
 
 The PyMOL macro language (pml) is used to set parameter values and execute commands to make detailed figures.
-The number of commands and setting required for sophisticated figures can approach 100. 
-It is difficult to issue so many commands through the PyMOL's gui without making mistakes.
-If the commmands are not saved to an open log file or frequently saved session files (use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files), the work can be lost.
+The number of commands and settings required for sophisticated figures can approach 100. 
+It is difficult to issue so many commands through PyMOL's gui without making mistakes.
+If the commands are not saved to an open log file or frequently saved session file (use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files), the work can be lost.
 Examples of figures that are impossible or tedious to make via the gui alone are shown in the image gallery below.
 
 However, it is challenging to recall the pml syntax when you do not use PyMOL everyday, which is the case for most PyMOL users.
@@ -21,8 +21,8 @@ The tab stops ensure that all of the required edits are made on the first edit.
 Some editors take snippet libraries in one file. 
 Other editors require that each snippet resides in a separate file. 
 Most editors have their own format. 
-The user downloads the desired file or folder of files and installs the snippets following the protocol for that particular editor as described below.
-
+The user downloads the file or folder of files for their text editor and installs the snippets.
+If needed, protocols for snippet installation for each text editor are founded <a href="#install">belowi</a>. 
 
 
 <h2> <A name="FASTLINKS">Quick links</A></h2>
@@ -36,13 +36,12 @@ The user downloads the desired file or folder of files and installs the snippets
 
 
 
-
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
 ![Alt text](Gallery.png?raw=true "Gallery")
 
-A complete listing of the current available snippets can be found by entering the tab trigge **lsSnips**.
-Do this at the bottom of the script file that you are editing to use as a reference. 
+A complete listing of the currently available snippets can be found by entering the tab trigger **lsSnips**.
+Do this at the bottom of the pml script file that you are editing to use as a reference after commenting it out with pound symbols. 
 
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
 
@@ -104,13 +103,14 @@ The installation instructions are below for the following editors:
   <li><a href="#snipmate"> Snipmate (vim, neovim) </a></li>
   <li><a href="#SublimeText3"> Sublime Text 3 </a></li>
   <li><a href="#TextMate"> TextMate </a></li>
-  <li><a href="#ultisnips"> Ultisnips vim, neovim) </a></li>
+  <li><a href="#ultisnips"> Ultisnips (vim, neovim) </a></li>
   <li><a href="#VisualStudioCode"> Visual Studio Code </a></li>
   <li><a href="#yasnippets"> Yasnippets (emacs)</a></li>
  </a></li>
 </ul>
 
-If you are considering switching editors, the most popular seem to be Atom, Brackets, Sublime Text3, and Visual Studio Code.
+If you are considering switching editors, the most popular editors seem to be Atom, Brackets, Sublime Text3, and Visual Studio Code.
+You might also consider Geany. It is very lightweight, very fast, and very easily configurable. It is good editor if you care about agility.  
 
 If your favorite editor is not listed, please post an issue in the `issues` pulldown menu near the top of this page and make your request. 
 I will be notified immediately by e-mail. 
@@ -135,14 +135,14 @@ Support is planned for the following editors:
   - [scite](https://scintilla.org/SciTE.html)i
   - [bluefish](http://bluefish.openoffice.nl/download.html)
 
-Note that some editors that are available only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
+Note that some editors that are available as binaries only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to
 know about 5% of the options to become productive with these editors. 
 
 <h3 name="atom" > Atom (Universal) </h3>
 
-[Atom](https://atom.io) is the darling with professional programmers because it is highly extendable and customizable.
+[Atom](https://atom.io) is the current darling of professional programmers because it is highly extendable and customizable.
 It integrates with github. 
 The GUI is very attractive.
 I have found that Atom's startup speed bogs down as more plugins are added. 
@@ -154,18 +154,20 @@ The package installer is very intuitive.
 The snippets for all languages are stored in a single file that is called snippets.cson.
 The file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
 You can concatenate the above file of PyMOL snippets to your existing snippets.cson file.
-A pymol lexer for atom has been developed; install the `language-pymol package`. 
+A Pymol lexer for Atom has been developed for Atom.
+You can install it via the plugin manager by selecting `language-pymol package`. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
  
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
-[BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a on-time fee.
+[BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
 Major upgrades require additional fees. 
-The snippet system is simile and elegant.
+The snippet system is simple and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
 The pymol pml snippets end with the file extension `*.pml`.
-The clippings can be stored in folders and nested subfolders. 
+The clippings can be stored in folders by language. 
+Users can create nested subfolders for groups of related snippets. 
 The clippings are selected via the pulldown labeled C. 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
 The disadvantages include the lack of tab triggers and tab stops. 
@@ -186,7 +188,7 @@ This is snippet manager that has a GUI that enables the manual creation of user 
 The `settings` tab opens a menu with an import button.
 Click on this button to import the pymolsnippets.yml file which is available above.
 All of the snippets for PyMOL are in this single file. 
-Until the PML language is available for brackets, we will use Python.
+Until the PML language is available for Brackets, we will use Python.
 This means that the pml file needs a file extension of `.py` while editing it in Brackets. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -195,31 +197,31 @@ This means that the pml file needs a file extension of `.py` while editing it in
 <h3 name="cudatext"> CudaText (all) </h3>
 
 [CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of pascal. 
-It is fully open source.
-It is a full-featured editor.
-Its predecessor is SynWrite is no longer supported. 
+It is open source.
+Its predecessor is SynWrite, which is no longer supported. 
 The documentation is located [online](http://wiki.freepascal.org/CudaText).
 
 CudaText depends on the presence of 32-bit Python3.
 On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. 
 When I started cudatext, it found this install of Python; I did not have to edit any configuration files.
 There are numerous plugins available.
-The plugin manager can be used to install the snippets plugin.
+The plugin manager should be used to install the snippets plugin.
 
 The snippets are stored one per file.
 The files have the extensions of .cuda-snippet. 
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
 CudaText snippets are stored in the user library `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder, which you may have to create. 
 
-I plan to develop a lexer (syntax highlighter) for pymol for CudaText. 
-In the mean time, install and use the python lexer.
+I plan to develop a PyMOL lexer (syntax highlighter) for CudaText. 
+In the meantime, install and use the Python lexer.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="geany"> Geany (Universal) </h3>
 
-[Geany](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005. 
+[Geany](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
+It is written in C and C++. 
 Binaries are  available for Mac OS, Linux, and Windows.
 Source code is also available.
 It has a plugin manager, and it is very easy to configure. 
