@@ -1,0 +1,1186 @@
+<snippets namespace="" license="GPL v3+" filetypes="pml" authors="Blaine Mooers" name="PyMOL Snippets">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ao</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set_color oxygen, [1.0,0.4,0.4];
+ set_color nitrogen, [0.5,0.5,1.0];
+ remove solvent;
+ as spheres;
+ util.cbaw;
+ bg white;
+ set light_count,10;
+ set spec_count,1;
+ set shininess, 10;
+ set specular,0.25;
+ set ambient,0;
+ set direct,0;
+ set reflect,1.5;
+ set ray_shadow_decay_factor, 0.1;
+ set ray_shadow_decay_range, 2;
+ unset depth_cue;
+ ray;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ellipcol</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set ellipsoid_color, ${1:color};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sigdist</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set label_distance_digits, ${1:2};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sigang</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set label_angle_digits, ${1:2};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>bs</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> show sticks;
+ set stick_radius, 0.12;
+ set stick_ball, on;
+ set stick_ball_ratio, 1.9;
+ show nb_spheres;
+ set nb_spheres_size=0.33;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>stack</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> delete all;
+ fetch ${1:4PCO}, type=pdb,async=0;
+ select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );
+ hide everything, element h; 
+ remove not ${2:G2G3};
+ bg_color white;
+ show sticks;
+ set stick_radius=0.14;
+ set stick_ball, on; 
+ set stick_ball_ratio,1.9;
+ set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
+ hide everything, element H;
+ select carbon1, element C and (resi ${4:3} or resi ${5:8}) 
+ # select lower base pair;
+ select carbon2, element C and (resi ${3:2} or resi ${6:9}) 
+ #select upper base pair;
+ color gray70,carbon1;
+ color gray10,carbon2;
+ space cmyk;
+ distance hbond1,/${1:4PCO}//B/U`9/N3,/${1:4PCO}//A/G`2/O6;
+ distance hbond2,/${1:4PCO}//B/U`9/O2,/${1:4PCO}//A/G`2/N1;
+ distance hbond3,/${1:4PCO}//A/U`3/N3,/${1:4PCO}//B/G`8/O6;
+ distance hbond4,/${1:4PCO}//A/U`3/O2,/${1:4PCO}//B/G`8/N1;
+ color black, hbond1;
+ color black, hbond2;
+ color gray70, hbond3;
+ color gray70, hbond4;
+ show nb_spheres;
+ set nb_spheres_size, 0.35;
+ hide labels;
+ ray 1600,1000;
+ png ${1:4PCO}.png
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>bu</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> run ~/Scripts/PyMOLScripts/quat.py; quat
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>doubleBond</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set valence, 1; 
+ set valence_mode, 1;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cblind</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> run ~/Pymol-script-repo/colorblindfriendly.py;
+ as cartoon;
+ color cb_red, ss H;
+ color cb_yellow,ss S;
+ color cb_green, ss L+; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>centerpi</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;
+ dist pi_cent////ps1, b/${4:U`15}/${5:aaa};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cribbon</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> as cartoon;
+ color red, ss H;
+ color yellow,ss S;
+ color green, ss L+; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cspheres</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> as spheres;    
+ color gray30, chain %0;    
+ color white, chain %1;    
+ color green, name CL;    
+ color brown, resn NAG;    
+ color red, resi 381;    
+ remove solvent;    
+ unset specular;    
+ set ray_trace_gain, 0;    
+ set ray_trace_mode, 3;    
+ bg_color white;    
+ set ray_trace_color, black;    
+ unset depth_cue;    
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>coordinate</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> viewport 900,600;    
+ fetch 3nd4, type=pdb, async=0;    
+ run ~/Scripts/PyMOLScripts/quat.py;    
+ quat 3nd4;    
+ show sticks;    
+ set stick_radius=0.125;    
+ hide everything, name H*;    
+ bg_color white;        
+ create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));        
+ bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);    
+ bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);    
+ bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);    
+ bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);    
+ bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);        
+ distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);    
+ distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);    
+ distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);    
+ distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);    
+ show nb_spheres;     
+ set nb_spheres_size, .35;        
+ distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;    
+ distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;    
+ distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;   
+ distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;    
+ distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;    
+ distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    
+ distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;    
+ distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;    
+ distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;    
+ distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;    
+ distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;    
+ distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
+ distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
+ distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
+  distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
+ distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
+ distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
+ distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
+ set depth_cue=0;    
+ set ray_trace_fog=0;    
+ set dash_color, black;    
+ set label_font_id, 5;    
+ set label_size, 36;
+ set label_position, (0.5, 1.0, 2.0);   
+ set label_color, black;    
+ set dash_gap, 0.2;    
+ set dash_width, 2.0;    
+ set dash_length, 0.2;
+ set label_color, black;    
+ set dash_gap, 0.2; 
+ set dash_width, 2.0;
+ set dash_length, 0.2;
+ select carbon, element C;
+ color yellow, carbon;
+ disable carbon;
+ set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0) 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>distance</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>drawHbonds</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> hide everything, hydrogens
+ hide labels
+ set dash_color, ${1:black}${2:yelow} 
+ set dash_gap, 0.4
+ set dash_radius, 0.08
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>carvedDensity</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> delete all;
+ fetch 4dgr, async=0;
+ fetch 4dgr, type=2fofc,async=0;
+ select LongGlycan, resi 469:477;
+ orient LongGlycan;
+ remove not LongGlycan;
+ remove name H*;
+ isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+ color density, 2fofcmap; 
+ show sticks;
+ show spheres;
+ set stick_radius, .07;
+ set sphere_scale, .19;
+ set sphere_scale, .13, elem H;
+ set bg_rgb=[1, 1, 1];
+ set stick_quality, 50;
+ set sphere_quality, 4;
+ color gray85, elem C;
+ color red, elem O;
+ color slate, elem N;
+ color gray98, elem H;
+ set stick_color, gray50;
+ set ray_trace_mode, 1;
+ set ray_texture, 2;
+ set antialias, 3;
+ set ambient, 0.5;
+ set spec_count, 5;
+ set shininess, 50;
+ set specular, 1;
+ set reflect, .1;
+ set dash_gap, 0;
+ set dash_color, black;
+ set dash_gap, .15;
+ set dash_length, .05;
+ set dash_round_ends, 0;
+ set dash_radius, .05;
+ set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
+ preset.ball_and_stick("all",mode=1);
+ draw;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>fetch2FoFc</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch ${1:3nd4}, type=2fofc, async=0
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>fetchCIF</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch ${1:3nd4}, type=cif, async=0;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>fetchFoFc</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch ${1:3nd4}, type=fofc, async=0;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>filledRing</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> show sticks;set cartoon_ring_mode, 3;
+ set cartoon_ring_finder, 1;
+ set cartoon_ladder_mode, 1;
+ set cartoon_nucleic_acid_mode, 4;
+ set cartoon_ring_transparency, 0.5;
+ as cartoon;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>getCoordinates</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>hbonddash</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> hide everything, hydrogens;
+ hide labels;
+ set dash_color, black; 
+ set dash_gap, 0.4;
+ set dash_radius, 0.08;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>hbond</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> hide labels;
+ set dash_color, black ;
+ set dash_length, ${1:0.15};
+ set dash_gap, ${2:0.35};
+ set dash_width,  ${3:3.0};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>hidealtloc</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select altconf, alt ${1:b}  # select B alternative locators;
+ hide everything, altconf  # hide alt B locators;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>labelResnResi</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>labelSS</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> alter ${1:}, ss='%1';
+ label (%2),'%3';
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>loadPDBbs</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+ hide (name H*);
+ hide lines;
+ show sticks;
+ set stick_radius, ${2:1.2};
+ set nb_sphere_radius, ${3:0.35};
+ orient;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>loadPDBnb</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
+ orient;
+ set stick_radius, ${2:1.2};
+ hide (name H*);
+ set nb_sphere_size, ${3:0.35};
+ set nb_spheres_quality, ${4:1};
+ show nb_spheres;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ms</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+ select ${2:temp}, ${3:3nd3} and chain A;
+ run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
+ calc_msms_area ${2:temp};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>molscriptRibbon</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set cartoon_highlight_color, grey;
+ show cartoon;
+ set cartoon_flat_sheets, 0;
+ set cartoon_smooth_loops, 0;
+ set cartoon_fancy_helices, 1;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>oneLetter</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%
+ 'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%
+ 'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>fasta</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> print cmd.get_fastastr('all')
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pseudolabel</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> pseudoatom ${1:forLabel};
+ label ${1:forLabel}, '%0';
+ set label_color, ${2:red};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rotate</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> rotate ${1:x}, ${2:45}, ${3:pept}
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>stereoDraw</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> stereo walleye; 
+ set ray_shadow, off; 
+ #draw 3200,2000;
+ draw ${1:1600,1000}; 
+ png ${2:aaa}.png
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>stereoRay</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> stereo; 
+ set ray_shadow, off;
+ ray ${1:2400,1200};
+ png ${2:aaa}.png
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>threeMaps</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> load ${1:4dgr}.pdb
+ # Make sure to rename map file so that 
+ # the root filename differs from pdb root filename
+ load ${1:4dgr}_2fofc.ccp4, 2fofc;
+ load ${1:4dgr}_fofc.ccp4, fofc;
+ select  ${2:glycan}, resid 200 or (resid 469:477);
+ isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};
+ color density, ${3:mesh1};
+ isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
+ color green, ${4:mesh2};
+ isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+ color red, ${5:mesh2};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>turnAboutAxis</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> turn ${1:x},${2:90};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>volumeRamp</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>solventRadius</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set solvent_radius, ${1:1.55}
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>scaleRadiusColor</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> bg_color white
+ hide everything
+ show spheres
+ set  stick_radius = 0.1
+ hide everything, HET
+ show spheres, HET
+ set sphere_quality=3
+ show sticks, resi 1102
+ from pymol import stored
+ # set the stored array equal to the b−values; or use your own values 
+ stored.bb = [ ]
+ iterate, stored.bb.append(b)
+ # execute a python−block
+ python
+ # scale the b−values
+ M = max(stored.bb)
+ scaledBB = map(lambda x: float (x/M), stored.bb)
+ count = 0
+ # set the sphere radii independently
+ for x in scaledBB:
+   cmd.set("sphere_scale", x ,"ID %s"%count)
+   count = count + 1
+ python end
+ spectrum b, selection=4gdx
+ space cmyk
+ set specular_intensity , 0.25
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rv</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> run roundview.py;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>spng</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> python;
+ import datetime;
+ from pymol import cmd; 
+ DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+ s = str(DT); 
+ cmd.save(stemName+s+".png"); 
+ end python;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>spse</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> python;
+ import datetime;
+ from pymol import cmd; 
+ DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+ s = str(DT); 
+ cmd.save(stemName+s+".pse"); 
+ end python;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sc222</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> run $HOME/Scripts/PyMOLscripts/supercell.py
+ supercell 2, 2, 2, , orange, supercell2, 1
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pearl</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> create ${1:sodium2}, ${2:sodium1}
+ set sphere_transparency, 0.4, ${1:sodium2}
+ set sphere_scale, 1.05, ${1:sodium2}
+ ray
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>fog</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set fog, 0
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rmwater</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> remove resn HOH
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>setcolor</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}]
+ color ${1:bark}, ${5:protein}
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>duplicateObject</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> create ${1:t4l}, ${2:1lw9}; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectChain</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select rna, chain B
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectResidues</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select aromatic, resn phe+tyr+trp;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectResi</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select se;2. resi 1-100
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectElement</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:oxygen}, elem ${2:O}
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectName</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:oxygen2}, name ${2:O2}
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectHelices</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:helices}, ss h; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectStrands</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:strands}, ss s; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectLoops</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:loops}, ss l;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectAllBut</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectAtomsAround</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:nearby}, resn ${2:drug} around ${3:5};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>selectResiduesAround</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select ${1:nearby}, br. resn ${2:drug} around ${3:5};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>undoSelection</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> disable ${1:sele}; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>loadPDBfile</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> load ${1:my.pdb};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>savePNG</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> png ${1:saveMe.png}; 
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ringMode</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sidehChainHelper</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set cartoon_side_chain_helper, on;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>extractPartObj</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> extract new_obj, chain A
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>puttyCartoon</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> show cartoon;
+ cartoon putty;
+ unset cartoon_smooth_loops;
+ unset cartoon_flat_sheets;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>hideSelection</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> indicate none
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>discreteCartoonColoring</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set cartoon_discrete_colors, on
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sc111</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> run $HOME/Scripts/PyMOLscripts/supercell.py
+ supercell 1, 1, 1, , orange, supercell1, 1
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>saxsEnvelope</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0
+ set solvent_radius = 3.0
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>setpath</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>fetchPath</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set fetch_path, ${1:/Users/blaine/pdbFiles};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>antialias</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set antialias, 1;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>lspymolrc</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> print invocation.options.deferred;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sigDigits</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set label_distance_digits, ${1:2};
+ set label_angle_digits, ${2:2};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>labelCAs</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> label name CA,"%s%s" % (resn,resi);
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>labelWatersHOH</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> label resn HOH ,"%s%s" % (resn,resi);
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>labelWatersW</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> label resn HOH ,"W%s" % (resi);
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>findHbonds</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> remove element h; distance hbonds, all, all, 3.2, mode=2;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printBs</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> remove element h; iterate resi %{1:133}, print resi, name,b;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>labelMainChain</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printBspartB</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printBs2digits</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> iterate (resi %{1:133}), print(name + " %.2f" % b);
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>writeCommandReference2HTML</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> cmd.write_html_ref('pymol-command-ref.html');
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>averageB</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> """ Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
+ Bfactors = []; 
+ iterate (resi ${1:133}), Bfactors.append(b);
+ print("Sum = ", "%.2f" % (sum(Bfactors)));
+ print("Number of atoms = ", len(Bfactors));
+ print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>aveB4resiX</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> """"AveBResiX, prints the resiude number and the average bfactor. 
+ Uses reduce and lambda, builtin Python functional porgramming functions. 
+ Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
+ """
+ Bfactors = []; 
+ iterate (resi ${1:133}), Bfactors.append(b);
+ print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printNameB4ResiX</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printResiResnNameB4ResiX</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printResiResnNameB4ResiXNoH</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>internalGUImode2 </match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> internal_gui_mode=2;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>internalGUIwidth</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> internal_gui_width=%{1:20};
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>printDoc</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> print ${1:my_func}.__doc__;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>lsSnips</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> Tab trigger                  Description
+ ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ antialias                    Set antialias to get smooth edges
+ ao                           Ambient occlussion.
+ aveB4resiX                   AveBResiX, prints the resiude number and the average bfactor.
+                              Uses reduce and lambda, builtin Python functional porgramming functions.
+                              Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.
+ averageB                     Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.
+ bs                           Ball and stick representation.
+ bu                           Biological unit.
+ carvedDensity                Carved electron density.
+ cblind                       Color blindness.
+ centerpi                     Center pi.
+ coordinate                   Coordinate covalent bonds to metals and H-bonds friom RNA.
+ cribbon                      Color ribbon H red, strand yellow, loop green.
+ cspheres                     Colored spheres.
+ discreteCartoonColoring      Turn on discrete colors between secondary structure elements.
+ distance                     H-bond distances.
+ doubleBond                   Valence bond.
+ drawHbonds                   Draw H-bonds.
+ duplicateObject              Duplicate object.
+ ellipcol                     Set ellipsoid color.
+ extractPartObj               Create a new object from part of an existing object.
+ fasta                        Print Fasta from PDB file.
+ fetch2FoFc                   Fetch 2FoFc map.
+ fetchCIF                     Fetch cif file.
+ fetchFoFc                    Fetch fofc map.
+ fetchPath                    Set path for location to save fetched pdb files.
+ filledRing                   Filled rings in nucleic acids.
+ findHbonds                   Find hbonds around a residue.
+ fog                          Blur the background atoms.
+ getCoordinates               Get coordinates.
+ hbond                        Hbond setup.
+ hbonddash                    H-bond dashes.
+ hideSelection                Trun off magenta squares on current selection.
+ hidealtloc                   Hide alt loc.
+ internalGUImode2             Makes the background of the internal gui transparent with the viewport extended into this region of the gui. This may be a useful mode for workshops.
+ internalGUIwidth             Set the width of the internal gui.
+ labelCAs                     Label the CA atoms with the Ala333 style format
+ labelMainChain               Label the main chain atoms by resn,resi,atom name.
+ labelResnResi                Label CA atom with residue name and residue number.
+ labelSS                      Label SS.
+ labelWatersHOH               Label waters HOH.
+ labelWatersW                 Label waters W.
+ loadPDBbs                    Load PDB ball-and-stick.
+ loadPDBfile                  Load a pdb file in the current directory.
+ loadPDBnb                    Load PDB nb spheres.
+ lsSnips                      List all snips by tab trigger and description
+ lspymolrc                    Print list of active pymolrc files.
+ molscriptRibbon              Molscript ribbons.
+ ms                           Measure surface area.
+ oneLetter                    One letter amino acid.
+ pearl                        The pearl effect is made with two spheres with the outer sphere being transparent.
+ printBs                      Print the B-factors of a residue.
+ printBs2digits               Print B-values for a residue with the B's rounded off to two decimal places.
+ printBspartB                 Print B factors of part B of a rsidues.
+ printDoc                     Print document string of a function.
+ printNameB4ResiX             Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). Use the noH variant if H atoms are present.
+ printResiResnNameB4ResiX     Print resn, resi, atom name, and b-factor.
+ printResiResnNameB4ResiXNoH  Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). The noH variant.
+ pseudolabel                  Position label with pseudoatom.
+ puttyCartoon                 Create a putty cartoon.
+ ringMode                     Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.
+ rmwater                      Remove waters from molecular object.
+ rotate                       Rotate about axis.
+ rv                           Return settings in rounded format.
+ savePNG                      Save a png file of current scene to the current directory.
+ saxsEnvelope                 Display SAXS envelope
+ sc111                        Display all symmetry mates in one unit cell. Asumes supercell.py (sse PyMOL Wiki) is in $HOME/Scripts/PyMOLscripts/.
+ sc222                        Run Tom Holder's supercell script to generate three cells in all directions.
+ scaleRadiusColor             Scale the radius and color of atoms as spheres by property in the B-value column.
+ selectAllBut                 Select all nitrogen atom in a selelction except from lysine.
+ selectAtomsAround            Select atoms within a radius around a ligand.
+ selectChain                  Select a chain.
+ selectElement                Select atoms by elemnt.
+ selectHelices                Select atoms by alpha helices.
+ selectLoops                  Select atoms by beta loops.
+ selectName                   Select atoms by name.
+ selectResi                   Select residues by a range of numbers.
+ selectResidues               Select residues by name.
+ selectResiduesAround         Select residues within a radius around a ligand.
+ selectStrands                Select atoms by beta strands.
+ setcolor                     Set color name to a RGB code.
+ setpath                      Set additional path for PyMOL to search on startup
+ sidehChainHelper             In cartoons, hide the backbone atoms of selected residues when showing then as sticks.
+ sigDigits                    Set number of decimals places to show in distance labels.
+ sigang                       Set angle labels to display 2 decimals places
+ sigdist                      set distance labels to display 2 decimals
+ solventRadius                Set radius of ball used to make solvent accessible surface.
+ spng                         Save png flle with timestamp
+ spse                         Save pse flle with timestamp
+ stack                        Base-stacking figure.
+ stereoDraw                   Stereo draw.
+ stereoRay                    Stereo ray.
+ threeMaps                    Three electron density.
+ turnAboutAxis                Turn about axis.
+ undoSelection                Undo a selection.
+ volumeRamp                   Volume ramp.
+ writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>his31asp70</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch 1lw9, async=0; 
+ zoom (resi 31 or resi 70); 
+ preset.technical(selection='all'); 
+ bg_color gray70; 
+ clip slab, 7,(resi 31 or resi 70);
+ rock;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>waterTriple</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> fetch 1lw9, async=0; 
+ zoom resi 313; 
+ preset.technical(selection='all', mode=1);
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ligandSelect</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> select substrates, organic;
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>github</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> https://github.com/MooersLab/pymolsnips/blob/master/README.md
+ %cursor%</fillin>
+ </item>
+</snippets>
+
