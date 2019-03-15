@@ -96,9 +96,11 @@ The installation instructions are below for the following editors:
   <li><a href="#bbedit"> BBEdit </a></li>
   <li><a href="#brackets"> Brackets </a></li>
   <li><a href="#cudatext"> CudaText </a></li>
+  <li><a href="#espresso"> Espresso </a></li>
   <li><a href="#geany"> Geany </a></li>
   <li><a href="#gedit"> Gedit </a></li>
-  <li><a href="#LightTable"> Ligth Table </a></li>
+  <li><a href="#kate"> Kate </a></li>
+  <li><a href="#LightTable"> Light Table </a></li>
   <li><a href="#micro"> Micro </a></li>
   <li><a href="#snipmate"> Snipmate (vim, neovim) </a></li>
   <li><a href="#SublimeText3"> Sublime Text 3 </a></li>
@@ -123,7 +125,6 @@ Support is planned for the following editors:
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
   - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
   - [Editra](http://www.editra.org://www.editra.org)
-  - [Espresso](https://espressoapp.com/)
   - [Oni](https://www.onivim.io)
   - [Oni 2](https://www.onivim.io/oin2)
   - [Textadept](https://foicica.com/textadept)
@@ -131,7 +132,6 @@ Support is planned for the following editors:
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
   - [jed](http://jedmodes.sourceforge.net)
-  - [kate](https://kate-editor.org/get-it/)
   - [scite](https://scintilla.org/SciTE.html)i
   - [bluefish](http://bluefish.openoffice.nl/download.html)
 
@@ -196,27 +196,38 @@ This means that the pml file needs a file extension of `.py` while editing it in
 
 <h3 name="cudatext"> CudaText (all) </h3>
 
-[CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of pascal. 
+[CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal. 
 It is open source.
 Its predecessor is SynWrite, which is no longer supported. 
+There are numerous plugins available.
+The plugin manager should be used to install the `snippets` plugin.
 The documentation is located [online](http://wiki.freepascal.org/CudaText).
 
 CudaText depends on the presence of 32-bit Python3.
 On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. 
 When I started cudatext, it found this install of Python; I did not have to edit any configuration files.
-There are numerous plugins available.
-The plugin manager should be used to install the snippets plugin.
+
 
 The snippets are stored one per file.
 The files have the extensions of .cuda-snippet. 
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
-CudaText snippets are stored in the user library `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder, which you may have to create. 
+CudaText snippets are stored in the user library on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder, which you may have to create. 
 
 I plan to develop a PyMOL lexer (syntax highlighter) for CudaText. 
 In the meantime, install and use the Python lexer.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
+
+
+<h3 name="espresso"> Espresso (Mac) </h3>
+
+[Espresso](https://espressoapp.com/)is a proprietary test editor for the Mac.
+It is for those users who made a text editor that has a GUI that looks like a native Mac app. 
+The snippets are stored in a single xml file. 
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="geany"> Geany (Universal) </h3>
 
@@ -226,18 +237,19 @@ Binaries are  available for Mac OS, Linux, and Windows.
 Source code is also available.
 It has a plugin manager, and it is very easy to configure. 
 
-Make sure the PyMOL filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
+Make sure that the PyMOL filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
 In addition, you need to edit the keybinding preferences  **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. 
 Without making this edit, you will not be able to advance to the second and later tab stops. 
 I used <Cntrl>Shift_L, that is the left control and left shift. 
 
 The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
-The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use as a text editor.
+The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor.
 Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
 Make sure that there is only one section with the heading `[PyMOL]`.
-The snippets are involved with a tab trigger and they have tab stops.
+The snippets are invoked with a tab trigger, and they have tab stops.
 There is no mirroring of tab stops. 
-Enter lssnips to get a list of the current PyMOL snippet tab triggers.
+Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
+
 I still need to develop a language define file to enable syntax highlighting of pml files. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -253,19 +265,41 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
+<h3 name="kate"> Kate/Kwriter (Universal) </h3>
+
+[kate](https://kate-editor.org/get-it/)
+Kate is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux. 
+If installed with macports, its app resides in ```/Applications/macports/kate.app```.
+The Snippet plugin has to be turned on.
+The snippets are stored in a single xml file. 
+The storage location for this file is not in the documentation.
+Try the following on Mac (one of the four) and Linux (first three):
+
+```bash
+/Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml
+/Users/blaine/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml 
+/Users/blaine//.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
+/Users/blaine/Library/Application\ Support/kate/MySnippets/
+```
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 <h3 name="LightTable"> Light Table (Universal) </h3>
 
-[Table Table](http://lighttable.com/) is a highly extendable and malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+[Light Table](http://lighttable.com/) is a highly extendable and malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
 Those that have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
 Light Table is like a GUI version of emacs.
 It has very an attractive, uncluttered GIU. 
-It supports previews that enable interactive editing of code to change the output.
+
+*Light Table* supports previews that enable interactive editing of code to change the output.
 For example, code chunks for generating a plot is evaluated in-line and the plot is diplayed in an adjacent window.
 The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin. 
-This documentation is usually on a GitHub website. 
-The installation of plugins is very fast. 
+This documentation is on a GitHub website. 
+
+The installation of plugins in *Light Table* is very fast. 
 The number of available plugins is not as extensive as for Atom, Sublime Text, TextMate, or Visual Studio Code. 
-You have to be prepare to do a bit of customization to get some of the plugins to work correctly. 
+You have to be prepared to do a bit of customization to get some of the plugins to work correctly. 
 
 The snippets are managed through a master file for a language 
 <--! [](https://github.com/rundis/lt-snippets). -->
@@ -273,6 +307,7 @@ This central file has the file extension `edn`.
 This file is used to set the scope (language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension snip. 
 The snippets are stored in `~/.lighttable/User/snippets`.
 You will have to create these directories.
+In bash, you can do this with the single command: `mkdir -p ~/.lighttable/User/snippets`.
 Then select from the menu in the toolbar at the top `File-->Settings-->user behaviors`.
 This will open a new window with the `users.behaviors` file ready to be edited. 
 Paste inside the square brackets the following and change the path to your home directory:
@@ -287,7 +322,7 @@ Save this file.
 Download the lighttablepymolsnips folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`. 
 
-There is not a pml language available yet for Light Table. 
+There is not a pml language available yet for *Light Table*. 
 Python will have to do as the language for now. 
 Use `.py` as your file extension while editing the file in Light Table
 and then save the file with the pml extension.
@@ -298,10 +333,11 @@ and then save the file with the pml extension.
 <h3 name="micro"> micro (Universal) </h3>
 
 [Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
-Nonetheless, it is easier to use than vim or emacs. 
-It is a terminal based editor that has a number of plugins available including one for snippets.
+Nonetheless, *micro* is easier to use than *vim* or *emacs*. 
+It is a terminal-based editor that has a number of plugins available including one for snippets.
 You do have to compile it to install it. 
 You need to have Node.js installed. 
+
 On the Mac, it is best to use it with the free iterm2.app terminal emulator.
 Install the snippets by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
 All of the snippets for one language are in a single file. 
