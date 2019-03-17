@@ -1,0 +1,12 @@
+// komodo tool: internalGUImode2 
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+internal_gui_mode=2;
+!@#_currentPos!@#_anchor

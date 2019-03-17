@@ -1,0 +1,12 @@
+// komodo tool: ringMode
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+show cartoon, [[%tabstop:rna]]; set cartoon_ring_mode, [[%tabstop:3]];
+!@#_currentPos!@#_anchor

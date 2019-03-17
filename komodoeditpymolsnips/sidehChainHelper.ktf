@@ -1,0 +1,12 @@
+// komodo tool: sidehChainHelper
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+set cartoon_side_chain_helper, on;
+!@#_currentPos!@#_anchor

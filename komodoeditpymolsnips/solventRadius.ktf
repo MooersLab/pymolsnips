@@ -1,0 +1,13 @@
+// komodo tool: solventRadius
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+set solvent_radius, [[%tabstop:1.55]]
+!@#_currentPos!@#_anchor
+

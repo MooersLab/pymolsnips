@@ -1,0 +1,12 @@
+// komodo tool: duplicateObject
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+create [[%tabstop:t4l]], [[%tabstop:1lw9]]; 
+!@#_currentPos!@#_anchor

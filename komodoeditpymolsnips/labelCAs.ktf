@@ -1,0 +1,12 @@
+// komodo tool: labelCAs
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+label name CA,"%s%s" % (resn,resi);
+!@#_currentPos!@#_anchor

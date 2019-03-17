@@ -1,0 +1,12 @@
+// komodo tool: ellipcol
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+set ellipsoid_color, [[%tabstop:color]];
+!@#_currentPos!@#_anchor

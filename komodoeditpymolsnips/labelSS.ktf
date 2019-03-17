@@ -1,0 +1,13 @@
+// komodo tool: labelSS
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+alter ${1:}, ss='%1';
+label (%2),'%3';
+!@#_currentPos!@#_anchor

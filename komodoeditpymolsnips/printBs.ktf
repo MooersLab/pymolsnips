@@ -1,0 +1,12 @@
+// komodo tool: printBs
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+remove element h; iterate resi %{1:133}, print resi, name,b;
+!@#_currentPos!@#_anchor

@@ -1,0 +1,17 @@
+// komodo tool: averageB
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+""" Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
+Bfactors = []; 
+iterate (resi [[%tabstop:133]]), Bfactors.append(b);
+print("Sum = ", "%.2f" % (sum(Bfactors)));
+print("Number of atoms = ", len(Bfactors));
+print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));
+!@#_currentPos!@#_anchor

@@ -1,0 +1,18 @@
+// komodo tool: his31asp70
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+fetch 1lw9, async=0; 
+zoom (resi 31 or resi 70); 
+preset.technical(selection='all'); 
+bg_color gray70; 
+clip slab, 7,(resi 31 or resi 70);
+rock;
+!@#_currentPos!@#_anchor
+

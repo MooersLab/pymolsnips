@@ -1,0 +1,15 @@
+// komodo tool: ms
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+fetch [[%tabstop:3nd3]],name=[[%tabstop:3nd3]], type=pdb, async=0
+select [[%tabstop:temp]], [[%tabstop:3nd3]] and chain A;
+run [[%tabstop:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py]];
+calc_msms_area [[%tabstop:temp]];
+!@#_currentPos!@#_anchor

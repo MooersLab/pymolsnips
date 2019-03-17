@@ -1,0 +1,13 @@
+// komodo tool: hidealtloc
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+select altconf, alt [[%tabstop:b]]  # select B alternative locators;
+hide everything, altconf  # hide alt B locators;
+!@#_currentPos!@#_anchor

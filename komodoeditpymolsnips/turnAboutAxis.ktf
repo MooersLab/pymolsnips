@@ -1,0 +1,12 @@
+// komodo tool: turnAboutAxis
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+turn [[%tabstop:x]],[[%tabstop:90]];
+!@#_currentPos!@#_anchor

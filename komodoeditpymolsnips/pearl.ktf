@@ -1,0 +1,15 @@
+// komodo tool: pearl
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+create [[%tabstop:sodium2]], [[%tabstop:sodium1]]
+set sphere_transparency, 0.4, [[%tabstop:sodium2]]
+set sphere_scale, 1.05, [[%tabstop:sodium2]]
+ray
+!@#_currentPos!@#_anchor

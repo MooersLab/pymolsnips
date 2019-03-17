@@ -1,0 +1,13 @@
+// komodo tool: sc111
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+run $HOME/Scripts/PyMOLscripts/supercell.py
+supercell 1, 1, 1, , orange, supercell1, 1
+!@#_currentPos!@#_anchor

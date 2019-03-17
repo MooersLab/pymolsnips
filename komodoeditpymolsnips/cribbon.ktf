@@ -1,0 +1,15 @@
+// komodo tool: cribbon
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+as cartoon;
+color red, ss H;
+color yellow,ss S;
+color green, ss L+; 
+!@#_currentPos!@#_anchor

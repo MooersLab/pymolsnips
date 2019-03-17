@@ -1,0 +1,16 @@
+// komodo tool: molscriptRibbon
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+set cartoon_highlight_color, grey;
+show cartoon;
+set cartoon_flat_sheets, 0;
+set cartoon_smooth_loops, 0;
+set cartoon_fancy_helices, 1;
+!@#_currentPos!@#_anchor

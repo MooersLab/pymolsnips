@@ -1,0 +1,12 @@
+// komodo tool: printNameB4ResiX
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
+!@#_currentPos!@#_anchor

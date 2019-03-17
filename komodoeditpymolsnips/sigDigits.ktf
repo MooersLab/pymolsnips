@@ -1,0 +1,13 @@
+// komodo tool: sigDigits
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+set label_distance_digits, [[%tabstop:2]];
+set label_angle_digits, [[%tabstop:2]];
+!@#_currentPos!@#_anchor

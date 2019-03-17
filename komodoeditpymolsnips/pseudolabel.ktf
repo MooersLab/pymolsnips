@@ -1,0 +1,14 @@
+// komodo tool: pseudolabel
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+pseudoatom [[%tabstop:forLabel]];
+label [[%tabstop:forLabel]], '%0';
+set label_color, [[%tabstop:red]];
+!@#_currentPos!@#_anchor

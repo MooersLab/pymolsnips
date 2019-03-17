@@ -1,0 +1,13 @@
+// komodo tool: centerpi
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+pseudoatom pi_cent,/[[%tabstop:3nd3]]/[[%tabstop:A]]/[[%tabstop:U`15]]/cg+cz;
+dist pi_cent////ps1, b/[[%tabstop:U`15]]/[[%tabstop:aaa]];
+!@#_currentPos!@#_anchor

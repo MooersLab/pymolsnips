@@ -1,0 +1,13 @@
+// komodo tool: saxsEnvelope
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+alter [[%tabstop:refine_A_Ave_SM_015_0_370-374-0r]], vdw=3.0
+set solvent_radius = 3.0
+!@#_currentPos!@#_anchor

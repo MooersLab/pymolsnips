@@ -1,0 +1,15 @@
+// komodo tool: puttyCartoon
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+show cartoon;
+cartoon putty;
+unset cartoon_smooth_loops;
+unset cartoon_flat_sheets;
+!@#_currentPos!@#_anchor

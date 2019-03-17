@@ -1,0 +1,16 @@
+// komodo tool: stereoDraw
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+stereo walleye; 
+set ray_shadow, off; 
+#draw 3200,2000;
+draw [[%tabstop:1600,1000]]; 
+png [[%tabstop:aaa]].png
+!@#_currentPos!@#_anchor

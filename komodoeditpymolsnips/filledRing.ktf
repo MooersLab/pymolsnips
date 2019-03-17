@@ -1,0 +1,17 @@
+// komodo tool: filledRing
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+show sticks;set cartoon_ring_mode, 3;
+set cartoon_ring_finder, 1;
+set cartoon_ladder_mode, 1;
+set cartoon_nucleic_acid_mode, 4;
+set cartoon_ring_transparency, 0.5;
+as cartoon;
+!@#_currentPos!@#_anchor

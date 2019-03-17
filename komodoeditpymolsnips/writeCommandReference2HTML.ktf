@@ -1,0 +1,13 @@
+// komodo tool: writeCommandReference2HTML
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+cmd.write_html_ref('pymol-command-ref.html');
+!@#_currentPos!@#_anchor
+
