@@ -100,6 +100,7 @@ The installation instructions are below for the following editors:
   <li><a href="#geany"> Geany </a></li>
   <li><a href="#gedit"> Gedit </a></li>
   <li><a href="#kate"> Kate </a></li>
+  <li><a href="#komodo"> Komodo Edit </a></li>
   <li><a href="#LightTable"> Light Table </a></li>
   <li><a href="#micro"> Micro </a></li>
   <li><a href="#snipmate"> Snipmate (vim, neovim) </a></li>
@@ -123,7 +124,6 @@ Support is planned for the following editors:
 
   - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
-  - [Komodo Edit](https://www.activestate.com/products/komodo-edit/)
   - [Editra](http://www.editra.org://www.editra.org)
   - [Oni](https://www.onivim.io)
   - [Oni 2](https://www.onivim.io/oin2)
@@ -281,6 +281,24 @@ Try the following on Mac (one of the four) and Linux (first three):
 /Users/blaine//.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/blaine/Library/Application\ Support/kate/MySnippets/
 ```
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+<h3 name="komodo"> Komodo Edit (Universal) </h3>
+
+[Komodo Edit](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a Community version that can be used for free.
+The makers of Komodo Edit have merged with the makers of ActiveState Python.
+The Community version of Komodo Edit has enough features for the occassional writer of code for PyMOL.
+
+The snippets are stored one snippet per file.
+The snippets are active with files ending with pml. 
+The snippers are stored in a folder called PML, which has to be created.
+On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`.
+
+The snippets are treated as abbreviations that are stored in the tool box.
+The snippet name works as a tab trigger.
+The snippet file can also be selected through the GUI and a pop-up displays the option to insert a snippet. 
+There are tab stops and highlighted default parameter values.
+However, there is no mirroring of tabstops at this time. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
