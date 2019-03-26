@@ -121,20 +121,18 @@ I will try to develop a snippet library for the requested editor.
 
 Support is planned for the following editors:
 
-
-  - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
-  - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
+  - [bluefish](http://bluefish.openoffice.nl/download.html)
+  - [Coda2](https://panic.com/coda)
   - [Editra](http://www.editra.org://www.editra.org)
-  - [Oni](https://www.onivim.io)
+  - [jed](http://jedmodes.sourceforge.net)
+  - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
+  - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)- [Oni](https://www.onivim.io)
   - [Oni 2](https://www.onivim.io/oin2)
   - [Textadept](https://foicica.com/textadept)
-  - [Coda2](https://panic.com/coda)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
-  - [jed](http://jedmodes.sourceforge.net)
   - [scite](https://scintilla.org/SciTE.html)i
-  - [bluefish](http://bluefish.openoffice.nl/download.html)
-
+  
 Note that some editors that are available as binaries only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to
@@ -305,7 +303,7 @@ However, there is no mirroring of tabstops at this time.
 
 <h3 name="LightTable"> Light Table (Universal) </h3>
 
-[Light Table](http://lighttable.com/) is a highly extendable and malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+[Light Table](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
 Those that have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
 Light Table is like a GUI version of emacs.
 It has very an attractive, uncluttered GIU. 
@@ -371,22 +369,22 @@ It is free.
 The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
 A newer branch of vim called neovim is available. 
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
-The addition of a plugin requires the editing of startup .vimrc file. 
+The addition of a plugin requires the editing of startup .vimrc file.
+
 Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate).
-Ultisnips required Python. VimL does not require Python. If you choose to install VimL, you will need the snipmate library.
+Ultisnips requires Python. 
+VimL does not require Python. 
+If you choose to install VimL, you will need the snipmate library.
 Otherwise, you should use Ultisnips. 
 The snippets are stored in a single file that is language specific.
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
-
-[Sublime Text 3](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor for many reasons. 
-The free trial period is infinite, but I bought a license after several months because I thought that the software was worth it. 
+[Sublime Text 3](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor. 
+The free trial period is infinite. 
 Sublime Text 3 starts up much faster than the other text editors for programmers.
 Sublime Text 3 has strong support for snippets and the autocompletion of tab triggers. 
-The snippets are stored in separate files with the file extension sublime-snippet. 
+The snippets are stored in separate files with the file extension `.sublime-snippet'. 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <!--
@@ -428,16 +426,15 @@ The addition of a plugin requires the editing of startup .vimrc file.
 Ultisnips is a Plugin that manages snippets and that works with vim and neovim. 
 It is a more recent alternative to snipmate. 
 The snippets are stored in a single file that is language specific.
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 
+<h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 [Visual Studio Code](https://code.visualstudio.com)
 Visual Studio Code is a free editor from Microsoft. 
 Its start-up speed is between that of Sublime Text 3 and Atom.
-The installation of plugins is the most painless of the text editors that I have tested. 
-There is website featuring the plugin that are available. 
+The installation of plugins is painless. 
+There is a website featuring the plugins that are available. 
 You select the plugin that you are interested and hit an install button on the website to install the plugin on your local machine. 
 The bioSyntax plugin includes a lexer for PyMOL, so it is a good idea to install this plugin.
 The lexer will be activated when a PyMOL Macro Language (pml) file is opened. 
@@ -456,7 +453,10 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
     },
 ```
 
-Restart VSC. Open a **pml** file. You should see **pml** in the lower right on the bottom panel. You should also see syntax highlighting of the pml text. Type the tab trigger **ao** to test the snippet for ambient occlusion. 
+Restart VSC. Open a **pml** file. 
+You should see **pml** in the lower right on the bottom panel. 
+You should also see syntax highlighting of the pml text. 
+Type the tab trigger **ao** to test the installation of the snippet for the code that creates the ambient occlusion effect. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -497,25 +497,25 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 ### Analysis:
 | Tab trigger    | Description                                                                          |
 |:---------------|:-------------------------------------------------------------------------------------|
-| averageB       | Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed. |
+| averageB       | iFind the average B-value of a selection. Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed. |
 | findHbonds     | Find hbonds around a residue.                                                        |
 | printBs        | Print the B-factors of a residue.                                                    |
 | printBs2digits | Print B-values for a residue with the B's rounded off to two decimal places.         |
-| printBspartB   | Print B factors of part B of a residues.                                              |
+| printBspartB   | Print B factors of part B of a disorderd residue.                                    |
 
 
 ### Change orientation:
 | Tab trigger   | Description                        |
 |:--------------|:-----------------------------------|
 | rotate        | Rotate about axis.                 |
-| rv            | Return settings in rounded format. |
+| rv            | Return settings in a compact format on one line. |
 | turnAboutAxis | Turn about axis.                   |
 
 
 ### Color scheme:
 | Tab trigger   | Description                                    |
 |:--------------|:-----------------------------------------------|
-| cblind        | Color blindness.                               |
+| cblind        | Eanble color blind friendly colors.                               |
 | cribbon       | Color ribbon H red, strand yellow, loop green. |
 | volumeRamp    | Volume ramp.                                   |
 
@@ -523,7 +523,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 ### Coordinate covalent bonds:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
-| coordinate    | Coordinate covalent bonds to metals and H-bonds from RNA. |
+| coordinate    | Coordinate covalent bonds to metals. |
 
 
 ### Database function:
@@ -535,9 +535,9 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 ### Electron density:
 | Tab trigger   | Description              |
 |:--------------|:-------------------------|
-| carvedDensity | Carved electron density. |
+| carvedDensity | Carved electron density map. |
 | fetch2FoFc    | Fetch 2FoFc map.         |
-| threeMaps     | Three electron density.  |
+| threeMaps     | Three electron density maps.  |
 
 
 ### Fetch file from PDB:
@@ -595,7 +595,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | sigang        | Set angle labels to display 2 decimals places |
-| sigdist       | set distance labels to display 2 decimals     |
+| sigdist       | Set distance labels to display 2 decimals     |
 
 
 ### Label placement:
@@ -624,7 +624,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | cspheres                | Colored spheres.                                                                               |
 | discreteCartoonColoring | Turn on discrete colors between secondary structure elements.                                  |
 | doubleBond              | Valence bond.                                                                                  |
-| ellipcol                | Set ellipsoid color.                                                                           |
+| ellipcol                | Set thermal ellipsoid color.                                                                           |
 | filledRing              | Filled rings in nucleic acids.                                                                 |
 | fog                     | Blur the background atoms.                                                                     |
 | loadPDBbs               | Load PDB ball-and-stick.                                                                       |
@@ -677,14 +677,14 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 | duplicateObject      | Duplicate object.                                            |
 | extractPartObj       | Create a new object from part of an existing object.         |
 | hideSelection        | Turn off magenta squares on current selection.               |
-| selectAllBut         | Select all nitrogen atom in a selection except from lysine. |
+| selectAllBut         | Select all nitrogen atom in a selection except from lysine.  |
 | selectAtomsAround    | Select atoms within a radius around a ligand.                |
 | selectChain          | Select a chain.                                              |
-| selectElement        | Select atoms by element.                                      |
+| selectElement        | Select atoms by element.                                     |
 | selectHelices        | Select atoms by alpha helices.                               |
 | selectLoops          | Select atoms by beta loops.                                  |
 | selectName           | Select atoms by name.                                        |
-| selectResi           | Select residues by a range of numbers.                       |
+| selectResi           | Select residues by a range of residue id numbers separated by a colon.|
 | selectResidues       | Select residues by name.                                     |
 | selectResiduesAround | Select residues within a radius around a ligand.             |
 | selectStrands        | Select atoms by beta strands.                                |
@@ -708,7 +708,7 @@ In this cateogry, vim is the most powerful editor followed by emacs and distantl
 ### Unit cell display:
 | Tab trigger   | Description                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|
-| sc222         | Run Tom Holder's supercell script to generate three cells in all directions. |
+| sc333         | Run Tom Holder's supercell script to generate three cells in all directions. |
 
 
 ### Water pentagon:
