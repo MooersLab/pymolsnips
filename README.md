@@ -131,7 +131,7 @@ Support is planned for the following editors:
   - [Textadept](https://foicica.com/textadept)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
-  - [scite](https://scintilla.org/SciTE.html)i
+  - [scite](https://scintilla.org/SciTE.html)
   
 Note that some editors that are available as binaries only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.
 
