@@ -27,7 +27,8 @@ The meanu of the left shows the alternate tab triggers that contain a and o.
 The corresponding code for the selected tab trigger is displayed in the right window to allow the user to check that it is the desired tab trigger.
 The user can use the up and down arrow keys to select the appropriate tab trigger from the preview menu.
 The user then enters the **tab** key to insert the code into the file at the cursor.
-By entering to two letters, the user has inserted 16 lines of code. 
+By entering to two letters, the user has inserted 17 lines of code. 
+The cursor moves to the start of a new line on line 18 where it is ready for a new command.
 
 
 <p align="center">
@@ -40,7 +41,7 @@ Some editors take snippet libraries in one file.
 Other editors require that each snippet resides in a separate file. 
 Most editors have their own format. 
 The user downloads the file or folder of files for their text editor and installs the snippets.
-If needed, protocols for snippet installation for each text editor are founded <a href="#install">below</a>. 
+If needed, protocols for snippet installation for each text editor are found <a href="#install">below</a>. 
 
 
 <h2> <A name="FASTLINKS">Quick links</A></h2>
