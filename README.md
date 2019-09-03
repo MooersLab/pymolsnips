@@ -31,7 +31,7 @@ By entering to two letters, the user has inserted 16 lines of code.
 
 
 <p align="center">
-	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" width="1242" height="594" alt="ao tab trigger" />
+	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" width="800" height="400" alt="ao tab trigger" />
 </p>
 
 
