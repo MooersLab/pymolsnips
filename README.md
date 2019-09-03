@@ -30,7 +30,9 @@ The user then enters the **tab** key to insert the code into the file at the cur
 By entering to two letters, the user has inserted 16 lines of code. 
 
 
-<div style="width:100%;height:0;padding-bottom:48%;position:relative;"><iframe src="https://giphy.com/embed/SYcU86aGrd5TxZQqjR" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/pymol-molecular-visualization-graphics-SYcU86aGrd5TxZQqjR">via GIPHY</a></p>
+<p align="center">
+<img src=src="https://giphy.com/embed/SYcU86aGrd5TxZQqjR" width="100%" height="100%"/>
+</p>
 
 
 
