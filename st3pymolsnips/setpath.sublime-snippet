@@ -2,7 +2,6 @@
 <content><![CDATA[
 os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
 $0
-
 ]]></content>
 <tabTrigger>setpath</tabTrigger>
 <scope></scope>

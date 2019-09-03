@@ -1,4 +1,4 @@
-<snippets namespace="" license="GPL v3+" filetypes="pml" authors="Blaine Mooers" name="PyMOL Snippets">
+<snippets namespace="" license="GPL v3+" filetypes="pml" authors="Blane Mooers" name="PyMOL Snippets">
  <script></script>
  <item>
   <displayprefix></displayprefix>
@@ -237,7 +237,7 @@
   <match>distance</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin> distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+  <fillin> distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
  %cursor%</fillin>
  </item>
  <item>
@@ -258,13 +258,13 @@
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin> delete all;
- fetch 4dgr, async=0;
- fetch 4dgr, type=2fofc,async=0;
- select LongGlycan, resi 469:477;
- orient LongGlycan;
- remove not LongGlycan;
+ fetch ${1:4dgr}, async=0;
+ fetch ${1:4dgr}, type=2fofc,async=0;
+ select ${2:LongGlycan}, resi ${3:469:477};
+ orient ${2:LongGlycan};
+ remove not ${2:LongGlycan};
  remove name H*;
- isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+ isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
  color density, 2fofcmap; 
  show sticks;
  show spheres;
@@ -518,7 +518,7 @@
  color density, ${3:mesh1};
  isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
  color green, ${4:mesh2};
- isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+ isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
  color red, ${5:mesh2};
  %cursor%</fillin>
  </item>
@@ -543,7 +543,7 @@
   <match>solventRadius</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin> set solvent_radius, ${1:1.55}
+  <fillin> set solvent_radius, ${1:1.55};
  %cursor%</fillin>
  </item>
  <item>
@@ -1180,6 +1180,14 @@
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin> https://github.com/MooersLab/pymolsnips/blob/master/README.md
+ %cursor%</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sigdihedral</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin> set label_dihedral_digits, ${1:2};
  %cursor%</fillin>
  </item>
 </snippets>

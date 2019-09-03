@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Label the main chain atoms by resn,resi,atom name.
 label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>labelMainChain</key>

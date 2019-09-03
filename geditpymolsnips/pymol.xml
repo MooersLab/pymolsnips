@@ -222,7 +222,7 @@ $0
   <snippet>
     <description>H-bond distances.</description>
     <tag>distance</tag>
-    <text><![CDATA[distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+    <text><![CDATA[distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
 $0
 ]]></text>
   </snippet>
@@ -241,13 +241,13 @@ $0
     <description>Carved electron density. </description>
     <tag>carvedDensity</tag>
     <text><![CDATA[delete all;
-fetch 4dgr, async=0;
-fetch 4dgr, type=2fofc,async=0;
-select LongGlycan, resi 469:477;
-orient LongGlycan;
-remove not LongGlycan;
+fetch ${1:4dgr}, async=0;
+fetch ${1:4dgr}, type=2fofc,async=0;
+select ${2:LongGlycan}, resi ${3:469:477};
+orient ${2:LongGlycan};
+remove not ${2:LongGlycan};
 remove name H*;
-isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
 color density, 2fofcmap; 
 show sticks;
 show spheres;
@@ -364,7 +364,7 @@ $0
     <tag>labelSS</tag>
     <text><![CDATA[alter ${1:}, ss='%1';
 label (%2),'%3';
-$0"
+$0
 ]]></text>
   </snippet>
   <snippet>
@@ -480,7 +480,7 @@ isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};
 color density, ${3:mesh1};
 isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
 color green, ${4:mesh2};
-isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
 color red, ${5:mesh2};
 $0
 ]]></text>
@@ -502,7 +502,7 @@ $0
   <snippet>
     <description>Set radius of ball used to make solvent accessible surface.</description>
     <tag>solventRadius</tag>
-    <text><![CDATA[set solvent_radius, ${1:1.55}
+    <text><![CDATA[set solvent_radius, ${1:1.55};
 $0
 ]]></text>
   </snippet>
@@ -794,7 +794,8 @@ $0
   <snippet>
     <description>Set antialias to get smooth edges</description>
     <tag>antialias</tag>
-    <text><![CDATA[set antialias, 1;\n$0
+    <text><![CDATA[set antialias, 1;
+$0
 ]]></text>
   </snippet>
   <snippet>
@@ -855,8 +856,7 @@ $0
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print B factors of part B of a rsidues. 
-</description>
+    <description>Print B factors of part B of a residue.</description>
     <tag>printBspartB</tag>
     <text><![CDATA[iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
 $0
@@ -877,8 +877,7 @@ $0
 ]]></text>
   </snippet>
   <snippet>
-    <description>Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.
-</description>
+    <description>Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.</description>
     <tag>averageB</tag>
     <text><![CDATA[""" Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
 Bfactors = []; 
@@ -890,10 +889,7 @@ $0
 ]]></text>
   </snippet>
   <snippet>
-    <description>AveBResiX, prints the resiude number and the average bfactor. 
-Uses reduce and lambda, builtin Python functional porgramming functions. 
-Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
-</description>
+    <description>AveBResiX, prints the resiude number and the average bfactor. </description>
     <tag>aveB4resiX</tag>
     <text><![CDATA[""""AveBResiX, prints the resiude number and the average bfactor. 
 Uses reduce and lambda, builtin Python functional porgramming functions. 
@@ -902,13 +898,12 @@ Note that you need to convert the length of the list of Bfactors from an integer
 Bfactors = []; 
 iterate (resi ${1:133}), Bfactors.append(b);
 print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-$0"
+$0
 ]]></text>
   </snippet>
   <snippet>
     <description>Print name and b-factor for a residue.</description>
-    <tag>printNameB4ResiX
-</tag>
+    <tag>printNameB4ResiX</tag>
     <text><![CDATA[Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
 $0
 ]]></text>
@@ -929,8 +924,7 @@ $0
   </snippet>
   <snippet>
     <description>Make the background of the internal gui transparent to expand viewport.</description>
-    <tag>internalGUImode2
-</tag>
+    <tag>internalGUImode2 </tag>
     <text><![CDATA[internal_gui_mode=2;
 $0
 ]]></text>
@@ -946,7 +940,8 @@ $0
   <snippet>
     <description>Print document string of a function.</description>
     <tag>printDoc</tag>
-    <text><![CDATA[print ${1:my_func}.__doc__;\n$0\n
+    <text><![CDATA[print ${1:my_func}.__doc__;
+$0
 ]]></text>
   </snippet>
   <snippet>
@@ -1051,6 +1046,7 @@ turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
 writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+$0
 ]]></text>
   </snippet>
   <snippet>
@@ -1062,8 +1058,7 @@ preset.technical(selection='all');
 bg_color gray70; 
 clip slab, 7,(resi 31 or resi 70);
 rock;
-${0}
-
+$0
 ]]></text>
   </snippet>
   <snippet>
@@ -1072,20 +1067,27 @@ ${0}
     <text><![CDATA[fetch 1lw9, async=0; 
 zoom resi 313; 
 preset.technical(selection='all', mode=1);
-${0}
-  
+$0
 ]]></text>
   </snippet>
   <snippet>
     <description>Make selection of ligand atoms.</description>
     <tag>ligandSelect</tag>
     <text><![CDATA[select substrates, organic;
-${0}
+$0
 ]]></text>
   </snippet>
   <snippet>
     <description>Print url of README.md file of the pymolsnips repository.</description>
     <tag>github</tag>
-    <text><![CDATA[https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n
+    <text><![CDATA[https://github.com/MooersLab/pymolsnips/blob/master/README.md
+$0
+]]></text>
+  </snippet>
+  <snippet>
+    <description>Set dihedral labels to display 2 decimals places to the right of the decimal point.</description>
+    <tag>sigdihedral</tag>
+    <text><![CDATA[set label_dihedral_digits, ${1:2};
+$0
 ]]></text>
   </snippet>

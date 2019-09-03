@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Print resn, resi, atom name, and b-factor. 
 Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>printResiResnNameB4ResiX</key>

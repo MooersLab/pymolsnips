@@ -2,4 +2,5 @@ name=Set antialias to get smooth edges
 id=antialias
 lex=PML_
 text=
-set antialias, 1;\n$0
+set antialias, 1;
+$0

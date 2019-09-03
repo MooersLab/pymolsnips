@@ -4,7 +4,8 @@
 <dict>
 <key>content</key>
 <string>#Print document string of a function.
-print ${1:my_func}.__doc__;\n$0\n</string>
+print ${1:my_func}.__doc__;
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>printDoc</key>

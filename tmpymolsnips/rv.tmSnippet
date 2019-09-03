@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Return settings in rounded format.
 run roundview.py;
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>rv</key>

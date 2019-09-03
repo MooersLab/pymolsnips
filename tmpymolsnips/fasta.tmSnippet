@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Print Fasta from PDB file. 
 print cmd.get_fastastr('all')
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>fasta</key>

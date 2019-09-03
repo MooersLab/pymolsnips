@@ -235,7 +235,7 @@
  
         <snippet id="distance" category="H-bonds"> 
             <title>H-bond distances.</title>
-            <text><![CDATA[            distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+            <text><![CDATA[            distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
             $0]]></text>
             <syntax-context>text.pml</syntax-context>
             <key-equivalent>control shift option</key-equivalent>
@@ -256,13 +256,13 @@
         <snippet id="carvedDensity" category="Electron density"> 
             <title>Carved electron density. </title>
             <text><![CDATA[            delete all;
-            fetch 4dgr, async=0;
-            fetch 4dgr, type=2fofc,async=0;
-            select LongGlycan, resi 469:477;
-            orient LongGlycan;
-            remove not LongGlycan;
+            fetch ${1:4dgr}, async=0;
+            fetch ${1:4dgr}, type=2fofc,async=0;
+            select ${2:LongGlycan}, resi ${3:469:477};
+            orient ${2:LongGlycan};
+            remove not ${2:LongGlycan};
             remove name H*;
-            isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+            isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
             color density, 2fofcmap; 
             show sticks;
             show spheres;
@@ -516,7 +516,7 @@
             color density, ${3:mesh1};
             isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
             color green, ${4:mesh2};
-            isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+            isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
             color red, ${5:mesh2};
             $0]]></text>
             <syntax-context>text.pml</syntax-context>
@@ -541,7 +541,7 @@
  
         <snippet id="solventRadius" category="Molecular representation"> 
             <title>Set radius of ball used to make solvent accessible surface.</title>
-            <text><![CDATA[            set solvent_radius, ${1:1.55}
+            <text><![CDATA[            set solvent_radius, ${1:1.55};
             $0]]></text>
             <syntax-context>text.pml</syntax-context>
             <key-equivalent>control shift option</key-equivalent>
@@ -1183,6 +1183,14 @@
         <snippet id="github" category="Help"> 
             <title>Print url of README.md file of the pymolsnips repository.</title>
             <text><![CDATA[            https://github.com/MooersLab/pymolsnips/blob/master/README.md
+            $0]]></text>
+            <syntax-context>text.pml</syntax-context>
+            <key-equivalent>control shift option</key-equivalent>
+        </snippet>
+ 
+        <snippet id="sigdihedral" category="Label format"> 
+            <title>Set dihedral labels to display 2 decimals places to the right of the decimal point.</title>
+            <text><![CDATA[            set label_dihedral_digits, ${1:2};
             $0]]></text>
             <syntax-context>text.pml</syntax-context>
             <key-equivalent>control shift option</key-equivalent>

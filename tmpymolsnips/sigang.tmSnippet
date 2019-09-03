@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Set angle labels to display 2 decimals places
 set label_angle_digits, ${1:2};
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>sigang</key>

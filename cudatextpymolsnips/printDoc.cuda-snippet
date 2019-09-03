@@ -2,4 +2,5 @@ name=Print document string of a function.
 id=printDoc
 lex=PML_
 text=
-print ${1:my_func}.__doc__;\n$0\n
+print ${1:my_func}.__doc__;
+$0

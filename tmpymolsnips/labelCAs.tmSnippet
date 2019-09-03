@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Label the CA atoms with the Ala333 style format
 label name CA,"%s%s" % (resn,resi);
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>labelCAs</key>

@@ -2,7 +2,6 @@
 <content><![CDATA[
 run roundview.py;
 $0
-
 ]]></content>
 <tabTrigger>rv</tabTrigger>
 <scope></scope>

@@ -35,4 +35,3 @@ hide labels;
 ray 1600,1000;
 png ${1:4PCO}.png
 $0
-

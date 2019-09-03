@@ -6,7 +6,6 @@ set dash_length, ${1:0.15};
 set dash_gap, ${2:0.35};
 set dash_width,  ${3:3.0};
 $0
-
 ]]></content>
 <tabTrigger>hbond</tabTrigger>
 <scope></scope>

@@ -4,4 +4,3 @@ lex=PML_
 text=
 label resn HOH ,"W%s" % (resi);
 $0
-

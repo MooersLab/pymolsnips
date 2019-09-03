@@ -36,8 +36,7 @@ set nb_spheres_size, 0.35;
 hide labels;
 ray 1600,1000;
 png ${1:4PCO}.png
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>stack</key>

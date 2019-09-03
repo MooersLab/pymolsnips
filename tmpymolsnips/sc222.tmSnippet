@@ -6,8 +6,7 @@
 <string>#Run Tom Holder's supercell script to generate three cells in all directions.
 run $HOME/Scripts/PyMOLscripts/supercell.py
 supercell 2, 2, 2, , orange, supercell2, 1
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>sc222</key>

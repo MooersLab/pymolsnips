@@ -6,7 +6,7 @@
 <string>#Label SS. 
 alter ${1:}, ss='%1';
 label (%2),'%3';
-$0"</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>labelSS</key>

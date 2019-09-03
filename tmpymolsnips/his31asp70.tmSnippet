@@ -10,9 +10,7 @@ preset.technical(selection='all');
 bg_color gray70; 
 clip slab, 7,(resi 31 or resi 70);
 rock;
-${0}
-
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>his31asp70</key>

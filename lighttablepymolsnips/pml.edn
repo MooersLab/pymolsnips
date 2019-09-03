@@ -298,4 +298,7 @@
            {:name "Print url of README.md file of the pymolsnips repository."
             :key "github"
             :snippet-file "github.snip"}
+           {:name "Set dihedral labels to display 2 decimals places to the right of the decimal point."
+            :key "sigdihedral"
+            :snippet-file "sigdihedral.snip"}
            ]}

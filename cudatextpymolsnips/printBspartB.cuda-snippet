@@ -1,5 +1,4 @@
-name=Print B factors of part B of a rsidues. 
-
+name=Print B factors of part B of a residue.
 id=printBspartB
 lex=PML_
 text=

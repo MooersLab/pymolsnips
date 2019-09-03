@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Blur the background atoms.
 set fog, 0
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>fog</key>

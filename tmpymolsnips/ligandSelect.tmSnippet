@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Make selection of ligand atoms.
 select substrates, organic;
-${0}
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>ligandSelect</key>

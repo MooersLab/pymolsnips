@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Set additional path for PyMOL to search on startup
 os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>setpath</key>

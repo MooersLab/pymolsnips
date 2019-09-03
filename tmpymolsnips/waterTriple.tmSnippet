@@ -7,9 +7,7 @@
 fetch 1lw9, async=0; 
 zoom resi 313; 
 preset.technical(selection='all', mode=1);
-${0}
-  
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>waterTriple</key>

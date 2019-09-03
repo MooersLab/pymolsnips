@@ -1,0 +1,6 @@
+name=Set dihedral labels to display 2 decimals places to the right of the decimal point.
+id=sigdihedral
+lex=PML_
+text=
+set label_dihedral_digits, ${1:2};
+$0

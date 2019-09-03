@@ -4,7 +4,8 @@
 <dict>
 <key>content</key>
 <string>#Print url of README.md file of the pymolsnips repository.
-https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n</string>
+https://github.com/MooersLab/pymolsnips/blob/master/README.md
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>github</key>

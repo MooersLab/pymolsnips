@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Get coordinates. 
 print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>getCoordinates</key>

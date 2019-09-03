@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Select a chain. 
 select rna, chain B
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>selectChain</key>

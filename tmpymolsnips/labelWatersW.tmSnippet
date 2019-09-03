@@ -5,8 +5,7 @@
 <key>content</key>
 <string>#Label waters W.
 label resn HOH ,"W%s" % (resi);
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>labelWatersW</key>

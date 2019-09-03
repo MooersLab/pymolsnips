@@ -102,7 +102,8 @@ threeMaps                    Three electron density.
 turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.</string>
+writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>lsSnips</key>

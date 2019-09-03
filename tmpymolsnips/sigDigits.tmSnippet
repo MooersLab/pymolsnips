@@ -6,8 +6,7 @@
 <string>#Set number of decimals places to show in distance labels. 
 set label_distance_digits, ${1:2};
 set label_angle_digits, ${2:2};
-$0
-</string>
+$0</string>
 <key>keyEquivalent</key>
 <string>S</string>
 <key>sigDigits</key>

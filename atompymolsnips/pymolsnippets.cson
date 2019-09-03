@@ -208,7 +208,7 @@
   'H-bond distances.':
     'prefix': 'distance'
     'body': '''
-      distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+      distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
       $0
     '''
   'Draw H-bonds. ':
@@ -225,13 +225,13 @@
     'prefix': 'carvedDensity'
     'body': '''
       delete all;
-      fetch 4dgr, async=0;
-      fetch 4dgr, type=2fofc,async=0;
-      select LongGlycan, resi 469:477;
-      orient LongGlycan;
-      remove not LongGlycan;
+      fetch ${1:4dgr}, async=0;
+      fetch ${1:4dgr}, type=2fofc,async=0;
+      select ${2:LongGlycan}, resi ${3:469:477};
+      orient ${2:LongGlycan};
+      remove not ${2:LongGlycan};
       remove name H*;
-      isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+      isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
       color density, 2fofcmap; 
       show sticks;
       show spheres;
@@ -338,7 +338,7 @@
     'body': '''
       alter ${1:}, ss='%1';
       label (%2),'%3';
-      $0"
+      $0
     '''
   'Load PDB ball-and-stick.':
     'prefix': 'loadPDBbs'
@@ -443,7 +443,7 @@
       color density, ${3:mesh1};
       isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
       color green, ${4:mesh2};
-      isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+      isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
       color red, ${5:mesh2};
       $0
     '''
@@ -462,7 +462,7 @@
   'Set radius of ball used to make solvent accessible surface.':
     'prefix': 'solventRadius'
     'body': '''
-      set solvent_radius, ${1:1.55}
+      set solvent_radius, ${1:1.55};
       $0
     '''
   'Scale the radius and color of atoms as spheres by property in the B-value column.':
@@ -719,7 +719,8 @@
   'Set antialias to get smooth edges':
     'prefix': 'antialias'
     'body': '''
-      set antialias, 1;\n$0
+      set antialias, 1;
+      $0
     '''
   'Print list of active pymolrc files.':
     'prefix': 'lspymolrc'
@@ -770,8 +771,7 @@
       label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
       $0
     '''
-  'Print B factors of part B of a rsidues. 
-':
+  'Print B factors of part B of a residue.':
     'prefix': 'printBspartB'
     'body': '''
       iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
@@ -789,8 +789,7 @@
       cmd.write_html_ref('pymol-command-ref.html');
       $0
     '''
-  'Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.
-':
+  'Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.':
     'prefix': 'averageB'
     'body': '''
       """ Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
@@ -801,10 +800,7 @@
       print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));
       $0
     '''
-  'AveBResiX, prints the resiude number and the average bfactor. 
-Uses reduce and lambda, builtin Python functional porgramming functions. 
-Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
-':
+  'AveBResiX, prints the resiude number and the average bfactor. ':
     'prefix': 'aveB4resiX'
     'body': '''
       """"AveBResiX, prints the resiude number and the average bfactor. 
@@ -814,11 +810,10 @@ Note that you need to convert the length of the list of Bfactors from an integer
       Bfactors = []; 
       iterate (resi ${1:133}), Bfactors.append(b);
       print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-      $0"
+      $0
     '''
   'Print name and b-factor for a residue.':
-    'prefix': 'printNameB4ResiX
-'
+    'prefix': 'printNameB4ResiX'
     'body': '''
       Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
       $0
@@ -836,8 +831,7 @@ Note that you need to convert the length of the list of Bfactors from an integer
       $0
     '''
   'Make the background of the internal gui transparent to expand viewport.':
-    'prefix': 'internalGUImode2
-'
+    'prefix': 'internalGUImode2 '
     'body': '''
       internal_gui_mode=2;
       $0
@@ -852,7 +846,8 @@ Note that you need to convert the length of the list of Bfactors from an integer
   'Print document string of a function.':
     'prefix': 'printDoc'
     'body': '''
-      print ${1:my_func}.__doc__;\n$0\n
+      print ${1:my_func}.__doc__;
+      $0
     '''
   'List all snips by tab trigger and description':
     'prefix': 'lsSnips'
@@ -956,6 +951,7 @@ Note that you need to convert the length of the list of Bfactors from an integer
       undoSelection                Undo a selection.
       volumeRamp                   Volume ramp.
       writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+      $0
     '''
   'Asp70-His31 salt-bridge from T4 lysozyme. ':
     'prefix': 'his31asp70'
@@ -966,8 +962,7 @@ Note that you need to convert the length of the list of Bfactors from an integer
       bg_color gray70; 
       clip slab, 7,(resi 31 or resi 70);
       rock;
-      ${0}
-      
+      $0
     '''
   'triple water pentagon.':
     'prefix': 'waterTriple'
@@ -975,17 +970,23 @@ Note that you need to convert the length of the list of Bfactors from an integer
       fetch 1lw9, async=0; 
       zoom resi 313; 
       preset.technical(selection='all', mode=1);
-      ${0}
-        
+      $0
     '''
   'Make selection of ligand atoms.':
     'prefix': 'ligandSelect'
     'body': '''
       select substrates, organic;
-      ${0}
+      $0
     '''
   'Print url of README.md file of the pymolsnips repository.':
     'prefix': 'github'
     'body': '''
-      https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n
+      https://github.com/MooersLab/pymolsnips/blob/master/README.md
+      $0
+    '''
+  'Set dihedral labels to display 2 decimals places to the right of the decimal point.':
+    'prefix': 'sigdihedral'
+    'body': '''
+      set label_dihedral_digits, ${1:2};
+      $0
     '''

@@ -167,7 +167,7 @@ snippet coordinate
        set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0) 
        $0
 snippet distance
-       distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+       distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
        $0
 snippet drawHbonds
        hide everything, hydrogens
@@ -178,13 +178,13 @@ snippet drawHbonds
        $0
 snippet carvedDensity
        delete all;
-       fetch 4dgr, async=0;
-       fetch 4dgr, type=2fofc,async=0;
-       select LongGlycan, resi 469:477;
-       orient LongGlycan;
-       remove not LongGlycan;
+       fetch ${1:4dgr}, async=0;
+       fetch ${1:4dgr}, type=2fofc,async=0;
+       select ${2:LongGlycan}, resi ${3:469:477};
+       orient ${2:LongGlycan};
+       remove not ${2:LongGlycan};
        remove name H*;
-       isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+       isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
        color density, 2fofcmap; 
        show sticks;
        show spheres;
@@ -261,7 +261,7 @@ snippet labelResnResi
 snippet labelSS
        alter ${1:}, ss='%1';
        label (%2),'%3';
-       $0"
+       $0
 snippet loadPDBbs
        fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
        hide (name H*);
@@ -333,7 +333,7 @@ snippet threeMaps
        color density, ${3:mesh1};
        isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
        color green, ${4:mesh2};
-       isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+       isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
        color red, ${5:mesh2};
        $0
 snippet turnAboutAxis
@@ -343,7 +343,7 @@ snippet volumeRamp
        cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
        $0
 snippet solventRadius
-       set solvent_radius, ${1:1.55}
+       set solvent_radius, ${1:1.55};
        $0
 snippet scaleRadiusColor
        bg_color white
@@ -495,7 +495,8 @@ snippet fetchPath
        set fetch_path, ${1:/Users/blaine/pdbFiles};
        $0
 snippet antialias
-       set antialias, 1;\n$0
+       set antialias, 1;
+       $0
 snippet lspymolrc
        print invocation.options.deferred;
        $0
@@ -546,9 +547,8 @@ snippet aveB4resiX
        Bfactors = []; 
        iterate (resi ${1:133}), Bfactors.append(b);
        print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-       $0"
+       $0
 snippet printNameB4ResiX
-
        Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
        $0
 snippet printResiResnNameB4ResiX
@@ -557,15 +557,15 @@ snippet printResiResnNameB4ResiX
 snippet printResiResnNameB4ResiXNoH
        Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
        $0
-snippet internalGUImode2
-
+snippet internalGUImode2 
        internal_gui_mode=2;
        $0
 snippet internalGUIwidth
        internal_gui_width=%{1:20};
        $0
 snippet printDoc
-       print ${1:my_func}.__doc__;\n$0\n
+       print ${1:my_func}.__doc__;
+       $0
 snippet lsSnips
        Tab trigger                  Description
        ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -666,6 +666,7 @@ snippet lsSnips
        undoSelection                Undo a selection.
        volumeRamp                   Volume ramp.
        writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+       $0
 snippet his31asp70
        fetch 1lw9, async=0; 
        zoom (resi 31 or resi 70); 
@@ -673,16 +674,18 @@ snippet his31asp70
        bg_color gray70; 
        clip slab, 7,(resi 31 or resi 70);
        rock;
-       ${0}
-       
+       $0
 snippet waterTriple
        fetch 1lw9, async=0; 
        zoom resi 313; 
        preset.technical(selection='all', mode=1);
-       ${0}
-         
+       $0
 snippet ligandSelect
        select substrates, organic;
-       ${0}
+       $0
 snippet github
-       https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n
+       https://github.com/MooersLab/pymolsnips/blob/master/README.md
+       $0
+snippet sigdihedral
+       set label_dihedral_digits, ${1:2};
+       $0

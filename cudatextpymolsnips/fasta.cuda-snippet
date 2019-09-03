@@ -4,4 +4,3 @@ lex=PML_
 text=
 print cmd.get_fastastr('all')
 $0
-

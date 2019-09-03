@@ -17,7 +17,6 @@ set ray_shadow_decay_range, 2;
 unset depth_cue;
 ray;
 $0
-
 endsnippet
  
 snippet ellipcol "Set ellipsoid color." b 
@@ -33,7 +32,6 @@ endsnippet
 snippet sigang "Set angle labels to display 2 decimals places" b 
 set label_angle_digits, ${1:2};
 $0
-
 endsnippet
  
 snippet bs "Ball and stick representation. " b 
@@ -44,7 +42,6 @@ set stick_ball_ratio, 1.9;
 show nb_spheres;
 set nb_spheres_size=0.33;
 $0
-
 endsnippet
  
 snippet stack "Base-stacking figure." b 
@@ -81,7 +78,6 @@ hide labels;
 ray 1600,1000;
 png ${1:4PCO}.png
 $0
-
 endsnippet
  
 snippet bu "Biological unit." b 
@@ -196,9 +192,8 @@ $0
 endsnippet
  
 snippet distance "H-bond distances." b 
-distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}
+distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
 $0
-
 endsnippet
  
 snippet drawHbonds "Draw H-bonds. " b 
@@ -208,18 +203,17 @@ set dash_color, ${1:black}${2:yelow}
 set dash_gap, 0.4
 set dash_radius, 0.08
 $0
-
 endsnippet
  
 snippet carvedDensity "Carved electron density. " b 
 delete all;
-fetch 4dgr, async=0;
-fetch 4dgr, type=2fofc,async=0;
-select LongGlycan, resi 469:477;
-orient LongGlycan;
-remove not LongGlycan;
+fetch ${1:4dgr}, async=0;
+fetch ${1:4dgr}, type=2fofc,async=0;
+select ${2:LongGlycan}, resi ${3:469:477};
+orient ${2:LongGlycan};
+remove not ${2:LongGlycan};
 remove name H*;
-isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
 color density, 2fofcmap; 
 show sticks;
 show spheres;
@@ -277,13 +271,11 @@ set cartoon_nucleic_acid_mode, 4;
 set cartoon_ring_transparency, 0.5;
 as cartoon;
 $0
-
 endsnippet
  
 snippet getCoordinates "Get coordinates. " b 
 print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
 $0
-
 endsnippet
  
 snippet hbonddash "H-bond dashes." b 
@@ -302,7 +294,6 @@ set dash_length, ${1:0.15};
 set dash_gap, ${2:0.35};
 set dash_width,  ${3:3.0};
 $0
-
 endsnippet
  
 snippet hidealtloc "Hide alt loc." b 
@@ -319,7 +310,7 @@ endsnippet
 snippet labelSS "Label SS. " b 
 alter ${1:}, ss='%1';
 label (%2),'%3';
-$0"
+$0
 endsnippet
  
 snippet loadPDBbs "Load PDB ball-and-stick." b 
@@ -366,13 +357,11 @@ one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%
 'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%
 'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%
 $0
-
 endsnippet
  
 snippet fasta "Print Fasta from PDB file. " b 
 print cmd.get_fastastr('all')
 $0
-
 endsnippet
  
 snippet pseudolabel "Position label with pseudoatom. " b 
@@ -415,7 +404,7 @@ isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};
 color density, ${3:mesh1};
 isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
 color green, ${4:mesh2};
-isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};
+isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
 color red, ${5:mesh2};
 $0
 endsnippet
@@ -431,7 +420,7 @@ $0
 endsnippet
  
 snippet solventRadius "Set radius of ball used to make solvent accessible surface." b 
-set solvent_radius, ${1:1.55}
+set solvent_radius, ${1:1.55};
 $0
 
 endsnippet
@@ -464,13 +453,11 @@ spectrum b, selection=4gdx
 space cmyk
 set specular_intensity , 0.25
 $0
-
 endsnippet
  
 snippet rv "Return settings in rounded format." b 
 run roundview.py;
 $0
-
 endsnippet
  
 snippet spng "Save png flle with timestamp" b 
@@ -499,7 +486,6 @@ snippet sc222 "Run Tom Holder's supercell script to generate three cells in all 
 run $HOME/Scripts/PyMOLscripts/supercell.py
 supercell 2, 2, 2, , orange, supercell2, 1
 $0
-
 endsnippet
  
 snippet pearl "The pearl effect is made with two spheres with the outer sphere being transparent." b 
@@ -513,7 +499,6 @@ endsnippet
 snippet fog "Blur the background atoms." b 
 set fog, 0
 $0
-
 endsnippet
  
 snippet rmwater "Remove waters from molecular object." b 
@@ -525,7 +510,6 @@ snippet setcolor "Set color name to a RGB code." b
 set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}]
 color ${1:bark}, ${5:protein}
 $0
-
 endsnippet
  
 snippet duplicateObject "Duplicate object." b 
@@ -536,7 +520,6 @@ endsnippet
 snippet selectChain "Select a chain. " b 
 select rna, chain B
 $0
-
 endsnippet
  
 snippet selectResidues "Select residues by name." b 
@@ -597,7 +580,6 @@ endsnippet
 snippet loadPDBfile "Load a pdb file in the current directory." b 
 load ${1:my.pdb};
 $0
-
 endsnippet
  
 snippet savePNG "Save a png file of current scene to the current directory." b 
@@ -642,7 +624,6 @@ snippet sc111 "Display all symmetry mates in one unit cell. Uses supercell.py in
 run $HOME/Scripts/PyMOLscripts/supercell.py
 supercell 1, 1, 1, , orange, supercell1, 1
 $0
-
 endsnippet
  
 snippet saxsEnvelope "Display SAXS envelope" b 
@@ -654,7 +635,6 @@ endsnippet
 snippet setpath "Set additional path for PyMOL to search on startup" b 
 os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
 $0
-
 endsnippet
  
 snippet fetchPath "Set path for location to save fetched pdb files. " b 
@@ -663,7 +643,8 @@ $0
 endsnippet
  
 snippet antialias "Set antialias to get smooth edges" b 
-set antialias, 1;\n$0
+set antialias, 1;
+$0
 endsnippet
  
 snippet lspymolrc "Print list of active pymolrc files." b 
@@ -675,13 +656,11 @@ snippet sigDigits "Set number of decimals places to show in distance labels. " b
 set label_distance_digits, ${1:2};
 set label_angle_digits, ${2:2};
 $0
-
 endsnippet
  
 snippet labelCAs "Label the CA atoms with the Ala333 style format" b 
 label name CA,"%s%s" % (resn,resi);
 $0
-
 endsnippet
  
 snippet labelWatersHOH "Label waters HOH." b 
@@ -692,7 +671,6 @@ endsnippet
 snippet labelWatersW "Label waters W." b 
 label resn HOH ,"W%s" % (resi);
 $0
-
 endsnippet
  
 snippet findHbonds "Find hbonds around a residue." b 
@@ -708,11 +686,9 @@ endsnippet
 snippet labelMainChain "Label the main chain atoms by resn,resi,atom name." b 
 label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
 $0
-
 endsnippet
  
-snippet printBspartB "Print B factors of part B of a rsidues. 
-" b 
+snippet printBspartB "Print B factors of part B of a residue." b 
 iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
 $0
 endsnippet
@@ -728,8 +704,7 @@ $0
 
 endsnippet
  
-snippet averageB "Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.
-" b 
+snippet averageB "Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed." b 
 """ Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
 Bfactors = []; 
 iterate (resi ${1:133}), Bfactors.append(b);
@@ -737,13 +712,9 @@ print("Sum = ", "%.2f" % (sum(Bfactors)));
 print("Number of atoms = ", len(Bfactors));
 print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));
 $0
-
 endsnippet
  
-snippet aveB4resiX "AveBResiX, prints the resiude number and the average bfactor. 
-Uses reduce and lambda, builtin Python functional porgramming functions. 
-Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
-" b 
+snippet aveB4resiX "AveBResiX, prints the resiude number and the average bfactor. " b 
 """"AveBResiX, prints the resiude number and the average bfactor. 
 Uses reduce and lambda, builtin Python functional porgramming functions. 
 Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
@@ -751,44 +722,38 @@ Note that you need to convert the length of the list of Bfactors from an integer
 Bfactors = []; 
 iterate (resi ${1:133}), Bfactors.append(b);
 print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-$0"
+$0
 endsnippet
  
-snippet printNameB4ResiX
- "Print name and b-factor for a residue." b 
+snippet printNameB4ResiX "Print name and b-factor for a residue." b 
 Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
 $0
-
 endsnippet
  
 snippet printResiResnNameB4ResiX "Print resn, resi, atom name, and b-factor. " b 
 Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
 $0
-
 endsnippet
  
 snippet printResiResnNameB4ResiXNoH "Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant." b 
 Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
 $0
-
 endsnippet
  
-snippet internalGUImode2
- "Make the background of the internal gui transparent to expand viewport." b 
+snippet internalGUImode2  "Make the background of the internal gui transparent to expand viewport." b 
 internal_gui_mode=2;
 $0
-
 endsnippet
  
 snippet internalGUIwidth "Set the width of the internal gui. 
 " b 
 internal_gui_width=%{1:20};
 $0
-
 endsnippet
  
 snippet printDoc "Print document string of a function." b 
-print ${1:my_func}.__doc__;\n$0\n
+print ${1:my_func}.__doc__;
+$0
 endsnippet
  
 snippet lsSnips "List all snips by tab trigger and description" b 
@@ -891,6 +856,7 @@ turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
 writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+$0
 endsnippet
  
 snippet his31asp70 "Asp70-His31 salt-bridge from T4 lysozyme. " b 
@@ -900,27 +866,28 @@ preset.technical(selection='all');
 bg_color gray70; 
 clip slab, 7,(resi 31 or resi 70);
 rock;
-${0}
-
-
+$0
 endsnippet
  
 snippet waterTriple "triple water pentagon." b 
 fetch 1lw9, async=0; 
 zoom resi 313; 
 preset.technical(selection='all', mode=1);
-${0}
-  
-
+$0
 endsnippet
  
 snippet ligandSelect "Make selection of ligand atoms." b 
 select substrates, organic;
-${0}
-
+$0
 endsnippet
  
 snippet github "Print url of README.md file of the pymolsnips repository." b 
-https://github.com/MooersLab/pymolsnips/blob/master/README.md\n${0}\n
+https://github.com/MooersLab/pymolsnips/blob/master/README.md
+$0
+endsnippet
+ 
+snippet sigdihedral "Set dihedral labels to display 2 decimals places to the right of the decimal point." b 
+set label_dihedral_digits, ${1:2};
+$0
 endsnippet
  

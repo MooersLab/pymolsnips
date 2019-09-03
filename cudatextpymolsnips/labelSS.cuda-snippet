@@ -4,4 +4,4 @@ lex=PML_
 text=
 alter ${1:}, ss='%1';
 label (%2),'%3';
-$0"
+$0

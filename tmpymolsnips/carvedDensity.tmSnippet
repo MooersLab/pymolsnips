@@ -5,13 +5,13 @@
 <key>content</key>
 <string>#Carved electron density. 
 delete all;
-fetch 4dgr, async=0;
-fetch 4dgr, type=2fofc,async=0;
-select LongGlycan, resi 469:477;
-orient LongGlycan;
-remove not LongGlycan;
+fetch ${1:4dgr}, async=0;
+fetch ${1:4dgr}, type=2fofc,async=0;
+select ${2:LongGlycan}, resi ${3:469:477};
+orient ${2:LongGlycan};
+remove not ${2:LongGlycan};
 remove name H*;
-isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;
+isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
 color density, 2fofcmap; 
 show sticks;
 show spheres;

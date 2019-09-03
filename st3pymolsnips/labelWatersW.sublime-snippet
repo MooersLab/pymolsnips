@@ -2,7 +2,6 @@
 <content><![CDATA[
 label resn HOH ,"W%s" % (resi);
 $0
-
 ]]></content>
 <tabTrigger>labelWatersW</tabTrigger>
 <scope></scope>

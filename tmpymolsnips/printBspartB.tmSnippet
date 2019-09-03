@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 <key>content</key>
-<string>#Print B factors of part B of a rsidues. 
-
+<string>#Print B factors of part B of a residue.
 iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
 $0</string>
 <key>keyEquivalent</key>

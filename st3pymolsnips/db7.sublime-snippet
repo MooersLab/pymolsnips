@@ -1,0 +1,108 @@
+<snippet>
+<content><![CDATA[
+
+#!/usr/bin/env python3.7
+
+import sqlite3, sys
+
+
+def main():
+    """
+    This script loads a one record.
+    The parameters for the fields of the record are read from a bash script.
+    The bash script below loads three lines.
+    The use of the bash script avoids accidental
+    edits of this Python script that may break it.
+    Remember to omit the && at the end of the 
+    last line in the bash script. 
+
+    #!/bin/bash
+    ./addRecords4.py 'MLE' 'LaTeX' 'text.tex' 'Probability' 'Probability' r'$$p\hat{\theta}$$' &&
+    ./addRecords4.py 'MLE2' 'LaTeX' 'text.tex' 'Probability' 'Probability' r'$$p\hat{\theta}p\hat{\theta|y}$$' &&
+    ./addRecords4.py 'MLE3' 'LaTeX' 'text.tex' 'Probability' 'Probability' r'$$p\hat{\theta}p\hat{\theta|y}p\hat{\theta|y}$$'
+
+    The fetchParameters() functions is not working correctly at present.
+
+    Blaine Mooers, PhD
+    OUHSC
+    Copyright 2018
+    Univeristy of Oklahoma Board of Regents
+    MIT Licence
+    8 November 2018
+    """
+    print("Starting work!")
+
+
+
+def create_table(tableName):
+        """
+        Create database with a single table. 
+        Use the addRecXXX.sh script to load records.
+
+        This particular database stores who installed 
+        what software so that I can give credit in 
+        the acknowledgements of publications.
+        
+        Blaine Mooers
+        UO Board of Regents
+            
+        21 May 2019
+        """
+        c.execute("CREATE TABLE IF NOT EXISTS '${2:software}' (\
+        '${3:softwareName}' TEXT,\
+        '${4:sourceCodeUrl}' TEXT,\
+        '${5:installDate}' TEXT,\
+        '${6:installer}' TEXT,\
+        '${7:installerEmail}' TEXT,\
+        '${8:moduleLoadCommand}' TEXT,\
+        '${9:gpuYN}' TEXT)
+
+create_table(tableName="$1:{tableName}")
+
+###################################################################
+
+def addRecord( ${3:softwareName},\
+        ${4:sourceCodeUrl},\
+        ${5:installDate},\
+        ${6:installer},\
+        ${7:installerEmail},\
+        ${8:moduleLoadCommand},\
+        ${9:gpuYN}):
+    """ 
+    Insert at bottom of the table softweare a new record.
+    """
+    c.execute("INSERT INTO ${2:software} (${3:softwareName},${4:sourceCodeUrl}, ${5:installDate}, ${6:installer},\
+    ${7:installerEmail}, ${8:moduleLoadCommand}, ${9:gpuYN},) VALUES(?, ?, ?, ?, ?, ?, ?)", \ 
+    (${3:softwareName},${4:sourceCodeUrl},${5:installDate},${6:installer},${7:installerEmail},${8:moduleLoadCommand},${9:gpuYN}))
+    return
+
+# You can make multiple calls to the dataEntery function from 
+# with one for each snippet.
+    
+if __name__ == '__main__':
+    main()
+
+    ${3:softwareName} = sys.argv[1]
+    ${4:sourceCodeUrl} = sys.argv[2]
+    ${5:installDate} = sys.argv[3]
+    ${6:installer} = sys.argv[4]
+    ${7:installerEmail} = sys.argv[5]
+    ${8:moduleLoadCommand} = sys.argv[6]
+    ${9:gpuYN} = sys.argv[7]
+
+    conn = sqlite3.connect('/Users/blaine/db${13:/schoonerSoftware/schoonerSoftware.db}')
+    c = conn.cursor()
+    addRecord('${3:softwareName}', '${4:sourceCodeUrl}', '${5:installDate}', '${6:installer}',\
+         '${7:installerEmail}', '${8:moduleLoadCommand}', '${9:gpuYN}')
+
+    print(${3:softwareName},${4:sourceCodeUrl},${5:installDate},${6:installer},${7:installerEmail},${8:moduleLoadCommand},${9:gpuYN})
+    conn.commit()
+    print("Success")
+    c.close()
+    conn.close()
+$0
+]]></content>
+<tabTrigger>db10</tabTrigger>
+<scope>py</scope>
+<description>Making database files with ten fields.</description>
+</snippet>

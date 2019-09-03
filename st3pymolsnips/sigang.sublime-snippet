@@ -2,7 +2,6 @@
 <content><![CDATA[
 set label_angle_digits, ${1:2};
 $0
-
 ]]></content>
 <tabTrigger>sigang</tabTrigger>
 <scope></scope>

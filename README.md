@@ -18,6 +18,23 @@ The tab stops are mirrored when the parameters are identical.
 The editing of one sites leads to changes in the other other sites.
 The tab stops ensure that all of the required edits are made on the first edit.
 
+The animation below demonstrates the use of the **ao** tab trigger to insert 16 lines of code for generating the ambient occlusiion effect.
+The user opens with Visual Studio Code a blank file called testVSC.pml. 
+The pml file extension tell Visual Studio Code that this is a PyMOL script file and to make available the library of snippets for PyMOL.
+The user enters the tab trigger **ao**.
+Two-levels of a cascading menu appears.
+The meanu of the left shows the alternate tab triggers that contain a and o. 
+The corresponding code for the selected tab trigger is displayed in the right window to allow the user to check that it is the desired tab trigger.
+The user can use the up and down arrow keys to select the appropriate tab trigger from the preview menu.
+The user then enters the **tab** key to insert the code into the file at the cursor.
+By entering to two letters, the user has inserted 16 lines of code. 
+
+<p align="center">
+	<img width="460" height="300" src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif">
+</p>
+
+
+
 Some editors take snippet libraries in one file. 
 Other editors require that each snippet resides in a separate file. 
 Most editors have their own format. 
@@ -126,7 +143,7 @@ Support is planned for the following editors:
   - [Editra](http://www.editra.org://www.editra.org)
   - [jed](http://jedmodes.sourceforge.net)
   - [jedit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
-  - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)- [Oni](https://www.onivim.io)
+  - [notepadpp](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
   - [Oni 2](https://www.onivim.io/oin2)
   - [Textadept](https://foicica.com/textadept)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
