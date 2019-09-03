@@ -30,9 +30,8 @@ The user then enters the **tab** key to insert the code into the file at the cur
 By entering to two letters, the user has inserted 16 lines of code. 
 
 
-![Alt Text](
 <p align="center">
-	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" alt="ao tab trigger"/>
+	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" width="1242" height="594" alt="ao tab trigger" />
 </p>
 
 
@@ -41,7 +40,7 @@ Some editors take snippet libraries in one file.
 Other editors require that each snippet resides in a separate file. 
 Most editors have their own format. 
 The user downloads the file or folder of files for their text editor and installs the snippets.
-If needed, protocols for snippet installation for each text editor are founded <a href="#install">belowi</a>. 
+If needed, protocols for snippet installation for each text editor are founded <a href="#install">below</a>. 
 
 
 <h2> <A name="FASTLINKS">Quick links</A></h2>
