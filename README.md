@@ -43,6 +43,22 @@ Most editors have their own format.
 The user downloads the file or folder of files for their text editor and installs the snippets.
 If needed, protocols for snippet installation for each text editor are found <a href="#install">below</a>. 
 
+Many text editors support tab stops which aid the editing of recycled code fragments. 
+Tab stops are placed where the defualt value of a parameter needs to be considered for updating for the new application of the code.
+The user enters tab to advance through the tab stops. 
+If a parameter occurs several times in the snippet and if it should have the same value at each site, the tab stops are mirror so that the change at one site ensures changes at all sites.
+This ensures that all identical sites are changed uniformly and completely while also saving time spent typing.
+The complete consideration of all editable sites avoids or at least reduces debugging at a latter time, thereby saving additional time. 
+The last tab stop moves the cursor to the start of a new line at the bottom of the snippet where it is ready for a new command.
+The animation below demonstrates tabbing through a snippet. 
+
+TO BE DONE
+
+
+The animaltion below it demonstrates the use of mirrored tab stops. 
+
+TO BE DONE
+
 
 <h2> <A name="FASTLINKS">Quick links</A></h2>
 <ul>
@@ -118,6 +134,7 @@ The installation instructions are below for the following editors:
   <li><a href="#espresso"> Espresso </a></li>
   <li><a href="#geany"> Geany </a></li>
   <li><a href="#gedit"> Gedit </a></li>
+  <li><a href="#jupyter"> Jupyter notebook </a></li>
   <li><a href="#kate"> Kate </a></li>
   <li><a href="#komodo"> Komodo Edit </a></li>
   <li><a href="#LightTable"> Light Table </a></li>
@@ -298,6 +315,27 @@ Try the following on Mac (one of the four) and Linux (first three):
 /Users/blaine//.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/blaine/Library/Application\ Support/kate/MySnippets/
 ```
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+<h3 name="jupyter"> jupyter (Universal) </h3>
+Juptyer notebook evolved from the Iptyhon notebook.
+It is to be replaced by Juptyer-lab which is now available for general use.
+The Jupyter notebook has two extensions for snippet management but these are not yet supported in Jupyter-lab.
+Juputer-lab was a third snippet extension that is not backward compatible. 
+All three systems do not support tab triggers not tab stops.
+An alternative it to import individual snippets with the load magic. 
+The user enters %load filePath/<snioppetName>.pml.
+The file finder system in jupyter notebook eases navigation to the correct file.
+The above library of snippets includes a commented out sublime text 3 snippet with tabstops.
+This is also printed to the cell so that it can serve as a guide to the sites that should be considered for editing. 
+
+The animation below demonstrates the insertion of a snippet with the load magic. 
+
+
+TO BE DONE
+
+
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
