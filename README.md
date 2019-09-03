@@ -29,9 +29,9 @@ The user can use the up and down arrow keys to select the appropriate tab trigge
 The user then enters the **tab** key to insert the code into the file at the cursor.
 By entering to two letters, the user has inserted 16 lines of code. 
 
-<p align="center">
-	<img width="460" height="300" src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif">
-</p>
+
+<div style="width:100%;height:0;padding-bottom:48%;position:relative;"><iframe src="https://giphy.com/embed/SYcU86aGrd5TxZQqjR" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/pymol-molecular-visualization-graphics-SYcU86aGrd5TxZQqjR">via GIPHY</a></p>
+
 
 
 
