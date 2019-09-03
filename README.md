@@ -30,8 +30,9 @@ The user then enters the **tab** key to insert the code into the file at the cur
 By entering to two letters, the user has inserted 16 lines of code. 
 
 
+![Alt Text](
 <p align="center">
-	<img src="https://giphy.com/embed/SYcU86aGrd5TxZQqjR" alt="ao tab trigger"/>
+	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" alt="ao tab trigger"/>
 </p>
 
 
