@@ -804,7 +804,14 @@ In this category, vim is the most powerful editor followed by emacs and distantl
 ### Unit cell display:
 | Tab trigger   | Description                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|
-| sc333         | Run Tom Holder's supercell script to generate three cells in all directions. |
+|sc111  	   	|Make a lattice of 1 x 1 x 1 unit cells.  				                       |
+|sc221     		|Make a lattice of 2 x 2 x 1 unit cells.                                       |
+|sc112    		|Make a lattice of 1 x 1 x 2 unit cells.    				                   |
+|sc222 		    |Make a lattice of 2 x 2 x 2 unit cells.      				                   |
+|sc331    	    |Make a lattice of 3 x 3 x 1 unit cells.      				                   |
+|sc313          |Make a lattice of 3 x 1 x 3 unit cells.       				                   |
+|sc133          |Make a lattice of 1 x 3 x 3 unit cells.                       				   |
+|sc333          |Make a lattice of 3 x 3 x 3 unit cells.                                       |
 
 
 ### Water pentagon:
