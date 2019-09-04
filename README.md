@@ -440,8 +440,8 @@ It is a terminal-based editor that has a number of plugins available including o
 You do have to compile it to install it. 
 You need to have Node.js installed. 
 
-On the Mac, it is best to use it with the free iterm2.app terminal emulator.
-Install the snippets by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
+On the Mac, it is best to use *micro* with the free iterm2.app terminal emulator.
+Install the *snippets* plugin by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
 All of the snippets for one language are in a single file. 
 The ultisnips library above should work with this editor. 
 
@@ -452,16 +452,19 @@ The ultisnips library above should work with this editor.
 
 [Vim](https://vimawesome.com) is the terminal based text editor vi on steriods.
 It is free. 
-The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
-A newer branch of vim called neovim is available. 
-Either are available from software repositories like macports and fink or as stand-a-lone applications.
-The addition of a plugin requires the editing of startup .vimrc file.
+The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs*.
 
-Ultisnips is a more recent alternative to [snipmate](https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate).
-Ultisnips requires Python. 
+A newer branch of *vim* called neovim is available. 
+Either are available from software repositories like macports and fink or as stand-a-lone applications.
+The addition of a plugin requires the editing of startup *.vimrc* file.
+
+*Ultisnips* is a more recent alternative to [snipmate](https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate).
+*Ultisnips* requires Python. 
+
 VimL does not require Python. 
-If you choose to install VimL, you will need the snipmate library.
-Otherwise, you should use Ultisnips. 
+If you choose to install VimL, you will need the *snipmate* library.
+
+Otherwise, you should use *Ultisnips*. 
 The snippets are stored in a single file that is language specific.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
