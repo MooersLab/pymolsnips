@@ -545,10 +545,11 @@ Next, edit the settings under File <a href="https://www.codecogs.com/eqnedit.php
     },
 ```
 
-Restart VSC. Open a **pml** file. 
+Restart VSC. 
+Open a file with a *.pml* file extension. 
 You should see **pml** in the lower right on the bottom panel. 
-You should also see syntax highlighting of the pml text. 
-Type the tab trigger **ao** to test the installation of the snippet for the code that creates the ambient occlusion effect. 
+You should also see syntax highlighting of the text in the `pml` script file. 
+Type the tab trigger **ao** to test the insertion of the snippet for the code that creates the ambient occlusion effect. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
