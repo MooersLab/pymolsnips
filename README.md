@@ -317,14 +317,14 @@ Try the following on Mac (one of the four) and Linux (first three):
 ```
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h3 name="jupyter"> jupyter (Universal) </h3>
+<h3 name="jupyter"> jupyter </h3>
 Juptyer notebook evolved from the Iptyhon notebook.
 It is to be replaced by Juptyer-lab which is now available for general use.
 The Jupyter notebook has two extensions for snippet management but these are not yet supported in Jupyter-lab.
 Juputer-lab was a third snippet extension that is not backward compatible. 
 All three systems do not support tab triggers not tab stops.
 An alternative it to import individual snippets with the load magic. 
-The user enters %load filePath/<snioppetName>.pml.
+The user enters `python %load filePath/<snippetName>.pml`.
 The file finder system in jupyter notebook eases navigation to the correct file.
 The above library of snippets includes a commented out sublime text 3 snippet with tabstops.
 This is also printed to the cell so that it can serve as a guide to the sites that should be considered for editing. 
