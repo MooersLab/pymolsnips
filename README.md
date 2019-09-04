@@ -299,20 +299,23 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 
 <h3 name="jupyter"> jupyter </h3>
 Juptyer notebook evolved from the Iptyhon notebook.
-It is to be replaced by Juptyer-lab which is now available for general use.
-The Jupyter notebook has two extensions for snippet management but these are not yet supported in Jupyter-lab.
+It is to be replaced by Juptyer-lab, which is now available for general use.
+The Jupyter notebook has two extensions for snippet management, but these extensions are not yet supported in Jupyter-lab.
 Juputer-lab was a third snippet extension that is not backward compatible. 
-All three systems do not support tab triggers not tab stops.
-An alternative it to import individual snippets with the load magic. 
-The user enters ` %load filePath/<snippetName>.pml`.
-The file finder system in jupyter notebook eases navigation to the correct file.
+All three systems do not support tab triggers or tab stops.
+An alternative is to import individual snippets with the load magic. 
+The user enters ` %load filePath/<snippetName>.pml `.
+The file finder system in Jupyter notebook eases navigation to the correct file.
 The above library of snippets includes a commented out sublime text 3 snippet with tabstops.
 This is also printed to the cell so that it can serve as a guide to the sites that should be considered for editing. 
 
 The animation below demonstrates the insertion of a snippet with the load magic. 
 
+<p align="center">
+	<img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
+</p>
 
-TO BE DONE
+
 
 
 
