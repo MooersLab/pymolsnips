@@ -219,17 +219,19 @@ There is also presently the lack of a pml lexer for syntax highligihting.
 
 The development of Brackets is lead by a team at Adobe.
 Brackets is designed for web developers with a focus on html, css, and javascript.
-However, it now has support for a large number of languages. 
-Brackets provides quick edit and live preview so changes in the html code deployed immediately in the preview. 
+However, Brackets now has support for a large number of languages. 
+Brackets provides a quick live preview so changes in the pml code are deployed immediately in the preview. 
 
 Go to the extension manager. 
 Search for the `brackets-snippets (by EDC)` and install it.
 This is snippet manager that has a GUI that enables the manual creation of user defined snippets.
 The `settings` tab opens a menu with an import button.
-Click on this button to import the pymolsnippets.yml file which is available above.
+Click on this button to import the *pymolsnippets.yml* file that is available at the top of this page.
 All of the snippets for PyMOL are in this single file. 
-Until the PML language is available for Brackets, we will use Python.
-This means that the pml file needs a file extension of `.py` while editing it in Brackets. 
+
+Until the PML language is available for Brackets, use Python to get syntax highlighting.
+This means that the `.pml` file needs a file extension of `.py` while it is being edited in Brackets.
+Save this file with the `.pml` extension to be able to use it in PyMOL.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
