@@ -254,8 +254,8 @@ In the meantime, install and use the Python lexer.
 
 <h3 name="espresso"> Espresso (Mac) </h3>
 
-[Espresso](https://espressoapp.com/)is a proprietary test editor for the Mac.
-It is for those users who made a text editor that has a GUI that looks like a native Mac app. 
+[Espresso](https://espressoapp.com/) is a proprietary test editor for the Mac.
+It is for those users who desire a text editor that has a GUI that looks like a native Mac app. 
 The snippets are stored in a single xml file. 
 
 
@@ -264,13 +264,13 @@ The snippets are stored in a single xml file.
 <h3 name="geany"> Geany (Universal) </h3>
 
 [Geany](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
-It is written in C and C++. 
+Geany is written in C and C++. 
 Binaries are  available for Mac OS, Linux, and Windows.
-Source code is also available.
-It has a plugin manager, and it is very easy to configure. 
+The source code is also available.
+Geany has a plugin manager, and it is very easy to configure. 
 
-Make sure that the PyMOL filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
-In addition, you need to edit the keybinding preferences  **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. 
+Make sure that the pml filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
+In addition, you need to edit the keybinding preferences **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. 
 Without making this edit, you will not be able to advance to the second and later tab stops. 
 I used <Cntrl>Shift_L, that is the left control and left shift. 
 
@@ -278,8 +278,8 @@ The snippets for all languages are stored in groups in single file `~/.config/ge
 The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor.
 Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
 Make sure that there is only one section with the heading `[PyMOL]`.
-The snippets are invoked with a tab trigger, and they have tab stops.
-There is no mirroring of tab stops. 
+The snippets are invoked with a tab trigger.
+The snippets have tab stops, but there is no support for the mirroring of tab stops. 
 Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
 
 I still need to develop a language define file to enable syntax highlighting of pml files. 
