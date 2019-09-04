@@ -577,7 +577,7 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 <h2>Text editors that are ready out of the box</h2>
 
 <h2>Terminal based text editors</h2>
-In this cateogry, vim is the most powerful editor followed by emacs and distantly by nano.
+In this category, vim is the most powerful editor followed by emacs and distantly by nano.
 -->
 
 
