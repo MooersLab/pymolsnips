@@ -493,10 +493,10 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 [TextMate](https://macromates.com) is now freely available but only for Mac OS.
 It is a mature project with occasional updates.
-TextMate has been a pioneer in the development of snippet libraries.
-TextMate snippets can be ported to Sublime Text. 
-Each snippet is stored in a separate file with the file extension .tmSnippet.
-The snippets are stored in the user's Library folder. 
+*TextMate* was a pioneer application in the development of snippet libraries.
+*TextMate* snippets can be ported to *Sublime Text 3*. 
+Each snippet is stored in a separate file with the file extension `.tmSnippet`.
+The snippets are stored in the user's `~/Library` folder. 
 There is a large library of plugins available. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -506,14 +506,15 @@ There is a large library of plugins available.
 
 
 [ultisnip](https://github.com/sirver/UltiSnip)
-Vim is the terminal based text editor vi on steriods.
+*vim* is the terminal based text editor vi on steroids.
 It is free. 
-The vim keybindings for text editing are so useful that the they are available for the rival text editor emacs.
-A newer branch of vim called neovim is available. 
+The *vim* keybindings for text editing are so useful that the they are available for the rival text editor emacs.
+A newer branch of *vim* called *neovim* is available. 
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
-The addition of a plugin requires the editing of startup .vimrc file. 
-Ultisnips is a Plugin that manages snippets and that works with vim and neovim. 
-It is a more recent alternative to snipmate. 
+
+The addition of a plugin to *Vim* requires the editing of startup `.vimrc` file. 
+Ultisnips is a Plugin that manages snippets and that works with *vim* and *neovim*. 
+It is a more recent alternative to *snipmate*. 
 The snippets are stored in a single file that is language specific.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
