@@ -373,8 +373,8 @@ The developers of Komodo Edit have merged with the developers of ActiveState Pyt
 The Community version of Komodo Edit has enough features for the occasional writer of code for PyMOL.
 
 The snippets are stored in separate files.
-The snippets are active with files ending with pml. 
-The snippers are stored in a folder called PML, which has to be created.
+The snippets are active for files with the  ``.pml` extension. 
+The snippets are stored in a folder called PML, which has to be created.
 On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`.
 
 The snippets are treated as abbreviations that are stored in the tool box.
