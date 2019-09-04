@@ -521,12 +521,14 @@ The snippets are stored in a single file that is language specific.
 
 <h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 [Visual Studio Code](https://code.visualstudio.com)
-Visual Studio Code is a free editor from Microsoft. 
-Its start-up speed is between that of Sublime Text 3 and Atom.
+*Visual Studio Code* (VSC) is a free editor from Microsoft. 
+Its start-up speed is between that of *Sublime Text 3* and *Atom*.
+
 The installation of plugins is painless. 
 There is a website featuring the plugins that are available. 
-You select the plugin that you are interested and hit an install button on the website to install the plugin on your local machine. 
-The bioSyntax plugin includes a lexer for PyMOL, so it is a good idea to install this plugin.
+You select the plugin that you are interested and hit an install button on the website to install the plugin in *VSC* on your local machine. 
+
+The *bioSyntax* plugin includes a lexer for PyMOL, so it is a good idea to install this plugin.
 The lexer will be activated when a PyMOL Macro Language (pml) file is opened. 
 Autocompletion of the snippet tab triggers and previews of the snippet's code are very helpful for avoiding the insertion of the wrong snippet. 
 
