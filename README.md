@@ -434,7 +434,6 @@ and then save your script file with the `.pml` file extension.
 
 
 <h3 name="micro"> micro (Universal) </h3>
-
 [Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
 Nonetheless, *micro* is easier to use than *vim* or *emacs*. 
 It is a terminal-based editor that has a number of plugins available including one for snippets.
