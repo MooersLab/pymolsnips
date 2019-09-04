@@ -239,24 +239,25 @@ Save this file with the `.pml` extension to be able to use it in PyMOL.
 <h3 name="cudatext"> CudaText (all) </h3>
 
 [CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal. 
-It is open source.
+Cudatext is open source.
 Its predecessor is SynWrite, which is no longer supported. 
-There are numerous plugins available.
-The plugin manager should be used to install the `snippets` plugin.
+
+*Cudatext* has numerous plugins available to it.
+Use the plugin manager to install the `snippets` plugin to be able to use the 
 The documentation is located [online](http://wiki.freepascal.org/CudaText).
 
-CudaText depends on the presence of 32-bit Python3.
+*CudaText* depends on the presence of 32-bit Python3.
 On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. 
-When I started cudatext, it found this install of Python; I did not have to edit any configuration files.
+When I started *cudatext*, it found this install of Python; I did not have to edit any configuration files.
 
 
 The snippets are stored one per file.
-The files have the extensions of .cuda-snippet. 
+The files have the extensions of `.cuda-snippet`. 
 CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
-CudaText snippets are stored in the user library on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder, which you may have to create. 
+CudaText snippets are stored in the user's `Library` on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
+You may have to create the `Std.PML` folder.
 
-I plan to develop a PyMOL lexer (syntax highlighter) for CudaText. 
-In the meantime, install and use the Python lexer.
+Until a PyMOL lexer (syntax highlighter) is developed for CudaText, install and use the Python lexer to get some syntax highlighting.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
