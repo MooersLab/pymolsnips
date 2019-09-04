@@ -298,25 +298,6 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-<h3 name="kate"> Kate/Kwriter (Universal) </h3>
-
-[kate](https://kate-editor.org/get-it/)
-Kate is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux. 
-If installed with macports, its app resides in ```/Applications/macports/kate.app```.
-The Snippet plugin has to be turned on.
-The snippets are stored in a single xml file. 
-The storage location for this file is not in the documentation.
-Try the following on Mac (one of the four) and Linux (first three):
-
-```bash
-/Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml
-/Users/blaine/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml 
-/Users/blaine//.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
-/Users/blaine/Library/Application\ Support/kate/MySnippets/
-```
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
 <h3 name="jupyter"> jupyter </h3>
 Juptyer notebook evolved from the Iptyhon notebook.
 It is to be replaced by Juptyer-lab which is now available for general use.
@@ -337,6 +318,28 @@ TO BE DONE
 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
+<h3 name="kate"> Kate/Kwriter (Universal) </h3>
+
+[kate](https://kate-editor.org/get-it/)
+Kate is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux. 
+If installed with macports, its app resides in ```/Applications/macports/kate.app```.
+The Snippet plugin has to be turned on.
+The snippets are stored in a single xml file. 
+The storage location for this file is not in the documentation.
+Try the following on Mac (one of the four) and Linux (first three):
+
+```bash
+/Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml
+/Users/blaine/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml 
+/Users/blaine//.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
+/Users/blaine/Library/Application\ Support/kate/MySnippets/
+```
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 
