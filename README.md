@@ -558,12 +558,15 @@ Type the tab trigger **ao** to test the insertion of the snippet for the code th
 <h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
 
 [yasnippets](https://www.emacswiki.org/emacs/Yasnippet)
-Like vim, emacs can be installed as a stand-a-lone application or via a software repository. 
-Emacs is a lifetime editor because it takes a lifetime to master it because it is so highly extensible. 
-There are several flavors of emacs.
-Spacemacs is a version that has a less steep learning curve. 
-The yasnippets package is used to manage snippets. 
+Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository. 
+*emacs* is a lifetime editor because it takes a lifetime to master it! 
+
+There are several flavors of *emacs*.
+*Spacemacs* is a version that has a gentler learning curve. 
+
+The *yasnippets* package is used to manage snippets. 
 This package is installed with a builtin package manager.
+ffff
 Each snippet is stored in a single file. 
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory. 
 
