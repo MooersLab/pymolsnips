@@ -132,7 +132,7 @@ The installation instructions are below for the following editors:
   <li><a href="#espresso"> Espresso </a></li>
   <li><a href="#geany"> Geany </a></li>
   <li><a href="#gedit"> Gedit </a></li>
-  <li><a href="#jupyter"> Jupyter notebook </a></li>
+  <li><a href="#jupyter"> Jupyter notebook, Jupyter-lab </a></li>
   <li><a href="#kate"> Kate </a></li>
   <li><a href="#komodo"> Komodo Edit </a></li>
   <li><a href="#LightTable"> Light Table </a></li>
@@ -296,17 +296,22 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h3 name="jupyter"> jupyter </h3>
-Juptyer notebook evolved from the Iptyhon notebook.
-It is to be replaced by Juptyer-lab, which is now available for general use.
-The Jupyter notebook has two extensions for snippet management, but these extensions are not yet supported in Jupyter-lab.
-Juputer-lab was a third snippet extension that is not backward compatible. 
-All three systems do not support tab triggers or tab stops.
-An alternative is to import individual snippets with the load magic. 
+<h3 name="jupyter"> jupyter notebook, jupyter-lab (Universal)</h3>
+Juptyer notebook evolved from the Iptyhon notebook, which is turn were inspired by the Mathematica notebook.
+Juptyer notebooks are to be replaced by Juptyer-lab, which is now available for general use.
+Jupyter-lab is the Python analog of Rstudio.
+Juptyer-lab can read and run jupyter notebooks but the extensions for jupyter notebooks have not been ported to jupyter-lab.
+Jupyter notebooks are very useful for the interactive testing and development of chunks of code like functions that reside in separate cells in the notebook.
+
+The Jupyter notebook has two extensions for snippet management.
+Juputer-lab was a third snippet extension that is not backward compatible with the jupyter notebook. 
+All three snippet management systems do not support tab triggers or tab stops.
+
+An simple alternative is to import individual snippets with the load magic. 
 The user enters ` %load filePath/<snippetName>.pml `.
 The file finder system in Jupyter notebook eases navigation to the correct file.
-The above library of snippets includes a commented out sublime text 3 snippet with tabstops.
-This is also printed to the cell so that it can serve as a guide to the sites that should be considered for editing. 
+The above library of snippets includes a commented out sublime text 3 snippet that has tab stops.
+This commented out snippet is also printed to the cell so that it can serve as a guide to the sites in the clipping that should be considered for editing. 
 
 The animation below demonstrates the insertion of a snippet with the load magic. 
 
@@ -315,8 +320,13 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 </p>
 
 
+The pml cannot be sent directly to PyMOL because a pml kernel for the notebook has yet to be developed.
+Instead,the jupyter notebook can be used to assemble code fragments.
+The cells can be merged and the code can be copied and pasted into an external pml script file. 
 
-
+In addition, the notebook can be used to document the cells of code with interweaved cells containing markdown code.
+The markdown cells support LaTeX rendering of equations and the insertion of images and videos. 
+The notebook could provide an enhanced means of documenting and explaining a pml script file.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
