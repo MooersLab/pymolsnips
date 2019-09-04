@@ -32,29 +32,26 @@ The user then enters the **tab** key to insert the code into the file at the cur
 By entering there two letters, the user has inserted 17 lines of code. 
 The cursor moves to the start of a new line on line 18 where it is ready for a new command.
 
-
 <p align="center">
 	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" width="850" height="425" alt="ao tab trigger" />
 </p>
 
-
-
 Some editors take snippet libraries in one file. 
 Other editors require that each snippet resides in a separate file. 
-Most editors have their own format. 
-The user downloads the file or folder of files for their text editor and installs the snippets.
-If needed, protocols for snippet installation for each text editor are found <a href="#install">below</a>. 
+Most editors have their own format for the snippets. 
+The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
+Protocols for snippet installation for each text editor are found <a href="#install">below</a>. 
 
-Many text editors support tab stops which aid the editing of recycled code fragments. 
-Tab stops are placed where the defualt value of a parameter needs to be considered for updating for the new application of the code.
+Many text editors support tab stops, which greatly aid the complete and accurate editing of recycled code fragments. 
+Tab stops are placed where the default value of a parameter needs to be considered for updating for the new use of the code.
 The user enters tab to advance through the tab stops. 
-If a parameter occurs several times in the snippet and if it should have the same value at each site, the tab stops are mirror so that the change at one site ensures changes at all sites.
+If a parameter occurs several times in the snippet and if it should have the same value at each site, the identical tab stops are mirrored so that the change at one site ensures changes at all like sites.
 This ensures that all identical sites are changed uniformly and completely while also saving time spent typing.
 The complete consideration of all editable sites avoids or at least reduces debugging at a latter time, thereby saving additional time. 
 The last tab stop moves the cursor to the start of a new line at the bottom of the snippet where it is ready for a new command.
-The animation below demonstrates moving from tab stop to tab stop through a snippet by hitting tab. 
+The animation below demonstrates moving the cursor from one unique tab stop to the next unique tab stop through a snippet by hitting the tab key. 
 The highlighted parameter values are defaults.
-The animation below also demonstrates the use of mirrored tab stops where changed default values are mirrored to identical sites. 
+The animation below also demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites. 
 
 <p align="center">
 	<img src="https://media.giphy.com/media/jRGGNvizoE7eKnVZXw/giphy.gif" width="640" height="320" alt="ao tab trigger" />
