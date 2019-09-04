@@ -302,9 +302,9 @@ A to be developed pml language file is needed to enable syntax highlighting of p
 <h3 name="gedit"> gedit (Universal) </h3>
 
 [Gedit](https://www.barebones.com/products/bbedit/index.html) is often available on the computers running Linux OS at national labs. 
-Gedit provides an uncluttered gui with access to the snippets through a pulldown gui or by a tab trigger.
-The snippets are stored in a single file called pymol.xml.
-This file is stored in the home directory in a hidden folder called .config. 
+*gedit* provides an uncluttered gui with access to the snippets through a pulldown gui or by a tab trigger.
+The snippets are stored in a single file called `pymol.xml`.
+This file is stored in the home directory in a hidden folder called `.config`. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -333,10 +333,10 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 </p>
 
 
-The pml cannot be sent directly to PyMOL because a pml kernel for the notebook has yet to be developed.
-Instead,the jupyter notebook can be used to assemble code fragments.
-The cells can be merged and the code can be copied and pasted into an external pml script file. 
-
+The `pml` code cannot be sent directly to PyMOL because a `pml` kernel for the jupyter notebook has yet to be developed.
+Instead, the jupyter notebook can be used to gather and edit code fragments.
+The notebook cells can be merged, and the code can be copied and pasted into an external `pml` script file. 
+ 
 In addition, the notebook can be used to document the cells of code with interweaved cells containing markdown code.
 The markdown cells support LaTeX rendering of equations and the insertion of images and videos. 
 The notebook could provide an enhanced means of documenting and explaining a pml script file.
