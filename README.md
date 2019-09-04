@@ -200,14 +200,17 @@ You can install this lexer via the plugin manager by selecting the `language-pym
 
 [BBEdit](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
 Major upgrades require additional fees. 
-The snippet system is simple and elegant.
+
+The snippet system for BBedit is simple and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
-The pymol pml snippets end with the file extension `*.pml`.
+The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language. 
+
 Users can create nested subfolders for groups of related snippets. 
 The clippings are selected via the pulldown labeled C. 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
-The disadvantages include the lack of tab triggers and tab stops. 
+The disadvantages of these clippings include the lack of tab triggers and tab stops. 
+There is also presently the lack of a pml lexer for syntax highligihting. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
