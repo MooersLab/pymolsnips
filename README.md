@@ -50,14 +50,13 @@ If a parameter occurs several times in the snippet and if it should have the sam
 This ensures that all identical sites are changed uniformly and completely while also saving time spent typing.
 The complete consideration of all editable sites avoids or at least reduces debugging at a latter time, thereby saving additional time. 
 The last tab stop moves the cursor to the start of a new line at the bottom of the snippet where it is ready for a new command.
-The animation below demonstrates tabbing through a snippet. 
+The animation below demonstrates moving from tab stop to tab stop through a snippet by hitting tab. 
+The highlighted parameter values are defaults.
+The animation below also demonstrates the use of mirrored tab stops where changed default values are mirrored to identical sites. 
 
-TO BE DONE
-
-
-The animaltion below it demonstrates the use of mirrored tab stops. 
-
-TO BE DONE
+<p align="center">
+	<img src="https://media.giphy.com/media/jRGGNvizoE7eKnVZXw/giphy.gif" width="640" height="320" alt="ao tab trigger" />
+</p>
 
 
 <h2> <A name="FASTLINKS">Quick links</A></h2>
