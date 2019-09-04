@@ -355,19 +355,20 @@ Try the following on Mac (one of the four) and Linux (first three):
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 
 [Komodo Edit](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a Community version that can be used for free.
-The makers of Komodo Edit have merged with the makers of ActiveState Python.
-The Community version of Komodo Edit has enough features for the occassional writer of code for PyMOL.
+The developers of Komodo Edit have merged with the developers of ActiveState Python.
+The Community version of Komodo Edit has enough features for the occasional writer of code for PyMOL.
 
-The snippets are stored one snippet per file.
+The snippets are stored in separate files.
 The snippets are active with files ending with pml. 
 The snippers are stored in a folder called PML, which has to be created.
 On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`.
 
 The snippets are treated as abbreviations that are stored in the tool box.
 The snippet name works as a tab trigger.
-The snippet file can also be selected through the GUI and a pop-up displays the option to insert a snippet. 
+The snippet file can also be selected through the GUI.
+A pop-up menu displays the option to insert a snippet. 
 There are tab stops and highlighted default parameter values.
-However, there is no mirroring of tabstops at this time. 
+However, there is no mirroring of tab stops at this time. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -375,12 +376,12 @@ However, there is no mirroring of tabstops at this time.
 <h3 name="LightTable"> Light Table (Universal) </h3>
 
 [Light Table](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
-Those that have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
+Those users who have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
 Light Table is like a GUI version of emacs.
 It has very an attractive, uncluttered GIU. 
 
 *Light Table* supports previews that enable interactive editing of code to change the output.
-For example, code chunks for generating a plot is evaluated in-line and the plot is diplayed in an adjacent window.
+For example, code chunks for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
 The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin. 
 This documentation is on a GitHub website. 
 
@@ -388,7 +389,7 @@ The installation of plugins in *Light Table* is very fast.
 The number of available plugins is not as extensive as for Atom, Sublime Text, TextMate, or Visual Studio Code. 
 You have to be prepared to do a bit of customization to get some of the plugins to work correctly. 
 
-The snippets are managed through a master file for a language 
+The snippets are managed through one master file per programming language 
 <--! [](https://github.com/rundis/lt-snippets). -->
 This central file has the file extension `edn`.
 This file is used to set the scope (language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension snip. 
@@ -400,7 +401,7 @@ This will open a new window with the `users.behaviors` file ready to be edited.
 Paste inside the square brackets the following and change the path to your home directory:
 
 ```ClojureScript
-;; absolute path to where you'd like your snippet root directory to be
+;; absolute path to where you would like your snippet root directory to be
 [:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
 "/Users/blaine/.lighttable/User/snippets"]`
 ```
@@ -411,8 +412,8 @@ Move the contents of this folder (not the folder) to `~/.lighttable/User/snippet
 
 There is not a pml language available yet for *Light Table*. 
 Python will have to do as the language for now. 
-Use `.py` as your file extension while editing the file in Light Table
-and then save the file with the pml extension.
+Use `.py` as your file extension while editing your script file in Light Table,
+and then save your script file with the pml extension.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
