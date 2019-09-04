@@ -454,7 +454,7 @@ The ultisnips library above should work with this editor.
 It is free. 
 The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs*.
 
-A newer branch of *vim* called neovim is available. 
+A newer branch of *vim* called *neovim* is available. 
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
 The addition of a plugin requires the editing of startup *.vimrc* file.
 
@@ -469,10 +469,10 @@ The snippets are stored in a single file that is language specific.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
-[Sublime Text 3](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor. 
+[*Sublime Text 3*](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor. 
 The free trial period is infinite. 
-Sublime Text 3 starts up much faster than the other text editors for programmers.
-Sublime Text 3 has strong support for snippets and the autocompletion of tab triggers. 
+*Sublime Text 3* starts up much faster than the other text editors for programmers.
+*Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers. 
 The snippets are stored in separate files with the file extension `.sublime-snippet'. 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
