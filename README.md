@@ -406,9 +406,10 @@ You have to be prepared to do a bit of customization to get some of the plugins 
 The snippets are managed through one master file per programming language 
 <--! [](https://github.com/rundis/lt-snippets). -->
 This central file has the file extension `edn`.
-This file is used to set the scope (language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension snip. 
+This file is used to set the scope fo the snippets (the programming language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension `.snip`. 
+
 The snippets are stored in `~/.lighttable/User/snippets`.
-You will have to create these directories.
+You will have to create this series of nested directories.
 In bash, you can do this with the single command: `mkdir -p ~/.lighttable/User/snippets`.
 Then select from the menu in the toolbar at the top `File-->Settings-->user behaviors`.
 This will open a new window with the `users.behaviors` file ready to be edited. 
@@ -424,10 +425,10 @@ Save this file.
 Download the lighttablepymolsnips folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`. 
 
-There is not a pml language available yet for *Light Table*. 
+There is not a *pml* language available yet for *Light Table*. 
 Python will have to do as the language for now. 
 Use `.py` as your file extension while editing your script file in Light Table,
-and then save your script file with the pml extension.
+and then save your script file with the `.pml` file extension.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
