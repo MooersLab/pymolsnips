@@ -1,0 +1,4 @@
+Editors
+=======
+
+.. mdinclude:: ./READMEeditors.txt

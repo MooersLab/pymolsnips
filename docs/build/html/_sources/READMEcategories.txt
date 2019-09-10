@@ -1,0 +1,36 @@
+A complete listing of the currently available snippets can be found by entering the tab trigger **lsSnips**.
+Do this at the bottom of the pml script file that you are editing to use as a reference after commenting it out with pound symbols. 
+
+- Alternate locators
+- Analysis
+- Change orientation
+- Color scheme
+- Coordinate covalent bonds
+- Database function
+- Electron density
+- Fetch file from PDB
+- File Input
+- File output
+- Format label
+- H-bonds
+- Help
+- Label
+- Label format
+- Label placement
+- Label position
+- Measurement surface area
+- Molecular representation
+- Print coordinates of selection
+- Print sequence
+- Pymolrc
+- Save png flle with timestamp
+- Selection
+- Specialized figure
+- Stereo
+- Unit cell display
+- Water pentagon
+- analysis
+- help
+- salt-bridge
+- selection
+- workshop

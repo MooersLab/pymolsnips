@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; pymolsnips 0.1.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>### Alternate locators:
+| Tab trigger   | Description                                                   |
+<a href="#id35"><span class="problematic" id="id36">|:--------------|</span></a>:————————————————————–|
+| hidealtloc    | hide alt loc., the <span class="target" id="index-0"></span>alternate locator for disordered residues. |</p>
+<p>### Analysis:
+| Tab trigger    | Description                                                                          |
+<a href="#id37"><span class="problematic" id="id38">|:---------------|</span></a>:————————————————————————————-|
+| averageB       | find the <span class="target" id="index-1"></span>average B-value of a selection. Uses a regular list as opposed to PyMOL’s stored list. Edit the selection as needed. |
+| findHbonds     | find <span class="target" id="index-2"></span>hbonds around a residue.                                                        |
+| printBs        | print the <span class="target" id="index-3"></span>print the B-factors of a residue.                                                    |
+| printBs2digits | print B-values for a residue with the B’s rounded off to two decimal places.         |
+| printBspartB   | <span class="target" id="index-4"></span>print B factors of part B of a disorderd residue.                                    |</p>
+<p>### Change orientation:
+| Tab trigger   | Description                        |
+<a href="#id39"><span class="problematic" id="id40">|:--------------|</span></a>:———————————–|
+| rotate        | <span class="target" id="index-5"></span>rotate about axis.                 |
+| rv            | return <span class="target" id="index-6"></span>settings in a compact format on one line. |
+| turnAboutAxis | <span class="target" id="index-7"></span>turn about axis.                   |
+`</p>
+<p>### Color scheme:
+| Tab trigger   | Description                                    |
+<a href="#id41"><span class="problematic" id="id42">|:--------------|</span></a>:———————————————–|
+| cblind        | enable <span class="target" id="index-8"></span>color blind friendly colors.                               |
+| cribbon       | <span class="target" id="index-9"></span>color ribbon H red, strand yellow, loop green. |
+| volumeRamp    | <span class="target" id="index-10"></span>volume ramp.                                   |</p>
+<p>### Coordinate covalent bonds:
+| Tab trigger   | Description                                                |
+<a href="#id43"><span class="problematic" id="id44">|:--------------|</span></a>:———————————————————–|
+| coordinate    | <span class="target" id="index-11"></span>coordinate covalent bonds to metals. |</p>
+<p>### Database function:
+| Tab trigger   | Description                                   |
+<a href="#id45"><span class="problematic" id="id46">|:--------------|</span></a>:———————————————-|
+| lsSnips       | <span class="target" id="index-12"></span>list all snips by tab trigger and description |</p>
+<p>### Electron density:
+| Tab trigger   | Description              |
+<a href="#id47"><span class="problematic" id="id48">|:--------------|</span></a>:————————-|
+| carvedDensity |  <span class="target" id="index-13"></span>carved electron density map. |
+| fetch2FoFc    |  <span class="target" id="index-14"></span>fetch 2FoFc map.         |
+| threeMaps     |  <span class="target" id="index-15"></span>three electron density maps.  |</p>
+<p>### Fetch file from PDB:
+| Tab trigger   | Description     |
+<a href="#id49"><span class="problematic" id="id50">|:--------------|</span></a>:—————-|
+| fetchCIF      | <span class="target" id="index-16"></span>fetch cif file. |
+| fetchFoFc     | <span class="target" id="index-17"></span>fetch fofc map. |</p>
+<p>### File Input:
+| Tab trigger   | Description                               |
+<a href="#id51"><span class="problematic" id="id52">|:--------------|</span></a>:——————————————|
+| loadPDBfile   | <span class="target" id="index-18"></span>load a pdb file in the current directory. |</p>
+<p>### File output:
+| Tab trigger   | Description                                                |
+<a href="#id53"><span class="problematic" id="id54">|:--------------|</span></a>:———————————————————–|
+| savePNG       | <span class="target" id="index-19"></span>save a png file of current scene to the current directory. |</p>
+<p>### Format label:
+| Tab trigger   | Description                                         |
+<a href="#id55"><span class="problematic" id="id56">|:--------------|</span></a>:—————————————————-|
+| labelResnResi | <span class="target" id="index-20"></span>label CA atom with residue name and residue number. |
+| labelSS       | <span class="target" id="index-21"></span>label SS.                                           |
+| oneLetter     | <span class="target" id="index-22"></span>one letter amino acid.                              |</p>
+<p>### H-bonds:
+| Tab trigger   | Description       |
+<a href="#id57"><span class="problematic" id="id58">|:--------------|</span></a>:——————|
+| distance      | <span class="target" id="index-23"></span>H-bond distances. |
+| drawHbonds    | <span class="target" id="index-24"></span>draw H-bonds.     |
+| hbond         | <span class="target" id="index-25"></span>H-bond setup.      |
+| hbonddash     | <span class="target" id="index-26"></span>H-bond dashes.    |</p>
+<p>### Help:
+| Tab trigger                | Description                                                                |
+<a href="#id59"><span class="problematic" id="id60">|:---------------------------|</span></a>:—————————————————————————|
+| writeCommandReference2HTML | Write the command reference to html file in the present working directory. |</p>
+<p>### Label:
+| Tab trigger    | Description                                        |
+<a href="#id61"><span class="problematic" id="id62">|:---------------|</span></a>:—————————————————|
+| labelCAs       | <span class="target" id="index-27"></span>label the CA atoms with the Ala333 style format    |
+| labelMainChain | <span class="target" id="index-28"></span>label the main chain atoms by resn,resi,atom name. |
+| labelWatersHOH | <span class="target" id="index-29"></span>label waters HOH.                                  |
+| labelWatersW   | <span class="target" id="index-30"></span>label waters W.                                    |</p>
+<p>### Label format:
+| Tab trigger   | Description                                   |
+<a href="#id63"><span class="problematic" id="id64">|:--------------|</span></a>:———————————————-|
+| sigang        | <span class="target" id="index-31"></span>set angle labels to display 2 decimals places |
+| sigdist       | <span class="target" id="index-32"></span>set distance labels to display 2 decimals     |</p>
+<p>### Label placement:
+| Tab trigger   | Description   |
+<a href="#id65"><span class="problematic" id="id66">|:--------------|</span></a>:————–|
+| centerpi      | <span class="target" id="index-33"></span>center pi.    |</p>
+<p>### Label position:
+| Tab trigger   | Description                     |
+<a href="#id67"><span class="problematic" id="id68">|:--------------|</span></a>:——————————–|
+| pseudolabel   | Position label with pseudoatom. |</p>
+<p>### Measurement surface area:
+| Tab trigger   | Description           |
+<a href="#id69"><span class="problematic" id="id70">|:--------------|</span></a>:———————-|
+| ms            | <span class="target" id="index-34"></span>measure surface area. |</p>
+<p>### Molecular representation:
+| Tab trigger             | Description                                                                                    |
+<a href="#id71"><span class="problematic" id="id72">|:------------------------|</span></a>:———————————————————————————————–|
+| ao                      | <span class="target" id="index-35"></span>ambient occlussion.                                                                            |
+| bs                      | <span class="target" id="index-36"></span>ball and stick representation.                                                                 |
+| cspheres                | <span class="target" id="index-37"></span>colored spheres.                                                                               |
+| discreteCartoonColoring | <span class="target" id="index-38"></span>turn on discrete colors between secondary structure elements.                                  |
+| doubleBond              | <span class="target" id="index-39"></span>valence bond.                                                                                  |
+| ellipcol                | <span class="target" id="index-40"></span>set thermal ellipsoid color.                                                                           |
+| filledRing              | <span class="target" id="index-41"></span>filled rings in nucleic acids.                                                                 |
+| fog                     | <span class="target" id="index-42"></span>blur the background atoms.                                                                     |
+| loadPDBbs               | <span class="target" id="index-43"></span>load PDB ball-and-stick.                                                                       |
+| loadPDBnb               | <span class="target" id="index-44"></span>load PDB nb spheres.                                                                           |
+| molscriptRibbon         | <span class="target" id="index-45"></span>molscript ribbons.                                                                             |
+| pearl                   | <span class="target" id="index-46"></span>the pearl effect is made with two spheres with the outer sphere being transparent.             |
+| puttyCartoon            | <span class="target" id="index-47"></span>create a putty cartoon.                                                                        |
+| ringMode                | <span class="target" id="index-48"></span>set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.                    |
+| rmwater                 | <span class="target" id="index-49"></span>remove waters from molecular object.                                                           |
+| saxsEnvelope            | <span class="target" id="index-50"></span>display SAXS envelope.                                                                          |
+| sc111                   | <span class="target" id="index-51"></span>display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/. |
+| scaleRadiusColor        | <span class="target" id="index-52"></span>scale the radius and color of atoms as spheres by property in the B-value column.              |
+| setcolor                | <span class="target" id="index-53"></span>set color name to a RGB code.                                                                 |
+| sidehChainHelper        | <span class="target" id="index-54"></span>in cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
+| solventRadius           | <span class="target" id="index-55"></span>set radiis of ball used to make solvent accessible surface.                                    |</p>
+<p>### Print coordinates of selection:
+| Tab trigger    | Description      |
+<a href="#id73"><span class="problematic" id="id74">|:---------------|</span></a>:—————–|
+| getCoordinates | <span class="target" id="index-56"></span>get coordinates. |</p>
+<p>### Print sequence:
+| Tab trigger   | Description                |
+<a href="#id75"><span class="problematic" id="id76">|:--------------|</span></a>:—————————|
+| fasta         | <span class="target" id="index-57"></span>print sequence in Fasta format from PDB file. |</p>
+<p>### Pymolrc:
+| Tab trigger   | Description                                               |
+<a href="#id77"><span class="problematic" id="id78">|:--------------|</span></a>:———————————————————-|
+| antialias     | <span class="target" id="index-58"></span>set antialias to get smooth edges                         |
+| fetchPath     | <span class="target" id="index-59"></span>set path for location to save fetched pdb files.          |
+| lspymolrc     | <span class="target" id="index-60"></span>print list of active pymolrc files.                       |
+| setpath       | <span class="target" id="index-61"></span>set additional path for PyMOL to search on startup.        |
+| sigDigits     | <span class="target" id="index-62"></span>set number of decimals places to show in distance labels. |</p>
+<p>### Save png flle with timestamp:
+| Tab trigger   | Description                  |
+<a href="#id79"><span class="problematic" id="id80">|:--------------|</span></a>:—————————–|
+| spng          | <span class="target" id="index-63"></span>save png flle with timestamp |
+| spse          | <span class="target" id="index-64"></span>save pse flle with timestamp |</p>
+<p>### Selection:
+| Tab trigger          | Description                                                  |
+<a href="#id81"><span class="problematic" id="id82">|:---------------------|</span></a>:————————————————————-|
+| duplicateObject      | <span class="target" id="index-65"></span>duplicate object.                                            |
+| extractPartObj       | <span class="target" id="index-66"></span>create a new object from part of an existing object.         |
+| hideSelection        | <span class="target" id="index-67"></span>turn off magenta squares on current selection.               |
+| selectAllBut         | <span class="target" id="index-68"></span>select all nitrogen atom in a selection except from lysine.  |
+| selectAtomsAround    | <span class="target" id="index-69"></span>select atoms within a radius around a ligand.                |
+| selectChain          | <span class="target" id="index-70"></span>select a chain.                                              |
+| selectElement        | <span class="target" id="index-71"></span>select atoms by element.                                     |
+| selectHelices        | <span class="target" id="index-72"></span>select atoms by alpha helices.                               |
+| selectLoops          | <span class="target" id="index-73"></span>select atoms by beta loops.                                  |
+| selectName           | <span class="target" id="index-74"></span>select atoms by name.                                        |
+| selectResi           | <span class="target" id="index-75"></span>select residues by a range of residue id numbers separated by a colon.|
+| selectResidues       | <span class="target" id="index-76"></span>select residues by name.                                     |
+| selectResiduesAround | <span class="target" id="index-77"></span>select residues within a radius around a ligand.             |
+| selectStrands        | <span class="target" id="index-78"></span>select atoms by beta strands.                                |
+| undoSelection        | <span class="target" id="index-79"></span>undo a selection.                                            |</p>
+<p>### Specialized figure:
+| Tab trigger   | Description           |
+<a href="#id83"><span class="problematic" id="id84">|:--------------|</span></a>:———————-|
+| bu            | <span class="target" id="index-80"></span>biological unit.      |
+| stack         | <span class="target" id="index-81"></span>base-stacking figure. |</p>
+<p>### Stereo:
+| Tab trigger   | Description   |
+<a href="#id85"><span class="problematic" id="id86">|:--------------|</span></a>:————–|
+| stereoDraw    | <span class="target" id="index-82"></span>Stereo draw.  |
+| stereoRay     | <span class="target" id="index-83"></span>Stereo ray.   |</p>
+<p>### Unit cell display:
+| Tab trigger   | Description                                                                  |
+<a href="#id87"><span class="problematic" id="id88">|:--------------|</span></a>:—————————————————————————–|
+<a href="#id1"><span class="problematic" id="id2">|</span></a>sc111                  <a href="#id3"><span class="problematic" id="id4">|</span></a><span class="target" id="index-84"></span>lattice of 1 x 1 x 1 unit cells.                                                     |
+<a href="#id5"><span class="problematic" id="id6">|</span></a>sc221                  <a href="#id7"><span class="problematic" id="id8">|</span></a><span class="target" id="index-85"></span>lattice of 2 x 2 x 1 unit cells.                                       |
+<a href="#id9"><span class="problematic" id="id10">|</span></a>sc112                  <a href="#id11"><span class="problematic" id="id12">|</span></a><span class="target" id="index-86"></span>lattice of 1 x 1 x 2 unit cells.                                                 |
+<a href="#id13"><span class="problematic" id="id14">|</span></a>sc222              <a href="#id15"><span class="problematic" id="id16">|</span></a><span class="target" id="index-87"></span>lattice of 2 x 2 x 2 unit cells.                                                     |
+<a href="#id17"><span class="problematic" id="id18">|</span></a>sc331              <a href="#id19"><span class="problematic" id="id20">|</span></a><span class="target" id="index-88"></span>lattice of 3 x 3 x 1 unit cells.                                                     |
+<a href="#id21"><span class="problematic" id="id22">|</span></a>sc313          <a href="#id23"><span class="problematic" id="id24">|</span></a><span class="target" id="index-89"></span>lattice of 3 x 1 x 3 unit cells.                                                         |
+<a href="#id25"><span class="problematic" id="id26">|</span></a>sc133          <a href="#id27"><span class="problematic" id="id28">|</span></a><span class="target" id="index-90"></span>lattice of 1 x 3 x 3 unit cells.                                                         |
+<a href="#id29"><span class="problematic" id="id30">|</span></a>sc333          <a href="#id31"><span class="problematic" id="id32">|</span></a><span class="target" id="index-91"></span>lattice of 3 x 3 x 3 unit cells.                                       |</p>
+<p>### Water pentagon:
+| Tab trigger   | Description            |
+<a href="#id89"><span class="problematic" id="id90">|:--------------|</span></a>:———————–|
+| waterTriple   | <span class="target" id="index-92"></span>triple water pentagon. |</p>
+<p>### analysis:
+| Tab trigger                 | Description                                                                                                               |
+<a href="#id91"><span class="problematic" id="id92">|:----------------------------|</span></a>:————————————————————————————————————————–|
+| aveB4resiX                  | <span class="target" id="index-93"></span>prints the residue number and the average bfactor.                                                             |
+| printNameB4ResiX            | <span class="target" id="index-94"></span>Print name and b-factor for a residue.                                                                                    |
+| printResiResnNameB4ResiX    | <span class="target" id="index-95"></span>Print resn, resi, atom name, and b-factor.                                                                                |
+| printResiResnNameB4ResiXNoH | <span class="target" id="index-96"></span>Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |</p>
+<p>### help:
+| Tab trigger   | Description                          |
+<a href="#id93"><span class="problematic" id="id94">|:--------------|</span></a>:————————————-|
+| printDoc      | <span class="target" id="index-97"></span>print document string of a function. |</p>
+<p>### salt-bridge:
+| Tab trigger   | Description                               |
+<a href="#id95"><span class="problematic" id="id96">|:--------------|</span></a>:——————————————|
+| his31asp70    | <span class="target" id="index-98"></span>Asp70-His31 salt-bridge from T4 lysozyme. |</p>
+<p>### selection:
+| Tab trigger   | Description                     |
+<a href="#id97"><span class="problematic" id="id98">|:--------------|</span></a>:——————————–|
+| ligandSelect  | :index:<a href="#id33"><span class="problematic" id="id34">`</span></a>make selection of ligand atom`s. |</p>
+<p>### workshop:
+| Tab trigger      | Description                        |
+<a href="#id99"><span class="problematic" id="id100">|:-----------------|</span></a>:————————————————————————|
+| internalGUImode2 | <span class="target" id="index-99"></span>make the background of the internal gui transparent to expand viewport. |
+| internalGUIwidth | <span class="target" id="index-100"></span>Set the width of the internal gui. |</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pymolsnips</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TriggerAction.html">Tab Triggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TabStops.html">Tab Stops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gallery.html">Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Categories.html">Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Editors.html">Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Triggers.html">Snippets by Category</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Blaine Mooers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/READMEtriggers.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

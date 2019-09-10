@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Snippets by Category &#8212; pymolsnips 0.1.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Editors" href="Editors.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="snippets-by-category">
+<h1>Snippets by Category<a class="headerlink" href="#snippets-by-category" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="alternate-locators">
+<h2>Alternate locators:<a class="headerlink" href="#alternate-locators" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hidealtloc</p></td>
+<td><p>hide alt loc., the <span class="target" id="index-0"></span>alternate locator for disordered residues.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="analysis">
+<h2>Analysis:<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>averageB</p></td>
+<td><p>find the <span class="target" id="index-1"></span>average B-value of a selection. Uses a regular list as opposed to PyMOL’s stored list. Edit the selection as needed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>findHbonds</p></td>
+<td><p>find <span class="target" id="index-2"></span>hbonds around a residue.</p></td>
+</tr>
+<tr class="row-even"><td><p>printBs</p></td>
+<td><p>print the <span class="target" id="index-3"></span>print the B-factors of a residue.</p></td>
+</tr>
+<tr class="row-odd"><td><p>printBs2digits</p></td>
+<td><p>print B-values for a residue with the B’s rounded off to two decimal places.</p></td>
+</tr>
+<tr class="row-even"><td><p>printBspartB</p></td>
+<td><p><span class="target" id="index-4"></span>print B factors of part B of a disorderd residue.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="change-orientation">
+<h2>Change orientation:<a class="headerlink" href="#change-orientation" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>rotate</p></td>
+<td><p><span class="target" id="index-5"></span>rotate about axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>rv</p></td>
+<td><p>return <span class="target" id="index-6"></span>settings in a compact format on one line.</p></td>
+</tr>
+<tr class="row-even"><td><p>turnAboutAxis</p></td>
+<td><p>:index:<a href="#id1"><span class="problematic" id="id2">`</span></a>turn about axis.</p></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a></p>
+</div>
+<div class="section" id="color-scheme">
+<h2>Color scheme:<a class="headerlink" href="#color-scheme" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cblind</p></td>
+<td><p>enable <span class="target" id="index-7"></span>color blind friendly colors.</p></td>
+</tr>
+<tr class="row-odd"><td><p>cribbon</p></td>
+<td><p><span class="target" id="index-8"></span>color ribbon H red, strand yellow, loop green.</p></td>
+</tr>
+<tr class="row-even"><td><p>volumeRamp</p></td>
+<td><p><span class="target" id="index-9"></span>volume ramp.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="coordinate-covalent-bonds">
+<h2>Coordinate covalent bonds:<a class="headerlink" href="#coordinate-covalent-bonds" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>coordinate</p></td>
+<td><p><span class="target" id="index-10"></span>coordinate covalent bonds to metals.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="database-function">
+<h2>Database function:<a class="headerlink" href="#database-function" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>lsSnips</p></td>
+<td><p><span class="target" id="index-11"></span>list all snips by tab trigger and description</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="electron-density">
+<h2>Electron density:<a class="headerlink" href="#electron-density" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>carvedDensity</p></td>
+<td><p><span class="target" id="index-12"></span>carved electron density map.</p></td>
+</tr>
+<tr class="row-odd"><td><p>fetch2FoFc</p></td>
+<td><p><span class="target" id="index-13"></span>fetch 2FoFc map.</p></td>
+</tr>
+<tr class="row-even"><td><p>threeMaps</p></td>
+<td><p><span class="target" id="index-14"></span>three electron density maps.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fetch-file-from-pdb">
+<h2>Fetch file from PDB:<a class="headerlink" href="#fetch-file-from-pdb" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fetchCIF</p></td>
+<td><p><span class="target" id="index-15"></span>fetch cif file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>fetchFoFc</p></td>
+<td><p><span class="target" id="index-16"></span>fetch fofc map.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-input">
+<h2>File Input:<a class="headerlink" href="#file-input" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>loadPDBfile</p></td>
+<td><p><span class="target" id="index-17"></span>load a pdb file in the current directory.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-output">
+<h2>File output:<a class="headerlink" href="#file-output" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>savePNG</p></td>
+<td><p><span class="target" id="index-18"></span>save a png file of current scene to the current directory.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="format-label">
+<h2>Format label:<a class="headerlink" href="#format-label" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>labelResnResi</p></td>
+<td><p><span class="target" id="index-19"></span>label CA atom with residue name and residue number.</p></td>
+</tr>
+<tr class="row-odd"><td><p>labelSS</p></td>
+<td><p><span class="target" id="index-20"></span>label SS.</p></td>
+</tr>
+<tr class="row-even"><td><p>oneLetter</p></td>
+<td><p><span class="target" id="index-21"></span>one letter amino acid.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="h-bonds">
+<h2>H-bonds:<a class="headerlink" href="#h-bonds" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>distance</p></td>
+<td><p><span class="target" id="index-22"></span>H-bond distances.</p></td>
+</tr>
+<tr class="row-odd"><td><p>drawHbonds</p></td>
+<td><p><span class="target" id="index-23"></span>draw H-bonds.</p></td>
+</tr>
+<tr class="row-even"><td><p>hbond</p></td>
+<td><p><span class="target" id="index-24"></span>H-bond setup.</p></td>
+</tr>
+<tr class="row-odd"><td><p>hbonddash</p></td>
+<td><p><span class="target" id="index-25"></span>H-bond dashes.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="help">
+<h2>Help:<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>writeCommandReference2HTML</p></td>
+<td><p>Write the command reference to html file in the present working directory.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="label">
+<h2>Label:<a class="headerlink" href="#label" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>labelCAs</p></td>
+<td><p><span class="target" id="index-26"></span>label the CA atoms with the Ala333 style format</p></td>
+</tr>
+<tr class="row-odd"><td><p>labelMainChain</p></td>
+<td><p><span class="target" id="index-27"></span>label the main chain atoms by resn,resi,atom name.</p></td>
+</tr>
+<tr class="row-even"><td><p>labelWatersHOH</p></td>
+<td><p><span class="target" id="index-28"></span>label waters HOH.</p></td>
+</tr>
+<tr class="row-odd"><td><p>labelWatersW</p></td>
+<td><p><span class="target" id="index-29"></span>label waters W.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="label-format">
+<h2>Label format:<a class="headerlink" href="#label-format" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sigang</p></td>
+<td><p><span class="target" id="index-30"></span>set angle labels to display 2 decimals places</p></td>
+</tr>
+<tr class="row-odd"><td><p>sigdist</p></td>
+<td><p><span class="target" id="index-31"></span>set distance labels to display 2 decimals</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="label-placement">
+<h2>Label placement:<a class="headerlink" href="#label-placement" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>centerpi</p></td>
+<td><p><span class="target" id="index-32"></span>center pi.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="label-position">
+<h2>Label position:<a class="headerlink" href="#label-position" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pseudolabel</p></td>
+<td><p>Position label with pseudoatom.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="measurement-surface-area">
+<h2>Measurement surface area:<a class="headerlink" href="#measurement-surface-area" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ms</p></td>
+<td><p><span class="target" id="index-33"></span>measure surface area.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="molecular-representation">
+<h2>Molecular representation:<a class="headerlink" href="#molecular-representation" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ao</p></td>
+<td><p><span class="target" id="index-34"></span>ambient occlussion.</p></td>
+</tr>
+<tr class="row-odd"><td><p>bs</p></td>
+<td><p><span class="target" id="index-35"></span>ball and stick representation.</p></td>
+</tr>
+<tr class="row-even"><td><p>cspheres</p></td>
+<td><p><span class="target" id="index-36"></span>colored spheres.</p></td>
+</tr>
+<tr class="row-odd"><td><p>discreteCartoonColoring</p></td>
+<td><p><span class="target" id="index-37"></span>turn on discrete colors between secondary structure elements.</p></td>
+</tr>
+<tr class="row-even"><td><p>doubleBond</p></td>
+<td><p><span class="target" id="index-38"></span>valence bond.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ellipcol</p></td>
+<td><p><span class="target" id="index-39"></span>set thermal ellipsoid color.</p></td>
+</tr>
+<tr class="row-even"><td><p>filledRing</p></td>
+<td><p><span class="target" id="index-40"></span>filled rings in nucleic acids.</p></td>
+</tr>
+<tr class="row-odd"><td><p>fog</p></td>
+<td><p><span class="target" id="index-41"></span>blur the background atoms.</p></td>
+</tr>
+<tr class="row-even"><td><p>loadPDBbs</p></td>
+<td><p><span class="target" id="index-42"></span>load PDB ball-and-stick.</p></td>
+</tr>
+<tr class="row-odd"><td><p>loadPDBnb</p></td>
+<td><p><span class="target" id="index-43"></span>load PDB nb spheres.</p></td>
+</tr>
+<tr class="row-even"><td><p>molscriptRibbon</p></td>
+<td><p><span class="target" id="index-44"></span>molscript ribbons.</p></td>
+</tr>
+<tr class="row-odd"><td><p>pearl</p></td>
+<td><p><span class="target" id="index-45"></span>the pearl effect is made with two spheres with the outer sphere being transparent.</p></td>
+</tr>
+<tr class="row-even"><td><p>puttyCartoon</p></td>
+<td><p><span class="target" id="index-46"></span>create a putty cartoon.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ringMode</p></td>
+<td><p><span class="target" id="index-47"></span>set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.</p></td>
+</tr>
+<tr class="row-even"><td><p>rmwater</p></td>
+<td><p><span class="target" id="index-48"></span>remove waters from molecular object.</p></td>
+</tr>
+<tr class="row-odd"><td><p>saxsEnvelope</p></td>
+<td><p><span class="target" id="index-49"></span>display SAXS envelope.</p></td>
+</tr>
+<tr class="row-even"><td><p>sc111</p></td>
+<td><p><span class="target" id="index-50"></span>display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</p></td>
+</tr>
+<tr class="row-odd"><td><p>scaleRadiusColor</p></td>
+<td><p><span class="target" id="index-51"></span>scale the radius and color of atoms as spheres by property in the B-value column.</p></td>
+</tr>
+<tr class="row-even"><td><p>setcolor</p></td>
+<td><p><span class="target" id="index-52"></span>set color name to a RGB code.</p></td>
+</tr>
+<tr class="row-odd"><td><p>sidehChainHelper</p></td>
+<td><p><span class="target" id="index-53"></span>in cartoons, hide the backbone atoms of selected residues when showing then as sticks.</p></td>
+</tr>
+<tr class="row-even"><td><p>solventRadius</p></td>
+<td><p><span class="target" id="index-54"></span>set radiis of ball used to make solvent accessible surface.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="print-coordinates-of-selection">
+<h2>Print coordinates of selection:<a class="headerlink" href="#print-coordinates-of-selection" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>getCoordinates</p></td>
+<td><p><span class="target" id="index-55"></span>get coordinates.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="print-sequence">
+<h2>Print sequence:<a class="headerlink" href="#print-sequence" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>fasta</p></td>
+<td><p><span class="target" id="index-56"></span>print sequence in Fasta format from PDB file.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pymolrc">
+<h2>Pymolrc:<a class="headerlink" href="#pymolrc" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>antialias</p></td>
+<td><p><span class="target" id="index-57"></span>set antialias to get smooth edges</p></td>
+</tr>
+<tr class="row-odd"><td><p>fetchPath</p></td>
+<td><p><span class="target" id="index-58"></span>set path for location to save fetched pdb files.</p></td>
+</tr>
+<tr class="row-even"><td><p>lspymolrc</p></td>
+<td><p><span class="target" id="index-59"></span>print list of active pymolrc files.</p></td>
+</tr>
+<tr class="row-odd"><td><p>setpath</p></td>
+<td><p><span class="target" id="index-60"></span>set additional path for PyMOL to search on startup.</p></td>
+</tr>
+<tr class="row-even"><td><p>sigDigits</p></td>
+<td><p><span class="target" id="index-61"></span>set number of decimals places to show in distance labels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="save-png-flle-with-timestamp">
+<h2>Save png flle with timestamp:<a class="headerlink" href="#save-png-flle-with-timestamp" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>spng</p></td>
+<td><p><span class="target" id="index-62"></span>save png flle with timestamp</p></td>
+</tr>
+<tr class="row-odd"><td><p>spse</p></td>
+<td><p><span class="target" id="index-63"></span>save pse flle with timestamp</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="selection">
+<h2>Selection:<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>duplicateObject</p></td>
+<td><p><span class="target" id="index-64"></span>duplicate object.</p></td>
+</tr>
+<tr class="row-odd"><td><p>extractPartObj</p></td>
+<td><p><span class="target" id="index-65"></span>create a new object from part of an existing object.</p></td>
+</tr>
+<tr class="row-even"><td><p>hideSelection</p></td>
+<td><p><span class="target" id="index-66"></span>turn off magenta squares on current selection.</p></td>
+</tr>
+<tr class="row-odd"><td><p>selectAllBut</p></td>
+<td><p><span class="target" id="index-67"></span>select all nitrogen atom in a selection except from lysine.</p></td>
+</tr>
+<tr class="row-even"><td><p>selectAtomsAround</p></td>
+<td><p><span class="target" id="index-68"></span>select atoms within a radius around a ligand.</p></td>
+</tr>
+<tr class="row-odd"><td><p>selectChain</p></td>
+<td><p><span class="target" id="index-69"></span>select a chain.</p></td>
+</tr>
+<tr class="row-even"><td><p>selectElement</p></td>
+<td><p><span class="target" id="index-70"></span>select atoms by element.</p></td>
+</tr>
+<tr class="row-odd"><td><p>selectHelices</p></td>
+<td><p><span class="target" id="index-71"></span>select atoms by alpha helices.</p></td>
+</tr>
+<tr class="row-even"><td><p>selectLoops</p></td>
+<td><p><span class="target" id="index-72"></span>select atoms by beta loops.</p></td>
+</tr>
+<tr class="row-odd"><td><p>selectName</p></td>
+<td><p><span class="target" id="index-73"></span>select atoms by name.</p></td>
+</tr>
+<tr class="row-even"><td><p>selectResi</p></td>
+<td><p><span class="target" id="index-74"></span>select residues by a range of residue id numbers separated by a colon.</p></td>
+</tr>
+<tr class="row-odd"><td><p>selectResidues</p></td>
+<td><p><span class="target" id="index-75"></span>select residues by name.</p></td>
+</tr>
+<tr class="row-even"><td><p>selectResiduesAround</p></td>
+<td><p><span class="target" id="index-76"></span>select residues within a radius around a ligand.</p></td>
+</tr>
+<tr class="row-odd"><td><p>selectStrands</p></td>
+<td><p><span class="target" id="index-77"></span>select atoms by beta strands.</p></td>
+</tr>
+<tr class="row-even"><td><p>undoSelection</p></td>
+<td><p><span class="target" id="index-78"></span>undo a selection.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="specialized-figure">
+<h2>Specialized figure:<a class="headerlink" href="#specialized-figure" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bu</p></td>
+<td><p><span class="target" id="index-79"></span>biological unit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>stack</p></td>
+<td><p><span class="target" id="index-80"></span>base-stacking figure.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="stereo">
+<h2>Stereo:<a class="headerlink" href="#stereo" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>stereoDraw</p></td>
+<td><p><span class="target" id="index-81"></span>Stereo draw.</p></td>
+</tr>
+<tr class="row-odd"><td><p>stereoRay</p></td>
+<td><p><span class="target" id="index-82"></span>Stereo ray.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unit-cell-display">
+<h2>Unit cell display:<a class="headerlink" href="#unit-cell-display" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sc111</p></td>
+<td><p><span class="target" id="index-83"></span>lattice of 1 x 1 x 1 unit cells.</p></td>
+</tr>
+<tr class="row-odd"><td><p>sc221</p></td>
+<td><p><span class="target" id="index-84"></span>lattice of 2 x 2 x 1 unit cells.</p></td>
+</tr>
+<tr class="row-even"><td><p>sc112</p></td>
+<td><p><span class="target" id="index-85"></span>lattice of 1 x 1 x 2 unit cells.</p></td>
+</tr>
+<tr class="row-odd"><td><p>sc222</p></td>
+<td><p><span class="target" id="index-86"></span>lattice of 2 x 2 x 2 unit cells.</p></td>
+</tr>
+<tr class="row-even"><td><p>sc331</p></td>
+<td><p><span class="target" id="index-87"></span>lattice of 3 x 3 x 1 unit cells.</p></td>
+</tr>
+<tr class="row-odd"><td><p>sc313</p></td>
+<td><p><span class="target" id="index-88"></span>lattice of 3 x 1 x 3 unit cells.</p></td>
+</tr>
+<tr class="row-even"><td><p>sc133</p></td>
+<td><p><span class="target" id="index-89"></span>lattice of 1 x 3 x 3 unit cells.</p></td>
+</tr>
+<tr class="row-odd"><td><p>sc333</p></td>
+<td><p><span class="target" id="index-90"></span>lattice of 3 x 3 x 3 unit cells.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="water-pentagon">
+<h2>Water pentagon:<a class="headerlink" href="#water-pentagon" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>waterTriple</p></td>
+<td><p><span class="target" id="index-91"></span>triple water pentagon.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>analysis:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>aveB4resiX</p></td>
+<td><p><span class="target" id="index-92"></span>prints the residue number and the average bfactor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>printNameB4ResiX</p></td>
+<td><p><span class="target" id="index-93"></span>Print name and b-factor for a residue.</p></td>
+</tr>
+<tr class="row-even"><td><p>printResiResnNameB4ResiX</p></td>
+<td><p><span class="target" id="index-94"></span>Print resn, resi, atom name, and b-factor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>printResiResnNameB4ResiXNoH</p></td>
+<td><p><span class="target" id="index-95"></span>Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2>help:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>printDoc</p></td>
+<td><p><span class="target" id="index-96"></span>print document string of a function.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="salt-bridge">
+<h2>salt-bridge:<a class="headerlink" href="#salt-bridge" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>his31asp70</p></td>
+<td><p><span class="target" id="index-97"></span>Asp70-His31 salt-bridge from T4 lysozyme.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h2>selection:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ligandSelect</p></td>
+<td><p>:index:<a href="#id8"><span class="problematic" id="id9">`</span></a>make selection of ligand atom`s.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="workshop">
+<h2>workshop:<a class="headerlink" href="#workshop" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tab trigger</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>internalGUImode2</p></td>
+<td><p><span class="target" id="index-98"></span>make the background of the internal gui transparent to expand viewport.</p></td>
+</tr>
+<tr class="row-odd"><td><p>internalGUIwidth</p></td>
+<td><p><span class="target" id="index-99"></span>Set the width of the internal gui.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pymolsnips</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TriggerAction.html">Tab Triggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TabStops.html">Tab Stops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gallery.html">Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Categories.html">Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Editors.html">Editors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Snippets by Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#alternate-locators">Alternate locators:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis">Analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-orientation">Change orientation:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#color-scheme">Color scheme:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-covalent-bonds">Coordinate covalent bonds:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#database-function">Database function:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#electron-density">Electron density:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fetch-file-from-pdb">Fetch file from PDB:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-input">File Input:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-output">File output:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-label">Format label:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#h-bonds">H-bonds:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help">Help:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label">Label:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-format">Label format:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-placement">Label placement:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-position">Label position:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measurement-surface-area">Measurement surface area:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#molecular-representation">Molecular representation:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#print-coordinates-of-selection">Print coordinates of selection:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#print-sequence">Print sequence:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pymolrc">Pymolrc:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save-png-flle-with-timestamp">Save png flle with timestamp:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selection">Selection:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specialized-figure">Specialized figure:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stereo">Stereo:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unit-cell-display">Unit cell display:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#water-pentagon">Water pentagon:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">help:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#salt-bridge">salt-bridge:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">selection:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workshop">workshop:</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Editors.html" title="previous chapter">Editors</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Blaine Mooers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Triggers.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

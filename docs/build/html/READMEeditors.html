@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; pymolsnips 0.1.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>Select the library from above for your favorite text editor.
+The installation instructions are below for the following editors:</p>
+<p>&lt;A name=”FASTLINKS2”&gt;&lt;/A&gt;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>&lt;a href=”#atom”&gt; Atom &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#bbedit”&gt; BBEdit &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#brackets”&gt; Brackets &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#cudatext”&gt; CudaText &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#espresso”&gt; Espresso &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#geany”&gt; Geany &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#gedit”&gt; Gedit &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#jupyter”&gt; Jupyter notebook, Jupyter-lab &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#kate”&gt; Kate &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#komodo”&gt; Komodo Edit &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#LightTable”&gt; Light Table &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#micro”&gt; Micro &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#snipmate”&gt; Snipmate (vim, neovim) &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#SublimeText3”&gt; Sublime Text 3 &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#TextMate”&gt; TextMate &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#ultisnips”&gt; Ultisnips (vim, neovim) &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#VisualStudioCode”&gt; Visual Studio Code &lt;/a&gt;</p></li>
+<li><p>&lt;a href=”#yasnippets”&gt; Yasnippets (emacs)&lt;/a&gt;</p></li>
+</ul>
+</div></blockquote>
+<p>If you are considering switching editors, the most popular editors seem to be Atom, Brackets, Sublime Text3, and Visual Studio Code.
+You might also consider Geany. It is very lightweight, very fast, and very easily configurable. It is good editor if you care about agility.</p>
+<p>If your favorite editor is not listed, please post an issue in the <cite>issues</cite> pulldown menu near the top of this page and make your request.
+I will be notified immediately by e-mail.
+I will try to develop a snippet library for the requested editor.</p>
+<p>Support is planned for the following editors:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>[bluefish](<a class="reference external" href="http://bluefish.openoffice.nl/download.html">http://bluefish.openoffice.nl/download.html</a>)</p></li>
+<li><p>[Coda2](<a class="reference external" href="https://panic.com/coda">https://panic.com/coda</a>)</p></li>
+<li><p>[Editra](<a class="reference external" href="http://www.editra.org://www.editra.org">http://www.editra.org://www.editra.org</a>)</p></li>
+<li><p>[jed](<a class="reference external" href="http://jedmodes.sourceforge.net">http://jedmodes.sourceforge.net</a>)</p></li>
+<li><p>[jedit](<a class="reference external" href="https://github.com/afeld/jeditable-railshttp:///www.jedit.org">https://github.com/afeld/jeditable-railshttp:///www.jedit.org</a>)</p></li>
+<li><p>[notepadpp](<a class="reference external" href="https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org">https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org</a>)</p></li>
+<li><p>[Oni 2](<a class="reference external" href="https://www.onivim.io/oin2">https://www.onivim.io/oin2</a>)</p></li>
+<li><p>[Textadept](<a class="reference external" href="https://foicica.com/textadept">https://foicica.com/textadept</a>)</p></li>
+<li><p>[Eclipse](<a class="reference external" href="https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/">https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/</a>)</p></li>
+<li><p>[PyCharm](<a class="reference external" href="https://www.jetbrains.com/pycharm-edu/">https://www.jetbrains.com/pycharm-edu/</a>)</p></li>
+<li><p>[scite](<a class="reference external" href="https://scintilla.org/SciTE.html)i">https://scintilla.org/SciTE.html)i</a></p></li>
+</ul>
+</div></blockquote>
+<p>Note that some editors that are available as binaries only for Windows like notepadpp can be run on Mac OS or Linux by using wine or wine bottler.</p>
+<p>Some of these text editors can take hours to customize to fit your needs; however, you only need to
+know about 5% of the options to become productive with these editors.</p>
+<p>&lt;a name=”atom” &gt;&lt;/a&gt;
+### <span class="target" id="index-0"></span>Atom</p>
+<p>[Atom](<a class="reference external" href="https://atom.io">https://atom.io</a>) is a favorite of professional programmers because it is highly extendable and customizable.
+It integrates with github.
+The GUI is very attractive.</p>
+<p>I am not as smitten with Atom as other programmers.
+I found that Atom’s startup speed bogs down as more plugins are added.
+The work-around is to always keep Atom open.</p>
+<p>There is a very extensive collection of plugins available for Atom.
+The installation and updating of plugins is quite slow compared to other editors.</p>
+<p>You will have to install the <strong>snippets package</strong> to be able to use the above pml snippets.
+The package installer is very intuitive.
+The snippets for all languages are stored in a single file that is called <em>snippets.cson</em>.
+This file is stored in a your home directory in a hidden folder called <cite>~.atom/snippets.cson</cite>.
+You can concatenate the above file of PyMOL snippets to your existing snippets.cson file.</p>
+<p>Other have developed a Pymol lexer for Atom so that you can enjoy syntax highlighting.
+You can install this lexer via the plugin manager by selecting the <cite>language-pymol package</cite>.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”bbedit”&gt;&lt;/a&gt;
+### <span class="target" id="index-1"></span>BBEdit (Mac only)</p>
+<p>[BBEdit](<a class="reference external" href="https://www.barebones.com/products/bbedit/index.html">https://www.barebones.com/products/bbedit/index.html</a>) requires a license and a one-time fee.
+Major upgrades require additional fees.</p>
+<p>The snippet system for BBedit is simple and elegant.
+The snippets are stored as clippings with one snippet or clipping per file.
+The PyMOL pml snippets end with the file extension <cite>*.pml</cite>.
+The clippings can be stored in folders by language.</p>
+<p>Users can create nested subfolders for groups of related snippets.
+The clippings are selected via the pulldown labeled C.
+The folders of clippings are stored in <cite>~/Library/ApplicationSupport/BBEdit/Clippings</cite>.
+The disadvantages of these clippings include the lack of tab triggers and tab stops.
+There is also presently the lack of a pml lexer for syntax highligihting.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”brackets”&gt;&lt;/a&gt;
+### <span class="target" id="index-2"></span>Brackets</p>
+<p>The development of [Brackets](<a class="reference external" href="http://brackets.io">http://brackets.io</a>) is led by a team at Adobe.
+Brackets is designed for web developers with a focus on html, css, and javascript.
+However, Brackets now has support for a large number of languages.
+Brackets provides a quick live preview so changes in the pml code are deployed immediately in the preview.</p>
+<p>Go to the extension manager.
+Search for the <cite>brackets-snippets (by EDC)</cite> and install it.
+This is snippet manager that has a GUI that enables the manual creation of user defined snippets.
+The <cite>settings</cite> tab opens a menu with an import button.
+Click on this button to import the <em>pymolsnippets.yml</em> file that is available at the top of this page.
+All of the snippets for PyMOL are in this single file.</p>
+<p>Until the PML language is available for Brackets, use Python to get syntax highlighting.
+This means that the <cite>.pml</cite> file needs a file extension of <cite>.py</cite> while it is being edited in Brackets.
+Save this file with the <cite>.pml</cite> extension to be able to use it in PyMOL.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”cudatext”&gt;&lt;/a&gt;
+### <span class="target" id="index-3"></span>CudaText</p>
+<p>[CudaText](<a class="reference external" href="http://uvviewsoft.com/cudatext/">http://uvviewsoft.com/cudatext/</a>) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
+Cudatext is open source.
+Its predecessor is SynWrite, which is no longer supported.</p>
+<p><em>Cudatext</em> has numerous plugins available to it.
+Use the plugin manager to install the <cite>snippets</cite> plugin to be able to use the
+The documentation is located [online](<a class="reference external" href="http://wiki.freepascal.org/CudaText">http://wiki.freepascal.org/CudaText</a>).</p>
+<p><em>CudaText</em> depends on the presence of 32-bit Python3.
+On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes.
+When I started <em>cudatext</em>, it found this install of Python; I did not have to edit any configuration files.</p>
+<p>The snippets are stored one per file.
+The files have the extensions of <cite>.cuda-snippet</cite>.
+CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
+CudaText snippets are stored in the user’s <cite>Library</cite> on the Mac: <cite>./Library/ApplicationSupport/CudaText/data/snippets/Std.PML</cite> folder.
+You may have to create the <cite>Std.PML</cite> folder.</p>
+<p>Until a PyMOL lexer (syntax highlighter) is developed for CudaText, install and use the Python lexer to get some syntax highlighting.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”espresso”&gt;&lt;/a&gt;
+### <span class="target" id="index-4"></span>Espresso (Mac only)</p>
+<p>[Espresso](<a class="reference external" href="https://espressoapp.com/">https://espressoapp.com/</a>) is a proprietary test editor for the Mac.
+It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
+The snippets are stored in a single <cite>.xml</cite> file.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”geany”&gt;&lt;/a&gt;
+### <span class="target" id="index-5"></span>Geany</p>
+<p>[Geany](<a class="reference external" href="https://www.geany.org">https://www.geany.org</a>) is a free and lightweight GUI-based text editor that has been under development since 2005.
+<em>Geany</em> is written in C and C++.
+Binaries are  available for Mac OS, Linux, and Windows.
+The source code is also available.
+<em>Geany</em> has a plugin manager, and it is very easy to configure.</p>
+<p>Make sure that the <cite>.pml</cite> filetype is defined as <cite>PyMOL=*.pml;</cite> by going to <cite>Tools –&gt; Configuration files –&gt; filetype_extensions.conf</cite>.
+In addition, you need to edit the keybinding preferences <strong>Move cursor in snippet</strong> for under <cite>Edit –&gt; Preferences –&gt; Keybindings</cite> because it is blank by default.
+Without making this edit, you will not be able to advance to the second and later tab stops.
+I used <strong>&lt;Cntrl&gt;Shift_L</strong>, that is the left control and left shift.</p>
+<p>The snippets for all languages are stored in groups in single file <cite>~/.config/geany/snippets.conf</cite>.
+The snippets in this file can be edited by using the pulldown <cite>Tools –&gt; Configuration files –&gt; snippets.conf</cite>, but it might be easier to use a text editor.
+Copy and paste the contents of the above <cite>geanypymolsnippets.conf</cite> file into the snippets.conf file.
+Make sure that there is only one section with the heading <cite>[PyMOL]</cite>.</p>
+<p>The snippets are invoked with a tab trigger.
+The snippets have tab stops, but there is no support for the mirroring of tab stops.
+Enter <cite>lsSnips</cite> to get a list of the current PyMOL snippet tab triggers.</p>
+<p>A to be developed pml language file is needed to enable syntax highlighting of pml files.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”gedit”&gt;&lt;/a&gt;
+### <span class="target" id="index-6"></span>gedit</p>
+<p>[Gedit](<a class="reference external" href="https://www.barebones.com/products/bbedit/index.html">https://www.barebones.com/products/bbedit/index.html</a>) is often available on the computers running Linux OS at national labs.
+<em>gedit</em> provides an uncluttered gui with access to the snippets through a pulldown gui or by a tab trigger.
+The snippets are stored in a single file called <cite>pymol.xml</cite>.
+This file is stored in the home directory in a hidden folder called <cite>.config</cite>.
+The full path is <cite>~.config/gedit/snippets/pymol.xml</cite>.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”jupyter”&gt;&lt;/a&gt;
+### <span class="target" id="index-7"></span>jupyter notebook:index: and <span class="target" id="index-8"></span>jupyter-lab</p>
+<p>Juptyer notebook evolved from the Iptyhon notebook, which is turn were inspired by the Mathematica notebook.
+Juptyer notebooks are to be replaced by Juptyer-lab, which is now available for general use.
+Jupyter-lab is the Python analog of Rstudio.
+Juptyer-lab can read and run jupyter notebooks but the extensions for jupyter notebooks have not been ported to jupyter-lab.
+Jupyter notebooks are very useful for the interactive testing and development of chunks of code like functions that reside in separate cells in the notebook.</p>
+<p>The Jupyter notebook has two extensions for snippet management.
+Juputer-lab was a third snippet extension that is not backward compatible with the jupyter notebook.
+All three snippet management systems do not support tab triggers or tab stops.</p>
+<p>An simple alternative is to import individual snippets with the load magic.
+The user enters ` %load filePath/&lt;snippetName&gt;.pml <a href="#id1"><span class="problematic" id="id2">`</span></a>.
+The file finder system in jupyter notebook eases navigation to the correct file.
+The above library of snippets includes a commented out sublime text 3 snippet that has tab stops.
+This commented out snippet is also printed to the cell so that it can serve as a guide to the sites in the clipping that should be considered for editing.</p>
+<p>The animation below demonstrates the insertion of a snippet with the load magic.</p>
+<dl class="simple">
+<dt>&lt;p align=”center”&gt;</dt><dd><p>&lt;img src=”<a class="reference external" href="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif">https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif</a>” width=”640” height=”320” alt=”jupyter clipping” /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/p&gt;</p>
+<p>The <cite>pml</cite> code cannot be sent directly to PyMOL because a <cite>pml</cite> kernel for the jupyter notebook has yet to be developed.
+Instead, the jupyter notebook can be used to gather and edit code fragments.
+The notebook cells can be merged, and the code can be copied and pasted into an external <cite>pml</cite> script file.</p>
+<p>In addition, the notebook can be used to document the cells of code with interweaved cells containing markdown code.
+The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
+The notebook could provide an enhanced means of documenting and explaining a <cite>pml</cite> script file.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”kate”&gt;&lt;/a&gt;
+### <span class="target" id="index-9"></span>Kate/<span class="target" id="index-10"></span>Kwriter</p>
+<p>[kate](<a class="reference external" href="https://kate-editor.org/get-it/">https://kate-editor.org/get-it/</a>)
+Kate is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux.
+If installed with macports, the app resides in <code class="docutils literal notranslate"><span class="pre">`/Applications/macports/kate.app`</span></code>.
+The <strong>Snippet</strong> plugin has to be turned on.</p>
+<p>The snippets are stored in a single <cite>xml</cite> file.
+The storage location for this file is not in the documentation.
+Try the following on Mac (one of the four) and Linux (first three):</p>
+<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">/Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml</span>
+<span class="pre">/Users/blaine/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml</span>
+<span class="pre">/Users/blaine/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml</span>
+<span class="pre">/Users/blaine/Library/Application\</span> <span class="pre">Support/kate/MySnippets/</span>
+<span class="pre">`</span></code>
+&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”komodo”&gt;&lt;/a&gt;
+### <span class="target" id="index-11"></span>Komodo Edit</p>
+<p>[Komodo Edit](<a class="reference external" href="https://www.activestate.com/products/komodo-edit/">https://www.activestate.com/products/komodo-edit/</a>) is a proprietary program with a Community version that can be used for free.
+The developers of Komodo Edit have merged with the developers of ActiveState Python.
+The Community version of Komodo Edit has enough features for the occasional writer of code for PyMOL.</p>
+<p>The snippets are stored in separate files.
+The snippets are active for files with the  <a href="#id3"><span class="problematic" id="id4">``</span></a>.pml` extension.
+The snippets are stored in a folder called PML, which has to be created.
+On the Mac, the snippets are stored in <cite>/Users/blaine/Library/ApplicationSupport/KomodoEdit/11.1/tools/Abbreviations/PML</cite>.</p>
+<p>The snippets are treated as abbreviations that are stored in the tool box.
+The snippet name works as a tab trigger.
+The snippet file can also be selected through the GUI.
+A pop-up menu displays the option to insert a snippet.
+There are tab stops and highlighted default parameter values.
+However, there is no mirroring of tab stops at this time.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”LightTable”&gt;&lt;/a&gt;
+### <span class="target" id="index-12"></span>Light Table</p>
+<p>[Light Table](<a class="reference external" href="http://lighttable.com/">http://lighttable.com/</a>) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+Those users who have dabbled in emacs will recognize the syntax of the settings in behavior files which remind me of emacs init files.
+Light Table is like a GUI version of emacs.
+It has very an attractive, uncluttered GIU.</p>
+<p><em>Light Table</em> supports previews that enable interactive editing of code to change the output.
+For example, code chunks for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
+The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin.
+This documentation is on a GitHub website.</p>
+<p>The installation of plugins in <em>Light Table</em> is very fast.
+The number of available plugins is not as extensive as for Atom, Sublime Text, TextMate, or Visual Studio Code.
+You have to be prepared to do a bit of customization to get some of the plugins to work correctly.</p>
+<p>The snippets are managed through one master file per programming language
+&lt;–! [](<a class="reference external" href="https://github.com/rundis/lt-snippets">https://github.com/rundis/lt-snippets</a>). –&gt;
+This central file has the file extension <cite>edn</cite>.
+This file is used to set the scope fo the snippets (the programming language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension <cite>.snip</cite>.</p>
+<p>The snippets are stored in <cite>~/.lighttable/User/snippets</cite>.
+You will have to create this series of nested directories.
+In bash, you can do this with the single command: <cite>mkdir -p ~/.lighttable/User/snippets</cite>.
+Then select from the menu in the toolbar at the top <cite>File–&gt;Settings–&gt;user behaviors</cite>.
+This will open a new window with the <cite>users.behaviors</cite> file ready to be edited.
+Paste inside the square brackets the following and change the path to your home directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`ClojureScript</span>
+<span class="pre">;;</span> <span class="pre">absolute</span> <span class="pre">path</span> <span class="pre">to</span> <span class="pre">where</span> <span class="pre">you</span> <span class="pre">would</span> <span class="pre">like</span> <span class="pre">your</span> <span class="pre">snippet</span> <span class="pre">root</span> <span class="pre">directory</span> <span class="pre">to</span> <span class="pre">be</span>
+<span class="pre">[:snippets.loader</span> <span class="pre">:lt.plugins.snippets.loader/set-snippet-dir</span>
+<span class="pre">&quot;/Users/blaine/.lighttable/User/snippets&quot;]`</span>
+<span class="pre">`</span></code></p>
+<p>Save this file.
+Download the lighttablepymolsnips folder from above.
+Move the contents of this folder (not the folder) to <cite>~/.lighttable/User/snippets</cite>.</p>
+<p>There is not a <em>pml</em> language available yet for <em>Light Table</em>.
+Python will have to do as the language for now.
+Use <cite>.py</cite> as your file extension while editing your script file in Light Table,
+and then save your script file with the <cite>.pml</cite> file extension.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”micro”&gt;&lt;/a&gt;
+### <span class="target" id="index-13"></span>micro</p>
+<p>[Micro](<a class="reference external" href="https://github.com/zyedidia/micro">https://github.com/zyedidia/micro</a>) is like the nano editor but with extra features.
+Nonetheless, <em>micro</em> is easier to use than <em>vim</em> or <em>emacs</em>.
+It is a terminal-based editor that has a number of plugins available including one for snippets.
+You do have to compile it to install it.
+You need to have Node.js installed.</p>
+<p>On the Mac, it is best to use <em>micro</em> with the free iterm2.app terminal emulator.
+Install the <em>snippets</em> plugin by entering <cite>control-E</cite> in micro to open a command panel and then enter the command <cite>plugin install snippets</cite>.
+All of the snippets for one language are in a single file.
+The ultisnips library above should work with this editor.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”snipmate”&gt;&lt;/a&gt;
+### <span class="target" id="index-14"></span>snipmate for vim</p>
+<p>[Vim](<a class="reference external" href="https://vimawesome.com">https://vimawesome.com</a>) is the terminal based text editor vi on steriods.
+It is free.
+The <em>vim</em> keybindings for text editing are so useful that the they are available for the rival text editor <em>emacs</em>.</p>
+<p>A newer branch of <em>vim</em> called <em>neovim</em> is available.
+Either are available from software repositories like macports and fink or as stand-a-lone applications.
+The addition of a plugin requires the editing of startup <em>.vimrc</em> file.</p>
+<p><em>Ultisnips</em> is a more recent alternative to [snipmate](<a class="reference external" href="https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate">https://github.com/garbas/vim-snipmates://github.com/garbas/vim-snipmate</a>).
+<em>Ultisnips</em> requires Python.</p>
+<p>VimL does not require Python.
+If you choose to install VimL, you will need the <em>snipmate</em> library.</p>
+<p>Otherwise, you should use <em>Ultisnips</em>.
+The snippets are stored in a single file that is language specific.
+&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”SublimeText3”&gt;&lt;/a&gt;
+### <span class="target" id="index-15"></span>Sublime Text 3</p>
+<p>[Sublime Text 3](<a class="reference external" href="https://www.sublimetext.com/3s://www.sublimetext.com/">https://www.sublimetext.com/3s://www.sublimetext.com/</a>) is a gui-based editor.
+The free trial period is infinite.
+<em>Sublime Text 3</em> starts up much faster than the other text editors for programmers.
+<em>Sublime Text 3</em> has strong support for snippets and the autocompletion of tab triggers.
+The snippets are stored in separate files with the file extension <a href="#id5"><span class="problematic" id="id6">`</span></a>.sublime-snippet’.</p>
+<p>&lt;!–
+Sublimeime Text 3 strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
+–&gt;</p>
+<p>On the Mac, move the folder <strong>st3pymolsnips</strong> to <strong>~/Library/Application Support/SublimeText3/Packages/User/snippets/</strong>.
+You may have to create the snippets subfolder.
+You can ignore that step and just move <strong>pymolsnips</strong> to <strong>~/Library/Application Support/SublimeText3/Packages/User/</strong> and it should still work.
+Restart Sublime Text, open a PyMOL pml script file, and then enter “ao” and  hit tab.
+Sixteen lines of code should appear.
+You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”TextMate”&gt;&lt;/a&gt;
+### <span class="target" id="index-16"></span>TextMate (Mac only)</p>
+<p>[TextMate](<a class="reference external" href="https://macromates.com">https://macromates.com</a>) is now freely available but only for Mac OS.
+It is a mature project with occasional updates.
+<em>TextMate</em> was a pioneer application in the development of snippet libraries.
+<em>TextMate</em> snippets can be ported to <em>Sublime Text 3</em>.
+Each snippet is stored in a separate file with the file extension <cite>.tmSnippet</cite>.
+The snippets are stored in the user’s <cite>~/Library</cite> folder.
+There is a large library of plugins available.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”ultisnips”&gt;&lt;/a&gt;
+### <span class="target" id="index-17"></span>Ultisnips for vim</p>
+<p><em>vim</em> is the terminal based text editor vi on steroids.
+It is free.
+The <em>vim</em> keybindings for text editing are so useful that the they are available for the rival text editor emacs.
+A newer branch of <em>vim</em> called <em>neovim</em> is available.
+Either are available from software repositories like macports and fink or as stand-a-lone applications.</p>
+<p>The addition of a plugin to <em>Vim</em> requires the editing of startup <cite>.vimrc</cite> file.
+[ultisnip](<a class="reference external" href="https://github.com/sirver/UltiSnip">https://github.com/sirver/UltiSnip</a>) is a Plugin that manages snippets and that works with <em>vim</em> and <em>neovim</em>.
+It is a more recent alternative to <em>snipmate</em>.
+The snippets are stored in a single file that is language specific.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”VisualStudioCode”&gt;&lt;/a&gt;</p>
+<p>### <span class="target" id="index-18"></span>Visual Studio Code</p>
+<p>[Visual Studio Code](<a class="reference external" href="https://code.visualstudio.com">https://code.visualstudio.com</a>) (VSC) is a free editor from Microsoft.
+Its start-up speed is between that of <em>Sublime Text 3</em> and <em>Atom</em>.</p>
+<p>The installation of plugins in VSC is painless.
+There is a website featuring the plugins that are available.
+You select the plugin that you are interested and hit an install button on the website to install the plugin in <em>VSC</em> on your local machine.</p>
+<p>The <em>bioSyntax</em> plugin includes a lexer for PyMOL, so it is a good idea to install this plugin.
+The lexer will be activated when a PyMOL Macro Language (pml) file is opened.
+Autocompletion of the snippet tab triggers and previews of the snippet’s code are very helpful for avoiding the insertion of the wrong snippet.</p>
+<p>From the above folder <strong>vscpymolsnips</strong>, download and move the file <strong>pml.json</strong> to <strong>~/Library/Application Support/Code/User/snippets</strong> on the Mac, <strong>$HOME/APPDATACodeUsersnippetspml.json</strong> on Windows, and <strong>$HOME/.config/Code/User/snippets/pml.json</strong> on Linux.</p>
+<p>Next,  install the pml language file via the &lt;a href=”<a class="reference external" href="https://marketplace.visualstudio.com/search?term=bioSyntax&amp;target=VSCode&amp;category=All%20categories&amp;sortBy=Relevanc">https://marketplace.visualstudio.com/search?term=bioSyntax&amp;target=VSCode&amp;category=All%20categories&amp;sortBy=Relevanc</a>”&gt;bioSyntax&lt;/a&gt;  package from the Visual Studio Code Marketplace. It is free. Just hit the <strong>Install</strong> button on the webpage to install the package.</p>
+<p>Next, edit the settings under File as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`javascript</span>
+<span class="pre">&quot;[pml]&quot;:</span> <span class="pre">{},</span>
+<span class="pre">&quot;files.associations&quot;:</span> <span class="pre">{</span>
+<span class="pre">&quot;*.extension&quot;:</span> <span class="pre">&quot;pml&quot;</span>
+<span class="pre">},</span>
+<span class="pre">`</span></code></p>
+<p>Restart VSC.
+Open a file with a <em>.pml</em> file extension.
+You should see <strong>pml</strong> in the lower right on the bottom panel.
+You should also see syntax highlighting of the text in the <cite>pml</cite> script file.
+Type the tab trigger <strong>ao</strong> to test the insertion of the snippet for the code that creates the ambient occlusion effect.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+<p>&lt;a name=”yasnippets”&gt;&lt;/a&gt;</p>
+<p>### <span class="target" id="index-19"></span>yasnippets for emacs</p>
+<p>Like <em>vim</em>, <em>emacs</em> can be installed as a stand-a-lone application or via a software repository.
+<em>emacs</em> is a lifetime editor because it takes a lifetime to master it!
+There are several flavors of <em>emacs</em>.
+<em>Spacemacs</em> is a version that has a gentler learning curve.</p>
+<p>The [yasnippets](<a class="reference external" href="https://www.emacswiki.org/emacs/Yasnippet">https://www.emacswiki.org/emacs/Yasnippet</a>) package is used to manage snippets in <em>emacs</em>.
+This package is installed with a builtin package manager.</p>
+<p>Each snippet is stored in a single file.
+The files are stored in a subfolder in the hidden folder <cite>~.eamcs.d/plugins/</cite> in the home directory.</p>
+<p>&lt;A href=#FASTLINKS2&gt;Return to list of editors above.&lt;/A&gt;</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pymolsnips</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TriggerAction.html">Tab Triggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TabStops.html">Tab Stops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gallery.html">Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Categories.html">Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Editors.html">Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Triggers.html">Snippets by Category</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Blaine Mooers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/READMEeditors.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
