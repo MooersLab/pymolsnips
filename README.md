@@ -1,15 +1,25 @@
-<h1>pymolsnips</h1>
 
-The PyMOL macro language (pml) is used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport.
+
+The PyMOL macro language (pml) is used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport. 
 These scenes can be made into static images for posters, seminars, and manuscripts or serve as part of molecular movies. 
 The number of lines of pml commands and settings required for very sophisticated figures can approach 100. 
-It is difficult to issue so many commands through PyMOL's gui without making mistakes.
-If the commands are not saved to an open script file with a pml file extension or to an open log file or to a frequently saved session file (use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files), the work can be lost.
-Examples of figures that are impossible or tedious to make via the gui alone are shown in the image gallery below.
+It is difficult to issue so many commands through PyMOL's gui without making mistakes. 
+If the commands are not saved to an open script file with a pml file extension or to an open log file or to a frequently saved session file (use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files), the work can be lost. 
+Examples of figures that are impossible or tedious to make via the gui alone are shown in the image gallery below.  
 
-However, it is challenging to recall the pml syntax when you do not use PyMOL everyday, which is the case for most PyMOL users.
-One solution to this problem is use a library of code fragments with a text editor.
-Most text editors allow the user to add a library of code fragments or "snippets".
+However, it is challenging to recall the pml syntax when you do not use PyMOL everyday, which is the case for most PyMOL users. 
+One solution to this problem is use a library of code fragments with a text editor. 
+Most text editors allow the user to add a library of code fragments or "snippets". 
+
+## <A name="FASTLINKS">Quick links</A>
+
+  * <a href="#gallery"> Gallery of snippets and their output </a>
+  * <a href="#categories"> Snippet categories</a>
+  * <a href="#tutorials">Tutorial videos</a>
+  * <a href="#install">Installation instructions for each editor</a>
+  * <a href="#snippetList">List of snippets by category and tab trigger names</a>
+
+
 
 **pymolsnips** is a library of PyMOL macro language (pml) code fragments that have been formatted for several popular text editors.
 Each code fragment has a unique name that also serves as a tab trigger.
@@ -58,20 +68,12 @@ The animation below also demonstrates the use of mirrored tab stops where change
 </p>
 
 
-<h2> <A name="FASTLINKS">Quick links</A></h2>
-<ul>
-  <li><a href="#gallery"> Gallery of snippets and their output </a></li>
-  <li><a href="#categories"> Snippet categories</a></li>
-  <li><a href="#tutorials">Tutorial videos</a></li>
-  <li><a href="#install">Installation instructions for each editor</a></li>
- <li><a href="#snippetList">List of snippets by category and tab trigger names</a></li>
-</ul>
 
 
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
-![Alt text](Gallery.png?raw=true "Gallery")
+![Alt text](./_images/Gallery.png "Gallery")
 
 A complete listing of the currently available snippets can be found by entering the tab trigger **lsSnips**.
 Do this at the bottom of the pml script file that you are editing to use as a reference after commenting it out with pound symbols. 
@@ -123,28 +125,28 @@ Videos that demonstrate the installation of the snippets for each editor are pla
 Select the library from above for your favorite text editor. 
 The installation instructions are below for the following editors:
 
-<h2> <A name="FASTLINKS2">Quick links</A></h2>
-<ul>
-  <li><a href="#atom"> Atom </a></li>
-  <li><a href="#bbedit"> BBEdit </a></li>
-  <li><a href="#brackets"> Brackets </a></li>
-  <li><a href="#cudatext"> CudaText </a></li>
-  <li><a href="#espresso"> Espresso </a></li>
-  <li><a href="#geany"> Geany </a></li>
-  <li><a href="#gedit"> Gedit </a></li>
-  <li><a href="#jupyter"> Jupyter notebook, Jupyter-lab </a></li>
-  <li><a href="#kate"> Kate </a></li>
-  <li><a href="#komodo"> Komodo Edit </a></li>
-  <li><a href="#LightTable"> Light Table </a></li>
-  <li><a href="#micro"> Micro </a></li>
-  <li><a href="#snipmate"> Snipmate (vim, neovim) </a></li>
-  <li><a href="#SublimeText3"> Sublime Text 3 </a></li>
-  <li><a href="#TextMate"> TextMate </a></li>
-  <li><a href="#ultisnips"> Ultisnips (vim, neovim) </a></li>
-  <li><a href="#VisualStudioCode"> Visual Studio Code </a></li>
-  <li><a href="#yasnippets"> Yasnippets (emacs)</a></li>
- </a></li>
-</ul>
+## <A name="FASTLINKS2">Quick links</A> ##
+
+  * <a href="#atom"> Atom </a>
+  * <a href="#bbedit"> BBEdit </a>
+  * <a href="#brackets"> Brackets </a>
+  * <a href="#cudatext"> CudaText </a>
+  * <a href="#espresso"> Espresso </a>
+  * <a href="#geany"> Geany </a>
+  * <a href="#gedit"> Gedit </a>
+  * <a href="#jupyter"> Jupyter notebook, Jupyter-lab </a>
+  * <a href="#kate"> Kate </a>
+  * <a href="#komodo"> Komodo Edit </a>
+  * <a href="#LightTable"> Light Table </a>
+  * <a href="#micro"> Micro </a>
+  * <a href="#snipmate"> Snipmate (vim, neovim) </a>
+  * <a href="#SublimeText3"> Sublime Text 3 </a>
+  * <a href="#TextMate"> TextMate </a>
+  * <a href="#ultisnips"> Ultisnips (vim, neovim) </a>
+  * <a href="#VisualStudioCode"> Visual Studio Code </a>
+  * <a href="#yasnippets"> Yasnippets (emacs)</a>
+
+
 
 If you are considering switching editors, the most popular editors seem to be Atom, Brackets, Sublime Text3, and Visual Studio Code.
 You might also consider Geany. It is very lightweight, very fast, and very easily configurable. It is good editor if you care about agility.  
@@ -469,16 +471,17 @@ The snippets are stored in a single file that is language specific.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
-[*Sublime Text 3*](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor. 
+
+[Sublime Text 3](https://www.sublimetext.com/3s://www.sublimetext.com/) is a gui-based editor. 
 The free trial period is infinite. 
 *Sublime Text 3* starts up much faster than the other text editors for programmers.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers. 
 The snippets are stored in separate files with the file extension `.sublime-snippet'. 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <!--
 Sublimeime Text 3 strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
 -->
+
 On the Mac, move the folder **st3pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/**. 
 You may have to create the snippets subfolder. 
 You can ignore that step and just move **pymolsnips** to **~/Library/Application Support/Sublime\ Text\ 3/Packages/User/** and it should still work. 
@@ -491,21 +494,51 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 <h3 name="TextMate">TextMate (tm, Mac only)</h3>
 
-[TextMate](https://macromates.com) is now freely available but only for Mac OS.
+[TextMate](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
-*TextMate* was a pioneer application in the development of snippet libraries.
-*TextMate* snippets can be ported to *Sublime Text 3*. 
-Each snippet is stored in a separate file with the file extension `.tmSnippet`.
-The snippets are stored in the user's `~/Library` folder. 
 There is a large library of plugins available. 
+The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide a supplemental reading to the on-line documentation. 
+
+
+*TextMate* was a pioneer application in the development of snippet libraries.
+*TextMate*'s approach to snippets has served as a role model for other editors. 
+*TextMate* snippets can be ported to *Sublime Text 3*. 
+
+Each snippet is stored in a separate file with the file extension **.tmSnippet**.
+Each snippet file has a unique uuid string.
+The snippet files are stored in a subfolder called **Snippets**.
+This folder is stored in a folder **PyMOL.tmbundle**. 
+This folder can be dragged and dropped into the user's 
+*~/Library/Application Support/TextMate/Bundles* folder. 
+When installing an update of the library, it is best to delete the old PyMOL.tmbundle and then drop in the new PyMOL.tmbundle.
+
+
+The **PyMOL.tmbundle** folder contains several files and folders in addition to the **Snippets** folder. 
+Some of this other files include a lexer for PyMOL.
+The one file is the \url{dependencies.json} file. 
+This file specifies the dependence on the pygments package.
+
+The second file is the \url{info.plist} file.
+This file has the developer's contact information, the name of the snippet collection for the Bundles pulldown menu in TextMate, and a unique uuid string.
+
+The **PyMOL.tmbundle**  shows up in the Bundles pulldown as **PyMOL.pml**.
+Select **PyMOL.pml** and then a new menu will appear with a list of the snippets.
+The descriptions of the snippets are on the left and the corresponding tabtrigger is on the right.
+The snippet can be added to the current pml document by selecting the snippet with the gui
+or by entering the tabtrigger name. 
+
+The bundle pulldown provides access to a bundle editor. 
+This editor can be used to view and change the code in the snippets.
+
+<p align="center">
+	<img src="http://www.giphy.com/gifs/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="320" alt="ao tab trigger" />
+</p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="ultisnips"> ultisnips (for vim, universal) </h3>
 
-
-[ultisnip](https://github.com/sirver/UltiSnip)
 *vim* is the terminal based text editor vi on steroids.
 It is free. 
 The *vim* keybindings for text editing are so useful that the they are available for the rival text editor emacs.
@@ -513,13 +546,15 @@ A newer branch of *vim* called *neovim* is available.
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
 
 The addition of a plugin to *Vim* requires the editing of startup `.vimrc` file. 
-Ultisnips is a Plugin that manages snippets and that works with *vim* and *neovim*. 
+[ultisnip](https://github.com/sirver/UltiSnip) is a Plugin that manages snippets and that works with *vim* and *neovim*. 
 It is a more recent alternative to *snipmate*. 
 The snippets are stored in a single file that is language specific.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
+
 [Visual Studio Code](https://code.visualstudio.com)
 *Visual Studio Code* (VSC) is a free editor from Microsoft. 
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
@@ -557,22 +592,20 @@ Type the tab trigger **ao** to test the insertion of the snippet for the code th
 
 <h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
 
-[yasnippets](https://www.emacswiki.org/emacs/Yasnippet)
 Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository. 
 *emacs* is a lifetime editor because it takes a lifetime to master it! 
-
 There are several flavors of *emacs*.
 *Spacemacs* is a version that has a gentler learning curve. 
 
-The *yasnippets* package is used to manage snippets. 
+The [yasnippets](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*. 
 This package is installed with a builtin package manager.
-ffff
+
 Each snippet is stored in a single file. 
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory. 
 
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<A href="#FASTLINKS">Jump back to top </A>
 <!--
 <h2>Text editors that are ready out of the box</h2>
 
