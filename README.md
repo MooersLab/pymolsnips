@@ -504,7 +504,7 @@ The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 b
 *TextMate* was a pioneer application in the development of snippet libraries.
 *TextMate*'s approach to snippets has served as a role model for other editors. 
 *TextMate* snippets can be ported to *Sublime Text 3*. 
-Chapter 6 in the book by Grays provides an excellent overview of the features of snippets in PyMOL.
+Chapter 6 in the book by Gray provides a good overview of the features of snippets in Textmate.
 
 Each snippet is stored in a separate file with the file extension **.tmSnippet**.
 Each snippet file has a unique uuid string.
