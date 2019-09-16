@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Save a png file of current scene to the current directory.
+png ${1:saveMe.png}; 
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>savePNG</string>
+    <key>name</key>
+    <string>Save a png file of current scene to the current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>savePNG</string>
+    <key>uuid</key>
+    <string>44730ee5-954c-473e-86ea-f45acc2aadfa</string>
+</dict>
+</plist>

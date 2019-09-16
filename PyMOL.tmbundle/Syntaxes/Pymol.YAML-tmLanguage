@@ -1,0 +1,147 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Pymol
+fileTypes: [pml]
+scopeName: source.pymol
+uuid: 0979e947-4369-47bf-9cc6-b158d514b6a9
+
+
+patterns:
+- include: '#numbers'
+- include: '#quoted'
+- include: '#comments'
+
+- name: meta.paren.pymol
+  begin: \(
+  end: \)
+  patterns:
+    - include: '#constant_placeholder'
+    - include: '#options'
+    - include: '#comments'
+    - include: '#selectors'
+
+- name: meta.python.pymol
+  begin: ^(\s)*python
+  end: ^(\s)*python end
+  patterns:
+    - include: 'source.python'
+
+- name: meta.cmd.pymol
+  begin: ^(\s)*([a-zA-Z]+)\.
+  beginCaptures:
+    '2': {name: entity.other.inherited-class.pymol}
+  end: ($|\()
+  patterns:
+    - include: '#constant_placeholder'
+    - include: '#command'
+
+- name: meta.standard.pymol
+  begin: ^(\s)*
+  end: ($|,)
+  patterns:
+    - name: meta.empty.pymol
+      match: $
+    - include: '#constant_placeholder'
+    - include: '#command'
+    - include: '#target'
+
+- comment: highlight equals signs.
+  name: keyword.control.set.pymol
+  match: (\=)
+
+- include: '#options'
+- include: '#command'
+- include: '#filenames'
+- include: '#selectors'
+- include: '#constant_placeholder'
+- comment: highlight asterisks for globbing
+  name: string.interpolated.pymol
+  match: (\*)
+
+
+repository:
+  numbers:
+    comment: Numbers
+    patterns:
+      - name: constant.numeric.float.pymol
+        match: (\b|\-)([0-9]+)?\.[0-9]+\b
+      - name: constant.numeric.integer.pymol
+        match: (\b|\-)[0-9]+\b
+
+  comments:
+    comment: comments
+    patterns:
+      - name: comment.line.pymol
+        match: (\#)(.*)($)
+
+  quoted:
+    comment: Quoted strings
+    patterns:
+      - name: string.quoted.double.pymol
+        match: '".*?"'
+      - name: string.quoted.single.pymol
+        match: "'.*?'"
+
+  command:
+    comment: List of possible commands
+    patterns:
+      - name: entity.name.function.pymol
+        match: \b(abort|alias|align|alignto|alter|alter_state|as|attach|backward|bg|bg_col|bg_color|bond|button|cache|capture|car|cbap|cbc|cd|center|clip|cls|cnc|color|commands|config_mouse|copy|count_atoms|count_frames|count_states|create|cycle_valence|delete|deprotect|deselect|disable|distance|draw|dss|edit|edit_keys|enable|ending|exit|extend|fab|feedback|fetch|fit|flag|fork|forward|fragment|frame|full_screen|full_screen|fuse|get|get_angle|get_area|get_chains|get_color_indices|get_dihedral|get_distance|get_extent|get_model|get_names|get_names_of_type|get_object_matrix|get_pdbstr|get_position|get_session|get_symmetry|get_title|get_type|get_type|get_version|get_view|gradient|group|h_add|h_fill|hide|id_atom|identify|index|indicate|intra_fit|intra_rms|intra_rms_cur|invert|isodot|isolevel|isomesh|isosurface|iterate|iterate_state|talk:label|label|lines|load|load_model|load_traj|ls|main_page|map_double|map_new|map_set|map_set_border|map_trim|mappend|mask|matrix_copy|mclear|mdo|mdump|mem|meter_reset|middle|mmatrix|morph|move|mplay|mpng|mset|mstop|order|orient|origin|pair_fit|png|protect|pseudoatom|push_undo|pwd|python|quit|ramp_new|ray|read_molstr|read_pdbstr|rebuild|recolor|redo|refresh|reinit|reinitialize|remove|remove_picked|rename|replace|reset|rewind|rigimol.morph|rms|rms_cur|rock|rotate|run|save|sele|select|set|set_bond|set_color|set_colour|set_dihedral|set_geometry|set_key|set_name|set_symmetry|set_title|set_title|set_view|show|show_as|slice|slice_new|smooth|sort|space|spectrum|splash|split_states|ss|super|symexp|sync|system|torsion|translate|turn|unbond|undo|unmask|unpick|unset|update|view|viewport|volume|volume_color|volume_ramp_new|window|wizard|zoom)\b
+
+  selectors:
+    comment: selector arguments in pymol
+    patterns:
+      - name: support.function.selector.pymol
+        match: (\b|\!)(backbone|bb\.|sidechain|resi|resid|resn|resname|resnam|name|alt|chain|segi|flag|sc\.|n\.|ele)(\b|\s|[:punct:])
+      - name: keyword.control.pymol
+        match: \b(and|or|not|in|gap|aroundwithin|of|byres|bymolecule|byfragment|bysegment|byobject|bycellneighbor|neighbor|extend|from|import)\b
+      - include: '#numbers'
+      - name: meta.paren.pymol
+        begin: \(
+        end: \)
+        patterns:
+          - include: '#constant_placeholder'
+          - include: '#quoted'
+          - include: '#comments'
+          - include: '#selectors'
+
+  filenames:
+    comment: Filenames for common pdb style files.
+    patterns: 
+      - name:  support.class.filename.pymol
+        match: (\s)*([*A-Za-z0-9_\-/]*)\.(brix|callback|ccl|cex|cgo|ccp4|ent|map|mol2?|mmod|mov|mrc|o|omap|pdb|pml|png|pqr|pse|r3d|sdf|top|trj|xplor|xyz)(\.gz)?\b
+
+  options:
+    comment: argument options
+    patterns:
+      - include: '#quoted'
+      - include: '#numbers'
+      - name: meta.paren.pymol
+        begin: \(
+        end: \)
+        patterns:
+          - include: '#quoted'
+          - include: '#options'
+          - include: '#comments'
+      - include: '#selectors'
+
+  target:
+    comment: everything but the command in the target phrase
+    patterns:
+      - include: '#quoted'
+      - include: '#numbers'
+      - include: '#comments'
+      - include: '#filenames'
+      - include: '#selectors'
+      - name: variable.other.target.pymol
+        match: ([*A-Za-z0-9_\-/\:]+)
+
+  constant_placeholder:
+    patterns:
+      - name: constant.other.placeholder.pymol
+        match: (?i:%(\([a-z_]+\))?#?0?\-?[ ]?\+?([0-9]*|\*)(\.([0-9]*|\*))?[hL]?[a-z%])
+
+
+
+
+...

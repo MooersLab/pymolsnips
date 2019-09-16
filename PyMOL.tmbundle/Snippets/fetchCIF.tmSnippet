@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Fetch cif file.
+fetch ${1:3nd4}, type=cif, async=0;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>fetchCIF</string>
+    <key>name</key>
+    <string>Fetch cif file.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fetchCIF</string>
+    <key>uuid</key>
+    <string>bacf4d32-f8de-43f0-8c57-88921b4dc749</string>
+</dict>
+</plist>

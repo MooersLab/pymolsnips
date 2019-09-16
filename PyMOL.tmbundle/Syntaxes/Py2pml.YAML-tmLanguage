@@ -1,0 +1,22 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: py2pml
+scopeName: source.py2pml
+fileTypes: [py2pml]
+uuid: e2be2f73-5e4c-4ae1-b9e7-542d13ce445e
+
+patterns:
+- name: meta.pymol.py2pml
+  begin: '"""'
+  beginCaptures:
+    '0': {name: string.quoted.double.py2pml}
+  end: '"""'
+  endCaptures:
+    '0': {name: string.quoted.double.py2pml}
+  patterns:
+  - name: constant.other.placeholder.pymol
+    match: (?i:%(\([a-z_]+\))?#?0?\-?[ ]?\+?([0-9]*|\*)(\.([0-9]*|\*))?[hL]?[a-z%])
+  - include: 'source.pymol'
+
+- include: 'source.python'
+...

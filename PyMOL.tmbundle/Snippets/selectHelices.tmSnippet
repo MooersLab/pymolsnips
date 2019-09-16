@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select atoms by alpha helices.
+select ${1:helices}, ss h; 
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>selectHelices</string>
+    <key>name</key>
+    <string>Select atoms by alpha helices.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectHelices</string>
+    <key>uuid</key>
+    <string>dafd3123-f4d3-4ea5-9caa-4f9d5ef7027e</string>
+</dict>
+</plist>

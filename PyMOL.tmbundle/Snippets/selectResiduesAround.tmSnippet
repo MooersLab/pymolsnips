@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select residues within a radius around a ligand.
+select ${1:nearby}, br. resn ${2:drug} around ${3:5};
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>selectResiduesAround</string>
+    <key>name</key>
+    <string>Select residues within a radius around a ligand.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectResiduesAround</string>
+    <key>uuid</key>
+    <string>4e3e1b66-bc39-458c-8de9-f29f85567e3c</string>
+</dict>
+</plist>

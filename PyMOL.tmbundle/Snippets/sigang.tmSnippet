@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set angle labels to display 2 decimals places
+set label_angle_digits, ${1:2};
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>sigang</string>
+    <key>name</key>
+    <string>Set angle labels to display 2 decimals places</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sigang</string>
+    <key>uuid</key>
+    <string>c46bb1c2-98ec-46e9-9592-ebb7f331e443</string>
+</dict>
+</plist>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run Tom Holder's supercell script to generate three cells in all directions.
+run $HOME/Scripts/PyMOLscripts/supercell.py
+supercell 2, 2, 2, , orange, supercell2, 1
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>sc222</string>
+    <key>name</key>
+    <string>Run Tom Holder's supercell script to generate three cells in all directions.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sc222</string>
+    <key>uuid</key>
+    <string>34874607-8410-4605-8bf7-b3950d7dd4cd</string>
+</dict>
+</plist>

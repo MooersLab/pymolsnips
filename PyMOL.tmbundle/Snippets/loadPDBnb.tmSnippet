@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Load PDB nb spheres. 
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
+orient;
+set stick_radius, ${2:1.2};
+hide (name H*);
+set nb_sphere_size, ${3:0.35};
+set nb_spheres_quality, ${4:1};
+show nb_spheres;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>loadPDBnb</string>
+    <key>name</key>
+    <string>Load PDB nb spheres. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadPDBnb</string>
+    <key>uuid</key>
+    <string>c20d4499-abc8-4f9d-ba12-e0c7a1d8310e</string>
+</dict>
+</plist>

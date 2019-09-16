@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set ellipsoid color.
+set ellipsoid_color, ${1:color};
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>ellipcol</string>
+    <key>name</key>
+    <string>Set ellipsoid color.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>ellipcol</string>
+    <key>uuid</key>
+    <string>0625a7ce-abc9-47a1-bb35-357acd4089b1</string>
+</dict>
+</plist>

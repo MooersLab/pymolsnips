@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label the CA atoms with the Ala333 style format
+label name CA,"%s%s" % (resn,resi);
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>labelCAs</string>
+    <key>name</key>
+    <string>Label the CA atoms with the Ala333 style format</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelCAs</string>
+    <key>uuid</key>
+    <string>7989d91a-314a-4be7-9040-ad73764f83e8</string>
+</dict>
+</plist>

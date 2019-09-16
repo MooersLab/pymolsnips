@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print name and b-factor for a residue.
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>printNameB4ResiX</string>
+    <key>name</key>
+    <string>Print name and b-factor for a residue.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printNameB4ResiX</string>
+    <key>uuid</key>
+    <string>6fe23082-f769-431d-bbbf-9bce29d05b1f</string>
+</dict>
+</plist>

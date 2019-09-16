@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Load PDB ball-and-stick.
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+hide (name H*);
+hide lines;
+show sticks;
+set stick_radius, ${2:1.2};
+set nb_sphere_radius, ${3:0.35};
+orient;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>loadPDBbs</string>
+    <key>name</key>
+    <string>Load PDB ball-and-stick.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadPDBbs</string>
+    <key>uuid</key>
+    <string>7659db06-270f-44fd-ba66-01ce37e28e80</string>
+</dict>
+</plist>

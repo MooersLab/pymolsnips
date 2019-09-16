@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Duplicate object.
+create ${1:t4l}, ${2:1lw9}; 
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>duplicateObject</string>
+    <key>name</key>
+    <string>Duplicate object.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>duplicateObject</string>
+    <key>uuid</key>
+    <string>2dd56400-b603-4829-9729-5683cfa2925f</string>
+</dict>
+</plist>
