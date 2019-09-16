@@ -497,12 +497,14 @@ You may need to install a snippet manager package and add an autocompletion pack
 [TextMate](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
 There is a large library of plugins available. 
+
 The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide  supplemental reading to the on-line documentation. 
 
 
 *TextMate* was a pioneer application in the development of snippet libraries.
 *TextMate*'s approach to snippets has served as a role model for other editors. 
 *TextMate* snippets can be ported to *Sublime Text 3*. 
+Chapter 6 in the book by Grays provides an excellent overview of the features of snippets in PyMOL.
 
 Each snippet is stored in a separate file with the file extension **.tmSnippet**.
 Each snippet file has a unique uuid string.
