@@ -531,7 +531,7 @@ The bundle pulldown provides access to a bundle editor.
 This editor can be used to view and change the code in the snippets.
 
 <p align="center">
-	<img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="320" alt="ao tab trigger" />
+	<img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger" />
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
