@@ -497,7 +497,7 @@ You may need to install a snippet manager package and add an autocompletion pack
 [TextMate](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
 There is a large library of plugins available. 
-The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide a supplemental reading to the on-line documentation. 
+The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide  supplemental reading to the on-line documentation. 
 
 
 *TextMate* was a pioneer application in the development of snippet libraries.
