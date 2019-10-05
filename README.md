@@ -263,7 +263,7 @@ CudaText snippets have names (i.e., descriptions), ids (i.e., tab triggers), and
 CudaText snippets are stored in the user's `Library` on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
 You may have to create the `Std.PML` folder.
 
-
+![](cudatext.gif)
 
 
 
