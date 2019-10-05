@@ -242,24 +242,30 @@ Save this file with the `.pml` extension to be able to use it in PyMOL.
 
 [CudaText](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal. 
 Cudatext is open source.
-Its predecessor is SynWrite, which is no longer supported. 
+Its predecessor was SynWrite, which is no longer supported. 
+*CudaText* has numerous plugins available to it.
+A PyMOL lexer and the pyMOL snippets are available through the *CudaText* Addons Manger (thank you Alexey T.!).
+The documentation for *CudaText* is located [online](http://wiki.freepascal.org/CudaText).
 
-*Cudatext* has numerous plugins available to it.
-Use the plugin manager to install the `snippets` plugin to be able to use the 
-The documentation is located [online](http://wiki.freepascal.org/CudaText).
+CudaText is uses Python3 based plugins. 
+CudaText expects to find the Python3.+ from [Python.org](https://www.python.org/downloads/release/python-374/).
+I downloaded the 64-bit version of Python3.7.4 from Python.org and used the installer to install the binary in about five minutes.
+This Python is installed in the **/Applications** directory on the Mac. 
 
-*CudaText* depends on the presence of 32-bit Python3.
-On the Mac, I downloaded the 32-bit/64-bit version of Python3.7.2 from Python.org and used the installer to install the binary in about five minutes. 
-When I started *cudatext*, it found this install of Python; I did not have to edit any configuration files.
-
+Download the CudaText installer from here https://www.fosshub.com/CudaText.html and run the installer.
+When I started *CudaTextt*, it found the above install of Python; I did not have to edit any configuration files.
+After starting CudaText, install the snippets plugin by navigating to the Plugins/Addons Manager/Install and search for `snippets`.
+After the snippet manager is installed, use the same pulldown to install the PyMOL lexer and the library of PyMOL snippets. 
 
 The snippets are stored one per file.
 The files have the extensions of `.cuda-snippet`. 
-CudaText snippets have names (description really), ids (tab triggers), and markers (tab stops).
+CudaText snippets have names (i.e., descriptions), ids (i.e., tab triggers), and markers (i.e., tab stops).
 CudaText snippets are stored in the user's `Library` on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
 You may have to create the `Std.PML` folder.
 
-Until a PyMOL lexer (syntax highlighter) is developed for CudaText, install and use the Python lexer to get some syntax highlighting.
+
+
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
