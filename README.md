@@ -452,7 +452,8 @@ You need to have Node.js installed.
 On the Mac, it is best to use *micro* with the free iterm2.app terminal emulator.
 Install the *snippets* plugin by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
 All of the snippets for one language are in a single file. 
-The ultisnips library above should work with this editor. 
+In this case, the file is labeled `pml.snippets`.
+The snippets are installed in `.config/micro/plugins/snippets/snippets`.
 
 A lexer for syntax highlighting is in the file called called pml.yaml.
 This file is stored is found in the microsnippets folder above.
