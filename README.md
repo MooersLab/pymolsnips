@@ -476,9 +476,11 @@ This file can be donwloaded from the `micropymolsnips` folder above.
 This lexer is stored in the the hidden folder `.config/micro/syntax`.
 
 Enter Control-Q and then enter *help color* to learn about the available color schemes and to learn about syntax highlighting.
-I entered *set colorscheme bubblegum* to apply a light colorscheme as shown below.
+I entered *set colorscheme bubblegum* to apply a light colorscheme to micro as shown below.
+A PyMOL script file has been opened and is color highlighted.
+The text of the script file as enlargended for easier reading by entering `cmd-+` a number of times. 
 
-![colorscheme](https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png)
+![colorscheme](https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png){:height="50%" width="50%"}
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
