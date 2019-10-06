@@ -475,7 +475,10 @@ A lexer for syntax highlighting is in the file called called pml.yaml.
 This file can be donwloaded from the `micropymolsnips` folder above.
 This lexer is stored in the the hidden folder `.config/micro/syntax`.
 
-![](mircoBubbleGumColorScheme.png)
+Enter Control-Q and then enter *help color* to learn about the available color schemes and to learn about syntax highlighting.
+I entered *set colorscheme bubblegum* to apply a light colorscheme as shown below.
+
+![colorscheme](https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png)
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
