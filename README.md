@@ -263,7 +263,7 @@ CudaText snippets have names (i.e., descriptions), ids (i.e., tab triggers), and
 CudaText snippets are stored in the user's `Library` on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
 You may have to create the `Std.PML` folder.
 
-![](cudatext.gif)
+![](./gifs/cudatext.gif)
 
 
 
@@ -480,7 +480,7 @@ I entered *set colorscheme bubblegum* to apply a light colorscheme to micro as s
 A PyMOL script file has been opened and is color highlighted.
 The text of the script file as enlargended for easier reading by entering `cmd-+` a number of times. 
 
-<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/images/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
