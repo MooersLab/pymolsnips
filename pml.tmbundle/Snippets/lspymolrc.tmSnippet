@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print list of active pymolrc files.
+print invocation.options.deferred;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>lspymolrc</string>
+    <key>name</key>
+    <string>Print list of active pymolrc files.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>lspymolrc</string>
+    <key>uuid</key>
+    <string>ac359331-0bef-47bb-9e40-4ab620600cbe</string>
+</dict>
+</plist>

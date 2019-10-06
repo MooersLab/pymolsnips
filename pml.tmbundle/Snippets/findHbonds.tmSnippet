@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Find hbonds around a residue.
+remove element h; distance hbonds, all, all, 3.2, mode=2;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>findHbonds</string>
+    <key>name</key>
+    <string>Find hbonds around a residue.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>findHbonds</string>
+    <key>uuid</key>
+    <string>4e3ecd14-4ff6-4785-8fff-c01d2dd3f756</string>
+</dict>
+</plist>

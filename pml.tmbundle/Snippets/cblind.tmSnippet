@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Color blindness.
+run ~/Pymol-script-repo/colorblindfriendly.py;
+as cartoon;
+color cb_red, ss H;
+color cb_yellow,ss S;
+color cb_green, ss L+; 
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>cblind</string>
+    <key>name</key>
+    <string>Color blindness.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cblind</string>
+    <key>uuid</key>
+    <string>54d24bce-252e-4bd0-a3df-1fcfb1f2c419</string>
+</dict>
+</plist>

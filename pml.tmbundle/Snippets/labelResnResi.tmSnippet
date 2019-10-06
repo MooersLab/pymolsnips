@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label CA atom with single-letter residue name and residue number.
+label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>labelResnResi</string>
+    <key>name</key>
+    <string>Label CA atom with single-letter residue name and residue number.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelResnResi</string>
+    <key>uuid</key>
+    <string>de55052b-7a12-48bc-95a8-0aeac0bcd572</string>
+</dict>
+</plist>

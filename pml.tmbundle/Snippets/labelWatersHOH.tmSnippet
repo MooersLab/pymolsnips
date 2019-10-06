@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label waters HOH.
+label resn HOH ,"%s%s" % (resn,resi);
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>labelWatersHOH</string>
+    <key>name</key>
+    <string>Label waters HOH.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelWatersHOH</string>
+    <key>uuid</key>
+    <string>c82b1ce3-3d92-4a90-9aab-5e04bd9ede7c</string>
+</dict>
+</plist>

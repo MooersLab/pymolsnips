@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Hide alt loc.
+select altconf, alt ${1:b}  # select B alternative locators;
+hide everything, altconf  # hide alt B locators;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>hidealtloc</string>
+    <key>name</key>
+    <string>Hide alt loc.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>hidealtloc</string>
+    <key>uuid</key>
+    <string>4cedb5a8-ed3a-4e2e-b15d-d021a56b3845</string>
+</dict>
+</plist>

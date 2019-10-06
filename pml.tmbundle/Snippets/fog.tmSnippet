@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Blur the background atoms.
+set fog, 0
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>fog</string>
+    <key>name</key>
+    <string>Blur the background atoms.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fog</string>
+    <key>uuid</key>
+    <string>39e62c0e-6bc2-48d3-920c-25c9c4ba0c32</string>
+</dict>
+</plist>

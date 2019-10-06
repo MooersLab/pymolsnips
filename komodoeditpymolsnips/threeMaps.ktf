@@ -18,6 +18,6 @@ isomesh [[%tabstop:mesh1]], 2fofc, 1.0, [[%tabstop:glycan]];
 color density, [[%tabstop:mesh1]];
 isomesh [[%tabstop:mesh2]], fofc, 3.0, [[%tabstop:glycan]];
 color green, [[%tabstop:mesh2]];
-isomesh [[%tabstop:mesh2]], fofc, -3.0, [[%tabstop:glycan]];
-color red, [[%tabstop:mesh2]];
+isomesh [[%tabstop:mesh3]], fofc, -3.0, [[%tabstop:glycan]];
+color red, [[%tabstop:mesh3]];
 !@#_currentPos!@#_anchor

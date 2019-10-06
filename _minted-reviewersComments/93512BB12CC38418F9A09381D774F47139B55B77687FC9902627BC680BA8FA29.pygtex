@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+PyMOL\PYGZgt{}BW
+NameError: name \PYG{l+s+s1}{\PYGZsq{}BW\PYGZsq{}} is not defined
+
+PyMOL\PYGZgt{}pdbed
+NameError: name \PYG{l+s+s1}{\PYGZsq{}pdbed\PYGZsq{}} is not defined
+
+PyMOL\PYGZgt{}ox
+NameError: name \PYG{l+s+s1}{\PYGZsq{}ox\PYGZsq{}} is not defined
+\end{Verbatim}

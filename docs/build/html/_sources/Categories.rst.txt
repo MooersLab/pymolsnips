@@ -1,5 +1,0 @@
-Categories
-==========
-
-.. mdinclude:: ./READMEcategories.txt
-

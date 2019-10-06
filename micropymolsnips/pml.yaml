@@ -1,0 +1,263 @@
+# Modify the the python3.yaml file to make this file.
+# Indentation must be doen with spaces only.
+# | cannot start a new line
+filetype: pymol
+
+detect:
+    filename: "\\.pml$"
+
+rules:
+
+      # built-in objects
+    - constant: "\\b(None|self|True|False)\\b"
+      # built-in attributes
+    - constant: "\\b(__bases__|__builtin__|__class__|__debug__|__dict__|\
+    __doc__|__file__|__members__|__methods__|__name__|__self__)\\b"
+      # built-in functions
+    - identifier: "\\b(abs|apply|callable|chr|cmp|compile|delattr|dir|divmod|eval|exec|\
+	execfile|filter|format|getattr|globals|hasattr|hash|help|hex|id|input|intern|isinstance|\
+	issubclass|len|locals|max|min|next|oct|open|ord|pow|range|raw_input|reduce|reload|repr|\
+	round|setattr|unichr|vars|zip|__import__)\\b"
+      # special method names
+    - identifier: "\\b(__abs__|__add__|__and__|__call__|__cmp__|__coerce__|\
+    __complex__|__concat__|__contains__|__del__|__delattr__|__delitem__|\
+    __dict__|__delslice__|__div__|__divmod__|__float__|__getattr__|__getitem__|\
+    __getslice__|__hash__|__hex__|__init__|__int__|__inv__|__invert__|__len__|\
+    __long__|__lshift__|__mod__|__mul__|__neg__|__nonzero__|__oct__|__or__|\
+    __pos__|__pow__|__radd__|__rand__|__rcmp__|__rdiv__|__rdivmod__|__repeat__|\
+    __repr__|__rlshift__|__rmod__|__rmul__|__ror__|__rpow__|__rrshift__|__rshift__|\
+    __rsub__|__rxor__|__setattr__|__setitem__|__setslice__|__str__|__sub__|__xor__)\\b"
+    - statement: "\\b(and|or|not|in|gap|around|within|of|byres|\
+	bymolecule|byfragment|bysegment|\
+	byobject|bycell|neighbor|extend|abort|accept|alias|align|alignto|alter|alter_state|angle|as|\
+	assert|attach|backward|bg_color|bond|break|button|cache|capture|cartoon|cd|cealign|center|\
+	check|class|clean|clip|cls|color|commands|config_mousecontinue|copy|count_atoms|count_frames|\
+	count_states|create|cycle_valence|decline|def|del|delete|deprotect|deselect|dihedral|dir|\
+	disable|distance|dragdraw|dss|dummy|dump|edit|edit_mode|elif|else|embed|enable|ending|except|\
+  	exec|export_dots|extend|extract|fab|fast_minimize|feedback|fetch|finally|fit|fix_chemistry|flag|\
+	for|fork|forward|fragment|frame|full_screen|fuse|get|get_angle|get_area|get_chains|get_dihedral|\
+	get_distance|get_extent|get_position|get_symmetry|get_title|get_type|get_version|get_view|\
+	get_viewport|global|gradient|group|h_add|h_fill|h_fix|help|hide|id_atom|identify|if|import|index|\
+	indicate|intra_fit|intra_rms|intra_rms_cur|invert|isodot|isolevel|isomesh|isosurface|iterate|\
+    iterate_state|label|load|load_embedded|load_png|load_traj|log|log_close|log_open|ls|madd|map_double|\
+    map_halve|map_new|map_set|map_set_border|map_trim|mappend|mask|matrix_copy|matrix_reset|mclear|mcopy)\\b"
+    - statement: "\\b(mdelete|mdo|mdump|mem|meter_reset|middle|minimize|minsert|mmatrix|mmove|mouse|move|\
+	movie.load|movie.nutate|movie.pause|movie.produce|movie.rock|movie.roll|movie.screw|movie.sweep|\
+	movie.tdroll|movie.zoom|mplay|mpng|mray|mset|mstop|mtoggle|multisave|mview|order|orient|origin|overlap|\
+	pair_fit|pass|phi_psi|png|pop|protect|pseudoatom|push_undo|pwd|quit|raise|ramp_new|ray|rebuild|\
+	recolor|redo|reference|refresh|refresh_wizard|reinitialize|remove_picked|remove|rename|replace|\
+	replace_wizard|reset|resume|return|rewind|rms|rms_cur|rock|rotate|save|scene|scene_order|\
+	sculpt_activate|sculpt_deactivate|sculpt_iterate|sculpt_purge|select|set|set_bond|set_color|\
+	set_dihedral|set_geometry|set_key|set_name|set_symmetry|set_title|set_view|show|slice_new|\
+	smooth|sort|space|spawn|spectrum|spheroid|splash|split_states|stereo|super|symexp|system|test|toggle|\
+	torsion|translate|try|turn|unbond|undo|ungroup|unmask|unpick|unset|unset_bond|update|util.cbab|\
+	util.cbac|util.cbag|util.cbak|util.cbam|util.cbao|util.cbap|util.cbas|util.cbaw|util.cbay|\
+    util.cbc|util.chainbow|util.cnc|util.colors|util.rainbow|util.ss|valence|vdw_fit|view|viewport|\
+    volume|volume_color|while|window|wizard|zoom)\\b"
+    - type.keyword: "\\b(active_selections|all_states|ambient|angle_color|\
+	angle_label_position|\
+    angle_size|animation|animation_duration|antialias|async_builds|\
+    ati_bugs|atom_name_wildcard|atom_type_format|auto_classify_atoms|auto_color|auto_copy_images|\
+    auto_defer_atom_count|auto_defer_builds|auto_dss|auto_hide_selections|\
+    auto_indicate_flags|auto_number_selections|\
+    auto_overlay|auto_remove_hydrogens|auto_rename_duplicate_objects|auto_sculpt|\
+    auto_show_lines|auto_show_nonbonded|auto_show_selections|auto_show_spheres|\
+    auto_zoom|autoclose_dialogs|backface_cull|batch_prefix|bg_gradient|bg_rgb|\
+    bg_rgb_bottom|bg_rgb_top|bonding_vdw_cutoff|button_mode|button_mode_name|\
+    cache_display|cache_frames|cache_max|cache_memory|cache_mode|cartoon_color|\
+    cartoon_cylindrical_helices|cartoon_debug|cartoon_discrete_colors|cartoon_dumbbell_length|\
+    cartoon_dumbbell_radius|cartoon_dumbbell_width|cartoon_fancy_helices|cartoon_fancy_sheets|\
+    cartoon_flat_cycles|cartoon_flat_sheets|cartoon_helix_radius|cartoon_highlight_color|\
+    cartoon_ladder_color|cartoon_ladder_mode|cartoon_ladder_radius|cartoon_loop_cap|\
+    cartoon_loop_quality|cartoon_loop_radius|cartoon_nucleic_acid_color|cartoon_nucleic_acid_mode|\
+    cartoon_oval_length|cartoon_oval_quality|cartoon_oval_width|cartoon_power|cartoon_power_b|\
+    cartoon_putty_quality|cartoon_putty_radius|cartoon_putty_range|cartoon_putty_scale_max|\
+    cartoon_putty_scale_min|cartoon_putty_scale_power|cartoon_putty_transform|cartoon_rect_length|\
+    cartoon_rect_width|cartoon_refine|cartoon_refine_normals|cartoon_refine_tips|cartoon_ring_color|\
+    cartoon_ring_finder|cartoon_ring_mode|cartoon_ring_radius|cartoon_ring_transparency|\
+    cartoon_ring_width|cartoon_round_helices|cartoon_sampling|cartoon_side_chain_helper|\
+    cartoon_smooth_cycles|cartoon_smooth_first|cartoon_smooth_last|cartoon_smooth_loops|\
+    cartoon_throw|cartoon_trace_atoms|cartoon_transparency|cartoon_tube_cap|cartoon_tube_quality|\
+    cartoon_tube_radius|cartoon_use_shader|cavity_cull|cgo_dot_radius|cgo_dot_width|cgo_ellipsoid_quality|\
+    cgo_line_radius|cgo_line_width|cgo_ray_width_scale|cgo_sphere_quality|cgo_transparency|\
+    clamp_colors|clean_electro_mode|cone_quality|connect_bonded|connect_cutoff|connect_mode|\
+    coulomb_cutoff|coulomb_dielectric|coulomb_units_factor|cull_spheres|dash_color|dash_gap|\
+    dash_length|dash_radius|dash_round_ends|dash_width|debug_pick|default_2fofc_map_rep|\
+    default_buster_names|default_fofc_map_rep|default_phenix_names|default_phenix_no_fill_names|\
+    default_refmac_names|defer_builds_mode|defer_updates|depth_cue|dihedral_color|\
+    dihedral_label_position|dihedral_size|direct|dist_counter|distance_exclusion|dot_color|\
+    dot_density|dot_hydrogens|dot_lighting|dot_mode|dot_normals|dot_radius|dot_solvent|\
+    dot_width|draw_frames|draw_mode|dynamic_measures|dynamic_width|dynamic_width_factor|\
+    dynamic_width_max|dynamic_width_min|editor_auto_dihedral|editor_auto_origin|\
+    editor_bond_cycle_mode|editor_label_fragments|ellipsoid_color|ellipsoid_probability|\
+    ellipsoid_quality|ellipsoid_scale|ellipsoid_transparency|fast_idle|fetch_host|fetch_path|\
+    field_of_view|fit_iterations|fit_kabsch|fit_tolerance|float_labels|fog|fog_start|gamma|\
+    gaussian_b_adjust|gaussian_b_floor|gaussian_resolution|geometry_export_mode|\
+    gl_ambient|gradient_max_length|gradient_min_length|gradient_min_slope|\
+    gradient_normal_min_dot|gradient_spacing|gradient_step_size|gradient_symmetry|\
+    grid_max|grid_mode|grid_slot|group_arrow_prefix|group_auto_mode|\
+    group_full_member_names|h_bond_cone|h_bond_cutoff_center|h_bond_cutoff_edg|\
+    h_bond_exclusion|h_bond_from_proton|h_bond_max_angle|h_bond_power_a|\
+    h_bond_power_b|half_bonds|hash_max|heavy_neighbor_cutoff|hide_long_bonds|\
+    hide_underscore_names|idle_delay|ignore_case|ignore_pdb_segi|image_copy_always|\
+    image_dots_per_inch|internal_feedback|internal_gui|internal_gui_control_size|\
+    internal_gui_mode|internal_gui_width|internal_prompt|isomesh_auto_state|\
+    keep_alive|label_anchor|label_angle_digits|label_color|label_digits|\
+    label_dihedral_digits|label_distance_digits|label_font_id|label_outline_color|\
+    label_position|label_shadow_mode|label_size|legacy_mouse_zoom|legacy_vdw_radii|\
+    light|light2|light3|light4|light5|light6|light7|light8|light9|light_count|line_color|\
+    line_radius|line_smooth|line_stick_helper|line_use_shader|line_width|\
+    log_box_selections|log_conformations|logging|map_auto_expand_sym|\
+    matrix_mode|max_threads|max_triangles|max_ups|mesh_carve_cutoff|\
+    mesh_carve_selection|mesh_carve_state|mesh_clear_cutoff|mesh_clear_selection|\
+    mesh_clear_state|mesh_color|mesh_cutoff|mesh_grid_max|mesh_lighting|\
+    mesh_mode|mesh_negative_color|mesh_negative_visible|mesh_normals|\
+    mesh_quality|mesh_radius|mesh_skip|mesh_solvent|mesh_type|mesh_width|\
+    min_mesh_spacing|moe_separate_chains|motion_bias|motion_hand|motion_linear|\
+    motion_power|motion_simple|mouse_grid|mouse_limit|mouse_restart_movie_delay|\
+    mouse_scale|mouse_selection_mode|mouse_wheel_scale|mouse_z_scale|\
+    movie_animate_by_frame|movie_auto_interpolate|movie_auto_store|movie_delay|\
+    movie_fps|movie_loop|movie_panel|movie_panel_row_height|movie_quality|\
+    movie_rock|multiplex|neighbor_cutoff|no_idle|nonbonded_size|\
+    nonbonded_transparency|normal_workaround|normalize_ccp4_maps|\
+    normalize_grd_maps|normalize_o_maps|nvidia_bugs|opaque_background|\
+    orthoscopic|overlay|overlay_lines|pdb_conect_all|pdb_discrete_chains|\
+    pdb_echo_tags|pdb_formal_charges|pdb_hetatm_guess_valences|\
+    pdb_hetatm_sort|pdb_honor_model_number|pdb_ignore_conect|\
+    pdb_insertions_go_first|pdb_insure_orthogonal|pdb_literal_names|\
+    pdb_no_end_record|pdb_reformat_names_mode|pdb_retain_ids|\
+    pdb_standard_order|pdb_truncate_residue_name|pdb_unbond_cations|\
+    pdb_use_ter_records|pickable|png_file_gamma|png_screen_gamma|\
+    polar_neighbor_cutoff|power|pqr_no_chain_id|presentation|\
+    presentation_auto_quit|presentation_auto_start|presentation_mode|\
+    preserve_chempy_ids|pymol_space_max_blue|pymol_space_max_green|\
+    pymol_space_max_red|pymol_space_min_factor|raise_exceptions|\
+    ramp_blend_nearby_colors|rank_assisted_sorts|ray_blend_blue|\
+    ray_blend_colors|ray_blend_green|ray_blend_red|ray_clip_shadows|\
+    ray_color_ramps|ray_default_renderer|ray_direct_shade|ray_hint_camera|\
+    ray_hint_shadow|ray_improve_shadows|ray_interior_color|\
+    ray_interior_mode|ray_interior_reflect|ray_interior_shadows|\
+    ray_interior_texture|ray_label_specular|ray_legacy_lighting|ray_max_passes|\
+    ray_opaque_background|ray_orthoscopic|ray_oversample_cutoff|\
+    ray_pixel_scale|ray_scatter|ray_shadow|ray_shadow_decay_factor|\
+    ray_shadow_decay_range|ray_shadow_fudge|ray_shadows|ray_spec_local|\
+    ray_texture|ray_texture_settings|ray_trace_color|ray_trace_depth_factor|\
+    ray_trace_disco_factor|ray_trace_fog|ray_trace_fog_start|ray_trace_frames|\
+    ray_trace_gain|ray_trace_mode|ray_trace_persist_cutoff|ray_trace_slope_factor|\
+    ray_trace_trans_cutoff|ray_transparency_contrast|ray_transparency_oblique|\
+    ray_transparency_oblique_power|ray_transparency_shadows|\
+    ray_transparency_spec_cut|ray_transparency_specular|ray_triangle_fudge|\
+    ray_volume|reflect|reflect_power|retain_order|ribbon_color|\
+    ribbon_nucleic_acid_mode|ribbon_power|ribbon_power_b|ribbon_radius|\
+    ribbon_sampling|ribbon_side_chain_helper|ribbon_smooth|ribbon_throw|\
+    ribbon_trace_atoms|ribbon_transparency|ribbon_width|robust_logs|\
+    rock_delay|roving_byres|roving_cartoon|roving_delay|roving_detail|\
+    roving_isomesh|roving_isosurface|roving_labels|roving_lines|roving_map1_level|\
+    roving_map1_name|roving_map2_level|roving_map2_name|roving_map3_level|\
+    roving_map3_name|roving_nb_spheres|roving_nonbonded|roving_origin|\
+    roving_origin_z|roving_origin_z_cushion|roving_polar_contacts|\
+    roving_polar_cutoff|roving_ribbon|roving_selection|roving_spheres|\
+    roving_sticks|scene_animation|scene_animation_duration|scene_buttons|\
+    scene_buttons_mode|scene_current_name|scene_frame_mode|scene_loop|\
+    scene_restart_movie_delay|scenes_changed|sculpt_angl_weight|\
+    sculpt_auto_center|sculpt_avd_excl|sculpt_avd_gap|sculpt_avd_range|\
+    sculpt_avd_weight|sculpt_bond_weight|sculpt_field_mask|sculpt_hb_overlap|\
+    sculpt_hb_overlap_base|sculpt_line_weight|sculpt_max_max|sculpt_max_min|\
+    sculpt_max_scale|sculpt_max_weight|sculpt_memory|sculpt_min_max|\
+    sculpt_min_min|sculpt_min_scale|sculpt_min_weight|sculpt_nb_interval|\
+    sculpt_plan_weight|sculpt_pyra_inv_weight|sculpt_pyra_weight|\
+    sculpt_tors_tolerance|sculpt_tors_weight|sculpt_tri_max|sculpt_tri_min|\
+    sculpt_tri_mode|sculpt_tri_scale|sculpt_tri_weight|sculpt_vdw_scale|\
+    sculpt_vdw_scale14|sculpt_vdw_vis_max|sculpt_vdw_vis_mid|\
+    sculpt_vdw_vis_min|sculpt_vdw_vis_mode|sculpt_vdw_weight|\
+    sculpt_vdw_weight14|sculpting|sculpting_cycles|sdof_drag_scale|\
+    secondary_structure|security|sel_counter|selection_overlay|\
+    selection_round_points|selection_visible_only|selection_width|\
+    selection_width_max|selection_width_scale|seq_view|seq_view_alignment|\
+    seq_view_color|seq_view_discrete_by_state|seq_view_fill_char|\
+    seq_view_fill_color|seq_view_format|seq_view_label_color|\
+    seq_view_label_mode|seq_view_label_spacing|seq_view_label_start|\
+    seq_view_location|seq_view_overlay|seq_view_unaligned_color|\
+    seq_view_unaligned_mode|session_cache_optimize|session_changed|\
+    session_compression|session_file|session_migration|session_version_check|\
+    shader_path|shininess|show_alpha_checker|show_frame_rate|show_progress|\
+    simplify_display_lists|single_image|slice_dynamic_grid|\
+    slice_dynamic_grid_resolution|slice_grid|slice_height_map|slice_height_scale|\
+    slice_track_camera|slow_idle|smooth_color_triangle|solvent_radius|spec_count|\
+    spec_direct|spec_direct_power|spec_power|spec_reflect|specular|\
+    specular_intensity|sphere_color|sphere_mode|sphere_point_max_size|\
+    sphere_point_size|sphere_quality|sphere_scale|sphere_solvent|\
+    sphere_transparency|sphere_use_shader|spheroid_fill|spheroid_scale|\
+    spheroid_smooth|ss_helix_phi_exclude|ss_helix_phi_include|\
+    ss_helix_phi_target|ss_helix_psi_exclude|ss_helix_psi_include|\
+    ss_helix_psi_target|ss_strand_phi_exclude|ss_strand_phi_include|\
+    ss_strand_phi_target|ss_strand_psi_exclude|ss_strand_psi_include|\
+    ss_strand_psi_target|state|state_counter_mode|static_singletons|\
+    stereo_angle|stereo_double_pump_mono|stereo_dynamic_strength|\
+    stereo_mode|stereo_shift|stick_ball|stick_ball_color|stick_ball_ratio|\
+    stick_color|stick_fixed_radius|stick_h_scale|stick_nub|stick_overlap|\
+    stick_quality|stick_radius|stick_transparency|stick_use_shader|\
+    stick_valence_scale|stop_on_exceptions|suppress_hidden|surface_best|\
+    surface_carve_cutoff|surface_carve_normal_cutoff|surface_carve_selection|\
+    surface_carve_state|surface_cavity_cutoff|surface_cavity_mode|\
+    surface_cavity_radius|surface_circumscribe|surface_clear_cutoff|\
+    surface_clear_selection|surface_clear_state|surface_color|surface_debug|\
+    surface_miserable|surface_mode|surface_negative_color|\
+    surface_negative_visible|surface_normal|surface_optimize_subsets|\
+    surface_poor|surface_proximity|surface_quality|surface_ramp_above_mode|\
+    surface_residue_cutoff|surface_solvent|surface_trim_cutoff|\
+    surface_trim_factor|surface_type|surface_use_shader|suspend_updates|\
+    swap_dsn6_bytes|sweep_angle|sweep_mode|sweep_phase|sweep_speed|\
+    test1|test2|text|texture_fonts|trace_atoms_mode|transparency|\
+    transparency_global_sort|transparency_mode|transparency_picking_mode|\
+    triangle_max_passes|trim_dots|two_sided_lighting|use_display_lists|\
+    use_shaders|valence_default|valence_mode|valence_size|validate_object_names|\
+    virtual_trackball|volume_bit_depth|volume_data_range|volume_layers|wildcard|wizard_prompt_mode|wrap_output)\\b"
+
+      # types
+    - type: "\\b(basestring|bool|buffer|bytearray|bytes|classmethod|complex|dict|enumerate|file|\
+	float|frozenset|int|list|long|map|memoryview|object|property|reversed|set|slice|staticmethod|\
+	str|super|tuple|type|unicode|xrange)\\b"
+      # definitions
+    - identifier: "def [a-zA-Z_0-9]+"
+      # keywords
+    - statement: "\\b(and|as|assert|break|class|continue|def|del|elif|else|except|finally|for|\
+	from|global|if|import|in|is|lambda|not|or|pass|print|raise|return|try|while|with|yield)\\b"
+      # decorators
+    - brightgreen: "@.*[(]"
+      # operators
+    - symbol.operator: "([.:;,+*|=!\\%@]|<|>|/|-|&)"
+      # parentheses
+    - symbol.brackets: "([(){}]|\\[|\\])"
+      # numbers
+    - constant.number: "\\b[0-9]+\\b"
+
+    - constant.string:
+        start: "\"\"\""
+        end: "\"\"\""
+        rules: []
+
+    - comment:
+        start: "'''"
+        end: "'''"
+        rules: []
+
+    - constant.string:
+        start: "\""
+        end: "\""
+        skip: "\\\\."
+        rules:
+            - constant.specialChar: "\\\\."
+
+    - constant.string:
+        start: "'"
+        end: "'"
+        skip: "\\\\."
+        rules:
+            - constant.specialChar: "\\\\."
+
+    - comment:
+        start: "#"
+        end: "$"
+        rules: []
+

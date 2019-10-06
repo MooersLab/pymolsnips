@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print B-values for a residue with the B's rounded off to two decimal places.
+iterate (resi %{1:133}), print(name + " %.2f" % b);
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>printBs2digits</string>
+    <key>name</key>
+    <string>Print B-values for a residue with the B's rounded off to two decimal places.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printBs2digits</string>
+    <key>uuid</key>
+    <string>28862dd7-a1a3-4203-a2bc-86eba90ae6db</string>
+</dict>
+</plist>

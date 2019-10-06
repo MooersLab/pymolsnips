@@ -1,5 +1,0 @@
-Gallery
-=======
-
-
-.. mdinclude:: ./READMEgallery.txt

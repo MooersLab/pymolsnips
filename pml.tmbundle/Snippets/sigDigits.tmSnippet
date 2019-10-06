@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set number of decimals places to show in distance labels. 
+set label_distance_digits, ${1:2};
+set label_angle_digits, ${2:2};
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>sigDigits</string>
+    <key>name</key>
+    <string>Set number of decimals places to show in distance labels. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sigDigits</string>
+    <key>uuid</key>
+    <string>d3cc6d81-75bc-4d88-bf49-6e19e80fd7d4</string>
+</dict>
+</plist>

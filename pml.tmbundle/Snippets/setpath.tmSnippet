@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set additional path for PyMOL to search on startup
+os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>setpath</string>
+    <key>name</key>
+    <string>Set additional path for PyMOL to search on startup</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>setpath</string>
+    <key>uuid</key>
+    <string>b394b6af-8b46-449f-a976-9ecf58673fb6</string>
+</dict>
+</plist>

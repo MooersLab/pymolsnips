@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set radius of ball used to make solvent accessible surface.
+set solvent_radius, ${1:1.55};
+$0
+
+</string>
+    <key>keyEquivalent</key>
+    <string>solventRadius</string>
+    <key>name</key>
+    <string>Set radius of ball used to make solvent accessible surface.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>solventRadius</string>
+    <key>uuid</key>
+    <string>ae7bebae-3698-4527-aa81-39ff8aa4ef7b</string>
+</dict>
+</plist>

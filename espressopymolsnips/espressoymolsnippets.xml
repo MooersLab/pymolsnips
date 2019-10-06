@@ -516,8 +516,8 @@
             color density, ${3:mesh1};
             isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
             color green, ${4:mesh2};
-            isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
-            color red, ${5:mesh2};
+            isomesh ${5:mesh3}, fofc, -3.0, ${2:glycan};
+            color red, ${5:mesh3};
             $0]]></text>
             <syntax-context>text.pml</syntax-context>
             <key-equivalent>control shift option</key-equivalent>

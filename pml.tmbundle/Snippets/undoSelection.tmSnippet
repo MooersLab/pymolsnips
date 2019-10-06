@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Undo a selection.
+disable ${1:sele}; 
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>undoSelection</string>
+    <key>name</key>
+    <string>Undo a selection.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>undoSelection</string>
+    <key>uuid</key>
+    <string>49e60480-ab09-4024-bba2-33ef6b2152e5</string>
+</dict>
+</plist>

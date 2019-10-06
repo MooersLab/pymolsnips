@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Load a pdb file in the current directory.
+load ${1:my.pdb};
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>loadPDBfile</string>
+    <key>name</key>
+    <string>Load a pdb file in the current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadPDBfile</string>
+    <key>uuid</key>
+    <string>ece55032-425a-48c6-8923-304708e8855d</string>
+</dict>
+</plist>

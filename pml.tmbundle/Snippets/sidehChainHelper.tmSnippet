@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% In cartoons, hide the backbone atoms of selected residues when showing then as sticks.
+set cartoon_side_chain_helper, on;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>sidehChainHelper</string>
+    <key>name</key>
+    <string>In cartoons, hide the backbone atoms of selected residues when showing then as sticks.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sidehChainHelper</string>
+    <key>uuid</key>
+    <string>5eb982b6-cfb5-4295-9885-838538f8142e</string>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Rotate about axis.
+rotate ${1:x}, ${2:45}, ${3:pept}
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>rotate</string>
+    <key>name</key>
+    <string>Rotate about axis.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>rotate</string>
+    <key>uuid</key>
+    <string>9d989337-08dc-483d-b6c8-68de0381855a</string>
+</dict>
+</plist>

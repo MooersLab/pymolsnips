@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Turn on discrete colors between secondary structure elements.
+set cartoon_discrete_colors, on
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>discreteCartoonColoring</string>
+    <key>name</key>
+    <string>Turn on discrete colors between secondary structure elements.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>discreteCartoonColoring</string>
+    <key>uuid</key>
+    <string>89e8c8a2-9a0b-492c-988e-0060e867817e</string>
+</dict>
+</plist>

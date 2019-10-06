@@ -9,8 +9,8 @@ isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};
 color density, ${3:mesh1};
 isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
 color green, ${4:mesh2};
-isomesh ${5:mesh2}, fofc, -3.0, ${2:glycan};
-color red, ${5:mesh2};
+isomesh ${5:mesh3}, fofc, -3.0, ${2:glycan};
+color red, ${5:mesh3};
 """"
 load 4dgr.pdb
 # Make sure to rename map file so that 
@@ -22,5 +22,5 @@ isomesh mesh1, 2fofc, 1.0, glycan;
 color density, mesh1;
 isomesh mesh2, fofc, 3.0, glycan;
 color green, mesh2;
-isomesh mesh2, fofc, -3.0, glycan;
-color red, mesh2;
+isomesh mesh3, fofc, -3.0, glycan;
+color red, mesh3;

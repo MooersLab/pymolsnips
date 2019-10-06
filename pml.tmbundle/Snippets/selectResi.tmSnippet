@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select residues by a range of numbers.
+select se;2. resi 1-100
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>selectResi</string>
+    <key>name</key>
+    <string>Select residues by a range of numbers.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectResi</string>
+    <key>uuid</key>
+    <string>2997b51c-cd1e-4ca5-8f0e-5531ffd1d36d</string>
+</dict>
+</plist>

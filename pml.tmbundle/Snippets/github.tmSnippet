@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print url of README.md file of the pymolsnips repository.
+https://github.com/MooersLab/pymolsnips/blob/master/README.md
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>github</string>
+    <key>name</key>
+    <string>Print url of README.md file of the pymolsnips repository.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>github</string>
+    <key>uuid</key>
+    <string>43b6f533-3274-413c-b858-9e1168df8e11</string>
+</dict>
+</plist>

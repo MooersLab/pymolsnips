@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label SS. 
+alter ${1:}, ss='%1';
+label (%2),'%3';
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>labelSS</string>
+    <key>name</key>
+    <string>Label SS. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelSS</string>
+    <key>uuid</key>
+    <string>686c5625-3138-478a-96e2-89eae8e156d7</string>
+</dict>
+</plist>

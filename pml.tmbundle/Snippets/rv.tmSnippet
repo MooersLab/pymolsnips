@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Return settings in rounded format.
+run roundview.py;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>rv</string>
+    <key>name</key>
+    <string>Return settings in rounded format.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>rv</string>
+    <key>uuid</key>
+    <string>4678aabe-a106-447f-ae1e-eed1988ed2dc</string>
+</dict>
+</plist>

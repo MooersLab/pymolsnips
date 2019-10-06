@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+For example, some functions which were present but didn’t work:
+PyMOL\PYGZgt{}sc333
+PyMOL\PYGZgt{}run \PYG{l+s+se}{\PYGZbs{}\PYGZdl{}}HOME/Scripts/PyMOLScripts/supercell.py
+PyMOL\PYGZgt{}supercell \PYG{l+m}{3}, \PYG{l+m}{3}, \PYG{l+m}{3}, , orange, supercell333, \PYG{l+m}{1}
+Error: too many arguments \PYG{k}{for} supercell\PYG{p}{;} \PYG{l+m}{0} to \PYG{l+m}{5} expected, \PYG{l+m}{7} found.
+Usage: supercell \PYG{o}{[} a \PYG{o}{[}, b \PYG{o}{[}, c \PYG{o}{[}, object \PYG{o}{[}, color \PYG{o}{]]]]]}
+
+PyMOL\PYGZgt{}AOD
+Traceback \PYG{o}{(}most recent call last\PYG{o}{)}:
+File \PYG{l+s+s2}{\PYGZdq{}\PYGZti{}/pymolshortcuts.py\PYGZdq{}}, line \PYG{l+m}{406}, in AOD
+cmd.set\PYGZus{}color\PYG{o}{(}oxygen, \PYG{o}{[}\PYG{l+m}{1}.0,0.4,0.4\PYG{o}{])}
+NameError: global name \PYG{l+s+s1}{\PYGZsq{}oxygen\PYGZsq{}} is not defined
+
+PyMOL\PYGZgt{}BU
+PyMOL\PYGZgt{}run \PYG{l+s+se}{\PYGZbs{}\PYGZdl{}}HOME/Scripts/PyMOLScripts/quat3.py
+Traceback \PYG{o}{(}most recent call last\PYG{o}{)}:
+File \PYG{l+s+s2}{\PYGZdq{}/Applications/PyMOL.app/Contents/lib/python2.7/sitepackages/}
+\PYG{l+s+s2}{pymol/internal.py\PYGZdq{}}, line \PYG{l+m}{327}, in file\PYGZus{}read
+raise pymol.CmdException\PYG{o}{(}\PYG{l+s+s1}{\PYGZsq{}failed to open file \PYGZdq{}\PYGZpc{}s\PYGZdq{}\PYGZsq{}} \PYGZpc{} finfo\PYG{o}{)}
+CmdException: Error: failed to open file \PYG{l+s+s2}{\PYGZdq{}\PYGZti{}/Scripts/PyMOLScripts/quat3.py\PYGZdq{}}
+\end{Verbatim}
