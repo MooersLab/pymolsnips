@@ -480,11 +480,7 @@ I entered *set colorscheme bubblegum* to apply a light colorscheme to micro as s
 A PyMOL script file has been opened and is color highlighted.
 The text of the script file as enlargended for easier reading by entering `cmd-+` a number of times. 
 
-// ![colorscheme](https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png)
-
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme" />
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
