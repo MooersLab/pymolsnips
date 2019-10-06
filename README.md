@@ -381,7 +381,7 @@ The developers of Komodo Edit have merged with the developers of ActiveState Pyt
 The Community version of Komodo Edit has enough features for the occasional writer of code for PyMOL.
 
 The snippets are stored in separate files.
-The snippets are active for files with the  ``.pml` extension. 
+The snippets are active for files with the  ``.pml`` extension. 
 The snippets are stored in a folder called PML, which has to be created.
 On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`.
 
@@ -442,6 +442,7 @@ and then save your script file with the `.pml` file extension.
 
 
 <h3 name="micro"> micro (Universal) </h3>
+
 [Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
 Nonetheless, *micro* is easier to use than *vim* or *emacs*. 
 It is a terminal-based editor that has a number of plugins available including one for snippets.
