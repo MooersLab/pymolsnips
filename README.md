@@ -475,7 +475,7 @@ A lexer for syntax highlighting is in the file called called pml.yaml.
 This file can be donwloaded from the `micropymolsnips` folder above.
 This lexer is stored in the the hidden folder `.config/micro/syntax`.
 
-![Alt text](./_images/mircoBubbleGumColorScheme.png "Gallery")
+![Alt text](mircoBubbleGumColorScheme.png "micro color scheme")
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
