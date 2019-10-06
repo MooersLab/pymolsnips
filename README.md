@@ -443,24 +443,41 @@ and then save your script file with the `.pml` file extension.
 
 <h3 name="micro"> micro (Universal) </h3>
 
-[Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
+[Micro](https://github.com/zyedidia/micro) is an advance on the terminal-based editor nano. 
 Nonetheless, *micro* is easier to use than *vim* or *emacs*. 
-It is a terminal-based editor that has a number of plugins available including one for snippets.
-You do have to compile it to install it. 
+Like nano, it uses keybindings between keyboard shortcuts and commands to get work done.
+The collection of keybinding is defined in a jason file. 
+[Micro](https://micro-editor.github.io.) has binaries available for Mac, Windows, Linux, and three flavors of BSD
+
+Micro has a number of plugins available including one for snippets.
 You need to have Node.js installed. 
 
 On the Mac, it is best to use *micro* with the free iterm2.app terminal emulator.
-Install the *snippets* plugin by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
-All of the snippets for one language are in a single file. 
+
+Enter `micro` on the command line to start the editor.
+Control-E opens the command line at the bottom of the terminal window.
+Enter Control-Q to quit the command line.
+Enter Control-Q to quit micro.
+A list of key bindings are found ![here](https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md).
+
+Install the *snippets* plugin by entering `control-E` in micro to open a command panel, and then enter the command `plugin install snippets`.
+All of the snippets for one language are in a single file with the `.snippets` file extension. 
 In this case, the file is labeled `pml.snippets`.
-The snippets are installed in `.config/micro/plugins/snippets/snippets`.
+The snippets are installed in the folder `.config/micro/plugins/snippets`.
+Snippets for other program languages are found ![here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
+
+Alt-S is mapped to the **snipperinset** command which inserts the snippet specified by a tabtrigger name.
+Alt-W advances the cursort to the next tabstop.
+Alt-A ends the editing the snippet. 
+Alt-D deletes the snippet that is being edited.
 
 A lexer for syntax highlighting is in the file called called pml.yaml.
-This file is stored is found in the microsnippets folder above.
+This file can be donwloaded from the `micropymolsnips` folder above.
 This lexer is stored in the the hidden folder `.config/micro/syntax`.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+![Alt text](./_images/mircoBubbleGumColorScheme.png "Gallery")
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="snipmate"> snipmate (for vim, universal) </h3>
 
