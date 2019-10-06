@@ -453,6 +453,10 @@ Install the *snippets* plugin by entering `control-E` in micro to open a command
 All of the snippets for one language are in a single file. 
 The ultisnips library above should work with this editor. 
 
+A lexer for syntax highlighting is in the file called called pml.yaml.
+This file is stored is found in the microsnippets folder above.
+This lexer is stored in the the hidden folder `.config/micro/syntax`.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
