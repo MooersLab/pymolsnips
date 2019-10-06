@@ -263,7 +263,7 @@ CudaText snippets have names (i.e., descriptions), ids (i.e., tab triggers), and
 CudaText snippets are stored in the user's `Library` on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
 You may have to create the `Std.PML` folder.
 
-
+![](cudatext.gif)
 
 
 
@@ -381,7 +381,7 @@ The developers of Komodo Edit have merged with the developers of ActiveState Pyt
 The Community version of Komodo Edit has enough features for the occasional writer of code for PyMOL.
 
 The snippets are stored in separate files.
-The snippets are active for files with the  ``.pml` extension. 
+The snippets are active for files with the  ``.pml`` extension. 
 The snippets are stored in a folder called PML, which has to be created.
 On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`.
 
@@ -442,19 +442,47 @@ and then save your script file with the `.pml` file extension.
 
 
 <h3 name="micro"> micro (Universal) </h3>
-[Micro](https://github.com/zyedidia/micro) is like the nano editor but on steroids. 
+
+[Micro](https://micro-editor.github.io.) is an advance on the terminal-based editor nano. 
 Nonetheless, *micro* is easier to use than *vim* or *emacs*. 
-It is a terminal-based editor that has a number of plugins available including one for snippets.
-You do have to compile it to install it. 
+Like nano, it uses keybindings between keyboard shortcuts and commands to get work done.
+The collection of keybinding is defined in a jason file. 
+[Micro](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD
+
+Micro has a number of plugins available including one for snippets.
 You need to have Node.js installed. 
 
 On the Mac, it is best to use *micro* with the free iterm2.app terminal emulator.
-Install the *snippets* plugin by entering `control-E` in micro to open a command panel and then enter the command `plugin install snippets`.
-All of the snippets for one language are in a single file. 
-The ultisnips library above should work with this editor. 
+
+Enter `micro` on the command line to start the editor.
+Control-E opens the command line at the bottom of the terminal window.
+Enter Control-Q to quit the command line.
+Enter Control-Q to quit micro.
+A list of key bindings are found [here](https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md).
+
+Install the *snippets* plugin by entering `control-E` in micro to open a command panel, and then enter the command `plugin install snippets`.
+All of the snippets for one language are in a single file with the `.snippets` file extension. 
+In this case, the file is labeled `pml.snippets`.
+The snippets are installed in the folder `.config/micro/plugins/snippets`.
+Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
+
+Alt-S is mapped to the **snipperinset** command which inserts the snippet specified by a tabtrigger name.
+Alt-W advances the cursort to the next tabstop.
+Alt-A ends the editing the snippet. 
+Alt-D deletes the snippet that is being edited.
+
+A lexer for syntax highlighting is in the file called called pml.yaml.
+This file can be donwloaded from the `micropymolsnips` folder above.
+This lexer is stored in the the hidden folder `.config/micro/syntax`.
+
+Enter Control-Q and then enter *help color* to learn about the available color schemes and to learn about syntax highlighting.
+I entered *set colorscheme bubblegum* to apply a light colorscheme to micro as shown below.
+A PyMOL script file has been opened and is color highlighted.
+The text of the script file as enlargended for easier reading by entering `cmd-+` a number of times. 
+
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
 
 <h3 name="snipmate"> snipmate (for vim, universal) </h3>
 
