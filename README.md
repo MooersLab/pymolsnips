@@ -73,7 +73,7 @@ The animation below also demonstrates the use of mirrored tab stops where change
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
-[Alt text](./_images/Gallery.png "Gallery")
+[Alt text](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png "Gallery")
 
 A complete listing of the currently available snippets can be found by entering the tab trigger **lsSnips**.
 Do this at the bottom of the pml script file that you are editing to use as a reference after commenting it out with pound symbols. 
