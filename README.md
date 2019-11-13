@@ -292,7 +292,7 @@ Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Too
 
 ![](https://github.com/marevebro/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif)
 
-In addition, you need to edit the keybinding preferences **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. I used **Tab**. Press <enter> and then press "Allow" when the override window pops up. 
+In addition, you need to edit the keybinding preferences **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. I used **Tab**. Press 'enter' and then click "Allow" when the override window pops up. 
 Without making this edit, you will not be able to advance to the second and later tab stops. 
 
 The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
