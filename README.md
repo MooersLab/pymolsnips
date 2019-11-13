@@ -288,23 +288,24 @@ Binaries are  available for Mac OS, Linux, and Windows.
 The source code is also available.
 *Geany* has a plugin manager, and it is very easy to configure. 
 
-Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
-In addition, you need to edit the keybinding preferences **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. 
-Without making this edit, you will not be able to advance to the second and later tab stops. 
-I used **<Cntrl>Shift_L**, that is the left control and left shift. 
+Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`. You'll also need to add PyMOL as a group in that same file configuration.  It should read `#~ None=PyMOL` under Groups. 
 
-The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
-The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor. You'll need to add PyMOL as a filetype in the same filetype_extensions.conf. Under '[Groups] it should read #~ None=PyMOL
 ![](https://github.com/marevebro/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif)
 
+In addition, you need to edit the keybinding preferences **Move cursor in snippet** for under `Edit --> Preferences --> Keybindings` because it is blank by default. I used **Tab**. Press <enter> and then press "Allow" when the override window pops up. 
+Without making this edit, you will not be able to advance to the second and later tab stops. 
+
+The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
+The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor. 
+
 Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
-Make sure that there is only one section with the heading `[PyMOL]`.
+Make sure that there is only one section with the heading `[pymol]`. This heading is case sensitive. 
 
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops. 
 Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
 
-A to be developed pml language file is needed to enable syntax highlighting of pml files. 
+A to-be-developed pml language file is needed to enable syntax highlighting of pml files. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
