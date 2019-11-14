@@ -2,33 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>mainMenu</key>
-	<dict>
-		<key>excludedItems</key>
-		<array/>
-		<key>items</key>
-		<array/>
-		<key>submenus</key>
-		<dict>
-			<key>75A87BD4-366D-47F5-83B4-39EBCF450939</key>
-			<dict/>
-			<key>items</key>
-			<array/>
-			<key>name</key>
-			<string>labelFormatting</string>
-		</dict>
-	</dict>
-	<key>submenus</key>
-	<dict/>
-	<key>contactEmailRot13</key>
+	<key>contactEmail</key>
 	<string>blaine-mooers@ouhsc.edu</string>
 	<key>contactName</key>
 	<string>Blaine Mooers</string>
 	<key>description</key>
-	<string>Pymol.tmLanguage</string>
+	<string>Customized snippets for working more efficiently in LaTeX.</string>
 	<key>name</key>
-	<string>PyMOL.pml</string>
+	<string>PyMOL</string>
 	<key>uuid</key>
-	<string>16265E44-43CF-4072-887D-789461263B2F</string>
+	<string>e59324a4-f5eb-4e83-85ec-efcb8cb216f0</string>
 </dict>
 </plist>
