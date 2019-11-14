@@ -535,6 +535,52 @@ If you choose not to install them, you must deactivate them with the following c
 g:neosnippet#disable_runtime_snippets
 ```
 
+A minimal vimrc file for installing and using neosnippets is listed below:
+
+
+```vim
+if has('python3')
+endif
+
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Add only comment lines and Plugin commands between
+" call vundle#begin() and call vundle#end()
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" neosnippets uses deoplete to suggest snippets
+" This might be superior to ultisnips
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+
+call vundle#end()
+
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = '/opt/local/bin/python3.7'
+let g:pydiction_location = '/Users/blaine/.vim/bundle/pydiction/complete-dict'
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" i for swichting to the insert mode from normal mode;
+" ii for escape from insert mode to normal mode
+:inoremap ii  <Esc>
+
+" another means of escape to normal mode: Control-Carriage Return
+:inoremap <C-CR>  <Esc>
+```
+
+
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
