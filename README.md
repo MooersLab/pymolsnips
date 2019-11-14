@@ -571,6 +571,10 @@ let g:pydiction_location = '/Users/blaine/.vim/bundle/pydiction/complete-dict'
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
+" maximum width of deoplete window
+call deoplete#custom#source('_', 'max_menu_width', 80)
+
+
 " i for swichting to the insert mode from normal mode;
 " ii for escape from insert mode to normal mode
 :inoremap ii  <Esc>
