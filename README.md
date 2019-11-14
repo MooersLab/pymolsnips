@@ -139,6 +139,7 @@ The installation instructions are below for the following editors:
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
+  * <a href="#neosnippets"> Neosnippets </a>
   * <a href="#snipmate"> Snipmate (vim, neovim) </a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate </a>
@@ -487,6 +488,110 @@ The text of the script file as enlargended for easier reading by entering `cmd-+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
+
+<h3 name="neosnippets">neosnippets(for vim, universal) </h3>
+
+[Neosnippets](https://github.com/Shougo/neosnippet.vim) is a snippet management Plugin for the text editors vim and neovim.
+There is the option to utilize deoplete(https://github.com/Shougo/deoplete.nvim) to suggest in-line alternate snippets.
+Deoplete requires neovim or vim versions greater than 8.0.
+It also requires Python3. 
+You have to enable the Python3 interface with pynvim which you can install with this command:
+
+```bash
+pip3 install --user pynvim
+# Better yet, specific the python interpreter to be used.
+sudo -H /opt/local/bin/python3.7 -m pip install pynvim 
+```
+
+Check in vim or neovim if python3 is enabled by entering 
+
+```vim
+:echo has("python3")
+``` 
+If 1 is returned, you have python3 installed. 
+
+To install the plugins with Vundle, add the following to the Vundle Plugin section of the  `.vimrc` file.
+
+```vim
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+```
+
+To use deoplete, add the following setting to your vimrc file.
+
+```vim
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+```
+
+To install neosnippets, add the following to the Vundle Plugin section of the  `.vimrc` file.
+
+```vim
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+```
+
+The last command is optional because installing default snippets is optional. 
+If you choose not to install them, you must deactivate them with the following command added to the `.vimrc` file.
+
+```vim
+g:neosnippet#disable_runtime_snippets
+```
+
+A minimal vimrc file for installing and using neosnippets is listed below:
+
+
+```vim
+if has('python3')
+endif
+
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Add only comment lines and Plugin commands between
+" call vundle#begin() and call vundle#end()
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" neosnippets uses deoplete to suggest snippets
+" This might be superior to ultisnips
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+
+call vundle#end()
+
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = '/opt/local/bin/python3.7'
+let g:pydiction_location = '/Users/blaine/.vim/bundle/pydiction/complete-dict'
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" maximum width of deoplete window
+call deoplete#custom#source('_', 'max_menu_width', 80)
+
+
+" i for swichting to the insert mode from normal mode;
+" ii for escape from insert mode to normal mode
+:inoremap ii  <Esc>
+
+" another means of escape to normal mode: Control-Carriage Return
+:inoremap <C-CR>  <Esc>
+```
+
+
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 <h3 name="snipmate"> snipmate (for vim, universal) </h3>
 
 [Vim](https://vimawesome.com) is the terminal based text editor vi on steriods.
@@ -578,16 +683,155 @@ This editor can be used to view and change the code in the snippets.
 
 <h3 name="ultisnips"> ultisnips (for vim, universal) </h3>
 
-*vim* is the terminal based text editor vi on steroids.
+*vim* is the improved terminal-based text editor vi.  on steroids.
 It is free. 
-The *vim* keybindings for text editing are so useful that the they are available for the rival text editor emacs.
+The *vim* keybindings for text editing are so useful that the they are available for the rival text editor emacs as while as many other text editors.
+Once you learn enough vim to be an effective user of vim, you will wished that you had learned it years earlier.
+The secret to keeping your sanity during the first week of using vim is to rememer to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because it is normal the normal mode that issue commands.
+
 A newer branch of *vim* called *neovim* is available. 
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
+Some versions of vim like MacVim are packaged in a gui-interface.
 
+Vim lacks native support for snippets.
+We have to extend vim with a plugin.
+There are several plugins for managing snippets.
+
+Snipmate is an early but stable plugin manager.
+It does not depend on Python.
+
+UltiSnips is a more recent plugin manager that does depend on Python [ultisnip](https://github.com/sirver/UltiSnip).
+Vim has to be installed with the option of using Python enabled to be able to use ultisnips. 
+Ultisnips provided a large number of advanced features for snippets.
+The format of the snippets for snipmate and ultisnips are different but ultinsips can read in snipmate snippets.
+
+[Neosnippets](https://github.com/Shougo/neosnippet.vim) is an even newer snippet package.
+The formatting of the snippets differs from Snipmate and ultisnips.
+Neosnippets has the advantage of using the [deoplete](https://github.com/Shougo/deoplete.nvim#screenshots) interface to select snippets in-line via a popup menu.
+The use of Neosnippets does not require the use of deoplete.
+Experienced users may find deopletes the pop-up menus to be distracting.
+Deoplete may be useful as a training tool that can be disenable when it is no longer needed.
+
+Support for Snipmate and Neosnippets is described elsewhere on this page. 
+
+The snippets in all three snippet managers are stored in a single file that is specific to a programming language.
+ 
 The addition of a plugin to *Vim* requires the editing of startup `.vimrc` file. 
 [ultisnip](https://github.com/sirver/UltiSnip) is a Plugin that manages snippets and that works with *vim* and *neovim*. 
 It is a more recent alternative to *snipmate*. 
 The snippets are stored in a single file that is language specific.
+
+In the following setup, we use the Vundle Plugin manager.
+The ultisnips plugin is the snippet handling engine, but it does not ship with libraries of snippets.
+The PyMOL.snippets could be stored inside the ultisnips directory, but they would be lost if you delete the ultisnips directory.
+Create a subdirectory called **myultisnips** at the top level of the **.vim** directory.
+Move the PyMOL.snippets file to this subdirectory.
+We inform vim of this location when customizing the vimrc file for ultisnips several paragraphs below.
+
+Ultisnips depends on Python3.
+You may have to install Python3 to be able to use ultisnips.
+You can point ultisnips to a particular Ptyhon3 interpreter with the following command in your vimrc file.
+At the top of the file, add
+
+```vim
+if has('python3')
+endif
+```
+
+In the Vundle Plugin section of the vimrc file, add the following lines:
+
+```vim
+" Ultisnips requires vim installed with python. 
+Plugin 'SirVer/ultisnips'
+```
+
+Below the Plugin section, add the following:
+
+```vim
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = expand('/opt/local/bin/python3.7')
+
+" UltiSnips related commands
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+```
+
+Some vim plugins require that you add a flag to your vimrc file to turn off filetype detection.
+You can set the filetype for a pml file with the command `:set filetype=PyMOL`. 
+To enable autodetection of the filetype in this situation, we need to make a PyMOL.vim file in the *ftdetect* subdirecotry of the *ultisnips* directory. Insert the following line into PyMOL.vim and save it.
+
+```bash
+cd ~/.vim/bundle/ultisnips/ftdetect/
+touch PyMOL.vim
+vim PyMOL.vim
+% add this line
+au BufNewFile,BufRead *.pml set filetype=PyMOL
+```
+
+Next, make a ftdetect directory at the top level of the .vim directory.
+Vim looks for this directory in this location. Next, make a soft link to link the ftdetect folder inside the ultisnips subfolder to this new folder. 
+
+```bash
+mkdir -p ~/.vim/ftdetect/
+ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
+```
+
+To ignore snippets from other plugins, add the following line below the Plugin section to your vimrc file.
+
+```vim
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+```
+
+To test your set up, open a pml script file.
+Enter on the command line in vim `:set filetype?`.
+You should bet back `filetype=PyMOL`
+
+Here is a minimal, no-frills vimrc file that works with the PyMOL.snippets file.
+
+```vim
+if has('python3')
+endif
+
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Add only comment lines and Plugin commands between
+" call vundle#begin() and call vundle#end()
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Ultisnips requires vim installed with python. This is just the engine.
+Plugin 'SirVer/ultisnips'
+
+call vundle#end()
+
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = expand('/opt/local/bin/python3.7')
+
+" UltiSnips related commands
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+
+
+" i for swichting to the insert mode from normal mode;
+" ii for escape from insert mode to normal mode
+:inoremap ii  <Esc>
+
+" another means of escape to normal mode: Control-Carriage Return
+:inoremap <C-CR>  <Esc>
+```
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
