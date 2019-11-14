@@ -139,6 +139,7 @@ The installation instructions are below for the following editors:
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
+  * <a href="#neosnippets"> Neosnippets </a>
   * <a href="#snipmate"> Snipmate (vim, neovim) </a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate </a>
@@ -487,7 +488,7 @@ The text of the script file as enlargended for easier reading by entering `cmd-+
 
 <h3 name="neosnippets">neosnippets(for vim, universal) </h3>
 
-[Neosnippets]() is a snippet management Plugin for the text editors vim and neovim.
+[Neosnippets](https://github.com/Shougo/neosnippet.vim) is a snippet management Plugin for the text editors vim and neovim.
 There is the option to utilize deoplete(https://github.com/Shougo/deoplete.nvim) to suggest in-line alternate snippets.
 Deoplete requires neovim or vim versions greater than 8.0.
 It also requires Python3. 
@@ -528,7 +529,7 @@ Plugin 'Shougo/neosnippet-snippets'
 ```
 
 The last command is optional because installing default snippets is optional. 
-If you choose not to install them, you must deactivate them with
+If you choose not to install them, you must deactivate them with the following command added to the `.vimrc` file.
 
 ```vim
 g:neosnippet#disable_runtime_snippets
