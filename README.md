@@ -586,6 +586,126 @@ The addition of a plugin to *Vim* requires the editing of startup `.vimrc` file.
 It is a more recent alternative to *snipmate*. 
 The snippets are stored in a single file that is language specific.
 
+In the following setup, we use the Vundle Plugin manager.
+The ultisnips plugin is the snippet handling engine, but it does not ship with libraries of snippets.
+The PyMOL.snippets could be stored inside the ultisnips directory, but they would be lost if you delete the ultisnips directory.
+Create a subdirectory called **myultisnips** at the top level of the **.vim** directory.
+Move the PyMOL.snippets file to this subdirectory.
+We inform vim of this location when customizing the vimrc file for ultisnips several paragraphs below.
+
+Move the PyMOL.sni
+
+
+Ultisnips depends on Python3.
+You may have to install Python3 to be able to use ultisnips.
+You can point ultisnips to a particular Ptyhon3 interpreter with the following command in your vimrc file.
+At the top of the file, add
+
+```vim
+if has('python3')
+endif
+```
+
+In the Vundle Plugin section of the vimrc file, add the following lines:
+
+```vim
+" Ultisnips requires vim installed with python. 
+Plugin 'SirVer/ultisnips'
+
+
+```
+
+Below the Plugin section, add the following:
+
+```vim
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = expand('/opt/local/bin/python3.7')
+
+" UltiSnips related commands
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+```
+
+
+
+Some vim plugins require that you add a flag to your vimrc file to turn off filetype detection. You can set the filetype for a pml file with the command `:set filetype=PyMOL`. To enable autodetection of the filetype in this situation, we need to make a PyMOL.vim file in the *ftdetect* subdirecotry of the *ultisnips* directory. Insert the following line into PyMOL.vim and save it.
+
+```bash
+cd ~/.vim/bundle/ultisnips/ftdetect/
+touch PyMOL.vim
+vim PyMOL.vim
+% add this line
+au BufNewFile,BufRead *.pml set filetype=PyMOL
+```
+
+Next, make a ftdetect directory at the top level of the .vim directory. Vim looks for this directory in this location. Next, make a soft link to link the ftdetect folder inside the ultisnips subfolder to this new folder. 
+
+```bash
+mkdir -p ~/.vim/ftdetect/
+ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
+```
+
+To ignore snippets from other plugins, add the following line below the Plugin section to your vimrc file.
+
+```vim
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+```
+
+To test your set up, open a pml script file.
+Enter :set filetype?
+You should bet back 
+filetype=pml
+
+Here is a minimal, no-frills vimrc file that works with the PyMOL.snippets file.
+
+```vim
+if has('python3')
+endif
+
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Add only comment lines and Plugin commands between
+" call vundle#begin() and call vundle#end()
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Ultisnips requires vim installed with python. This is just the engine.
+Plugin 'SirVer/ultisnips'
+
+call vundle#end()
+
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = expand('/opt/local/bin/python3.7')
+
+" UltiSnips related commands
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+
+
+" i for swichting to the insert mode from normal mode;
+" ii for escape from insert mode to normal mode
+:inoremap ii  <Esc>
+
+" another means of escape to normal mode: Control-Carriage Return
+:inoremap <C-CR>  <Esc>
+```
+
+
+
+
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
