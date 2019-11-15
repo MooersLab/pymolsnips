@@ -363,7 +363,7 @@ The **Snippet** plugin has to be turned on.
 
 The snippets are stored in a single `xml` file. 
 The storage location for this file is not in the documentation.
-Try the following on Mac (one of the four) and Linux (first three):
+Try the following on Mac (last one of the four) and Linux (first three):
 
 ```bash
 /Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml
@@ -371,6 +371,9 @@ Try the following on Mac (one of the four) and Linux (first three):
 /Users/blaine/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/blaine/Library/Application\ Support/kate/MySnippets/
 ```
+May have to create the directory MySnippets on MacOS.
+
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
