@@ -184,19 +184,19 @@ There is a very extensive collection of plugins available for *Atom*.
 The installation and updating of plugins is quite slow compared to other editors. 
 
 <details>
-	<summary>**Installing and using snippets with Atom**</summary>
-	<p>
-		You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
-		The package installer is very intuitive.
-		The snippets for all languages are stored in a single file that is called `snippets.cson`.
-		This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
-		You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
-		PyMOL snippets for *Atom* to your existing `snippets.cson` file.
-	</p>
-	<p>
-		Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
-		You can install this lexer via the plugin manager by selecting the `language-pymol package`. 
-	</p></details>
+	<summary><h2>Installing and using snippets with Atom </h2></summary>
+	
+You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
+The package installer is very intuitive.
+The snippets for all languages are stored in a single file that is called `snippets.cson`.
+This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
+You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
+PyMOL snippets for *Atom* to your existing `snippets.cson` file.
+
+Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
+You can install this lexer via the plugin manager by selecting the `language-pymol package`. 
+	
+</details>
 	
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 	
