@@ -184,7 +184,9 @@ There is a very extensive collection of plugins available for *Atom*.
 The installation and updating of plugins is quite slow compared to other editors. 
 
 <details>
-<summary> ## Installing and using snippets with Atom </summary>
+<summary>
+## Installing and using snippets with Atom 
+</summary>
 	
 You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
 The package installer is very intuitive.
