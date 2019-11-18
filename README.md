@@ -171,26 +171,33 @@ know about 5% of the options to become productive with these editors.
 
 <h3 name="atom" > Atom (Universal) </h3>
 
-[*Atom*](https://atom.io) is a favorite of professional programmers because it is highly extendable and customizable. They advertise themselves as a "hackable text editor".
-It integrates with GitHub nicely and the GUI is very attractive.
-
-I am not as smitten with *Atom* as other programmers.
-I found that *Atom's* startup speed bogs down as more plugins are added. 
-The work-around is to always keep *Atom* open. 
-
-There is a very extensive collection of plugins available for *Atom*.
-The installation and updating of plugins is quite slow compared to other editors.
-
-You will have to install the `snippets package` to be able to use the above PyMOL snippets. 
-The package installer is very intuitive.
-The snippets for all languages are stored in a single file that is called `snippets.cson`.
-This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
-You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for *Atom* to your existing `snippets.cson` file.
-
-Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
-You can install this lexer via the plugin manager by selecting the `language-pymol package`. 
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<details>
+	<summary>Atom</summary>
+	
+	<p>
+	[*Atom*](https://atom.io) is a favorite of professional programmers because it is highly extendable and customizable. They advertise themselves as a "hackable text editor". 
+	It integrates with GitHub nicely and the GUI is very attractive.
+	
+	I am not as smitten with *Atom* as other programmers.
+	I found that *Atom's* startup speed bogs down as more plugins are added. 
+	The work-around is to always keep *Atom* open. 
+	
+	There is a very extensive collection of plugins available for *Atom*.
+	The installation and updating of plugins is quite slow compared to other editors. 
+	
+	You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
+	The package installer is very intuitive.
+	The snippets for all languages are stored in a single file that is called `snippets.cson`.
+	This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
+	You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for *Atom* to your existing `snippets.cson` file.
+	
+	Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
+	You can install this lexer via the plugin manager by selecting the `language-pymol package`. 
+	
+	<A href=#FASTLINKS2>Return to list of editors above.</A>
+	
+	</p>
+	</details>
  
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
