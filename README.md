@@ -197,7 +197,7 @@ know about 5% of the options to become productive with these editors.
 	<A href=#FASTLINKS2>Return to list of editors above.</A>
 	
 	</p>
-	</details>
+</details>
  
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
