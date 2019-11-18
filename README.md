@@ -196,10 +196,8 @@ PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
 You can install this lexer via the plugin manager by selecting the `language-pymol package`. 
 	
-</details>
-	
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-	
+</details>	
  
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
@@ -239,9 +237,9 @@ All of the snippets for PyMOL are in this single file.
 Until the PyMOL language is available for *Brackets*, use Python to get syntax highlighting.
 This means that the PyMOL file needs a file extension of `.py` while it is being edited in *Brackets*.
 Save this file with the `.pml` extension to be able to use it in PyMOL.
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="cudatext"> CudaText (all) </h3>
 
@@ -271,9 +269,9 @@ The files have the extensions of `.cuda-snippet`.
 You may have to create the `Std.PML` folder.
 
 ![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatext.gif)
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="espresso"> Espresso (Mac) </h3>
 	
@@ -313,10 +311,9 @@ The snippets have tab stops, but there is no support for the mirroring of tab st
 Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
 
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files. 
-</details>
-
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="gedit"> gedit (Universal) </h3>
 
@@ -329,10 +326,9 @@ The snippets are stored in a single file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
 
-</details>
-
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="jupyter"> Jupyter Notebook, JupyterLab (Universal)</h3>
 	
@@ -351,10 +347,10 @@ $ conda install -c conda-forge jupyterlab
 ```
 
 Once installed, enter `jupyter lab` into the launch. *JupyterLab* uses your browser to run and a log of your activity is recorded. 
-</details>
 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 	
@@ -375,10 +371,9 @@ Try the following on Mac (one of the four) and Linux (first three):
 /Users/blaine/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/blaine/Library/Application\ Support/kate/MySnippets/
 ```
-</details>
-
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 	
@@ -400,9 +395,9 @@ The snippet file can also be selected through the GUI.
 A pop-up menu displays the option to insert a snippet. 
 There are tab stops and highlighted default parameter values.
 However, there is no mirroring of tab stops at this time. 
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="LightTable"> Light Table (Universal) </h3>
 	
@@ -451,9 +446,9 @@ There is not a `pml` language available yet for *Light Table*.
 Python will have to do as the language for now. 
 Use `.py` as your file extension while editing your script file in Light Table,
 and then save your script file with the `.pml` file extension.
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="micro"> Micro (Universal) </h3>
 	
@@ -499,15 +494,15 @@ A PyMOL script file has been opened and is color highlighted.
 You can make the tex larger for easier reading by entering `cmd-+` a number of times. 
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/images/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="neosnippets">Neosnippets(for vim, universal) </h3>
 	
 [*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
 <details>
-<summary><b>Installing and using snippets with Neosnippets</></summary>
+<summary><b>Installing and using snippets with Neosnippets</b></summary>
 	
 There is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) to suggest in-line alternate snippets.
 *Deoplete* requires *neovim* or *vim* versions greater than 8.0.
@@ -603,9 +598,9 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 " another means of escape to normal mode: Control-Carriage Return
 :inoremap <C-CR>  <Esc>
 ```
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="snipmate"> SnipMate (for vim, universal) </h3>
 	
@@ -642,9 +637,9 @@ You can ignore that step and just move `pymolsnips` to `~/Library/Application Su
 Restart *Sublime Text 3*, open a PyMOL script file, and then enter "ao" and  hit tab. 
 Sixteen lines of code should appear. 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="TextMate">TextMate (tm, Mac only)</h3>
 	
@@ -692,10 +687,10 @@ This editor can be used to view and change the code in the snippets.
 <p align="center">
 	<img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger" />
 </p>
-</details>
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
+</details>
 
 <h3 name="UltiSnips"> UltiSnips (for vim, universal) </h3>
 	
@@ -843,9 +838,9 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 " another means of escape to normal mode: Control-Carriage Return
 :inoremap <C-CR>  <Esc>
 ```
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 	
@@ -881,9 +876,9 @@ Open a file with a `.pml` file extension.
 You should see `pml` in the lower right on the bottom panel. 
 You should also see syntax highlighting of the text in the `pml` script file. 
 Type the tab trigger `ao` to test the insertion of the snippet for the code that creates the ambient occlusion effect. 
-</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
 	
