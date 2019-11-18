@@ -16,7 +16,7 @@ Most text editors allow the user to add a library of code fragments or "snippets
   * <a href="#gallery"> Gallery of snippets and their output </a>
   * <a href="#categories"> Snippet categories</a>
   * <a href="#tutorials">Tutorial videos</a>
-  * <a href="#install">Snippet installation instructions for each editor</a>
+  * <a href="#install">Installing snippets for each editor</a>
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
 
@@ -184,7 +184,7 @@ There is a very extensive collection of plugins available for *Atom*.
 The installation and updating of plugins is quite slow compared to other editors. 
 
 <details>
-<summary>Installation and usage of snippets with Atom</summary>
+<summary> ## Installing and using snippets with Atom </summary>
 	
 You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
 The package installer is very intuitive.
@@ -225,7 +225,7 @@ However, *Brackets* now has support for a large number of languages.
 *Brackets* provides a quick live-preview so changes in the `pml` code is deployed immediately in the preview. 
 
 <details>
-<summary>Installation and usage of snippets with Brackets</summary>
+<summary> ## Installing and using snippets with Brackets </summary>
 	
 Go to the extension manager. 
 Search for the `brackets-snippets (by EDC)` and install it.
@@ -251,7 +251,7 @@ A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons ma
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
 <details>
-<summary>Installation and usage of snippets with Cudatext</summary>
+<summary> ## Installing and using snippets with Cudatext</summary>
 	
 *CudaText* uses Python3 based plugins. 
 *CudaText* expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
@@ -291,7 +291,7 @@ The source code is also available.
 *Geany* has a plugin manager, and it is very easy to configure. 
 
 <details>
-<summary>Installing and using snippets with Geany</summary>
+<summary> ## Installing and using snippets with Geany</summary>
 	
 Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`. You'll also need to add PyMOL as a group in that same file configuration.  It should read `#~ None=PyMOL` under Groups. 
 
@@ -311,20 +311,24 @@ The snippets have tab stops, but there is no support for the mirroring of tab st
 Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
 
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files. 
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <h3 name="gedit"> gedit (Universal) </h3>
+
 <details>
-<summary<Installing and using snippets with gedit</summary>
+<summary< ## Installing and using snippets with gedit </summary>
 
 [*gedit*](https://gedit.en.softonic.com/mac) is often available on the computers running Linux OS at national labs. 
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 The snippets are stored in a single file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
+
 </details>
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -336,7 +340,7 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 *JuptyerLab* can read and run *Jupyter Notebooks* but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
 
 <details>
-<summary>Installing and using snippets with Jupyter Notebook</summary>
+<summary>## Installing and using snippets with Jupyter Notebook </summary>
 	
 [*JupyterLab*](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) can be installed with `conda`, `pip`,`pipenv`, or `docker`.
 To install using `conda`, enter the follow command in the bash command line:
@@ -346,13 +350,15 @@ $ conda install -c conda-forge jupyterlab
 
 Once installed, enter `jupyter lab` into the launch. *JupyterLab* uses your browser to run and a log of your activity is recorded. 
 </details>
+
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 	
 [*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux. 
 <details>
-<summary>Installing and using snippets with kate</summary>
+<summary> ## Installing and using snippets with kate </summary>
 	
 If installed with macports, the app resides in `/Applications/macports/kate.app`.
 The snippet plugin has to be turned on. *kate* requires macOS 10.14 or newer. 
@@ -368,6 +374,8 @@ Try the following on Mac (one of the four) and Linux (first three):
 /Users/blaine/Library/Application\ Support/kate/MySnippets/
 ```
 </details>
+
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
@@ -377,7 +385,7 @@ The developers of *Komodo Edit* have merged with the developers of ActiveState P
 The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL.
 
 <details>
-<summary>Installing and using snippets with Komodo Edit</summary>
+<summary> ## Installing and using snippets with Komodo Edit </summary>
 	
 The snippets are stored in separate files.
 The snippets are active for files with the  `.pml` extension. 
@@ -407,7 +415,7 @@ The plugin manager can be used to install plugins, update them, and gain access 
 This documentation is on a GitHub website. 
 
 <details>
-<summary>Installing and using snippets with Light Table</summary>
+<summary> ## Installing and using snippets with Light Table </summary>
 	
 The installation of plugins in *Light Table* is very fast. 
 The number of available plugins is not as extensive as for *Atom, Sublime Text, TextMate,* or *Visual Studio Code*. 
@@ -454,7 +462,7 @@ The collection of keybinding is defined in a `json` file.
 [*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD
 
 <details>
-<summary>Installing and using snippets with Micro</summary>
+<summary>## Installing and using snippets with Micro </summary>
 	
 *Micro* has a number of plugins available including one for snippets.
 You need to have `Node.js` installed. 
@@ -497,7 +505,7 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 	
 [*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
 <details>
-<summary>Installing and using snippets with Neosnippets</summary>
+<summary>## Installing and using snippets with Neosnippets</summary>
 	
 There is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) to suggest in-line alternate snippets.
 *Deoplete* requires *neovim* or *vim* versions greater than 8.0.
@@ -620,7 +628,7 @@ The free trial period is infinite.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers. 
 
 <details>
-<summary>Installing and using snippets with SnipMate</summary>
+<summary>## Installing and using snippets with SnipMate</summary>
 	
 The snippets are stored in separate files with the file extension `.sublime-snippet`. 
 
@@ -651,7 +659,7 @@ The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 b
 Chapter 6 in the book by Gray provides a good overview of the features of snippets in *Textmate*.
 
 <details>
-<summary>Installing and using snippets with TextMate</summary>
+<summary>## Installing and using snippets with TextMate</summary>
 	
 Each snippet is stored in a separate file with the file extension `.tmSnippet`.
 Each snippet file has a unique uuid string.
@@ -704,7 +712,7 @@ UltiSnips provides a large number of advanced features for snippets.
 UltinSips can read SnipMate snippets.
 
 <details>
-<summary>Installing and using snippets with UltiSnips</summary>
+<summary>## Installing and using snippets with UltiSnips</summary>
 	
 To add a plugin to *vim* you'll need to edit the startup `.vimrc` file. 
 
@@ -851,7 +859,7 @@ The lexer will be activated when a `pml` file is opened.
 Autocompletion of the snippet tab triggers and previews of the snippet's code are very helpful for avoiding the insertion of the wrong snippet. 
 
 <details>
-<summary>Installing and using snippets with Visual Studio Code</summary>
+<summary>### Installing and using snippets with Visual Studio Code</summary>
 	
 From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application Support/Code/User/snippets` on the Mac, `$HOME/APPDATA\Code\User\snippets\pml.json` on Windows, and `$HOME/.config/Code/User/snippets/pml.json` on Linux.
 
