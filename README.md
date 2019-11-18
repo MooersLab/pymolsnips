@@ -69,12 +69,16 @@ The animation below also demonstrates the use of mirrored tab stops where change
 </p>
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
-
+<details>
+<summary>See what you can make with snippets!</summary>
+	
 ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery")
-
+</details>
 
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
-
+<details>
+<summary>Here are some snippet categories></summary>
+	
 - Alternate locators
 - Analysis
 - Change orientation
@@ -110,6 +114,7 @@ The animation below also demonstrates the use of mirrored tab stops where change
 - workshop
 
 <A href=#FASTLINKS>Return to quick links section at top</A>
+</details>
 
 <h2> <A name="tutorials">Videos</A></h2>
 
