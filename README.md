@@ -171,7 +171,7 @@ know about 5% of the options to become productive with these editors.
 
 <h3 name="atom" > Atom (Universal) </h3>
 
-*[Atom]*(https://atom.io) is a favorite of professional programmers because it is highly extendable and customizable. They advertise themselves as a "hackable text editor".
+[*Atom*](https://atom.io) is a favorite of professional programmers because it is highly extendable and customizable. They advertise themselves as a "hackable text editor".
 It integrates with GitHub nicely and the GUI is very attractive.
 
 I am not as smitten with *Atom* as other programmers.
@@ -194,7 +194,7 @@ You can install this lexer via the plugin manager by selecting the `language-pym
  
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
-*[BBEdit]*(https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
+[*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
 Major upgrades require additional fees. You will need macOS 10.14.2 or later. 
 
 The snippet system for *BBedit* is simple and elegant.
@@ -213,7 +213,7 @@ There is also presently the lack of a PyMOL lexer for syntax highligihting.
 
 <h3 name="brackets"> Brackets (Universal) </h3>
 
-The development of *[Brackets]*(http://brackets.io) is lead by a team at Adobe.
+The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
 *Brackets* is designed for web developers with a focus on html, css, and javascript.
 However, *Brackets* now has support for a large number of languages. 
 *Brackets* provides a quick live-preview so changes in the `pml` code is deployed immediately in the preview. 
@@ -234,7 +234,7 @@ Save this file with the `.pml` extension to be able to use it in PyMOL.
 
 <h3 name="cudatext"> CudaText (all) </h3>
 
-*[CudaText]*(http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal. 
+[*CudaText*](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal. 
 *Cudatext* is open source.
 Its predecessor was *SynWrite*, which is no longer supported. 
 *CudaText* has numerous plugins available to it.
@@ -264,7 +264,7 @@ You may have to create the `Std.PML` folder.
 
 <h3 name="espresso"> Espresso (Mac) </h3>
 
-*[Espresso]*(https://espressoapp.com/) is a proprietary test editor for the Mac.
+[*Espresso*](https://espressoapp.com/) is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app. 
 The snippets are stored in a single `.xml` file. 
 
@@ -273,7 +273,7 @@ The snippets are stored in a single `.xml` file.
 
 <h3 name="geany"> Geany (Universal) </h3>
 
-*[Geany]*(https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
+[*Geany*](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
 *Geany* is written in C and C++. 
 Binaries are  available for Mac OS, Linux, and Windows.
 The source code is also available.
@@ -303,7 +303,7 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 
 <h3 name="gedit"> gedit (Universal) </h3>
 
-*[gedit]*(https://gedit.en.softonic.com/mac) is often available on the computers running Linux OS at national labs. 
+[*gedit*](https://gedit.en.softonic.com/mac) is often available on the computers running Linux OS at national labs. 
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 The snippets are stored in a single file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`. 
@@ -332,7 +332,7 @@ Once installed, enter `jupyter lab` into the launch. *JupyterLab* uses your brow
 
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 
-*[kate]*(https://kate-editor.org/get-it/) is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux. 
+[*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux. 
 If installed with macports, the app resides in `/Applications/macports/kate.app`.
 The snippet plugin has to be turned on. *kate* requires macOS 10.14 or newer. 
 
@@ -352,7 +352,7 @@ Try the following on Mac (one of the four) and Linux (first three):
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 
-*[Komodo Edit]*(https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
+[*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
 The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
 The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL.
 
@@ -373,7 +373,7 @@ However, there is no mirroring of tab stops at this time.
 
 <h3 name="LightTable"> Light Table (Universal) </h3>
 
-*[Light Table]*(http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+[*Light Table*](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
 Those users who have dabbled in *emacs* will recognize the syntax of the settings in behavior files which remind me of *emacs* init files.
 *Light Table* is like a GUI version of *emacs*.
 It has very an attractive, uncluttered GIU. 
@@ -421,7 +421,7 @@ and then save your script file with the `.pml` file extension.
 
 <h3 name="micro"> Micro (Universal) </h3>
 
-*[Micro]*(https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*. 
+[*Micro*](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*. 
 Nonetheless, *Micro* is easier to use than *vim* or *emacs*. 
 Like *nano*, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a `json` file. 
@@ -466,7 +466,7 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 
 <h3 name="neosnippets">Neosnippets(for vim, universal) </h3>
 
-*[Neosnippets]*(https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
 There is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) to suggest in-line alternate snippets.
 *Deoplete* requires *neovim* or *vim* versions greater than 8.0.
 It also requires Python3. 
@@ -567,7 +567,7 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 <h3 name="snipmate"> SnipMate (for vim, universal) </h3>
 
-*[Vim]*(https://vimawesome.com) is the terminal based text editor *vi* on steriods.
+[*Vim*](https://vimawesome.com) is the terminal based text editor *vi* on steriods.
 It is free. 
 The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs*.
 
@@ -575,13 +575,13 @@ A newer branch of *vim* called *neovim* is available.
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
 The addition of a plugin requires the editing of startup `.vimrc` file.
 
-*[SnipMate]*(https://github.com/garbas/vim-snipmate)
+[*SnipMate*](https://github.com/garbas/vim-snipmate)
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
 
-*[Sublime Text 3]*(https://www.sublimetext.com/3s://www.sublimetext.com/) is a GUI-based editor. 
+[*Sublime Text 3*](https://www.sublimetext.com/3s://www.sublimetext.com/) is a GUI-based editor. 
 The free trial period is infinite. 
 *Sublime Text 3* starts up much faster than the other text editors for programmers.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers. 
@@ -601,7 +601,7 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 <h3 name="TextMate">TextMate (tm, Mac only)</h3>
 
-*[TextMate]*(https://macromates.com) is freely available but only for Mac OS.
+[*TextMate*](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
 There is a large library of plugins available. 
 
@@ -657,7 +657,7 @@ The secret to keeping your sanity while using *vim* is to remember to escape fro
 We have to extend *vim* with a plugin.
 There are several plugins for managing snippets.
 
-[UltiSnips](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
+[*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
 *vim* has to be installed with the option of using Python enabled to be able to use *UltiSnips*. 
 UltiSnips provides a large number of advanced features for snippets.
 UltinSips can read SnipMate snippets.
@@ -796,7 +796,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 
 <h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
 
-*[Visual Studio Code]*(https://code.visualstudio.com) (VSC) is a free editor from Microsoft. 
+[*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free editor from Microsoft. 
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
 
 The installation of plugins is painless. 
@@ -837,7 +837,7 @@ Like *vim*, *emacs* can be installed as a stand-a-lone application or via a soft
 There are several flavors of *emacs*.
 *Spacemacs* is a version that has a gentler learning curve. 
 
-The *[yasnippets]*(https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*. 
+The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*. 
 This package is installed with a builtin package manager.
 
 Each snippet is stored in a single file. 
