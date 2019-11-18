@@ -1,7 +1,9 @@
 
 
-The PyMOL macro language (pml) is used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport. 
-These scenes can be made into static images for posters, seminars, and manuscripts or serve as part of molecular movies. 
+The PyMOL macro language (pml) is used to set parameter values and execute 
+commands to make customized scenes of biomolecules in PyMOL's viewport. 
+These scenes can be made into static images for posters, seminars, and 
+manuscripts or serve as part of molecular movies. 
 The number of lines of pml commands and settings required for very sophisticated figures can approach 100. 
 It is difficult to issue so many commands through PyMOL's gui without making mistakes. 
 If the commands are not saved to an open script file with a `.pml` file extension, to an open log file, or to a frequently saved session file, the work can be lost. Use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files. 
@@ -363,7 +365,7 @@ The snippet plugin has to be turned on. *kate* requires macOS 10.14 or newer.
 
 The snippets are stored in a single `.xml` file. 
 The storage location for this file is not in the documentation.
-Try the following on Mac (one of the four) and Linux (first three):
+Try the following on Mac (last one of the four) and Linux (first three):
 
 ```bash
 /Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml
@@ -371,6 +373,8 @@ Try the following on Mac (one of the four) and Linux (first three):
 /Users/blaine/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/blaine/Library/Application\ Support/kate/MySnippets/
 ```
+May have to create the directory MySnippets on MacOS.
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
