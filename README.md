@@ -425,7 +425,7 @@ and then save your script file with the `.pml` file extension.
 Nonetheless, *Micro* is easier to use than *vim* or *emacs*. 
 Like *nano*, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a `json` file. 
-[Micro](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD
+[*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD
 
 *Micro* has a number of plugins available including one for snippets.
 You need to have `Node.js` installed. 
@@ -451,7 +451,7 @@ Snippets for other program languages are found [here](https://github.com/tommysh
 `Alt-D` deletes the snippet that is being edited.
 
 A lexer for syntax highlighting is in the file called `pml.yaml`.
-This file can be donwloaded from the `micropymolsnips`(https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
+This file can be donwloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
 This lexer is stored in the hidden folder `.config/micro/syntax`.
 
 Enter `Control-Q` and then enter `help color` to learn about the available color schemes and to learn about syntax highlighting.
