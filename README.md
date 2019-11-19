@@ -1,54 +1,51 @@
 
-
 The PyMOL macro language (pml) is used to set parameter values and execute 
 commands to make customized scenes of biomolecules in PyMOL's viewport. 
 These scenes can be made into static images for posters, seminars, and 
 manuscripts or serve as part of molecular movies. 
+
 The number of lines of pml commands and settings required for very sophisticated figures can approach 100. 
 It is difficult to issue so many commands through PyMOL's gui without making mistakes. 
-If the commands are not saved to an open script file with a `.pml` file extension, to an open log file, or to a frequently saved session file, the work can be lost. Use the **spse** function in the pymolshortcuts.py file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files. 
-Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the gui alone are shown in the image gallery below.  
+If the commands are not saved to an open script file with a `.pml` file extension, to an open log file, or to a frequently saved session file, the work can be lost. Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.
 
-However, it is challenging to recall the pml syntax when you do not use PyMOL everyday, which is the case for most PyMOL users. 
-One solution to this problem is use a library of code fragments with a text editor. 
-Most text editors allow the user to add a library of code fragments or "snippets". 
+Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the GUI alone.  
+
+It is challenging to recall the pml syntax when you aren't using PyMOL everyday, which is the case for most PyMOL users. 
+One solution to this problem is to use a library of code fragments, called "snippets" with a text editor. 
 
 ## <A name="FASTLINKS">Quick links</A>
 
   * <a href="#gallery"> Gallery of snippets and their output </a>
   * <a href="#categories"> Snippet categories</a>
-  * <a href="#tutorials">Tutorial videos</a>
   * <a href="#install">Installing snippets for each editor</a>
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
 
-
-**pymolsnips** is a library of PyMOL macro language (pml) code fragments that have been formatted for several popular text editors. 
+**pymolsnips** is a library of pml code fragments that have been formatted for several popular text editors. 
 Protocols for snippet installation for each text editor are found <a href="#install">below</a>. 
-Some editors take snippet libraries in one file. 
-Other editors require that each snippet resides in a separate file. 
+Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file. 
 Most editors have their own format for snippets. 
 The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
 
 Each code fragment has a unique name that also serves as a tab trigger.
-The user enters the name of the code snippet and hits the tab key to trigger the insertion of the code into the currently open `.pml` file.
-The code fragments have tab stops to advance the cursor to sites of parameters to be edited.
-The tab stops are mirrored when the parameters are identical.
-The editing of one sites leads to changes in the other other sites.
-The tab stops ensure that all of the required edits are made on the first edit.
+The user enters the name of the code snippet and hits the `tab` key to trigger the insertion of the code into the currently open `.pml` file.
+The code fragments have tab stops to advance the cursor to sites where parameters can be edited.
+Tab stops are mirrored when the parameters are identical.
+The editing of one sites changes the other sites simultaneously.
+Tab stops ensure that all of the required edits are made on the first edit.
 
 The animation below demonstrates the use of the `ao` tab trigger to insert 16 lines of code for generating the ambient occlusion effect.
-The user opens with Visual Studio Code a blank file called testVSC.pml. 
-The `.pml` file extension tells Visual Studio Code that this is a PyMOL script file and to make available the library of snippets for PyMOL.
-The user enters the tab trigger `ao`.
-Two-levels of a cascading menu appears.
-The menu of the left shows the alternate tab triggers that contain the letters `a` and `o`. 
+Open a blank file called `testVSC.pml.` in *Visual Studio Code*. 
+The `.pml` file extension tells *Visual Studio Code* that this is a PyMOL script file and allows the library of snippets for PyMOL to be made available.
+Enter the tab trigger `ao`.
+Two-levels of a cascading menus appear.
+The menu on the left shows the alternate tab triggers that contain the letters `a` and `o`. 
 The corresponding code for the selected tab trigger is displayed in the right window to allow the user to check that it is the desired tab trigger.
-The right window also contains at the top a description of the snippet.
-The user can use the up and down arrow keys to select the appropriate tab trigger from the preview menu.
-The user then enters the `tab` key to insert the code into the file at the cursor.
-By entering there two letters, the user has inserted 17 lines of code. 
-The cursor moves to the start of a new line on line 18 where it is ready for a new command.
+The right window also contains a description of the snippet.
+Use the up and down arrow keys to select the appropriate tab trigger from the preview menu.
+Press the `tab` key to insert the code into the file at the cursor.
+By entering these two letters, you have inserted 17 lines of code. 
+The cursor moves to the start of a new line, where it is ready for the next command.
 
 <p align="center">
 	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" width="850" height="425" alt="ao tab trigger" />
@@ -56,7 +53,7 @@ The cursor moves to the start of a new line on line 18 where it is ready for a n
 
 
 Many text editors support tab stops, which aids in the complete and accurate editing of recycled code fragments. 
-Tab stops are placed where the default value of a parameter needs to be considered for updating for the new use of the code.
+Tab stops are placed where the default value of a parameter needs to be considered for updating the new use of the code.
 The user enters tab to advance through the tab stops. 
 If a parameter occurs several times in the snippet and if it should have the same value at each site, the identical tab stops are mirrored so that the change at one site ensures changes at all like sites.
 This ensures that all identical sites are changed uniformly and completely while also saving time spent typing.
@@ -118,14 +115,6 @@ The animation below also demonstrates the use of mirrored tab stops where change
 <A href=#FASTLINKS>Return to quick links section at top</A>
 </details>
 
-<h2> <A name="tutorials">Videos</A></h2>
-
-Videos that demonstrate the installation of the snippets for each editor are planned.
-
-<h2> <A name="install">Installing and using snippets</A></h2>
- 
-The installation instructions are below for the following editors:
-
 ## <A name="FASTLINKS2">Quick links</A> ##
 
   * <a href="#atom"> Atom </a>
@@ -173,6 +162,8 @@ Note that some editors that are available as binaries only for Windows like *Not
 Some of these text editors can take hours to customize to fit your needs; however, you only need to
 know about 5% of the options to become productive with these editors. 
 
+<h2> <A name="install">Installing and using snippets</A></h2>
+ 
 <h3 name="atom" > Atom (Universal) </h3>
 
 [*Atom*](https://atom.io) is a favorite of professional programmers because it is highly extendable and customizable. They advertise themselves as a "hackable text editor". 
@@ -319,25 +310,48 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 
 <h3 name="gedit"> gedit (Universal) </h3>
 
-<details>
-<summary><b>Installing and using snippets with gedit</b></summary>
-
 [*gedit*](https://gedit.en.softonic.com/mac) is often available on the computers running Linux OS at national labs. 
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
+
+<details>
+<summary><b>Installing and using snippets with gedit</b></summary>
+	
 The snippets are stored in a single file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`. 
 The full path is `~.config/gedit/snippets/pymol.xml`.
-
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
 <h3 name="jupyter"> Jupyter Notebook, JupyterLab (Universal)</h3>
-	
-*Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
-*Juptyer Notebook* has been replaced by *JuptyerLab*, which is now available for general use.
+*Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like functions that reside in separate cells in the notebook. *Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
+*JuptyerLab*, which is now available for general use, is similar to *Jupyter Notebooks*. 
 *JupyterLab* is the Python analog of *RStudio*.
 *JuptyerLab* can read and run *Jupyter Notebooks* but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
+*Jupyter Notebook* has two extensions for snippet management.
+*JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
+
+They do not support tab triggers or tab stops.
+A simple alternative is to import individual snippets with the load magic.
+
+In the *JupyterNotebooks* command line, enter:
+```Jupyter
+%load filePath/<snippetName>.pml
+```
+The animation below demonstrates the insertion of a snippet with the load magic. <p align="center">
+        <img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
+    </p>
+
+The file finder system in *Jupyter Notebook* eases navigation to the correct file.
+The above library of snippets includes a commented out *Sublime Text 3* snippet that has tab stops.
+This commented out snippet is also printed to the cell so that it can serve as a guide to the sites in the clipping that should be considered for editing.
+
+The `pml` code cannot be sent directly to PyMOL because a `.pml` kernel for the *Jupyter Notebook* has yet to be developed.
+Instead, the *Jupyter Notebook* can be used to gather and edit code fragments.
+The notebook cells can be merged, and the code can be copied and pasted into an external `.pml` script file.
+In addition, the notebook can be used to document the cells of code with interweaved cells containing markdown code.
+The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
+The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
 
 <details>
 <summary><b>Installing and using snippets with Jupyter Notebook</b></summary>
@@ -502,125 +516,6 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="neosnippets">Neosnippets(for vim, universal) </h3>
-	
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
-<details>
-<summary><b>Installing and using snippets with Neosnippets</b></summary>
-	
-There is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) to suggest in-line alternate snippets.
-*Deoplete* requires *neovim* or *vim* versions greater than 8.0.
-It also requires Python3. 
-You have to enable the Python3 interface with pynvim which you can install with this command:
-
-```bash
-$ pip3 install --user pynvim
-```
-```bash
-$ sudo -H /opt/local/bin/python3.7 -m pip install pynvim 
-```
-
-Check in *vim* or *neovim* if python3 is enabled by entering: 
-
-```vim
-:echo has("python3")
-``` 
-If 1 is returned, you have python3 installed. If 0, you do not. 
-
-To install the plugins with Vundle, add the following to the Vundle plugin section of the  `.vimrc` file.
-
-```vim
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-```
-
-To use *deoplete*, add the following setting to your `.vimrc` file.
-
-```vim
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-```
-
-To install *Neosnippets*, add the following to the Vundle plugin section of the  `.vimrc` file.
-
-```vim
-Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
-```
-
-The last command is optional because installing default snippets is optional. 
-If you choose not to install them, you must deactivate them with the following command added to the `.vimrc` file.
-
-```vim
-g:neosnippet#disable_runtime_snippets
-```
-
-A minimal `.vimrc` file for installing and using *Neosnippets* is listed below:
-
-
-```vim
-if has('python3')
-endif
-
-"vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Add only comment lines and Plugin commands between
-" call vundle#begin() and call vundle#end()
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-" neosnippets uses deoplete to suggest snippets
-" This might be superior to ultisnips
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
-
-call vundle#end()
-
-" Turn on filetype detection for plugins
-filetype plugin on
-
-let g:python3_host_prog = '/opt/local/bin/python3.7'
-let g:pydiction_location = '/Users/blaine/.vim/bundle/pydiction/complete-dict'
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-
-" maximum width of deoplete window
-call deoplete#custom#source('_', 'max_menu_width', 80)
-
-
-" i for swichting to the insert mode from normal mode;
-" ii for escape from insert mode to normal mode
-:inoremap ii  <Esc>
-
-" another means of escape to normal mode: Control-Carriage Return
-:inoremap <C-CR>  <Esc>
-```
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
-
-<h3 name="snipmate"> SnipMate (for vim, universal) </h3>
-	
-[*vim*](https://vimawesome.com) is the terminal based text editor *vi* on steriods.
-It is free. 
-The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs*.
-
-A newer branch of *vim* called *neovim* is available. 
-Either are available from software repositories like macports and fink or as stand-a-lone applications.
-
-The addition of a plugin requires the editing of startup `.vimrc` file.
-
-[*SnipMate*](https://github.com/garbas/vim-snipmate)
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
 	
 [*Sublime Text 3*](https://www.sublimetext.com/3s://www.sublimetext.com/) is a GUI-based editor. 
@@ -696,30 +591,211 @@ This editor can be used to view and change the code in the snippets.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="UltiSnips"> UltiSnips (for vim, universal) </h3>
-	
-*vim* is the improved terminal-based text editor *vi* on steroids.
+
+<h3>Vim</h3>
+
+[*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi* on steroids.
 It is free. 
-The *vim* keybindings for text editing are very useful that the they are available for the rival text editor *emacs* as well as many other text editors.
-The secret to keeping your sanity while using *vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text, since the normal mode is where you issue commands.
+A newer branch of *vim* called *neovim* is available. 
+Either are available from software repositories like macports and fink or as stand-a-lone applications.
+
+The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
+The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text, since the normal mode is where you issue commands.
 
 *vim* lacks native support for snippets.
 We have to extend *vim* with a plugin.
-There are several plugins for managing snippets.
+There are several plugins for managing snippets. *Neosnippets, SnipMate, and UltiSnips* will be discussed here. Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file. It is in this file that you install and update plugins, as well as comment out unused plugins. 
 
+<details>
+<summary><b>Installing Vundle</b></summary>
+	
+To start adding a plugin to *vim* you'll need to open and edit the `.vimrc` file. 
+
+To download Vundle enter the following into the bash command line:
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+Paste the following minimal code at the top of your `.vimrc` file to allow the use of Vundle:
+```vim 
+if has('python3') 
+endif
+
+"vundle 
+set nocompatible filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Add only comment lines and Plugin commands between 
+" call vundle#begin() and call vundle#end() 
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Ultisnips requires vim installed with python. This is just the engine. 
+Plugin 'SirVer/ultisnips'
+
+call vundle#end()
+
+" Turn on filetype detection for plugins 
+filetype plugin on
+
+" set path to Python3 interpreter
+let g:python3_host_prog = '/opt/local/bin/python3.7'
+
+" UltiSnips related commands 
+let g:UltiSnipsExpandTrigger = '' 
+let g:UltiSnipsJumpForwardTrigger = '' 
+let g:UltiSnipsJumpBackwardTrigger = '' 
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+```
+Now open vim and run the following command:
+```vim
+:PluginInstall
+```
+</details>
+
+<h4 name="neosnippets">Neosnippets(for vim, universal) </h4>
+	
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets. The use of *Neosnippets* does not require *deoplete*.
+Experienced users may find *deoplete* pop-up menus to be distracting.
+*Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
+*Deoplete* requires *neovim* or *vim* versions greater than 8.0, and Python3. 
+
+<details>
+<summary><b>Installing and using snippets with Neosnippets</b></summary>
+	
+
+You have to enable the Python3 interface with pynvim which you can install with this command:
+
+```bash
+$ pip3 install --user pynvim
+```
+```bash
+$ sudo -H /opt/local/bin/python3.7 -m pip install pynvim 
+```
+
+Check in *vim* or *neovim* if python3 is enabled by entering: 
+
+```vim
+:echo has("python3")
+``` 
+If 1 is returned, you have python3 installed. If 0, you do not. 
+
+To install the plugins with Vundle, add the following to the Vundle plugin section of the  `.vimrc` file.
+
+```vim
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+```
+
+To use *deoplete*, add the following setting to your `.vimrc` file.
+
+```vim
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+```
+
+To install *Neosnippets*, add the following to the Vundle plugin section of the  `.vimrc` file.
+
+```vim
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+```
+
+The last command is optional because installing default snippets is optional. 
+If you choose not to install them, you must deactivate them with the following command added to the `.vimrc` file.
+
+```vim
+g:neosnippet#disable_runtime_snippets
+```
+
+A minimal `.vimrc` file for installing and using *Neosnippets* is listed below:
+
+```vim
+if has('python3')
+endif
+
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Add only comment lines and Plugin commands between
+" call vundle#begin() and call vundle#end()
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" neosnippets uses deoplete to suggest snippets
+" This might be superior to ultisnips
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+
+call vundle#end()
+
+" Turn on filetype detection for plugins
+filetype plugin on
+
+let g:python3_host_prog = '/opt/local/bin/python3.7'
+let g:pydiction_location = '/Users/blaine/.vim/bundle/pydiction/complete-dict'
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" maximum width of deoplete window
+call deoplete#custom#source('_', 'max_menu_width', 80)
+
+
+" i for swichting to the insert mode from normal mode;
+" ii for escape from insert mode to normal mode
+:inoremap ii  <Esc>
+
+" another means of escape to normal mode: Control-Carriage Return
+:inoremap <C-CR>  <Esc>
+```
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
+
+<h4 name="snipmate"> SnipMate (for vim, universal) </h4>
+
+[*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that rovides plugin support for snippets that are available in *vim*. 
+It does not depend on Python.
+
+<details>
+<summary><b>Installing and using snippets with SnipMate</b></summary>
+
+To install SnipMate, add the following to your `.vimrc` file:
+```.vimrc file
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
+" Optional:
+Plugin 'honza/vim-snippets'
+```
+Then run the following command in vim:
+```vim
+:PluginInstall
+```
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
+
+<h4 name="UltiSnips"> UltiSnips (for vim, universal) </h4>
+	
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
 *vim* has to be installed with the option of using Python enabled to be able to use *UltiSnips*. 
-UltiSnips provides a large number of advanced features for snippets.
-UltinSips can read SnipMate snippets.
+The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features. However, it does not come with libraries of snippets, these must be installed.
+*UltinSnips* can read *SnipMate* snippets.
 
 <details>
 <summary><b>Installing and using snippets with UltiSnips</b></summary>
-	
-To add a plugin to *vim* you'll need to edit the startup `.vimrc` file. 
 
 In the following setup, we use the Vundle plugin manager.
 
-The *UltiSnips* plugin is the snippet handling engine. It does not come with libraries of snippets.
 The `PyMOL.snippets` could be stored inside the *UltiSnips* directory, but they would be lost if you delete the *UltiSnips* directory.
 To help make sure your snippets are not deleted if the UltiSnips directory ever gets deleted you'll want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
 Move the `PyMOL.snippets` file to this subdirectory.
