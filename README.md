@@ -591,7 +591,6 @@ This editor can be used to view and change the code in the snippets.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-
 <h3>Vim</h3>
 
 [*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi* on steroids.
@@ -652,6 +651,37 @@ Now open vim and run the following command:
 ```vim
 :PluginInstall
 ```
+</details>
+
+Minipac is also a plugin manager for installing and managing plugins in *vim*. It requires *vim* 8 or newer. Unfortunately, minipac does not update itself. Fortunately, there is a package you can add that will allow minipac to auto-update. This is discussed below in the minipac installation section. 
+
+<details>
+<summary><b>Installing minipac</b></summary>
+	
+To install minipac, you need to create a directory called `minipac` and install it as an optional plugin:
+```bash
+mkdir -p ~/.vim/pack/minpac/opt
+cd ~/.vim/pack/minpac/opt
+git clone https://github.com/k-takata/minpac.git
+```
+Then, add the following to your `.vimrc` file and write the file `:w`:
+```vimfile
+packadd minpac
+call minpac#init()
+```
+To add a plugin using minipac you will need to add this command `call minpac#add('author/reponame')` to your `.vimrc` file.
+For example, if you wanted to install snippets for *UltiSnips* you would add:
+```.vimrcfile
+call minpac#add('MooersLab/pml_bhmm.snippets')
+```
+
+To allow minipac to update itself enter:
+```.vimrcfile
+call minpac#add('k-takata/minpac',{'type':'opt'})
+```
+Then refresh *vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
+You will not be able to use these plugins until you exit and restart *vim* by entering `:qa!` and then opening another *vim* session. 
+
 </details>
 
 <h4 name="neosnippets">Neosnippets(for vim, universal) </h4>
