@@ -324,6 +324,7 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 </details>
 
 <h3 name="jupyter"> Jupyter Notebook, JupyterLab (Universal)</h3>
+
 *Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like functions that reside in separate cells in the notebook. *Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
 *JuptyerLab*, which is now available for general use, is similar to *Jupyter Notebooks*. 
 *JupyterLab* is the Python analog of *RStudio*.
