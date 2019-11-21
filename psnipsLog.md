@@ -97,11 +97,6 @@
 	Wednesday Dec 11, 2019 12:00-4:00pm (4)
 	Thursday Dec 12, 2019 12:00-4:00pm (4)
 	Friday Dec 13, 2019 12:00-4:00pm (4) 
-- Rearranged sections
-	- Created a vim section that has neosnippets, snipmate, and ultisnips within it
-- Removed the videos section as this will eventually be replaced by GIFs within sections
-- Added collapsible sections within each text editor to separate installation instructions from introduction (also doesn't visually overwhelm the reader)
-- Added a minipac and vundle section in the viim introduction (each with their own installation instructions)
 
 ## Problems with text editors 
 ### Atom 
@@ -170,7 +165,7 @@
 	- Installation: Vim already installed
 	- GIFY made: No
 	- Errors: Ultisnips not cooperating at all. 
-	*Created this section since nothing existed specifically for snipMate
+		- Created this section since nothing existed specifically for snipMate
 ### Sublime Text 3
 	- Installation: Already installed
 	- GIFY made: No
@@ -184,7 +179,7 @@
 	- GIFY made: No
 	- Errors: Errors were resolved. vim was not connected to the right Python3. Needed to update this using "sudo -H /opt/local/bin/python3.7 -m pip install pynvim"
 	Need to have tips on installing vim and vundle before getting into ultisnips.
-	*I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
+		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
 ### Visual Studio Code
 	- Installation: Already installed
 	- GIFY made: No
