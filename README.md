@@ -501,7 +501,12 @@ plugin install snippets
 ```
 All of the snippets for one language are in a single file with the `.snippets` file extension. 
 In this case, the file is labeled `pml.snippets`.
-The snippets are installed in the folder `.config/micro/plugins/snippets`.
+
+The snippets are installed to be installed in the folder `.config/micro/plugins/snippets`.
+In the pymolsnips directory enter:
+```bash
+$ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
+```
 Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
 
 `Alt-S` is mapped to the `snipperinset` command which inserts the snippet specified by a tabtrigger name.
@@ -511,8 +516,14 @@ Snippets for other program languages are found [here](https://github.com/tommysh
 
 A lexer for syntax highlighting is in the file called `pml.yaml`.
 This file can be donwloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
-This lexer is stored in the hidden folder `.config/micro/syntax`.
-
+This lexer is stored in the hidden folder `.config/micro/syntax` which you will need to create.
+```bash
+$ mkdir ~/.config/micro/syntax
+```
+Then in the `micropymolsnips` directory:
+```bash
+$ cp pml.yaml ~/.config/micro/syntax/.
+```
 Enter `Control-Q` and then enter `help color` to learn about the available color schemes and to learn about syntax highlighting.
 I entered `set colorscheme bubblegum` to apply a light colorscheme to *Micro* as shown below.
 A PyMOL script file has been opened and is color highlighted.
