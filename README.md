@@ -213,23 +213,29 @@ There is also presently the lack of a PyMOL lexer for syntax highligihting.
 <h3 name="brackets"> Brackets (Universal) </h3>
 
 The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
-*Brackets* is designed for web developers with a focus on html, css, and javascript.
+*Brackets* is designed for web developers with a focus on HTML, CSS, and JavaScript.
 However, *Brackets* now has support for a large number of languages. 
-*Brackets* provides a quick live-preview so changes in the `pml` code is deployed immediately in the preview. 
+*Brackets* provides a Quick Edit and Live Preview mode, that run simultaneously, so changes in the `pml` code are deployed immediately in the preview. 
+*Brackets* uses icons,located on the right panel, to get to interactive settings on the application. The zig-zag line launches Live Preview. The lego piece launches the extension manager. Once you install an exentsion, a light bulb icon will appear which launches the **Snippets Manager**. 
 
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
 	
-Go to the extension manager. 
-Search for the `brackets-snippets (by EDC)` and install it.
+Go to `File --> Extension Manager` or press the lego piece on the right panel. 
+Search for the `Brackets Snippets (by edc)` and install it.
 This is snippet manager that has a GUI that enables the manual creation of user defined snippets.
+
+Go to `Brackets --> Preferences` to update Brackets. The light bulb icon will now appear in the right panel. Click on the light bulb to open the **Snippets Manager**. 
 The `settings` tab opens a menu with an import button.
-Click on this button to import the [`bracketspymolsnips.yml`](https://github.com/marevebro/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page.
+Click import and choose the [`bracketspymolsnips.yml`](https://github.com/marevebro/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page. You will have to first download the file to your computer. 
 All of the snippets for PyMOL are in this single file. 
+The next step is to choose the import scheme. I chose the recommended setting to skip snippets with the same trigger. 
+
+![](https://github.com/marevebro/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif)
 
 Until the PyMOL language is available for *Brackets*, use Python to get syntax highlighting.
 This means that the PyMOL file needs a file extension of `.py` while it is being edited in *Brackets*.
-Save this file with the `.pml` extension to be able to use it in PyMOL.
+When finished, save this file with the `.pml` extension to be able to use it in PyMOL.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
