@@ -41,10 +41,10 @@
 	Make the transition to discussing and using JupyterLab instead of Jupyter Notebook
 		* thought: Can you have a program running on a specific python version while another program runs on a different python version?*
 ### Kate
-	- **Installation: Unsuccessful.** Try again via dmg installer from https://kate-editor.org/get-it/.
-	See README.md for possible loations for installing the snippet file. Requires Mac 10.14**
+    - Fresh install in Applications on November 23, 201i9.
+    - Try installing snippets. 
+	- See README.md for possible locations for installing the snippet file. 
 	- GIFY made: No
-	- Errors: Were not able to get this installed. Attempted to pull from the MacPort I believe? Something was preventing the completion of download.
 ### Komodo Edit
 	- Installation: Success
 	- GIFY made: No:
