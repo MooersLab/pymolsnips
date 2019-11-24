@@ -85,6 +85,12 @@
 		Updated Brackets section with correct/successful installation instructions
 			Added a GIF for snippet installation. 
 		Updated Micro section but still not completely working 
+    Saturday 23 Nov 2019 (Blaine)
+        - Upgraded operating system to 10.15.
+        - Installed Kate.
+
+
+
 ## Week 5 
 	Monday Nov 25 2019 | 12:00-4:00pm ()
 	Tuesday Nov 26, 2019 | blaine out - early break! (0)
