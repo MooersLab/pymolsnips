@@ -184,7 +184,7 @@ The package installer is very intuitive.
 The snippets for all languages are stored in a single file that is called `snippets.cson`.
 This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`. 
 
-Snippets can also be added withint the *Welcome Guide* of *Atom*. Under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
+Snippets can also be added within the *Welcome Guide* of *Atom*. Under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
 
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
 PyMOL snippets for *Atom* to your existing `snippets.cson` file.
