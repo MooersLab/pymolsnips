@@ -182,7 +182,10 @@ The installation and updating of plugins is quite slow compared to other editors
 You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
 The package installer is very intuitive.
 The snippets for all languages are stored in a single file that is called `snippets.cson`.
-This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`.
+This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`. 
+
+Snippets can also be added withint the *Welcome Guide* of *Atom*. Under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
+
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
 PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
@@ -202,13 +205,22 @@ The snippets are stored as clippings with one snippet or clipping per file.
 The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language. 
 
+<details>
+<summary><b>Installing and using snippets with BBEdit</b><summary>
+
 Users can create nested subfolders for groups of related snippets. 
 The clippings are selected via the pulldown labeled `C` (circled). 
-The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`.
+The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. You will need to add [this](https://github.com/marevebro/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings. 
+
+In the `pymolsnips` directory:
+```bash
+$ cp -a bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clippings/
+```
 The disadvantages of these clippings include the lack of tab triggers and tab stops. 
 There is also presently the lack of a PyMOL lexer for syntax highligihting. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <h3 name="brackets"> Brackets (Universal) </h3>
 
@@ -409,10 +421,9 @@ The community version of *Komodo Edit* has enough features for the occasional wr
 <details>
 <summary><b>Installing and using snippets with Komodo Edit</b></summary>
 	
-The snippets are stored in separate files.
-The snippets are active for files with the  `.pml` extension. 
-The snippets are stored in a folder called `PML`, which has to be created.
-On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`.
+The snippets are stored in separate files with the  `.pml` extension. 
+They are stored in a folder called `PML`, which has to be created.
+On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`. Be sure to change the folder from *blaine* to your username. 
 
 The snippets are treated as abbreviations that are stored in the tool box.
 The snippet name works as a tab trigger.
@@ -542,17 +553,26 @@ The free trial period is infinite.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers. 
 
 <details>
-<summary><b>Installing and using snippets with SnipMate</b></summary>
+<summary><b>Installing and using snippets with Sublime Text 3</b></summary>
 	
 The snippets are stored in separate files with the file extension `.sublime-snippet`. 
 
-*Sublimeime Text 3* strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
+*Sublime Text 3* strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms. 
 
-On the Mac, move the folder `st3pymolsnips` to `~/Library/Application Support/Sublime\ Text\ 3/Packages/User/snippets/`. 
-You may have to create the snippets subfolder. 
-You can ignore that step and just move `pymolsnips` to `~/Library/Application Support/Sublime\ Text\ 3/Packages/User/` and it should still work. 
+On the Mac, create the `snippets` directory in the *Sublime Text3* folder:
+```bash
+$ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
+```
+In the `pymolsnips` directory, add the snippet files to the *Sublime Text 3* folder:
+```bash
+$ cp -a st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
+```
+You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/` and it should still work. 
+
 Restart *Sublime Text 3*, open a PyMOL script file, and then enter "ao" and  hit tab. 
 Sixteen lines of code should appear. 
+
+
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
