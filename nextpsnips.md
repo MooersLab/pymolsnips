@@ -22,12 +22,12 @@
 	- GIFY made: One already exists - but this is for tab stops that it not discussed. See `errors` for why I am waiting to make a new GIF
 	- Errors: Lexers and libraries installed on one user profile do not apply for the entire computer.
 		- Have two of every snippet available... Waiting to make a GIF so I only have one option in the window. 
-			- Has two  snippets in add-on manager - MooersLab.PyMOL and Std.PML?
+			- Has two  snippets in add-on manager - MooersLab.PyMOL and Std.PML? Maybe this is why I have 2?
 ### Espresso
 	- Installation: Running trial version 
 	- GIFY made: No
 	- Errors: Need to allow key strokes but need administrator to approve that setting change. 
-		- Need to see which plugins to add
+		- Need to see which plugins to add - sends you to a webpage...lots to look through and learn!
 ### Geany 
 	- Installation: Already installed 
 	- GIFY made: Yes
@@ -37,7 +37,7 @@
 	- GIFY made: No
 	- Errors: Not recognizing .pml style file. Couldn't figure out how to add the .pml language. 
 ### Jupyter Lab/JupyterNotebook
-	- Installation: N/A done through web browser - not sure how to access it though.. See the Jupyter notebook write up in the README.md.
+	- Installation: Web browser 
 	- GIFY made: One already exists
 	- Errors: required python 3. so we had to switch python version in order to get this to work. 
 	Make the transition to discussing and using JupyterLab instead of Jupyter Notebook
@@ -54,11 +54,11 @@
 ### Light Table
 	- Installation: Success
 	- GIFY made: No
-	- Errors: Don't know how to move the contents of the folder into (not the folder) into the location ~/.lighttable/User/snippets
+	- Errors: Don't know how to move the contents of the folder (not the folder) into the location ~/.lighttable/User/snippets [I think this is -a between command and location to be sent to, or? ]
 ### Micro
 	- Installation: Success
 	- GIFY made: One already exists
-	- Errors: Can't figure out the key commands in the terminal window 
+	- Errors: Can't figure out the key commands in the terminal window (ALT, etc.)
 ### Neosnippets
 	- Installation: Vim already installed
 	- Blaine needs to make PyMOL.snippets file
@@ -78,7 +78,7 @@
 ### TextMate
 	- Installation: Success
 	- GIFY made: One already exists
-	- Errors: N/A
+	- Errors: Installation process just gives info on where the info is stored but no direction on how to set-up and make it work. 
 ### Ultisnips (vim, neovim)
 	- Installation: Success
 	- GIFY made: No
@@ -87,9 +87,10 @@
 		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
 ### Visual Studio Code
 	- Installation: Already installed
-	- GIFY made: No
+	- GIFY made: No - planning on making one for the installation process.. Installation process has gap in flow. 
+	- Error: cannot track through the instructions Code --> pref... etc. Can't find where to place the javascript code. Need to clarify this. 
 	- Can search snippets with '>' Snippet pluggin to open 2 tabs by itself without having to press the info to further open a tab (from tab trigger)
 ### Yasnippets
 	- Installation: Not attempted yet
 	- GIFY made: No
-	- Errors: N/A
+	- Errors: Needs work, not much written, haven't attempted installation.  
