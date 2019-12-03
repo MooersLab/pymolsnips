@@ -90,10 +90,15 @@
         - Installed Kate.
 
 ## Week 5 
-	Monday Nov 25 2019 | 12:00-4:00pm ()
+	Monday Nov 25 2019 | 12:00-4:00pm (4)
+		Tried to finish installing the rest of the editors - no success
+		Brief run-through text editors at a marina-alone attempt at getting them working
 	Tuesday Nov 26, 2019 | blaine out - early break! (0)
 ## Week 6
 	Monday Dec 2, 2019 | 12:00-4:00pm (4)
+		Another run-through text editors. Notes are maintained in nextpsnips.md in pymolsnips
+			Made some edits to instructions. Not completely through all editors 
+				Should be ready for a duo-walk-through on 12/4. Doing more edits tomorrow (12/3)
 	Tuesday Dec 3, 2019 | 12:00-4:00pm (4)
 	Wednesday Dec 4, 2019 | 12:00-4:00pm (4)
 	Thursday Dec 5, 2019 | 12:00-4:00pm (4)
