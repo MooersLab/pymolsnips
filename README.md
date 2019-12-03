@@ -724,7 +724,7 @@ You will not be able to use these plugins until you exit and restart *vim* by en
 
 <h4 name="neosnippets">Neosnippets(for vim, universal) </h4>
 	
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets. The use of *Neosnippets* does not require *deoplete*.
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets. The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
 *Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
 *Deoplete* requires *neovim* or *vim* versions greater than 8.0, and Python3. 
