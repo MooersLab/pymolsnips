@@ -1,4 +1,4 @@
-#To-Do with PyMOLSnips
+# To-Do with PyMOLSnips
 ## Problems with text editors 
 ### Atom 
 	- Installation: Success
@@ -9,8 +9,8 @@
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
-	- Errors: I can copy contents of a preset snippet, manually save the selection as a clipping under a different name (say aotest), 
-		and in either a new file (not .pml) or a .pml file type aotest and it will insert it. A tab with an option for the clipping will even appear.
+	- Errors: I can copy contents of a preset snippet, manually save the selection as a clipping under a different name 	      (say aotest), 
+	and in either a new file (not .pml) or a .pml file type aotest and it will insert it. A tab with an option for the 	   clipping will even appear.
 		I cannot repeat this action after I insert it once. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
 ### Brackets 
@@ -19,10 +19,8 @@
 	- Errors: Some tab stops are visible --> need to add {} around 0. 
 ### CudaText
 	- Installation: Success
-	- GIFY made: One already exists - but this is for tab stops that it not discussed. See `errors` for why I am waiting to make a new GIF
-	- Errors: Lexers and libraries installed on one user profile do not apply for the entire computer.
-		- Have two of every snippet available... Waiting to make a GIF so I only have one option in the window. 
-			- Has two  snippets in add-on manager - MooersLab.PyMOL and Std.PML? Maybe this is why I have 2?
+	- GIFY made: Yes - tab stops, use of ao, and plugin install
+	- Errors: None
 ### Espresso
 	- Installation: Running trial version 
 	- GIFY made: No
