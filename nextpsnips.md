@@ -1,4 +1,9 @@
 # To-Do with PyMOLSnips
+- Make a GIF for mirrored tab stops for VSC
+- List text editors that have a mirrored tab stop option?
+- Recommend VSC for users who are unfamiliar with the command line
+- Discuss the fragility of tab stops and how you can easily exit a tab stop
+
 ## Problems with text editors 
 ### Atom 
 	- Installation: Success
@@ -85,8 +90,8 @@
 		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
 ### Visual Studio Code
 	- Installation: Already installed
-	- GIFY made: No - planning on making one for the installation process.. Installation process has gap in flow. 
-	- Error: cannot track through the instructions Code --> pref... etc. Can't find where to place the javascript code. Need to clarify this. 
+	- GIFY made: Yes - aoSnip, bioSyntax install, NEED TO ADD MIRROR. 
+	- Error: None
 	- Can search snippets with '>' Snippet pluggin to open 2 tabs by itself without having to press the info to further open a tab (from tab trigger)
 ### Yasnippets
 	- Installation: Not attempted yet
