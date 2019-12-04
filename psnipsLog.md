@@ -1,5 +1,4 @@
-#Log of edits for psnips (some things are from qvim)
-##Edits
+# Log of edits for psnips (some things are from qvim)
 ### Week 1 
 	Monday Oct 28, 2019 | 1-5pm (4)
 		Discussed what will be done during this rotation and the project goal
@@ -101,10 +100,14 @@
 		Another run-through text editors. Notes are maintained in nextpsnips.md in pymolsnips
 			Made some edits to instructions. Not completely through all editors 
 				Should be ready for a duo-walk-through on 12/4. Doing more edits tomorrow (12/3)
-	Tuesday Dec 3, 2019 | 12:00-2:30pm (2.5) 
+	Tuesday Dec 3, 2019 | 12:00-2:30pm (2.5) - left early - sick
 		Completed the run-through the text editors
 			Blaine to go through and update some things
 	Wednesday Dec 4, 2019 | 12:00-4:00pm (4)
+		Updated CudaText with GIFs
+		Redid previous GIFs VSCaoSnip & VSCMirror now that the cursor is visible 
+			Updated intro of README.md
+			Updated VSC section with GIFs/instructions
 	Thursday Dec 5, 2019 | 12:00-4:00pm (4)
 	Friday Dec 6, 2019 | 12:00-4:00pm (4)
 ## Week 7
