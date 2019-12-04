@@ -984,10 +984,9 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
 
 The installation of plugins is painless. 
-There is a website featuring the plugins that are available. 
-You select the plugin that you are interested and hit an install button on the website to install the plugin in *VSC* on your local machine. 
+There is a marketplace within *VSC* where you can search for extensions and easily install them. 
 
-The *bioSyntax* plugin includes a lexer for PyMOL, so it is a good idea to install this plugin.
+The *bioSyntax* plugin is free and includes a lexer for PyMOL, so it is a good idea to install this plugin.
 The lexer will be activated when a `pml` file is opened. 
 Autocompletion of the snippet tab triggers and previews of the snippet's code are very helpful for avoiding the insertion of the wrong snippet. 
 
@@ -1001,7 +1000,7 @@ In the `vscpymolsnips` folder:
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
 
-Next,  install the `pml` language file `View --> Extensions`. Search for **bioSyntax**. It is free. Just hit the `Install` button. You will be asked to select a theme; select bioSyntax. 
+Next,  install *bioSyntax* via `View --> Extensions`. Search for *bioSyntax* and hit the `Install` button. You will be asked to select a theme, just select bioSyntax. 
 
 ![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif)
 
