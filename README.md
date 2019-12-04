@@ -287,9 +287,9 @@ After starting *CudaText*, install the snippets plugin by navigating to the `Plu
 You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*. 
 Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
 
-Below you can see the use of tabstops with *CudaText*!
+*CudaText* allows you to edit mirrored sites for uniform editing. Below you can see how to edit one mirror location and travel through other mirror sites using the Tab key. 
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatext.gif)
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif)
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
