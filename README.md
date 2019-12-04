@@ -350,6 +350,9 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 *Jupyter Notebook* has two extensions for snippet management.
 *JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
 
+<details>
+<summary><b>Installing and using snippets with Jupyter Notebook</b></summary>
+	
 They do not support tab triggers or tab stops.
 A simple alternative is to import individual snippets with the load magic.
 
@@ -372,9 +375,6 @@ In addition, the notebook can be used to document the cells of code with interwe
 The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
 The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
 
-<details>
-<summary><b>Installing and using snippets with Jupyter Notebook</b></summary>
-	
 [*JupyterLab*](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) can be installed with `conda`, `pip`,`pipenv`, or `docker`.
 To install using `conda`, enter the follow command in the bash command line:
 ```bash
@@ -600,7 +600,7 @@ Each snippet file has a unique uuid string.
 The snippet files are stored in a subfolder called `Snippets`.
 This folder is stored in a folder `PyMOL.tmbundle`. 
 This folder can be dragged and dropped into the user's 
-`~/Library/Application Support/TextMate/Bundles` folder. 
+`~/Library/Application\ Support/TextMate/Bundles` folder. 
 When installing an update of the library, it is best to delete the old `PyMOL.tmbundle` and then drop in the new `PyMOL.tmbundle`.
 
 
@@ -724,7 +724,7 @@ You will not be able to use these plugins until you exit and restart *vim* by en
 
 <h4 name="neosnippets">Neosnippets(for vim, universal) </h4>
 	
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets. The use of *Neosnippets* does not require *deoplete*.
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets. The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
 *Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
 *Deoplete* requires *neovim* or *vim* versions greater than 8.0, and Python3. 
@@ -1006,11 +1006,11 @@ Autocompletion of the snippet tab triggers and previews of the snippet's code ar
 <details>
 <summary><b>Installing and using snippets with Visual Studio Code</b></summary>
 	
-From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application Support/Code/User/snippets` on the Mac, `$HOME/APPDATA\Code\User\snippets\pml.json` on Windows, and `$HOME/.config/Code/User/snippets/pml.json` on Linux.
+From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
 
 Next,  install the `pml` language file via the <a href="https://marketplace.visualstudio.com/search?term=bioSyntax&target=VSCode&category=All%20categories&sortBy=Relevanc"> bioSyntax </a>  package from the *Visual Studio Code* Marketplace. It is free. Just hit the `Install` button on the webpage to install the package. 
 
-Next, edit the settings under `File --> Preferences` on Windows or `Code --> Preferences` on MacOS as follows:
+Next, edit the settings under `File --> Preferences --> Settings` on Windows or `Code --> Preferences --> Settings` on MacOS as follows:
 
 ```javascript
 "[pml]": {},
