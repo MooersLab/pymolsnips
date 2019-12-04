@@ -625,7 +625,7 @@ A newer branch of *vim* called *neovim* is available.
 Either are available from software repositories like macports and fink or as stand-a-lone applications.
 
 The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
-The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text, since the normal mode is where you issue commands.
+The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue commands.
 
 *vim* lacks native support for snippets.
 We have to extend *vim* with a plugin.
