@@ -99,7 +99,9 @@
 		Another run-through text editors. Notes are maintained in nextpsnips.md in pymolsnips
 			Made some edits to instructions. Not completely through all editors 
 				Should be ready for a duo-walk-through on 12/4. Doing more edits tomorrow (12/3)
-	Tuesday Dec 3, 2019 | 12:00-4:00pm (4)
+	Tuesday Dec 3, 2019 | 12:00-2:30pm (2.5) 
+		Completed the run-through the text editors
+			Blaine to go through and update some things
 	Wednesday Dec 4, 2019 | 12:00-4:00pm (4)
 	Thursday Dec 5, 2019 | 12:00-4:00pm (4)
 	Friday Dec 6, 2019 | 12:00-4:00pm (4)
