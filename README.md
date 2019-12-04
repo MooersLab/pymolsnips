@@ -210,7 +210,7 @@ The clippings can be stored in folders by language.
 
 Users can create nested subfolders for groups of related snippets. 
 The clippings are selected via the pulldown labeled `C` (circled). 
-The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. You will need to add [this](https://github.com/marevebro/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings. 
+The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings. 
 
 In the `pymolsnips` directory:
 ```bash
@@ -239,11 +239,11 @@ This is snippet manager that has a GUI that enables the manual creation of user 
 
 Go to `Brackets --> Preferences` to update Brackets. The light bulb icon will now appear in the right panel. Click on the light bulb to open the **Snippets Manager**. 
 The `settings` tab opens a menu with an import button.
-Click import and choose the [`bracketspymolsnips.yml`](https://github.com/marevebro/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page. You will have to first download the file to your computer. 
+Click import and choose the [`bracketspymolsnips.yml`](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page. You will have to first download the file to your computer. 
 All of the snippets for PyMOL are in this single file. 
 The next step is to choose the import scheme. I chose the recommended setting to skip snippets with the same trigger. 
 
-![](https://github.com/marevebro/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif)
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif)
 
 Until the PyMOL language is available for *Brackets*, use Python to get syntax highlighting.
 This means that the PyMOL file needs a file extension of `.py` while it is being edited in *Brackets*.
@@ -270,16 +270,26 @@ I downloaded the 64-bit version of Python3.7.4 from Python.org and used the inst
 This Python is installed in the `/Applications` directory on the Mac. 
 When I started *CudaText*, I did not have to edit any configuration files.
 
-After starting *CudaText*, install the snippets plugin by navigating to the `Plugins --> Addons Manager --> Install` and search for `snippets`.
-You will also need to use the same pulldown to install the PyMOL lexer and the library of PyMOL snippets. 
-
 The snippets are stored one per file.
 The files have the extensions of `.cuda-snippet`. 
 *CudaText* snippets have names (i.e., descriptions), ids (i.e., tab triggers), and markers (i.e., tab stops).
 *CudaText* snippets are stored in the user's Library on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
-You may have to create the `Std.PML` folder.
+You may have to create the `Std.PML` folder by giving the following bash command:
+```bash
+$ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/
+```
+Any snippet add-on will automatically  be installed in this directory. 
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatext.gif)
+After starting *CudaText*, install the snippets plugin by navigating to the `Plugins --> Addons Manager --> Install` and search for *plugin: Snippets* and select it. A pop-up window will appear asking you if you'd like to install, click OK. I could not screen capture this pop-up window.
+
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif)
+
+You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*. 
+Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
+
+*CudaText* allows you to edit mirrored sites for uniform editing. Below you can see how to edit one mirror location and travel through other mirror sites using the Tab key. 
+
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif)
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
@@ -306,7 +316,7 @@ The source code is also available.
 	
 Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`. You'll also need to add PyMOL as a group in that same file configuration.  It should read `#~ None=PyMOL` under Groups. 
 
-![](https://github.com/marevebro/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif)
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif)
 
 In addition, you need to edit the keybinding preferences `Move cursor in snippet` for under `Edit --> Preferences --> Keybindings` because it is blank by default. I used **Tab**. Press `enter` and then click "Allow" when the override window pops up. 
 Without making this edit, you will not be able to advance to the second and later tab stops. 
@@ -480,7 +490,7 @@ Move the contents of this folder (not the folder) to `~/.lighttable/User/snippet
 
 There is not a `pml` language available yet for *Light Table*. 
 Python will have to do as the language for now. 
-Use `.py` as your file extension while editing your script file in Light Table,
+Use `.py` as your file extension while editing your script file in *Light Table*,
 and then save your script file with the `.pml` file extension.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
