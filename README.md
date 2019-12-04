@@ -996,22 +996,20 @@ Autocompletion of the snippet tab triggers and previews of the snippet's code ar
 	
 From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
 
-Next,  install the `pml` language file via the <a href="https://marketplace.visualstudio.com/search?term=bioSyntax&target=VSCode&category=All%20categories&sortBy=Relevanc"> bioSyntax </a>  package from the *Visual Studio Code* Marketplace. It is free. Just hit the `Install` button on the webpage to install the package. 
-
-Next, edit the settings under `File --> Preferences --> Settings` on Windows or `Code --> Preferences --> Settings` on MacOS as follows:
-
-```javascript
-"[pml]": {},
-    "files.associations": {
-        "*.extension": "pml"
-    },
+In the `vscpymolsnips` folder:
+```bashOS
+$ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
 
-Restart *VSC*. 
+Next,  install the `pml` language file `View --> Extensions`. Search for **bioSyntax**. It is free. Just hit the `Install` button. You will be asked to select a theme; select bioSyntax. 
+
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif)
+
 Open a file with a `.pml` file extension. 
-You should see `pml` in the lower right on the bottom panel. 
-You should also see syntax highlighting of the text in the `pml` script file. 
-Type the tab trigger `ao` to test the insertion of the snippet for the code that creates the ambient occlusion effect. 
+You should see `pml` in the lower right on the bottom panel.  
+Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion effect. You should see syntax highlighting.
+
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif)
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
