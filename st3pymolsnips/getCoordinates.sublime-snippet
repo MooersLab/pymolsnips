@@ -1,7 +1,7 @@
 <snippet>
 <content><![CDATA[
 print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
-$0
+${0}
 ]]></content>
 <tabTrigger>getCoordinates</tabTrigger>
 <scope></scope>

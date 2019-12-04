@@ -1,7 +1,7 @@
 <snippet>
 <content><![CDATA[
 print invocation.options.deferred;
-$0
+${0}
 ]]></content>
 <tabTrigger>lspymolrc</tabTrigger>
 <scope></scope>

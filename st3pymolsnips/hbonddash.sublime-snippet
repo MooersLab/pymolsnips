@@ -5,7 +5,7 @@ hide labels;
 set dash_color, black; 
 set dash_gap, 0.4;
 set dash_radius, 0.08;
-$0
+${0}
 ]]></content>
 <tabTrigger>hbonddash</tabTrigger>
 <scope></scope>

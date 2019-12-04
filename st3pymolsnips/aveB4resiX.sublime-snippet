@@ -7,7 +7,7 @@ Note that you need to convert the length of the list of Bfactors from an integer
 Bfactors = []; 
 iterate (resi ${1:133}), Bfactors.append(b);
 print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-$0
+${0}
 ]]></content>
 <tabTrigger>aveB4resiX</tabTrigger>
 <scope></scope>
