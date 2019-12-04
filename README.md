@@ -28,46 +28,24 @@ Most editors have their own format for snippets.
 The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
 
 Each code fragment has a unique name that also serves as a tab trigger.
-The user enters the name of the code snippet and hits the `tab` key to trigger the insertion of the code into the currently open `.pml` file.
-The code fragments have tab stops to advance the cursor to sites where parameters can be edited.
-Tab stops are mirrored when the parameters are identical.
-The editing of one sites changes the other sites simultaneously.
-Tab stops ensure that all of the required edits are made on the first edit.
+The user enters the name of the code snippet and hits the `tab` key to insert lines of code.
+Tab stops exist at sites where parameters can be edited.
+Tab stops are mirrored when the parameters are identical and will be edited simultaneously.
 
-The animation below demonstrates the use of the `ao` tab trigger to insert 16 lines of code for generating the ambient occlusion effect.
-Open a blank file called `testVSC.pml.` in *Visual Studio Code*. 
-The `.pml` file extension tells *Visual Studio Code* that this is a PyMOL script file and allows the library of snippets for PyMOL to be made available.
-Enter the tab trigger `ao`.
+The animation below demonstrates the use of the `ao` tab trigger in *Visual Studio Code* to insert 16 lines of code for generating the ambient occlusion effect. You can learn how this is done <a href="#VisualStudioCode"> here </a>.
 Two-levels of a cascading menus appear.
 The menu on the left shows the alternate tab triggers that contain the letters `a` and `o`. 
-The corresponding code for the selected tab trigger is displayed in the right window to allow the user to check that it is the desired tab trigger.
-The right window also contains a description of the snippet.
-Use the up and down arrow keys to select the appropriate tab trigger from the preview menu.
-Press the `tab` key to insert the code into the file at the cursor.
-By entering these two letters, you have inserted 17 lines of code. 
-The cursor moves to the start of a new line, where it is ready for the next command.
+The corresponding code for the selected tab trigger is displayed in the right window.
+By entering these two letters, you have inserted 16 lines of code!
 
-<p align="center">
-	<img src="https://media.giphy.com/media/SYcU86aGrd5TxZQqjR/giphy.gif" width="850" height="425" alt="ao tab trigger" />
-</p>
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif)
 
+The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites. If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
 
-Many text editors support tab stops, which aids in the complete and accurate editing of recycled code fragments. 
-Tab stops are placed where the default value of a parameter needs to be considered for updating the new use of the code.
-The user enters tab to advance through the tab stops. 
-If a parameter occurs several times in the snippet and if it should have the same value at each site, the identical tab stops are mirrored so that the change at one site ensures changes at all like sites.
-This ensures that all identical sites are changed uniformly and completely while also saving time spent typing.
-The complete consideration of all editable sites avoids or at least reduces debugging at a latter time, thereby saving additional time. 
-The last tab stop moves the cursor to the start of a new line at the bottom of the snippet where it is ready for a new command.
-The animation below demonstrates moving the cursor from one unique tab stop to the next unique tab stop through a snippet by hitting the tab key. 
-The highlighted parameter values are defaults.
-The animation below also demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites. 
-
-<p align="center">
-	<img src="https://media.giphy.com/media/jRGGNvizoE7eKnVZXw/giphy.gif" width="640" height="320" alt="ao tab trigger" />
-</p>
+![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif)
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
+
 <details>
 <summary>See what you can make with snippets!</summary>
 	
