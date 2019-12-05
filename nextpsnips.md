@@ -1,16 +1,12 @@
 # To-Do with PyMOLSnips
-- Make a GIF for mirrored tab stops for VSC
-- List text editors that have a mirrored tab stop option?
-- Recommend VSC for users who are unfamiliar with the command line
-- Discuss the fragility of tab stops and how you can easily exit a tab stop
+- update mirror tab stops list at top of readme
+- continue running through the text editors and making GIFs
 
-## Problems with text editors 
+## Problems with text editors (smaller headings are finished)
 ### Atom 
 	- Installation: Success
-	- GIFY made: No - can't get snips to load - says "unmatched ]"
-	- Errors: when running a .pml file error message says "unmatched ]" Can't access hiddne folder for snippets (marina issue)
-		* might be due to white spaces that exists between []. (even if the white space is removed)(not recognizing that other bracket does exist)
-		* once this error is fixed another error may appear concerning the """ or ''' used to end a section
+	- GIFY made: Two, install language and snippet packages. Snippet use - no...can't get to load - says "unmatched ]". 
+	- Errors: still seeing "unmatched ]"
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
@@ -18,11 +14,11 @@
 	and in either a new file (not .pml) or a .pml file type aotest and it will insert it. A tab with an option for the 	   clipping will even appear.
 		I cannot repeat this action after I insert it once. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
-### Brackets 
+###### Brackets 
 	- Installation: Success, easy
-	- GIFY made: Yes
-	- Errors: Some tab stops are visible --> need to add {} around 0. 
-### CudaText
+	- GIFY made: Yes - package install, snippet install, snippet use.
+	- Errors: None 
+###### CudaText
 	- Installation: Success
 	- GIFY made: Yes - tab stops, use of ao, and plugin install
 	- Errors: None
@@ -88,7 +84,7 @@
 	- Errors: Errors were resolved. vim was not connected to the right Python3. Needed to update this using "sudo -H /opt/local/bin/python3.7 -m pip install pynvim"
 	Need to have tips on installing vim and vundle before getting into ultisnips.
 		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
-### Visual Studio Code
+###### Visual Studio Code
 	- Installation: Already installed
 	- GIFY made: Yes - aoSnip, bioSyntax install, NEED TO ADD MIRROR. 
 	- Error: None
