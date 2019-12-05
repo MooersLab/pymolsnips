@@ -26,7 +26,7 @@ python end
 spectrum b, selection=4gdx
 space cmyk
 set specular_intensity , 0.25
-$0
+${0}
 ]]></content>
 <tabTrigger>scaleRadiusColor</tabTrigger>
 <scope></scope>

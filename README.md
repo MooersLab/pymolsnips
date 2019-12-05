@@ -622,14 +622,21 @@ This editor can be used to view and change the code in the snippets.
 [*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi* on steroids.
 It is free. 
 A newer branch of *vim* called *neovim* is available. 
-Either are available from software repositories like macports and fink or as stand-a-lone applications.
+Either are available from software repositories like macports, fink, homebrew, or as stand-a-lone applications.
 
 The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
-The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text, since the normal mode is where you issue commands.
+The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue commands.
 
 *vim* lacks native support for snippets.
-We have to extend *vim* with a plugin.
-There are several plugins for managing snippets. *Neosnippets, SnipMate, and UltiSnips* will be discussed here. Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file. It is in this file that you install and update plugins, as well as comment out unused plugins. 
+We have to extend *vim* with plugin known as a snippet manager..
+There are several plugins for managing snippets.
+*Neosnippetsi*, *SnipMate*, and *UltiSnips* will be discussed here.i
+
+Versions of vim 8.0 and greater can use minpac to manage plugins on top the native support for plugins.
+Versions of *vim* 7.X and earlier require the use of one of the plugin managers to install plugins.
+
+Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file. i
+It is in this file that you install and update plugins, as well as comment out unused plugins. 
 
 <details>
 <summary><b>Installing Vundle</b></summary>
@@ -679,12 +686,16 @@ Now open vim and run the following command:
 ```
 </details>
 
-Minipac is also a plugin manager for installing and managing plugins in *vim*. It requires *vim* 8 or newer. Unfortunately, minipac does not update itself. Fortunately, there is a package you can add that will allow minipac to auto-update. This is discussed below in the minipac installation section. 
+Minpac is also a plugin manager for installing and managing plugins in *vim*. 
+It requires *vim* 8 or newer. 
+Unfortunately, minpac does not update itself. 
+Fortunately, there is a package you can add that will allow minpac to auto-update. 
+This is discussed below in the minpac installation section. 
 
 <details>
-<summary><b>Installing minipac</b></summary>
+<summary><b>Installing minpac</b></summary>
 	
-To install minipac, you need to create a directory called `minipac` and install it as an optional plugin:
+To install minpac, you need to create a directory called `minpac` and install it as an optional plugin:
 ```bash
 mkdir -p ~/.vim/pack/minpac/opt
 cd ~/.vim/pack/minpac/opt
@@ -695,8 +706,9 @@ Then, add the following to your `.vimrc` file and write the file `:w`:
 packadd minpac
 call minpac#init()
 ```
-To add a plugin using minipac you will need to add this command `call minpac#add('author/reponame')` to your `.vimrc` file.
-For example, if you wanted to install snippets for *UltiSnips* you would add:
+To add a plugin using minpac you will need to add this command `call minpac#add('author/reponame')` to your `.vimrc` file.
+
+For example, if you wanted to install snippets for *UltiSnips* you would add (this will not work at the moment):
 ```.vimrcfile
 call minpac#add('MooersLab/pml_bhmm.snippets')
 ```

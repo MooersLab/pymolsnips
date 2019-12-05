@@ -1,7 +1,7 @@
 <snippet>
 <content><![CDATA[
 run ~/Scripts/PyMOLScripts/quat.py; quat
-$0
+${0}
 ]]></content>
 <tabTrigger>bu</tabTrigger>
 <scope></scope>

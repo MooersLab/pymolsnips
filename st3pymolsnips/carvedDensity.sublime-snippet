@@ -39,7 +39,7 @@ set dash_radius, .05;
 set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
 preset.ball_and_stick("all",mode=1);
 draw;
-$0
+${0}
 ]]></content>
 <tabTrigger>carvedDensity</tabTrigger>
 <scope></scope>

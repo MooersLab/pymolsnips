@@ -99,7 +99,7 @@ turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
 writeCommandReference2HTML   Write the command reference to html file in the present working directory.
-$0
+${0}
 ]]></content>
 <tabTrigger>lsSnips</tabTrigger>
 <scope></scope>

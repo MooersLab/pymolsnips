@@ -1,7 +1,7 @@
 <snippet>
 <content><![CDATA[
 cmd.write_html_ref('pymol-command-ref.html');
-$0
+${0}
 
 ]]></content>
 <tabTrigger>writeCommandReference2HTML</tabTrigger>
