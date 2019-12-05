@@ -106,7 +106,8 @@
 		Redid previous GIFs VSCaoSnip & VSCMirror now that the cursor is visible 
 			Updated intro of README.md
 			Updated VSC section with GIFs/instructions
-	Thursday Dec 5, 2019 | 12:00-4:00pm (4)
+	Thursday Dec 5, 2019 | 1:00-5:00pm (4)
+			Updated Brackets and Atom with GIFs
 	Friday Dec 6, 2019 | 12:00-4:00pm (4)
 ## Week 7
 	Monday Dec 9, 2019 | 12:00-4:00pm (4)
@@ -121,3 +122,4 @@
 - Programs or text editors italicized * *
 - Directories bold ``
 - Pull down menus `` 
+- Action ** **
