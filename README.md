@@ -43,12 +43,19 @@ By entering these two letters, you have inserted 16 lines of code!
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif">
 </p>
 
+One thing to note when using tab stops is that mirrored selections are very 'fragile', if you will. Before you begin typing, make sure that the mirrored sections are all highlighted.It is easy to exit tab stop selections by the click of a mouse or even a keyboard movement! Getting your selections re-highlighted is not difficult but varies between text editor. Find more information about mirrored tab stops in the installation instructions of that text editor.  
 
 The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites. If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
 </p>
+
+Here is a working list of text editors that can utilize mirrored tab stops:
+* Atom
+* Brackets
+* CudaText
+* Visual Studio Code 
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
@@ -121,7 +128,7 @@ The animation below demonstrates the use of mirrored tab stops where changed def
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
   * <a href="#yasnippets"> Yasnippets (emacs)</a>
 
-If you are considering switching editors, the most popular editors seem to be *Atom, Brackets, Sublime Text3*, and *Visual Studio Code*.
+If you are considering switching editors, the most popular editors seem to be *Atom, Brackets, Sublime Text3*, and *Visual Studio Code*. *Visual Studio Code* would be the most recommended if you do not feel comfortable or are unfamiliar working with the command line for installation or other text editor related tasks. 
 You might also consider *Geany*. It is very lightweight, very fast, and very easily configurable. It is good editor if you care about agility.  
 
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
@@ -163,19 +170,35 @@ The installation and updating of plugins is quite slow compared to other editors
 <details>
 <summary><b>Installing and using snippets with Atom</b></summary>
 	
-You will have to install the `snippets package` to be able to use the above PyMOL snippets.  
+You will need the `snippets` package to be able to use the above PyMOL snippets.  
 The package installer is very intuitive.
-The snippets for all languages are stored in a single file that is called `snippets.cson`.
-This file is stored in a your home directory in a hidden folder called `~.atom/snippets.cson`. 
+Simply go to `Packages --> Settings View --> Install packages/themes`. 
+Search for **snippets** and click the install button. It may already be installed, and in that case, make sure that the snippets package is enabled (green bar along the button). 
 
-Snippets can also be added within the *Welcome Guide* of *Atom*. Under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
+Shown below is an enabled `snippets` package.
+<p align="center">
+	<img src="https://github.com/marevebro/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif">
+</p>
+
+The snippets for all languages are stored in a single file that is called `snippets.cson`.
+This file is stored in hidden folder on your home directory called `~.atom/snippets.cson`. 
 
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
 PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
-Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
-You can install this lexer via the plugin manager by selecting the `language-pymol package`. 
-	
+Enter the following in the command line while in the `atompymolsnips` folder:
+```bash
+$ mv -v pymolsnippets.cson ~/.atom/snippets.cson
+```
+Snippets can also be added within the *Welcome Guide* of *Atom*. Under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
+
+Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting. 
+Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**. Click install and enjoy!
+
+<p align="center">
+	<img src="https://github.com/marevebro/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
+</p>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>	
  
@@ -211,8 +234,8 @@ There is also presently the lack of a PyMOL lexer for syntax highligihting.
 The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
 *Brackets* is designed for web developers with a focus on HTML, CSS, and JavaScript.
 However, *Brackets* now has support for a large number of languages. 
-*Brackets* provides a Quick Edit and Live Preview mode, that run simultaneously, so changes in the `pml` code are deployed immediately in the preview. 
-*Brackets* uses icons,located on the right panel, to get to interactive settings on the application. The zig-zag line launches Live Preview. The lego piece launches the extension manager. Once you install an exentsion, a light bulb icon will appear which launches the **Snippets Manager**. 
+*Brackets* provides a Quick Edit and Live Preview mode, that run simultaneously, so changes in the pml code are deployed immediately in the preview. 
+*Brackets* uses icons, located on the right panel, that navigate you to interactive settings on the application. The zig-zag line launches Live Preview. The lego piece launches the extension manager. Once you install an exentsion, a light bulb icon will appear which launches the **Snippets Manager**. 
 
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
