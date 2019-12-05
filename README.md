@@ -38,11 +38,17 @@ The menu on the left shows the alternate tab triggers that contain the letters `
 The corresponding code for the selected tab trigger is displayed in the right window.
 By entering these two letters, you have inserted 16 lines of code!
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif)
+	 
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif">
+</p>
+
 
 The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites. If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
+</p>
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
@@ -221,7 +227,9 @@ Click import and choose the [`bracketspymolsnips.yml`](https://github.com/Mooers
 All of the snippets for PyMOL are in this single file. 
 The next step is to choose the import scheme. I chose the recommended setting to skip snippets with the same trigger. 
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif">
+</p>
 
 Until the PyMOL language is available for *Brackets*, use Python to get syntax highlighting.
 This means that the PyMOL file needs a file extension of `.py` while it is being edited in *Brackets*.
@@ -260,14 +268,18 @@ Any snippet add-on will automatically  be installed in this directory.
 
 After starting *CudaText*, install the snippets plugin by navigating to the `Plugins --> Addons Manager --> Install` and search for *plugin: Snippets* and select it. A pop-up window will appear asking you if you'd like to install, click OK. I could not screen capture this pop-up window.
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif">
+</p>
 
 You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*. 
 Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
 
 *CudaText* allows you to edit mirrored sites for uniform editing. Below you can see how to edit one mirror location and travel through other mirror sites using the Tab key. 
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
+</p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
@@ -294,7 +306,9 @@ The source code is also available.
 	
 Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`. You'll also need to add PyMOL as a group in that same file configuration.  It should read `#~ None=PyMOL` under Groups. 
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif">
+</p>
 
 In addition, you need to edit the keybinding preferences `Move cursor in snippet` for under `Edit --> Preferences --> Keybindings` because it is blank by default. I used **Tab**. Press `enter` and then click "Allow" when the override window pops up. 
 Without making this edit, you will not be able to advance to the second and later tab stops. 
@@ -348,7 +362,9 @@ In the *JupyterNotebooks* command line, enter:
 ```Jupyter
 %load filePath/<snippetName>.pml
 ```
-The animation below demonstrates the insertion of a snippet with the load magic. <p align="center">
+The animation below demonstrates the insertion of a snippet with the load magic. 
+
+<p align="center">
         <img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
     </p>
 
@@ -1014,13 +1030,17 @@ $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 
 Next,  install *bioSyntax* via `View --> Extensions`. Search for *bioSyntax* and hit the `Install` button. You will be asked to select a theme, just select bioSyntax. 
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif">
+</p>
 
 Open a file with a `.pml` file extension. 
 You should see `pml` in the lower right on the bottom panel.  
 Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion effect. You should see syntax highlighting.
 
-![](https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif)
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif">
+</p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
