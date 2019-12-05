@@ -53,7 +53,6 @@ The animation below demonstrates the use of mirrored tab stops where changed def
 
 Here is a working list of text editors that can utilize mirrored tab stops:
 * Atom
-* Brackets
 * CudaText
 * Visual Studio Code 
 
@@ -177,7 +176,7 @@ Search for **snippets** and click the install button. It may already be installe
 
 Shown below is an enabled `snippets` package.
 <p align="center">
-	<img src="https://github.com/marevebro/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif">
 </p>
 
 The snippets for all languages are stored in a single file that is called `snippets.cson`.
@@ -186,17 +185,17 @@ This file is stored in hidden folder on your home directory called `~.atom/snipp
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
 PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
-Enter the following in the command line while in the `atompymolsnips` folder:
+To do this, etner:
 ```bash
-$ mv -v pymolsnippets.cson ~/.atom/snippets.cson
+$ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 ```
-Snippets can also be added within the *Welcome Guide* of *Atom*. Under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
+Snippets can also be added within the *Welcome Guide* of *Atom*, under the section called *<>Add a Snippet*. When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing. 
 
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting. 
 Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**. Click install and enjoy!
 
 <p align="center">
-	<img src="https://github.com/marevebro/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -219,9 +218,9 @@ Users can create nested subfolders for groups of related snippets.
 The clippings are selected via the pulldown labeled `C` (circled). 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings. 
 
-In the `pymolsnips` directory:
+To do this, enter:
 ```bash
-$ cp -a bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clippings/
+$ cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clippings/
 ```
 The disadvantages of these clippings include the lack of tab triggers and tab stops. 
 There is also presently the lack of a PyMOL lexer for syntax highligihting. 
@@ -244,9 +243,14 @@ Go to `File --> Extension Manager` or press the lego piece on the right panel.
 Search for the `Brackets Snippets (by edc)` and install it.
 This is snippet manager that has a GUI that enables the manual creation of user defined snippets.
 
-Go to `Brackets --> Preferences` to update Brackets. The light bulb icon will now appear in the right panel. Click on the light bulb to open the **Snippets Manager**. 
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsExtInstall.gif">
+</p>
+
+It should automatically refresh, but if not, close and repon *Brackets*. The light bulb icon will now appear in the right panel. Click on the light bulb to open the **Snippets Manager**. 
 The `settings` tab opens a menu with an import button.
 Click import and choose the [`bracketspymolsnips.yml`](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page. You will have to first download the file to your computer. 
+
 All of the snippets for PyMOL are in this single file. 
 The next step is to choose the import scheme. I chose the recommended setting to skip snippets with the same trigger. 
 
@@ -257,6 +261,14 @@ The next step is to choose the import scheme. I chose the recommended setting to
 Until the PyMOL language is available for *Brackets*, use Python to get syntax highlighting.
 This means that the PyMOL file needs a file extension of `.py` while it is being edited in *Brackets*.
 When finished, save this file with the `.pml` extension to be able to use it in PyMOL.
+
+In the example of snippet use below, notice how all snippets that begin with a are suggested. Only when I press `o` do the suggestions narrow. This is helpful when you cannot remember the short-hand for a snippet.
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif">
+</p>
+
+Unfortunately, *Brackets* does not currently suppoort tab stops. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
@@ -1063,6 +1075,12 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif">
+</p>
+
+*VSC* also supports the use of mirrored tab stops. In the example shown below, I am using the snippet *threeMaps*.
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
