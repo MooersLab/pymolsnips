@@ -1077,6 +1077,12 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif">
 </p>
 
+*VSC* also supports the use of mirrored tab stops. In the example shown below, I am using the snippet *threeMaps*.
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
+</p>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
