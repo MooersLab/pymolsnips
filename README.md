@@ -358,6 +358,11 @@ The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops. 
 Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
 
+Here is an example of the `ao` snippet being used in *geany*:
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyAoSnip.gif">
+</p>
+
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
