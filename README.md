@@ -54,6 +54,7 @@ The animation below demonstrates the use of mirrored tab stops where changed def
 Here is a working list of text editors that can utilize mirrored tab stops:
 * Atom
 * CudaText
+* Sublime Text 3
 * Visual Studio Code 
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
@@ -339,7 +340,7 @@ The source code is also available.
 <details>
 <summary><b>Installing and using snippets with Geany</b></summary>
 	
-Make sure that the `.pml` filetype is defined as `PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`. You'll also need to add PyMOL as a group in that same file configuration.  It should read `#~ None=PyMOL` under Groups. 
+Make sure that the `.pml` filetype is defined as `#~ PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`. You'll also need to add PyMOL as a group in that same file configuration.  It should read `#~ None=PyMOL` under Groups. 
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif">
@@ -607,15 +608,23 @@ On the Mac, create the `snippets` directory in the *Sublime Text3* folder:
 ```bash
 $ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
 ```
-In the `pymolsnips` directory, add the snippet files to the *Sublime Text 3* folder:
+Add the snippet files to the *Sublime Text 3* folder:
 ```bash
-$ cp -a st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
+$ cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
 ```
 You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/` and it should still work. 
 
-Restart *Sublime Text 3*, open a PyMOL script file, and then enter "ao" and  hit tab. 
+Restart *Sublime Text 3*, open a PyMOL script file, and then enter `ao` and  hit tab. 
 Sixteen lines of code should appear. 
+<p align="center">
+	<img src="https://github.com/MooersLanb/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif">
+</p>
 
+*Sublime Text 3* also supports tab stops and mirrored tab stops! Below is an example of mirrored tab stop editing with the `threeMaps` snippet. Notice how when I type *sugar* all instances of glycan are replaced with sugar.
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SublimeMirror.gif">
+</p>
 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet. 
 
