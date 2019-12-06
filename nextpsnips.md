@@ -1,6 +1,8 @@
 # To-Do with PyMOLSnips
 - update mirror tab stops list at top of readme
 - continue running through the text editors and making GIFs
+- where do you enter `lsSnips` in geany?
+- I messed up geany when reverting some setting to make a new GIF..!!
 
 ## Problems with text editors (smaller headings are finished)
 ### Atom 
@@ -10,9 +12,7 @@
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
-	- Errors: I can copy contents of a preset snippet, manually save the selection as a clipping under a different name 	      (say aotest), 
-	and in either a new file (not .pml) or a .pml file type aotest and it will insert it. A tab with an option for the 	   clipping will even appear.
-		I cannot repeat this action after I insert it once. 
+	- Errors: Tab triggers only work the very first time. Once a tab stop is inserted, it will not repeat the tab trigger action. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
 ###### Brackets 
 	- Installation: Success, easy
@@ -30,7 +30,7 @@
 ### Geany 
 	- Installation: Already installed 
 	- GIFY made: Yes
-	- Errors: Seems to be working fine 
+	- Errors: When remaking a GIF, I messed something up and now it doesn't work. All I did was edit the filetype conf file and now it doesn't recognize .pml... :(
 ### Gedit
 	- Installation: Success - can't find on computer to open 
 	- GIFY made: No
@@ -69,11 +69,10 @@
 	- GIFY made: No
 	- Errors: Ultisnips not cooperating at all. 
 		- Created this section since nothing existed specifically for snipMate
-### Sublime Text 3
+##### Sublime Text 3
 	- Installation: Already installed
-	- GIFY made: No - but can make if needed.. I think it will just be me typing 'ao' and the snippet popping up. 
-		-Most of the work for this text editor was on the command line which I have documented. 
-	- Errors: No issues
+	- GIFY made: Yes - mirror tabs tops, ao snip use
+	- Errors: None
 ### TextMate
 	- Installation: Success
 	- GIFY made: One already exists
