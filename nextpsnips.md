@@ -1,28 +1,24 @@
 # To-Do with PyMOLSnips
-- Make a GIF for mirrored tab stops for VSC
-- List text editors that have a mirrored tab stop option?
-- Recommend VSC for users who are unfamiliar with the command line
-- Discuss the fragility of tab stops and how you can easily exit a tab stop
+- update mirror tab stops list at top of readme
+- continue running through the text editors and making GIFs
+- where do you enter `lsSnips` in geany?
+- I messed up geany when reverting some setting to make a new GIF..!!
 
-## Problems with text editors 
+## Problems with text editors (smaller headings are finished)
 ### Atom 
 	- Installation: Success
-	- GIFY made: No - can't get snips to load - says "unmatched ]"
-	- Errors: when running a .pml file error message says "unmatched ]" Can't access hiddne folder for snippets (marina issue)
-		* might be due to white spaces that exists between []. (even if the white space is removed)(not recognizing that other bracket does exist)
-		* once this error is fixed another error may appear concerning the """ or ''' used to end a section
+	- GIFY made: Two, install language and snippet packages. Snippet use - no...can't get to load - says "unmatched ]". 
+	- Errors: still seeing "unmatched ]"
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
-	- Errors: I can copy contents of a preset snippet, manually save the selection as a clipping under a different name 	      (say aotest), 
-	and in either a new file (not .pml) or a .pml file type aotest and it will insert it. A tab with an option for the 	   clipping will even appear.
-		I cannot repeat this action after I insert it once. 
+	- Errors: Tab triggers only work the very first time. Once a tab stop is inserted, it will not repeat the tab trigger action. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
-### Brackets 
+###### Brackets 
 	- Installation: Success, easy
-	- GIFY made: Yes
-	- Errors: Some tab stops are visible --> need to add {} around 0. 
-### CudaText
+	- GIFY made: Yes - package install, snippet install, snippet use.
+	- Errors: None 
+###### CudaText
 	- Installation: Success
 	- GIFY made: Yes - tab stops, use of ao, and plugin install
 	- Errors: None
@@ -34,7 +30,7 @@
 ### Geany 
 	- Installation: Already installed 
 	- GIFY made: Yes
-	- Errors: Seems to be working fine 
+	- Errors: When remaking a GIF, I messed something up and now it doesn't work. All I did was edit the filetype conf file and now it doesn't recognize .pml... :(
 ### Gedit
 	- Installation: Success - can't find on computer to open 
 	- GIFY made: No
@@ -73,11 +69,10 @@
 	- GIFY made: No
 	- Errors: Ultisnips not cooperating at all. 
 		- Created this section since nothing existed specifically for snipMate
-### Sublime Text 3
+##### Sublime Text 3
 	- Installation: Already installed
-	- GIFY made: No - but can make if needed.. I think it will just be me typing 'ao' and the snippet popping up. 
-		-Most of the work for this text editor was on the command line which I have documented. 
-	- Errors: No issues
+	- GIFY made: Yes - mirror tabs tops, ao snip use
+	- Errors: None
 ### TextMate
 	- Installation: Success
 	- GIFY made: One already exists
@@ -88,7 +83,7 @@
 	- Errors: Errors were resolved. vim was not connected to the right Python3. Needed to update this using "sudo -H /opt/local/bin/python3.7 -m pip install pynvim"
 	Need to have tips on installing vim and vundle before getting into ultisnips.
 		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
-### Visual Studio Code
+###### Visual Studio Code
 	- Installation: Already installed
 	- GIFY made: Yes - aoSnip, bioSyntax install, NEED TO ADD MIRROR. 
 	- Error: None
