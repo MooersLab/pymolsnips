@@ -113,6 +113,7 @@
 			geany needs to be worked on some more sinec I messed something when remaking a GIF
 ## Week 7
 	Monday Dec 9, 2019 | 12:00-4:00pm (4)
+	   Blaine added links between categories and the tables of snippets
 	Tuesday Dec 10, 2019 | 12:00-4:00pm (4)
 	Wednesday Dec 11, 2019 | 12:00-4:00pm (4)
 	Thursday Dec 12, 2019 | 12:00-4:00pm (4)
