@@ -380,7 +380,17 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 	
 The snippets are stored in a single file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`. 
-The full path is `~.config/gedit/snippets/pymol.xml`.
+The full path is `~/.config/gedit/snippets/pymol.xml`.
+
+You may need to create this directory.
+To do this:
+```bash
+$ mkdir ~/.config/gedit/snippets/pymol.xml
+```
+Then to copy `pymol.xml` into that directory, do:
+```bash
+$ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
+```
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
