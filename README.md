@@ -75,7 +75,7 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 - <a href="#changeOrientation"> Change orientation </a>
 - <a href="#colorScheme"> Color scheme </a>
 - <a href="#coordCovalent"> Coordinate covalent bonds </a>
-- <a href="#databaseFunction">Database function</a>
+- <a href="#database">Database function</a>
 - <a href="#electronDensity">Electron density</a>
 - <a href="#fetchFile">Fetch file from PDB </a>
 - <a href="#fileInput"> File Input</a>
@@ -1194,6 +1194,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="database"></h3>
+
 ### Database function:
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
@@ -1201,6 +1203,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="electronDensity"></h3>
 
 ### Electron density:
 | Tab trigger   | Description              |
@@ -1212,6 +1216,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="fetchFile"></h3>
+
 ### Fetch file from PDB:
 | Tab trigger   | Description     |
 |:--------------|:----------------|
@@ -1221,6 +1227,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="fileInput"></h3>
+
 ### File Input:
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
@@ -1229,12 +1237,17 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="fileOutput"></h3>
+
 ### File output:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | savePNG       | Save a png file of current scene to the current directory. |
 
 <A href=#FASTLINKS3>Return to list of editors above.</A>
+
+
+<h3 name="formatLabel"></h3>
 
 ### Format label:
 | Tab trigger   | Description                                         |
@@ -1244,6 +1257,9 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | oneLetter     | One letter amino acid.                              |
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+
+
+<h3 name="hbonds"></h3>
 
 ### H-bonds:
 | Tab trigger   | Description       |
@@ -1256,15 +1272,18 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="#help"></h3>
+
 ### Help:
 | Tab trigger                | Description                                                                |
 |:---------------------------|:---------------------------------------------------------------------------|
 | printDoc                   | Print document string of a function.                                       |
 | writeCommandReference2HTML | Write the command reference to html file in the present working directory. |
 
-
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="#label"></h3>
 
 ### Label:
 | Tab trigger    | Description                                        |
@@ -1276,6 +1295,10 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+
+<h3 name="#labelFormat"></h3>
+
 ### Label format:
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
@@ -1284,6 +1307,9 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>>
 
+
+
+<h3 name="#labelPlacement"></h3>
 
 ### Label placement:
 | Tab trigger   | Description   |
@@ -1294,8 +1320,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
-
+<h3 name="#measureSurfaceArea"></h3>
 
 ### Measurement surface area:
 | Tab trigger   | Description           |
@@ -1304,6 +1329,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="#molecularRepresentation"></h3>
 
 ### Molecular representation:
 | Tab trigger             | Description                                                                                    |
@@ -1333,6 +1360,9 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+
+<h3 name="#printCoordinates"></h3>
+
 ### Print coordinates of selection:
 | Tab trigger    | Description      |
 |:---------------|:-----------------|
@@ -1341,6 +1371,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="#printSequence"></h3>
+
 ### Print sequence:
 | Tab trigger   | Description                |
 |:--------------|:---------------------------|
@@ -1348,6 +1380,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="#pymolrc"></h3>
 
 ### Pymolrc:
 | Tab trigger   | Description                                               |
@@ -1361,6 +1395,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="#timestamp"></h3>
+
 ### Save png flle with timestamp:
 | Tab trigger   | Description                  |
 |:--------------|:-----------------------------|
@@ -1369,6 +1405,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="#selection"></h3>
 
 ### Selection:
 | Tab trigger          | Description                                                  |
@@ -1392,6 +1430,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="#specializedFigure"></h3>
+
 ### Specialized figure:
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
@@ -1400,6 +1440,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="#stereo"></h3>
 
 ### Stereo:
 | Tab trigger   | Description   |
@@ -1410,20 +1452,24 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="#supercell"></h3>
+
 ### Unit cell display:
 | Tab trigger   | Description                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|
-|sc111     	   	|Make a lattice of 1 x 1 x 1 unit cells.  				                       |
+|sc111     	   	|Make a lattice of 1 x 1 x 1 unit cells.  				                             |
 |sc221      		|Make a lattice of 2 x 2 x 1 unit cells.                                       |
-|sc112    	  	|Make a lattice of 1 x 1 x 2 unit cells.    				                   |
-|sc222 		      |Make a lattice of 2 x 2 x 2 unit cells.      				                   |
-|sc331    	    |Make a lattice of 3 x 3 x 1 unit cells.      				                   |
-|sc313          |Make a lattice of 3 x 1 x 3 unit cells.       				                   |
-|sc133          |Make a lattice of 1 x 3 x 3 unit cells.                       				   |
+|sc112    	  	|Make a lattice of 1 x 1 x 2 unit cells.    				                           |
+|sc222 		      |Make a lattice of 2 x 2 x 2 unit cells.            				                   |
+|sc331    	    |Make a lattice of 3 x 3 x 1 unit cells.      				                         |
+|sc313          |Make a lattice of 3 x 1 x 3 unit cells.            				                   |
+|sc133          |Make a lattice of 1 x 3 x 3 unit cells.                            				   |
 |sc333          |Make a lattice of 3 x 3 x 3 unit cells.                                       |
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="#waterPentagon"></h3>
 
 ### Water pentagon:
 | Tab trigger   | Description            |
@@ -1431,8 +1477,10 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | waterTriple   | triple water pentagon. |
 
 
-
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+
+
+<h3 name="#saltBridge"></h3>
 
 ### salt-bridge:
 | Tab trigger   | Description                               |
@@ -1442,13 +1490,17 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="#selection"></h3>
+
 ### selection:
 | Tab trigger   | Description                     |
 |:--------------|:--------------------------------|
 | ligandSelect  | Make selection of ligand atoms. |
 
-
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+
+
+<h3 name="#workshop"></h3>
 
 ### workshop:
 | Tab trigger      | Description                        |
