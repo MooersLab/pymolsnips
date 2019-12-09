@@ -70,11 +70,11 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 <summary>Here are some snippet categories</summary>
 
 ## <A name="FASTLINKS3">Quick links</A> ##	
-- <a href="#altloc"> Alternate locator</a>
-- Analysis
-- Change orientation
-- Color scheme
-- Coordinate covalent bonds
+- <a href="#altloc"> Alternate locator </a>
+- <a href="#analysis"> Analysis </a>
+- <a href="#changeOrientation"> Change orientation </a>
+- <a href="colorScheme"> Color scheme </a>
+- <a href="coordCovalent"> Coordinate covalent bonds </a>
 - Database function
 - Electron density
 - Fetch file from PDB
@@ -1139,9 +1139,10 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#FASTLINKS3>Return to list of snippet categories near top.</A>
 
 
+<h3 name="analysis"></h3>
 
 ### Analysis:
 | Tab trigger    | Description                                                                          |
@@ -1155,6 +1156,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="changeOrientation"></h3>
+
 ### Change orientation:
 | Tab trigger   | Description                        |
 |:--------------|:-----------------------------------|
@@ -1165,6 +1168,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
+<h3 name="colorScheme"></h3>
+
 ### Color scheme:
 | Tab trigger   | Description                                    |
 |:--------------|:-----------------------------------------------|
@@ -1174,6 +1179,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
+
+<h3 name="coordCovalent"></h3>
 
 ### Coordinate covalent bonds:
 | Tab trigger   | Description                                                |
