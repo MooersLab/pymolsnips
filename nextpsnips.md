@@ -32,9 +32,9 @@
 	- GIFY made: Yes
 	- Errors: When remaking a GIF, I messed something up and now it doesn't work. All I did was edit the filetype conf file and now it doesn't recognize .pml... :(
 ### Gedit
-	- Installation: Success - can't find on computer to open 
+	- Installation: Under /opt/local/bin/gedit
 	- GIFY made: No
-	- Errors: Not recognizing .pml style file. Couldn't figure out how to add the .pml language. 
+	- Errors: Not recognizing .pml style file. Couldn't figure out how to add the .pml language. Need to add additional file?Gedit
 ### Jupyter Lab/JupyterNotebook
 	- Installation: Web browser 
 	- GIFY made: One already exists
