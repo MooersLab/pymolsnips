@@ -114,6 +114,8 @@
 ## Week 7
 	Monday Dec 9, 2019 | 12:00-4:00pm (4)
 	   Blaine added links between categories and the tables of snippets
+	   Updated Lighttable with a GIF 
+	   Added some detailed installation instructions for gedit
 	Tuesday Dec 10, 2019 | 12:00-4:00pm (4)
 	Wednesday Dec 11, 2019 | 12:00-4:00pm (4)
 	Thursday Dec 12, 2019 | 12:00-4:00pm (4)
