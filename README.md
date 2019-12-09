@@ -1132,11 +1132,15 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 <h2> <A name="snippetList" >List of the snippets by their tabtrigger name and description </A> </h2>
 
 
-<h3 name="altloc"> Alternate locators: </h3>
+<h3 name="altloc"></h3>
+
+### Alternate locators:
 | Tab trigger   | Description                                                   |
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+
 
 
 ### Analysis:
@@ -1147,7 +1151,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | printBs        | Print the B-factors of a residue.                                                    |
 | printBs2digits | Print B-values for a residue with the B's rounded off to two decimal places.         |
 | printBspartB   | Print B factors of part B of a disorderd residue.                                    |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Change orientation:
@@ -1156,7 +1161,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | rotate        | Rotate about axis.                 |
 | rv            | Return settings in a compact format on one line. |
 | turnAboutAxis | Turn about axis.                   |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Color scheme:
@@ -1165,21 +1171,24 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | cblind        | Eanble color blind friendly colors.                               |
 | cribbon       | Color ribbon H red, strand yellow, loop green. |
 | volumeRamp    | Volume ramp.                                   |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Coordinate covalent bonds:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | coordinate    | Coordinate covalent bonds to metals. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Database function:
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | lsSnips       | List all snips by tab trigger and description |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Electron density:
@@ -1188,7 +1197,8 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | carvedDensity | Carved electron density map. |
 | fetch2FoFc    | Fetch 2FoFc map.         |
 | threeMaps     | Three electron density maps.  |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Fetch file from PDB:
@@ -1196,20 +1206,23 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:----------------|
 | fetchCIF      | Fetch cif file. |
 | fetchFoFc     | Fetch fofc map. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### File Input:
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | loadPDBfile   | Load a pdb file in the current directory. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### File output:
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | savePNG       | Save a png file of current scene to the current directory. |
+
 <A href=#FASTLINKS3>Return to list of editors above.</A>
 
 ### Format label:
@@ -1218,23 +1231,26 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | labelResnResi | Label CA atom with residue name and residue number. |
 | labelSS       | Label SS.                                           |
 | oneLetter     | One letter amino acid.                              |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### H-bonds:
 | Tab trigger   | Description       |
 |:--------------|:------------------|
 | distance      | H-bond distances. |
 | drawHbonds    | Draw H-bonds.     |
-| hbond         | H-bond setup.      |
+| hbond         | H-bond setup.     |
 | hbonddash     | H-bond dashes.    |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Help:
 | Tab trigger                | Description                                                                |
 |:---------------------------|:---------------------------------------------------------------------------|
 | writeCommandReference2HTML | Write the command reference to html file in the present working directory. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 
 ### Label:
@@ -1244,32 +1260,37 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | labelMainChain | Label the main chain atoms by resn,resi,atom name. |
 | labelWatersHOH | Label waters HOH.                                  |
 | labelWatersW   | Label waters W.                                    |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Label format:
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | sigang        | Set angle labels to display 2 decimals places |
 | sigdist       | Set distance labels to display 2 decimals     |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>>
 
 ### Label placement:
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | centerpi      | Center pi.    |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Label position:
 | Tab trigger   | Description                     |
 |:--------------|:--------------------------------|
 | pseudolabel   | Position label with pseudoatom. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Measurement surface area:
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | ms            | Measure surface area. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Molecular representation:
 | Tab trigger             | Description                                                                                    |
@@ -1295,19 +1316,22 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | setcolor                | Set color name to a RGB code.                                                                  |
 | sidehChainHelper        | In cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
 | solventRadius           | Set radius of ball used to make solvent accessible surface.                                    |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Print coordinates of selection:
 | Tab trigger    | Description      |
 |:---------------|:-----------------|
 | getCoordinates | Get coordinates. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Print sequence:
 | Tab trigger   | Description                |
 |:--------------|:---------------------------|
 | fasta         | Print Fasta from PDB file. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Pymolrc:
 | Tab trigger   | Description                                               |
@@ -1317,14 +1341,16 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | lspymolrc     | Print list of active pymolrc files.                       |
 | setpath       | Set additional path for PyMOL to search on startup        |
 | sigDigits     | Set number of decimals places to show in distance labels. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Save png flle with timestamp:
 | Tab trigger   | Description                  |
 |:--------------|:-----------------------------|
 | spng          | Save png flle with timestamp |
 | spse          | Save pse flle with timestamp |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Selection:
 | Tab trigger          | Description                                                  |
@@ -1344,21 +1370,24 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | selectResiduesAround | Select residues within a radius around a ligand.             |
 | selectStrands        | Select atoms by beta strands.                                |
 | undoSelection        | Undo a selection.                                            |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Specialized figure:
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | bu            | Biological unit.      |
 | stack         | Base-stacking figure. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Stereo:
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | stereoDraw    | Stereo draw.  |
 | stereoRay     | Stereo ray.   |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Unit cell display:
 | Tab trigger   | Description                                                                  |
@@ -1371,13 +1400,15 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |sc313          |Make a lattice of 3 x 1 x 3 unit cells.       				                   |
 |sc133          |Make a lattice of 1 x 3 x 3 unit cells.                       				   |
 |sc333          |Make a lattice of 3 x 3 x 3 unit cells.                                       |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### Water pentagon:
 | Tab trigger   | Description            |
 |:--------------|:-----------------------|
 | waterTriple   | triple water pentagon. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### analysis:
 | Tab trigger                 | Description                                                                                                               |
@@ -1388,25 +1419,29 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | printNameB4ResiX            | Print name and b-factor for a residue.                                                                                    |
 | printResiResnNameB4ResiX    | Print resn, resi, atom name, and b-factor.                                                                                |
 | printResiResnNameB4ResiXNoH | Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### help:
 | Tab trigger   | Description                          |
 |:--------------|:-------------------------------------|
 | printDoc      | Print document string of a function. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### salt-bridge:
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | his31asp70    | Asp70-His31 salt-bridge from T4 lysozyme. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### selection:
 | Tab trigger   | Description                     |
 |:--------------|:--------------------------------|
 | ligandSelect  | Make selection of ligand atoms. |
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
 
 ### workshop:
 | Tab trigger      | Description                        |
@@ -1414,4 +1449,4 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
 | internalGUIwidth | Set the width of the internal gui. |
 
-<A href=#FASTLINKS>Return to quick links section at top</A>
+<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
