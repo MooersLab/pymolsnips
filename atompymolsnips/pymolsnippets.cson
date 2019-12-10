@@ -1,4 +1,4 @@
-'.source.pml': 
+'.source.pml':
   'Ambient occlussion.':
     'prefix': 'ao'
     'body': '''
@@ -56,18 +56,18 @@
       delete all;
       fetch ${1:4PCO}, type=pdb,async=0;
       select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );
-      hide everything, element h; 
+      hide everything, element h;
       remove not ${2:G2G3};
       bg_color white;
       show sticks;
       set stick_radius=0.14;
-      set stick_ball, on; 
+      set stick_ball, on;
       set stick_ball_ratio,1.9;
       set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
       hide everything, element H;
-      select carbon1, element C and (resi ${4:3} or resi ${5:8}) 
+      select carbon1, element C and (resi ${4:3} or resi ${5:8})
       # select lower base pair;
-      select carbon2, element C and (resi ${3:2} or resi ${6:9}) 
+      select carbon2, element C and (resi ${3:2} or resi ${6:9})
       #select upper base pair;
       color gray70,carbon1;
       color gray10,carbon2;
@@ -96,7 +96,7 @@
   'Valence bond. ':
     'prefix': 'doubleBond'
     'body': '''
-      set valence, 1; 
+      set valence, 1;
       set valence_mode, 1;
       $0
     '''
@@ -107,7 +107,7 @@
       as cartoon;
       color cb_red, ss H;
       color cb_yellow,ss S;
-      color cb_green, ss L+; 
+      color cb_green, ss L+;
       $0
     '''
   'Center pi.':
@@ -123,86 +123,86 @@
       as cartoon;
       color red, ss H;
       color yellow,ss S;
-      color green, ss L+; 
+      color green, ss L+;
       $0
     '''
   'Colored spheres.':
     'prefix': 'cspheres'
     'body': '''
-      as spheres;    
-      color gray30, chain %0;    
-      color white, chain %1;    
-      color green, name CL;    
-      color brown, resn NAG;    
-      color red, resi 381;    
-      remove solvent;    
-      unset specular;    
-      set ray_trace_gain, 0;    
-      set ray_trace_mode, 3;    
-      bg_color white;    
-      set ray_trace_color, black;    
-      unset depth_cue;    
+      as spheres;
+      color gray30, chain %0;
+      color white, chain %1;
+      color green, name CL;
+      color brown, resn NAG;
+      color red, resi 381;
+      remove solvent;
+      unset specular;
+      set ray_trace_gain, 0;
+      set ray_trace_mode, 3;
+      bg_color white;
+      set ray_trace_color, black;
+      unset depth_cue;
       $0
     '''
   'Coordinate covalent bonds to metals and H-bonds friom RNA.':
     'prefix': 'coordinate'
     'body': '''
-      viewport 900,600;    
-      fetch 3nd4, type=pdb, async=0;    
-      run ~/Scripts/PyMOLScripts/quat.py;    
-      quat 3nd4;    
-      show sticks;    
-      set stick_radius=0.125;    
-      hide everything, name H*;    
-      bg_color white;        
-      create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));        
-      bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);    
-      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);    
-      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);    
-      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);    
-      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);        
-      distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);    
-      distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);    
-      distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);    
-      distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);    
-      show nb_spheres;     
-      set nb_spheres_size, .35;        
-      distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;    
-      distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;    
-      distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;   
-      distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;    
-      distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;    
-      distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    
-      distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;    
-      distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;    
-      distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;    
-      distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;    
-      distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;    
-      distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
-      distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
-      distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
-       distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
-      distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
-      distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
-      distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
-      set depth_cue=0;    
-      set ray_trace_fog=0;    
-      set dash_color, black;    
-      set label_font_id, 5;    
+      viewport 900,600;
+      fetch 3nd4, type=pdb, async=0;
+      run ~/Scripts/PyMOLScripts/quat.py;
+      quat 3nd4;
+      show sticks;
+      set stick_radius=0.125;
+      hide everything, name H*;
+      bg_color white;
+      create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));
+      bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);
+      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);
+      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);
+      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);
+      bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);
+      distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);
+      distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);
+      distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);
+      distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);
+      show nb_spheres;
+      set nb_spheres_size, .35;
+      distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;
+      distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;
+      distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;
+      distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;
+      distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;
+      distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;
+      distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;
+      distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;
+      distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;
+      distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;
+      distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;
+      distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;
+      distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;
+      distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;
+       distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;
+      distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;
+      distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;
+      distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;
+      set depth_cue=0;
+      set ray_trace_fog=0;
+      set dash_color, black;
+      set label_font_id, 5;
       set label_size, 36;
-      set label_position, (0.5, 1.0, 2.0);   
-      set label_color, black;    
-      set dash_gap, 0.2;    
-      set dash_width, 2.0;    
+      set label_position, (0.5, 1.0, 2.0);
+      set label_color, black;
+      set dash_gap, 0.2;
+      set dash_width, 2.0;
       set dash_length, 0.2;
-      set label_color, black;    
-      set dash_gap, 0.2; 
+      set label_color, black;
+      set dash_gap, 0.2;
       set dash_width, 2.0;
       set dash_length, 0.2;
       select carbon, element C;
       color yellow, carbon;
       disable carbon;
-      set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0) 
+      set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)
       $0
     '''
   'H-bond distances.':
@@ -216,7 +216,7 @@
     'body': '''
       hide everything, hydrogens
       hide labels
-      set dash_color, ${1:black}${2:yelow} 
+      set dash_color, ${1:black}${2:yelow}
       set dash_gap, 0.4
       set dash_radius, 0.08
       $0
@@ -232,7 +232,7 @@
       remove not ${2:LongGlycan};
       remove name H*;
       isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
-      color density, 2fofcmap; 
+      color density, 2fofcmap;
       show sticks;
       show spheres;
       set stick_radius, .07;
@@ -305,7 +305,7 @@
     'body': '''
       hide everything, hydrogens;
       hide labels;
-      set dash_color, black; 
+      set dash_color, black;
       set dash_gap, 0.4;
       set dash_radius, 0.08;
       $0
@@ -330,7 +330,7 @@
   'Label CA atom with single-letter residue name and residue number.':
     'prefix': 'labelResnResi'
     'body': '''
-      label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
+      label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi});
       $0
     '''
   'Label SS. ':
@@ -414,17 +414,17 @@
   'Stereo draw.':
     'prefix': 'stereoDraw'
     'body': '''
-      stereo walleye; 
-      set ray_shadow, off; 
+      stereo walleye;
+      set ray_shadow, off;
       #draw 3200,2000;
-      draw ${1:1600,1000}; 
+      draw ${1:1600,1000};
       png ${2:aaa}.png
       $0
     '''
   'Stereo ray.':
     'prefix': 'stereoRay'
     'body': '''
-      stereo; 
+      stereo;
       set ray_shadow, off;
       ray ${1:2400,1200};
       png ${2:aaa}.png
@@ -434,7 +434,7 @@
     'prefix': 'threeMaps'
     'body': '''
       load ${1:4dgr}.pdb
-      # Make sure to rename map file so that 
+      # Make sure to rename map file so that
       # the root filename differs from pdb root filename
       load ${1:4dgr}_2fofc.ccp4, 2fofc;
       load ${1:4dgr}_fofc.ccp4, fofc;
@@ -477,7 +477,7 @@
       set sphere_quality=3
       show sticks, resi 1102
       from pymol import stored
-      # set the stored array equal to the b−values; or use your own values 
+      # set the stored array equal to the b−values; or use your own values
       stored.bb = [ ]
       iterate, stored.bb.append(b)
       # execute a python−block
@@ -507,10 +507,10 @@
     'body': '''
       python;
       import datetime;
-      from pymol import cmd; 
+      from pymol import cmd;
       DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
-      s = str(DT); 
-      cmd.save(stemName+s+".png"); 
+      s = str(DT);
+      cmd.save(stemName+s+".png");
       end python;
       $0
     '''
@@ -519,10 +519,10 @@
     'body': '''
       python;
       import datetime;
-      from pymol import cmd; 
+      from pymol import cmd;
       DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
-      s = str(DT); 
-      cmd.save(stemName+s+".pse"); 
+      s = str(DT);
+      cmd.save(stemName+s+".pse");
       end python;
       $0
     '''
@@ -564,7 +564,7 @@
   'Duplicate object.':
     'prefix': 'duplicateObject'
     'body': '''
-      create ${1:t4l}, ${2:1lw9}; 
+      create ${1:t4l}, ${2:1lw9};
       $0
     '''
   'Select a chain. ':
@@ -600,13 +600,13 @@
   'Select atoms by alpha helices.':
     'prefix': 'selectHelices'
     'body': '''
-      select ${1:helices}, ss h; 
+      select ${1:helices}, ss h;
       $0
     '''
   'Select atoms by beta strands.':
     'prefix': 'selectStrands'
     'body': '''
-      select ${1:strands}, ss s; 
+      select ${1:strands}, ss s;
       $0
     '''
   'Select atoms by beta loops.':
@@ -636,7 +636,7 @@
   'Undo a selection.':
     'prefix': 'undoSelection'
     'body': '''
-      disable ${1:sele}; 
+      disable ${1:sele};
       $0
     '''
   'Load a pdb file in the current directory.':
@@ -648,7 +648,7 @@
   'Save a png file of current scene to the current directory.':
     'prefix': 'savePNG'
     'body': '''
-      png ${1:saveMe.png}; 
+      png ${1:saveMe.png};
       $0
     '''
   'Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.':
@@ -793,7 +793,7 @@
     'prefix': 'averageB'
     'body': '''
       """ Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
-      Bfactors = []; 
+      Bfactors = [];
       iterate (resi ${1:133}), Bfactors.append(b);
       print("Sum = ", "%.2f" % (sum(Bfactors)));
       print("Number of atoms = ", len(Bfactors));
@@ -803,11 +803,11 @@
   'AveBResiX, prints the resiude number and the average bfactor. ':
     'prefix': 'aveB4resiX'
     'body': '''
-      """"AveBResiX, prints the resiude number and the average bfactor. 
-      Uses reduce and lambda, builtin Python functional porgramming functions. 
-      Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
+      """"AveBResiX, prints the resiude number and the average bfactor.
+      Uses reduce and lambda, builtin Python functional porgramming functions.
+      Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.
       """
-      Bfactors = []; 
+      Bfactors = [];
       iterate (resi ${1:133}), Bfactors.append(b);
       print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
       $0
@@ -836,7 +836,7 @@
       internal_gui_mode=2;
       $0
     '''
-  'Set the width of the internal gui. 
+  'Set the width of the internal gui.
 ':
     'prefix': 'internalGUIwidth'
     'body': '''
@@ -851,7 +851,7 @@
     '''
   'List all snips by tab trigger and description':
     'prefix': 'lsSnips'
-    'body': '''
+    'body': """
       Tab trigger                  Description
       ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
       antialias                    Set antialias to get smooth edges
@@ -952,14 +952,14 @@
       volumeRamp                   Volume ramp.
       writeCommandReference2HTML   Write the command reference to html file in the present working directory.
       $0
-    '''
+    """
   'Asp70-His31 salt-bridge from T4 lysozyme. ':
     'prefix': 'his31asp70'
     'body': '''
-      fetch 1lw9, async=0; 
-      zoom (resi 31 or resi 70); 
-      preset.technical(selection='all'); 
-      bg_color gray70; 
+      fetch 1lw9, async=0;
+      zoom (resi 31 or resi 70);
+      preset.technical(selection='all');
+      bg_color gray70;
       clip slab, 7,(resi 31 or resi 70);
       rock;
       $0
@@ -967,8 +967,8 @@
   'triple water pentagon.':
     'prefix': 'waterTriple'
     'body': '''
-      fetch 1lw9, async=0; 
-      zoom resi 313; 
+      fetch 1lw9, async=0;
+      zoom resi 313;
       preset.technical(selection='all', mode=1);
       $0
     '''

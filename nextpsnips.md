@@ -4,6 +4,9 @@
 - where do you enter `lsSnips` in geany?
 - I messed up geany when reverting some setting to make a new GIF..!!
 
+- Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
+- Add back the links to the list of editors
+
 ## Problems with text editors (smaller headings are finished)
 ### Atom 
 	- Installation: Success
