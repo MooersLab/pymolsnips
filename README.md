@@ -400,7 +400,7 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 
 <h3 name="gedit"> gedit (Universal) </h3>
 
-[*gedit*](https://gedit.en.softonic.com/mac) is often available on the computers running Linux OS at national labs.
+[*gedit*](https://wiki.gnome.org/Apps/Gedit) is often available on the computers running Linux OS at national labs.
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 
 <details>
