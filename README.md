@@ -415,8 +415,23 @@ mkdir -p ~/.local/share/gtksourceview-3.0/language-specs
 ```
 
 The snippets are stored in a single file called `pymol.xml`.
+<<<<<<< HEAD
 This file is stored in the home directory in a hidden folder called `.config`.
 The full path is `~.config/gedit/snippets/pymol.xml`.
+=======
+This file is stored in the home directory in a hidden folder called `.config`. 
+The full path is `~/.config/gedit/snippets/pymol.xml`.
+
+You may need to create this directory.
+To do this:
+```bash
+$ mkdir ~/.config/gedit/snippets/pymol.xml
+```
+Then to copy `pymol.xml` into that directory, do:
+```bash
+$ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
+```
+>>>>>>> 928c0c7c9f2dc02a3f53a7dddf1f03efb026dcce
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
@@ -481,13 +496,13 @@ The snippet plugin has to be turned on. *kate* requires macOS 10.14 or newer.
 
 The snippets are stored in a single `.xml` file. 
 The storage location for this file is not in the documentation.
-Try the following on Mac (last one of the four) and Linux (first three):
+Try the following on Mac (last one of the four) and Linux (first three)**Be sure to change the folder from *YOURUSERNAME* to your username.**:
 
 ```bash
-/Users/blaine/.local/share/ktexteditor_snippets/data/pml-kate.xml
-/Users/blaine/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml 
-/Users/blaine/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
-/Users/blaine/Library/Application\ Support/kate/MySnippets/
+/Users/YOURUSERNAME/.local/share/ktexteditor_snippets/data/pml-kate.xml
+/Users/YOURUSERNAME/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml 
+/Users/YOURUSERNAME/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
+/Users/YOURUSERNAME/Library/Application\ Support/kate/MySnippets/
 ```
 May have to create the directory MySnippets on MacOS.
 
@@ -506,7 +521,7 @@ The community version of *Komodo Edit* has enough features for the occasional wr
 	
 The snippets are stored in separate files with the  `.pml` extension. 
 They are stored in a folder called `PML`, which has to be created.
-On the Mac, the snippets are stored in `/Users/blaine/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`. Be sure to change the folder from *blaine* to your username. 
+On the Mac, the snippets are stored in `/Users/YOURUSERNAME/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`. **Be sure to change the folder from *YOURUSERNAME* to your username.** 
 
 The snippets are treated as abbreviations that are stored in the tool box.
 The snippet name works as a tab trigger.
@@ -545,21 +560,40 @@ The snippets are stored in `~/.lighttable/User/snippets`.
 You will have to create this series of nested directories.
 Enter the following command in bash:
 ```bash
-$ mkdir -p ~/.lighttable/User/snippets
+$ mkdir ~/.lighttable/User/snippets
+```
+Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips) folder from above.
+Move the contents of this folder **(not the folder)** to `~/.lighttable/User/snippets`. 
+To do this:
+```bash
+$ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.
 ```
 Then, in *Light Table*, select from the menu in the toolbar at the top `File>Settings>User behaviors`.
+<<<<<<< HEAD
 This will open a new window with the `users.behaviors` file ready to be edited.
 Paste inside the square brackets the following and change the path to your home directory:
+=======
+This will open a new window with the `users.behaviors` file ready to be edited. 
+Paste inside the square brackets the following and change the path to your home directory **be sure to change YOURUSERNAME to your name**:
+>>>>>>> 928c0c7c9f2dc02a3f53a7dddf1f03efb026dcce
 
 ```ClojureScript
 ;; absolute path to where you would like your snippet root directory to be
 [:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
-"/Users/blaine/.lighttable/User/snippets"]`
+"/Users/YOURUSERNAME/.lighttable/User/snippets"]`
 ```
+Save the file.
 
+<<<<<<< HEAD
 Save this file. 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`.
+=======
+Here is that in action!
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/LightTableUserBehavior.gif">
+</p>	
+>>>>>>> 928c0c7c9f2dc02a3f53a7dddf1f03efb026dcce
 
 There is not a `pml` language available yet for *Light Table*.
 Python will have to do as the language for now.
@@ -879,7 +913,7 @@ If you choose not to install them, you must deactivate them with the following c
 g:neosnippet#disable_runtime_snippets
 ```
 
-A minimal `.vimrc` file for installing and using *Neosnippets* is listed below:
+A minimal `.vimrc` file for installing and using *Neosnippets* is listed below **make sure to change YOURUSERNAME to your name**:
 
 ```vim
 if has('python3')
@@ -909,7 +943,7 @@ call vundle#end()
 filetype plugin on
 
 let g:python3_host_prog = '/opt/local/bin/python3.7'
-let g:pydiction_location = '/Users/blaine/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_location = '/Users/YOURUSERNAME/.vim/bundle/pydiction/complete-dict'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1

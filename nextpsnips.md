@@ -3,6 +3,8 @@
 - continue running through the text editors and making GIFs
 - where do you enter `lsSnips` in geany?
 - I messed up geany when reverting some setting to make a new GIF..!!
+- Add instructions for Windows and Linus users too
+	Think about the organization of this? 
 
 - Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
 - Add back the links to the list of editors
@@ -17,6 +19,7 @@
 	- GIFY made: No
 	- Errors: Tab triggers only work the very first time. Once a tab stop is inserted, it will not repeat the tab trigger action. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
+	- Need to fix click section for installation
 ###### Brackets 
 	- Installation: Success, easy
 	- GIFY made: Yes - package install, snippet install, snippet use.
@@ -35,9 +38,9 @@
 	- GIFY made: Yes
 	- Errors: When remaking a GIF, I messed something up and now it doesn't work. All I did was edit the filetype conf file and now it doesn't recognize .pml... :(
 ### Gedit
-	- Installation: Success - can't find on computer to open 
+	- Installation: Under /opt/local/bin/gedit
 	- GIFY made: No
-	- Errors: Not recognizing .pml style file. Couldn't figure out how to add the .pml language. 
+	- Errors: Not recognizing .pml style file. Couldn't figure out how to add the .pml language. Need to add additional file?
 ### Jupyter Lab/JupyterNotebook
 	- Installation: Web browser 
 	- GIFY made: One already exists
@@ -56,7 +59,10 @@
 ### Light Table
 	- Installation: Success
 	- GIFY made: No
-	- Errors: Don't know how to move the contents of the folder (not the folder) into the location ~/.lighttable/User/snippets [I think this is -a between command and location to be sent to, or? ]
+	- Errors: These are the errors I am getting:
+	Invalid settings file: /Users/marina/Library/Application Support/LightTable/User/user.behaviors
+	Error: Reader for ` not implemented yet
+	Invalid behaviors file: /Users/marina/Library/Application Support/LightTable/User/user.behaviors. Behaviors must be either a vector or a map.
 ### Micro
 	- Installation: Success
 	- GIFY made: One already exists
