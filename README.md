@@ -5,11 +5,12 @@ These scenes can be made into static images for posters, seminars, and manuscrip
 
 The number of lines of pml commands and settings required for very sophisticated figures can approach 100.
 It is difficult to issue so many commands through PyMOL's gui without making mistakes.
-If the commands are not saved to an open script file with a `.pml` file extension, to an open log file, or to a frequently saved session file, the work can be lost. Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.
+If the commands are not saved to an open script file with a `.pml` file extension, to an open log file, or to a frequently saved session file, the work can be lost. 
+Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.
 
 Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the GUI alone.  
 
-It is challenging to recall the pml syntax when you aren't using PyMOL everyday, which is the case for most PyMOL users.
+It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
 One solution to this problem is to use a library of code fragments, called "snippets" with a text editor.
 
 ## <A name="FASTLINKS">Quick links</A>
@@ -43,18 +44,21 @@ By entering these two letters, you have inserted 16 lines of code!
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif">
 </p>
 
-One thing to note when using tab stops is that mirrored selections are very 'fragile', if you will.
+One thing to note when using tab stops is that the mirrored selections are very *fragile*:
 Before you begin typing, make sure that the mirrored sections are all highlighted.
-It is easy to exit tab stop selections by the click of a mouse or even a keyboard movement! Getting your selections re-highlighted is not difficult but varies between text editor.
+It is easy to exit tab stop selections by the click of a mouse or even a keyboard movement!
+Getting your selections re-highlighted is not difficult but varies between text editor.
 Find more information about mirrored tab stops in the installation instructions of that text editor.  
 
-The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites. If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
+The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites.
+If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
 </p>
 
 Here is a working list of text editors that can utilize mirrored tab stops:
+
 * Atom
 * CudaText
 * Sublime Text 3
@@ -129,8 +133,10 @@ Here is a working list of text editors that can utilize mirrored tab stops:
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
   * <a href="#yasnippets"> Yasnippets (emacs)</a>
 
-If you are considering switching editors, the most popular editors seem to be *Atom, Brackets, Sublime Text3*, and *Visual Studio Code*. *Visual Studio Code* would be the most recommended if you do not feel comfortable or are unfamiliar working with the command line for installation or other text editor related tasks.
-You might also consider *Geany*. It is very lightweight, very fast, and very easily configurable. It is good editor if you care about agility.  
+If you are considering switching editors, the most popular editors seem to be *Atom, Brackets, Sublime Text3*, and *Visual Studio Code*.
+*Visual Studio Code* would be the most recommended if you do not feel comfortable or are unfamiliar working with the command line for installation or other text editor related tasks.
+You might also consider *Geany*. It is very lightweight, very fast, and very easily configurable.
+It is good editor if you care about agility.  
 
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
 I will be notified immediately by e-mail and will try to develop a snippet library for the requested editor.
@@ -708,10 +714,9 @@ You may need to install a snippet manager package and add an autocompletion pack
 	
 [*TextMate*](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
-There is a large library of plugins available. 
+There is a large library of plugins available.
 
 The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide  supplemental reading to the on-line documentation.
-
 
 *TextMate* was a pioneer application in the development of snippet libraries.
 *TextMate's* approach to snippets has served as a role model for other editors.
@@ -720,7 +725,7 @@ Chapter 6 in the book by Gray provides a good overview of the features of snippe
 
 <details>
 <summary><b>Installing and using snippets with TextMate</b></summary>
-	
+
 Each snippet is stored in a separate file with the file extension `.tmSnippet`.
 Each snippet file has a unique uuid string.
 The snippet files are stored in a subfolder called `Snippets`.
@@ -731,7 +736,7 @@ When installing an update of the library, it is best to delete the old `PyMOL.tm
 
 The `PyMOL.tmbundle` folder contains several files and folders in addition to the `Snippets` folder. 
 Some of this other files include a lexer for PyMOL.
-The one file is the `\url{dependencies.json}` file. 
+The one file is the `\url{dependencies.json}` file.
 This file specifies the dependence on the pygments package.
 
 The second file is the `\url{info.plist}` file.
@@ -764,7 +769,7 @@ The *vim* keybindings for text editing are so useful that the they are available
 The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue commands.
 
 *vim* lacks native support for snippets.
-We have to extend *vim* with plugin known as a snippet manager..
+We have to extend *vim* with plugin known as a snippet manager.
 There are several plugins for managing snippets.
 *Neosnippetsi*, *SnipMate*, and *UltiSnips* will be discussed here.
 
@@ -772,7 +777,7 @@ Versions of vim 8.0 and greater can use minpac to manage plugins on top the nati
 Versions of *vim* 7.X and earlier require the use of one of the plugin managers to install plugins.
 
 Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file. i
-It is in this file that you install and update plugins, as well as comment out unused plugins. 
+It is in this file that you install and update plugins, as well as comment out unused plugins.
 
 <details>
 <summary><b>Installing Vundle</b></summary>
@@ -780,10 +785,13 @@ It is in this file that you install and update plugins, as well as comment out u
 To start adding a plugin to *vim* you'll need to open and edit the `.vimrc` file.
 
 To download Vundle enter the following into the bash command line:
+
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
 Paste the following minimal code at the top of your `.vimrc` file to allow the use of Vundle:
+
 ```vim 
 if has('python3')
 endif
@@ -816,7 +824,9 @@ let g:UltiSnipsJumpForwardTrigger = ''
 let g:UltiSnipsJumpBackwardTrigger = ''
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 ```
+
 Now open vim and run the following command:
+
 ```vim
 :PluginInstall
 ```
@@ -860,7 +870,7 @@ You will not be able to use these plugins until you exit and restart *vim* by en
 
 <h4 name="neosnippets">Neosnippets(for vim, universal) </h4>
 	
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets. 
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
 The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
 *Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
@@ -874,6 +884,7 @@ You have to enable the Python3 interface with pynvim which you can install with 
 ```bash
 $ pip3 install --user pynvim
 ```
+
 ```bash
 $ sudo -H /opt/local/bin/python3.7 -m pip install pynvim
 ```
@@ -883,6 +894,7 @@ Check in *vim* or *neovim* if python3 is enabled by entering:
 ```vim
 :echo has("python3")
 ``` 
+
 If 1 is returned, you have python3 installed. If 0, you do not.
 
 To install the plugins with Vundle, add the following to the Vundle plugin section of the  `.vimrc` file.
@@ -906,7 +918,7 @@ Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
 ```
 
-The last command is optional because installing default snippets is optional. 
+The last command is optional because installing default snippets is optional.
 If you choose not to install them, you must deactivate them with the following command added to the `.vimrc` file.
 
 ```vim
@@ -991,8 +1003,9 @@ Then run the following command in vim:
 <h4 name="UltiSnips"> UltiSnips (for vim, universal) </h4>
 	
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
-*vim* has to be installed with the option of using Python enabled to be able to use *UltiSnips*. 
-The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features. However, it does not come with libraries of snippets, these must be installed.
+*vim* has to be installed with the option of using Python enabled to be able to use *UltiSnips*.
+The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features. 
+However, it does not come with libraries of snippets, these must be installed.
 *UltinSnips* can read *SnipMate* snippets.
 
 <details>
@@ -1001,7 +1014,7 @@ The *UltiSnips* plugin is the snippet handling engine providing a large number o
 In the following setup, we use the Vundle plugin manager.
 
 The `PyMOL.snippets` could be stored inside the *UltiSnips* directory, but they would be lost if you delete the *UltiSnips* directory.
-To help make sure your snippets are not deleted if the UltiSnips directory ever gets deleted you'll want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
+To help make sure your snippets are not deleted if the UltiSnips directory ever gets deleted you will want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
 Move the `PyMOL.snippets` file to this subdirectory.
 We will inform *vim* of this location when customizing the `.vimrc` file for *UltiSnips* a little further down.
 
@@ -1009,7 +1022,9 @@ We will inform *vim* of this location when customizing the `.vimrc` file for *Ul
 $ cd .vim
 $ mkdir myultisnips
 ```
+
 In the `myultisnips` directory you can add your own snippets or add the *UltiSnips* snippets provided above in the `ultisnippymolsnips` folder.
+
 ```bash
 $ cp ~/pymolsnips/ultisnippymolsnips/* .
 ```
@@ -1062,12 +1077,18 @@ $ cd ~/.vim/bundle/ultisnips/ftdetect/
 $ touch PyMOL.vim
 $ vim PyMOL.vim
 ```
-Insert the following line into `PyMOL.vim` and save it. Press `i` to get into insert mode. Then `escape` to return to normal mode. To save and quit type `:wq` on the command line of normal mode.
+
+Insert the following line into `PyMOL.vim` and save it.
+Press `i` to get into insert mode.
+Then `escape` to return to normal mode.
+To save and quit type `:wq` on the command line of normal mode.
 
 ```vim
 au BufNewFile,BufRead *.pml set filetype=PyMOL
 ```
+
 Now, make a soft link to the `ftdetect` directory inside the `ultisnips` subdirectory to this new directory.
+
 ```bash
 ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
 ```
@@ -1115,7 +1136,6 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 
-
 " i for swichting to the insert mode from normal mode;
 " ii for escape from insert mode to normal mode
 :inoremap ii  <Esc>
@@ -1149,13 +1169,15 @@ In the `vscpymolsnips` folder:
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
 
-Next,  install *bioSyntax* via `View --> Extensions`. Search for *bioSyntax* and hit the `Install` button. You will be asked to select a theme, just select bioSyntax. 
+Next, install *bioSyntax* via `View --> Extensions`.
+Search for *bioSyntax* and hit the `Install` button.
+You will be asked to select a theme, just select bioSyntax.
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif">
 </p>
 
-Open a file with a `.pml` file extension. 
+Open a file with a `.pml` file extension.
 You should see `pml` in the lower right on the bottom panel.  
 Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion effect. You should see syntax highlighting.
 
@@ -1174,17 +1196,16 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 
 <h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
 	
-Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository. 
-*emacs* is a lifetime editor because it takes a lifetime to master it! 
+Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
+*emacs* is a lifetime editor because it takes a lifetime to master it!
 There are several flavors of *emacs*.
-*Spacemacs* is a version that has a gentler learning curve. 
+*Spacemacs* is a version that has a gentler learning curve.
 
-The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*. 
+The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*.
 This package is installed with a builtin package manager.
 
 Each snippet is stored in a single file. 
-The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory. 
-
+The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1377,7 +1398,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | sigdist       | Set distance labels to display 2 decimals     |
 
 <A href=#FASTLINKS3>Return to list of snippet categories above.</A>>
-
 
 
 <h3 name="#labelPlacement"></h3>
