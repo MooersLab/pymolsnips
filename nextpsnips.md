@@ -33,7 +33,7 @@
 	- Installation: Success
 	- GIFY made: Yes - tab stops, use of ao, and plugin install
 	- Errors: None
-	- Windows? No
+	- Windows Install? Yes
 ### Espresso
 	- Installation: Running trial version 
 	- GIFY made: No
