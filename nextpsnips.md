@@ -8,26 +8,32 @@
 
 - Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
 - Add back the links to the list of editors
+- Separate spacemacs from emacs 
+
 
 ## Problems with text editors (smaller headings are finished)
 ### Atom 
 	- Installation: Success
 	- GIFY made: Two, install language and snippet packages. Snippet use - no...can't get to load - says "unmatched ]". 
 	- Errors: still seeing "unmatched ]"
+	- Windows Install? Yes - same "unmatched ]" error
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
 	- Errors: Tab triggers only work the very first time. Once a tab stop is inserted, it will not repeat the tab trigger action. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
 	- Need to fix click section for installation
+	- Windows? N/A Mac only 
 ###### Brackets 
 	- Installation: Success, easy
 	- GIFY made: Yes - package install, snippet install, snippet use.
 	- Errors: None 
+	- Windows Install? Yes - same as Mac... just need to know where the pymolsnips folder is stored. 
 ###### CudaText
 	- Installation: Success
 	- GIFY made: Yes - tab stops, use of ao, and plugin install
 	- Errors: None
+	- Windows? No
 ### Espresso
 	- Installation: Running trial version 
 	- GIFY made: No
@@ -94,8 +100,9 @@
 		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
 ###### Visual Studio Code
 	- Installation: Already installed
-	- GIFY made: Yes - aoSnip, bioSyntax install, NEED TO ADD MIRROR. 
+	- GIFY made: Yes - aoSnip, bioSyntax install, mirrored tab stops 
 	- Error: None
+	- Windows Install? Yes
 	- Can search snippets with '>' Snippet pluggin to open 2 tabs by itself without having to press the info to further open a tab (from tab trigger)
 ### Yasnippets
 	- Installation: Not attempted yet
