@@ -127,7 +127,7 @@
 		Marina worked on windows installation instructions
 	Thursday Dec 12, 2019 | 7:30am- 4:30pm (9)
 		Troubleshoot windows installation and path identification
-			- Completed Atom, VSC, Brackets, CudaText, 
+			- Completed Atom, VSC, Brackets, CudaText, Micro, LightTable 
 	Friday Dec 13, 2019 | 12:00-4:00pm (4) 
 	
 ## Annotations
