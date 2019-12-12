@@ -195,7 +195,7 @@ This file is stored in hidden folder on your home directory called `~.atom/snipp
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
 PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
-To do this, etner:
+To do this, for Mac users enter:
 
 ```bash
 $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
@@ -204,7 +204,7 @@ $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 Snippets can also be added within the *Welcome Guide* of *Atom*, under the section called *<>Add a Snippet*.
 When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing.
 
-For windows users, it might be easiest to access the `snippets.cson` via the *Welcome Guide*. You can paste the snippet script into this file. 
+For windows users, it might be easiest to access the `snippets.cson` via the *Welcome Guide*. You can paste the `snippets.cson` snippet script into this file. 
 
 If you'd like, you can navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. Either way, you'll need to actually copy and paste the `atompymolsnips`snippet script into the file. 
 
@@ -1167,13 +1167,16 @@ Autocompletion of the snippet tab triggers and previews of the snippet's code ar
 
 <details>
 <summary><b>Installing and using snippets with Visual Studio Code</b></summary>
-	
-From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
 
-In the `vscpymolsnips` folder:
+Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system. A prompt should pop-up during your first launch of *VSC*. Install this. 
+
+From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Roaming\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
+
+For Mac users in the `vscpymolsnips` folder:
 ```bashOS
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
+For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. If you already have a `pml` file for snipets, simply append the `pml.json` file to the exisiting file (by copying and pasting). 
 
 Next, install *bioSyntax* via `View --> Extensions`.
 Search for *bioSyntax* and hit the `Install` button.
