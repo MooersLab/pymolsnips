@@ -1,11 +1,7 @@
 # To-Do with PyMOLSnips
-- update mirror tab stops list at top of readme
 - continue running through the text editors and making GIFs
-- where do you enter `lsSnips` in geany?
 - I messed up geany when reverting some setting to make a new GIF..!!
-- Add instructions for Windows and Linus users too
-	Think about the organization of this? 
-
+- Add instructions for Windows and Linux users too 
 - Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
 - Add back the links to the list of editors
 - Separate spacemacs from emacs 
@@ -43,6 +39,7 @@
 	- Installation: Already installed 
 	- GIFY made: Yes
 	- Errors: When remaking a GIF, I messed something up and now it doesn't work. All I did was edit the filetype conf file and now it doesn't recognize .pml... :(
+	- Windows Install? Yes - same as Mac. Also running into same error as above. 
 ### Gedit
 	- Installation: Under /opt/local/bin/gedit
 	- GIFY made: No
@@ -67,12 +64,14 @@
 	- GIFY made: No
 	- Errors: These are the errors I am getting:
 	Invalid settings file: /Users/marina/Library/Application Support/LightTable/User/user.behaviors
-	Error: Reader for ` not implemented yet
 	Invalid behaviors file: /Users/marina/Library/Application Support/LightTable/User/user.behaviors. Behaviors must be either a vector or a map.
 ### Micro
 	- Installation: Success
 	- GIFY made: One already exists
 	- Errors: Can't figure out the key commands in the terminal window (ALT, etc.)
+	- Windows Install? Yes - same as Mac. 
+		Alt key binding doesn't work on windows either. 
+		Can't figure out how to execute a snippet 
 ### Neosnippets
 	- Installation: Vim already installed
 	- Blaine needs to make PyMOL.snippets file
@@ -88,6 +87,7 @@
 	- Installation: Already installed
 	- GIFY made: Yes - mirror tabs tops, ao snip use
 	- Errors: None
+	- Windows Install? Yes - just like Mac
 ### TextMate
 	- Installation: Success
 	- GIFY made: One already exists
