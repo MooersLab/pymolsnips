@@ -6,7 +6,7 @@
 		Worked through tutorials and read up on principles of bash
 	Tuesday Oct 29, 2019 | 12-4pm (4)
 		Continued working on vim tutorials [vimtutor]
-		 	Wednesday Oct 30, 2019 | 12-4pm (4)
+	Wednesday Oct 30, 2019 | 12-4pm (4)
 		Continued working in vim tutorials and reading material 
 	Thursday Oct 31, 2019 | Home sick (0)
 	Friday Nov 1, 2019 | 12-4pm (4)
@@ -116,21 +116,24 @@
 	   Blaine added links between categories and the tables of snippets
 	   Updated Lighttable with a GIF 
 	   Added some detailed installation instructions for gedit
-	Tuesday Dec 10, 2019 | 12:00-4:00pm (4)
+	Tuesday Dec 10, 2019 | Home (2)
 		Blaine edited the README.md. 
 			- Put each sentence on single line.
 			- Remove whitespace at end of line.
 			- Inserted blank lines around code blocks.
 			- Expanded contractions.
-			
-	Wednesday Dec 11, 2019 | 12:00-4:00pm (4)
-	Thursday Dec 12, 2019 | 12:00-4:00pm (4)
+		Marina worked on Windows installation instructions
+	Wednesday Dec 11, 2019 | Home (2)
+		Marina worked on windows installation instructions
+	Thursday Dec 12, 2019 | 7:30am- 4:30pm (9)
+		Troubleshoot windows installation and path identification
+			- Completed Atom, VSC, Brackets, CudaText, 
 	Friday Dec 13, 2019 | 12:00-4:00pm (4) 
 	
 ## Annotations
 - Files and folders``
 - Window in program ** ** 
 - Programs or text editors italicized * *
-- Directories bold ``
+- Directories bold ** **
 - Pull down menus `` 
 - Action ** **
