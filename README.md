@@ -204,6 +204,10 @@ $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 Snippets can also be added within the *Welcome Guide* of *Atom*, under the section called *<>Add a Snippet*.
 When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing.
 
+For windows users, it might be easiest to access the `snippets.cson` via the *Welcome Guide*. You can paste the snippet script into this file. 
+
+If you'd like, you can navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. Either way, you'll need to actually copy and paste the `atompymolsnips`snippet script into the file. 
+
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
 Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
 Click install and enjoy!
@@ -218,7 +222,7 @@ Click install and enjoy!
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
-Major upgrades require additional fees. You will need macOS 10.14.2 or later.
+Major upgrades require additional fees. You will need macOS 10.14.2 or later. BBEdit is a Mac only text editor. 
 
 The snippet system for *BBedit* is simple and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
@@ -226,12 +230,13 @@ The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language.
 
 <details>
-<summary><b>Installing and using snippets with BBEdit</b><summary>
+<summary><b>Installing and using snippets with BBEdit</b></summary>
 
 Users can create nested subfolders for groups of related snippets.
-The clippings are selected via the pulldown labeled `C` (circled).
+The clippings are selected via the pulldown labeled `C` (circled). 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
-You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings.
+You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder
+to to your BBEdit clippings.
 
 
 To do this, enter:
@@ -245,6 +250,7 @@ There is also presently the lack of a PyMOL lexer for syntax highligihting.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
 
 <h3 name="brackets"> Brackets (Universal) </h3>
 
