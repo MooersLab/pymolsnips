@@ -6,6 +6,9 @@
 - Add instructions for Windows and Linus users too
 	Think about the organization of this? 
 
+- Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
+- Add back the links to the list of editors
+
 ## Problems with text editors (smaller headings are finished)
 ### Atom 
 	- Installation: Success

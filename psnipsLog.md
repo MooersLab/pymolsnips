@@ -117,6 +117,12 @@
 	   Updated Lighttable with a GIF 
 	   Added some detailed installation instructions for gedit
 	Tuesday Dec 10, 2019 | 12:00-4:00pm (4)
+		Blaine edited the README.md. 
+			- Put each sentence on single line.
+			- Remove whitespace at end of line.
+			- Inserted blank lines around code blocks.
+			- Expanded contractions.
+			
 	Wednesday Dec 11, 2019 | 12:00-4:00pm (4)
 	Thursday Dec 12, 2019 | 12:00-4:00pm (4)
 	Friday Dec 13, 2019 | 12:00-4:00pm (4) 

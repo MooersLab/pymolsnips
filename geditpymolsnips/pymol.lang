@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+GtkSourceView language definition file for pymol scripts
+that permits automated syntax highlighting. 
+
+Author: Blaine Mooers, March 2016
+Copyright (C) 2016  University of Oklahoma Board of Regents
+
+Massively adapted and updated from the PyMOL syntax script for vim by 
+Michal Gajda and Thomas Holder. 
+
+This library is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Store this file in  ~/.local/share/gtksourceview-3.0/language-specs
+for use with gedit. 
+-->
+<language id="pymol" _name="PyMOL" version="2.0" _section="Source">
+  <metadata>
+    <property name="mimetypes">text/x-pymol</property>
+    <property name="globs">*.pml</property>
+    <property name="line-comment-start">#</property>
+  </metadata>
+
+  <styles>
+    <style id="keywords" _name="Keyword" map-to="def:keyword"/>
+    <style id="options" _name="Options" map-to="def:preprocessor"/>
+    <style id="constant" _name="Constants" map-to="def:constant"/>
+    <style id="floating-point" _name="Floating point number" map-to="def:floating-point"/>
+    <style id="decimal" _name="Decimal integer number" map-to="def:decimal"/>
+  </styles>
+
+  <definitions>
+
+    <context id="keywords" style-ref="keywords">
+         <keyword>and|or|not|in|gap|around|within|of|byres|bymolecule|byfragment</keyword>
+         <keyword>bysegment|byobject|bycell|neighbor|extend</keyword>
+         <keyword>abort|accept|alias|align|alignto|alter|alter_state|angle|as|assert|attach</keyword>
+         <keyword>backward|bg_color|bond|break|button|cache|capture|cartoon|cd</keyword>
+         <keyword>cealign|center|check|class|clean|clip|cls|color|commands|config_mouse</keyword>
+         <keyword>continue|copy|count_atoms|count_frames|count_states|create|cycle_valence</keyword>
+         <keyword>decline|def|del|delete|deprotect|deselect|dihedral|dir|disable|distance|drag</keyword>
+         <keyword>draw|dss|dummy|dump|edit|edit_mode|elif|else|embed|enable|ending|except|exec</keyword>
+         <keyword>export_dots|extend|extract|fab|fast_minimize|feedback|fetch|finally|fit|fix_chemistry</keyword>
+         <keyword>flag|for|fork|forward|fragment|frame|full_screen|fuse|get|get_angle|get_area|get_chains</keyword>
+         <keyword>get_dihedral|get_distance|get_extent|get_position|get_symmetry|get_title|get_type</keyword>
+         <keyword>get_version|get_view|get_viewport|global|gradient|group|h_add|h_fill|h_fix|help|hide</keyword>
+         <keyword>id_atom|identify|if|import|index|indicate|intra_fit|intra_rms|intra_rms_cur|invert|isodot</keyword>
+         <keyword>isolevel|isomesh|isosurface|iterate|iterate_state|label|load|load_embedded|load_png</keyword>
+         <keyword>load_traj|log|log_close|log_open|ls|madd|map_double|map_halve|map_new|map_set</keyword>
+         <keyword>map_set_border|map_trim|mappend|mask|matrix_copy|matrix_reset|mclear|mcopy</keyword>
+         <keyword>mdelete|mdo|mdump|mem|meter_reset|middle|minimize|minsert|mmatrix|mmove</keyword>
+         <keyword>mouse|move|movie.load|movie.nutate|movie.pause|movie.produce|movie.rock</keyword>
+         <keyword>movie.roll|movie.screw|movie.sweep|movie.tdroll|movie.zoom|mplay|mpng|mray</keyword>
+         <keyword>mset|mstop|mtoggle|multisave|mview|order|orient|origin|overlap|pair_fit|pass</keyword>
+         <keyword>phi_psi|png|pop|protect|pseudoatom|push_undo|pwd|quit|raise|ramp_new|ray</keyword>
+         <keyword>rebuild|recolor|redo|reference|refresh|refresh_wizard|reinitialize</keyword>
+         <keyword>remove_picked|remove|rename|replace|replace_wizard|reset|resume|return|rewind</keyword>
+         <keyword>rms|rms_cur|rock|rotate|save|scene|scene_order|sculpt_activate|sculpt_deactivate</keyword>
+         <keyword>sculpt_iterate|sculpt_purge|select|set|set_bond|set_color|set_dihedral|set_geometry</keyword>
+         <keyword>set_key|set_name|set_symmetry|set_title|set_view|show|slice_new|smooth|sort|space</keyword>
+         <keyword>spawn|spectrum|spheroid|splash|split_states|stereo|super|symexp|system|test|toggle</keyword>
+         <keyword>torsion|translate|try|turn|unbond|undo|ungroup|unmask|unpick|unset|unset_bond</keyword>
+         <keyword>update|util.cbab|util.cbac|util.cbag|util.cbak|util.cbam|util.cbao|util.cbap|util.cbas</keyword>
+         <keyword>util.cbaw|util.cbay|util.cbc|util.chainbow|util.cnc|util.colors|util.rainbow|util.ss</keyword>
+         <keyword>valence|vdw_fit|view|viewport|volume|volume_color|while|window|wizard|zoom</keyword>
+    </context>
+    
+    <context id="options" style-ref="options">
+         <keyword>active_selections|all_states|ambient|angle_color|angle_label_position|angle_size</keyword>
+         <keyword>animation|animation_duration|antialias|async_builds|ati_bugs|atom_name_wildcard</keyword>
+         <keyword>atom_type_format|auto_classify_atoms|auto_color|auto_copy_images|auto_defer_atom_count</keyword>
+         <keyword>auto_defer_builds|auto_dss|auto_hide_selections|auto_indicate_flags|auto_number_selections</keyword>
+         <keyword>auto_overlay|auto_remove_hydrogens|auto_rename_duplicate_objects|auto_sculpt</keyword>
+         <keyword>auto_show_lines|auto_show_nonbonded|auto_show_selections|auto_show_spheres</keyword>
+         <keyword>auto_zoom|autoclose_dialogs|backface_cull|batch_prefix|bg_gradient|bg_rgb</keyword>
+         <keyword>bg_rgb_bottom|bg_rgb_top|bonding_vdw_cutoff|button_mode|button_mode_name</keyword>
+         <keyword>cache_display|cache_frames|cache_max|cache_memory|cache_mode|cartoon_color</keyword>
+         <keyword>cartoon_cylindrical_helices|cartoon_debug|cartoon_discrete_colors|cartoon_dumbbell_length</keyword>
+         <keyword>cartoon_dumbbell_radius|cartoon_dumbbell_width|cartoon_fancy_helices|cartoon_fancy_sheets</keyword>
+         <keyword>cartoon_flat_cycles|cartoon_flat_sheets|cartoon_helix_radius|cartoon_highlight_color</keyword>
+         <keyword>cartoon_ladder_color|cartoon_ladder_mode|cartoon_ladder_radius|cartoon_loop_cap</keyword>
+         <keyword>cartoon_loop_quality|cartoon_loop_radius|cartoon_nucleic_acid_color|cartoon_nucleic_acid_mode</keyword>
+         <keyword>cartoon_oval_length|cartoon_oval_quality|cartoon_oval_width|cartoon_power|cartoon_power_b</keyword>
+         <keyword>cartoon_putty_quality|cartoon_putty_radius|cartoon_putty_range|cartoon_putty_scale_max</keyword>
+         <keyword>cartoon_putty_scale_min|cartoon_putty_scale_power|cartoon_putty_transform|cartoon_rect_length</keyword>
+         <keyword>cartoon_rect_width|cartoon_refine|cartoon_refine_normals|cartoon_refine_tips|cartoon_ring_color</keyword>
+         <keyword>cartoon_ring_finder|cartoon_ring_mode|cartoon_ring_radius|cartoon_ring_transparency</keyword>
+         <keyword>cartoon_ring_width|cartoon_round_helices|cartoon_sampling|cartoon_side_chain_helper</keyword>
+         <keyword>cartoon_smooth_cycles|cartoon_smooth_first|cartoon_smooth_last|cartoon_smooth_loops</keyword>
+         <keyword>cartoon_throw|cartoon_trace_atoms|cartoon_transparency|cartoon_tube_cap|cartoon_tube_quality</keyword>
+         <keyword>cartoon_tube_radius|cartoon_use_shader|cavity_cull|cgo_dot_radius|cgo_dot_width|cgo_ellipsoid_quality</keyword>
+         <keyword>cgo_line_radius|cgo_line_width|cgo_ray_width_scale|cgo_sphere_quality|cgo_transparency</keyword>
+         <keyword>clamp_colors|clean_electro_mode|cone_quality|connect_bonded|connect_cutoff|connect_mode</keyword>
+         <keyword>coulomb_cutoff|coulomb_dielectric|coulomb_units_factor|cull_spheres|dash_color|dash_gap</keyword>
+         <keyword>dash_length|dash_radius|dash_round_ends|dash_width|debug_pick|default_2fofc_map_rep</keyword>
+         <keyword>default_buster_names|default_fofc_map_rep|default_phenix_names|default_phenix_no_fill_names</keyword>
+         <keyword>default_refmac_names|defer_builds_mode|defer_updates|depth_cue|dihedral_color</keyword>
+         <keyword>dihedral_label_position|dihedral_size|direct|dist_counter|distance_exclusion|dot_color</keyword>
+         <keyword>dot_density|dot_hydrogens|dot_lighting|dot_mode|dot_normals|dot_radius|dot_solvent</keyword>
+         <keyword>dot_width|draw_frames|draw_mode|dynamic_measures|dynamic_width|dynamic_width_factor</keyword>
+         <keyword>dynamic_width_max|dynamic_width_min|editor_auto_dihedral|editor_auto_origin</keyword>
+         <keyword>editor_bond_cycle_mode|editor_label_fragments|ellipsoid_color|ellipsoid_probability</keyword>
+         <keyword>ellipsoid_quality|ellipsoid_scale|ellipsoid_transparency|fast_idle|fetch_host|fetch_path</keyword>
+         <keyword>field_of_view|fit_iterations|fit_kabsch|fit_tolerance|float_labels|fog|fog_start|gamma</keyword>
+         <keyword>gaussian_b_adjust|gaussian_b_floor|gaussian_resolution|geometry_export_mode</keyword>
+         <keyword>gl_ambient|gradient_max_length|gradient_min_length|gradient_min_slope</keyword>
+         <keyword>gradient_normal_min_dot|gradient_spacing|gradient_step_size|gradient_symmetry</keyword>
+         <keyword>grid_max|grid_mode|grid_slot|group_arrow_prefix|group_auto_mode</keyword>
+         <keyword>group_full_member_names|h_bond_cone|h_bond_cutoff_center|h_bond_cutoff_edg</keyword>
+         <keyword>h_bond_exclusion|h_bond_from_proton|h_bond_max_angle|h_bond_power_a</keyword>
+         <keyword>h_bond_power_b|half_bonds|hash_max|heavy_neighbor_cutoff|hide_long_bonds</keyword>
+         <keyword>hide_underscore_names|idle_delay|ignore_case|ignore_pdb_segi|image_copy_always</keyword>
+         <keyword>image_dots_per_inch|internal_feedback|internal_gui|internal_gui_control_size</keyword>
+         <keyword>internal_gui_mode|internal_gui_width|internal_prompt|isomesh_auto_state</keyword>
+         <keyword>keep_alive|label_anchor|label_angle_digits|label_color|label_digits</keyword>
+         <keyword>label_dihedral_digits|label_distance_digits|label_font_id|label_outline_color</keyword>
+         <keyword>label_position|label_shadow_mode|label_size|legacy_mouse_zoom|legacy_vdw_radii</keyword>
+         <keyword>light|light2|light3|light4|light5|light6|light7|light8|light9|light_count|line_color</keyword>
+         <keyword>line_radius|line_smooth|line_stick_helper|line_use_shader|line_width</keyword>
+         <keyword>log_box_selections|log_conformations|logging|map_auto_expand_sym</keyword>
+         <keyword>matrix_mode|max_threads|max_triangles|max_ups|mesh_carve_cutoff</keyword>
+         <keyword>mesh_carve_selection|mesh_carve_state|mesh_clear_cutoff|mesh_clear_selection</keyword>
+         <keyword>mesh_clear_state|mesh_color|mesh_cutoff|mesh_grid_max|mesh_lighting</keyword>
+         <keyword>mesh_mode|mesh_negative_color|mesh_negative_visible|mesh_normals</keyword>
+         <keyword>mesh_quality|mesh_radius|mesh_skip|mesh_solvent|mesh_type|mesh_width</keyword>
+         <keyword>min_mesh_spacing|moe_separate_chains|motion_bias|motion_hand|motion_linear</keyword>
+         <keyword>motion_power|motion_simple|mouse_grid|mouse_limit|mouse_restart_movie_delay</keyword>
+         <keyword>mouse_scale|mouse_selection_mode|mouse_wheel_scale|mouse_z_scale</keyword>
+         <keyword>movie_animate_by_frame|movie_auto_interpolate|movie_auto_store|movie_delay</keyword>
+         <keyword>movie_fps|movie_loop|movie_panel|movie_panel_row_height|movie_quality</keyword>
+         <keyword>movie_rock|multiplex|neighbor_cutoff|no_idle|nonbonded_size</keyword>
+         <keyword>nonbonded_transparency|normal_workaround|normalize_ccp4_maps</keyword>
+         <keyword>normalize_grd_maps|normalize_o_maps|nvidia_bugs|opaque_background</keyword>
+         <keyword>orthoscopic|overlay|overlay_lines|pdb_conect_all|pdb_discrete_chains</keyword>
+         <keyword>pdb_echo_tags|pdb_formal_charges|pdb_hetatm_guess_valences</keyword>
+         <keyword>pdb_hetatm_sort|pdb_honor_model_number|pdb_ignore_conect</keyword>
+         <keyword>pdb_insertions_go_first|pdb_insure_orthogonal|pdb_literal_names</keyword>
+         <keyword>pdb_no_end_record|pdb_reformat_names_mode|pdb_retain_ids</keyword>
+         <keyword>pdb_standard_order|pdb_truncate_residue_name|pdb_unbond_cations</keyword>
+         <keyword>pdb_use_ter_records|pickable|png_file_gamma|png_screen_gamma</keyword>
+         <keyword>polar_neighbor_cutoff|power|pqr_no_chain_id|presentation</keyword>
+         <keyword>presentation_auto_quit|presentation_auto_start|presentation_mode</keyword>
+         <keyword>preserve_chempy_ids|pymol_space_max_blue|pymol_space_max_green</keyword>
+         <keyword>pymol_space_max_red|pymol_space_min_factor|raise_exceptions</keyword>
+         <keyword>ramp_blend_nearby_colors|rank_assisted_sorts|ray_blend_blue</keyword>
+         <keyword>ray_blend_colors|ray_blend_green|ray_blend_red|ray_clip_shadows</keyword>
+         <keyword>ray_color_ramps|ray_default_renderer|ray_direct_shade|ray_hint_camera</keyword>
+         <keyword>ray_hint_shadow|ray_improve_shadows|ray_interior_color</keyword>
+         <keyword>ray_interior_mode|ray_interior_reflect|ray_interior_shadows</keyword>
+         <keyword>ray_interior_texture|ray_label_specular|ray_legacy_lighting|ray_max_passes</keyword>
+         <keyword>ray_opaque_background|ray_orthoscopic|ray_oversample_cutoff</keyword>
+         <keyword>ray_pixel_scale|ray_scatter|ray_shadow|ray_shadow_decay_factor</keyword>
+         <keyword>ray_shadow_decay_range|ray_shadow_fudge|ray_shadows|ray_spec_local</keyword>
+         <keyword>ray_texture|ray_texture_settings|ray_trace_color|ray_trace_depth_factor</keyword>
+         <keyword>ray_trace_disco_factor|ray_trace_fog|ray_trace_fog_start|ray_trace_frames</keyword>
+         <keyword>ray_trace_gain|ray_trace_mode|ray_trace_persist_cutoff|ray_trace_slope_factor</keyword>
+         <keyword>ray_trace_trans_cutoff|ray_transparency_contrast|ray_transparency_oblique</keyword>
+         <keyword>ray_transparency_oblique_power|ray_transparency_shadows</keyword>
+         <keyword>ray_transparency_spec_cut|ray_transparency_specular|ray_triangle_fudge</keyword>
+         <keyword>ray_volume|reflect|reflect_power|retain_order|ribbon_color</keyword>
+         <keyword>ribbon_nucleic_acid_mode|ribbon_power|ribbon_power_b|ribbon_radius</keyword>
+         <keyword>ribbon_sampling|ribbon_side_chain_helper|ribbon_smooth|ribbon_throw</keyword>
+         <keyword>ribbon_trace_atoms|ribbon_transparency|ribbon_width|robust_logs</keyword>
+         <keyword>rock_delay|roving_byres|roving_cartoon|roving_delay|roving_detail</keyword>
+         <keyword>roving_isomesh|roving_isosurface|roving_labels|roving_lines|roving_map1_level</keyword>
+         <keyword>roving_map1_name|roving_map2_level|roving_map2_name|roving_map3_level</keyword>
+         <keyword>roving_map3_name|roving_nb_spheres|roving_nonbonded|roving_origin</keyword>
+         <keyword>roving_origin_z|roving_origin_z_cushion|roving_polar_contacts</keyword>
+         <keyword>roving_polar_cutoff|roving_ribbon|roving_selection|roving_spheres</keyword>
+         <keyword>roving_sticks|scene_animation|scene_animation_duration|scene_buttons</keyword>
+         <keyword>scene_buttons_mode|scene_current_name|scene_frame_mode|scene_loop</keyword>
+         <keyword>scene_restart_movie_delay|scenes_changed|sculpt_angl_weight</keyword>
+         <keyword>sculpt_auto_center|sculpt_avd_excl|sculpt_avd_gap|sculpt_avd_range</keyword>
+         <keyword>sculpt_avd_weight|sculpt_bond_weight|sculpt_field_mask|sculpt_hb_overlap</keyword>
+         <keyword>sculpt_hb_overlap_base|sculpt_line_weight|sculpt_max_max|sculpt_max_min</keyword>
+         <keyword>sculpt_max_scale|sculpt_max_weight|sculpt_memory|sculpt_min_max</keyword>
+         <keyword>sculpt_min_min|sculpt_min_scale|sculpt_min_weight|sculpt_nb_interval</keyword>
+         <keyword>sculpt_plan_weight|sculpt_pyra_inv_weight|sculpt_pyra_weight</keyword>
+         <keyword>sculpt_tors_tolerance|sculpt_tors_weight|sculpt_tri_max|sculpt_tri_min</keyword>
+         <keyword>sculpt_tri_mode|sculpt_tri_scale|sculpt_tri_weight|sculpt_vdw_scale</keyword>
+         <keyword>sculpt_vdw_scale14|sculpt_vdw_vis_max|sculpt_vdw_vis_mid</keyword>
+         <keyword>sculpt_vdw_vis_min|sculpt_vdw_vis_mode|sculpt_vdw_weight</keyword>
+         <keyword>sculpt_vdw_weight14|sculpting|sculpting_cycles|sdof_drag_scale</keyword>
+         <keyword>secondary_structure|security|sel_counter|selection_overlay</keyword>
+         <keyword>selection_round_points|selection_visible_only|selection_width</keyword>
+         <keyword>selection_width_max|selection_width_scale|seq_view|seq_view_alignment</keyword>
+         <keyword>seq_view_color|seq_view_discrete_by_state|seq_view_fill_char</keyword>
+         <keyword>seq_view_fill_color|seq_view_format|seq_view_label_color</keyword>
+         <keyword>seq_view_label_mode|seq_view_label_spacing|seq_view_label_start</keyword>
+         <keyword>seq_view_location|seq_view_overlay|seq_view_unaligned_color</keyword>
+         <keyword>seq_view_unaligned_mode|session_cache_optimize|session_changed</keyword>
+         <keyword>session_compression|session_file|session_migration|session_version_check</keyword>
+         <keyword>shader_path|shininess|show_alpha_checker|show_frame_rate|show_progress</keyword>
+         <keyword>simplify_display_lists|single_image|slice_dynamic_grid</keyword>
+         <keyword>slice_dynamic_grid_resolution|slice_grid|slice_height_map|slice_height_scale</keyword>
+         <keyword>slice_track_camera|slow_idle|smooth_color_triangle|solvent_radius|spec_count</keyword>
+         <keyword>spec_direct|spec_direct_power|spec_power|spec_reflect|specular</keyword>
+         <keyword>specular_intensity|sphere_color|sphere_mode|sphere_point_max_size</keyword>
+         <keyword>sphere_point_size|sphere_quality|sphere_scale|sphere_solvent</keyword>
+         <keyword>sphere_transparency|sphere_use_shader|spheroid_fill|spheroid_scale</keyword>
+         <keyword>spheroid_smooth|ss_helix_phi_exclude|ss_helix_phi_include</keyword>
+         <keyword>ss_helix_phi_target|ss_helix_psi_exclude|ss_helix_psi_include</keyword>
+         <keyword>ss_helix_psi_target|ss_strand_phi_exclude|ss_strand_phi_include</keyword>
+         <keyword>ss_strand_phi_target|ss_strand_psi_exclude|ss_strand_psi_include</keyword>
+         <keyword>ss_strand_psi_target|state|state_counter_mode|static_singletons</keyword>
+         <keyword>stereo_angle|stereo_double_pump_mono|stereo_dynamic_strength</keyword>
+         <keyword>stereo_mode|stereo_shift|stick_ball|stick_ball_color|stick_ball_ratio</keyword>
+         <keyword>stick_color|stick_fixed_radius|stick_h_scale|stick_nub|stick_overlap</keyword>
+         <keyword>stick_quality|stick_radius|stick_transparency|stick_use_shader</keyword>
+         <keyword>stick_valence_scale|stop_on_exceptions|suppress_hidden|surface_best</keyword>
+         <keyword>surface_carve_cutoff|surface_carve_normal_cutoff|surface_carve_selection</keyword>
+         <keyword>surface_carve_state|surface_cavity_cutoff|surface_cavity_mode</keyword>
+         <keyword>surface_cavity_radius|surface_circumscribe|surface_clear_cutoff</keyword>
+         <keyword>surface_clear_selection|surface_clear_state|surface_color|surface_debug</keyword>
+         <keyword>surface_miserable|surface_mode|surface_negative_color</keyword>
+         <keyword>surface_negative_visible|surface_normal|surface_optimize_subsets</keyword>
+         <keyword>surface_poor|surface_proximity|surface_quality|surface_ramp_above_mode</keyword>
+         <keyword>surface_residue_cutoff|surface_solvent|surface_trim_cutoff</keyword>
+         <keyword>surface_trim_factor|surface_type|surface_use_shader|suspend_updates</keyword>
+         <keyword>swap_dsn6_bytes|sweep_angle|sweep_mode|sweep_phase|sweep_speed</keyword>
+         <keyword>test1|test2|text|texture_fonts|trace_atoms_mode|transparency</keyword>
+         <keyword>transparency_global_sort|transparency_mode|transparency_picking_mode</keyword>
+         <keyword>triangle_max_passes|trim_dots|two_sided_lighting|use_display_lists</keyword>
+         <keyword>use_shaders|valence_default|valence_mode|valence_size</keyword>
+         <keyword>validate_object_names|virtual_trackball|volume_bit_depth</keyword>
+         <keyword>volume_data_range|volume_layers|wildcard</keyword>
+         <keyword>wizard_prompt_mode|wrap_output</keyword>
+    </context>
+
+    <context id="constant" style-ref="constant">    
+         <keyword>resi|resn|name|alt|chain|segi|flag|numeric_type|text_type</keyword>
+         <keyword>id|index|ss|b|q|formal_charge|partial_charge</keyword>
+    </context>
+    
+    <context id="floating-point" style-ref="floating-point">
+      <match extended="true">
+        (?&lt;![\w\.])
+        ([0-9]+[Ee][-+]?[0-9]+|
+         ([0-9]*\.[0-9]+|[0-9]+\.)([Ee][-+]?[0-9]+)?)
+        [i]?
+        (?![\w\.])
+      </match>
+    </context>
+
+    <context id="decimal" style-ref="decimal">
+        <match extended="true">
+            (?&lt;![\w\.])
+            [0-9]+[uUlL]*
+            (?![\w\.])
+        </match>
+    </context>
+
+    <context id="pymol">
+      <include>
+        <context ref="def:shell-like-comment"/>
+        <context ref="def:string"/>
+        <context ref="def:single-quoted-string"/>
+        <context ref="keywords"/>
+        <context ref="options"/>
+        <context ref="constant"/>
+        <context ref="decimal"/>
+        <context ref="floating-point"/>
+      </include>
+
+    </context>
+
+  </definitions>
+
+</language>
