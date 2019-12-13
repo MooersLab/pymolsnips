@@ -195,7 +195,7 @@ This file is stored in hidden folder on your home directory called `~.atom/snipp
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
 PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
-To do this, etner:
+To do this, for Mac users enter:
 
 ```bash
 $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
@@ -203,6 +203,10 @@ $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 
 Snippets can also be added within the *Welcome Guide* of *Atom*, under the section called *<>Add a Snippet*.
 When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing.
+
+For windows users, it might be easiest to access the `snippets.cson` via the *Welcome Guide*. You can paste the `snippets.cson` snippet script into this file. 
+
+If you would like, you can navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. Either way, you will need to actually copy and paste the `atompymolsnips`snippet script into the file. 
 
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
 Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
@@ -218,7 +222,7 @@ Click install and enjoy!
 <h3 name="bbedit"> BBEdit (Mac) </h3>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
-Major upgrades require additional fees. You will need macOS 10.14.2 or later.
+Major upgrades require additional fees. You will need macOS 10.14.2 or later. BBEdit is a Mac only text editor. 
 
 The snippet system for *BBedit* is simple and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
@@ -226,12 +230,13 @@ The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language.
 
 <details>
-<summary><b>Installing and using snippets with BBEdit</b><summary>
+<summary><b>Installing and using snippets with BBEdit</b></summary>
 
 Users can create nested subfolders for groups of related snippets.
-The clippings are selected via the pulldown labeled `C` (circled).
+The clippings are selected via the pulldown labeled `C` (circled). 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
-You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings.
+You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder
+to to your BBEdit clippings.
 
 
 To do this, enter:
@@ -245,6 +250,7 @@ There is also presently the lack of a PyMOL lexer for syntax highligihting.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
 
 <h3 name="brackets"> Brackets (Universal) </h3>
 
@@ -322,13 +328,20 @@ The snippets are stored one per file.
 The files have the extensions of `.cuda-snippet`. 
 *CudaText* snippets have names (i.e., descriptions), ids (i.e., tab triggers), and markers (i.e., tab stops).
 *CudaText* snippets are stored in the user's Library on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
+
 You may have to create the `Std.PML` folder by giving the following bash command:
 
 ```bash
 $ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/
 ```
 
+When executing *CudaText* for the first time on Windows it will prompt you with the need for extraction of files. Proceed with extraction and choose where you want the files to be extracted to. I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText. 
+
+Create the **Std.PML** sub directory under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets`
+
 Any snippet add-on will automatically be installed in this directory.
+
+Past the files (not the folder) of `cudatextpymolsnips` into the **Std.PML** folder. 
 
 After starting *CudaText*, install the snippets plugin by navigating to the `Plugins --> Addons Manager --> Install` and search for *plugin: Snippets* and select it.
 A pop-up window will appear asking you if you would like to install, click OK.
@@ -392,7 +405,6 @@ Make sure that there is only one section with the heading `[pymol]`. This headin
 
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops.
-Enter `lsSnips` to get a list of the current PyMOL snippet tab triggers.
 
 Here is an example of the `ao` snippet being used in *geany*:
 <p align="center">
@@ -421,10 +433,10 @@ mkdir -p ~/.local/share/gtksourceview-3.0/language-specs
 ```
 
 The snippets are stored in a single file called `pymol.xml`.
-<<<<<<< HEAD
+
 This file is stored in the home directory in a hidden folder called `.config`.
 The full path is `~.config/gedit/snippets/pymol.xml`.
-=======
+
 This file is stored in the home directory in a hidden folder called `.config`. 
 The full path is `~/.config/gedit/snippets/pymol.xml`.
 
@@ -437,7 +449,7 @@ Then to copy `pymol.xml` into that directory, do:
 ```bash
 $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 ```
->>>>>>> 928c0c7c9f2dc02a3f53a7dddf1f03efb026dcce
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
@@ -575,31 +587,26 @@ To do this:
 $ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.
 ```
 Then, in *Light Table*, select from the menu in the toolbar at the top `File>Settings>User behaviors`.
-<<<<<<< HEAD
+
 This will open a new window with the `users.behaviors` file ready to be edited.
 Paste inside the square brackets the following and change the path to your home directory:
-=======
-This will open a new window with the `users.behaviors` file ready to be edited. 
-Paste inside the square brackets the following and change the path to your home directory **be sure to change YOURUSERNAME to your name**:
->>>>>>> 928c0c7c9f2dc02a3f53a7dddf1f03efb026dcce
 
+This will open a new window with the `users.behaviors` file ready to be edited. 
+Paste inside the square brackets the following and change the path to your Mac home directory **be sure to change YOURUSERNAME to your name**:
 ```ClojureScript
 ;; absolute path to where you would like your snippet root directory to be
 [:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
-"/Users/YOURUSERNAME/.lighttable/User/snippets"]`
+"/Users/YOURUSERNAME/.lighttable/User/snippets"]
 ```
-Save the file.
-
-<<<<<<< HEAD
+For windows 
 Save this file. 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`.
-=======
 Here is that in action!
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/LightTableUserBehavior.gif">
 </p>	
->>>>>>> 928c0c7c9f2dc02a3f53a7dddf1f03efb026dcce
+
 
 There is not a `pml` language available yet for *Light Table*.
 Python will have to do as the language for now.
@@ -643,7 +650,7 @@ $ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
 ```
 Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
 
-`Alt-S` is mapped to the `snipperinset` command which inserts the snippet specified by a tabtrigger name.
+`Alt-S` is mapped to the `snippet0insert` command which inserts the snippet specified by a tabtrigger name.
 `Alt-W` advances the cursort to the next tabstop.
 `Alt-A` ends the editing the snippet. 
 `Alt-D` deletes the snippet that is being edited.
@@ -670,18 +677,22 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
 	
-[*Sublime Text 3*](https://www.sublimetext.com/3s://www.sublimetext.com/) is a GUI-based editor.
+[*Sublime Text 3*](https://www.sublimetext.com/3) is a GUI-based editor.
 The free trial period is infinite.
 *Sublime Text 3* starts up much faster than the other text editors for programmers.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers.
 
 <details>
 <summary><b>Installing and using snippets with Sublime Text 3</b></summary>
+	
 The snippets are stored in separate files with the file extension `.sublime-snippet`.
 
 *Sublime Text 3* strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
 
-On the Mac, create the `snippets` directory in the *Sublime Text3* folder:
+For both all users (Mac, Windows, Linux), go to `Preferences-->Browse Packages...-->
+User-->snippets`. You may need to create the subdirectory called **snippets**. Copy and paste `st3pymolsnips` into the **snippets** folder. 
+
+For command line action on the Mac, create the `snippets` directory in the *Sublime Text3* folder:
 ```bash
 $ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
 ```
@@ -694,7 +705,7 @@ You can get around making the snippets subdirectory and just move `pymolsnips` t
 Restart *Sublime Text 3*, open a PyMOL script file, and then enter `ao` and  hit tab.
 Sixteen lines of code should appear.
 <p align="center">
-	<img src="https://github.com/MooersLanb/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif">
 </p>
 
 *Sublime Text 3* also supports tab stops and mirrored tab stops! 
@@ -782,7 +793,7 @@ It is in this file that you install and update plugins, as well as comment out u
 <details>
 <summary><b>Installing Vundle</b></summary>
 	
-To start adding a plugin to *vim* you'll need to open and edit the `.vimrc` file.
+To start adding a plugin to *vim* you will need to open and edit the `.vimrc` file.
 
 To download Vundle enter the following into the bash command line:
 
@@ -1161,13 +1172,16 @@ Autocompletion of the snippet tab triggers and previews of the snippet's code ar
 
 <details>
 <summary><b>Installing and using snippets with Visual Studio Code</b></summary>
-	
-From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
 
-In the `vscpymolsnips` folder:
+Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system. A prompt should pop-up during your first launch of *VSC*. Install this. 
+
+From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Roaming\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
+
+For Mac users in the `vscpymolsnips` folder:
 ```bashOS
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
+For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. If you already have a `pml` file for snipets, simply append the `pml.json` file to the exisiting file (by copying and pasting). 
 
 Next, install *bioSyntax* via `View --> Extensions`.
 Search for *bioSyntax* and hit the `Install` button.

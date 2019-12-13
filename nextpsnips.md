@@ -1,33 +1,35 @@
 # To-Do with PyMOLSnips
-- update mirror tab stops list at top of readme
 - continue running through the text editors and making GIFs
-- where do you enter `lsSnips` in geany?
 - I messed up geany when reverting some setting to make a new GIF..!!
-- Add instructions for Windows and Linus users too
-	Think about the organization of this? 
-
+- Add instructions for Windows and Linux users too 
 - Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
 - Add back the links to the list of editors
+- Separate spacemacs from emacs 
+
 
 ## Problems with text editors (smaller headings are finished)
 ### Atom 
 	- Installation: Success
 	- GIFY made: Two, install language and snippet packages. Snippet use - no...can't get to load - says "unmatched ]". 
 	- Errors: still seeing "unmatched ]"
+	- Windows Install? Yes - same "unmatched ]" error
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
 	- Errors: Tab triggers only work the very first time. Once a tab stop is inserted, it will not repeat the tab trigger action. 
 	- Tab stops do appear --> need to add {} around 0. Regardless if {} is present around the 0, that line still appears in the snippet.
 	- Need to fix click section for installation
+	- Windows? N/A Mac only 
 ###### Brackets 
 	- Installation: Success, easy
 	- GIFY made: Yes - package install, snippet install, snippet use.
 	- Errors: None 
+	- Windows Install? Yes - same as Mac... just need to know where the pymolsnips folder is stored. 
 ###### CudaText
 	- Installation: Success
 	- GIFY made: Yes - tab stops, use of ao, and plugin install
 	- Errors: None
+	- Windows Install? Yes
 ### Espresso
 	- Installation: Running trial version 
 	- GIFY made: No
@@ -37,6 +39,7 @@
 	- Installation: Already installed 
 	- GIFY made: Yes
 	- Errors: When remaking a GIF, I messed something up and now it doesn't work. All I did was edit the filetype conf file and now it doesn't recognize .pml... :(
+	- Windows Install? Yes - same as Mac. Also running into same error as above. 
 ### Gedit
 	- Installation: Under /opt/local/bin/gedit
 	- GIFY made: No
@@ -61,12 +64,14 @@
 	- GIFY made: No
 	- Errors: These are the errors I am getting:
 	Invalid settings file: /Users/marina/Library/Application Support/LightTable/User/user.behaviors
-	Error: Reader for ` not implemented yet
 	Invalid behaviors file: /Users/marina/Library/Application Support/LightTable/User/user.behaviors. Behaviors must be either a vector or a map.
 ### Micro
 	- Installation: Success
 	- GIFY made: One already exists
 	- Errors: Can't figure out the key commands in the terminal window (ALT, etc.)
+	- Windows Install? Yes - same as Mac. 
+		Alt key binding doesn't work on windows either. 
+		Can't figure out how to execute a snippet 
 ### Neosnippets
 	- Installation: Vim already installed
 	- Blaine needs to make PyMOL.snippets file
@@ -82,6 +87,7 @@
 	- Installation: Already installed
 	- GIFY made: Yes - mirror tabs tops, ao snip use
 	- Errors: None
+	- Windows Install? Yes - just like Mac
 ### TextMate
 	- Installation: Success
 	- GIFY made: One already exists
@@ -94,8 +100,9 @@
 		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
 ###### Visual Studio Code
 	- Installation: Already installed
-	- GIFY made: Yes - aoSnip, bioSyntax install, NEED TO ADD MIRROR. 
+	- GIFY made: Yes - aoSnip, bioSyntax install, mirrored tab stops 
 	- Error: None
+	- Windows Install? Yes
 	- Can search snippets with '>' Snippet pluggin to open 2 tabs by itself without having to press the info to further open a tab (from tab trigger)
 ### Yasnippets
 	- Installation: Not attempted yet
