@@ -744,7 +744,7 @@ You may need to install a snippet manager package and add an autocompletion pack
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="TextMate">TextMate (tm, Mac only)</h3>
+<h3 name="TextMate">TextMate (Mac only)</h3>
 	
 [*TextMate*](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
