@@ -130,6 +130,7 @@ Here is a working list of text editors that can utilize mirrored tab stops:
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate </a>
   * <a href="#UltiSnips"> UltiSnips (vim, neovim) </a>
+  * <a href="#Vim"> Vim (Universal) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
   * <a href="#yasnippets"> Yasnippets (emacs)</a>
 
@@ -181,12 +182,20 @@ You will need the `snippets` package to be able to use the above PyMOL snippets.
 The package installer is very intuitive.
 Simply go to `Packages --> Settings View --> Install packages/themes`.
 Search for **snippets** and click the install button.
-It may already be installed, and in that case, make sure that the snippets package is enabled (green bar along the button).
+It should already be installed, but make sure that the snippets package is enabled (green bar along the button).
 
 Shown below is an enabled `snippets` package.
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif">
+</p>
+
+Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
+Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
+Click install and enjoy!
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
 </p>
 
 The snippets for all languages are stored in a single file that is called `snippets.cson`.
@@ -201,28 +210,25 @@ To do this, for Mac users enter:
 $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 ```
 
-Snippets can also be added within the *Welcome Guide* of *Atom*, under the section called *<>Add a Snippet*.
-When you click *Open your snippets*, the `snippets.cson` file automatically opens for editing.
+You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`. Or through `Atom (menu) --> Snippets...`.
 
-For windows users, it might be easiest to access the `snippets.cson` via the *Welcome Guide*. You can paste the `snippets.cson` snippet script into this file. 
+For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips)into this file. 
 
-If you would like, you can navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. Either way, you will need to actually copy and paste the `atompymolsnips`snippet script into the file. 
+A third option availaible for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. 
 
-Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
-Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
-Click install and enjoy!
+Below is an example of the *threeMaps* snippet use with mirrored tab stops. 
 
 <p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
+	  <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/AtomSnipsUse.gif">
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>	
  
-<h3 name="bbedit"> BBEdit (Mac) </h3>
+<h3 name="bbedit"> BBEdit (Mac only) </h3>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
-Major upgrades require additional fees. You will need macOS 10.14.2 or later. BBEdit is a Mac only text editor. 
+Major upgrades require additional fees. You will need macOS 10.14.2 or later. 
 
 The snippet system for *BBedit* is simple and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
@@ -306,7 +312,7 @@ Unfortunately, *Brackets* does not currently suppoort tab stops.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="cudatext"> CudaText (all) </h3>
+<h3 name="cudatext"> CudaText (Universal) </h3>
 
 [*CudaText*](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
 *Cudatext* is open source.
@@ -364,7 +370,7 @@ Below you can see how to edit one mirror location and travel through other mirro
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="espresso"> Espresso (Mac) </h3>
+<h3 name="espresso"> Espresso (Mac only) </h3>
 	
 [*Espresso*](https://espressoapp.com/) is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
@@ -769,7 +775,7 @@ This editor can be used to view and change the code in the snippets.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3>Vim</h3>
+<h3 name="vim">Vim (Universal)</h3>
 
 [*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi* on steroids.
 It is free.
@@ -1158,7 +1164,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="VisualStudioCode"> Visual Studio Code (VSC, Universal)</h3>
+<h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 	
 [*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free editor from Microsoft. 
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
