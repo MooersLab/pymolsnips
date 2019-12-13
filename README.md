@@ -212,7 +212,7 @@ $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 
 You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`. Or through `Atom (menu) --> Snippets...`.
 
-For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips)into this file. 
+For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
 
 A third option availaible for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. 
 
@@ -538,19 +538,36 @@ May have to create the directory MySnippets on MacOS.
 	
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
 The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
-The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL.
+The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL. 
+One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace. *Komodo Edit* was derived from the Mozilla Framework. The add-on, or extension, capabilities are the same. For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/). 
 
 <details>
 <summary><b>Installing and using snippets with Komodo Edit</b></summary>
-	
-The snippets are stored in separate files with the  `.pml` extension. 
-They are stored in a folder called `PML`, which has to be created.
-On the Mac, the snippets are stored in `/Users/YOURUSERNAME/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML`. **Be sure to change the folder from *YOURUSERNAME* to your username.** 
 
-The snippets are treated as abbreviations that are stored in the tool box.
-The snippet name works as a tab trigger.
-The snippet file can also be selected through the GUI.
-A pop-up menu displays the option to insert a snippet.
+The snippets are treated as abbreviations and are stored as separate files in the tool box.
+*Komodo Edit* will read the  `.pml` extension. 
+
+Snippets are stored in a directory called `PML`, which has to be created.
+For Mac users,
+```bash
+$ mkdir ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
+```
+Then insert the snippets files from [here](https://github.com/marevebro/pymolsnips/tree/master/komodoeditpymolsnips) into this directory.
+```bash
+$ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
+```
+For Windows users, select where you want *Komodo Edit* to be installed. I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
+From there, you'll need to create the `PML` directory in `...\KomodoEdit\lib\support\samples\tools\Abbreviations`.
+Then copy and paste the `komodeditpymolsnips` files into the newly created `PML` directory. 
+
+Here you can see snippet use in action:
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/KomodoEditsnipuse.gif">
+</p>
+
+The snippet name works as a tab trigger. Unfortunately, snippets must be executed by memory as *Komodo Edit* does not have a suggestion window for snippets. 
+<!-- The snippet file can also be selected through the GUI.
+A pop-up menu displays the option to insert a snippet. -->
 There are tab stops and highlighted default parameter values.
 However, there is no mirroring of tab stops at this time.
 
