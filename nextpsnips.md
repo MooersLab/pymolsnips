@@ -2,17 +2,16 @@
 - continue running through the text editors and making GIFs
 - I messed up geany when reverting some setting to make a new GIF..!!
 - Add instructions for Windows and Linux users too 
-- Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
-- Add back the links to the list of editors
 - Separate spacemacs from emacs 
 
 
 ## Problems with text editors (smaller headings are finished)
-### Atom 
+
+###### Atom 
 	- Installation: Success
-	- GIFY made: Two, install language and snippet packages. Snippet use - no...can't get to load - says "unmatched ]". 
-	- Errors: still seeing "unmatched ]"
-	- Windows Install? Yes - same "unmatched ]" error
+	- GIFY made: Two, install language and snippet packages.
+	- Errors: None
+	- Windows Install? Yes 
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
@@ -35,6 +34,7 @@
 	- GIFY made: No
 	- Errors: Need to allow key strokes but need administrator to approve that setting change. 
 		- Need to see which plugins to add - sends you to a webpage...lots to look through and learn!
+	- Windows Install? N/A, Mac only
 ### Geany 
 	- Installation: Already installed 
 	- GIFY made: Yes
@@ -83,7 +83,7 @@
 	- GIFY made: No
 	- Errors: Ultisnips not cooperating at all. 
 		- Created this section since nothing existed specifically for snipMate
-##### Sublime Text 3
+###### Sublime Text 3
 	- Installation: Already installed
 	- GIFY made: Yes - mirror tabs tops, ao snip use
 	- Errors: None
