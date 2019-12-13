@@ -592,14 +592,13 @@ This will open a new window with the `users.behaviors` file ready to be edited.
 Paste inside the square brackets the following and change the path to your home directory:
 
 This will open a new window with the `users.behaviors` file ready to be edited. 
-Paste inside the square brackets the following and change the path to your home directory **be sure to change YOURUSERNAME to your name**:
-
+Paste inside the square brackets the following and change the path to your Mac home directory **be sure to change YOURUSERNAME to your name**:
 ```ClojureScript
 ;; absolute path to where you would like your snippet root directory to be
 [:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
-"/Users/YOURUSERNAME/.lighttable/User/snippets"]`
+"/Users/YOURUSERNAME/.lighttable/User/snippets"]
 ```
-
+For windows 
 Save this file. 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`.
