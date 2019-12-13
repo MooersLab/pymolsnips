@@ -2,17 +2,16 @@
 - continue running through the text editors and making GIFs
 - I messed up geany when reverting some setting to make a new GIF..!!
 - Add instructions for Windows and Linux users too 
-- Convert each snippet category (Under Snippet Categories) into a link to the table of snippets below.
-- Add back the links to the list of editors
 - Separate spacemacs from emacs 
 
 
 ## Problems with text editors (smaller headings are finished)
-### Atom 
+
+###### Atom 
 	- Installation: Success
-	- GIFY made: Two, install language and snippet packages. Snippet use - no...can't get to load - says "unmatched ]". 
-	- Errors: still seeing "unmatched ]"
-	- Windows Install? Yes - same "unmatched ]" error
+	- GIFY made: install language, verify enanbled snippet packages, snippet use. 
+	- Errors: None
+	- Windows Install? Yes 
 ### BBEdit
 	- Installation: Success 
 	- GIFY made: No
@@ -35,6 +34,7 @@
 	- GIFY made: No
 	- Errors: Need to allow key strokes but need administrator to approve that setting change. 
 		- Need to see which plugins to add - sends you to a webpage...lots to look through and learn!
+	- Windows Install? N/A, Mac only
 ### Geany 
 	- Installation: Already installed 
 	- GIFY made: Yes
@@ -55,10 +55,11 @@
 	- GIFY made: No
 	- Errors: Can't add plugins. Maybe help here? https://docs.kde.org/stable5/en/applications/kate/kate-application-plugin-snippets.html#snippets-intro
 		- supposed to be able to go view>tool views>show snippets. There appears to be nothing in kate about snippets 
-### Komodo Edit 
+###### Komodo Edit 
 	- Installation: Success
-	- GIFY made: No
-	- Errors: Need to install .pml style file. Does not recognize .pml
+	- GIFY made: snippet use
+	- Errors: None
+	- Windows Install? Yes - provided updated path information
 ### Light Table
 	- Installation: Success
 	- GIFY made: No
@@ -82,8 +83,7 @@
 	- Installation: Vim already installed
 	- GIFY made: No
 	- Errors: Ultisnips not cooperating at all. 
-		- Created this section since nothing existed specifically for snipMate
-##### Sublime Text 3
+###### Sublime Text 3
 	- Installation: Already installed
 	- GIFY made: Yes - mirror tabs tops, ao snip use
 	- Errors: None
@@ -91,13 +91,13 @@
 ### TextMate
 	- Installation: Success
 	- GIFY made: One already exists
-	- Errors: Installation process just gives info on where the info is stored but no direction on how to set-up and make it work. 
+	- Errors: README just gives info on where the files are stored (I can't find them) but no direction on how to set-up and make it work. 
 ### Ultisnips (vim, neovim)
 	- Installation: Success
 	- GIFY made: No
 	- Errors: Errors were resolved. vim was not connected to the right Python3. Needed to update this using "sudo -H /opt/local/bin/python3.7 -m pip install pynvim"
 	Need to have tips on installing vim and vundle before getting into ultisnips.
-		I rearranged this section, removed duplicate text, and shortened some paragraphs that did not talk about UltiSnips. 
+		UltiSnips. 
 ###### Visual Studio Code
 	- Installation: Already installed
 	- GIFY made: Yes - aoSnip, bioSyntax install, mirrored tab stops 

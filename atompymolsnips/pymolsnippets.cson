@@ -1,4 +1,4 @@
-'.source.pml':
+'.source.pymol':
   'Ambient occlussion.':
     'prefix': 'ao'
     'body': '''
@@ -174,14 +174,14 @@
       distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;
       distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;
       distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;
-      distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;
+      distance hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;
       distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;
       distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;
       distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;
       distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;
       distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;
       distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;
-       distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;
+      distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;
       distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;
       distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;
       distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;
@@ -526,7 +526,7 @@
       end python;
       $0
     '''
-  'Run Tom Holder's supercell script to generate three cells in all directions.':
+  "Run Tom Holder's supercell script to generate three cells in all directions.":
     'prefix': 'sc222'
     'body': '''
       run $HOME/Scripts/PyMOLscripts/supercell.py
@@ -777,7 +777,7 @@
       iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
       $0
     '''
-  'Print B-values for a residue with the B's rounded off to two decimal places.':
+  "Print B-values for a residue with the B's rounded off to two decimal places.":
     'prefix': 'printBs2digits'
     'body': '''
       iterate (resi %{1:133}), print(name + " %.2f" % b);
@@ -789,7 +789,7 @@
       cmd.write_html_ref('pymol-command-ref.html');
       $0
     '''
-  'Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.':
+  "Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.":
     'prefix': 'averageB'
     'body': '''
       """ Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
@@ -989,4 +989,4 @@
     'body': '''
       set label_dihedral_digits, ${1:2};
       $0
-    '''
+'''

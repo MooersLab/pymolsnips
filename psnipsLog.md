@@ -128,7 +128,9 @@
 	Thursday Dec 12, 2019 | 7:30am- 4:30pm (9)
 		Troubleshoot windows installation and path identification
 			- Completed Atom, VSC, Brackets, CudaText, Micro, LightTable 
-	Friday Dec 13, 2019 | 12:00-4:00pm (4) 
+	Friday Dec 13, 2019 | 7:30am-1pm 2:30pm-5pm (8) 
+		Worked on Atom and Komodo Edit	
+			- both are now complete (with windows updates as well)
 	
 ## Annotations
 - Files and folders``
