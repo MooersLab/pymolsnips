@@ -62,7 +62,7 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 * Atom
 * CudaText
 * Sublime Text 3
-* Visual Studio Code 
+* Visual Studio Code
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
@@ -111,12 +111,17 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 <A href=#FASTLINKS>Return to quick links section at top</A>
 </details>
 
-## <A name="FASTLINKS2">Quick links</A> ##
+## <A name="FASTLINKS2">Quick links to the supported text editors</A> ##
 
+Note that some text editors use the same library of snippets.
+For example, emacs and spacemacs use the same ffffff:snippet library that is managed by the yasnippets package.
+Likewise, Vim and neovim shared some of the same plugin managers and snippet software.
+
+  
   * <a href="#atom"> Atom </a>
-  * <a href="#bbedit"> BBEdit </a>
+  * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
-  * <a href="#cudatext"> CudaText </a>
+  * <a href="#emacs"> emacs (uses yasnippets package)</a>
   * <a href="#espresso"> Espresso </a>
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
@@ -125,14 +130,13 @@ Here is a working list of text editors that can utilize mirrored tab stops:
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
-  * <a href="#neosnippets"> Neosnippets </a>
-  * <a href="#snipmate"> SnipMate (vim, neovim) </a>
+  * <a href="#neovim"> Neovim (uses the Ultisnips, Neosnippets, and Snipmate plugins to manage snippets) </a>
+  * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
-  * <a href="#TextMate"> TextMate </a>
-  * <a href="#UltiSnips"> UltiSnips (vim, neovim) </a>
-  * <a href="#Vim"> Vim (Universal) </a>
+  * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
+  * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, and Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
-  * <a href="#yasnippets"> Yasnippets (emacs)</a>
+
 
 If you are considering switching editors, the most popular editors seem to be *Atom, Brackets, Sublime Text3*, and *Visual Studio Code*.
 *Visual Studio Code* would be the most recommended if you do not feel comfortable or are unfamiliar working with the command line for installation or other text editor related tasks.
@@ -588,8 +592,8 @@ This documentation is on a GitHub website.
 
 <details>
 <summary><b>Installing and using snippets with Light Table</b></summary>
-	
-The installation of plugins in *Light Table* is very fast. 
+
+The installation of plugins in *Light Table* is very fast.
 The number of available plugins is not as extensive as for *Atom, Sublime Text, TextMate,* or *Visual Studio Code*.
 You have to be prepared to do a bit of customization to get some of the plugins to work correctly.
 
@@ -600,15 +604,19 @@ This file is used to set the scope fo the snippets (the programming language) an
 The snippets are stored in `~/.lighttable/User/snippets`.
 You will have to create this series of nested directories.
 Enter the following command in bash:
+
 ```bash
 $ mkdir ~/.lighttable/User/snippets
 ```
+
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips) folder from above.
 Move the contents of this folder **(not the folder)** to `~/.lighttable/User/snippets`. 
 To do this:
+
 ```bash
 $ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.
 ```
+
 Then, in *Light Table*, select from the menu in the toolbar at the top `File>Settings>User behaviors`.
 
 This will open a new window with the `users.behaviors` file ready to be edited.
@@ -616,13 +624,17 @@ Paste inside the square brackets the following and change the path to your home 
 
 This will open a new window with the `users.behaviors` file ready to be edited. 
 Paste inside the square brackets the following and change the path to your Mac home directory **be sure to change YOURUSERNAME to your name**:
+
 ```ClojureScript
 ;; absolute path to where you would like your snippet root directory to be
 [:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
 "/Users/YOURUSERNAME/.lighttable/User/snippets"]
 ```
-For windows 
-Save this file. 
+
+***For Windows***
+
+Save this file.
+
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`.
 Here is that in action!
@@ -639,6 +651,7 @@ and then save your script file with the `.pml` file extension.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
+
 <h3 name="micro"> Micro (Universal) </h3>
 	
 [*Micro*](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
@@ -649,7 +662,7 @@ The collection of keybinding is defined in a `json` file.
 
 <details>
 <summary><b>Installing and using snippets with Micro</b></summary>
-	
+
 *Micro* has a number of plugins available including one for snippets.
 You need to have `Node.js` installed.
 
@@ -660,17 +673,21 @@ Enter *Micro* on the command line to start the editor.
 A list of key bindings are found [here](https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md).
 
 Install the `snippets` plugin by entering `control-E` in micro to open a command panel, and then enter:
+
 ```micro
 plugin install snippets
 ```
+
 All of the snippets for one language are in a single file with the `.snippets` file extension. 
 In this case, the file is labeled `pml.snippets`.
 
 The snippets are installed to be installed in the folder `.config/micro/plugins/snippets`.
 In the pymolsnips directory enter:
+
 ```bash
 $ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
 ```
+
 Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
 
 `Alt-S` is mapped to the `snippet0insert` command which inserts the snippet specified by a tabtrigger name.
@@ -681,22 +698,66 @@ Snippets for other program languages are found [here](https://github.com/tommysh
 A lexer for syntax highlighting is in the file called `pml.yaml`.
 This file can be donwloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
 This lexer is stored in the hidden folder `.config/micro/syntax` which you will need to create.
+
 ```bash
 $ mkdir ~/.config/micro/syntax
 ```
+
 Then in the `micropymolsnips` directory:
+
 ```bash
 $ cp pml.yaml ~/.config/micro/syntax/.
 ```
+
 Enter `Control-Q` and then enter `help color` to learn about the available color schemes and to learn about syntax highlighting.
 I entered `set colorscheme bubblegum` to apply a light colorscheme to *Micro* as shown below.
 A PyMOL script file has been opened and is color highlighted.
-You can make the tex larger for easier reading by entering `cmd-+` a number of times. 
+You can make the tex larger for easier reading by entering `cmd-+` a number of times.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/images/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
+
+<h3 name="spacemacs">Spacemacs (Universal)</h3>
+Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of emacs.
+Its command leader is the spacebar hence the word *space* in the name.
+It is very different from running the emacs in evil-mode (evil-mode enables the use of vim keybindings in *emacs*).
+As a result, it should be treated as a separate editor from *emacs* and *Vim*.
+
+Spacemacs has its own set of mnemonic commands that you need to master.
+In other words, you will use vim, emacs, and spacemacs commands in one editor.
+It might be less intimidating if you have some of the basics of vim and emacs mastered.
+Spacemacs does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
+
+<details>
+<summary><b>Installing and using snippets with Light Table</b></summary>
+
+Spacemacs comes with the package yasnippets, which is the engine for managing snippets.
+You have to edit the *.spacemacs* file to make yasnippets available for use.
+Spacemacs use a layer concept to build up a specific configuration.
+The layers are managed by editing the *.spacemacs* file.
+The snippets are installed by the *yasnippets-snippets* package.
+You can use the following command in spacemacs to install this package.
+
+```emacs
+M-x package-install
+```
+
+Spacemacs may be more attractive to vi users rather than vim users who cannot part with their configuration in *Vim*.
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
+
+
+
+
+
+
+
+
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
 	
@@ -794,20 +855,29 @@ This editor can be used to view and change the code in the snippets.
 
 <h3 name="vim">Vim (Universal)</h3>
 
-[*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi* on steroids.
-It is free.
+[*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi*.
+Vim enables the addition of plugins to extend what Vim can do.
+There are over 18,000 plugins available.
+Vim is free.
+
 A newer branch of *Vim* called *neovim* is also available.
 Either are available from software repositories like macports, fink, homebrew, or as stand-a-lone applications.
-Vim version 8.1 was not working on Mac OS X Catalina due to a bug. 
-That bug has been fixed as of version 8.2.0.
+Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
+That bug has been fixed in version 8.1.2152.
+I found that the macports Vim was behind this version.
+I tried to compile Vim version 8.2.12; I gave due to inference from conda in the julia installed by homebrew.
+I installed Vim version 8.2.0 via homebrew.
+This version worked fine.
 
 Vim focusing on the editing process where most of the time is spent thinking and not generating new text.
 The *Vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
-The secret to keeping your sanity while using *Vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue commands.
-Numerous blog posts have lists of ways to think about and use Vim will improve your productivity.
+The secret to keeping your sanity while using *Vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
+Numerous blog posts have lists of ways to think about and use Vim to improve your productivity.
+The consensus is to develop muscle memory of the commands that are useful to you by practicing their use at every opportunity.
+Another tip is to focus on mastering the basic commands before getting mired in tweaking your *.vimrc* configuration file and playing with plugins; that is, focus on mastering the *vi* part of *Vim*.
 
-*vim* lacks native support for snippets.
-We have to extend *vim* with a plugin known as a snippet manager.
+*Vim* lacks native support for snippets.
+We have to extend *Vim* with a plugin known as a snippet manager.
 There are several plugins for managing snippets.
 *Neosnippetsi*, *SnipMate*, and *UltiSnips* will be discussed here.
 
@@ -867,7 +937,7 @@ let g:UltiSnipsJumpBackwardTrigger = ''
 let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 ```
 
-Now open vim and run the following command:
+Now open Vim and run the following command:
 
 ```vim
 :PluginInstall
@@ -910,13 +980,13 @@ You will not be able to use these plugins until you exit and restart *vim* by en
 
 </details>
 
-<h4 name="neosnippets">Neosnippets(for vim, universal) </h4>
+<h4 name="neosnippets">Neosnippets(for Vim, universal) </h4>
 	
 [*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
 The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
 *Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
-*Deoplete* requires *neovim* or *vim* versions greater than 8.0, and Python3.
+*Deoplete* requires *neovim* or *Vim* versions greater than 8.0, and Python3.
 
 <details>
 <summary><b>Installing and using snippets with Neosnippets</b></summary>
@@ -935,7 +1005,7 @@ Check in *vim* or *neovim* if python3 is enabled by entering:
 
 ```vim
 :echo has("python3")
-``` 
+```
 
 If 1 is returned, you have python3 installed. If 0, you do not.
 
@@ -1042,12 +1112,16 @@ Then run the following command in vim:
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h4 name="UltiSnips"> UltiSnips (for vim, universal) </h4>
+<h4 name="UltiSnips"> UltiSnips (for Vim, universal) </h4>
 	
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
-*vim* has to be installed with the option of using Python enabled to be able to use *UltiSnips*.
-The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features. 
-However, it does not come with libraries of snippets, these must be installed.
+*Vim* has to be installed with the option of using Python3 enabled to be able to use *UltiSnips*.
+The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features.
+However, it does not come with libraries of snippets.
+The snippets must be installed separately.
+The *honza/vim-snippets* plugin contains snippets for many languages.
+The pml.snippets file can be stored in a *my-snippets* subfolder of the hidden *.vim* directory as described below.
+
 *UltinSnips* can read *SnipMate* snippets.
 
 <details>
@@ -1072,7 +1146,7 @@ $ cp ~/pymolsnips/ultisnippymolsnips/* .
 ```
 [Insert GIF here?]
 
-Since *UltiSnips* depends on Python3, you may have to install Python3 to be able to use it.
+Because *UltiSnips* depends on Python3, you may have to install Python3 to be able to use it.
 You can point *UltiSnips* to a particular Python3 interpreter with the following command in your `.vimrc` file.
 At the top of the file, add:
 
@@ -1084,7 +1158,7 @@ endif
 In the Vundle plugin section of the `.vimrc` file, add the following lines:
 
 ```vim
-" Ultisnips requires vim installed with python.
+" Ultisnips requires Vim installed with python.
 Plugin 'SirVer/ultisnips'
 ```
 
@@ -1100,10 +1174,16 @@ let g:python3_host_prog = expand('/opt/local/bin/python3.7')
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','UltiSnips']
 ```
 
-Next, make a `ftdetect` directory at the top level of the `.vim` directory.
+The following step is to define the `*.pml' file type inside a *pml.vim* file.
+The *pml.vim* file is stored inside of a subfolder that contains the file type definition files.
+This subfolder is called *ftdetect* which is stored inside of the *~/.vim/bundle/ultisnips* folder.
+This step is not necessary if you install the *bioSyntax-vim* plugin because it contains a *pml.vim* in its ftdetect subfolder.
+The *bioSyntax-vim* also provides color syntax highlighting for *.pml* files.
+
+Make a `ftdetect` directory at the top level of the `.vim` directory.
 
 ```bash
 $ mkdir -p ~/.vim/ftdetect/
@@ -1111,8 +1191,8 @@ $ cd ~/.vim/ftdetect/
 ```
 
 Some *vim* plugins require that you add a flag to your `.vimrc` file to turn off filetype detection.
-You can set the filetype for a `.pml` file with the command `:set filetype=PyMOL`. 
-To enable autodetection of the filetype in this situation, we need to make a `PyMOL.vim` file in the `ftdetect` subdirecotry of the `ultisnips` directory.
+You can set the filetype for a `.pml` file with the command `:set filetype=pml`. 
+To enable autodetection of the filetype in this situation, we need to make a `pml.vim` file in the `ftdetect` subdirecotry of the `ultisnips` directory.
 
 ```bash
 $ cd ~/.vim/bundle/ultisnips/ftdetect/
@@ -1120,13 +1200,13 @@ $ touch PyMOL.vim
 $ vim PyMOL.vim
 ```
 
-Insert the following line into `PyMOL.vim` and save it.
+Insert the single-line code fragment below into the file `pml.vim` and save it.
 Press `i` to get into insert mode.
 Then `escape` to return to normal mode.
 To save and quit type `:wq` on the command line of normal mode.
 
 ```vim
-au BufNewFile,BufRead *.pml set filetype=PyMOL
+au BufNewFile,BufRead *.pml set filetype=pml
 ```
 
 Now, make a soft link to the `ftdetect` directory inside the `ultisnips` subdirectory to this new directory.
@@ -1135,17 +1215,12 @@ Now, make a soft link to the `ftdetect` directory inside the `ultisnips` subdire
 ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
 ```
 
-To ignore snippets from other plugins, add the following line below the plugin section to your `.vimrc` file:
-
-```vim
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
-```
-
 To test your set up, open a PyMOL script file.
-Enter on the command line in vim `:set filetype?`.
-You should bet back `filetype=PyMOL`
+Enter on the command line in Vim `:set filetype?`.
+You should bet back `filetype=pml`.
 
-Here is a minimal, no-frills vimrc file that works with the `PyMOL.snippets` file.
+Here is a minimal, no-frills vimrc file that uses Vundle and works with the `pml.snippets` file.
+You may have to edit the path to the python3 binary.
 
 ```vim
 if has('python3')
@@ -1162,7 +1237,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" Ultisnips requires vim installed with python. This is just the engine.
+" Ultisnips requires Vim installed with python. This is just the engine.
 Plugin 'SirVer/ultisnips'
 
 call vundle#end()
@@ -1176,7 +1251,7 @@ let g:python3_host_prog = expand('/opt/local/bin/python3.7')
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','UltiSnips']
 
 " i for swichting to the insert mode from normal mode;
 " ii for escape from insert mode to normal mode
@@ -1194,7 +1269,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
 [*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free editor from Microsoft. 
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
 
-The installation of plugins is painless. 
+The installation of plugins is painless.
 There is a marketplace within *VSC* where you can search for extensions and easily install them. 
 
 The *bioSyntax* plugin is free and includes a lexer for PyMOL, so it is a good idea to install this plugin.
