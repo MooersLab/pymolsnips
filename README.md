@@ -796,21 +796,27 @@ This editor can be used to view and change the code in the snippets.
 
 [*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi* on steroids.
 It is free.
-A newer branch of *vim* called *neovim* is available.
+A newer branch of *Vim* called *neovim* is also available.
 Either are available from software repositories like macports, fink, homebrew, or as stand-a-lone applications.
+Vim version 8.1 was not working on Mac OS X Catalina due to a bug. 
+That bug has been fixed as of version 8.2.0.
 
-The *vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
-The secret to keeping your sanity while using *vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue commands.
+Vim focusing on the editing process where most of the time is spent thinking and not generating new text.
+The *Vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
+The secret to keeping your sanity while using *Vim* is to remember to escape from insert mode to normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue commands.
+Numerous blog posts have lists of ways to think about and use Vim will improve your productivity.
 
 *vim* lacks native support for snippets.
-We have to extend *vim* with plugin known as a snippet manager.
+We have to extend *vim* with a plugin known as a snippet manager.
 There are several plugins for managing snippets.
 *Neosnippetsi*, *SnipMate*, and *UltiSnips* will be discussed here.
 
 Versions of vim 8.0 and greater can use minpac to manage plugins on top the native support for plugins.
-Versions of *vim* 7.X and earlier require the use of one of the plugin managers to install plugins.
+Versions of *vim* 7.X and earlier require the use of one of the plugin managers like Vundle to install plugins.
+Most plugins have github websites of their own.
+These sites rarely mention minpac but Vundle is always mentioned.
 
-Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file. i
+Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file.
 It is in this file that you install and update plugins, as well as comment out unused plugins.
 
 <details>
@@ -849,14 +855,16 @@ call vundle#end()
 " Turn on filetype detection for plugins
 filetype plugin on
 
-" set path to Python3 interpreter
-let g:python3_host_prog = '/opt/local/bin/python3.7'
+" set path to Python3 interpreter that you used when installing vim
+" let g:python3_host_prog = '/opt/local/bin/python3.7'
+" This was the python used to install vim with homebrew.
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
 
 " UltiSnips related commands
 let g:UltiSnipsExpandTrigger = ''
 let g:UltiSnipsJumpForwardTrigger = ''
 let g:UltiSnipsJumpBackwardTrigger = ''
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/myultisnips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 ```
 
 Now open vim and run the following command:
@@ -866,8 +874,8 @@ Now open vim and run the following command:
 ```
 </details>
 
-Minpac is also a plugin manager for installing and managing plugins in *vim*.
-It requires *vim* 8 or newer.
+Minpac is also a plugin manager for installing and managing plugins in *Vim*.
+It requires *Vim* 8 or newer.
 Unfortunately, minpac does not update itself.
 Fortunately, there is a package you can add that will allow minpac to auto-update.
 This is discussed below in the minpac installation section.
@@ -897,7 +905,7 @@ To allow minipac to update itself enter:
 ```.vimrcfile
 call minpac#add('k-takata/minpac',{'type':'opt'})
 ```
-Then refresh *vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
+Then refresh *Vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
 You will not be able to use these plugins until you exit and restart *vim* by entering `:qa!` and then opening another *vim* session.
 
 </details>
