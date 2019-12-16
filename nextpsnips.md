@@ -105,6 +105,28 @@
 	- Windows Install? Yes
 	- Can search snippets with '>' Snippet pluggin to open 2 tabs by itself without having to press the info to further open a tab (from tab trigger)
 ### Yasnippets
-	- Installation: Not attempted yet
+    - This library can used by emacs and spacemacs.
+    - Blaine has to finish making a pymol-mode file that will enable recognition
+    pml files and wil provide syntax highlighting. His first attempts did not work.
+- Installation: Not attempted yet
 	- GIFY made: No
 	- Errors: Needs work, not much written, haven't attempted installation.  
+    
+### README.md
+
+I want the sections organized by text editors rather than snippet library files.
+As a result, yasnippets will need to be described under emacs and under spacemacs.
+The location of the pml snippets is in different locations for these two editors.
+It is okay to have redundancy in text because we have folded text and hyperlinks
+for navigation.
+No one is going to read the whole document so no one will notice.
+It is much more important to have the complete information in one section rather than having is spread across multiple sections.
+
+Likewise, we will need to describe the installation of the snipmate, neosnippets, and ultisnips libararies separately under neovim and Vim.
+
+Please remember to do the following:
+- use two blank lines between major sections
+- use blank lines to flank code blocks
+- keep on sentence per line
+- remove whitespaces beyond the period at the end of a sentence.
+
