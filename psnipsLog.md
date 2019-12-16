@@ -131,7 +131,17 @@
 	Friday Dec 13, 2019 | 7:30am-1pm 2:30pm-5pm (8) 
 		Worked on Atom and Komodo Edit	
 			- both are now complete (with windows updates as well)
-	
+    Saturday Dec 14, 2019 (7 AM to 7 PM, 9 PM to 11 PM)
+        Blaine worked on the pdb-mode file for emacs.
+        Blaine also worked on spacemacs.
+    Sunday Dec 15, 2019 (6 AM to 1 PM, 2 PM to 7 PM, 8 PM to 12AM)
+        Blaine worked on getting Vundle and ultisnips working again.
+        A bug in Catalina's Xcode lead to a lot of wasted effort.
+        Had to install a new version of vim via homebrew.
+    Monday Dec 16, 2019 (5 AM to 8 AM)
+        Edited the README file. See bottom of psnipsnext.md.
+
+
 ## Annotations
 - Files and folders``
 - Window in program ** ** 
