@@ -138,11 +138,14 @@
         Blaine worked on getting Vundle and ultisnips working again.
         A bug in Catalina's Xcode lead to a lot of wasted effort.
         Had to install a new version of vim via homebrew.
-    Monday Dec 16, 2019 (5 AM to 8 AM)
-        Edited the README file. See bottom of psnipsnext.md.
+    Monday Dec 16, 2019 (5 AM to 9 AM)
+        Blaine edited the README file. 
+        See bottom of psnipsnext.md.
+        Updated time log at the bottom of contents.tex on Overleaf.
+        Wrote up bio for JOVE.
 
-
-## Annotations
+  2
+  1## Annotations
 - Files and folders``
 - Window in program ** ** 
 - Programs or text editors italicized * *
