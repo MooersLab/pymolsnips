@@ -1,7 +1,5 @@
 
-The PyMOL macro language (pml) is used to set parameter values and execute
-commands to make customized scenes of biomolecules in PyMOL's viewport.
-These scenes can be made into static images for posters, seminars, and manuscripts or serve as part of molecular movies.
+The PyMOL macro language (pml) is used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport. These scenes can be made into static images for posters, seminars, and manuscripts or they can serve as parts of molecular movies.
 
 The number of lines of pml commands and settings required for very sophisticated figures can approach 100.
 It is difficult to issue so many commands through PyMOL's gui without making mistakes.
