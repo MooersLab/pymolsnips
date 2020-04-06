@@ -78,7 +78,6 @@ Hyperlinks will take you to a paricular category.
 <details>
 <summary>Here are links to the snippet categories.</summary>
 
-<A name="FASTLINKS3">Quick links</A>
 - <a href="#altloc"> Alternate locator </a>
 - <a href="#analysis"> Analysis </a>
 - <a href="#changeOrientation"> Change orientation </a>
@@ -1351,7 +1350,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories near top.</A>
+<A href=#categories>Return to list of snippet categories near top.</A>
 
 
 <h3 name="analysis"></h3>
@@ -1372,7 +1371,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | printResiResnNameB4ResiXNoH | Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |
 
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="changeOrientation"></h3>
@@ -1384,7 +1383,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | rv            | Return settings in a compact format on one line. |
 | turnAboutAxis | Turn about axis.                   |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="colorScheme"></h3>
@@ -1396,7 +1395,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | cribbon       | Color ribbon H red, strand yellow, loop green. |
 | volumeRamp    | Volume ramp.                                   |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="coordCovalent"></h3>
@@ -1406,7 +1405,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:-----------------------------------------------------------|
 | coordinate    | Coordinate covalent bonds to metals. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="database"></h3>
@@ -1416,7 +1415,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:----------------------------------------------|
 | lsSnips       | List all snips by tab trigger and description |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="electronDensity"></h3>
@@ -1428,7 +1427,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | fetch2FoFc    | Fetch 2FoFc map.         |
 | threeMaps     | Three electron density maps.  |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="fetchFile"></h3>
@@ -1439,7 +1438,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | fetchCIF      | Fetch cif file. |
 | fetchFoFc     | Fetch fofc map. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="fileInput"></h3>
@@ -1449,7 +1448,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:------------------------------------------|
 | loadPDBfile   | Load a pdb file in the current directory. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="fileOutput"></h3>
@@ -1459,7 +1458,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:-----------------------------------------------------------|
 | savePNG       | Save a png file of current scene to the current directory. |
 
-<A href=#FASTLINKS3>Return to list of editors above.</A>
+<A href=#categories>Return to list of editors above.</A>
 
 
 <h3 name="formatLabel"></h3>
@@ -1471,7 +1470,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | labelSS       | Label SS.                                           |
 | oneLetter     | One letter amino acid.                              |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="hbonds"></h3>
@@ -1484,7 +1483,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | hbond         | H-bond setup.     |
 | hbonddash     | H-bond dashes.    |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#help"></h3>
@@ -1495,7 +1494,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | printDoc                   | Print document string of a function.                                       |
 | writeCommandReference2HTML | Write the command reference to html file in the present working directory. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#label"></h3>
@@ -1508,7 +1507,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | labelWatersHOH | Label waters HOH.                                  |
 | labelWatersW   | Label waters W.                                    |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 
@@ -1520,7 +1519,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | sigang        | Set angle labels to display 2 decimals places |
 | sigdist       | Set distance labels to display 2 decimals     |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>>
+<A href=#categories>Return to list of snippet categories above.</A>>
 
 
 <h3 name="#labelPlacement"></h3>
@@ -1531,7 +1530,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | centerpi      | Center pi.    |
 | pseudolabel   | Position label with pseudoatom. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#measureSurfaceArea"></h3>
@@ -1541,7 +1540,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:----------------------|
 | ms            | Measure surface area. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#molecularRepresentation"></h3>
@@ -1571,7 +1570,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | sidehChainHelper        | In cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
 | solventRadius           | Set radius of ball used to make solvent accessible surface.                                    |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 
@@ -1582,7 +1581,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:---------------|:-----------------|
 | getCoordinates | Get coordinates. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#printSequence"></h3>
@@ -1592,7 +1591,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:---------------------------|
 | fasta         | Print Fasta from PDB file. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#pymolrc"></h3>
@@ -1606,7 +1605,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | setpath       | Set additional path for PyMOL to search on startup        |
 | sigDigits     | Set number of decimals places to show in distance labels. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#timestamp"></h3>
@@ -1617,7 +1616,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | spng          | Save png flle with timestamp |
 | spse          | Save pse flle with timestamp |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#selection"></h3>
@@ -1641,7 +1640,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | selectStrands        | Select atoms by beta strands.                                |
 | undoSelection        | Undo a selection.                                            |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#specializedFigure"></h3>
@@ -1652,7 +1651,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | bu            | Biological unit.      |
 | stack         | Base-stacking figure. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#stereo"></h3>
@@ -1663,7 +1662,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | stereoDraw    | Stereo draw.  |
 | stereoRay     | Stereo ray.   |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#supercell"></h3>
@@ -1722,4 +1721,4 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
 | internalGUIwidth | Set the width of the internal gui. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
