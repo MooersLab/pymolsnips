@@ -74,7 +74,7 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 <details>
 <summary>Here are some snippet categories</summary>
 
-## <A name="FASTLINKS3">Quick links</A> ##	
+<A name="FASTLINKS3">Quick links</A>
 - <a href="#altloc"> Alternate locator </a>
 - <a href="#analysis"> Analysis </a>
 - <a href="#changeOrientation"> Change orientation </a>
