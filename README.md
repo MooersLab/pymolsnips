@@ -71,8 +71,12 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 </details>
 
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
+Each snippet is described below.
+The snippets are grouped into categories.
+Hyperlinks will take you to a paricular category.
+
 <details>
-<summary>Here are some snippet categories</summary>
+<summary>Here are links to the snippet categories.</summary>
 
 <A name="FASTLINKS3">Quick links</A>
 - <a href="#altloc"> Alternate locator </a>
@@ -109,7 +113,7 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 <A href=#FASTLINKS>Return to quick links section at top</A>
 </details>
 
-## <A name="FASTLINKS2">Quick links to the supported text editors</A> ##
+<A name="FASTLINKS2">Quick links to the supported text editors</A>
 
 Note that some text editors use the same library of snippets.
 For example, emacs and spacemacs use the same ffffff:snippet library that is managed by the yasnippets package.
