@@ -1677,7 +1677,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |sc133          |Make a lattice of 1 x 3 x 3 unit cells.                            				   |
 |sc333          |Make a lattice of 3 x 3 x 3 unit cells.                                       |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#waterPentagon"></h3>
@@ -1688,7 +1688,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | waterTriple   | triple water pentagon. |
 
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#saltBridge"></h3>
@@ -1698,7 +1698,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:------------------------------------------|
 | his31asp70    | Asp70-His31 salt-bridge from T4 lysozyme. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#selection"></h3>
@@ -1708,7 +1708,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 |:--------------|:--------------------------------|
 | ligandSelect  | Make selection of ligand atoms. |
 
-<A href=#FASTLINKS3>Return to list of snippet categories above.</A>
+<A href=#categories>Return to list of snippet categories above.</A>
 
 
 <h3 name="#workshop"></h3>
