@@ -75,8 +75,6 @@ Each snippet is described below.
 The snippets are grouped into categories.
 Hyperlinks will take you to a paricular category.
 
-<details>
-<summary>Here are links to the snippet categories.</summary>
 
 - <a href="#altloc"> Alternate locator </a>
 - <a href="#analysis"> Analysis </a>
@@ -110,7 +108,7 @@ Hyperlinks will take you to a paricular category.
 - <a href="#workshop">Workshop</a>
 
 <A href=#FASTLINKS>Return to quick links section at top</A>
-</details>
+
 
 <hr>
 <h2>  <A name="FASTLINKS2">Supported text editors:</A> </h2>
