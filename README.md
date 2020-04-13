@@ -121,7 +121,7 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
-  * <a href="#emacs"> emacs (uses yasnippets package)</a>
+  * emacs (uses <a href="#yasnippets">yasnippets</a> package)
   * <a href="#espresso"> Espresso </a>
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
@@ -130,11 +130,11 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
-  * <a href="#neovim"> Neovim (uses the Ultisnips, Neosnippets, and Snipmate plugins to manage snippets) </a>
+  * Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
-  * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, and Snipmate plugins to manage snippets) </a>
+  * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
 
 
