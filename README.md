@@ -272,7 +272,7 @@ However, *Brackets* now has support for a large number of languages.
 The zig-zag line launches Live Preview.
 The lego piece launches the extension manager.
 Once you install an exentsion, a light bulb icon will appear which launches the **Snippets Manager**.
-
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
 	
@@ -325,6 +325,7 @@ Its predecessor was *SynWrite*, which is no longer supported.
 A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons manger (thank you Alexey T.!).
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 <details>
 <summary><b>Installing and using snippets with Cudatext</b></summary>
 	
@@ -345,7 +346,9 @@ You may have to create the `Std.PML` folder by giving the following bash command
 $ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/
 ```
 
-When executing *CudaText* for the first time on Windows it will prompt you with the need for extraction of files. Proceed with extraction and choose where you want the files to be extracted to. I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText. 
+When executing *CudaText* for the first time on Windows it will prompt you with the need for extraction of files. 
+Proceed with extraction and choose where you want the files to be extracted to. 
+I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText. 
 
 Create the **Std.PML** sub directory under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets`
 
@@ -391,6 +394,8 @@ Binaries are  available for Mac OS, Linux, and Windows.
 The source code is also available.
 *Geany* has a plugin manager, and it is very easy to configure.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing and using snippets with Geany</b></summary>
 	
@@ -431,6 +436,7 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 [*gedit*](https://wiki.gnome.org/Apps/Gedit) is often available on the computers running Linux OS at national labs.
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 <details>
 <summary><b>Installing and using snippets with gedit</b></summary>
 
@@ -474,6 +480,8 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 *Jupyter Notebook* has two extensions for snippet management.
 *JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing and using snippets with Jupyter Notebook</b></summary>
 	
@@ -516,6 +524,9 @@ Once installed, enter `jupyter lab` into the launch. *JupyterLab* uses your brow
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 	
 [*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing and using snippets with kate</b></summary>
 	
@@ -544,6 +555,8 @@ May have to create the directory MySnippets on MacOS.
 The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
 The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL. 
 One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace. *Komodo Edit* was derived from the Mozilla Framework. The add-on, or extension, capabilities are the same. For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/). 
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
 <summary><b>Installing and using snippets with Komodo Edit</b></summary>
@@ -589,6 +602,8 @@ It has very an attractive, uncluttered GIU.
 For example, code chunks for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
 The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin.
 This documentation is on a GitHub website.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
 <summary><b>Installing and using snippets with Light Table</b></summary>
@@ -659,6 +674,8 @@ Nonetheless, *Micro* is easier to use than *vim* or *emacs*.
 Like *nano*, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a `json` file.
 [*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
 <summary><b>Installing and using snippets with Micro</b></summary>
@@ -731,6 +748,8 @@ In other words, you will use vim, emacs, and spacemacs commands in one editor.
 It might be less intimidating if you have some of the basics of vim and emacs mastered.
 Spacemacs does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing and using snippets with Light Table</b></summary>
 
@@ -765,6 +784,8 @@ Spacemacs may be more attractive to vi users rather than vim users who cannot pa
 The free trial period is infinite.
 *Sublime Text 3* starts up much faster than the other text editors for programmers.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
 <summary><b>Installing and using snippets with Sublime Text 3</b></summary>
@@ -889,6 +910,8 @@ These sites rarely mention minpac but Vundle is always mentioned.
 Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file.
 It is in this file that you install and update plugins, as well as comment out unused plugins.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing Vundle</b></summary>
 	
@@ -950,6 +973,8 @@ Unfortunately, minpac does not update itself.
 Fortunately, there is a package you can add that will allow minpac to auto-update.
 This is discussed below in the minpac installation section.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing minpac</b></summary>
 	
@@ -987,6 +1012,8 @@ The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
 *Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
 *Deoplete* requires *neovim* or *Vim* versions greater than 8.0, and Python3.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
 <summary><b>Installing and using snippets with Neosnippets</b></summary>
@@ -1091,6 +1118,8 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 [*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that rovides plugin support for snippets that are available in *vim*. 
 It does not depend on Python.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
 <summary><b>Installing and using snippets with SnipMate</b></summary>
