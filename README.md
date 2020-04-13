@@ -114,8 +114,8 @@ Hyperlinks will take you to a paricular category.
 <h2>  <A name="FASTLINKS2">Supported text editors:</A> </h2>
 
 Note that some text editors use the same library of snippets.
-For example, emacs and spacemacs use the same ffffff:snippet library that is managed by the yasnippets package.
-Likewise, Vim and neovim shared some of the same plugin managers and snippet software.
+For example, emacs and spacemacs can use the same snippet library that is managed by the yasnippets package.
+Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
 
   
   * <a href="#atom"> Atom </a>
