@@ -479,7 +479,7 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 *JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
 
 
-[JupuyterLab]() aims to be an Integrated Development Environment that can edit Jupyter Notebooks side-by-side with a markdown or LaTeX document in a text editor.
+[JupuyterLab](https://jupyter.org/) aims to be an Integrated Development Environment that can edit Jupyter Notebooks side-by-side with a markdown or LaTeX document in a text editor.
 In this fashion, JupyterLab has much stronger support for literate programming than the classic *Jupyter Notebook*.
 *JupyterLab* is the Python analog of *RStudio*.
 Unlike Rstudio, *JupyterLab* runs in a tab of your default webbrowser, just like the classic *Jupyter Notebook*.
@@ -620,18 +620,22 @@ The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the C
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="jupyternotebook"> Jupyter Notebook, Classic)</h3>
+<h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
 
 The classic *Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like the functions that reside in separate cells in the notebook.
 *Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
-*JuptyerLab*, which is now available for general use, is similar to *Jupyter Notebooks*.
+*JuptyerLab* is an IDE that can read the classic *Jupyter Notebook* while enabling writiing in text documents in parallel windows.
 See above.
+*JuptyerLab* has been around for several week and has not displaced the popularity of *Jupyter Notebook* because they are so darn fun to use.
+The Joy of *Jupyter Notebook* has discouraged verterans from switching, so we decided to support the *Jupyter Notebook* because diehardts will be using them for another five years.
+The one advantage of the *Jupyter Notebook* over *Jupyter Lab* is the support for embedding in notebook cells static or interactive images from PyMOL or nglview respectively.
+
 
 *Jupyter Notebook* has two extensions for snippet management.
 These notebook extensions have to be installed first.
 The snipppets are stored in JSON files so they are not so easy to edit becuase of the nested braces.
 
-A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension. 
+A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension.
 The these snippets can be loaded as need by using the load magic.
 
 ```jupyter
