@@ -125,7 +125,8 @@ Likewise, Vim and neovim shared some of the same plugin managers and snippet sof
   * <a href="#espresso"> Espresso </a>
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
-  * <a href="#jupyter"> Jupyter notebook, JupyterLab </a>
+  * <a href="#jupyterlab"> JupyterLab </a>
+   * <a href="#jupyternotebook"> Jupyter notebook</a> 
   * <a href="#kate"> Kate </a>
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
@@ -464,15 +465,143 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-<h3 name="jupyter"> Jupyter Notebook, JupyterLab (Universal)</h3>
+
+<h3 name="jupyterlab"> JupyterLab (Universal)</h3>
+
+
+*Jupyter Notebook* has two extensions for snippet management.
+*JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
+
+
+[JupuyterLab]() aims to be an Integrated Development Environment that can edit Jupyter Notebooks.
+*JupyterLab* is the Python analog of *RStudio*.
+Unlike Rstudio, I runs in your default webbrowser.
+*JuptyerLab* can read and run classic *Jupyter Notebooks*,
+
+*JupyterLab*  has multiple windows like *Rstudio*: a code console, terminal shells, juypter notebook editor, a text editor, and the jupyter notebook editor.
+And like *Rstudio*, *JupyterLab* open and edit a variety of kinds of markedup documents like markdown, html, and latex files.
+The code console can run code interactively and shows the order in which the code was executed.
+Tab completion and tooltips work in the code console as they do in the notebook.
+Selected codes chunks in markdown and latex documents can be connected to a code console.
+Some documents can be opened with one of several alternate editors.
+Edits of markdown documents are rendered immediately.
+
+The *JupyterLab* provides many enhancements for the editing of jupyter notebooks.
+First, the cells can be dragged and dropped to rearrange them in the notebook.
+Second, the cells can be dragged between notebooks to copy the contents. 
+Third, multiple views of a single notebook can be opened. Changes in one notebook are synchrotronized with the remaining notebooks.
+Fourth, a blue bar on the blue side of the cell eases the folding and unfolding of the cell.
+Fifth, longer outputs are easier to scroll.
+Sixth, the cells output can be viewed from additional sychronized views.
+Seventh, tab completion includes more information about the matched items.
+Eighth, the tooltip, activated with shift-tab, shows information about selected objects.
+
+Like Jupyter Notebook extensions, *JupyterLab* extensions are written in Javascript, but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
+The corresponding functionalities are being rebuilt by many volunteer developers.
+The extensions include support for vim keybindings in the text editor as well as in the editor of Juptyer notebooks.
+The latter functionality enables rapid navigation of the notebook cells without using the mouse.
+
+*JupyterLab* can support manuscript writing if tex or markdown files more directly than *JupyterLab*.
+This is the main reason that I would consider using *JupyterLab*.
+If you are writing manuscripts that describe computer work, it may be worth the trouble to write the part of the manuscript that refers to that code by editing it JupyterLab. 
+There is a LaTeX *JupyterLab* extension that supports the writing and compiling of latex documents.
+With this extension enabled, the tex editor supports the generation of bibliographies using a bibtex file.
+With a wide computer screen, you can display in parallel the tex document, a preview of the pdf, and the jupyter notebook that you may be describing. 
+This parallel visaulization supports the accurate transfer from the Jupyter notebook to the manuscript of code listings, output tables, and figures.
+
+The tex editor supports vim key bindings, but there is no support of snippets in *JupyterLab*.
+This is also a weakness of the Overleaf tex editor which I use for most of my LaTeX writing due to its seamless use of git for version control, superior error reporting system, and support for collaborative writing.
+I have yet to test the handling of the complex documents that are assembled from multiple documents.
+
+*JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
+The snippets are in individual files in analogy to the code clippings of Bibedit.
+The snippets are stored with the appropriate file extension in the directory `./Library/Jupyter/snippets`.
+Nested submenus are created by making subfolders.
+These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
+You have to use the mouse to select the snippet.
+There is no support for *MathJax* rendering of LaTeX in the label of snippet.
+
+There are no package installers for *JupyterLab*.
+However, *JupyterLab* is pre-installed in the full Anaconda Python package.
+It is available in the base environment, but jupyter has to be installed in new environments.
+With the Anaconda system installed, activate the desired environment where you want to install *JupyterLab* with `conda activate <env>` and then `conda install jupyter`.
+This command will install both *JupyterLab* and the jupyter notebook.
+
+Outside of Anaconda, *JupyterLab* is installed with a package manager like any other Python module. 
+With pip, the install command is simply  `pip install --user jupyter` to install in juputer in a local library rather than the system library.
+The command for users of macports is `port install py38-jupyter`. 
+Change the version number from Python3.8 to whatever is your current version of Python.
+The command for users of homebrew is `brew install jupyter`.
+The command for he user of fink is `fink install jupyter`.
+The command for the users of cygwin on Windows is 
+The command for the users of Ubuntu is 
+The command for the users fo Centos is 
+More details on the installation of juputer can be found here \href{}.
+
+When the jupyterlab-snippets extension is in synch with the current version of *JupyterLab*, the built in *JupyterLab* extension manager eases installation.
+Enter `snip` to get a list of the snippet related extensions.
+Select ` ` and then click on the install button.
+If the install fails, the extension can be installed manually in the terminal with these commands.
+
+If the above commands fail because the version of the extension in PyPi is not available yet for the current version of *JupyterLab*, you might get lucky by installing the development version of the extension. 
+The current instructions are found on the github page for this project \url{}.
+This issues tab on the GitHub page can be used to resolve any further difficulties.
+
+This project has three related webpages.
+The first page is linked to the notebook extension and is a javascript site for the project. 
+This webpage is two years out of date. 
+The original developer of the extension is no longer supporting it.
+Two other developers have taken over the project because it is so valuable.
+There is a PyPI webpage for the project that has access to a wheel file for the nbextension and a tar file of the source code.
+This page also includes a link to the github page for this project.
+The GitHub page has the current information about installation trouble shooting.
+
+You should beware that the upgrading of *JupyterLab* in the future could lead to the breaking of your various *JupyterLab*extensions. 
+It may be best to delay the *JupyterLab* upgrade until the extensions have been upgraded. 
+
+The official documentation for *JupyterLab*is the found on Read the docs.
+This documentation can be viewed as html file in a browser, or it can be downloaded as a pdf for printing. 
+There is a tiny icon in the lower left of the home page for the jupyterlab read-the-docs.
+Click on this icon to gain access to the pdf version.
+
+In addition to the books about jupyter notebook mentioned in the section about jupyter notebooks, books have been written about *JupyterLab* exclusively (e.g., *JupyterLab Quick Start Guide*) or describe Jupyterlab in detail in context of another topic (e.g., * *).
+The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [github site](https://github.com/PacktPublishing/Jupyterlab-Quick-Start-Guide). 
+
+
+```bibtex
+@book{Richman2019JupyterLabQuickStartGuide,
+  title={JupyterLab Quick Start Guide},
+  author={Richman, Lindsay and Ferrari, Melissa and Oladokun, Joseph and Banfield, Wesley and Toomey, Dan },
+  year={2019},
+  publisher={Packt Publishing Ltd}
+}
+
+@Book{Galea2018AppliedDataScienceWithPythonAndJupyter,
+  author    = {Galea, Alex},
+  publisher = {Packt Publishing Ltd},
+  title     = {Applied Data Science with Python and Jupyter},
+  year      = {2018},
+}
+
+@Book{2018AppliedDataScienceWithPythonAndJupyterUsePowerfulIndustryStandardToolsToUnlockNewActionableInsightsFromYourData,
+  publisher = {Packt Publishing Ltd},
+  title     = {Applied Data Science with Python and Jupyter: Use powerful industry-standard tools to unlock new, actionable insights from your data},
+  year      = {2018},
+}
+```
+
+
+As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) conventions have been held.
+The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the COVID19 pandemic.
+
+
+<h3 name="jupyternotebook"> Jupyter Notebook, JupyterLab (Universal)</h3>
 
 *Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like functions that reside in separate cells in the notebook.
 *Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
 *JuptyerLab*, which is now available for general use, is similar to *Jupyter Notebooks*.
-*JupyterLab* is the Python analog of *RStudio*.
-*JuptyerLab* can read and run *Jupyter Notebooks* but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
+See above.
 *Jupyter Notebook* has two extensions for snippet management.
-*JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
 
 <details>
 <summary><b>Installing and using snippets with Jupyter Notebook</b></summary>
@@ -481,7 +610,8 @@ They do not support tab triggers or tab stops.
 A simple alternative is to import individual snippets with the load magic.
 
 In the *JupyterNotebooks* command line, enter:
-```Jupyter
+
+```jupyter
 %load filePath/<snippetName>.pml
 ```
 The animation below demonstrates the insertion of a snippet with the load magic.
@@ -508,6 +638,9 @@ $ conda install -c conda-forge jupyterlab
 ```
 
 Once installed, enter `jupyter lab` into the launch. *JupyterLab* uses your browser to run and a log of your activity is recorded.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
