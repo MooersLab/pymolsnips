@@ -126,7 +126,7 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
   * <a href="#jupyterlab"> JupyterLab </a>
-   * <a href="#jupyternotebook"> Jupyter notebook</a> 
+   * <a href="#jupyternotebook"> Jupyter Notebook, Classic</a> 
   * <a href="#kate"> Kate </a>
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
@@ -479,20 +479,36 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 *JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
 
 
-[JupuyterLab]() aims to be an Integrated Development Environment that can edit Jupyter Notebooks.
+[JupuyterLab]() aims to be an Integrated Development Environment that can edit Jupyter Notebooks side-by-side with a markdown or LaTeX document in a text editor.
+In this fashion, JupyterLab has much stronger support for literate programming than the classic *Jupyter Notebook*.
 *JupyterLab* is the Python analog of *RStudio*.
-Unlike Rstudio, I runs in your default webbrowser.
-*JuptyerLab* can read and run classic *Jupyter Notebooks*,
+Unlike Rstudio, *JupyterLab* runs in a tab of your default webbrowser, just like the classic *Jupyter Notebook*.
+*JuptyerLab* can still read and run classic *Jupyter Notebooks*.
 
-*JupyterLab*  has multiple windows like *Rstudio*: a code console, terminal shells, juypter notebook editor, a text editor, and the jupyter notebook editor.
-And like *Rstudio*, *JupyterLab* open and edit a variety of kinds of markedup documents like markdown, html, and latex files.
+*JupyterLab* has multiple windows like *Rstudio*: a code console, terminal shells, juypter notebook editor, a text editor, and the jupyter notebook editor.
+Like *Rstudio*, *JupyterLab* can open and edit a variety of markedup documents like markdown, html, and latex files.
 The code console can run code interactively and shows the order in which the code was executed.
 Tab completion and tooltips work in the code console as they do in the notebook.
 Selected codes chunks in markdown and latex documents can be connected to a code console.
 Some documents can be opened with one of several alternate editors.
-Edits of markdown documents are rendered immediately.
+Edits of markdown and LaTeX documents are rendered immediately.
 
-The *JupyterLab* provides many enhancements for the editing of jupyter notebooks.
+Like Jupyter Notebook extensions, *JupyterLab* extensions are written in Javascript, but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
+The corresponding functionalities are being rebuilt by many volunteer developers.
+The extensions include support for vim keybindings in the text editor as well as in the editor of Juptyer notebooks.
+The latter functionality enables rapid navigation of the notebook cells without using the mouse.
+There are two different extensions that support snippet libraries.
+They format for these libraries differs from that for the Jupyter Notebook as described below.
+The good news is that required format is similar to the clippings for BBedit, so it is trivial for the user to add new snippets as described below.
+The bad news is that there is no support for tabtriggers and tabstops.
+
+All-in-all, new Jupyter users should start with JupyterLab, and veteran Jupyter Notebook users should switch to JupyterLab.
+
+<details>
+<summary><b>More reasons to switch to JupyterLab</b></summary>
+
+
+The *JupyterLab* provides many enhancements for the editing of *Jupyter Notebook*.
 First, the cells can be dragged and dropped to rearrange them in the notebook.
 Second, the cells can be dragged between notebooks to copy the contents. 
 Third, multiple views of a single notebook can be opened. Changes in one notebook are synchrotronized with the remaining notebooks.
@@ -502,10 +518,6 @@ Sixth, the cells output can be viewed from additional sychronized views.
 Seventh, tab completion includes more information about the matched items.
 Eighth, the tooltip, activated with shift-tab, shows information about selected objects.
 
-Like Jupyter Notebook extensions, *JupyterLab* extensions are written in Javascript, but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
-The corresponding functionalities are being rebuilt by many volunteer developers.
-The extensions include support for vim keybindings in the text editor as well as in the editor of Juptyer notebooks.
-The latter functionality enables rapid navigation of the notebook cells without using the mouse.
 
 *JupyterLab* can support manuscript writing if tex or markdown files more directly than *JupyterLab*.
 This is the main reason that I would consider using *JupyterLab*.
@@ -518,6 +530,12 @@ This parallel visaulization supports the accurate transfer from the Jupyter note
 The tex editor supports vim key bindings, but there is no support of snippets in *JupyterLab*.
 This is also a weakness of the Overleaf tex editor which I use for most of my LaTeX writing due to its seamless use of git for version control, superior error reporting system, and support for collaborative writing.
 I have yet to test the handling of the complex documents that are assembled from multiple documents.
+</details>
+
+<details>
+<summary><b>Installation of snippets for JupyterLab</b></summary>
+
+
 
 *JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
 The snippets are in individual files in analogy to the code clippings of Bibedit.
@@ -596,28 +614,25 @@ The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [g
 }
 ```
 
-
 As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) conventions have been held.
 The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the COVID19 pandemic.
 
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
-<h3 name="jupyternotebook"> Jupyter Notebook, JupyterLab (Universal)</h3>
+<h3 name="jupyternotebook"> Jupyter Notebook, Classic)</h3>
 
-*Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like functions that reside in separate cells in the notebook.
+The classic *Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like the functions that reside in separate cells in the notebook.
 *Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
 *JuptyerLab*, which is now available for general use, is similar to *Jupyter Notebooks*.
 See above.
+
 *Jupyter Notebook* has two extensions for snippet management.
+These notebook extensions have to be installed first.
+The snipppets are stored in JSON files so they are not so easy to edit becuase of the nested braces.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-<details>
-<summary><b>Installing and using snippets with Jupyter Notebook</b></summary>
-	
-They do not support tab triggers or tab stops.
-A simple alternative is to import individual snippets with the load magic.
-
-In the *JupyterNotebooks* command line, enter:
+A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension. 
+The these snippets can be loaded as need by using the load magic.
 
 ```jupyter
 %load filePath/<snippetName>.pml
@@ -627,6 +642,16 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 <p align="center">
         <img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
     </p>
+
+
+<details>
+<summary><b>Installing and using snippets with the snippet notebook extensions</b></summary>
+	
+They do not support tab triggers or tab stops.
+A simple alternative is to import individual snippets with the load magic.
+
+In the *JupyterNotebooks* command line, enter:
+
 
 The file finder system in *Jupyter Notebook* eases navigation to the correct file.
 The above library of snippets includes a commented out *Sublime Text 3* snippet that has tab stops.
