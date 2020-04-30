@@ -466,18 +466,37 @@ Then to copy `pymol.xml` into that directory, do:
 ```bash
 $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 ```
-
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
+****************    JupyterLab    *******************************************
 
-<h3 name="jupyterlab"> JupyterLab (Universal)</h3>
+<h3 name="jupyterlab"> Jupyter (Universal) </h3>
+
+Jupyter is an electron notebook for interactive program in Python originally.
+It descended from the Ipythonotebook project.
+But via kernels, it can be extended for use with scores of other programming languages.
+Jupyter is very fun to use when developing new code.
+It is also effective for providing training in the classroom and workshops.
+
+The main gotcha is that you have to be aware of the state of the computer.
+That is, you have to be mindful of the order in which the cells were executed.
 
 
-*Jupyter Notebook* has two extensions for snippet management.
-*JuputerLab* was a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
+<A href=#jupyternotebook>Jupyter Notebook, classic</A>has two extensions for snippet management.
+These store the snippets in a javascrpt file, and the snippets are accessed from a pulldown menu.
+Jupyter Notebook and JupyterLab also allow the use of clippings as snippets via the `%load` magic.
 
+Jupyter Notebook can be used with ipymol to send commands to PyMOL and to import output from 
+PyMOL into cells in the notebook. 
+This module enables literate programming with PyMOL.
+See below for more information.
+
+*JuputerLab* has a third snippet extension that is not backward compatible with the *Jupyter Notebook*.
+Its snippets are accessible from submenus and it is easy to add new snippets.
+
+Both Jupyter Notebook and JupuyterLab have extensions available, but they are not interchangable.
+Both have extensions for vim keybinding.
 
 [JupuyterLab](https://jupyter.org/) aims to be an Integrated Development Environment that can edit Jupyter Notebooks side-by-side with a markdown or LaTeX document in a text editor.
 In this fashion, JupyterLab has much stronger support for literate programming than the classic *Jupyter Notebook*.
@@ -503,10 +522,8 @@ The good news is that required format is similar to the clippings for BBedit, so
 The bad news is that there is no support for tabtriggers and tabstops.
 
 All-in-all, new Jupyter users should start with JupyterLab, and veteran Jupyter Notebook users should switch to JupyterLab.
-
 <details>
 <summary><b>More reasons to switch to JupyterLab</b></summary>
-
 
 The *JupyterLab* provides many enhancements for the editing of *Jupyter Notebook*.
 First, the cells can be dragged and dropped to rearrange them in the notebook.
@@ -517,7 +534,6 @@ Fifth, longer outputs are easier to scroll.
 Sixth, the cells output can be viewed from additional sychronized views.
 Seventh, tab completion includes more information about the matched items.
 Eighth, the tooltip, activated with shift-tab, shows information about selected objects.
-
 
 *JupyterLab* can support manuscript writing if tex or markdown files more directly than *JupyterLab*.
 This is the main reason that I would consider using *JupyterLab*.
@@ -532,18 +548,18 @@ This is also a weakness of the Overleaf tex editor which I use for most of my La
 I have yet to test the handling of the complex documents that are assembled from multiple documents.
 </details>
 
+
 <details>
-<summary><b>Installation of snippets for JupyterLab</b></summary>
+<summary><b>Installation of JupyterLab</b></summary>
+[*JupyterLab*](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) can be installed with `conda`, `pip`,`pipenv`, or `docker`.
+To install using `conda`, enter the follow command in the bash command line:
 
+```bash
+$ conda install -c conda-forge jupyterlab
+```
 
-
-*JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
-The snippets are in individual files in analogy to the code clippings of Bibedit.
-The snippets are stored with the appropriate file extension in the directory `./Library/Jupyter/snippets`.
-Nested submenus are created by making subfolders.
-These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
-You have to use the mouse to select the snippet.
-There is no support for *MathJax* rendering of LaTeX in the label of snippet.
+Once installed, enter `jupyter lab` to launch. 
+*JupyterLab* uses your browser to run and a log of your activity is recorded.
 
 There are no package installers for *JupyterLab*.
 However, *JupyterLab* is pre-installed in the full Anaconda Python package.
@@ -560,7 +576,19 @@ The command for he user of fink is `fink install jupyter`.
 The command for the users of cygwin on Windows is 
 The command for the users of Ubuntu is 
 The command for the users fo Centos is 
-More details on the installation of juputer can be found here \href{}.
+</details>
+
+
+<details>
+<summary><b>Installation of snippets for JupyterLab</b></summary>
+
+*JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
+The snippets are in individual files in analogy to the code clippings of Bibedit.
+The snippets are stored with the appropriate file extension in the directory `./Library/Jupyter/snippets`.
+Nested submenus are created by making subfolders.
+These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
+You have to use the mouse to select the snippet.
+There is no support for *MathJax* rendering of LaTeX in the label of snippet.
 
 When the jupyterlab-snippets extension is in synch with the current version of *JupyterLab*, the built in *JupyterLab* extension manager eases installation.
 Enter `snip` to get a list of the snippet related extensions.
@@ -582,6 +610,9 @@ The GitHub page has the current information about installation trouble shooting.
 
 You should beware that the upgrading of *JupyterLab* in the future could lead to the breaking of your various *JupyterLab*extensions. 
 It may be best to delay the *JupyterLab* upgrade until the extensions have been upgraded. 
+
+<details>
+<summary><b>Documentation about using JupyterLab</b></summary>
 
 The official documentation for *JupyterLab*is the found on Read the docs.
 This documentation can be viewed as html file in a browser, or it can be downloaded as a pdf for printing. 
@@ -616,9 +647,11 @@ The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [g
 
 As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) conventions have been held.
 The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the COVID19 pandemic.
+</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
 
 <h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
 
@@ -649,6 +682,96 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 
 
 <details>
+<summary><b>Installing and using ipymol</b></summary>
+
+The *ipymol* module was developed by Carlos Hernandez: https://github.com/cxhernandez/ipymol.
+It enables the sending of commands to PyMOL and the return of data and images from PyMOL to notebook cells.
+It faciliates literate programming with PyMOL.
+
+The pre-requisites for installing ipymol are as follows:
+
+1. Make a jupyter notebook kernel for Python interpreter inside of the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for a description of how to make one.
+2. Install the following build of ipymol at the PyMOL prompt. You need to log into your GitHub account first.
+pip install git+pip install git+https://github.com/cxhernandez/ipymol. 􏰀→git@2a30d6ec1588434e6f0f72a1d572444f89ff535b
+3. Make a bash alias to this PyMOL app file.
+4. Launch the jupyter notebook and select the pymol.python kernel.
+5. Open a terminal instance from the File pulldown in jupyter notebook.
+6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.
+7. Enter the following code to load ipymol and conmect to PyMOL
+
+```python
+from ipymol import viewer as ipv 
+ipv.start() # Start PyMOL RPC server
+```
+
+Now you can change the scene manually and send the display as static image to a cell in the jupyter notebook.
+It is assumed that the viewer class of the ipymol moduel has been imported as ipv.
+
+I made the following modifications of roundview.py to return to the notebook the current settings of the scene in PyMOL. 
+The cmd.get_view was replaced with ipv.get_view.
+The cmd.extend was replaced with ipv.extend.
+The myRoundedList was returned for further processing.
+The new function is called `rvj()' for roundview for jupyter.
+
+The snippet rvj will be in the snippet library eventually
+It code is listed below:
+
+```python
+def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
+   """MIT License
+   Copyright:
+   Blaine Mooers and the OU Board of Regents
+   University of Oklahoma Health Sciences Center
+   Oklahoma City, OK 73104
+   29 April 2020
+          """
+    StoredView = int(StoredView) decimal_places = int(decimal_places)
+    #call the get_view function
+    m = ipv.get_view(StoredView)
+    #Make a list of the elements in the orientation matrix.
+    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9], 
+              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]
+              #Round off the matrix elements to two decimal places (two fractional places)
+              #This rounding approach solved the problem of unwanted
+              #whitespaces when I tried to use a string format statement
+    myRoundedList = [round(elem, decimal_places) for elem in myList]
+    #x is the string template for the output. The whitespace is required
+    #between the "set_view" and "("
+    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'
+    # Print to the command history window.
+    print(x.format(*myRoundedList))
+    #Write to a text file.
+    myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()
+    return myRoundedList
+ipv.extend("rv", rv)
+```
+
+</details>
+
+<details>
+<summary><b>Making a pymol.python kernel for JupyterLab and Jupyter Notebook</b></summary>
+
+The following kernel will work for both the notebook and Jupyterlab.
+Make a directory called 'pymol.python' the folder `~/Library/jupyter/kernels` on a Mac.
+Paste the following code in new text file names kernel.json.
+If needed, adjust the path to the python interpreter inside of the PyMOL.app.
+
+```javascript
+{
+ "argv": [
+  "/Applications/PyMOL.app/Contents/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "pymol.python",
+ "language": "python"
+}
+```
+</details>
+
+<details>
 <summary><b>Installing and using snippets with the snippet notebook extensions</b></summary>
 	
 They do not support tab triggers or tab stops.
@@ -667,21 +790,36 @@ The notebook cells can be merged, and the code can be copied and pasted into an 
 In addition, the notebook can be used to document the cells of code with interweaved cells containing markdown code.
 The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
 The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
+</details>
 
-[*JupyterLab*](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) can be installed with `conda`, `pip`,`pipenv`, or `docker`.
-To install using `conda`, enter the follow command in the bash command line:
-```bash
-$ conda install -c conda-forge jupyterlab
+
+<details>
+<summary><b>Docuentation and books about Jupyter Notebook</b></summary>
+```bibtex
+
 ```
 
-Once installed, enter `jupyter lab` into the launch. *JupyterLab* uses your browser to run and a log of your activity is recorded.
+Citation for roundview.py script
 
+```bibtex
+@Article{Mooers2016SimplifyingAndEnhancingTheUseOfPyMOLWithHorizontalScripts,
+  author    = {Mooers, Blaine HM},
+  journal   = {Protein Science},
+  title     = {Simplifying and enhancing the use of PyMOL with horizontal scripts},
+  year      = {2016},
+  note      = {PubMed PMID: 27488983 PMCID: PMC5029532},
+  number    = {10},
+  pages     = {1873--1882},
+  volume    = {25},
+  doi       = {10.1002/pro.2996},
+  pmcid     = {PMC5029532},
+  pmid      = {27488983},
+  publisher = {Wiley Online Library},
+}
+```
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
 
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 	
