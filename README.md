@@ -494,15 +494,16 @@ The use of runnable blocks of code eases debugging.
 
 PyMOL can be import into an active notebook as a module.
 
-Jupyter is very fun to use when developing new code.
-It is also effective for providing training in the classroom and workshops.
+Jupyter Notebooks are very fun to use when developing new code because the interleaved output in the form of beautiful figures provides instant gratification. 
+
+Jupyter Notebooks are also effective for providing training in the classroom and workshops.
 It is designed to support reproducible research and literate programmming.
 The main gotcha is that you have to be aware of the state of the computer.
 That is, you have to be mindful of the order in which the cells were executed.
 
 Jupyter Notebook and JupuyterLab have extensions that extend their capabilities, 
 but their extensions are not interchangable.
-Both have extensions for vim keybinding.
+Both have extensions for vim keybindingas which will appeal to vim users.
 
 
 <h4 name="jupyterlabsnippets"> Jupyter Lab Snippets</h4>
@@ -524,6 +525,15 @@ The snippet extension is
 The snippets are accessible from submenus and it is easy to add new snippets.
 Snippets in a category are accessible from a submenu.
 There is no support for tab triggers and tab stops are this time.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -606,17 +616,32 @@ The command for the users fo Centos is  `To be determined`.
 
 
 <details>
-<summary><b>Installation of jupyterlab-snippets for JupyterLab</b></summary>
+<summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
 
 *JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
 The snippets are in individual files in analogy to the code clippings of Bbedit.
 The snippets are stored with the appropriate file extension in the directory `./Library/Jupyter/snippets` on the Mac.
-Nested submenus are created by making subfolders.
+Nested submenus are created by making subfolders within the snippets folder.
 These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
 You have to use the mouse to select the snippet.
-There is no support for *MathJax* rendering of LaTeX in the label of snippet.
+There is no support for *MathJax* rendering of LaTeX in the label of snippet, unlike in the classica Jupyter Notebook.
+
+
 
 When the jupyterlab-snippets extension is in synch with the current version of *JupyterLab*, the built in *JupyterLab* extension manager eases installation.
+First, install node.js.
+If you are using Anaconda, you can install node.js with the command `conda install -c conda-forge nodejs`
+On the Mac OS, use `brew install node` with homebrew or `port install nodejs14` with macports (or at least nodejs10).
+Start jupyterlab (e.g., `python3.8 -m jupyter-lab`).
+Click on the extension manager button in the left margin.
+It looks like a painter's palette.
+Then select the enable button to activate the extensions. 
+
+
+
+
+
+
 Enter `snip` to get a list of the snippet related extensions.
 Select ` ` and then click on the install button.
 If the install fails, the extension can be installed manually in the terminal with these commands.
