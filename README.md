@@ -751,10 +751,11 @@ ipv.extend("rv", rv)
 <details>
 <summary><b>Making a pymol.python kernel for JupyterLab and Jupyter Notebook</b></summary>
 
-The following kernel will work for both the notebook and Jupyterlab.
+The following Jupyter kernel will work for both the notebook and Jupyterlab.
+It is a simple javascript program.
 Make a directory called 'pymol.python' the folder `~/Library/jupyter/kernels` on a Mac.
-Paste the following code in new text file names kernel.json.
-If needed, adjust the path to the python interpreter inside of the PyMOL.app.
+Paste the following code in new text file named `kernel.json`.
+If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
 
 ```javascript
 {
@@ -774,11 +775,9 @@ If needed, adjust the path to the python interpreter inside of the PyMOL.app.
 <details>
 <summary><b>Installing and using snippets with the snippet notebook extensions</b></summary>
 	
-They do not support tab triggers or tab stops.
-A simple alternative is to import individual snippets with the load magic.
-
-In the *JupyterNotebooks* command line, enter:
-
+These snippet extensions do not support tab triggers or tab stops.
+A simple alternative to the snippet extensions is to import individual snippets with the load magic.
+The snippets are in individual files without tab stops and with the pml file extension.
 
 The file finder system in *Jupyter Notebook* eases navigation to the correct file.
 The above library of snippets includes a commented out *Sublime Text 3* snippet that has tab stops.
@@ -794,7 +793,7 @@ The notebook could provide an enhanced means of documenting and explaining a `.p
 
 
 <details>
-<summary><b>Docuentation and books about Jupyter Notebook</b></summary>
+<summary><b>Documentation and books about Jupyter Notebooks</b></summary>
 ```bibtex
 
 ```
