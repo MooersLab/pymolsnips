@@ -59,7 +59,9 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 
 * Atom
 * CudaText
+* PyCharm
 * Sublime Text 3
+* Text Mate
 * Visual Studio Code
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
@@ -117,7 +119,7 @@ Note that some text editors use the same library of snippets.
 For example, emacs and spacemacs can use the same snippet library that is managed by the yasnippets package.
 Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
 
-  
+
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
@@ -126,12 +128,13 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
   * <a href="#jupyterlab"> JupyterLab </a>
-   * <a href="#jupyternotebook"> Jupyter Notebook, Classic</a> 
+  * <a href="#jupyternotebook"> Jupyter Notebook</a> 
   * <a href="#kate"> Kate </a>
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
-  * Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
+  * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
+  * <a href="#PyCharm"> PyCharm </a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
@@ -1085,6 +1088,94 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
+
+<h3 name="#PyCharm">PyCharm </h3>
+
+
+PyCharm IDE [PyCharm](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
+JetBrains is a well-established Cezh firm that supplies a number of IDEs, mostly for webpage development.
+
+PyCharm's selling points are strong support for autosuggestions and autocompletions to speed up the writing of code.
+It also supports the interactive editing of Jupyter Notebooks.
+It is easy to switch the python interpreter used in editing a Jupyter Notebook to the one side the PyMOL application.
+Then PyMOL's **cmd** module can be imported into the Jupyter Notebook, and the function **cmd.do()** can be used to issue commands written in **pml**.
+The pymol.xml file containing the snippet library will be available for use.
+
+This feature can also be found in like VSC, Spyder and other editors.
+This last feature has been spreading across text editors like wildfire due to the growing popularity of Jupyter Notebooks.
+
+The PyCharm IDE is available in a Professional and a Community Edition.
+The Professional Edition is available for free to academics working on open-source projects.
+The software is issued with a license that expires after one year.
+
+The software can be installed on multiple devices.
+It can be downloaded with platform specific installers that make the installation easy and uneventful.
+The program requires about 1 GB of diskspace.
+
+Most IDEs are top heavy with configurations that take many hours to setup.
+One also often has to spend hours installing numerous plugins to make available must-have features.
+Many of the more popular must-have features should really be incorporated into the base distribution.
+PyCharm comes with such features already installed.
+PyCharm leans more towards the plug-and-play end of the spectrum, so beginners in academia should consider using it.
+
+For example, I wrote the first draft of this text in markdown on PyCharm as a *scratch file*.
+The markdown file opened with a parallel window with the markdown previewer.
+I did not have to install a markdown previewer plugin, as I did with other text editors.
+Why would you want to write in markdown without a previewer?
+
+PyCharm's startup time is slower than Textmate, Sublime Text, and VSC; similar to Spyder and Komodo Edit; and much faster than that of Atom.
+Some people contend with slow startup time by keepig the application open all of the time.
+
+The main competitor for Pycharm is the open source project Spyder.
+Spyder's current production  release does not support code snippets.
+
+In the IDE PyCharm, the snippets are called *live templates*.
+A concise introduction can be found [here](http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html).
+PyCharm's on-line manual is very good at explaining the snippets.
+The snippets are stored in a xml file.
+The storage location on the above blog post is outdated.
+This file is stored in one of these three locations:
+
+ * Linux:
+ * Mac OS: ~/Library/Application Support/JetBrains/PyCharm2020.1/templates
+ * Windows OS:
+
+All of the snippets are stored in one xml file called *pymol.xml*.
+Eash snippet has a unique tab trigger.
+The tab trigger's name is autosuggested after typing the first several letters.
+There is a also a description of the snippet displayed. 
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PycharmJupyterPyMOLDocumentation.png">
+</p>
+
+The snippet includes tab stops with default values.
+The default enough need to be changed.
+The cursor stops outside of the snippet when it hits that last tab stop.
+
+You can also get a preview of a pymol function after typing its name.
+This preview incudes a listing of the code of the function: 
+
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PycharmJupyterPyMOLDocumentation.png">
+</p>
+
+PyCharm also supports the creation and editing of Jupyter Notebooks.
+When a Jupyter Notebook file is opened, two panels are displayed in the editor.
+On the left is a text file.
+The code, markdown, and Raw NBconvert cells are written to this file.
+The ```#%%``` marks the beginning of a code cell.
+The ```#%% md``` marks the beginning of a markdown cell.
+The ```#%% raw``` marks the beginning of a Raw NBconvert cell.
+These cells are rendered and displayed with the interleaved output in a notebook on the right. 
+ 
+<p align="center">
+	<img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PycharmJupyterPyMOLDocumentation.png">
+</p>
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
