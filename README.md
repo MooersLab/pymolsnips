@@ -1143,7 +1143,7 @@ The tab trigger's name is autosuggested after typing the first several letters.
 There is a also a description of the snippet displayed. 
 
 <p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PycharmJupyterPyMOLDocumentation.png">
+	<img src="images/PycharmJupyterPyMOLDocumentation.png" width="600">
 </p>
 
 The snippet includes tab stops with default values.
@@ -1153,8 +1153,10 @@ The cursor stops outside of the snippet when it hits that last tab stop.
 You can also get a preview of a pymol function after typing its name.
 This preview incudes a listing of the code of the function: 
 
+
+
 <p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PycharmJupyterPyMOLDocumentation.png">
+	<img src="images/PycharmJupyterPyMOLDocumentation.png" width="600">
 </p>
 
 PyCharm also supports the creation and editing of Jupyter Notebooks.
@@ -1167,7 +1169,7 @@ The ```#%% raw``` marks the beginning of a Raw NBconvert cell.
 These cells are rendered and displayed with the interleaved output in a notebook on the right. 
  
 <p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PycharmJupyterPyMOLDocumentation.png">
+	<img src="images/covid19SpikeProteinD614.png" width="600">
 </p>
 
 
