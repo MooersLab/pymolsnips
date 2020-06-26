@@ -120,10 +120,12 @@ For example, emacs and spacemacs can use the same snippet library that is manage
 Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
 
 
+
+
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
-  * emacs (uses <a href="#yasnippets">yasnippets</a> package)
+  * <a href="#emacs"> emacs (uses <a href="#yasnippets">yasnippets</a> package)
   * <a href="#espresso"> Espresso </a>
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
@@ -134,7 +136,7 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
-  * <a href="#PyCharm"> PyCharm </a>
+  * <a href="#PyCharm"> PyCharm (Universal)</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
@@ -630,7 +632,6 @@ You have to use the mouse to select the snippet.
 There is no support for *MathJax* rendering of LaTeX in the label of snippet, unlike in the classica Jupyter Notebook.
 
 
-
 When the jupyterlab-snippets extension is in synch with the current version of *JupyterLab*, the built in *JupyterLab* extension manager eases installation.
 First, install node.js.
 If you are using Anaconda, you can install node.js with the command `conda install -c conda-forge nodejs`
@@ -639,10 +640,6 @@ Start jupyterlab (e.g., `python3.8 -m jupyter-lab`).
 Click on the extension manager button in the left margin.
 It looks like a painter's palette.
 Then select the enable button to activate the extensions. 
-
-
-
-
 
 
 Enter `snip` to get a list of the snippet related extensions.
@@ -1090,8 +1087,7 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 </details>
 
 
-<h3 name="#PyCharm">PyCharm </h3>
-
+<h3 name="PyCharm">PyCharm </h3>
 
 PyCharm IDE [PyCharm](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
 JetBrains is a well-established Cezh firm that supplies a number of IDEs, mostly for webpage development.
@@ -1210,11 +1206,6 @@ Spacemacs may be more attractive to vi users rather than vim users who cannot pa
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
-
-
-
-
-
 
 
 
