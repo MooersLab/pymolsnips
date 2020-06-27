@@ -10,7 +10,7 @@ If the commands are not saved to an open script file with a `.pml` file extensio
 Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the GUI alone.  
 
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
-One solution to this problem is to use a library of code fragments, called "snippets", to build a scrupt in a text editor.
+One solution to this problem is to use a library of code fragments, called **snippets** or sometime *live templates* in PyCharm, to build a scrupt in a text editor.
 
 ## <A name="FASTLINKS">Quick links</A>
 
@@ -20,19 +20,26 @@ One solution to this problem is to use a library of code fragments, called "snip
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
 
-**pymolsnips** is a library of pml code fragments that have been formatted for several popular text editors, integrated development environments (IDEs), and electronic notebooks.
-Note the wordprocessors are not included here: MS Word should never be used to handle the computer code.
-Text editors have tools for supporting the editing of comptuer code files that have many different file extensions but that are all plain assci text files.
-One of those tools is support for the retrieval and insertion of computer code fragments to save time and reduce errors while assembling a new script file.
-Text editor generally fire up with one main pane in the GUI, although extra one can be opened.
-IDEs are text editors plut extra features for debugging and testing comptuer code.
-They are generally recommended for programmer working with large code bases that divded across many files.
-IDEs generally open with three or four panes visible.
-The boundary between text editors and IDEs is blurry because some text editors support code testing.
-Because of space constraints, IDEs are best used on a large monintor screen.
-Electronic notebooks such as Jupyter Notebook and Rnotebook can be edited and run on their own or from inside the more advanced IDEs and some text editors.
-Below, we will use the term *text editor* as a collective term that refers to all three categories.
+**pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors, integrated development environments (IDEs), and electronic notebooks**.
+Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store the computer code!***
+In doing so, you can inadvertantly pick up hidden characters that are hard to find and remove during debugging.
 
+Text editors have tools for supporting the editing of comptuer code files.
+Although these files have many different file extensions that map them to the programming language of the code that they contain, they are all simple plain text files.
+One of the editing tools available in text editors is support for the retrieval and insertion of computer code fragments (i.e, snippets) to save time and reduce errors while assembling a new script file.
+
+Text editors and IDEs can be distinguished by their appearance.
+Text editors generally fire up with one main pane in the GUI, although extra ones can be opened.
+IDEs are text editors plus extra features for debugging and testing comptuer code.
+They are generally recommended for programmers working with large code bases that consist of many files.
+IDEs are well suited from navigating between the files in a large code base.
+IDEs generally open with three or four panes visible.
+
+The boundary between text editors and IDEs is blurry because some text editors support code testing.
+Because of space constraints, IDEs are best used on a large monitor.
+
+Electronic notebooks such as Jupyter Notebook and Rnotebook can be edited and run on their own or from inside the more advanced IDEs (Juptuyer Lab, PyCharm, Spyder) and some text editors (e.g., VSC, Atom, Sublime Text).
+Below, we will use the term *text editor* as a collective term that refers to all three categories.
 
 Protocols for snippet installation for each text editor are found <a href="#install"> below</a>.
 Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file.
@@ -214,12 +221,16 @@ Support is planned for the following editors:
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [SciTE](https://scintilla.org/SciTE.html)
 
+Note that we wanted to support the Rodeo IDE, which is like Rstudio for Python.
+However, its developer, Yhat, has abandoned this project. 
+It seem is a waste of time to invest in abandoned software when so many excellent alternatives are available. 
 
 Note that some editors that are available as binaries only for Windows like *Notepad++* can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
 
 <h2> <A name="install">Installing and using snippets</A></h2>
+ 
  
 <h3 name="atom" > Atom (Universal) </h3>
 
@@ -278,7 +289,17 @@ A third option availaible for windows users, is to navigate to the `.atom` folde
 Below is an example of the *threeMaps* snippet use with mirrored tab stops. 
 
 <p align="center">
-	  <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/AtomSnipsUse.gif">
+	  <img src="gifs/AtomSnipsUse.gif">
+</p>
+
+
+<details>
+<summary><b>Running a PyMOL insdie a jupuyter notebook inside of Atom via the plugin Hydrogen</b></summary>
+
+The plugin Hydrogen enables the running of Juptyer Notebooks insdie of Atom.
+
+<p align="center">
+	  <img src="gifs/AtomSnipsUse.gif">
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -300,8 +321,7 @@ The clippings can be stored in folders by language.
 Users can create nested subfolders for groups of related snippets.
 The clippings are selected via the pulldown labeled `C` (circled). 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
-You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder
-to to your BBEdit clippings.
+You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings.
 
 
 To do this, enter:
@@ -575,16 +595,11 @@ The tex editor supports vim key bindings.
 Some documents can be opened with one of several alternate editors.
 Edits of markdown and LaTeX documents are rendered immediately.
 
-*JuputerLab* has a snippet extension that is not backward compatible with the *Jupyter Notebook*.
+*JuputerLab* has several extensions for snippet libraries that is not backward compatible with the *Jupyter Notebook*.
 The snippet extension is 
-The snippets are accessible from submenus and it is easy to add new snippets.
+The snippets are accessible from submenus, and it is easy to add new snippets.
 Snippets in a category are accessible from a submenu.
 There is no support for tab triggers and tab stops are this time.
-
-
-
-
-
 
 
 
