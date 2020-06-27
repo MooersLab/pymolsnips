@@ -1143,7 +1143,7 @@ The tab trigger's name is autosuggested after typing the first several letters.
 There is a also a description of the snippet displayed. 
 
 <p align="center">
-	<img src="images/PycharmJupyterPyMOLDocumentation.png" width="600">
+	<img src="images/PycharmJupyterPymolLabel.png" width="600">
 </p>
 
 The snippet includes tab stops with default values.
