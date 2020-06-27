@@ -163,7 +163,6 @@ Support is planned for the following editors:
   - [Oni 2](https://www.onivim.io/oin2)
   - [Textadept](https://foicica.com/textadept)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
-  - [PyCharm](https://www.jetbrains.com/pycharm-edu/)
   - [SciTE](https://scintilla.org/SciTE.html)
   
 Note that some editors that are available as binaries only for Windows like *Notepad++* can be run on Mac OS or Linux by using wine or wine bottler.
