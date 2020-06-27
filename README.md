@@ -1087,7 +1087,7 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 </details>
 
 
-<h3 name="nteract"> Nteract Notebook </a>
+<h3 name="nteract"> Nteract Notebook </h3>
 
 [nteract](https://nteract.io/) is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
 We highly recommned **nteract** for beginning uses of Jupyer Notebooks.
