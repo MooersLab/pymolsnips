@@ -164,7 +164,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
   * <a href="#nteract"> Nteract Notebook </a>
   * <a href="#PyCharm"> PyCharm (Universal)</a>
-      * <a href="#rstudio"> Rstudior</a>
+  * <a href="#rstudio"> Rstudior</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#spyder"> Sypder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
@@ -177,7 +177,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
 
 
 If you are considering switching editors, we recommend giving PyCharm serious consideration. 
-Although it is massive IDE, it installs with most of the plugins that you would want to use, so it is very plug-and-play.
+Although PyCharm is a massive IDE, it comes with most of the plugins that you would ever want to use already installed, so it is very `plug-and-play.
 Our second choice would be Visual Studio Code (VSC). 
 You do have to install plugins, but the process of doing so is quite painless.
 Our third tier would be Sublime Text, Textmate, Atom, and Spyder.
@@ -185,18 +185,17 @@ Our third tier would be Sublime Text, Textmate, Atom, and Spyder.
 You might also consider *Geany*. 
 It is very lightweight, very fast, and very easily configurable.
 It is good editor if you care about agility.  
-See the following for second opinions on the best Python editor [for beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for [all users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
+See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
 Note that the **thonny** editor that was recommended for beginners is more of a training tool than a productive tool.
 It does not support code snippets, yet.
 
-The Jupyter Notebook is a popular platform for **literate programming** in the support of **rigorous and reproducible research**, even though it is a not a full-fledge text editor.
+The Jupyter Notebook is a popular platform for **literate programming** in the support of **rigorous and reproducible research**, even though it is a not a full-featured text editor.
 The Jupyter Notebook provides instant gratification by interleaving output in between blocks of code.
-Warning: so much instant gratification will chemically alter your brain. 
-Jupyter Notebook will become your platform of first choice.
-**Jupyter Notebook make coding fun**.
+Warning: too much instant gratification will alter your brain: Jupyter Notebook will become your platform of first choice.
+**Jupyter Notebook makes coding fun**.
 Jupyter Notebooks have been used to assemble tutorials, manuscripts, and books.
 
-We demonstrate below how you can use PyMOL's Python interpreter inside a Jupyter Notebook.
+We demonstrate below how to use PyMOL's Python interpreter inside a Jupyter Notebook.
 To bring to bear the full power of a text editor onto a Jupyter Noteobook, you can edit and run blocks of code from a Jupyter Notebook inside PyCharm, Atom, Sublime Text, Spyder, Vim, VSC, Emacs and other text editors. 
 We recommend using PyCharm, Spyder or VSC for the best experience.
 Sypder stand out is still allowing access to notebook extension from inside of Spyder.
