@@ -1089,7 +1089,7 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 
 <h3 name="nteract"> Nteract Notebook </a>
 
-**nteract** is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
+[nteract](https://nteract.io/) is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
 We highly recommned **nteract** for beginning uses of Jupyer Notebooks.
 It is a stand alone applicaton that does not use the webbrowser to view and edit Jupyter Notebooks.
 Nteract can be set as the defualt application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
@@ -1102,7 +1102,7 @@ The IPython magics are available.
 The clippings snippet library can be loaded by using the **%%load** magic as described for the Jupyter Notebook above.
 
 <p align="center">
-	<img src="images/InteractNoteobok2.png" width="600">
+	<img src="images/InteractNotebook2.png" width="600">
 </p>
 
 There are a few limitations to nteract compared to running Jupyter Notebook in the webbrower.
@@ -1116,7 +1116,7 @@ This limits the code that can be used to handle multi-line equations.
 
 <h3 name="PyCharm">PyCharm </h3>
 
-PyCharm IDE [PyCharm](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
+[PyCharm IDE](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
 JetBrains is a well-established Cezh firm that supplies a number of IDEs, mostly for webpage development.
 
 PyCharm's selling points are strong support for autosuggestions and autocompletions to speed up the writing of code.
