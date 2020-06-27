@@ -1087,7 +1087,7 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 </details>
 
 
-<h3 name=="nteract"> Nteract Notebook </a>
+<h3 name="nteract"> Nteract Notebook </a>
 
 **nteract** is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
 We highly recommned **nteract** for beginning uses of Jupyer Notebooks.
@@ -1110,6 +1110,8 @@ There are no notebook extensions.
 The markdown cells recognize a smaller subset of LaTeX.
 For example, the equation environment is not recognized.
 This limits the code that can be used to handle multi-line equations. 
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="PyCharm">PyCharm </h3>
