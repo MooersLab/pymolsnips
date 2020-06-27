@@ -1,15 +1,16 @@
 
-The PyMOL macro language (pml) is used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport. These scenes can be made into static images for posters, seminars, and manuscripts or they can serve as parts of molecular movies.
+The PyMOL macro language (pml) is used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport.
+These scenes can be made into static images for posters, seminars, and manuscripts or they can serve as parts of molecular movies.
 
 The number of lines of pml commands and settings required for very sophisticated figures can approach 100.
-It is difficult to issue so many commands through PyMOL's gui without making mistakes.
+It is difficult to issue so many commands through PyMOL's graphical user interface (GUI) without making mistakes.
 If the commands are not saved to an open script file with a `.pml` file extension, to an open log file, or to a frequently saved session file, the work can be lost. 
-Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.
+(Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
 
 Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the GUI alone.  
 
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
-One solution to this problem is to use a library of code fragments, called "snippets" with a text editor.
+One solution to this problem is to use a library of code fragments, called "snippets", to build a scrupt in a text editor.
 
 ## <A name="FASTLINKS">Quick links</A>
 
@@ -24,11 +25,14 @@ Protocols for snippet installation for each text editor are found <a href="#inst
 Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file.
 Most editors have their own format for snippets.
 The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
+The one exception is the Cuda text editor.
+The snippets come pre-installed with this editor.
 
 Each code fragment has a unique name that also serves as a tab trigger.
-The user enters the name of the code snippet and hits the `tab` key to insert lines of code.
+The user enters the name of the code snippet and hits the `tab` key to insert the lines of code.
 Tab stops exist at sites where parameters can be edited.
-Tab stops are mirrored when the parameters are identical and will be edited simultaneously.
+Tab stops are mirrored when the parameters are identical.
+Mirroring enable the simultaneously editing of these sites to reduce the chance of overlooking a site that needed editung.
 
 The animation below demonstrates the use of the `ao` tab trigger in *Visual Studio Code* to insert 16 lines of code for generating the ambient occlusion effect.
 You can learn how this is done <a href="#VisualStudioCode"> here </a>.
@@ -44,9 +48,9 @@ By entering these two letters, you have inserted 16 lines of code!
 
 One thing to note when using tab stops is that the mirrored selections are very *fragile*:
 Before you begin typing, make sure that the mirrored sections are all highlighted.
-It is easy to exit tab stop selections by the click of a mouse or even a keyboard movement!
-Getting your selections re-highlighted is not difficult but varies between text editor.
-Find more information about mirrored tab stops in the installation instructions of that text editor.  
+It is easy to exit the tab stop selections by the click of a mouse or even a keyboard movement!
+Getting your selections re-highlighted is not difficult, but the required steps vary between text editors.
+Find more information about mirrored tab stops in the installation instructions for each text editor.  
 
 The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites.
 If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
@@ -117,7 +121,9 @@ Hyperlinks will take you to a paricular category.
 
 Note that some text editors use the same library of snippets.
 For example, emacs and spacemacs can use the same snippet library that is managed by the yasnippets package.
-Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
+Likewise, Vim and neovim share some of the same plugin managers and snippet libraries. 
+There are at least kinds of snippet systems available for Vim and neovim.
+
 
 
 
@@ -138,17 +144,46 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
   * <a href="#nteract"> Nteract Notebook </a>
   * <a href="#PyCharm"> PyCharm (Universal)</a>
+      * <a href="#rstudio"> Rstudior</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
+    * <a href="#spyder"> Sypder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
+  * <a href="#Wing"> Wing </a>
+	* <a href="#zeppelin"> Zeppelin </a>
 
 
-If you are considering switching editors, the most popular editors seem to be *Atom, Brackets, Sublime Text3*, and *Visual Studio Code*.
-*Visual Studio Code* would be the most recommended if you do not feel comfortable or are unfamiliar working with the command line for installation or other text editor related tasks.
-You might also consider *Geany*. It is very lightweight, very fast, and very easily configurable.
+
+If you are considering switching editors, we recommend giving PyCharm serious consideration. 
+Although it is massive IDE, it installs with most of the plugins that you would want to use, so it is very plug-and-play.
+Our second choice would be Visual Studio Code (VSC). 
+You do have to install plugins, but the process of doing so is quite painless.
+Our third tier would be Sublime Text, Textmate, Atom, and Spyder.
+
+You might also consider *Geany*. 
+It is very lightweight, very fast, and very easily configurable.
 It is good editor if you care about agility.  
+See the following for second opinions on the best Python editor [for beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for [all users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
+Note that the **thonny** editor that was recommended for beginners is more of a training tool than a productive tool.
+It does not support code snippets, yet.
+
+The Jupyter Notebook is a popular platform for **literate programming** in the support of **rigorous and reproducible research**, even though it is a not a full-fledge text editor.
+The Jupyter Notebook provides instant gratification by interleaving output in between blocks of code.
+Warning: so much instant gratification will chemically alter your brain. 
+Jupyter Notebook will become your platform of first choice.
+**Jupyter Notebook make coding fun**.
+Jupyter Notebooks have been used to assemble tutorials, manuscripts, and books.
+
+We demonstrate below how you can use PyMOL's Python interpreter inside a Jupyter Notebook.
+To bring to bear the full power of a text editor onto a Jupyter Noteobook, you can edit and run blocks of code from a Jupyter Notebook inside PyCharm, Atom, Sublime Text, Spyder, Vim, VSC, Emacs and other text editors. 
+We recommend using PyCharm, Spyder or VSC for the best experience.
+Sypder stand out is still allowing access to notebook extension from inside of Spyder.
+
+For a rapid examination of Jupyter Noteobook, we reocommend the stand-alone application **nteract**.
+It does not use your webbrowser.
+It can be set as the default application for opening notebooks by double clicking on the notebook's file icon.
 
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
 I will be notified immediately by e-mail and will try to develop a snippet library for the requested editor.
@@ -165,7 +200,8 @@ Support is planned for the following editors:
   - [Textadept](https://foicica.com/textadept)
   - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
   - [SciTE](https://scintilla.org/SciTE.html)
-  
+
+
 Note that some editors that are available as binaries only for Windows like *Notepad++* can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
@@ -478,11 +514,12 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 
 <h3 name="jupyterlab"> Jupyter Lab (Universal) </h3>
 
-Jupyter Lab is an integrated development environment that runs in your web browser.
+Jupyter Lab is an integrated development environment (IDE) that runs in your web browser.
 It can read in Jupyter Notebooks.
-It supports kinds of windows including one for text editing. 
-It is similar to Rstudio and Rodeo.
+It supports several kinds of windows including one for text editing. 
+It is similar to the Rstudio, Rodeo, and Spyder IDEs.
 Its first stable release was in 2018.
+I 
 
 The Jupyter Notebook is an electronic notebook for interactive programing in Python.
 It can be extended for use with scores of other programming languages via kernels.
@@ -619,6 +656,55 @@ The command for the users of Ubuntu is `To be determined`.
 The command for the users fo Centos is  `To be determined`.
 </details>
 
+
+<details>
+<summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
+
+The kernels are easily installed for a particular python interpreter.
+Breifly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
+
+```bash
+/Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
+/Applications/PyMOL.app/Contents/bin/python -m ipykernel install
+```
+
+On Mac OS, the kenerls are stored in `~/Library/jupyter/kernels`.
+A python kernel as a separate folder with three files in it.
+Two of the files are images of the python logo.
+The third file is a javascript file, `kernel.json`, that is created by the above ipykernel install operation.
+However, it is trival to manually create a copy of the folder and its contents to create a new kernel for a new Python interpreter.
+One has to to edit the path in the kernel.json to the Python interpreter on the third line (see code listing below) and change the `display_name` of the kernel on the nineth line.
+The display name can have any format.
+There is no need to include a period between pymol and python as in the example.
+The kernel.json file is a plain text file that can be edited with any text editor.
+(JSON represents JavaScript Object Notation.)
+The kernel.json file for the Python interpreter inside the PyMOL.app on the Mac is shown below.
+
+
+```javascript
+{
+ "argv": [
+  "/Applications/7PyMOL.app/Contents/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "pymol.python",
+ "language": "python"
+}
+\end{bashcode}
+}
+}
+
+```
+
+The addition of kernels for non-python programs requires different protocols than the one given above.
+
+
+
+<details>
+<summary><b>Documentation about using JupyterLab</b></summary>
 
 <details>
 <summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
@@ -1217,6 +1303,37 @@ These cells are rendered and displayed with the interleaved output in a notebook
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
+<h3 name="rstudio">Rstudio (Universal)</h3>
+	
+[RStudio]() is an IDE for the R statistial programmming language.
+It is available for all platforms.
+Its GUi resemble a webbrowser window but it does not run in the webbrower like JupyterLab and Jptyer Notebook.
+There is community version and a professional version.
+The latter version can interface with Jupyter Notebooks.
+The Rstudio Pro Server is available at some academic institutions.
+
+RStudio supports Rnotebooks written in Rmarkdown.
+Rmarkdown supports literate programming.
+R and its predessor S have been used for literate programming for over two decades via Sweave, Rweave, and Knitr packages.
+Many books have been assembled using Knitr.
+
+There are several recent books about literate programming in R.
+
+
+R also supports polyglot programming. 
+<!-- R has been been extended to accommodate over twentry programming languatg**;** -->
+R has a package called *reticulate* that enbles the running of Python inside of R and Rmarkdown.
+
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
+
+
+
+
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
 Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of emacs.
 Its command leader is the spacebar hence the word *space* in the name.
@@ -1261,6 +1378,7 @@ The free trial period is infinite.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+	
 
 <details>
 <summary><b>Installing and using snippets with Sublime Text 3</b></summary>
@@ -1307,11 +1425,11 @@ You may need to install a snippet manager package and add an autocompletion pack
 It is a mature project with occasional updates.
 There is a large library of plugins available.
 
-The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide  supplemental reading to the on-line documentation.
+The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide supplemental reading to the on-line documentation.
 
 *TextMate* was a pioneer application in the development of snippet libraries.
-*TextMate's* approach to snippets has served as a role model for other editors.
-*TextMate* snippets can be ported to *Sublime Text 3*.
+*TextMate's* approach to snippets has served as a role model for other text editors.
+*TextMate* snippets can be ported to *Sublime Text 3* and *PyCharm*.
 Chapter 6 in the book by Gray provides a good overview of the features of snippets in *Textmate*.
 
 <details>
@@ -1345,9 +1463,10 @@ This editor can be used to view and change the code in the snippets.
 	<img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger" />
 </p>
 
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
+
 
 <h3 name="vim">Vim (Universal)</h3>
 
@@ -1466,15 +1585,18 @@ call minpac#init()
 ```
 To add a plugin using minpac you will need to add this command `call minpac#add('author/reponame')` to your `.vimrc` file.
 
-For example, if you wanted to install snippets for *UltiSnips* you would add (this will not work at the moment):
-```.vimrcfile
+For example, if you wanted to install snippets for *UltiSnips* you would add (this will not work at the moment) to the *.vimrc* file:
+
+```vimfile
 call minpac#add('MooersLab/pml_bhmm.snippets')
 ```
 
 To allow minipac to update itself enter:
-```.vimrcfile
+
+```vimfile
 call minpac#add('k-takata/minpac',{'type':'opt'})
 ```
+
 Then refresh *Vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
 You will not be able to use these plugins until you exit and restart *vim* by entering `:qa!` and then opening another *vim* session.
 
@@ -1482,7 +1604,8 @@ You will not be able to use these plugins until you exit and restart *vim* by en
 
 <h4 name="neosnippets">Neosnippets(for Vim, universal) </h4>
 	
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*. *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
+*Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
 The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
 *Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
@@ -1498,6 +1621,8 @@ You have to enable the Python3 interface with pynvim which you can install with 
 ```bash
 $ pip3 install --user pynvim
 ```
+
+To be more precise, you can provide the full path to the Python interpreter used by Noevim and import pip as a module between installing pynvim.
 
 ```bash
 $ sudo -H /opt/local/bin/python3.7 -m pip install pynvim
@@ -1600,7 +1725,7 @@ It does not depend on Python.
 <summary><b>Installing and using snippets with SnipMate</b></summary>
 
 To install SnipMate, add the following to your `.vimrc` file:
-```.vimrc file
+```vim
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -1608,7 +1733,9 @@ Plugin 'garbas/vim-snipmate'
 " Optional:
 Plugin 'honza/vim-snippets'
 ```
+
 Then run the following command in vim:
+
 ```vim
 :PluginInstall
 ```
@@ -1830,6 +1957,23 @@ This package is installed with a builtin package manager.
 
 Each snippet is stored in a single file. 
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+<h3 name="wing">Wing (Universal)</h3>
+	
+[Wing]() is a commercail IDE focused on Python.
+It is available for all platforms.
+
+Wing is available to academics through a special license.
+A free 30-day trial is available.
+
+Wing supports snippets.
+Wing has a snippet editor that eases the creation of new snippets.
+
+Wing comes with GUI driven installers.
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
