@@ -136,6 +136,7 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
+  * <a href="#nteract"> Nteract Notebook </a>
   * <a href="#PyCharm"> PyCharm (Universal)</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
@@ -1086,6 +1087,31 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 </details>
 
 
+<h3 name=="nteract"> Nteract Notebook </a>
+
+**nteract** is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
+We highly recommned **nteract** for beginning uses of Jupyer Notebooks.
+It is a stand alone applicaton that does not use the webbrowser to view and edit Jupyter Notebooks.
+Nteract can be set as the defualt application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
+This feature is a big plus because it enables the rapid inspection of notebooks.
+The independence of nteract from the web makes it more secure.
+
+There is drop down menu for access to the installed kernels.
+ 
+The IPython magics are available.
+The clippings snippet library can be loaded by using the **%%load** magic as described for the Jupyter Notebook above.
+
+<p align="center">
+	<img src="images/InteractNoteobok2.png" width="600">
+</p>
+
+There are a few limitations to nteract compared to running Jupyter Notebook in the webbrower.
+There are no notebook extensions.
+The markdown cells recognize a smaller subset of LaTeX.
+For example, the equation environment is not recognized.
+This limits the code that can be used to handle multi-line equations. 
+
+
 <h3 name="PyCharm">PyCharm </h3>
 
 PyCharm IDE [PyCharm](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
@@ -1115,7 +1141,7 @@ PyCharm comes with such features already installed.
 PyCharm leans more towards the plug-and-play end of the spectrum, so beginners in academia should consider using it.
 
 For example, I wrote the first draft of this text in markdown on PyCharm as a *scratch file*.
-The markdown file opened with a parallel window with the markdown previewer.
+The markdown file opened with a parallel window with a markdown previewer.
 I did not have to install a markdown previewer plugin, as I did with other text editors.
 Why would you want to write in markdown without a previewer?
 
@@ -1123,7 +1149,10 @@ PyCharm's startup time is slower than Textmate, Sublime Text, and VSC; similar t
 Some people contend with slow startup time by keepig the application open all of the time.
 
 The main competitor for Pycharm is the open source project Spyder.
-Spyder's current production  release does not support code snippets.
+Spyder's current production release does not directly support code snippets; however,
+you can edit and run jupyter notebooks inside Spyder. 
+While doing so, you can access the snippet library for PyMOL.
+See the section on Spyder.
 
 In the IDE PyCharm, the snippets are called *live templates*.
 A concise introduction can be found [here](http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html).
