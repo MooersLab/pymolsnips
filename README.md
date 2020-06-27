@@ -1090,26 +1090,37 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 <h3 name="nteract"> Nteract Notebook </h3>
 
 [nteract](https://nteract.io/) is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
-We highly recommned **nteract** for beginning uses of Jupyer Notebooks.
-It is a stand alone applicaton that does not use the webbrowser to view and edit Jupyter Notebooks.
-Nteract can be set as the defualt application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
-This feature is a big plus because it enables the rapid inspection of notebooks.
-The independence of nteract from the web makes it more secure.
+We highly recommned **nteract** for beginning users of Jupyer Notebooks.
+**nteract** is a stand-alone applicaton that does not use the webbrowser to view and edit Jupyter Notebooks.
+The independence of **nteract** from the web makes it more secure.
 
-There is drop down menu for access to the installed kernels.
- 
+**nteract** can be set as the defualt application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
+This feature is a big plus because it enables the rapid inspection of notebooks.
+
+**nteract** has drop down menu for access to the installed kernels.
+The kernels are installed for a particular python interpreter as described under the Jupyter Notebook above.
+Breifly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
+
+```bash
+/Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
+/Applications/PyMOL.app/Contents/bin/python -m ipykernel install
+```
+
 The IPython magics are available.
 The clippings snippet library can be loaded by using the **%%load** magic as described for the Jupyter Notebook above.
+A set of keyboard shortcuts are also available.
 
 <p align="center">
 	<img src="images/InteractNotebook2.png" width="600">
 </p>
 
-There are a few limitations to nteract compared to running Jupyter Notebook in the webbrower.
+There are several major limitations to nteract compared to running Jupyter Notebook in the webbrower.
 There are no notebook extensions.
 The markdown cells recognize a smaller subset of LaTeX.
 For example, the equation environment is not recognized.
-This limits the code that can be used to handle multi-line equations. 
+This limits the optional code that can be used to render multi-line equations.
+
+While the support for full-fledge literate programming is absent in **nteract**, even experienced Jupyter Notebook will enjoy using **nteract** for rapidly interogating foriegn notebooks and starting new notebooks.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
