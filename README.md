@@ -1414,9 +1414,7 @@ It can be faster to open a notebook in this fashion that via a webbrowser.
 
 The menu bar can include customized menus that can include pulldown access to collections of code snippets (see below).
 The toolbar can include access to the functionality of various notebook extensions. 
-
-
-
+[Source)(https://jupyter-notebook.readthedocs.io/en/stable/).
 
 <p align="center">
 	<img src="images/NotebookHeading.png" width="600">
@@ -1425,11 +1423,7 @@ The toolbar can include access to the functionality of various notebook extensio
 
 
 In contrast, PyCharm only imports the cells.
-
-
-
-
-The snippets in Jupyter Notebooks are accessible to the code cells in the Jupyter Noteboke
+The snippets from the notebook extension in Jupyter Notebooks are accessible to the code cells in the Jupyter Notebok in spyder.
 
 The spyder-notebook plugin can be installed with conda if you are using the spyder from anaconda. 
 
@@ -1444,16 +1438,24 @@ The plugin can alternately be installed using the desired Python interpretar (e.
 /opt/local/bin/python3.8 -m pip install spyder-notebook
 ```
 
-Note that in this case, PyMOL was installed with  macports so that it had full access to all other modules installed for macports 3.8.
-PyMOL was installed with the following commands:
-
+Note that in this case, PyMOL was installed with  macports  Python3.8 to ease accessing pymol from the Jupyter Notebook.
+The notebook also had full access to all other modules installed for macports Python3.8.
+PyMOL was installed with the following command. 
 
 ```bash
-sudo port install pymol @38
+sudo port install pymol -python38
 ```
 
+On June 25, 2020, this command installed pymol version 2.4.0.
 
 
+The panes can the rearranged as you wish.
+In the image below, a Jupyter Notebook was opened in the pane at the bottom of the GUI. 
+This image shows the three default spyder panes opened at the top.
+
+<p align="center">
+	<img src="imagesPyMOLInSpyder.png" width="600">
+</p>
 
 
 
