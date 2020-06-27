@@ -171,8 +171,8 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
-  * <a href="#Wing"> Wing </a>
-	* <a href="#zeppelin"> Zeppelin </a>
+  * <a href="#wings"> Wings </a>
+  * <a href="#zeppelin"> Zeppelin </a>
 
 
 
@@ -1333,7 +1333,7 @@ These cells are rendered and displayed with the interleaved output in a notebook
 
 <h3 name="rstudio">Rstudio (Universal)</h3>
 	
-[RStudio]() is an IDE for the R statistial programmming language.
+[RStudio](https://rstudio.com/products/rstudio/) is an IDE for the R statistial programmming language.
 It is available for all platforms.
 Its GUi resemble a webbrowser window but it does not run in the webbrower like JupyterLab and Jptyer Notebook.
 There is community version and a professional version.
@@ -1347,7 +1347,6 @@ Many books have been assembled using Knitr.
 
 There are several recent books about literate programming in R.
 
-
 R also supports polyglot programming. 
 R has been been extended to accommodate over twentry programming languages.
 There is a recent book about such extensions:
@@ -1355,14 +1354,7 @@ There is a recent book about such extensions:
 
 R has a package called *reticulate* that enbles the running of Python inside of R and Rmarkdown.
 
-
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
-
-
 
 
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
@@ -1610,7 +1602,7 @@ cd ~/.vim/pack/minpac/opt
 git clone https://github.com/k-takata/minpac.git
 ```
 Then, add the following to your `.vimrc` file and write the file `:w`:
-```vimfile
+```vim
 packadd minpac
 call minpac#init()
 ```
@@ -1618,13 +1610,13 @@ To add a plugin using minpac you will need to add this command `call minpac#add(
 
 For example, if you wanted to install snippets for *UltiSnips* you would add (this will not work at the moment) to the *.vimrc* file:
 
-```vimfile
+```vim
 call minpac#add('MooersLab/pml_bhmm.snippets')
 ```
 
 To allow minipac to update itself enter:
 
-```vimfile
+```vim
 call minpac#add('k-takata/minpac',{'type':'opt'})
 ```
 
@@ -1976,6 +1968,23 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
+
+<h3 name="wings">Wings</h3>
+	
+[Wing]() is a commercail IDE focused on Python.
+It is available for all platforms.
+
+Wing is available to academics through a special license.
+A free 30-day trial is available.
+
+Wing supports snippets.
+Wing has a snippet editor that eases the creation of new snippets.
+
+Wing comes with GUI driven installers.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 <h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
 	
 Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
@@ -1992,19 +2001,9 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3 name="wing">Wing (Universal)</h3>
+<h3 name="zepplin">Zepplin (universal) </h3>
 	
-[Wing]() is a commercail IDE focused on Python.
-It is available for all platforms.
-
-Wing is available to academics through a special license.
-A free 30-day trial is available.
-
-Wing supports snippets.
-Wing has a snippet editor that eases the creation of new snippets.
-
-Wing comes with GUI driven installers.
-
+[Zepplin](https://zeppelin.apache.org) is an new IDE developed by Apache. 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
