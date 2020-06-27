@@ -20,7 +20,20 @@ One solution to this problem is to use a library of code fragments, called "snip
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
 
-**pymolsnips** is a library of pml code fragments that have been formatted for several popular text editors.
+**pymolsnips** is a library of pml code fragments that have been formatted for several popular text editors, integrated development environments (IDEs), and electronic notebooks.
+Note the wordprocessors are not included here: MS Word should never be used to handle the computer code.
+Text editors have tools for supporting the editing of comptuer code files that have many different file extensions but that are all plain assci text files.
+One of those tools is support for the retrieval and insertion of computer code fragments to save time and reduce errors while assembling a new script file.
+Text editor generally fire up with one main pane in the GUI, although extra one can be opened.
+IDEs are text editors plut extra features for debugging and testing comptuer code.
+They are generally recommended for programmer working with large code bases that divded across many files.
+IDEs generally open with three or four panes visible.
+The boundary between text editors and IDEs is blurry because some text editors support code testing.
+Because of space constraints, IDEs are best used on a large monintor screen.
+Electronic notebooks such as Jupyter Notebook and Rnotebook can be edited and run on their own or from inside the more advanced IDEs and some text editors.
+Below, we will use the term *text editor* as a collective term that refers to all three categories.
+
+
 Protocols for snippet installation for each text editor are found <a href="#install"> below</a>.
 Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file.
 Most editors have their own format for snippets.
@@ -1321,7 +1334,10 @@ There are several recent books about literate programming in R.
 
 
 R also supports polyglot programming. 
-<!-- R has been been extended to accommodate over twentry programming languatg**;** -->
+R has been been extended to accommodate over twentry programming languages.
+There is a recent book about such extensions:
+
+
 R has a package called *reticulate* that enbles the running of Python inside of R and Rmarkdown.
 
 
