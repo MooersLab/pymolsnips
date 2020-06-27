@@ -166,7 +166,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#PyCharm"> PyCharm (Universal)</a>
       * <a href="#rstudio"> Rstudior</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
-    * <a href="#spyder"> Sypder</a>
+  * <a href="#spyder"> Sypder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
@@ -302,9 +302,11 @@ The plugin Hydrogen enables the running of Juptyer Notebooks insdie of Atom.
 	  <img src="gifs/AtomSnipsUse.gif">
 </p>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<A href=#FASTLINKS2 >Return to list of editors above.</A>
 </details>	
- 
+
+
+
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
@@ -347,7 +349,7 @@ However, *Brackets* now has support for a large number of languages.
 The zig-zag line launches Live Preview.
 The lego piece launches the extension manager.
 Once you install an exentsion, a light bulb icon will appear which launches the **Snippets Manager**.
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
 	
@@ -388,8 +390,9 @@ This is helpful when you cannot remember the short-hand for a snippet.
 
 Unfortunately, *Brackets* does not currently suppoort tab stops.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 <h3 name="cudatext"> CudaText (Universal) </h3>
 
