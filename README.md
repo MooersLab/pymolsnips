@@ -1327,7 +1327,6 @@ These cells are rendered and displayed with the interleaved output in a notebook
 	<img src="images/covid19SpikeProteinD614.png" width="600">
 </p>
 
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -1391,6 +1390,74 @@ Spacemacs may be more attractive to vi users rather than vim users who cannot pa
 </details>
 
 
+
+
+<h3 name="spyder">Spyder (Universal)</h3>
+
+Spyder is an open source IDE for Python.
+Spyder is distributed with the Anaconda Navigator which eases its installation.
+The current production version is in the 4.X series.
+
+The current and development versions of **sypder** can be installed on the Mac OS with macports.
+This 
+
+```bash
+sudo port install py38-spyder-devel
+```
+
+Spyder does not support snippets.
+However, the Jupyter Notebook can be run and edited in Sypder after installing the spyder-notebook plugin.
+This plugin imports a full instance of the notebook with the menu bar, toolbar, and code cells.
+It can be faster to open a notebook in this fashion that via a webbrowser.
+
+
+
+The menu bar can include customized menus that can include pulldown access to collections of code snippets (see below).
+The toolbar can include access to the functionality of various notebook extensions. 
+
+
+
+
+<p align="center">
+	<img src="images/NotebookHeading.png" width="600">
+</p>
+
+
+
+In contrast, PyCharm only imports the cells.
+
+
+
+
+The snippets in Jupyter Notebooks are accessible to the code cells in the Jupyter Noteboke
+
+The spyder-notebook plugin can be installed with conda if you are using the spyder from anaconda. 
+
+```bash
+conda install -c conda-forge spyder-notebook 
+```
+
+
+The plugin can alternately be installed using the desired Python interpretar (e.g., Python3.8 from macports) and pip:
+
+```bash
+/opt/local/bin/python3.8 -m pip install spyder-notebook
+```
+
+Note that in this case, PyMOL was installed with  macports so that it had full access to all other modules installed for macports 3.8.
+PyMOL was installed with the following commands:
+
+
+```bash
+sudo port install pymol @38
+```
+
+
+
+
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
