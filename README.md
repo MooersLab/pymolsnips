@@ -164,7 +164,8 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
   * <a href="#nteract"> Nteract Notebook </a>
   * <a href="#PyCharm"> PyCharm (Universal)</a>
-  * <a href="#rstudio"> Rstudior</a>
+  * <a href="#PyDev"> PyDev (Universal)</a>
+  * <a href="#rstudio"> RStudio</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
   * <a href="#spyder"> Sypder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
@@ -172,7 +173,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
   * <a href="#wings"> Wings </a>
-  * <a href="#zeppelin"> Zeppelin </a>
+
 
 
 
@@ -214,12 +215,14 @@ Support is planned for the following editors:
   - [Editra](http://www.editra.org://www.editra.org)
   - [JED](http://jedmodes.sourceforge.net)
   - [jEdit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
+  - [Howl](https://howl.io/getit.html)
+  - [Kakoune](http://kakoune.org)
   - [Notepad++](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
-  - [Oni 2](https://www.onivim.io/oin2)
-  - [Textadept](https://foicica.com/textadept)
-  - [Eclipse](https://github.com/eclipse-color-theme/eclipse-color-themehttps://www.eclipse.org/downloads://www.eclipse.org/downloads/)
+  - [Oni 2](https://www.onivim.io/)
+  - [Pydev]()
   - [SciTE](https://scintilla.org/SciTE.html)
-
+  - [Textadept](https://foicica.com/textadept)
+    * <a href="#zeppelin"> Zeppelin </a>
 Note that we wanted to support the Rodeo IDE, which is like Rstudio for Python.
 However, its developer, Yhat, has abandoned this project. 
 It seem is a waste of time to invest in abandoned software when so many excellent alternatives are available. 
@@ -1366,23 +1369,30 @@ As a result, it should be treated as a separate editor from *emacs* and *Vim*.
 
 Spacemacs has its own set of mnemonic commands that you need to master.
 In other words, you will use vim, emacs, and spacemacs commands in one editor.
-It might be less intimidating if you have some of the basics of vim and emacs mastered.
+It might be less intimidating if you have masterd some of the basics of vim and emacs.
 Spacemacs does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <details>
-<summary><b>Installing and using snippets with Light Table</b></summary>
+<summary><b>Installing and using snippets with spacemacs </b></summary>
 
-Spacemacs comes with the package yasnippets, which is the engine for managing snippets.
-You have to edit the *.spacemacs* file to make yasnippets available for use.
+Spacemacs comes with the package yasnippets installed, which is the engine for managing snippets.
 Spacemacs use a layer concept to build up a specific configuration.
 The layers are managed by editing the *.spacemacs* file.
+A few suggested layeres are listed under `dotspacemacs-configuration-layers`.
+Most of them are initially commented out with two semicolons on the left.
+
+Add yasnippet-snippets s is one of the defualt layers that are listed but are commened out with two semicolons on the left.
+Remove the two semicolons.
+Take care to use spaces and not a tab to indent yasnippet.
+
 The snippets are installed by the *yasnippets-snippets* package.
 You can use the following command in spacemacs to install this package.
 
 ```emacs
-M-x package-install
+M-x package-install RETURM
+yasnippet
 ```
 
 Spacemacs may be more attractive to vi users rather than vim users who cannot part with their configuration in *Vim*.
