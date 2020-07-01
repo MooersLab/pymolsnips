@@ -405,7 +405,6 @@ Its predecessor was *SynWrite*, which is no longer supported.
 A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons manger (thank you Alexey T.!).
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 <details>
 <summary><b>Installing and using snippets with Cudatext</b></summary>
 	
@@ -454,8 +453,147 @@ Below you can see how to edit one mirror location and travel through other mirro
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
 </p>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
+<h3 name="emacs"> Emacs (universal) </h3>
+
+[*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in emacs lisp (elisp), a variant of LISP.
+LISP was developed in the early 1960s to support work on artificial intelligence.
+Emacs has been around for 40 years. 
+According to the Lindy principle, it should be around for another 40 years.
+Here we are referring to GNU emacs. 
+
+Emacs is highly extensible and customizable with over 4600 pacakge available.
+The [melpa](https://melpa.org) package manager greatly eases package installation.
+
+The inteface to Emacs is a simple GUI that can be made complex by opening many *buffers*, which are like windows.
+The management and navigation of buffers is a skill that the beginner needs to master early.
+
+Emacs is desigined to enable mouse free work although some buffers require that selections be made by using the mouse.
+Emacs is infamous for having 1800 key bindings involving heavy use of the alt or meta key.
+You only really need to memorize several dozen to be productive.
+
+Vim key bindings are more efficient for editing text.
+The evil-mode in emacs enables the use of vim bindings inside of emacs.
+If this interests you, you might also consider spacemacs.
+
+Mode are states of emacs where a subset of commands are avaialable.
+Modes avoids clashes due to functions of the same name in different packages.
+
+The .emacs.d directory is a hidden directory in the home directory.
+It is the home of the installed packages and plugins. 
+The main configuration file called *init.el* resides here.
+The *init.el* file is analog of vim's *vimrc* file.
+The commands in the *init.el* file written in elisp, but it is relatively easy to edit and augment without mastering elisp.
+
+
+<details>
+<summary><b>Installing emacs</b></summary>
+The package yasnippets is one the popular packages in emacs for managing snippets.
+
+
+
+</details>
+
+
+<details>
+<summary><b>Installing and using snippets with emacs</b></summary>
+The package yasnippets is one the popular packages in emacs for managing snippets.
+
+
+
+</details>
+
+
+<details>
+<summary><b>Support Jupyter Notebook running and editing</b></summary>
+
+### EIN: emacs ipython notebook
+
+The oldest package for this purpose [EIN](), emacs ipython notebook.
+It was started shortly after the Ipython Notebook became available in 2012.
+It was evolved to keep up with changes in the notebook.
+It cannot provide access to the widgets nor the notebook extensions.
+You will have to use the yasnippet library to access the PyMOL snippets.
+
+```emacs
+M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
+M-x p-ins RET ein RET
+```
+
+In the minibuffer at the bottom of the GUI, enter the ```M-x ein:notebooklist-login``` to start up a Jupyter server.
+Alternativerly, enter the shorthand with ```M-x ein:n-l RET```.
+
+You will be asked to enter the port for the server.
+Enter `8888` to use the local server.
+You will probably have to enter a password for the Jupyter server.
+You can disable this requirement in a Jupyter configuration file.
+
+You will be asked to select a kernel from a list of kernals with checkboxes.
+Use the left mouse button to select a kernel.
+
+You can create a new notebook or open an existng notebook.
+
+
+### emacs-jupyter
+
+The [emacs-jupyter](https://github.com/dzop/emacs-jupyter) project is newer.
+it is an ''... interface to communicate with Jupyter kernels in Emacs''. 
+It is different from *ein* in that it promises to interact with Jupyter widgets.
+
+```emacs
+M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
+M-x p-ins RET jupyter RET
+```
+
+
+### ob-ipython
+
+The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by enabling the embedding of results from Jupyter Kernels.
+It is being developed by Greg Sexton who was a long-time user of EIN.
+
+Org-mode is a large suite of packages that support literate programming in emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.  
+You will have to master org-mode on top of mastering emacs to take advantage of this pacakge.
+Scimax uses ob-ipython.
+
+```emacs
+M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
+M-x p-ins RET jupyter RET
+```
+
+
+</details>
+
+
+
+
+<details>
+<summary><b>Variants of emacs to consider</b></summary>
+
+[Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU emacs.
+It is designed to be easier to use than emacs.
+It can be operated with vim, emacs, or a hybrid of key bindings.
+You enalbe layers to extend its functionality.
+It can edit Jupyter Notebooks via the ipython-layer.
+
+
+[SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
+This variant of emacs is being optimized for supporting the preparation of scientific manuscripts.
+Several YouTube videos of John talking about SciMax are available.
+This editor is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
+</details>
+
+
+
+
+
+
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 <h3 name="espresso"> Espresso (Mac only) </h3>
 	
