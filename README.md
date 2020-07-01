@@ -509,7 +509,7 @@ The package yasnippets is one the popular packages in emacs for managing snippet
 
 
 <details>
-<summary><b>Support Jupyter Notebook running and editing</b></summary>
+<summary><b>Support for running and editing Jupyter in emacs </b></summary>
 
 ### EIN: emacs ipython notebook
 
@@ -552,17 +552,87 @@ M-x p-ins RET jupyter RET
 
 ### ob-ipython
 
-The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by enabling the embedding of results from Jupyter Kernels.
-It is being developed by Greg Sexton who was a long-time user of EIN.
+[Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of emacs.
+The document's file extension is `org`.
+Org-mode has many features that support planning and organizing hence that the `org` file extension.
+It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
+The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by sending Python code to a Jupyter kernel and enabling the embedding of the results from Jupyter Kernels below the code block
+Org-mode is more similar to the R Notebook than Juptyer Notebook..
 
-Org-mode is a large suite of packages that support literate programming in emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.  
+
+It is being developed by Greg Sexton who was a long-time user of EIN.
+It can run the R kernel for Jupyter Notebooks as well as kernels for other languages.
+
+Org-mode is a large suite of packages (100s) that support literate programming in emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.  
 You will have to master org-mode on top of mastering emacs to take advantage of this pacakge.
-Scimax uses ob-ipython.
+You may need need to install org-babel. 
+Scimax also uses ob-ipython.
 
 ```emacs
 M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
-M-x p-ins RET jupyter RET
+M-x p-ins RET ob-ipython RET
 ```
+
+You may need to modify your .emacs or .emacs.d/init.el file by adding the following lines:
+
+```emacs
+;; Org-mode related settigs
+(setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+;;; display/update images in the buffer after I evaluate
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ipython . t)
+   ;; other languages..
+   ))
+```
+
+The line starting with `;;` is a commnet line.
+Edit the file path in the second line to point to the Python interpreter that you what to use.
+The Python interpreter that I selected had PyMOL 2.4.0 installed earlier.
+The third line turns off an annoying prompt.
+The fifth line updates images.
+
+The followng corrected org-mode code that will generate the imaage below. 
+
+```emacs
+My Test of ob-ipython -*- mode: org -*-
+
+#+BEGIN_SRC ipython :session :exports both :results raw drawer
+from pymol import cmd
+cmd.do("reinitialize")
+cmd.bg_color("white")
+cmd.do("fetch 6VXX")
+cmd.do("zoom (resi 614 and chain A)")
+cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")
+cmd.do("set label_color, black; set label_size, 48")
+cmd.do("set stick_radius, 0.12")
+cmd.do("hide cartoon; show sticks")
+cmd.do("set ray_shadows, 0")
+cmd.do("draw")
+cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")
+
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
+#+END_SRC
+```
+
+
+
+The first line above is required to tell emacs that that this is an org-mode document. 
+The title can be edited but the `-*- mode: org -*-` must remain unchanged. 
+A snapshot of the org-mode document is shown below after the code block was run.
+The code is run by entering `C-c C-c` where the uppercase C represents the CNTRL key and the lowercase C frepresent the `C` key.
+The file is saved by entering `C-x C-s` where the uppercase C represents the CNTRL key and the lowercase represent the `C` key.
+![Emacs gui with an org-mode docment after running PyMOL from emacs.](images/PyMOLinOrgMode.png)
+
+Note that the bg_color command as coded as a setting.
+An error message was written to a log file that appears in a second buffer below the large window. 
+The code block above has been corrected.
 
 
 </details>
