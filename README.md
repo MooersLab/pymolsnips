@@ -296,16 +296,22 @@ Below is an example of the *threeMaps* snippet use with mirrored tab stops.
 
 
 <details>
-<summary><b>Running a PyMOL insdie a jupuyter notebook inside of Atom via the plugin Hydrogen</b></summary>
+<summary><b>Running a PyMOL inside a jupyter notebook running inside of Atom via the plugin Hydrogen</b></summary>
 
-The plugin Hydrogen enables the running of Juptyer Notebooks insdie of Atom.
+The plugin Hydrogen enables the running of Juptyer Notebooks inside of Atom.
+
+
+# I need to replace this gif.
 
 <p align="center">
 	  <img src="gifs/AtomSnipsUse.gif">
 </p>
 
-<A href=#FASTLINKS2 >Return to list of editors above.</A>
+
 </details>	
+<A href=#FASTLINKS2 >Return to list of editors above.</A>
+
+
 
 
 
@@ -682,10 +688,14 @@ Binaries are  available for Mac OS, Linux, and Windows.
 The source code is also available.
 *Geany* has a plugin manager, and it is very easy to configure.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
 <details>
 <summary><b>Installing and using snippets with Geany</b></summary>
+This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system. https://www.geany.org/download/releases/
+</details>
+
+
+<details>
+<summary><b>Installing snippet library in Geany</b></summary>
 	
 Make sure that the `.pml` filetype is defined as `#~ PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
 You will also need to add PyMOL as a group in that same file configuration.  
@@ -704,8 +714,13 @@ The snippets for all languages are stored in groups in single file `~/.config/ge
 The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor.
 
 Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
-Make sure that there is only one section with the heading `[pymol]`. This heading is case sensitive.
+Make sure that there is only one section with the heading `[pymol]`. 
+This heading is case sensitive.
+</details>
 
+
+<details>
+<summary><b>Using the snippet library in Geany</b></summary>
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops.
 
@@ -716,8 +731,9 @@ Here is an example of the `ao` snippet being used in *geany*:
 
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 <h3 name="gedit"> gedit (Universal) </h3>
 
