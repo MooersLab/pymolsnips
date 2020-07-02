@@ -137,7 +137,11 @@ Hyperlinks will take you to a paricular category.
 
 
 <hr>
-<h2>  <A name="FASTLINKS2">Supported text editors:</A> </h2>
+<h2>  <A name="FASTLINKS2">Supported coding platforms:</A> </h2>
+
+PyMOL scripts can e coded in electornic notebook, integrated development environments, and text editors.
+All three types of coding platforms support the use of snippets to varying degrees. 
+
 
 Note that some text editors use the same library of snippets.
 For example, emacs and spacemacs can use the same snippet library that is managed by the yasnippets package.
@@ -163,6 +167,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#micro"> Micro </a>
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
   * <a href="#nteract"> Nteract Notebook </a>
+  * <a href="#orgmode"> org-mode </a>
   * <a href="#PyCharm"> PyCharm (Universal)</a>
   * <a href="#PyDev"> PyDev (Universal)</a>
   * <a href="#rstudio"> RStudio</a>
@@ -222,7 +227,8 @@ Support is planned for the following editors:
   - [Pydev]()
   - [SciTE](https://scintilla.org/SciTE.html)
   - [Textadept](https://foicica.com/textadept)
-    * <a href="#zeppelin"> Zeppelin </a>
+  - [Zeppelin](https://zeppelin.apache.org/)
+
 Note that we wanted to support the Rodeo IDE, which is like Rstudio for Python.
 However, its developer, Yhat, has abandoned this project. 
 It seem is a waste of time to invest in abandoned software when so many excellent alternatives are available. 
@@ -231,7 +237,7 @@ Note that some editors that are available as binaries only for Windows like *Not
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
 
-<h2> <A name="install">Installing and using snippets</A></h2>
+<h2> <A name="install">Installing and using snippets by coding platform</A></h2>
  
  
 <h3 name="atom" > Atom (Universal) </h3>
@@ -293,6 +299,7 @@ Below is an example of the *threeMaps* snippet use with mirrored tab stops.
 <p align="center">
 	  <img src="gifs/AtomSnipsUse.gif">
 </p>
+</details>
 
 
 <details>
@@ -555,91 +562,9 @@ M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
 M-x p-ins RET jupyter RET
 ```
 
-
 ### ob-ipython
 
-[Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of emacs.
-The document's file extension is `org`.
-Org-mode has many features that support planning and organizing hence that the `org` file extension.
-It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
-The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by sending Python code to a Jupyter kernel and enabling the embedding of the results from Jupyter Kernels below the code block
-Org-mode is more similar to the R Notebook than Juptyer Notebook..
-
-
-It is being developed by Greg Sexton who was a long-time user of EIN.
-It can run the R kernel for Jupyter Notebooks as well as kernels for other languages.
-
-Org-mode is a large suite of packages (100s) that support literate programming in emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.  
-You will have to master org-mode on top of mastering emacs to take advantage of this pacakge.
-You may need need to install org-babel. 
-Scimax also uses ob-ipython.
-
-```emacs
-M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
-M-x p-ins RET ob-ipython RET
-```
-
-You may need to modify your .emacs or .emacs.d/init.el file by adding the following lines:
-
-```emacs
-;; Org-mode related settigs
-(setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
-(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
-;;; display/update images in the buffer after I evaluate
-(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((ipython . t)
-   ;; other languages..
-   ))
-```
-
-The line starting with `;;` is a commnet line.
-Edit the file path in the second line to point to the Python interpreter that you what to use.
-The Python interpreter that I selected had PyMOL 2.4.0 installed earlier.
-The third line turns off an annoying prompt.
-The fifth line updates images.
-
-The followng corrected org-mode code that will generate the imaage below. 
-
-```emacs
-My Test of ob-ipython -*- mode: org -*-
-
-#+BEGIN_SRC ipython :session :exports both :results raw drawer
-from pymol import cmd
-cmd.do("reinitialize")
-cmd.bg_color("white")
-cmd.do("fetch 6VXX")
-cmd.do("zoom (resi 614 and chain A)")
-cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")
-cmd.do("set label_color, black; set label_size, 48")
-cmd.do("set stick_radius, 0.12")
-cmd.do("hide cartoon; show sticks")
-cmd.do("set ray_shadows, 0")
-cmd.do("draw")
-cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")
-
-from IPython.display import Image
-from IPython.core.display import HTML
-PATH = "/Users/blaine/"
-Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
-#+END_SRC
-```
-
-
-
-The first line above is required to tell emacs that that this is an org-mode document. 
-The title can be edited but the `-*- mode: org -*-` must remain unchanged. 
-A snapshot of the org-mode document is shown below after the code block was run.
-The code is run by entering `C-c C-c` where the uppercase C represents the CNTRL key and the lowercase C frepresent the `C` key.
-The file is saved by entering `C-x C-s` where the uppercase C represents the CNTRL key and the lowercase represent the `C` key.
-![Emacs gui with an org-mode docment after running PyMOL from emacs.](images/PyMOLinOrgMode.png)
-
-Note that the bg_color command as coded as a setting.
-An error message was written to a log file that appears in a second buffer below the large window. 
-The code block above has been corrected.
-
+See the section below on org-mode.
 
 </details>
 
@@ -649,6 +574,8 @@ The code block above has been corrected.
 <details>
 <summary><b>Variants of emacs to consider</b></summary>
 
+### Spacemacs
+
 [Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU emacs.
 It is designed to be easier to use than emacs.
 It can be operated with vim, emacs, or a hybrid of key bindings.
@@ -656,17 +583,13 @@ You enalbe layers to extend its functionality.
 It can edit Jupyter Notebooks via the ipython-layer.
 
 
+### SciMax
+
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of emacs is being optimized for supporting the preparation of scientific manuscripts.
 Several YouTube videos of John talking about SciMax are available.
 This editor is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
 </details>
-
-
-
-
-
-
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1466,6 +1389,98 @@ This limits the optional code that can be used to render multi-line equations.
 While the support for full-fledge literate programming is absent in **nteract**, even experienced Jupyter Notebook will enjoy using **nteract** for rapidly interogating foriegn notebooks and starting new notebooks.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
+<h3 name="orgmode">Org-mode </h3>
+
+[Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of emacs.
+The document's file extension is `org`.
+Org-mode has many features that support planning and organizing hence that the `org` file extension.
+It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
+The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by sending Python code to a Jupyter kernel and enabling the embedding of the results from Jupyter Kernels below the code block
+Org-mode is more similar to the R Notebook than Juptyer Notebook.
+We provide a version of the snippet library for org-mode the flanks the snippets with code that makes them into executable code blocks.
+
+
+It is being developed by Greg Sexton who was a long-time user of EIN.
+It can run the R kernel for Jupyter Notebooks as well as kernels for other languages.
+
+Org-mode is a large suite of packages (100s) that support literate programming in emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.  
+You will have to master org-mode on top of mastering emacs to take advantage of this pacakge.
+You may need need to install org-babel. 
+Scimax also uses ob-ipython.
+
+```emacs
+M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
+M-x p-ins RET ob-ipython RET
+```
+
+You may need to modify your .emacs or .emacs.d/init.el file by adding the following lines:
+
+```emacs
+;; Org-mode related settigs
+(setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+;;; display/update images in the buffer after I evaluate
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ipython . t)
+   ;; other languages..
+   ))
+```
+
+The line starting with `;;` is a commnet line.
+Edit the file path in the second line to point to the Python interpreter that you what to use.
+The Python interpreter that I selected had PyMOL 2.4.0 installed earlier.
+The third line turns off an annoying prompt.
+The fifth line updates images.
+
+The followng corrected org-mode code that will generate the imaage below. 
+
+```emacs
+My Test of ob-ipython -*- mode: org -*-
+
+#+BEGIN_SRC ipython :session :exports both :results raw drawer
+from pymol import cmd
+cmd.do("reinitialize")
+cmd.bg_color("white")
+cmd.do("fetch 6VXX")
+cmd.do("zoom (resi 614 and chain A)")
+cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")
+cmd.do("set label_color, black; set label_size, 48")
+cmd.do("set stick_radius, 0.12")
+cmd.do("hide cartoon; show sticks")
+cmd.do("set ray_shadows, 0")
+cmd.do("draw")
+cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")
+
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
+#+END_SRC
+```
+
+
+
+The first line above is required to tell emacs that that this is an org-mode document. 
+The title can be edited but the `-*- mode: org -*-` must remain unchanged. 
+A snapshot of the org-mode document is shown below after the code block was run.
+The code is run by entering `C-c C-c` where the uppercase C represents the CNTRL key and the lowercase C frepresent the `C` key.
+The file is saved by entering `C-x C-s` where the uppercase C represents the CNTRL key and the lowercase represent the `C` key.
+![Emacs gui with an org-mode docment after running PyMOL from emacs.](images/PyMOLinOrgMode.png)
+
+Note that the bg_color command as coded as a setting.
+An error message was written to a log file that appears in a second buffer below the large window. 
+The code block above has been corrected.
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
 
 
 <h3 name="PyCharm">PyCharm </h3>
