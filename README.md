@@ -880,11 +880,18 @@ The kernel.json file for the Python interpreter inside the PyMOL.app on the Mac 
 ```
 
 The addition of kernels for non-python programs requires different protocols than the one given above.
-
+</details>
 
 
 <details>
 <summary><b>Documentation about using JupyterLab</b></summary>
+
+### Documentation about using JupyterLab<
+</details>
+
+
+
+
 
 <details>
 <summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
@@ -927,6 +934,8 @@ The GitHub page has the current information about installation trouble shooting.
 
 You should beware that the upgrading of *JupyterLab* in the future could lead to the breaking of your various *JupyterLab*extensions. 
 It may be best to delay the *JupyterLab* upgrade until the extensions have been upgraded. 
+</details>
+
 
 <details>
 <summary><b>Documentation about using JupyterLab</b></summary>
@@ -966,8 +975,7 @@ As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter
 The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the COVID19 pandemic.
 </details>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
+
 
 
 <h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
@@ -995,7 +1003,10 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 
 <p align="center">
         <img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
-    </p>
+</p>
+
+</details>
+
 
 
 <details>
@@ -1065,6 +1076,8 @@ ipv.extend("rv", rv)
 
 </details>
 
+
+
 <details>
 <summary><b>Making a pymol.python kernel for JupyterLab and Jupyter Notebook</b></summary>
 
@@ -1089,6 +1102,8 @@ If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
 ```
 </details>
 
+
+
 <details>
 <summary><b>Installing and using snippets with the snippet notebook extensions</b></summary>
 	
@@ -1107,6 +1122,8 @@ In addition, the notebook can be used to document the cells of code with interwe
 The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
 The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
 </details>
+
+
 
 
 <details>
@@ -1165,6 +1182,8 @@ May have to create the directory MySnippets on MacOS.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
+
+
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 	
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
@@ -1204,8 +1223,10 @@ A pop-up menu displays the option to insert a snippet. -->
 There are tab stops and highlighted default parameter values.
 However, there is no mirroring of tab stops at this time.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 <h3 name="LightTable"> Light Table (Universal) </h3>
 	
@@ -1281,6 +1302,8 @@ and then save your script file with the `.pml` file extension.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
+
 
 
 <h3 name="micro"> Micro (Universal) </h3>
@@ -1403,6 +1426,9 @@ Org-mode is more similar to the R Notebook than Juptyer Notebook.
 We provide a version of the snippet library for org-mode the flanks the snippets with code that makes them into executable code blocks.
 
 
+<details>
+<summary><b>Installing and running ob-ipython </b></summary>
+
 It is being developed by Greg Sexton who was a long-time user of EIN.
 It can run the R kernel for Jupyter Notebooks as well as kernels for other languages.
 
@@ -1465,7 +1491,6 @@ Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
 ```
 
 
-
 The first line above is required to tell emacs that that this is an org-mode document. 
 The title can be edited but the `-*- mode: org -*-` must remain unchanged. 
 A snapshot of the org-mode document is shown below after the code block was run.
@@ -1477,6 +1502,7 @@ Note that the bg_color command as coded as a setting.
 An error message was written to a log file that appears in a second buffer below the large window. 
 The code block above has been corrected.
 
+</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -1500,6 +1526,10 @@ This last feature has been spreading across text editors like wildfire due to th
 The PyCharm IDE is available in a Professional and a Community Edition.
 The Professional Edition is available for free to academics working on open-source projects.
 The software is issued with a license that expires after one year.
+
+
+<details>
+<summary><b>Installing and running PyCharm</b></summary>
 
 The software can be installed on multiple devices.
 It can be downloaded with platform specific installers that make the installation easy and uneventful.
@@ -1571,10 +1601,11 @@ These cells are rendered and displayed with the interleaved output in a notebook
 	<img src="images/covid19SpikeProteinD614.png" width="600">
 </p>
 
+</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3 name="rstudio">Rstudio (Universal)</h3>
+<h3 name="rstudio">RStudio (Universal)</h3>
 	
 [RStudio](https://rstudio.com/products/rstudio/) is an IDE for the R statistial programmming language.
 It is available for all platforms.
@@ -1595,9 +1626,15 @@ R has been been extended to accommodate over twentry programming languages.
 There is a recent book about such extensions:
 
 
+<details>
+<summary><b>Installing and running RStudio</b></summary>
+
 R has a package called *reticulate* that enbles the running of Python inside of R and Rmarkdown.
 
+</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
@@ -1610,8 +1647,11 @@ Spacemacs has its own set of mnemonic commands that you need to master.
 In other words, you will use vim, emacs, and spacemacs commands in one editor.
 It might be less intimidating if you have masterd some of the basics of vim and emacs.
 Spacemacs does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
-
+</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
 
 <details>
 <summary><b>Installing and using snippets with spacemacs </b></summary>
@@ -1636,10 +1676,8 @@ yasnippet
 
 Spacemacs may be more attractive to vi users rather than vim users who cannot part with their configuration in *Vim*.
 
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
-
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 
@@ -1648,6 +1686,10 @@ Spacemacs may be more attractive to vi users rather than vim users who cannot pa
 Spyder is an open source IDE for Python.
 Spyder is distributed with the Anaconda Navigator which eases its installation.
 The current production version is in the 4.X series.
+
+
+<details>
+<summary><b>Installing and using snippets with Spyder</b></summary>
 
 The current and development versions of **sypder** can be installed on the Mac OS with macports.
 This 
@@ -1708,9 +1750,11 @@ This image shows the three default spyder panes opened at the top.
 	<img src="imagesPyMOLInSpyder.png" width="600">
 </p>
 
-
-
+</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
 
 
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
@@ -1759,8 +1803,12 @@ Notice how when I type *sugar* all instances of glycan are replaced with sugar.
 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+
+
 
 <h3 name="TextMate">TextMate (Mac only)</h3>
 	
@@ -1903,14 +1951,18 @@ Now open Vim and run the following command:
 :PluginInstall
 ```
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
+<details>
+<summary><b>Minpac</b></summary>
 
 Minpac is also a plugin manager for installing and managing plugins in *Vim*.
 It requires *Vim* 8 or newer.
 Unfortunately, minpac does not update itself.
 Fortunately, there is a package you can add that will allow minpac to auto-update.
 This is discussed below in the minpac installation section.
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 <details>
 <summary><b>Installing minpac</b></summary>
@@ -1942,8 +1994,9 @@ call minpac#add('k-takata/minpac',{'type':'opt'})
 
 Then refresh *Vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
 You will not be able to use these plugins until you exit and restart *vim* by entering `:qa!` and then opening another *vim* session.
-
 </details>
+
+
 
 <h4 name="neosnippets">Neosnippets(for Vim, universal) </h4>
 	
@@ -2054,8 +2107,10 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 :inoremap <C-CR>  <Esc>
 ```
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 <h4 name="snipmate"> SnipMate (for vim, universal) </h4>
 
@@ -2086,6 +2141,8 @@ Then run the following command in vim:
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
+
+
 <h4 name="UltiSnips"> UltiSnips (for Vim, universal) </h4>
 	
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
@@ -2097,6 +2154,7 @@ The *honza/vim-snippets* plugin contains snippets for many languages.
 The pml.snippets file can be stored in a *my-snippets* subfolder of the hidden *.vim* directory as described below.
 
 *UltinSnips* can read *SnipMate* snippets.
+
 
 <details>
 <summary><b>Installing and using snippets with UltiSnips</b></summary>
@@ -2234,9 +2292,35 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 " another means of escape to normal mode: Control-Carriage Return
 :inoremap <C-CR>  <Esc>
 ```
+</details>
+
+
+### jupyter-vim
+
+[jupyter-vim]() is a vim plugin that runs the Jupyter Qt-console in a buffer (window) insie of vim.
+This gives the 
+
+<details>
+<summary><b>Installing and using snippets with UltiSnips</b></summary>
+
+
+
+
+
+/opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/jupyter-qtconsole
+
+
+
+
+</details>
+
+
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
+
+
+
 
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 	
