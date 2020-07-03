@@ -516,7 +516,18 @@ The package yasnippets is one the popular packages in emacs for managing snippet
 <summary><b>Installing and using snippets with emacs</b></summary>
 The package yasnippets is one the popular packages in emacs for managing snippets.
 
+<h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
+	
+Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
+*emacs* is a lifetime editor because it takes a lifetime to master it!
+There are several flavors of *emacs*.
+*Spacemacs* is a version that has a gentler learning curve.
 
+The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*.
+This package is installed with a builtin package manager.
+
+Each snippet is stored in a single file. 
+The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
 
 </details>
 
@@ -2375,7 +2386,7 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 
 <h3 name="wings">Wings</h3>
 	
-[Wing]() is a commercail IDE focused on Python.
+[Wings](https://wingware.com) is a commercail IDE focused on Python.
 It is available for all platforms.
 
 Wing is available to academics through a special license.
@@ -2388,21 +2399,6 @@ Wing comes with GUI driven installers.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-<h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
-	
-Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
-*emacs* is a lifetime editor because it takes a lifetime to master it!
-There are several flavors of *emacs*.
-*Spacemacs* is a version that has a gentler learning curve.
-
-The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*.
-This package is installed with a builtin package manager.
-
-Each snippet is stored in a single file. 
-The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="zepplin">Zepplin (universal) </h3>
