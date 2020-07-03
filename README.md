@@ -1625,7 +1625,7 @@ There is community version and a professional version.
 The latter version can interface with Jupyter Notebooks.
 The Rstudio Pro Server is available at some academic institutions.
 
-RStudio supports Rnotebooks written in Rmarkdown.
+RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html) written in Rmarkdown.
 Rmarkdown supports literate programming.
 R and its predessor S have been used for literate programming for over two decades via Sweave, Rweave, and Knitr packages.
 Many books have been assembled using Knitr.
