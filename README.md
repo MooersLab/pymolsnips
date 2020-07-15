@@ -144,7 +144,7 @@ All three types of coding platforms support the use of snippets to varying degre
 
 
 Note that some text editors use the same library of snippets.
-For example, emacs and spacemacs can use the same snippet library that is managed by the yasnippets package.
+For example, *emacs* and *spacemacs* can use the same snippet library that is managed by the yasnippets package.
 Likewise, Vim and neovim share some of the same plugin managers and snippet libraries. 
 There are at least kinds of snippet systems available for Vim and neovim.
 
@@ -188,7 +188,7 @@ Our second choice would be Visual Studio Code (VSC).
 You do have to install plugins, but the process of doing so is quite painless.
 Our third tier would be Sublime Text, Textmate, Atom, and Spyder.
 
-You might also consider *Geany*. 
+You might also consider *Geany*.
 It is very lightweight, very fast, and very easily configurable.
 It is good editor if you care about agility.  
 See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
@@ -475,28 +475,49 @@ Below you can see how to edit one mirror location and travel through other mirro
 
 [*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in emacs lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
-Emacs has been around for 40 years. 
-According to the Lindy principle, it should be around for another 40 years.
+Emacs was initiated in 1976 by Richard Stallman and others.
+There is a succession plan in action.
+Dr. Stallman stepped away from the project in 2008 and others took over the maintenance of the core program.
+
+Emacs has been around for 45 years. 
+According to the Lindy's Law (the future life expectancy of a technology is proportional to their current age, so every additional period of survival implies a longer remaining life expectancy), it should be around for another 45 years.
 Here we are referring to GNU emacs. 
+About other variants of Emacs are available.
+Gnu Emacs is the base emacs that some of the variants are built on top of.
+These include doom emacs, preclude emacs, spacemacs, and scimax. 
 
-Emacs is highly extensible and customizable with over 4600 pacakge available.
-The [melpa](https://melpa.org) package manager greatly eases package installation.
+Like PyMOL, emacs was designed to be highly extensible.
+This is large part of its popularity.
+Over 4600 packages have been developed by users over the years.
+Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
 
-The inteface to Emacs is a simple GUI that can be made complex by opening many *buffers*, which are like windows.
+The inteface to Emacs is either a X-terminal window or a simple GUI that can be made complex by opening many *buffers*, which are like windows.
 The management and navigation of buffers is a skill that the beginner needs to master early.
 
 Emacs is desigined to enable mouse free work although some buffers require that selections be made by using the mouse.
 Emacs is infamous for having 1800 key bindings involving heavy use of the alt or meta key.
-You only really need to memorize several dozen to be productive.
+However, there is in-line documentation and autosugestions that greatly ease the discovery of new key bindings. 
+You only really need to memorize several dozen key bindings to be productive in emacs.
 
-Vim key bindings are more efficient for editing text.
-The evil-mode in emacs enables the use of vim bindings inside of emacs.
-If this interests you, you might also consider spacemacs.
+Vim users can quickly become productive in emacs because the vim key bindings are available through the add-on package called evil-mode.
+Mastery of the vim key bindings is initially painful becuase it is like learning how to type for the first time.
+Howver, Vim key bindings are more efficient for editing text, so the ability to use them in emacs lead to a powerful combination.
+The evil-mode in emacs enables the use of Vim bindings inside of emacs.
+The availabilty of the evil-mode means that vim-users can retain their vim skills. Made m
 
-Mode are states of emacs where a subset of commands are avaialable.
-Modes avoids clashes due to functions of the same name in different packages.
+Modes are states of emacs where a subset of commands are avaialable.
+Modes avoid clashes due to functions of the same name in different packages.
+They are analogous to scopes in other text editors.
+Example, there is a python-mode for working with python script files.
 
-The .emacs.d directory is a hidden directory in the home directory.
+Some modes are multilingual and have many additional non-editing functions like org-mode.
+Org-mode was originally designed to be a planning and outlining tool, but it has been extended to support literate programming. 
+Org-mode is large package that in of itself has over 100 add-on pages.
+For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex libraries.
+The latter is done in an automated fashion by using the metadata in the pdf file.
+
+
+The .emacs.d configuration directory is a hidden directory in the home directory.
 It is the home of the installed packages and plugins. 
 The main configuration file called *init.el* resides here.
 The *init.el* file is analog of vim's *vimrc* file.
@@ -505,23 +526,37 @@ The commands in the *init.el* file written in elisp, but it is relatively easy t
 
 <details>
 <summary><b>Installing emacs</b></summary>
-The package yasnippets is one the popular packages in emacs for managing snippets.
+
+	
+Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
+There are several flavors of *emacs*.
+*Spacemacs* is a version that has a gentler learning curve.
+Vim key bindings can be used in it.
+It does have its own keybinding to be masteed.
+This leads to the porblem of needing to translate Spacemacs to Gnu Emacs.
+
+Doom emacs and *Prelude emacs* are additional off-shoots that is suppose to be easier to adopt.
+They are similar to Spacemacs.
+
+Emacs can be downloaded from \url{} and insalled with a platform specific installer.
+Emacs comes pre-installed on Mac OS, but you may want a more recent version.
+As of 2020, version 26 is recent enough. 
+Emacs is also available for a number of software repositories.
+The homebrew repository for Mac OS is popular.
+The brew command is \mintinline{bash}{}. 
+The resulting binary needs to be linked to an application in the Applcations folder. 
 
 
-
-</details>
 
 
 <details>
 <summary><b>Installing and using snippets with emacs</b></summary>
-The package yasnippets is one the popular packages in emacs for managing snippets.
 
-<h3 name="yasnippets"> yasnippets (for emacs, universal) </h3>
-	
-Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
-*emacs* is a lifetime editor because it takes a lifetime to master it!
-There are several flavors of *emacs*.
-*Spacemacs* is a version that has a gentler learning curve.
+The package yasnippets is one the most popular packages in emacs for managing snippets.
+This package provides for the display of the snippets in a table that opens in a separate buffer. 
+The user can naviage the table find a relevent snippet.
+This table is redundant with ls snippet. 
+
 
 The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*.
 This package is installed with a builtin package manager.
@@ -581,9 +616,28 @@ See the section below on org-mode.
 
 
 
+<details>
+<summary><b>Support for running PyMOL through R from emacs </b></summary>
+
+The ESS package enables the editing and running of several statistical packages from inside of emacs.
+ESS stands for emacs speaks statistics. 
+The supported pacakges include R, BUGS, JAGS, and STATA.
+Note the absence of Stan and pymc3.
+There is a separate stan-mode, but stan can also be run inside of R via either the rstan or rstanarm packages.
+The bio3d R-package can be installed and used analyze data from structures loaded in PyMOL. 
+
+This mode enables the editing of R-markdown documents. 
+It should be possible to run PyMOL via reticulate from inside a R markdown document, has the file extension of 'Rmd'.
+There is a poly-R that also has to installed to turn on the recognition of R-markdown packages.
+
+</details>
+
+
 
 <details>
 <summary><b>Variants of emacs to consider</b></summary>
+
+These variants might be suitable for the impatient who do not want to I IBlaine
 
 ### Spacemacs
 
@@ -601,6 +655,18 @@ This variant of emacs is being optimized for supporting the preparation of scien
 Several YouTube videos of John talking about SciMax are available.
 This editor is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
 </details>
+
+
+### Prelude emacs
+
+
+
+### Doom Emacs
+
+
+
+
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -2389,7 +2455,7 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 [Wings](https://wingware.com) is a commercail IDE focused on Python.
 It is available for all platforms.
 
-Wing is available to academics through a special license.
+Wings is available to academics through a special license.
 A free 30-day trial is available.
 
 Wing supports snippets.
