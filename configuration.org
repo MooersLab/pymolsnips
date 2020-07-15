@@ -1,10 +1,13 @@
 #+TITLE: BHMM's GNU Emacs Config
 #+AUTHOR: Blaine Mooers
+#+DATE: 15 Uly 2020
+#+EMAIL: blaine-mooers at ouhsc.edu
 
 This approach was inspired by Derek Taylor. 
 The use of the org file for the configuration has several advantages.
-The sections can be folded well while editing this file in orgmode.
-The org file is rendered nicely by GitHub. 
+First, he sections can be folded  while editing this file in orgmode.
+When all of the sections are folded, the entire 633 line documents is visbile in one screen.
+Second, the org file is rendered nicely by GitHub. 
 
 On startup, emacs strips out the emacs-lisp code and writes it to a configuration.el file.
 This process is called tangling.
@@ -94,7 +97,8 @@ See [[http://ergoemacs.org/emacs/emacs_hyper_super_keys.html][this site for more
 Display line numbers.
 
 #+BEGIN_SRC emacs-lisp
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type t)(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
 #+END_SRC
 
 
@@ -238,8 +242,13 @@ First, specify the python interpreter to be used.
   )
   (elpy-enable)
 )
+#+END_SRC
 
-;; Run pytest within emacs rather than outside of emacs on the command-line.
+*** python-pytest 
+
+It is more convenient to run pytest within emacs rather than outside of emacs on the command-line.
+
+#+BEGIN_SRC emacs-lisp
 (use-package python-pytest)
 #+END_SRC
 
@@ -307,38 +316,7 @@ Enable use of R-markdown.
 
 
 
-** spell checking
-
-#+BEGIN_SRC emacs-lisp
-(use-package flycheck
-  :ensure t
-  :init
-  (global-flycheck-mode t))
-#+END_SRC
-
-
-
-
-
-
-
-
-
-
-
-** stan-mode
-
-#+BEGIN_SRC emacs-lisp
-;;(require 'stan-mode)
-;;(require 'company-stan)
-;; Whether to use fuzzy matching in `company-stan'
-(setq company-stan-fuzzy nil)
-;; Add a hook to setup `company-stan' upon `stan-mode' entry
-;;(add-hook 'stan-mode-hook 'company-stan-setup)
-#+END_SRC
-
-
-** pymol-mode
+*** pymol-mode
 
 My pymol-mode 
 
@@ -352,6 +330,50 @@ My pymol-mode
 ;; (add-to-list 'auto-mode-alist '("\\.pml\\'" . pymol-mode))
 ;;
 ;; (require 'pymol-mode)
+#+END_SRC
+
+
+
+
+** spell checking
+
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+#+END_SRC
+
+On the Mac, macports can be used to install the unix program aspell.
+
+sudo port install aspell
+sudo port install aspell-dict-en
+
+The setting below maps ispell to aspell. 
+This program is used by flycheck and other spell checking software.
+
+#+BEGIN_SRC emacs-lisp
+(setq ispell-program-name "/opt/local/bin/aspell")
+#+END_SRC
+
+Turn on the syntax linter for elisp flymake.
+
+#+BEGIN_SRC emacs-lisp
+(remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
+#+END_SRC
+
+
+** stan-mode
+
+See ESS above for interaction with R, Stata, JAGS, BUGS, and Julia.
+
+#+BEGIN_SRC emacs-lisp
+;;(require 'stan-mode)
+;;(require 'company-stan)
+;; Whether to use fuzzy matching in `company-stan'
+;;(setq company-stan-fuzzy nil)
+;; Add a hook to setup `company-stan' upon `stan-mode' entry
+;;(add-hook 'stan-mode-hook 'company-stan-setup)
 #+END_SRC
 
 
@@ -473,17 +495,6 @@ Add the path to the rep.
 
 
 
-** spell check
-
-sudo port install aspell
-sudo port install aspell-dict-en
-
-#+BEGIN_SRC emacs-lisp
-(setq ispell-program-name "/opt/local/bin/aspell")
-#+END_SRC
-
-
-
 ** TeX
 
 #+BEGIN_SRC emacs-lisp
@@ -534,101 +545,170 @@ It has a mice table view and a function for automating the writing of new snippe
 
 
 
-**  org-mode 
+** org-mode 
 
 The amazing outlining and report preparation tool.
+I read somewhere that the org-mode setting should be at the file of this file.
 
 #+BEGIN_SRC emacs-lisp
 (require 'org)
 (require 'org-ref)
 (require 'ox-latex)
+#+END_SRC
 
 
-;;(require 'ox-beamer)
 
-;; set ORG MODE directory
+*** set ORG MODE directory
+
+#+BEGIN_SRC emacs-lisp
 (setq org-directory "~/org/")
+#+END_SRC
 
 
-;; Cycling the TODO states. This defines the sequence.
-;; The sequence can be defined in a document like so #+TODO: TODO IN-PROGRESS WAITING DONE
-;; From https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html
+
+*** Cycling the TODO states.
+
+This defines the sequence.
+The sequence can be defined in a document like so #+TODO: TODO IN-PROGRESS WAITING DONE
+From https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html.
+
+#+BEGIN_SRC emacs-lisp
 (setq org-todo-keywords
       '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
+#+END_SRC
 
 
 
-;; Suggestion key bindings from the tutorial by David O'Toole 
-;; https://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+*** Suggestion key bindings from the tutorial by David O'Toole 
+
+ https://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+
+#+BEGIN_SRC emacs-lisp
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+#+END_SRC
 
-;; Org-mode related settigs
+
+
+*** Org-mode related settigs
+
+
+#+BEGIN_SRC emacs-lisp
 (setq exec-path (append exec-path '("/opt/local/bin")))
-;; (setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
-(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+(setq org-confirm-babel-evaluate nil) ;;don't prompt me to confirm everytime I want to evaluate a block
+#+END_SRC
 
-;; display/update images in the buffer after I evaluate
+
+
+*** Display/update images in the buffer after I evaluate
+
+#+BEGIN_SRC emacs-lisp
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+#+END_SRC
 
 
-;; Skip spell checking of source code blocks
+
+*** Skip spell checking of source code blocks
+
+#+BEGIN_SRC emacs-lisp
 (add-to-list 'ispell-skip-region-alist '("#\\+BEGIN_SRC" . "#\\+END_SRC"))
+#+END_SRC
 
-;; activate ipython
+
+
+*** Activate ipython
+
+#+BEGIN_SRC emacs-lisp
 (require 'ob-ipython)
+#+END_SRC
 
-;; Integration with org-babel is provided through the ob-jupyter library. 
-;; To enable Jupyter support for source code blocks, add jupyter to org-babel-load-languages.
+
+
+*** Integration with org-babel
+
+Integration with org-babel is provided through the ob-jupyter library. 
+To enable Jupyter support for source code blocks, add jupyter to org-babel-load-languages.
+
+#+BEGIN_SRC emacs-lisp
 (org-babel-do-load-languages
  'org-babel-load-languages
  '( (ipython . t)
-  ))
-
+    ))
 ;;   (python . t)
 ;;   (latex . t)
 ;;   (jupyter . t) ) )
+#+END_SRC
 
+
+
+*** Bibtex Library
+
+#+BEGIN_SRC emacs-lisp
 (setq reftex-default-bibliography '("~/Google Drive/BibtexLibraries/global.bib"))
+#+END_SRC
 
-;; see org-ref for use of these variables
+
+
+*** See org-ref for use of these variables
+
+#+BEGIN_SRC emacs-lisp
 (setq org-ref-bibliography-notes "~/Google Drive/BibtexLibraries/notes.org"
          org-ref-default-bibliography '("~/Google Drive/BibtexLibraries/global.bib")
          org-ref-pdf-directory "~/orgpdflibrary")
+#+END_SRC
 
 
-;; helm-bibtex for autocompletion of citekeys
-   (setq bibtex-completion-bibliography "~/Google Drive/BibtexLibraries/global.bib"
+*** helm-bibtex for autocompletion of citekeys
+
+#+BEGIN_SRC emacs-lisp
+(setq bibtex-completion-bibliography "~/Google Drive/BibtexLibraries/global.bib"
          bibtex-completion-library-path "~/orgpdflibrary"
          bibtex-completion-notes-path "~/Google Drive/BibtexLibraries")
+#+END_SRC
 
-;; open pdf with system pdf viewer (works on mac)
-      (setq bibtex-completion-pdf-open-function
+
+
+*** Open pdf with system pdf viewer (works on mac)
+
+#+BEGIN_SRC emacs-lisp
+(setq bibtex-completion-pdf-open-function
         (lambda (fpath)
           (start-process "open" "*open*" "open" fpath)))
-
-;; alternative
-;; (setq bibtex-completion-pdf-open-function 'org-open-file)
+#+END_SRC
 
 
-;; Settings for org-pomodoro
+
+*** Settings for org-pomodoro
+
+#+BEGIN_SRC emacs-lisp
 (use-package org-pomodoro
   :ensure t
   :commands (org-pomodoro)
   :config
     (setq alert-user-configuration (quote ((((:category . "org-pomodoro")) libnotify nil)))))
+#+END_SRC
 
 
+*** Use minted instead of verbatim env for code blocks upon export to latex.
 
-;; Use minted instead of verbatim env for code blocks upon export to latex.
+#+BEGIN_SRC emacs-lisp
 (add-to-list 'org-latex-packages-alist '("" "minted"))
 (setq org-latex-listings 'minted) 
+#+END_SRC
 
-;; To use the python lexer for ipython blocks, add this setting:
+
+
+*** To use the python lexer for ipython blocks, add this setting:
+
+#+BEGIN_SRC emacs-lisp
 (add-to-list 'org-latex-minted-langs '(ipython "python"))
+#+END_SRC
 
-;; Set options to be applied to all minted code blocks on export to latex
+
+***  Set options to be applied to all minted code blocks on export to latex
+
+#+BEGIN_SRC emacs-lisp
 (setq org-latex-minted-options
      '(("frame" "lines") ("linenos=false") ("framerule=2pt") ("breaklines")))
 
@@ -638,5 +718,4 @@ The amazing outlining and report preparation tool.
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (setq org-src-fontify-natively t)
-
 #+END_SRC
