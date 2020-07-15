@@ -1,0 +1,613 @@
+#+TITLE: BHMM's GNU Emacs Config
+#+AUTHOR: Blaine Mooers
+
+This approach was inspired by Derek Taylor. 
+The use of the org file for the configuration has several advantages.
+The sections can be folded will in orgmode.
+The org file is rendered nicely by GitHub.
+
+** Completion words longer than 4 characters using ispell
+
+#+BEGIN_SRC emacs-lisp
+(eval-after-load "auto-complete"
+  '(progn
+      (ac-ispell-setup)))
+
+(add-hook 'git-commit-mode-hook 'ac-ispell-ac-setup)
+(add-hook 'mail-mode-hook 'ac-ispell-ac-setup)
+#+END_SRC
+
+
+
+** Powerline
+There are several variants of the powerline avaiable.
+The default version of powerline shows the pmodoro clock, but blocks the wordcounter.
+I needed to test other themes. 
+I foudn that the center theme shows the wordcounter in the center.
+
+
+#+BEGIN_SRC emacs-lisp
+(require 'powerline)
+(powerline-center-theme)
+(setq powerline-arrow-shape 'arrow)   ;; the default
+
+;; Settings for powerline
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+#+END_SRC
+
+
+
+** General setting
+
+Do not end sentences with more than one whitespace.
+
+#+BEGIN_SRC emacs-lisp
+(setq sentence-end-double-space nil)
+#+END_SRC
+
+
+
+** Hyper and Super key bindings
+
+See [[http://ergoemacs.org/emacs/emacs_hyper_super_keys.html][this site for more information.]]
+
+#+BEGIN_SRC emacs-lisp
+(setq ns-function-modifier 'hyper)  ; make fn key do Hyper
+#+END_SRC
+
+
+
+** Helm for promopting for yasnippets
+
+#+BEGIN_SRC emacs-lisp
+(require 'helm-config)
+
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+(defun shk-yas/helm-prompt (prompt choices &optional display-fn)
+  "Use helm to select a snippet. Put this into `yas-prompt-functions.'"
+  (interactive)
+  (if (require 'helm-config nil t)
+      (let ((result (helm-other-buffer
+                     (list `((name . ,prompt)
+                             (candidates . ,(if display-fn (mapcar display-fn choices)
+                                              choices))
+                             (action . (("Expand" . identity)))))
+                     "*helm-select-yasnippet")))
+        (cond ((null results)
+               (signal 'quit "user quit!"))
+              (display-fn
+               (catch 'result
+                 (dolist (choice choices)
+                   (when (equal (funcall display-fn choice) result)
+                     (throw 'result choice)))))
+              (t result)))
+    nil))
+#+END_SRC
+
+
+
+** Line settings
+
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type t)
+(global-set-key "\C-x\ t" 'toggle-truncate-lines)
+#+END_SRC
+
+
+
+** Markdown to pdf with pandoc
+
+#+BEGIN_SRC emacs-lisp
+(setq markdown-split-window-direction 'right)
+#+END_SRC
+
+
+
+** pdb-mode related
+
+Charles Bond's pdb.el has edited by Magnus as emacs-pdb-mode.el.
+
+#+BEGIN_SRC emacs-lisp
+(load-file "~/.emacs.d/plugins/emacs-pdb-mode/pdb-mode.el")
+(setq pdb-rasmol-name "/Applications/PyMOL.app/Contents/bin/pymol")
+(setq auto-mode-alist
+     (cons (cons "pdb$" 'pdb-mode) 
+           auto-mode-alist ) )
+(autoload 'pdb-mode "PDB")
+#+END_SRC
+
+
+
+** Python related
+
+First, specify the python interpreter to be used.
+
+#+BEGIN_SRC emacs-lisp
+(setq python-python-command "/opt/local/bin/python")
+
+(use-package python
+  :mode ("\\.py" . python-mode)
+  :ensure t
+  :config
+  (flymake-mode) ;; <- This line makes the trick of disabling flymake in python mode!
+  (use-package elpy
+    :ensure t
+    :init
+    (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+    :config
+    (remove-hook 'elpy-modules 'elpy-module-flymake) ;; <- This removes flymake from elpy
+    (setq elpy-rpc-backend "jedi")
+    :bind (:map elpy-mode-map
+              ("M-." . elpy-goto-definition)
+              ("M-," . pop-tag-mark))
+  )
+  (elpy-enable)
+)
+
+;; Run pytest within emacs rather than outside of emacs on the command-line.
+(use-package python-pytest)
+#+END_SRC
+
+
+** The Emacs IPython Notebook or EIN
+[[See]{[https://millejoh.github.io/emacs-ipython-notebook/]]
+
+
+#+BEGIN_SRC emacs-lisp
+;;(package-initialize)
+;;(require 'ein)
+;;(require 'ein-notebook)
+;;(require 'ein-subpackages)
+#+END_SRC
+
+
+
+** noweb pweave 
+
+Pweave enables literate programming with Python.
+
+#+BEGIN_SRC emacs-lisp
+;;Pnw-mode for Pweave reST documents
+(defun Pnw-mode ()
+       (require 'noweb-font-lock-mode)
+       (noweb-mode)
+       (setq noweb-default-code-mode 'python-mode)
+       (setq noweb-doc-mode 'rst-mode))
+
+(setq auto-mode-alist (append (list (cons "\\.prstw$" 'rstw-mode))
+                   auto-mode-alist))
+
+;Plw-mode for Pweave Latex documents
+(defun Plw-mode ()
+       (require 'noweb-font-lock-mode)
+       (noweb-mode)
+       (setq noweb-default-code-mode 'python-mode)
+       (setq noweb-doc-mode 'latex-mode))
+
+(setq auto-mode-alist (append (list (cons "\\.ptexw$" 'texw-mode))
+                   auto-mode-alist))
+#+END_SRC
+
+
+
+** spell checking
+
+#+BEGIN_SRC emacs-lisp
+;;(use-package flycheck
+;;  :ensure t
+;;  :init
+;;  (global-flycheck-mode t))
+#+END_SRC
+
+
+
+** evil-mode
+Evil-mode enable vim keybindings.
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/.emacs.d/evil")
+    (require 'evil)
+    (evil-mode 1)
+#+END_SRC
+
+
+
+** line setting
+
+Display line numbers.
+
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type t)
+(global-set-key "\C-x\ t" 'toggle-truncate-lines)
+#+END_SRC
+
+
+
+** markdown
+Open markdown with marked2
+
+#+BEGIN_SRC emacs-lisp
+(setq markdown-open-command "/usr/local/bin/mark")
+#+END_SRC
+
+
+
+** R with ESS
+Elisp file for R coding with Emacs
+ESS configurationEmacs Speaks Statistics
+
+
+#+BEGIN_SRC emacs-lisp
+(use-package ess
+  :ensure t
+)
+#+END_SRC
+
+
+
+** Auto completion with the company package
+
+#+BEGIN_SRC emacs-lisp
+(use-package company
+  :ensure t
+  :config
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 2)
+  (global-company-mode t)
+)
+#+END_SRC
+
+
+
+** Parentheses
+
+#+BEGIN_SRC emacs-lisp
+(use-package highlight-parentheses
+  :ensure t
+  :config
+  (progn
+    (highlight-parentheses-mode)
+    (global-highlight-parentheses-mode))
+  )
+#+END_SRC
+
+
+
+** poly-markdown
+
+#+BEGIN_SRC emacs-lisp
+(use-package poly-markdown
+    :ensure t)
+#+END_SRC
+
+
+
+** poly-markdown
+
+Enable use of R-markdown.
+#+BEGIN_SRC emacs-lisp
+(require 'poly-markdown)
+(require 'poly-R)
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+#+END_SRC
+
+
+
+** stan-mode
+
+#+BEGIN_SRC emacs-lisp
+;;(require 'stan-mode)
+;;(require 'company-stan)
+;; Whether to use fuzzy matching in `company-stan'
+(setq company-stan-fuzzy nil)
+;; Add a hook to setup `company-stan' upon `stan-mode' entry
+;;(add-hook 'stan-mode-hook 'company-stan-setup)
+#+END_SRC
+
+
+** pymol-mode
+
+My pymol-mode 
+
+#+BEGIN_SRC emacs-lisp
+;; load the package named pymol.
+;; (load "pymol-mode") ;; best not to include the ending ".el" or ".elc"
+;;
+;; ;; (autoload 'pymol-mode "pymol" "The pymol-mode for the PyMOL macro language, *.pml." t)
+;;
+;; ;; setup files ending in ".pml" to open in pymol-mode
+;; (add-to-list 'auto-mode-alist '("\\.pml\\'" . pymol-mode))
+;;
+;; (require 'pymol-mode)
+#+END_SRC
+
+
+** treemacs
+
+Like nerdtree in vim
+These are the default settings.
+See https://github.com/Alexander-Miller/treemacs for more information.
+
+#+BEGIN_SRC emacs-lisp
+(use-package treemacs
+  :ensure t
+  :defer t
+  :init
+  (with-eval-after-load 'winum
+    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
+  :config
+  (progn
+    (setq treemacs-collapse-dirs                 (if treemacs-python-executable 3 0)
+          treemacs-deferred-git-apply-delay      0.5
+          treemacs-directory-name-transformer    #'identity
+          treemacs-display-in-side-window        t
+          treemacs-eldoc-display                 t
+          treemacs-file-event-delay              5000
+          treemacs-file-extension-regex          treemacs-last-period-regex-value
+          treemacs-file-follow-delay             0.2
+          treemacs-file-name-transformer         #'identity
+          treemacs-follow-after-init             t
+          treemacs-git-command-pipe              ""
+          treemacs-goto-tag-strategy             'refetch-index
+          treemacs-indentation                   2
+          treemacs-indentation-string            " "
+          treemacs-is-never-other-window         nil
+          treemacs-max-git-entries               5000
+          treemacs-missing-project-action        'ask
+          treemacs-move-forward-on-expand        nil
+          treemacs-no-png-images                 nil
+          treemacs-no-delete-other-windows       t
+          treemacs-project-follow-cleanup        nil
+          treemacs-persist-file                  (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
+          treemacs-position                      'left
+          treemacs-recenter-distance             0.1
+          treemacs-recenter-after-file-follow    nil
+          treemacs-recenter-after-tag-follow     nil
+          treemacs-recenter-after-project-jump   'always
+          treemacs-recenter-after-project-expand 'on-distance
+          treemacs-show-cursor                   nil
+          treemacs-show-hidden-files             t
+          treemacs-silent-filewatch              nil
+          treemacs-silent-refresh                nil
+          treemacs-sorting                       'alphabetic-asc
+          treemacs-space-between-root-nodes      t
+          treemacs-tag-follow-cleanup            t
+          treemacs-tag-follow-delay              1.5
+          treemacs-user-mode-line-format         nil
+          treemacs-user-header-line-format       nil
+          treemacs-width                         35)
+
+    ;; The default width and height of the icons is 22 pixels. If you are
+    ;; using a Hi-DPI display, uncomment this to double the icon size.
+    ;;(treemacs-resize-icons 44)
+
+    (treemacs-follow-mode t)
+    (treemacs-filewatch-mode t)
+    (treemacs-fringe-indicator-mode t)
+    (pcase (cons (not (null (executable-find "git")))
+                 (not (null treemacs-python-executable)))
+      (`(t . t)
+       (treemacs-git-mode 'deferred))
+      (`(t . _)
+       (treemacs-git-mode 'simple))))
+  :bind
+  (:map global-map
+        ("M-0"       . treemacs-select-window)
+;;        ("C-x t 1"   . treemacs-delete-other-windows)
+;;        ("C-x t t"   . treemacs)
+;;        ("C-x t B"   . treemacs-bookmark)
+;;        ("C-x t C-t" . treemacs-find-file)
+;;        ("C-x t M-t" . treemacs-find-tag))
+)
+
+(use-package treemacs-evil
+  :after treemacs evil
+  :ensure t)
+
+(use-package treemacs-projectile
+  :after treemacs projectile
+  :ensure t)
+
+(use-package treemacs-icons-dired
+  :after treemacs dired
+  :ensure t
+  :config (treemacs-icons-dired-mode))
+
+(use-package treemacs-magit
+  :after treemacs magit
+  :ensure t)
+
+(use-package treemacs-persp ;;treemacs-persective if you use perspective.el vs. persp-mode
+  :after treemacs persp-mode ;;or perspective vs. persp-mode
+  :ensure t
+  :config (treemacs-set-scope-type 'Perspectives))
+#+END_SRC
+
+
+
+** word count
+
+Set up word count (current sesssion + start/ total)
+Add the path to the rep.
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/Users/blaine/software/wc-mode/")
+(require 'wc-mode)
+;; Suggested setting
+(global-set-key "\C-cw" 'wc-mode)
+(add-hook 'org-mode-hook 'wc-mode)
+#+END_SRC
+
+
+
+** spell check
+
+sudo port install aspell
+sudo port install aspell-dict-en
+
+#+BEGIN_SRC emacs-lisp
+(setq ispell-program-name "/opt/local/bin/aspell")
+#+END_SRC
+
+
+
+** TeX
+
+#+BEGIN_SRC emacs-lisp
+(setq tex-dvi-view-command "(f=*; lualatex -shell-escape \"${f%.dvi}.tex\" && open \"${f%.dvi}.pdf\")")
+#+END_SRC
+
+
+
+** Weather
+
+#+BEGIN_SRC emacs-lisp
+;; weather from wttr.in
+(use-package wttrin
+  :ensure t
+  :commands (wttrin)
+  :init
+  (setq wttrin-default-cities '("OKC"
+                                "NYC")))
+#+END_SRC
+
+
+
+** webbrowser
+Open urls in the eww web browser.
+
+#+BEGIN_SRC emacs-lisp
+(setq browse-url-browser-function 'eww-browse-url)
+#+END_SRC
+
+
+
+** Yasnippet 
+
+This is the snippet manager. 
+It has a mice table view and a function for automating the writing of new snippets.
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+#+END_SRC
+
+
+
+**  org-mode 
+
+The amazing outlining and report preparation tool.
+
+#+BEGIN_SRC emacs-lisp
+(require 'org)
+(require 'org-ref)
+(require 'ox-latex)
+
+
+;;(require 'ox-beamer)
+
+;; set ORG MODE directory
+(setq org-directory "~/org/")
+
+
+;; Cycling the TODO states. This defines the sequence.
+;; The sequence can be defined in a document like so #+TODO: TODO IN-PROGRESS WAITING DONE
+;; From https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
+
+
+
+;; Suggestion key bindings from the tutorial by David O'Toole 
+;; https://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;; Org-mode related settigs
+(setq exec-path (append exec-path '("/opt/local/bin")))
+;; (setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+
+;; display/update images in the buffer after I evaluate
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
+
+;; Skip spell checking of source code blocks
+(add-to-list 'ispell-skip-region-alist '("#\\+BEGIN_SRC" . "#\\+END_SRC"))
+
+;; activate ipython
+(require 'ob-ipython)
+
+;; Integration with org-babel is provided through the ob-jupyter library. 
+;; To enable Jupyter support for source code blocks, add jupyter to org-babel-load-languages.
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '( (ipython . t)
+  ))
+
+;;   (python . t)
+;;   (latex . t)
+;;   (jupyter . t) ) )
+
+(setq reftex-default-bibliography '("~/Google Drive/BibtexLibraries/global.bib"))
+
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes "~/Google Drive/BibtexLibraries/notes.org"
+         org-ref-default-bibliography '("~/Google Drive/BibtexLibraries/global.bib")
+         org-ref-pdf-directory "~/orgpdflibrary")
+
+
+;; helm-bibtex for autocompletion of citekeys
+   (setq bibtex-completion-bibliography "~/Google Drive/BibtexLibraries/global.bib"
+         bibtex-completion-library-path "~/orgpdflibrary"
+         bibtex-completion-notes-path "~/Google Drive/BibtexLibraries")
+
+;; open pdf with system pdf viewer (works on mac)
+      (setq bibtex-completion-pdf-open-function
+        (lambda (fpath)
+          (start-process "open" "*open*" "open" fpath)))
+
+;; alternative
+;; (setq bibtex-completion-pdf-open-function 'org-open-file)
+
+
+;; Settings for org-pomodoro
+(use-package org-pomodoro
+  :ensure t
+  :commands (org-pomodoro)
+  :config
+    (setq alert-user-configuration (quote ((((:category . "org-pomodoro")) libnotify nil)))))
+
+
+
+;; Use minted instead of verbatim env for code blocks upon export to latex.
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted) 
+
+;; To use the python lexer for ipython blocks, add this setting:
+(add-to-list 'org-latex-minted-langs '(ipython "python"))
+
+;; Set options to be applied to all minted code blocks on export to latex
+(setq org-latex-minted-options
+     '(("frame" "lines") ("linenos=false") ("framerule=2pt") ("breaklines")))
+
+(setq org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+(setq org-src-fontify-natively t)
+
+#+END_SRC
