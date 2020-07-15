@@ -3,8 +3,22 @@
 
 This approach was inspired by Derek Taylor. 
 The use of the org file for the configuration has several advantages.
-The sections can be folded will in orgmode.
-The org file is rendered nicely by GitHub.
+The sections can be folded well while editing this file in orgmode.
+The org file is rendered nicely by GitHub. 
+
+On startup, emacs strips out the emacs-lisp code and writes it to a configuration.el file.
+This process is called tangling.
+The configuration.el file is the file that emacs uses.
+The configuration.el file will be written to your emacs directory, (aka ~/.emacs.d).
+You still need some settings in your init.el file including one that calls configuration.org.
+Note that you do not have to called configuration.el.
+
+My init.el file had grown to over 700 lines in two weeks. 
+I was time to clean it up and bring some order to it.
+
+** Auto completion with the company package
+
+
 
 ** Completion words longer than 4 characters using ispell
 
@@ -19,11 +33,79 @@ The org file is rendered nicely by GitHub.
 
 
 
-** Powerline
-There are several variants of the powerline avaiable.
+#+BEGIN_SRC emacs-lisp
+(use-package company
+  :ensure t
+  :config
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 2)
+  (global-company-mode t)
+)
+#+END_SRC
+
+
+
+** ESS, emacs speaks statisttics
+Elisp file for R coding with Emacs
+ESS: Emacs Speaks Statistics
+
+Support for 
+
++ BUGS
++ JSAGS
++ SAS
++ STATA
++ R
++ Julia
+
+
+#+BEGIN_SRC emacs-lisp
+(use-package ess
+  :ensure t
+)
+#+END_SRC
+
+
+** evil-mode
+Evil-mode enable vim keybindings.
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/.emacs.d/evil")
+    (require 'evil)
+    (evil-mode 1)
+#+END_SRC
+
+
+
+** General settings
+
+
+*** Hyper and Super key bindings
+
+See [[http://ergoemacs.org/emacs/emacs_hyper_super_keys.html][this site for more information.]]
+
+#+BEGIN_SRC emacs-lisp
+(setq ns-function-modifier 'hyper)  ; make fn key do Hyper
+#+END_SRC
+
+
+
+*** line setting
+Display line numbers.
+
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type t)
+#+END_SRC
+
+
+
+*** Powerline
+The powerline is a menu bar above the minibuffer.
+It is adapted from Vim.
+There are several variants of the powerline avaiable for emacs.
 The default version of powerline shows the pmodoro clock, but blocks the wordcounter.
 I needed to test other themes. 
-I foudn that the center theme shows the wordcounter in the center.
+I found that the center theme shows the wordcounter in the center.
 
 
 #+BEGIN_SRC emacs-lisp
@@ -43,22 +125,12 @@ I foudn that the center theme shows the wordcounter in the center.
 
 
 
-** General setting
+*** Trailing whitespaces
 
 Do not end sentences with more than one whitespace.
 
 #+BEGIN_SRC emacs-lisp
 (setq sentence-end-double-space nil)
-#+END_SRC
-
-
-
-** Hyper and Super key bindings
-
-See [[http://ergoemacs.org/emacs/emacs_hyper_super_keys.html][this site for more information.]]
-
-#+BEGIN_SRC emacs-lisp
-(setq ns-function-modifier 'hyper)  ; make fn key do Hyper
 #+END_SRC
 
 
@@ -95,19 +167,33 @@ See [[http://ergoemacs.org/emacs/emacs_hyper_super_keys.html][this site for more
 
 
 
-** Line settings
+** markdown
+Open markdown with marked2
 
 #+BEGIN_SRC emacs-lisp
-(setq display-line-numbers-type t)
-(global-set-key "\C-x\ t" 'toggle-truncate-lines)
+(setq markdown-open-command "/usr/local/bin/mark")
 #+END_SRC
 
 
 
-** Markdown to pdf with pandoc
+*** Markdown to pdf with pandoc
 
 #+BEGIN_SRC emacs-lisp
 (setq markdown-split-window-direction 'right)
+#+END_SRC
+
+
+
+** Parentheses
+
+#+BEGIN_SRC emacs-lisp
+(use-package highlight-parentheses
+  :ensure t
+  :config
+  (progn
+    (highlight-parentheses-mode)
+    (global-highlight-parentheses-mode))
+  )
 #+END_SRC
 
 
@@ -158,20 +244,20 @@ First, specify the python interpreter to be used.
 #+END_SRC
 
 
-** The Emacs IPython Notebook or EIN
+*** The Emacs IPython Notebook or EIN
+EIN has been able to talk to Ipython or Jupyter since 2012.
+It is the oldest and most venerable interace between emacs and IPython.
 [[See]{[https://millejoh.github.io/emacs-ipython-notebook/]]
 
 
 #+BEGIN_SRC emacs-lisp
-;;(package-initialize)
-;;(require 'ein)
-;;(require 'ein-notebook)
-;;(require 'ein-subpackages)
+(require 'ein)
+(require 'ein-notebook)
 #+END_SRC
 
 
 
-** noweb pweave 
+*** noweb pweave 
 
 Pweave enables literate programming with Python.
 
@@ -199,106 +285,44 @@ Pweave enables literate programming with Python.
 
 
 
-** spell checking
-
-#+BEGIN_SRC emacs-lisp
-;;(use-package flycheck
-;;  :ensure t
-;;  :init
-;;  (global-flycheck-mode t))
-#+END_SRC
-
-
-
-** evil-mode
-Evil-mode enable vim keybindings.
-
-#+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "~/.emacs.d/evil")
-    (require 'evil)
-    (evil-mode 1)
-#+END_SRC
-
-
-
-** line setting
-
-Display line numbers.
-
-#+BEGIN_SRC emacs-lisp
-(setq display-line-numbers-type t)
-(global-set-key "\C-x\ t" 'toggle-truncate-lines)
-#+END_SRC
-
-
-
-** markdown
-Open markdown with marked2
-
-#+BEGIN_SRC emacs-lisp
-(setq markdown-open-command "/usr/local/bin/mark")
-#+END_SRC
-
-
-
-** R with ESS
-Elisp file for R coding with Emacs
-ESS configurationEmacs Speaks Statistics
-
-
-#+BEGIN_SRC emacs-lisp
-(use-package ess
-  :ensure t
-)
-#+END_SRC
-
-
-
-** Auto completion with the company package
-
-#+BEGIN_SRC emacs-lisp
-(use-package company
-  :ensure t
-  :config
-  (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 2)
-  (global-company-mode t)
-)
-#+END_SRC
-
-
-
-** Parentheses
-
-#+BEGIN_SRC emacs-lisp
-(use-package highlight-parentheses
-  :ensure t
-  :config
-  (progn
-    (highlight-parentheses-mode)
-    (global-highlight-parentheses-mode))
-  )
-#+END_SRC
-
-
-
-** poly-markdown
+*** poly-markdown
 
 #+BEGIN_SRC emacs-lisp
 (use-package poly-markdown
     :ensure t)
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
 #+END_SRC
 
 
 
-** poly-markdown
+*** poly-markdown
 
 Enable use of R-markdown.
 #+BEGIN_SRC emacs-lisp
-(require 'poly-markdown)
 (require 'poly-R)
-(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
 #+END_SRC
+
+
+
+
+
+
+** spell checking
+
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+#+END_SRC
+
+
+
+
+
+
+
+
 
 
 
@@ -468,25 +492,30 @@ sudo port install aspell-dict-en
 
 
 
-** Weather
-
-#+BEGIN_SRC emacs-lisp
-;; weather from wttr.in
-(use-package wttrin
-  :ensure t
-  :commands (wttrin)
-  :init
-  (setq wttrin-default-cities '("OKC"
-                                "NYC")))
-#+END_SRC
-
-
-
 ** webbrowser
 Open urls in the eww web browser.
 
 #+BEGIN_SRC emacs-lisp
 (setq browse-url-browser-function 'eww-browse-url)
+#+END_SRC
+
+
+
+
+** Weather
+
+You have to follow the instructions from July 15, 2020 on the [[https://github.com/bcbcarl/emacs-wttrin/issues/16#issuecomment-658987903][issues section]] of the github site
+to avoid the display of html code rather than the desired result. 
+The first element in the list of cites below has its weather reported after 
+enteting M-x wttrin and hitting return at the prompt "City name:".
+
+This gives the same output as can be had with the go program wego.
+This latter program can be run everytime you open a iterm2 shell by configuring the shell to run ~/go/bin/wego. 
+The emacs solution is faster because the opening zsh sheill spends 9 seconds loading.
+
+#+BEGIN_SRC emacs-lisp
+(use-package wttrin)
+(setq wttrin-default-cities '("Edmond, United States" "NYC" "Palo Alto, United States"))
 #+END_SRC
 
 
