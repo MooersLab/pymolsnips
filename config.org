@@ -1,0 +1,579 @@
+#+TITLE: GNU emac's personal config
+#+AUTHOR: Blaine Mooers
+
+
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ac-ispell-fuzzy-limit 4)
+ '(ac-ispell-requires 4)
+ '(package-selected-packages
+   (quote
+    (org-preview-html org-pdftools poly-R poly-markdown poly-org highlight-parentheses markdown-preview-mode markdown-preview-eww powershell powerline-evil powerline python-pytest exwm xelb ac-ispell weather-metno web ac-helm ssh mu4e-alert magit ox-latex-subfigure pydoc use-package elpy jedi flycheck-pycheckers jedi-core org-ref helm-bibtex org-pomodoro org-wc pomodoro org-evil evil helm org-babel-eval-in-repl ob-ipython ein auto-complete flycheck-stan eldoc-stan company-stan standoff-mode yasnippet-classic-snippets jupyter auto-package-update package-utils ## elisp-lint pdb-mode stan-mode stan-snippets yasnippet yasnippet-snippets))))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+
+
+
+
+;; Tell emacs where is your personal elisp lib dir
+;;(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;; add all of the descendant directories of a directory DIR to your ‘load-path’,
+;; bind variable ‘default-directory’ to DIR and then invoke function
+;; ‘normal-top-level-add-subdirs-to-load-path’
+
+#+BEGIN_SRC emacs-lisp
+(let ((default-directory  "~/.emacs.d/lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/auto-package-update-20180712.2045/")
+#+END_SRC
+
+
+
+;; Light and dark options of the solarized package are available.
+;;(load-theme 'solarized-dark t)
+
+
+#+BEGIN_SRC emacs-lisp
+(require 'auto-package-update)
+(auto-package-update-maybe)
+(auto-package-update-at-time "03:00")
+(setq auto-package-update-delete-old-versions t)
+#+END_SRC
+
+
+;; ----------------------[ use package ]---------------------------------------
+
+** Solarized themes
+There is a light and dark solarized theme.
+You have to customize the colors in the powerline to get this to work.
+Loaded images may have a backgrourd
+
+#+BEGIN_SRC emacs-lisp
+;; Light and dark options of the solarized package are available.
+;;(load-theme 'solarized-dark t)
+#+END_SRC
+
+
+** use-package
+This is only needed once, near the top of the file.
+The use-package package eases installing and using packages.
+#+BEGIN_SRC emacs-lisp
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path "<path where use-package is installed>")
+  (require 'use-package))
+(require 'cl)
+#+END_SRC
+
+
+** Spell checking with autocompletion
+
+#+BEGIN_SRC emacs-lisp
+(eval-after-load "auto-complete"
+  '(progn
+      (ac-ispell-setup)))
+#+END_SRC
+
+
+** Spellchecking
+Aspell or ispell can be installed via macports.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'git-commit-mode-hook 'ac-ispell-ac-setup)
+(add-hook 'mail-mode-hook 'ac-ispell-ac-setup)
+#+END_SRC
+
+
+** Powerline
+The default theme of powerline shows the pmodoro clock, but blocks the wordcounter.
+The center theme works well.
+
+#+BEGIN_SRC emacs-lisp
+(require 'powerline)
+(powerline-center-theme)
+(setq powerline-arrow-shape 'arrow)   ;; the default
+#+END_SRC
+
+
+** General setting
+
+#+BEGIN_SRC emacs-lisp
+;; ----------------------[ General setting ]---------------------------------------
+(setq sentence-end-double-space nil)
+#+END_SRC
+
+
+;; ----------------------[eww]---------------------------------------------
+;(require 'exwm)
+;(require 'exwm-config)
+;(exwm-config-example)
+
+
+
+;; weather from wttr.in
+(use-package wttrin
+  :ensure t
+  :commands (wttrin)
+  :init
+  (setq wttrin-default-cities '("OKC"
+                                "NYC")))
+
+
+;; ----------------------[ Hyper and Super key bindings ]---------------------------------------
+
+;; http://ergoemacs.org/emacs/emacs_hyper_super_keys.html
+;; set keys for Apple keyboard, for emacs in OS X
+;; (setq mac-command-modifier 'meta) ; make cmd key do Meta
+;; (setq mac-option-modifier 'super) ; make opt key do Super
+;; (setq mac-control-modifier 'control) ; make Control key do Control
+(setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
+
+
+
+;; ----------------------[ julia ]---------------------------------------
+;;(require 'julia-mode)
+
+
+
+
+;; ----------------------[ Helm for promopting for yasnippets ]---------------------------------------
+
+(require 'helm-config)
+
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+(defun shk-yas/helm-prompt (prompt choices &optional display-fn)
+  "Use helm to select a snippet. Put this into `yas-prompt-functions.'"
+  (interactive)
+  (if (require 'helm-config nil t)
+      (let ((result (helm-other-buffer
+                     (list `((name . ,prompt)
+                             (candidates . ,(if display-fn (mapcar display-fn choices)
+                                              choices))
+                             (action . (("Expand" . identity)))))
+                     "*helm-select-yasnippet")))
+        (cond ((null results)
+               (signal 'quit "user quit!"))
+              (display-fn
+               (catch 'result
+                 (dolist (choice choices)
+                   (when (equal (funcall display-fn choice) result)
+                     (throw 'result choice)))))
+              (t result)))
+    nil))
+
+
+
+
+;; ----------------------[ Markdown to pdf with pandoc ]---------------------------------------
+
+(setq markdown-split-window-direction 'right)
+
+; (add-hook 'markdown-mode-hook 'pandoc-mode)
+;
+; (defun md-compile ()
+;   "Compiles the currently loaded markdown file using pandoc into a PDF"
+;   (interactive)
+;   (save-buffer)
+;   (shell-command (concat "pandoc " (buffer-file-name) " -o "
+;                          (replace-regexp-in-string "md" "pdf" (buffer-file-name)))))
+;
+; (defun update-other-buffer ()
+;   (interactive)
+;   (other-window 1)
+;   (revert-buffer nil t)
+;   (other-window -1))
+;
+; (defun md-compile-and-update-other-buffer ()
+;   "Has as a premise that it's run from a markdown-mode buffer and the
+;    other buffer already has the PDF open"
+;   (interactive)
+;   (md-compile)
+;   (update-other-buffer))
+;
+; (defun latex-compile-and-update-other-buffer ()
+;   "Has as a premise that it's run from a latex-mode buffer and the
+;    other buffer already has the PDF open"
+;   (interactive)
+;   (save-buffer)
+;   (shell-command (concat "pdflatex " (buffer-file-name)))
+;   (switch-to-buffer (other-buffer))
+;   (kill-buffer)
+;   (update-other-buffer))
+;
+; (defun org-compile-beamer-and-update-other-buffer ()
+;   "Has as a premise that it's run from an org-mode buffer and the
+;    other buffer already has the PDF open"
+;   (interactive)
+;   (org-beamer-export-to-pdf)
+;   (update-other-buffer))
+;
+; (defun org-compile-latex-and-update-other-buffer ()
+;   "Has as a premise that it's run from an org-mode buffer and the
+;    other buffer already has the PDF open"
+;   (interactive)
+;   (org-latex-export-to-pdf)
+;   (update-other-buffer))
+;
+; (eval-after-load 'latex-mode
+;   '(define-key latex-mode-map (kbd "C-c r") 'latex-compile-and-update-other-buffer))
+;
+; (define-key org-mode-map (kbd "C-c lr") 'org-compile-latex-and-update-other-buffer)
+; (define-key org-mode-map (kbd "C-c br") 'org-compile-beamer-and-update-other-buffer)
+;
+; (eval-after-load 'markdown-mode
+;   '(define-key markdown-mode-map (kbd "C-c r") 'md-compile-and-update-other-buffer))
+;
+
+
+
+;; ----------------------[ pdb-mode related ]---------------------------------------
+;; pdb.el
+(load-file "~/.emacs.d/plugins/emacs-pdb-mode/pdb-mode.el")
+(setq pdb-rasmol-name "/Applications/PyMOL.app/Contents/bin/pymol")
+(setq auto-mode-alist
+     (cons (cons "pdb$" 'pdb-mode) 
+           auto-mode-alist ) )
+(autoload 'pdb-mode "PDB")
+
+
+
+;; ----------------------[ Python related ]---------------------------------------
+
+(setq python-python-command "/opt/local/bin/python")
+
+
+
+(use-package python
+  :mode ("\\.py" . python-mode)
+  :ensure t
+  :config
+  (flymake-mode) ;; <- This line makes the trick of disabling flymake in python mode!
+  (use-package elpy
+    :ensure t
+    :init
+    (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+    :config
+    (remove-hook 'elpy-modules 'elpy-module-flymake) ;; <- This removes flymake from elpy
+    (setq elpy-rpc-backend "jedi")
+    :bind (:map elpy-mode-map
+              ("M-." . elpy-goto-definition)
+              ("M-," . pop-tag-mark))
+  )
+  (elpy-enable)
+)
+
+
+
+;; Run pytest within emacs rather than outside of emacs on the command-line.
+(use-package python-pytest)
+
+
+
+;; -------[ noweb pweave ]---------------------------------------
+
+;; The Emacs IPython Notebook or EIN
+;; See https://millejoh.github.io/emacs-ipython-notebook/
+
+;;(package-initialize)
+;;(require 'ein)
+;;(require 'ein-notebook)
+;;(require 'ein-subpackages)
+
+
+;;Pnw-mode for Pweave reST documents
+(defun Pnw-mode ()
+       (require 'noweb-font-lock-mode)
+       (noweb-mode)
+       (setq noweb-default-code-mode 'python-mode)
+       (setq noweb-doc-mode 'rst-mode))
+
+(setq auto-mode-alist (append (list (cons "\\.prstw$" 'rstw-mode))
+                   auto-mode-alist))
+
+;Plw-mode for Pweave Latex documents
+(defun Plw-mode ()
+       (require 'noweb-font-lock-mode)
+       (noweb-mode)
+       (setq noweb-default-code-mode 'python-mode)
+       (setq noweb-doc-mode 'latex-mode))
+
+(setq auto-mode-alist (append (list (cons "\\.ptexw$" 'texw-mode))
+                   auto-mode-alist))
+
+
+
+;; ----------------------[ spell checking ]---------------------------------------
+;;(use-package flycheck
+;;  :ensure t
+;;  :init
+;;  (global-flycheck-mode t))
+
+
+
+;; ----------------------[ evil-mode ]---------------------------------------
+
+(add-to-list 'load-path "~/.emacs.d/evil")
+    (require 'evil)
+    (evil-mode 1)
+
+
+;; ----------------------[ markdown ]---------------------------------------
+;; Open markdown with marked2
+(setq markdown-open-command "/usr/local/bin/mark")
+
+
+
+;; ----------------------[ R with ESS ]---------------------------------------
+;; Elisp file for R coding with Emacs
+;; ESS configurationEmacs Speaks Statistics
+(use-package ess
+  :ensure t
+)
+
+;; Auto completion
+(use-package company
+  :ensure t
+  :config
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 2)
+  (global-company-mode t)
+)
+
+; Parentheses
+(use-package highlight-parentheses
+  :ensure t
+  :config
+  (progn
+    (highlight-parentheses-mode)
+    (global-highlight-parentheses-mode))
+  )
+
+(use-package poly-markdown
+    :ensure t)
+
+;; Enable use of R-markdown.
+(require 'poly-markdown)
+(require 'poly-R)
+
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+
+;; ----------------------[ stan-mode ]---------------------------------------
+;;(require 'stan-mode)
+;;(require 'company-stan)
+;; Whether to use fuzzy matching in `company-stan'
+(setq company-stan-fuzzy nil)
+;; Add a hook to setup `company-stan' upon `stan-mode' entry
+;;(add-hook 'stan-mode-hook 'company-stan-setup)
+
+
+
+;; ;; ----------------------[ pymol-mode ]---------------------------------------
+;; ;; load the package named pymol.
+;; (load "pymol-mode") ;; best not to include the ending ".el" or ".elc"
+;;
+;; ;; (autoload 'pymol-mode "pymol" "The pymol-mode for the PyMOL macro language, *.pml." t)
+;;
+;; ;; setup files ending in ".pml" to open in pymol-mode
+;; (add-to-list 'auto-mode-alist '("\\.pml\\'" . pymol-mode))
+;;
+;; (require 'pymol-mode)
+
+
+
+;; ----------------------[ word count ]---------------------------------------
+;; Set up word count (current sesssion + start/ total)
+;; Add the path to the repo
+(add-to-list 'load-path "/Users/blaine/software/wc-mode/")
+(require 'wc-mode)
+;; Suggested setting
+(global-set-key "\C-cw" 'wc-mode)
+(add-hook 'org-mode-hook 'wc-mode)
+
+
+
+;; ----------------------[ spell check ]---------------------------------------
+;; spell check
+;; sudo port install aspell
+;; sudo port install aspell-dict-en
+(setq ispell-program-name "/opt/local/bin/aspell")
+
+
+
+;; ----------------------[ TeX ]---------------------------------------
+
+(setq tex-dvi-view-command "(f=*; lualatex -shell-escape \"${f%.dvi}.tex\" && open \"${f%.dvi}.pdf\")")
+
+
+
+
+;; ----------------------[ Yasnippet ]---------------------------------------
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
+;; -------------------------------------------------------------------------
+;; ----------------------[ org-mode ]---------------------------------------
+(require 'org)
+(require 'org-ref)
+(require 'ox-latex)
+;;(require 'ox-beamer)
+
+
+
+;; Cycling the TODO states. This defines the sequence.
+;; The sequence can be defined in a document like so #+TODO: TODO IN-PROGRESS WAITING DONE
+;; From https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
+
+
+
+;; Suggestion key bindings from the tutorial by David O'Toole 
+;; https://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;; Org-mode related settigs
+(setq exec-path (append exec-path '("/opt/local/bin")))
+;; (setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+
+;; display/update images in the buffer after I evaluate
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
+
+;; Skip spell checking of source code blocks
+(add-to-list 'ispell-skip-region-alist '("#\\+BEGIN_SRC" . "#\\+END_SRC"))
+
+;; activate ipython
+(require 'ob-ipython)
+
+;; Integration with org-babel is provided through the ob-jupyter library. 
+;; To enable Jupyter support for source code blocks, add jupyter to org-babel-load-languages.
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '( (ipython . t)
+  ))
+
+;;   (python . t)
+;;   (latex . t)
+;;   (jupyter . t) ) )
+
+(setq reftex-default-bibliography '("~/Google Drive/BibtexLibraries/global.bib"))
+
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes "~/Google Drive/BibtexLibraries/notes.org"
+         org-ref-default-bibliography '("~/Google Drive/BibtexLibraries/global.bib")
+         org-ref-pdf-directory "~/orgpdflibrary")
+
+
+;; helm-bibtex for autocompletion of citekeys
+   (setq bibtex-completion-bibliography "~/Google Drive/BibtexLibraries/global.bib"
+         bibtex-completion-library-path "~/orgpdflibrary"
+         bibtex-completion-notes-path "~/Google Drive/BibtexLibraries")
+
+;; open pdf with system pdf viewer (works on mac)
+      (setq bibtex-completion-pdf-open-function
+        (lambda (fpath)
+          (start-process "open" "*open*" "open" fpath)))
+
+;; alternative
+;; (setq bibtex-completion-pdf-open-function 'org-open-file)
+
+
+;; Settings for org-pomodoro
+(use-package org-pomodoro
+  :ensure t
+  :commands (org-pomodoro)
+  :config
+    (setq alert-user-configuration (quote ((((:category . "org-pomodoro")) libnotify nil)))))
+
+
+
+; (use-feature ox-latex
+;   :after ox
+;   :demand t
+;   :init (setq org-latex-pdf-process
+; 	      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")
+;           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+;   :config
+;
+;   ;; Sometimes it's good to locally override these two.
+;   (put 'org-latex-title-command 'safe-local-variable #'stringp)
+;   (put 'org-latex-toc-command 'safe-local-variable #'stringp)
+;
+;   ;; Need to let ox know about ipython and jupyter
+;   (add-to-list 'org-latex-minted-langs '(ipython "python"))
+;   (add-to-list 'org-babel-tangle-lang-exts '("ipython" . "py"))
+;   (add-to-list 'org-latex-minted-langs '(jupyter-python "python"))
+;   (add-to-list 'org-babel-tangle-lang-exts '("jupyter-python" . "py")) )
+
+
+
+
+
+;;(add-to-list 'org-latex-minted-langs '(jupyter "python"))
+;;(add-to-list 'org-latex-minted-langs '(python "python"))
+
+;; (setq org-latex-pdf-process (list "pdflatex -shell-escape -bibtex -f -pdf %f"))
+
+; (setq org-latex-pdf-process
+;       '("pdflatex -interaction nonstopmode -output-directory %o %f"
+; 	"bibtex %b"
+; 	"pdflatex -interaction nonstopmode -output-directory %o %f"
+; 	"pdflatex -interaction nonstopmode -output-directory %o %f"))
+
+
+
+;; These may not be rquired because of the load packages command above.
+
+
+;; Use minted instead of verbatim env for code blocks upon export to latex.
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted) 
+
+;; To use the python lexer for ipython blocks, add this setting:
+(add-to-list 'org-latex-minted-langs '(ipython "python"))
+
+;; Set options to be applied to all minted code blocks on export to latex
+(setq org-latex-minted-options
+     '(("frame" "lines") ("linenos=false") ("framerule=2pt") ("breaklines")))
+
+(setq org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+(setq org-src-fontify-natively t)
+
