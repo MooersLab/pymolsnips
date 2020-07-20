@@ -1,27 +1,28 @@
 #+TITLE: BHMM's GNU Emacs Config
 #+AUTHOR: Blaine Mooers
-#+DATE: 15 July 2020
+#+DATE: 20 July 2020
 #+EMAIL: blaine-mooers at ouhsc.edu
 
 My init.el file had grown to over 700 lines in two weeks. 
 I was time to clean it up and bring some order to it.
 
 
-This approach was inspired by [[Derek Taylor][]]. 
+This approach was inspired by [[https://gitlab.com/dwt1/dotfiles][Derek Taylor]]. 
 The use of the org file for the configuration has several advantages.
-First, he sections can be folded  while editing this file in orgmode.
+First, the sections can be folded  while editing this file in orgmode.
 When all of the sections are folded, the entire 633 line documents is visbile in one screen.
 Second, the org file is rendered nicely by GitHub. 
 
-On startup, emacs strips out the emacs-lisp code and writes it to a configuration.el file.
+On startup, emacs strips out the emacs-lisp code and writes it to a config.el file.
 This process is called tangling.
-The configuration.el file is the file that emacs uses.
-The configuration.el file will be written to your emacs directory, (aka ~/.emacs.d).
-You still need some settings in your init.el file including one that calls configuration.org.
-Note that you do not have to called configuration.el.
+The config.el file is the file that emacs uses.
+The config.el file will be written to your emacs directory, (aka ~/.emacs.d).
+You still need some settings in your init.el file including one that calls config.org
+I used a function to do so that I obtainded from [[https://raw.githubusercontent.com/novoid/dot-emacs/master/init.el][Karl Voit]].
+This function is suppose to load the code chunks more rapidly.
+I added the DISABLED tag to some code chunk not load the code to save time.
+Emacs still takes 10-12 seconds to load.
 
-I use the melpa for package installatin and the *use-package* pacakge.
-These are set up in the 
 
 
 ** setup of PATHS
