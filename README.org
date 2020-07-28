@@ -1,3 +1,10 @@
+#+TITLE: The pymolsnips library to ease the writing of scripts in the pml macro language for PyMOL
+#+DESCRIPTION: snippet librarry for PyMOL
+#+AUTHOR: Blaine Mooers and Marina Brown
+#+OPTIONS: num:t
+#+EMAIL:     (concat "blaine-mooers" at-sign "ouhsc.edu")
+#+STARTUP: overview
+#+LANGUAGE:  en
 
 * The pymolsnips library to ease the writing of scripts in the pml macro language for PyMOL
 
@@ -96,7 +103,7 @@ If mirrored tab stops are available for a text editor, you can learn more about 
 </p>
 
 
-
+*** Gallery
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
 <details>
@@ -104,6 +111,10 @@ If mirrored tab stops are available for a text editor, you can learn more about 
 	
 ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery")
 </details>
+
+
+
+*** Snippet categories
 
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
 Each snippet is described below.
@@ -145,7 +156,10 @@ Hyperlinks will take you to a paricular category.
 <A href=#FASTLINKS>Return to quick links section at top</A>
 
 
-<hr>
+-----
+
+*** Support coding environments
+
 <h2>  <A name="FASTLINKS2">Supported coding environments:</A> </h2>
 
 PyMOL scripts can e coded in electornic notebook, integrated development environments, and text editors.
@@ -191,14 +205,14 @@ There are at least kinds of snippet systems available for Vim and neovim.
 
 
 
-If you are considering switching editors, we recommend giving PyCharm serious consideration. 
+If you are considering switching coding environments, we recommend giving PyCharm serious consideration. 
 Although PyCharm is a massive IDE, it comes with most of the plugins that you would ever want to use already installed, so it is very `plug-and-play`.
 Our second choice would be Visual Studio Code (VSC). 
-You do have to install plugins, but the process of doing so is quite painless.
-Our third tier would be Sublime Text, Textmate, Atom, and Spyder.
+You do have to install plugins in VSC, but the process of doing so is quite painless.
+Our third tier of choices would be Sublime Text, Textmate, Atom, Wings, and Spyder.
 
 You might also consider *Geany*.
-It is very lightweight, very fast, and very easily configurable.
+It is very lightweight, very fast, and very easy to configure.
 It is good editor if you care about agility.  
 See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
 Note that the **thonny** editor that was recommended for beginners is more of a training tool than a productive tool.
@@ -587,10 +601,10 @@ It was evolved to keep up with changes in the notebook.
 It cannot provide access to the widgets nor the notebook extensions.
 You will have to use the yasnippet library to access the PyMOL snippets.
 
-```emacs
+#+begin_src Emacs Lisp :eval never-export
 M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
 M-x p-ins RET ein RET
-```
+#+end_src
 
 In the minibuffer at the bottom of the GUI, enter the ```M-x ein:notebooklist-login``` to start up a Jupyter server.
 Alternativerly, enter the shorthand with ```M-x ein:n-l RET```.
@@ -612,10 +626,11 @@ The [emacs-jupyter](https://github.com/dzop/emacs-jupyter) project is newer.
 it is an ''... interface to communicate with Jupyter kernels in Emacs''. 
 It is different from *ein* in that it promises to interact with Jupyter widgets.
 
-```emacs
+
+#+begin_src Emacs Lisp :eval never-export
 M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
 M-x p-ins RET jupyter RET
-```
+#+end_src
 
 ### ob-ipython
 
@@ -757,9 +772,10 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 The pymol.lang file has to be installed first. 
 Download it form the geditpymolsnips folder.
 
-```bash
+
+#+begin_src Shell Script :eval never-export
 mkdir -p ~/.local/share/gtksourceview-3.0/language-specs
-```
+#+end_src
 
 The snippets are stored in a single file called `pymol.xml`.
 
@@ -771,13 +787,18 @@ The full path is `~/.config/gedit/snippets/pymol.xml`.
 
 You may need to create this directory.
 To do this:
-```bash
+
+
+#+begin_src Shell Script :eval never-export
 $ mkdir ~/.config/gedit/snippets/pymol.xml
-```
+#+end_src
+
 Then to copy `pymol.xml` into that directory, do:
-```bash
+
+#+begin_src Shell Script :eval never-export
 $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
-```
+#+end_src
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
@@ -896,9 +917,10 @@ This parallel visaulization supports the accurate transfer from of code listings
 [*JupyterLab*](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) can be installed with `conda`, `pip`,`pipenv`, or `docker`.
 To install using `conda`, enter the follow command in the bash command line:
 
-```bash
-$ conda install -c conda-forge jupyterlab
-```
+
+#+begin_src Shell Script :eval never-export
+conda install -c conda-forge jupyterlab
+#+end_src 
 
 Once installed, enter `jupyter lab` to launch. 
 *JupyterLab* uses your browser to run and a log of your activity is recorded.
@@ -929,10 +951,10 @@ The command for the users fo Centos is  `To be determined`.
 The kernels are easily installed for a particular python interpreter.
 Breifly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
 
-```bash
+#+begin_src Shell Script :eval never-export
 /Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
 /Applications/PyMOL.app/Contents/bin/python -m ipykernel install
-```
+#+end_src 
 
 On Mac OS, the kenerls are stored in `~/Library/jupyter/kernels`.
 A python kernel as a separate folder with three files in it.
@@ -947,7 +969,7 @@ The kernel.json file is a plain text file that can be edited with any text edito
 The kernel.json file for the Python interpreter inside the PyMOL.app on the Mac is shown below.
 
 
-```javascript
+#+begin_src Javascript :eval never-export
 {
  "argv": [
   "/Applications/7PyMOL.app/Contents/bin/python",
@@ -959,11 +981,9 @@ The kernel.json file for the Python interpreter inside the PyMOL.app on the Mac 
  "display_name": "pymol.python",
  "language": "python"
 }
-\end{bashcode}
-}
-}
+#+end_src
 
-```
+
 
 The addition of kernels for non-python programs requires different protocols than the one given above.
 </details>
@@ -1035,7 +1055,9 @@ In addition to the books about jupyter notebook mentioned in the section about j
 The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [github site](https://github.com/PacktPublishing/Jupyterlab-Quick-Start-Guide). 
 
 
-```bibtex
+
+
+#+begin_src LaTeX :eval never-export
 @book{Richman2019JupyterLabQuickStartGuide,
   title={JupyterLab Quick Start Guide},
   author={Richman, Lindsay and Ferrari, Melissa and Oladokun, Joseph and Banfield, Wesley and Toomey, Dan },
@@ -1055,7 +1077,11 @@ The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [g
   title     = {Applied Data Science with Python and Jupyter: Use powerful industry-standard tools to unlock new, actionable insights from your data},
   year      = {2018},
 }
-```
+#+end_src
+
+
+
+
 
 As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) conventions have been held.
 The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the COVID19 pandemic.
@@ -1082,9 +1108,13 @@ The snipppets are stored in JSON files so they are not so easy to edit becuase o
 A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension.
 The these snippets can be loaded as need by using the load magic.
 
-```jupyter
+
+
+
+#+begin_src Python :eval never-export
 %load filePath/<snippetName>.pml
-```
+#+end_src
+
 The animation below demonstrates the insertion of a snippet with the load magic.
 
 <p align="center">
@@ -1113,10 +1143,10 @@ pip install git+pip install git+https://github.com/cxhernandez/ipymol. 􏰀→gi
 6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.
 7. Enter the following code to load ipymol and conmect to PyMOL
 
-```python
+#+begin_src Python :eval never-export
 from ipymol import viewer as ipv 
 ipv.start() # Start PyMOL RPC server
-```
+#+end_src
 
 Now you can change the scene manually and send the display as static image to a cell in the jupyter notebook.
 It is assumed that the viewer class of the ipymol moduel has been imported as ipv.
@@ -1130,7 +1160,7 @@ The new function is called `rvj()' for roundview for jupyter.
 The snippet rvj will be in the snippet library eventually
 It code is listed below:
 
-```python
+#+begin_src Python :eval never-export
 def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
    """MIT License
    Copyright:
@@ -1158,7 +1188,7 @@ def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
     myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()
     return myRoundedList
 ipv.extend("rv", rv)
-```
+#+end_src
 
 </details>
 
@@ -1173,7 +1203,9 @@ Make a directory called 'pymol.python' the folder `~/Library/jupyter/kernels` on
 Paste the following code in new text file named `kernel.json`.
 If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
 
-```javascript
+
+
+#+begin_src Javascript :eval never-export
 {
  "argv": [
   "/Applications/PyMOL.app/Contents/bin/python",
@@ -1185,7 +1217,8 @@ If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
  "display_name": "pymol.python",
  "language": "python"
 }
-```
+#+end_src
+
 </details>
 
 
