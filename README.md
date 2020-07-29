@@ -1,10 +1,10 @@
 ## **pymolsnipts** library to support literate programming with PyMOL
 
 
-[PyMOL](https://pymol.org/2/) is a leading molecular graphics programs for making images of proteins and nucleic acids for publication.
+[PyMOL](https://pymol.org/2/) is a leading molecular graphics program for making images of proteins and nucleic acids for publication.
 PyMOL's vast of array of parameters provide exquisite control over the appearance of the output.
 PyMOL is often used to make cover images for [scientific journals](https://pymolwiki.org/index.php/Main_Page).
-PyMOL is also popular for making mvies of moving molecules.
+PyMOL is also popular for making movies of moving molecules.
 
 The PyMOL GUI is useful for making the images of global scenes, but PyMOL rapidly becomes tedious to use to make images of detailed scenes.
 The PyMOL macro language (pml) can be used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport.
@@ -31,15 +31,15 @@ One solution to this problem is to use a library of code fragments, called **sni
 
 **pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors, integrated development environments (IDEs), and electronic notebooks**.
 Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store the computer code!***
-In doing so, you can inadvertantly pick up hidden characters that are hard to find and remove during debugging.
+In doing so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
 
-Text editors have tools for supporting the editing of comptuer code files.
+Text editors have tools for supporting the editing of computer code files.
 Although these files have many different file extensions that map them to the programming language of the code that they contain, they are all simple plain text files.
 One of the editing tools available in text editors is support for the retrieval and insertion of computer code fragments (i.e, snippets) to save time and reduce errors while assembling a new script file.
 
 Text editors and IDEs can be distinguished by their appearance.
 Text editors generally fire up with one main pane in the GUI, although extra ones can be opened.
-IDEs are text editors plus extra features for debugging and testing comptuer code.
+IDEs are text editors plus extra features for debugging and testing computer code.
 They are generally recommended for programmers working with large code bases that consist of many files.
 IDEs are well suited from navigating between the files in a large code base.
 IDEs generally open with three or four panes visible.
@@ -47,21 +47,21 @@ IDEs generally open with three or four panes visible.
 The boundary between text editors and IDEs is blurry because some text editors support code testing.
 Because of space constraints, IDEs are best used on a large monitor.
 
-Electronic notebooks such as Jupyter Notebook and Rnotebook can be edited and run on their own or from inside the more advanced IDEs (Juptuyer Lab, PyCharm, Spyder) and some text editors (e.g., VSC, Atom, Sublime Text).
+Electronic notebooks such as Jupyter Notebook and Rnotebook can be edited and run on their own or from inside the more advanced IDEs (Juptyer Lab, PyCharm, Spyder) and some text editors (e.g., VSC, Atom, Sublime Text).
 Below, we will use the term *text editor* as a collective term that refers to all three categories.
 
 Protocols for snippet installation for each text editor are found <a href="#install"> below</a>.
 Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file.
 Most editors have their own format for snippets.
 The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
-The one exception is the Cuda text editor.
+The one exception is the CudaText editor.
 The snippets come pre-installed with this editor.
 
 Each code fragment has a unique name that also serves as a tab trigger.
 The user enters the name of the code snippet and hits the `tab` key to insert the lines of code.
 Tab stops exist at sites where parameters can be edited.
 Tab stops are mirrored when the parameters are identical.
-Mirroring enable the simultaneously editing of these sites to reduce the chance of overlooking a site that needed editung.
+Mirroring enable the simultaneously editing of these sites to reduce the chance of overlooking a site that needed editing.
 
 The animation below demonstrates the use of the `ao` tab trigger in *Visual Studio Code* to insert 16 lines of code for generating the ambient occlusion effect.
 You can learn how this is done <a href="#VisualStudioCode"> here </a>.
@@ -79,7 +79,7 @@ One thing to note when using tab stops is that the mirrored selections are very 
 Before you begin typing, make sure that the mirrored sections are all highlighted.
 It is easy to exit the tab stop selections by the click of a mouse or even a keyboard movement!
 Getting your selections re-highlighted is not difficult, but the required steps vary between text editors.
-Find more information about mirrored tab stops in the installation instructions for each text editor.  
+Find more information about mirrored tab stops in the installation instructions for each text editor.
 
 The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites.
 If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
@@ -88,14 +88,6 @@ If mirrored tab stops are available for a text editor, you can learn more about 
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
 </p>
 
-Here is a working list of text editors that can utilize mirrored tab stops:
-
-* Atom
-* CudaText
-* PyCharm
-* Sublime Text 3
-* Text Mate
-* Visual Studio Code
 
 <h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
 
@@ -108,7 +100,7 @@ Here is a working list of text editors that can utilize mirrored tab stops:
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
 Each snippet is described below.
 The snippets are grouped into categories.
-Hyperlinks will take you to a paricular category.
+Hyperlinks will take you to a particular category.
 
 
 - <a href="#altloc"> Alternate locator </a>
@@ -211,12 +203,12 @@ Warning: too much instant gratification will alter your brain: Jupyter Notebook 
 Jupyter Notebooks have been used to assemble tutorials, manuscripts, and books.
 
 We demonstrate below how to use PyMOL's Python interpreter inside a Jupyter Notebook.
-To bring to bear the full power of a text editor onto a Jupyter Noteobook, you can edit and run blocks of code from a Jupyter Notebook inside PyCharm, Atom, Sublime Text, Spyder, Vim, VSC, Emacs and other text editors. 
+To bring to bear the full power of a text editor onto a Jupyter Notebook, you can edit and run blocks of code from a Jupyter Notebook inside PyCharm, Atom, Sublime Text, Spyder, Vim, VSC, Emacs and other text editors. 
 We recommend using PyCharm, Spyder or VSC for the best experience.
-Sypder stand out is still allowing access to notebook extension from inside of Spyder.
+Spyder stand out is still allowing access to notebook extension from inside of Spyder.
 
-For a rapid examination of Jupyter Noteobook, we reocommend the stand-alone application **nteract**.
-It does not use your webbrowser.
+For a rapid examination of Jupyter Notebook, we recommend the stand-alone application **nteract**.
+It does not use your web-browser.
 It can be set as the default application for opening notebooks by double clicking on the notebook's file icon.
 
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
@@ -251,7 +243,7 @@ Some of these text editors can take hours to customize to fit your needs; howeve
  
 <h3 name="atom" > Atom (Universal) </h3>
 
-[*Atom*](https://atom.io) is a favorite of professional programmers because it is highly extendable and customizable.
+[*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
 They advertise themselves as a "hackable text editor".
 It integrates with GitHub nicely and the GUI is very attractive.
 	
@@ -301,7 +293,7 @@ You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, 
 
 For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
 
-A third option availaible for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. 
+A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. 
 
 Below is an example of the *threeMaps* snippet use with mirrored tab stops. 
 
