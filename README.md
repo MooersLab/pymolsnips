@@ -340,7 +340,7 @@ The clippings can be stored in folders by language.
 Users can create nested subfolders for groups of related snippets.
 The clippings are selected via the pulldown labeled `C` (circled). 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
-You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to to your BBEdit clippings.
+You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to your BBEdit clippings.
 
 
 To do this, enter:
@@ -350,7 +350,7 @@ $ cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clip
 ```
 
 The disadvantages of these clippings include the lack of tab triggers and tab stops.
-There is also presently the lack of a PyMOL lexer for syntax highligihting.
+There is also presently the lack of a PyMOL lexer for syntax highlighting.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
@@ -365,7 +365,7 @@ However, *Brackets* now has support for a large number of languages.
 *Brackets* uses icons, located on the right panel, that navigate you to interactive settings on the application.
 The zig-zag line launches Live Preview.
 The lego piece launches the extension manager.
-Once you install an exentsion, a light bulb icon will appear which launches the **Snippets Manager**.
+Once you install an extension, a light bulb icon will appear which launches the **Snippets Manager**.
 
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
@@ -378,7 +378,7 @@ This is snippet manager that has a GUI that enables the manual creation of user 
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsExtInstall.gif">
 </p>
 
-It should automatically refresh, but if not, close and repon *Brackets*.
+It should automatically refresh, but if not, close and reopen *Brackets*.
 The light bulb icon will now appear in the right panel.
 Click on the light bulb to open the **Snippets Manager**.
 
@@ -405,7 +405,7 @@ This is helpful when you cannot remember the short-hand for a snippet.
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif">
 </p>
 
-Unfortunately, *Brackets* does not currently suppoort tab stops.
+Unfortunately, *Brackets* does not currently support tab stops.
 
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -421,7 +421,7 @@ A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons ma
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
 <details>
-<summary><b>Installing and using snippets with Cudatext</b></summary>
+<summary><b>Installing and using snippets with CudaText</b></summary>
 	
 *CudaText* uses Python3 based plugins. 
 *CudaText* expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
@@ -477,37 +477,37 @@ Below you can see how to edit one mirror location and travel through other mirro
 
 [*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in emacs lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
-Emacs was initiated in 1976 by Richard Stallman and others.
+Emacs was initiated in 1976 by Richard M. Stallman and others.
 There is a succession plan in action.
-Dr. Stallman stepped away from the project in 2008 and others took over the maintenance of the core program.
+Richard Stallman stepped away from the project in 2008 and others took over the maintenance of the core program.
 
 Emacs has been around for 45 years. 
 According to the Lindy's Law (the future life expectancy of a technology is proportional to their current age, so every additional period of survival implies a longer remaining life expectancy), it should be around for another 45 years.
-Here we are referring to GNU emacs. 
+Here we are referring to GNU Emacs. 
 About other variants of Emacs are available.
-Gnu Emacs is the base emacs that some of the variants are built on top of.
-These include doom emacs, preclude emacs, spacemacs, and scimax. 
+Gnu Emacs is the base Emacs that some of the variants are built on top of.
+These include doom Emacs, preclude Emacs, spacemacs, and scimax. 
 
-Like PyMOL, emacs was designed to be highly extensible.
+Like PyMOL, Emacs was designed to be highly extensible.
 This is large part of its popularity.
 Over 4600 packages have been developed by users over the years.
 Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
 
-The inteface to Emacs is either a X-terminal window or a simple GUI that can be made complex by opening many *buffers*, which are like windows.
+The interface to Emacs is either a X-terminal window or a simple GUI that can be made complex by opening many *buffers*, which are like windows.
 The management and navigation of buffers is a skill that the beginner needs to master early.
 
-Emacs is desigined to enable mouse free work although some buffers require that selections be made by using the mouse.
+Emacs is designed to enable mouse free work although some buffers require that selections be made by using the mouse.
 Emacs is infamous for having 1800 key bindings involving heavy use of the alt or meta key.
-However, there is in-line documentation and autosugestions that greatly ease the discovery of new key bindings. 
-You only really need to memorize several dozen key bindings to be productive in emacs.
+However, there is in-line documentation and autosuggestion that greatly ease the discovery of new key bindings. 
+You only really need to memorize several dozen key bindings to be productive in Emacs.
 
-Vim users can quickly become productive in emacs because the vim key bindings are available through the add-on package called evil-mode.
-Mastery of the vim key bindings is initially painful becuase it is like learning how to type for the first time.
-Howver, Vim key bindings are more efficient for editing text, so the ability to use them in emacs lead to a powerful combination.
-The evil-mode in emacs enables the use of Vim bindings inside of emacs.
-The availabilty of the evil-mode means that vim-users can retain their vim skills. Made m
+Vim users can quickly become productive in Emacs because the vim key bindings are available through the add-on package called evil-mode.
+Mastery of the vim key bindings is initially painful because it is like learning how to type for the first time.
+However, Vim key bindings are more efficient for editing text, so the ability to use them in emacs lead to a powerful combination.
+The evil-mode in Emacs enables the use of Vim bindings inside of Emacs.
+The availability of the evil-mode means that vim-users can retain their vim skills. Made m
 
-Modes are states of emacs where a subset of commands are avaialable.
+Modes are states of Emacs where a subset of commands are available.
 Modes avoid clashes due to functions of the same name in different packages.
 They are analogous to scopes in other text editors.
 Example, there is a python-mode for working with python script files.
@@ -530,14 +530,14 @@ The commands in the *init.el* file written in elisp, but it is relatively easy t
 <summary><b>Installing emacs</b></summary>
 
 	
-Like *vim*, *emacs* can be installed as a stand-a-lone application or via a software repository.
-There are several flavors of *emacs*.
+Like *vim*, *Emacs* can be installed as a stand-a-lone application or via a software repository.
+There are several flavors of *Emacs*.
 *Spacemacs* is a version that has a gentler learning curve.
 Vim key bindings can be used in it.
 It does have its own keybinding to be masteed.
-This leads to the porblem of needing to translate Spacemacs to Gnu Emacs.
+This leads to the problem of needing to translate Spacemacs to Gnu Emacs.
 
-Doom emacs and *Prelude emacs* are additional off-shoots that is suppose to be easier to adopt.
+Doom Emacs and *Prelude Emacs* are additional off-shoots that is suppose to be easier to adopt.
 They are similar to Spacemacs.
 
 Emacs can be downloaded from \url{} and insalled with a platform specific installer.
@@ -546,7 +546,7 @@ As of 2020, version 26 is recent enough.
 Emacs is also available for a number of software repositories.
 The homebrew repository for Mac OS is popular.
 The brew command is \mintinline{bash}{}. 
-The resulting binary needs to be linked to an application in the Applcations folder. 
+The resulting binary needs to be linked to an application in the Applications folder. 
 
 
 
@@ -556,7 +556,7 @@ The resulting binary needs to be linked to an application in the Applcations fol
 
 The package yasnippets is one the most popular packages in emacs for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
-The user can naviage the table find a relevent snippet.
+The user can navigate the table find a relevant snippet.
 This table is redundant with ls snippet. 
 
 
@@ -575,7 +575,7 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 
 ### EIN: emacs ipython notebook
 
-The oldest package for this purpose [EIN](), emacs ipython notebook.
+The oldest package for this purpose [EIN](), Emacs Ipython notebook.
 It was started shortly after the Ipython Notebook became available in 2012.
 It was evolved to keep up with changes in the notebook.
 It cannot provide access to the widgets nor the notebook extensions.
@@ -586,18 +586,18 @@ M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
 M-x p-ins RET ein RET
 ```
 
-In the minibuffer at the bottom of the GUI, enter the ```M-x ein:notebooklist-login``` to start up a Jupyter server.
-Alternativerly, enter the shorthand with ```M-x ein:n-l RET```.
+In the mini-buffer at the bottom of the GUI, enter the ```M-x ein:notebooklist-login``` to start up a Jupyter server.
+Alternatively, enter the shorthand with ```M-x ein:n-l RET```.
 
 You will be asked to enter the port for the server.
 Enter `8888` to use the local server.
 You will probably have to enter a password for the Jupyter server.
 You can disable this requirement in a Jupyter configuration file.
 
-You will be asked to select a kernel from a list of kernals with checkboxes.
+You will be asked to select a kernel from a list of kernels with checkboxes.
 Use the left mouse button to select a kernel.
 
-You can create a new notebook or open an existng notebook.
+You can create a new notebook or open an existing notebook.
 
 
 ### emacs-jupyter
@@ -624,13 +624,13 @@ See the section below on org-mode.
 
 The ESS package enables the editing and running of several statistical packages from inside of emacs.
 ESS stands for emacs speaks statistics. 
-The supported pacakges include R, BUGS, JAGS, and STATA.
+The supported packages include R, BUGS, JAGS, and STATA.
 Note the absence of Stan and pymc3.
 There is a separate stan-mode, but stan can also be run inside of R via either the rstan or rstanarm packages.
 The bio3d R-package can be installed and used analyze data from structures loaded in PyMOL. 
 
 This mode enables the editing of R-markdown documents. 
-It should be possible to run PyMOL via reticulate from inside a R markdown document, has the file extension of 'Rmd'.
+It should be possible to run PyMOL via the reticulate from inside a R markdown document, has the file extension of 'Rmd'.
 There is a poly-R that also has to installed to turn on the recognition of R-markdown packages.
 
 </details>
@@ -640,21 +640,21 @@ There is a poly-R that also has to installed to turn on the recognition of R-mar
 <details>
 <summary><b>Variants of emacs to consider</b></summary>
 
-These variants might be suitable for the impatient who do not want to I IBlaine
+These variants might be suitable for the impatient who do not want to master GNU Emacs.
 
 ### Spacemacs
 
-[Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU emacs.
-It is designed to be easier to use than emacs.
-It can be operated with vim, emacs, or a hybrid of key bindings.
-You enalbe layers to extend its functionality.
-It can edit Jupyter Notebooks via the ipython-layer.
+[Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU Emacs.
+It is designed to be easier to use than Emacs.
+It can be operated with vim, Emacs, or a hybrid of key bindings.
+You enable layers to extend its functionality.
+It can edit Jupyter Notebooks via the Ipython-layer.
 
 
 ### SciMax
 
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
-This variant of emacs is being optimized for supporting the preparation of scientific manuscripts.
+This variant of Emacs is being optimized for supporting the preparation of scientific manuscripts.
 Several YouTube videos of John talking about SciMax are available.
 This editor is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
 </details>
@@ -782,46 +782,46 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 Jupyter Lab is an integrated development environment (IDE) that runs in your web browser.
 It can read in Jupyter Notebooks.
 It supports several kinds of windows including one for text editing. 
-It is similar to the Rstudio, Rodeo, and Spyder IDEs.
+It is similar to the RStudio, Rodeo, and Spyder IDEs.
 Its first stable release was in 2018.
 I 
 
-The Jupyter Notebook is an electronic notebook for interactive programing in Python.
+The Jupyter Notebook is an electronic notebook for interactive programming in Python.
 It can be extended for use with scores of other programming languages via kernels.
 It was released initially in the fall of 2014.
 
-The Jupyter Notebook descended from the Ipython Notebook project, which started in 2011.
-The Ipython Notebook project emerged out of the Ipython project which was started in 2001 by Fernando Perez when he was a graduate student in Physics as the U of Colorado.
+The Jupyter Notebook descended from the IPython Notebook project, which started in 2011.
+The IPython Notebook project emerged out of the IPython project which was started in 2001 by Fernando Perez when he was a graduate student in Physics as the U of Colorado.
 
 The Jupyter Notebook is composed of cells.
 Code cells can be edited.
 They contain blocks of code that generally do one thing.
 All of the code in a cell is run at once.
-The use of runnable blocks of code eases debugging.
+The use of executable blocks of code eases debugging.
 
 PyMOL can be import into an active notebook as a module.
 
 Jupyter Notebooks are very fun to use when developing new code because the interleaved output in the form of beautiful figures provides instant gratification. 
 
 Jupyter Notebooks are also effective for providing training in the classroom and workshops.
-It is designed to support reproducible research and literate programmming.
+It is designed to support reproducible research and literate programming.
 The main gotcha is that you have to be aware of the state of the computer.
 That is, you have to be mindful of the order in which the cells were executed.
 
-Jupyter Notebook and JupuyterLab have extensions that extend their capabilities, 
-but their extensions are not interchangable.
-Both have extensions for vim keybindingas which will appeal to vim users.
+Jupyter Notebook and Jupyter Lab have extensions that extend their capabilities, 
+but their extensions are not interchangeable.
+Both have extensions for vim keybindings which will appeal to vim users.
 
 
-<h4 name="jupyterlabsnippets"> Jupyter Lab Snippets</h4>
+<h4 name="jupyterlabsnippets"> JupyterLab Snippets</h4>
 
 [JupuyterLab](https://jupyter.org/) aims to be an Integrated Development Environment that can edit Jupyter Notebooks side-by-side with a markdown or LaTeX document in a text editor.
-*JupyterLab* has multiple windows like *Rstudio*: a code console, terminal shells, juypter notebook editor, a text editor, and the jupyter notebook editor.
+*JupyterLab* has multiple windows like *Rstudio*: a code console, terminal shells, Jupyter Notebook editor, a text editor, and the Jupyter Notebook editor.
 In this fashion, JupyterLab has much stronger support for literate programming than the classic *Jupyter Notebook*.
 
-Like *Rstudio*, *JupyterLab* can open and edit a variety of markedup documents like markdown, html, and latex files.
+Like *Rstudio*, *JupyterLab* can open and edit a variety of markup documents like markdown, html, and latex files.
 The code console can run code interactively and shows the order in which the code was executed.
-Tab completion and tooltips work in the code console as they do in Juyter Notebook.
+Tab completion and tooltips work in the code console as they do in Jupyter Notebook.
 Selected codes chunks in markdown and latex documents can be connected to a code console.
 The tex editor supports vim key bindings.
 Some documents can be opened with one of several alternate editors.
@@ -829,18 +829,13 @@ Edits of markdown and LaTeX documents are rendered immediately.
 
 *JuputerLab* has several extensions for snippet libraries that is not backward compatible with the *Jupyter Notebook*.
 The snippet extension is 
-The snippets are accessible from submenus, and it is easy to add new snippets.
-Snippets in a category are accessible from a submenu.
+The snippets are accessible from sub-menus, and it is easy to add new snippets.
+Snippets in a category are accessible from a sub-menu.
 There is no support for tab triggers and tab stops are this time.
 
 
-
-
-
-
-
 <A href=#jupyternotebook>Jupyter Notebook, classic</A>has two extensions for snippet management.
-These store the snippets in a javascrpt file, and the snippets are accessed from a pulldown menu.
+These store the snippets in a JavaScript file, and the snippets are accessed from a pull-down menu.
 Jupyter Notebook and JupyterLab also allow the use of clippings as snippets via the `%load` magic.
 
 Jupyter Notebook can be used with ipymol to send commands to PyMOL and to import output from 
@@ -852,14 +847,14 @@ See below for more information.
 
 
 
-Like Jupyter Notebook extensions, *JupyterLab* extensions are written in Javascript, but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
+Like Jupyter Notebook extensions, *JupyterLab* extensions are written in JavaScript, but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
 The corresponding functionalities are being rebuilt by many volunteer developers.
-The extensions include support for vim keybindings in the text editor as well as in the editor of Juptyer notebooks.
+The extensions include support for vim keybindings in the text editor as well as in the editor of Jupyter Notebooks.
 The latter functionality enables rapid navigation of the notebook cells without using the mouse.
 There are two different extensions that support snippet libraries.
 They format for these libraries differs from that for the Jupyter Notebook as described below.
-The good news is that required format is similar to the clippings for BBedit, so it is trivial for the user to add new snippets as described below.
-The bad news is that there is no support for tabtriggers and tabstops.
+The good news is that required format is similar to the clippings for BBEdit, so it is trivial for the user to add new snippets as described below.
+The bad news is that there is no support for tab triggers and tab stops.
 
 All-in-all, new Jupyter users should start with JupyterLab, and veteran Jupyter Notebook users should switch to JupyterLab.
 <details>
@@ -868,10 +863,10 @@ All-in-all, new Jupyter users should start with JupyterLab, and veteran Jupyter 
 The *JupyterLab* provides many enhancements for the editing of *Jupyter Notebook*.
 First, the cells can be dragged and dropped to rearrange them in the notebook.
 Second, the cells can be dragged between notebooks to copy the contents. 
-Third, multiple views of a single notebook can be opened. Changes in one notebook are synchrotronized with the remaining notebooks.
+Third, multiple views of a single notebook can be opened. Changes in one notebook are synchronized with the remaining notebooks.
 Fourth, a blue bar on the blue side of the cell eases the folding and unfolding of the cell.
 Fifth, longer outputs are easier to scroll.
-Sixth, the cells output can be viewed from additional sychronized views.
+Sixth, the cells output can be viewed from additional synchronized views.
 Seventh, tab completion includes more information about the matched items.
 Eighth, the tooltip, activated with shift-tab, shows information about selected objects.
 
@@ -879,9 +874,9 @@ Eighth, the tooltip, activated with shift-tab, shows information about selected 
 This is the main reason that I would consider using *JupyterLab*.
 If you are writing manuscripts that describe computer work, it may be worth the trouble to write the part of the manuscript that refers to that code by editing it JupyterLab. 
 There is a LaTeX *JupyterLab* extension that supports the writing and compiling of latex documents.
-With this extension enabled, the tex editor supports the generation of bibliographies using a bibtex file.
-With a wide computer screen, you can display in parallel the tex document, a preview of the pdf, and the jupyter notebook that you may be describing. 
-This parallel visaulization supports the accurate transfer from of code listings, output tables, and figures from the Jupyter Notebook to the manuscript.
+With this extension enabled, the tex editor supports the generation of bibliographies using a BibtTeX file.
+With a wide computer screen, you can display in parallel the tex document, a preview of the pdf, and the Jupyter Notebook that you may be describing. 
+This parallel visualization supports the accurate transfer from of code listings, output tables, and figures from the Jupyter Notebook to the manuscript.
 </details>
 
 
@@ -899,12 +894,12 @@ Once installed, enter `jupyter lab` to launch.
 
 There are no package installers for *JupyterLab*.
 However, *JupyterLab* is pre-installed in the full Anaconda Python package.
-It is available in the base environment, but jupyter has to be installed in new environments.
+It is available in the base environment, but Jupyter has to be installed in new environments.
 With the Anaconda system installed, activate the desired environment where you want to install *JupyterLab* with `conda activate <env>` and then `conda install jupyter`.
-This command will install both *JupyterLab* and the jupyter notebook.
+This command will install both *JupyterLab* and the Jupyter Notebook.
 
 Outside of Anaconda, *JupyterLab* is installed with a package manager like any other Python module. 
-With pip, the install command is simply  `pip install --user jupyter` to install in juputer in a local library rather than the system library.
+With pip, the install command is simply  `pip install --user jupyter` to install in Jupyter in a local library rather than the system library.
 The command for users of macports is `port install py38-jupyterlab`. 
 Change the version number from Python3.8 to whatever is your current version of Python.
 
@@ -921,21 +916,21 @@ The command for the users fo Centos is  `To be determined`.
 <summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
 
 The kernels are easily installed for a particular python interpreter.
-Breifly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
+Briefly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
 
 ```bash
 /Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
 /Applications/PyMOL.app/Contents/bin/python -m ipykernel install
 ```
 
-On Mac OS, the kenerls are stored in `~/Library/jupyter/kernels`.
+On Mac OS, the kernels are stored in `~/Library/jupyter/kernels`.
 A python kernel as a separate folder with three files in it.
 Two of the files are images of the python logo.
 The third file is a javascript file, `kernel.json`, that is created by the above ipykernel install operation.
-However, it is trival to manually create a copy of the folder and its contents to create a new kernel for a new Python interpreter.
+However, it is trivial to manually create a copy of the folder and its contents to create a new kernel for a new Python interpreter.
 One has to to edit the path in the kernel.json to the Python interpreter on the third line (see code listing below) and change the `display_name` of the kernel on the nineth line.
 The display name can have any format.
-There is no need to include a period between pymol and python as in the example.
+There is no need to include a period between PyMOL and python as in the example.
 The kernel.json file is a plain text file that can be edited with any text editor.
 (JSON represents JavaScript Object Notation.)
 The kernel.json file for the Python interpreter inside the PyMOL.app on the Mac is shown below.
@@ -977,7 +972,7 @@ The addition of kernels for non-python programs requires different protocols tha
 <summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
 
 *JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
-The snippets are in individual files in analogy to the code clippings of Bbedit.
+The snippets are in individual files in analogy to the code clippings of BBEdit.
 The snippets are stored with the appropriate file extension in the directory `./Library/Jupyter/snippets` on the Mac.
 Nested submenus are created by making subfolders within the snippets folder.
 These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
@@ -989,7 +984,7 @@ When the jupyterlab-snippets extension is in synch with the current version of *
 First, install node.js.
 If you are using Anaconda, you can install node.js with the command `conda install -c conda-forge nodejs`
 On the Mac OS, use `brew install node` with homebrew or `port install nodejs14` with macports (or at least nodejs10).
-Start jupyterlab (e.g., `python3.8 -m jupyter-lab`).
+Start Jupyter Lab (e.g., `python3.8 -m jupyter-lab`).
 Click on the extension manager button in the left margin.
 It looks like a painter's palette.
 Then select the enable button to activate the extensions. 
@@ -1000,7 +995,7 @@ Select ` ` and then click on the install button.
 If the install fails, the extension can be installed manually in the terminal with these commands.
 
 If the above commands fail because the version of the extension in PyPi is not available yet for the current version of *JupyterLab*, you might get lucky by installing the development version of the extension. 
-The current instructions are found on the github page for this project \url{}.
+The current instructions are found on the github page for this project.
 This issues tab on the GitHub page can be used to resolve any further difficulties.
 
 This project has three related webpages.
@@ -1008,8 +1003,8 @@ The first page is linked to the notebook extension and is a javascript site for 
 This webpage is two years out of date. 
 The original developer of the extension is no longer supporting it.
 Two other developers have taken over the project because it is so valuable.
-There is a PyPI webpage for the project that has access to a wheel file for the nbextension and a tar file of the source code.
-This page also includes a link to the github page for this project.
+There is a PyPi webpage for the project that has access to a wheel file for the nbextension and a tar file of the source code.
+This page also includes a link to the GitHub page for this project.
 The GitHub page has the current information about installation trouble shooting.
 
 You should beware that the upgrading of *JupyterLab* in the future could lead to the breaking of your various *JupyterLab*extensions. 
@@ -1061,17 +1056,17 @@ The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the C
 <h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
 
 The classic *Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like the functions that reside in separate cells in the notebook.
-*Juptyer Notebook* evolved from the *Iptyhon Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
-*JuptyerLab* is an IDE that can read the classic *Jupyter Notebook* while enabling writiing in text documents in parallel windows.
+*Juptyer Notebook* evolved from the *IPython Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
+*JuptyerLab* is an IDE that can read the classic *Jupyter Notebook* while enabling writing in text documents in parallel windows.
 See above.
-*JuptyerLab* has been around for several week and has not displaced the popularity of *Jupyter Notebook* because they are so darn fun to use.
-The Joy of *Jupyter Notebook* has discouraged verterans from switching, so we decided to support the *Jupyter Notebook* because diehardts will be using them for another five years.
+*JupyterLab* has been around for several week and has not displaced the popularity of *Jupyter Notebook* because they are so darn fun to use.
+The Joy of *Jupyter Notebook* has discouraged veterans from switching, so we decided to support the *Jupyter Notebook* because diehards will be using them for another five years.
 The one advantage of the *Jupyter Notebook* over *Jupyter Lab* is the support for embedding in notebook cells static or interactive images from PyMOL or nglview respectively.
 
 
 *Jupyter Notebook* has two extensions for snippet management.
 These notebook extensions have to be installed first.
-The snipppets are stored in JSON files so they are not so easy to edit becuase of the nested braces.
+The snippets are stored in JSON files so they are not so easy to edit because of the nested braces.
 
 A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension.
 The these snippets can be loaded as need by using the load magic.
@@ -1094,26 +1089,26 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 
 The *ipymol* module was developed by Carlos Hernandez: https://github.com/cxhernandez/ipymol.
 It enables the sending of commands to PyMOL and the return of data and images from PyMOL to notebook cells.
-It faciliates literate programming with PyMOL.
+It facilitates literate programming with PyMOL.
 
 The pre-requisites for installing ipymol are as follows:
 
-1. Make a jupyter notebook kernel for Python interpreter inside of the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for a description of how to make one.
+1. Make a Jupyter Notebook kernel for Python interpreter inside of the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for a description of how to make one.
 2. Install the following build of ipymol at the PyMOL prompt. You need to log into your GitHub account first.
 pip install git+pip install git+https://github.com/cxhernandez/ipymol. 􏰀→git@2a30d6ec1588434e6f0f72a1d572444f89ff535b
 3. Make a bash alias to this PyMOL app file.
-4. Launch the jupyter notebook and select the pymol.python kernel.
-5. Open a terminal instance from the File pulldown in jupyter notebook.
+4. Launch the Jupyter Notebook and select the pymol.python kernel.
+5. Open a terminal instance from the File pull-down in Jupyter Notebook.
 6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.
-7. Enter the following code to load ipymol and conmect to PyMOL
+7. Enter the following code to load ipymol and connect to PyMOL
 
 ```python
 from ipymol import viewer as ipv 
 ipv.start() # Start PyMOL RPC server
 ```
 
-Now you can change the scene manually and send the display as static image to a cell in the jupyter notebook.
-It is assumed that the viewer class of the ipymol moduel has been imported as ipv.
+Now you can change the scene manually and send the display as static image to a cell in the Jupyter Notebook.
+It is assumed that the viewer class of the ipymol model has been imported as ipv.
 
 I made the following modifications of roundview.py to return to the notebook the current settings of the scene in PyMOL. 
 The cmd.get_view was replaced with ipv.get_view.
@@ -1162,7 +1157,7 @@ ipv.extend("rv", rv)
 <summary><b>Making a pymol.python kernel for JupyterLab and Jupyter Notebook</b></summary>
 
 The following Jupyter kernel will work for both the notebook and Jupyterlab.
-It is a simple javascript program.
+It is a simple JavaScript program.
 Make a directory called 'pymol.python' the folder `~/Library/jupyter/kernels` on a Mac.
 Paste the following code in new text file named `kernel.json`.
 If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
@@ -1198,7 +1193,7 @@ This commented out snippet is also printed to the cell so that it can serve as a
 The `pml` code cannot be sent directly to PyMOL because a `.pml` kernel for the *Jupyter Notebook* has yet to be developed.
 Instead, the *Jupyter Notebook* can be used to gather and edit code fragments.
 The notebook cells can be merged, and the code can be copied and pasted into an external `.pml` script file.
-In addition, the notebook can be used to document the cells of code with interweaved cells containing markdown code.
+In addition, the notebook can be used to document the cells of code with interleaved cells containing markdown code.
 The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
 The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
 </details>
@@ -1243,7 +1238,7 @@ Citation for roundview.py script
 <details>
 <summary><b>Installing and using snippets with kate</b></summary>
 	
-If installed with macports, the app resides in `/Applications/macports/kate.app`.
+If installed with MacPorts, the app resides in `/Applications/macports/kate.app`.
 The snippet plugin has to be turned on. *kate* requires macOS 10.14 or newer. 
 
 The snippets are stored in a single `.xml` file. 
@@ -1311,9 +1306,9 @@ However, there is no mirroring of tab stops at this time.
 <h3 name="LightTable"> Light Table (Universal) </h3>
 	
 [*Light Table*](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
-Those users who have dabbled in *emacs* will recognize the syntax of the settings in behavior files which remind me of *emacs* init files.
-*Light Table* is like a GUI version of *emacs*.
-It has very an attractive, uncluttered GIU.
+Those users who have dabbled in *Emacs* will recognize the syntax of the settings in behavior files which remind me of *Emacs* init files.
+*Light Table* is like a GUI version of *Emacs*.
+It has very an attractive, uncluttered GUI.
 
 *Light Table* supports previews that enable interactive editing of code to change the output.
 For example, code chunks for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
@@ -1418,7 +1413,7 @@ All of the snippets for one language are in a single file with the `.snippets` f
 In this case, the file is labeled `pml.snippets`.
 
 The snippets are installed to be installed in the folder `.config/micro/plugins/snippets`.
-In the pymolsnips directory enter:
+In the *pymolsnips* directory enter:
 
 ```bash
 $ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
@@ -1427,12 +1422,12 @@ $ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
 Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
 
 `Alt-S` is mapped to the `snippet0insert` command which inserts the snippet specified by a tabtrigger name.
-`Alt-W` advances the cursort to the next tabstop.
+`Alt-W` advances the cursor to the next tab stop.
 `Alt-A` ends the editing the snippet. 
 `Alt-D` deletes the snippet that is being edited.
 
 A lexer for syntax highlighting is in the file called `pml.yaml`.
-This file can be donwloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
+This file can be downloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
 This lexer is stored in the hidden folder `.config/micro/syntax` which you will need to create.
 
 ```bash
@@ -1446,7 +1441,7 @@ $ cp pml.yaml ~/.config/micro/syntax/.
 ```
 
 Enter `Control-Q` and then enter `help color` to learn about the available color schemes and to learn about syntax highlighting.
-I entered `set colorscheme bubblegum` to apply a light colorscheme to *Micro* as shown below.
+I entered `set colorscheme bubblegum` to apply a light color scheme to *Micro* as shown below.
 A PyMOL script file has been opened and is color highlighted.
 You can make the tex larger for easier reading by entering `cmd-+` a number of times.
 
@@ -1458,17 +1453,17 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 
 <h3 name="nteract"> Nteract Notebook </h3>
 
-[nteract](https://nteract.io/) is a higly intuitive, slimed-down interface for viewing, running, and editing Jupyer Notebook.
-We highly recommned **nteract** for beginning users of Jupyer Notebooks.
-**nteract** is a stand-alone applicaton that does not use the webbrowser to view and edit Jupyter Notebooks.
+[nteract](https://nteract.io/) is a highly intuitive, slimmed-down interface for viewing, running, and editing Jupyer Notebook.
+We highly recommend **nteract** for beginning users of Jupyer Notebooks.
+**nteract** is a stand-alone application that does not use the web-browser to view and edit Jupyter Notebooks.
 The independence of **nteract** from the web makes it more secure.
 
-**nteract** can be set as the defualt application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
+**nteract** can be set as the default application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
 This feature is a big plus because it enables the rapid inspection of notebooks.
 
 **nteract** has drop down menu for access to the installed kernels.
 The kernels are installed for a particular python interpreter as described under the Jupyter Notebook above.
-Breifly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
+Briefly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
 
 ```bash
 /Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
@@ -1483,13 +1478,13 @@ A set of keyboard shortcuts are also available.
 	<img src="images/InteractNotebook2.png" width="600">
 </p>
 
-There are several major limitations to nteract compared to running Jupyter Notebook in the webbrower.
+There are several major limitations to nteract compared to running Jupyter Notebook in the web-browser.
 There are no notebook extensions.
 The markdown cells recognize a smaller subset of LaTeX.
 For example, the equation environment is not recognized.
 This limits the optional code that can be used to render multi-line equations.
 
-While the support for full-fledge literate programming is absent in **nteract**, even experienced Jupyter Notebook will enjoy using **nteract** for rapidly interogating foriegn notebooks and starting new notebooks.
+While the support for full-fledged literate programming is absent in **nteract**, even experienced Jupyter Notebook will enjoy using **nteract** for rapidly interrogating foreign notebooks and starting new notebooks.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1497,7 +1492,7 @@ While the support for full-fledge literate programming is absent in **nteract**,
 
 <h3 name="orgmode">Org-mode </h3>
 
-[Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of emacs.
+[Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of Emacs.
 The document's file extension is `org`.
 Org-mode has many features that support planning and organizing hence that the `org` file extension.
 It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
@@ -1512,9 +1507,9 @@ We provide a version of the snippet library for org-mode the flanks the snippets
 It is being developed by Greg Sexton who was a long-time user of EIN.
 It can run the R kernel for Jupyter Notebooks as well as kernels for other languages.
 
-Org-mode is a large suite of packages (100s) that support literate programming in emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.  
-You will have to master org-mode on top of mastering emacs to take advantage of this pacakge.
-You may need need to install org-babel. 
+Org-mode is a large suite of packages (100s) that support literate programming in Emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.
+You will have to master org-mode on top of mastering Emacs to take advantage of this package.
+You may need to install org-babel. 
 Scimax also uses ob-ipython.
 
 ```emacs
@@ -1538,13 +1533,13 @@ You may need to modify your .emacs or .emacs.d/init.el file by adding the follow
    ))
 ```
 
-The line starting with `;;` is a commnet line.
+The line starting with `;;` is a comment line.
 Edit the file path in the second line to point to the Python interpreter that you what to use.
 The Python interpreter that I selected had PyMOL 2.4.0 installed earlier.
 The third line turns off an annoying prompt.
 The fifth line updates images.
 
-The followng corrected org-mode code that will generate the imaage below. 
+The following corrected org-mode code that will generate the image below. 
 
 ```emacs
 My Test of ob-ipython -*- mode: org -*-
@@ -1594,7 +1589,7 @@ The code block above has been corrected.
 [PyCharm IDE](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
 JetBrains is a well-established Cezh firm that supplies a number of IDEs, mostly for webpage development.
 
-PyCharm's selling points are strong support for autosuggestions and autocompletions to speed up the writing of code.
+PyCharm's selling points are strong support for autosuggestions and auto-completions to speed up the writing of code.
 It also supports the interactive editing of Jupyter Notebooks.
 It is easy to switch the python interpreter used in editing a Jupyter Notebook to the one side the PyMOL application.
 Then PyMOL's **cmd** module can be imported into the Jupyter Notebook, and the function **cmd.do()** can be used to issue commands written in **pml**.
@@ -1627,11 +1622,11 @@ I did not have to install a markdown previewer plugin, as I did with other text 
 Why would you want to write in markdown without a previewer?
 
 PyCharm's startup time is slower than Textmate, Sublime Text, and VSC; similar to Spyder and Komodo Edit; and much faster than that of Atom.
-Some people contend with slow startup time by keepig the application open all of the time.
+Some people contend with slow startup time by keeping the application open all of the time.
 
 The main competitor for Pycharm is the open source project Spyder.
 Spyder's current production release does not directly support code snippets; however,
-you can edit and run jupyter notebooks inside Spyder. 
+you can edit and run Jupyter Notebooks inside Spyder. 
 While doing so, you can access the snippet library for PyMOL.
 See the section on Spyder.
 
@@ -1647,7 +1642,7 @@ This file is stored in one of these three locations:
  * Windows OS:
 
 All of the snippets are stored in one xml file called *pymol.xml*.
-Eash snippet has a unique tab trigger.
+Each snippet has a unique tab trigger.
 The tab trigger's name is autosuggested after typing the first several letters.
 There is a also a description of the snippet displayed. 
 
@@ -1659,8 +1654,8 @@ The snippet includes tab stops with default values.
 The default enough need to be changed.
 The cursor stops outside of the snippet when it hits that last tab stop.
 
-You can also get a preview of a pymol function after typing its name.
-This preview incudes a listing of the code of the function: 
+You can also get a preview of a PyMOL function after typing its name.
+This preview includes a listing of the code of the function: 
 
 
 
@@ -1687,29 +1682,29 @@ These cells are rendered and displayed with the interleaved output in a notebook
 
 <h3 name="rstudio">RStudio (Universal)</h3>
 	
-[RStudio](https://rstudio.com/products/rstudio/) is an IDE for the R statistial programmming language.
+[RStudio](https://rstudio.com/products/rstudio/) is an IDE for the R statistical programming language.
 It is available for all platforms.
-Its GUi resemble a webbrowser window but it does not run in the webbrower like JupyterLab and Jptyer Notebook.
+Its GUI resemble a web-browser window but it does not run in the webbrower like JupyterLab and Jupyter Notebook.
 There is community version and a professional version.
 The latter version can interface with Jupyter Notebooks.
-The Rstudio Pro Server is available at some academic institutions.
+The RStudio Pro Server is available at some academic institutions.
 
-RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html) written in Rmarkdown.
-Rmarkdown supports literate programming.
-R and its predessor S have been used for literate programming for over two decades via Sweave, Rweave, and Knitr packages.
+RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html) written in R Markdown.
+R Markdown supports literate programming.
+R and its predecessor S have been used for literate programming for over two decades via Sweave, Rweave, and Knitr packages.
 Many books have been assembled using Knitr.
 
 There are several recent books about literate programming in R.
 
 R also supports polyglot programming. 
-R has been been extended to accommodate over twentry programming languages.
+R has been extended to accommodate over twenty programming languages.
 There is a recent book about such extensions:
 
 
 <details>
 <summary><b>Installing and running RStudio</b></summary>
 
-R has a package called *reticulate* that enbles the running of Python inside of R and Rmarkdown.
+R has a package called *reticulate* that enables the running of Python inside of R and R Markdown.
 
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -1718,14 +1713,14 @@ R has a package called *reticulate* that enbles the running of Python inside of 
 
 
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
-Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of emacs.
+Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of Emacs.
 Its command leader is the spacebar hence the word *space* in the name.
-It is very different from running the emacs in evil-mode (evil-mode enables the use of vim keybindings in *emacs*).
-As a result, it should be treated as a separate editor from *emacs* and *Vim*.
+It is very different from running the *Emacs* in evil-mode (evil-mode enables the use of vim keybindings in *Emacs*).
+As a result, it should be treated as a separate editor from *Emacs* and *Vim*.
 
 Spacemacs has its own set of mnemonic commands that you need to master.
-In other words, you will use vim, emacs, and spacemacs commands in one editor.
-It might be less intimidating if you have masterd some of the basics of vim and emacs.
+In other words, you will use vim, Emacs, and spacemacs commands in one editor.
+It might be less intimidating if you have mastered some of the basics of vim and Emacs.
 Spacemacs does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -1739,10 +1734,10 @@ Spacemacs does not go as far as allowing you to use vim plugins and configuratio
 Spacemacs comes with the package yasnippets installed, which is the engine for managing snippets.
 Spacemacs use a layer concept to build up a specific configuration.
 The layers are managed by editing the *.spacemacs* file.
-A few suggested layeres are listed under `dotspacemacs-configuration-layers`.
+A few suggested layers are listed under `dotspacemacs-configuration-layers`.
 Most of them are initially commented out with two semicolons on the left.
 
-Add yasnippet-snippets s is one of the defualt layers that are listed but are commened out with two semicolons on the left.
+Add yasnippet-snippets s is one of the defualt layers that are listed but are commented out with two semicolons on the left.
 Remove the two semicolons.
 Take care to use spaces and not a tab to indent yasnippet.
 
@@ -1771,7 +1766,7 @@ The current production version is in the 4.X series.
 <details>
 <summary><b>Installing and using snippets with Spyder</b></summary>
 
-The current and development versions of **sypder** can be installed on the Mac OS with macports.
+The current and development versions of *Spyder* can be installed on the Mac OS with macports.
 This 
 
 ```bash
@@ -1779,13 +1774,13 @@ sudo port install py38-spyder-devel
 ```
 
 Spyder does not support snippets.
-However, the Jupyter Notebook can be run and edited in Sypder after installing the spyder-notebook plugin.
+However, the Jupyter Notebook can be run and edited in Spyder after installing the Spyder-Notebook plugin.
 This plugin imports a full instance of the notebook with the menu bar, toolbar, and code cells.
-It can be faster to open a notebook in this fashion that via a webbrowser.
+It can be faster to open a notebook in this fashion that via a web-browser.
 
 
 
-The menu bar can include customized menus that can include pulldown access to collections of code snippets (see below).
+The menu bar can include customized menus that can include pull-down access to collections of code snippets (see below).
 The toolbar can include access to the functionality of various notebook extensions. 
 [Source)(https://jupyter-notebook.readthedocs.io/en/stable/).
 
@@ -1796,22 +1791,22 @@ The toolbar can include access to the functionality of various notebook extensio
 
 
 In contrast, PyCharm only imports the cells.
-The snippets from the notebook extension in Jupyter Notebooks are accessible to the code cells in the Jupyter Notebok in spyder.
+The snippets from the notebook extension in Jupyter Notebooks are accessible to the code cells in the Jupyter Notebook in Spyder.
 
-The spyder-notebook plugin can be installed with conda if you are using the spyder from anaconda. 
+The Spyder-Notebook plugin can be installed with conda if you are using the Spyder from anaconda. 
 
 ```bash
 conda install -c conda-forge spyder-notebook 
 ```
 
 
-The plugin can alternately be installed using the desired Python interpretar (e.g., Python3.8 from macports) and pip:
+The plugin can alternately be installed using the desired Python interpreter (e.g., Python3.8 from MacPorts) and pip:
 
 ```bash
 /opt/local/bin/python3.8 -m pip install spyder-notebook
 ```
 
-Note that in this case, PyMOL was installed with  macports  Python3.8 to ease accessing pymol from the Jupyter Notebook.
+Note that in this case, PyMOL was installed with MacPorts Python3.8 to ease accessing pymol from the Jupyter Notebook.
 The notebook also had full access to all other modules installed for macports Python3.8.
 PyMOL was installed with the following command. 
 
@@ -1852,7 +1847,8 @@ The free trial period is infinite.
 	
 The snippets are stored in separate files with the file extension `.sublime-snippet`.
 
-*Sublime Text 3* strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf. Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
+*Sublime Text 3* strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf.
+Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
 
 For both all users (Mac, Windows, Linux), go to `Preferences-->Browse Packages...-->
 User-->snippets`. You may need to create the subdirectory called **snippets**. Copy and paste `st3pymolsnips` into the **snippets** folder. 
@@ -1861,14 +1857,17 @@ For command line action on the Mac, create the `snippets` directory in the *Subl
 ```bash
 $ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
 ```
+
 Add the snippet files to the *Sublime Text 3* folder:
 ```bash
 $ cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
 ```
-You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/` and it should still work. 
+
+You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`, and it should still work. 
 
 Restart *Sublime Text 3*, open a PyMOL script file, and then enter `ao` and  hit tab.
 Sixteen lines of code should appear.
+
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif">
 </p>
@@ -1888,8 +1887,6 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 
 
-
-
 <h3 name="TextMate">TextMate (Mac only)</h3>
 	
 [*TextMate*](https://macromates.com) is freely available but only for Mac OS.
@@ -1901,7 +1898,7 @@ The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 b
 *TextMate* was a pioneer application in the development of snippet libraries.
 *TextMate's* approach to snippets has served as a role model for other text editors.
 *TextMate* snippets can be ported to *Sublime Text 3* and *PyCharm*.
-Chapter 6 in the book by Gray provides a good overview of the features of snippets in *Textmate*.
+Chapter 6 in the book by Gray provides a good overview of the features of snippets in *TextMate*.
 
 <details>
 <summary><b>Installing and using snippets with TextMate</b></summary>
@@ -1924,7 +1921,7 @@ This file has the developer's contact information, the name of the snippet colle
 
 The `PyMOL.tmbundle`  shows up in the Bundles pull-down as `PyMOL.pml`.
 Select `PyMOL.pml` and then a new menu will appear with a list of the snippets.
-The descriptions of the snippets are on the left and the corresponding tabtrigger is on the right.
+The descriptions of the snippets are on the left and the corresponding tab trigger is on the right.
 The snippet can be added to the current pml document by selecting the snippet with the GUI or by entering the tabtrigger name.
 
 The bundle pull-down provides access to a bundle editor.
@@ -1947,16 +1944,16 @@ There are over 18,000 plugins available.
 Vim is free.
 
 A newer branch of *Vim* called *neovim* is also available.
-Either are available from software repositories like macports, fink, homebrew, or as stand-a-lone applications.
+Either are available from software repositories like MacPorts, fink, Homebrew, or as stand-a-lone applications.
 Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
 That bug has been fixed in version 8.1.2152.
-I found that the macports Vim was behind this version.
-I tried to compile Vim version 8.2.12; I gave due to inference from conda in the julia installed by homebrew.
-I installed Vim version 8.2.0 via homebrew.
+I found that the MacPorts Vim was behind this version.
+I tried to compile Vim version 8.2.12; I gave due to inference from conda in the Julia installed by Homebrew.
+I installed Vim version 8.2.0 via Homebrew.
 This version worked fine.
 
 Vim focusing on the editing process where most of the time is spent thinking and not generating new text.
-The *Vim* keybindings for text editing are so useful that the they are available for the rival text editor *emacs* as well as many other text editors.
+The *Vim* keybindings for text editing are so useful that the they are available for the rival text editor *Emacs* as well as many other text editors.
 The secret to keeping your sanity while using *Vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
 Numerous blog posts have lists of ways to think about and use Vim to improve your productivity.
 The consensus is to develop muscle memory of the commands that are useful to you by practicing their use at every opportunity.
@@ -1969,8 +1966,8 @@ There are several plugins for managing snippets.
 
 Versions of vim 8.0 and greater can use minpac to manage plugins on top the native support for plugins.
 Versions of *vim* 7.X and earlier require the use of one of the plugin managers like Vundle to install plugins.
-Most plugins have github websites of their own.
-These sites rarely mention minpac but Vundle is always mentioned.
+Most plugins have GitHub websites of their own.
+These sites rarely mention minpac, but Vundle is always mentioned.
 
 Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file.
 It is in this file that you install and update plugins, as well as comment out unused plugins.
@@ -2242,7 +2239,7 @@ The pml.snippets file can be stored in a *my-snippets* subfolder of the hidden *
 In the following setup, we use the Vundle plugin manager.
 
 The `PyMOL.snippets` could be stored inside the *UltiSnips* directory, but they would be lost if you delete the *UltiSnips* directory.
-To help make sure your snippets are not deleted if the UltiSnips directory ever gets deleted you will want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
+To help make sure your snippets are not deleted if the *UltiSnips* directory ever gets deleted you will want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
 Move the `PyMOL.snippets` file to this subdirectory.
 We will inform *vim* of this location when customizing the `.vimrc` file for *UltiSnips* a little further down.
 
@@ -2302,9 +2299,9 @@ $ mkdir -p ~/.vim/ftdetect/
 $ cd ~/.vim/ftdetect/
 ```
 
-Some *vim* plugins require that you add a flag to your `.vimrc` file to turn off filetype detection.
-You can set the filetype for a `.pml` file with the command `:set filetype=pml`. 
-To enable autodetection of the filetype in this situation, we need to make a `pml.vim` file in the `ftdetect` subdirecotry of the `ultisnips` directory.
+Some *vim* plugins require that you add a flag to your `.vimrc` file to turn off file type detection.
+You can set the file type for a `.pml` file with the command `:set filetype=pml`. 
+To enable autodetection of the file type in this situation, we need to make a `pml.vim` file in the `ftdetect` subdirectory of the `ultisnips` directory.
 
 ```bash
 $ cd ~/.vim/bundle/ultisnips/ftdetect/
@@ -2425,7 +2422,7 @@ For Mac users in the `vscpymolsnips` folder:
 ```bashOS
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
-For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. If you already have a `pml` file for snipets, simply append the `pml.json` file to the exisiting file (by copying and pasting). 
+For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting). 
 
 Next, install *bioSyntax* via `View --> Extensions`.
 Search for *bioSyntax* and hit the `Install` button.
@@ -2436,7 +2433,7 @@ You will be asked to select a theme, just select bioSyntax.
 </p>
 
 Open a file with a `.pml` file extension.
-You should see `pml` in the lower right on the bottom panel.  
+You should see `pml` in the lower right on the bottom panel.
 Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion effect. You should see syntax highlighting.
 
 <p align="center">
@@ -2485,7 +2482,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 -->
 
 
-<h2> <A name="snippetList" >List of the snippets by their tabtrigger name and description </A> </h2>
+<h2> <A name="snippetList" >List of the snippets by their tab trigger name and description </A> </h2>
 
 
 <h3 name="altloc"></h3>
