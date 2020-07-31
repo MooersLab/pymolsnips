@@ -26,6 +26,14 @@
 (package-initialize)
 
 
+;;Automated package update
+;;(require 'auto-package-update)
+;;(auto-package-update-maybe)
+;;(auto-package-update-at-time "03:00")
+
+
+
+
 (setq use-package-always-ensure t)
 ;;(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 ;;(setq custom-file "~/.emacs.d/custom-settings.el")
@@ -48,6 +56,8 @@
 
 (defvar my-init-el-start-time (current-time) "Time when init.el was started")
 
+(require 'org)
+(setq my-user-emacs-directory "~/.emacs.d/")
 
 
 ;; =======================================================================================
@@ -68,16 +78,13 @@ See help of `format-time-string' for possible replacements")
   "Format of date to insert with `insert-current-time' func.
 Note the weekly scope of the command's precision.")
 
-;; "The following function my-tangle-config-org will write all source blocks from config.org into config.el that 
-;; - are not marked as =tangle: no=
-;; - do not have the TODO state =DISABLED=
-;; - have a source-code of =emacs-lisp="
-
-(require 'org)
-
-(setq my-user-emacs-directory "/Users/blaine/.emacs.d/")
 
 (defun my-tangle-config-org ()
+  "This function will write all source blocks from =config.org= into =config.el= that are ...
+
+- not marked as =tangle: no=
+- doesn't have the TODO state =DISABLED=
+- have a source-code of =emacs-lisp="
   (require 'org)
   (let* ((body-list ())
          (output-file (concat my-user-emacs-directory "config.el"))
