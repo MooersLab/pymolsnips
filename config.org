@@ -40,19 +40,6 @@ Emacs still takes 10-12 seconds to load.
 
 
 
-** Automated package update
-#+BEGIN_SRC emacs-lisp
-(use-package auto-package-update
-  :ensure t
-  :init
-  (setq auto-package-update-delete-old-versions t)
-  :config
-  (auto-package-update-maybe)
-  (auto-package-update-at-time "03:00"))
-#+END_SRC
-
-
-
 ** Auto completion with the company package
 
 *** Completion words longer than 4 characters using ispell
@@ -96,10 +83,12 @@ Support for
 
 #+BEGIN_SRC emacs-lisp
 (use-package ess
-  :disabled
   :ensure t
   :commands R
+  :commands Julia
 )
+(setq inferior-ess-r-program "/opt/local/bin/R") 
+(setq inferior-julia-program-name "/usr/local/bin/julia") ;; Juy 27, 2020 linked to /Applications/Julia-1.4.app
 #+END_SRC
 
 
@@ -169,7 +158,7 @@ Enables the wrapping of strikethrough accross more than one line.
     :ensure t
     :config
     (wrap-region-global-mode t)
-    (wrap-region-add-wrapper "~" "~" nil 'org-mode)  ; code
+    (wrap-region-add-wrapper "~" "~" nil '(load "~/.emacs.d/lisp/ob-julia/ob-julia.el"))  ; code
     (wrap-region-add-wrapper "*" "*" nil 'org-mode)  ; bold
     (wrap-region-add-wrapper "/" "/" nil 'org-mode)  ; italic
     (wrap-region-add-wrapper "+" "+" nil 'org-mode)  ; strikethrough
@@ -293,6 +282,14 @@ The code below require the using C-c y in place of tab to trigger the tab trigge
 
 
 
+** Julia
+#+BEGIN_SRC emacs-lisp
+(use-package julia-repl)
+(add-hook 'julia-mode-hook 'julia-repl-mode) ;; always use minor mode
+#+END_SRC
+
+
+
 
 
 
@@ -349,7 +346,6 @@ Open markdown with marked2
 Charles Bond's pdb.el has edited by Magnus as emacs-pdb-mode.el.
 
 #+BEGIN_SRC emacs-lisp
-  :disabled
   :ensure t
   :config
   (load-file "~/.emacs.d/plugins/emacs-pdb-mode/pdb-mode.el")
@@ -369,7 +365,6 @@ The package is "python" but the mode is "python-mode".
 
 #+BEGIN_SRC emacs-lisp
 (use-package python
-  :disabled
   :mode ("\\.py" . python-mode)
   :interpreter ("python" . python-mode))
   :ensure t
@@ -382,6 +377,8 @@ The package is "python" but the mode is "python-mode".
     (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
     :config
     (remove-hook 'elpy-modules 'elpy-module-flymake) ;; <- This removes flymake from elpy
+    (setq python-indent-guess-indent-offset t);; 
+    (setq python-indent-guess-indent-offset-verbose nil) ;; turn off warning about indent
     (setq elpy-rpc-backend "jedi")
     (elpy-enable)	
     :bind (:map elpy-mode-map
@@ -396,8 +393,7 @@ It is more convenient to run pytest within emacs rather than outside of emacs on
 
 #+BEGIN_SRC emacs-lisp
 (use-package python-pytest
-  :ensure t
-  :disabled)
+  :ensure t)
 #+END_SRC
 
 
@@ -409,11 +405,7 @@ It is the oldest and most venerable interace between emacs and IPython.
 
 #+BEGIN_SRC emacs-lisp
 (use-package ein
-  :ensure t
-  :disabled)
-(use-package ein-notebook
-  :ensure t
-  :disabled)
+  :ensure t)
 #+END_SRC
 
 
@@ -450,8 +442,7 @@ Pweave enables literate programming with Python.
 
 #+BEGIN_SRC emacs-lisp
 (use-package poly-markdown
-  :ensure t
-  :disabled)
+  :ensure t)
 (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
 #+END_SRC
 
@@ -462,8 +453,7 @@ Pweave enables literate programming with Python.
 Enable use of R-markdown.
 #+BEGIN_SRC emacs-lisp
 (use-package poly-R
-  :ensure t
-  :disabled)
+  :ensure t)
 #+END_SRC
 
 
@@ -488,17 +478,7 @@ My pymol-mode
 #+END_SRC
 
 
-
-
 ** spell checking
-
-#+BEGIN_SRC emacs-lisp
-(use-package flycheck
-  :ensure t
-  :init
-  (global-flycheck-mode t))
-#+END_SRC
-
 On the Mac, macports can be used to install the unix program aspell.
 
 sudo port install aspell
@@ -511,11 +491,37 @@ This program is used by flycheck and other spell checking software.
 (setq ispell-program-name "/opt/local/bin/aspell")
 #+END_SRC
 
+
+*** Turn on flyspell for text files and for comments in programming modes
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+;;(add-hook 'find-file-hooks 'turn-on-flyspell) ;; Turn on for all files.
+#+END_SRC
+
+
+
+
+
+** syntex checking
+
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t)
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
+#+END_SRC
+
 Turn on the syntax linter for elisp flymake.
 
 #+BEGIN_SRC emacs-lisp
 (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
+'(ess-use-flymake nil)
 #+END_SRC
+
 
 
 ** stan-mode
@@ -523,15 +529,62 @@ Turn on the syntax linter for elisp flymake.
 See ESS above for interaction with R, Stata, JAGS, BUGS, and Julia.
 
 #+BEGIN_SRC emacs-lisp
+;;; stan-mode.el
 (use-package stan-mode
-  :ensure t
-  :disabled)
-(use-package company-stan
-  :ensure t
-  :disabled
+  ;; Uncomment if directly loading from your development repo
+  ;; :load-path "your-path/stan-mode/stan-mode"
+  :mode ("\\.stan\\'" . stan-mode)
+  :hook (stan-mode . stan-mode-setup)
+  ;;
   :config
-  (setq company-stan-fuzzy nil)
-  (add-hook 'stan-mode-hook 'company-stan-setup))
+  ;; The officially recommended offset is 2.
+  (setq stan-indentation-offset 2))
+
+;;; company-stan.el
+(use-package company-stan
+  ;; Uncomment if directly loading from your development repo
+  ;; :load-path "your-path/stan-mode/company-stan/"
+  :hook (stan-mode . company-stan-setup)
+  ;;
+  :config
+  ;; Whether to use fuzzy matching in `company-stan'
+  (setq company-stan-fuzzy nil))
+
+;;; eldoc-stan.el
+(use-package eldoc-stan
+  ;; Uncomment if directly loading from your development repo
+  ;; :load-path "your-path/stan-mode/eldoc-stan/"
+  :hook (stan-mode . eldoc-stan-setup)
+  ;;
+  :config
+  ;; No configuration options as of now.
+  )
+
+;;; flycheck-stan.el
+(use-package flycheck-stan
+  ;; Add a hook to setup `flycheck-stan' upon `stan-mode' entry
+  :hook ((stan-mode . flycheck-stan-stanc2-setup)
+         (stan-mode . flycheck-stan-stanc3-setup))
+  :config
+  ;; A string containing the name or the path of the stanc2 executable
+  ;; If nil, defaults to `stanc2'
+  (setq flycheck-stanc-executable nil)
+  ;; A string containing the name or the path of the stanc2 executable
+  ;; If nil, defaults to `stanc3'
+  (setq flycheck-stanc3-executable nil))
+
+;;; stan-snippets.el
+(use-package stan-snippets
+  ;; Uncomment if directly loading from your development repo
+  ;; :load-path "your-path/stan-mode/stan-snippets/"
+  :hook (stan-mode . stan-snippets-initialize)
+  ;;
+  :config
+  ;; No configuration options as of now.
+  )
+#+END_SRC
+
+
 
 
 
@@ -604,11 +657,11 @@ See https://github.com/Alexander-Miller/treemacs for more information.
   :bind
   (:map global-map
         ("M-0"       . treemacs-select-window)
-;;        ("C-x t 1"   . treemacs-delete-other-windows)
-;;        ("C-x t t"   . treemacs)
-;;        ("C-x t B"   . treemacs-bookmark)
-;;        ("C-x t C-t" . treemacs-find-file)
-;;        ("C-x t M-t" . treemacs-find-tag))
+        ("C-x t 1"   . treemacs-delete-other-windows)
+        ("C-x t t"   . treemacs)
+        ("C-x t B"   . treemacs-bookmark)
+        ("C-x t C-t" . treemacs-find-file)
+        ("C-x t M-t" . treemacs-find-tag))
 )
 
 (use-package treemacs-evil
@@ -636,43 +689,27 @@ See https://github.com/Alexander-Miller/treemacs for more information.
 
 
 
-** Weather
-
-You have to follow the instructions from July 15, 2020 on the [[https://github.com/bcbcarl/emacs-wttrin/issues/16#issuecomment-658987903][issues section]] of the github site
-to avoid the display of html code rather than the desired result. 
-The first element in the list of cites below has its weather reported after 
-enteting M-x wttrin and hitting return at the prompt "City name:".
-
-This gives the same output as can be had with the go program wego.
-This latter program can be run everytime you open a iterm2 shell by configuring the shell to run ~/go/bin/wego. 
-The emacs solution is faster because the opening zsh sheill spends 9 seconds loading.
-
-#+BEGIN_SRC emacs-lisp
-(use-package wttrin)
-  :ensure t
-  :config
-  (setq wttrin-default-cities '("Edmond, United States" "NYC" "Palo Alto, United States")))
-#+END_SRC
-
-
-This is an alternative weather package.
-It depends on forecast.io which was bought out by Apple.
-
-;#+BEGIN_SRC emacs-lisp
-; (use-package forecast
-;   :config
-;   (setq forecast-city "Edmond"
-;         forecast-country "United States"
-;         forecast-latitude 35.659
-;         forecast-longitude 97.553
-;         forecast-api-key "<deduced>"
-;         forecast-units "us"
-;         )
-;   )
-; (load (locate-user-emacs-file "forecast-api-key.el"))
-; (setq forecast-api-key "<deduced>")
-;#+END_SRC
-
+;; ** Weather
+;;
+;; You have to follow the instructions from July 15, 2020 on the  ;;[[https://github.com/bcbcarl/emacs-wttrin/issues/16#issuecomment-658987903][issues section]] of the github site
+;; to avoid the display of html code rather than the desired result.
+;; The first element in the list of cites below has its weather reported after
+;; enteting M-x wttrin and hitting return at the prompt "City name:".
+;;
+;; This gives the same output as can be had with the go program wego.
+;; This latter program can be run everytime you open a iterm2 shell by configuring the shell to run ~/go/bin/wego.
+;; The emacs solution is faster because the opening zsh sheill spends 9 seconds loading.
+;;
+;; #+BEGIN_SRC emacs-lisp
+;; (use-package wttrin)
+;;   :ensure t
+;;   :config
+;;   (setq wttrin-default-cities '("Edmond, United States" "NYC" "Palo Alto, United States")))
+;; #+END_SRC
+;;
+;;
+;; This is an alternative weather package.
+;; It depends on forecast.io which was bought out by Apple.
 
 
 
@@ -712,7 +749,7 @@ It has a mice table view and a function for automating the writing of new snippe
 
 #+BEGIN_SRC emacs-lisp
 
-(use-pacakge yasnippet
+(use-package yasnippet
     :init 
     (add-to-list 'load-path
               "~/.emacs.d/plugins/yasnippet")
@@ -730,16 +767,118 @@ I read somewhere that the org-mode setting should be at the file of this file.
 #+BEGIN_SRC emacs-lisp
 (use-package org)
 (use-package org-ref)
-(use-pacakge ox-latex)
+;;(use-package ox-latex)
 #+END_SRC
 
 
+*** ob-julia notebook
+ [[https://github.com/vincent-picaud/Julia_with_OrgMode_Example/blob/master/emacs_files/init.el][Github stie]]
+
+#+BEGIN_SRC emacs-lisp
+;; removes ugly horizontal lines in html-exported code 
+;; (not mandatory)
+(setq org-html-keep-old-src t)
+
+;; As ob-julia.el and ox-bibtex are less common, 
+;; we use a local repository.
+;;
+;; Usage: emacs -q --load emacs_files/init.el
+;;
+;; In a more usual setting one should use:
+;; (require 'ob-julia.el)
+;; (require 'ox-bibtex)
+(load-file "~/.emacs.d/lisp/ob-julia/ob-julia.el") ; works with ess-site, our notebook engine
+;;(load-file "~/.emacs.d/lisp/ox-bibtex.el"); used for bibliography HTML-export 
+
+;; allows julia src block (requires ob-julia.el)
+(setq org-confirm-babel-evaluate nil)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((julia . t)))
+
+;; defines image width in the OrgMode buffer (this is not for html
+;; exports, for this you must use #+HTML_ATTR: :width 900px for
+;; instance)
+;;
+;; This is not mandatory, but useful when one uses the gr() Plots.jl
+;; backend as it exports wide .png files. CAVEAT: use imagemagick for
+;; image resizing.
+;;
+(setq org-image-actual-width (/ (display-pixel-width) 4))
+
+;; uses the minted package instead of the listings one
+(setq org-latex-listings 'minted)
+
+;; defines how to generate the pdf file using lualatex + biber
+(setq org-latex-pdf-process
+      '("lualatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "biber %b"
+        "lualatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "lualatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+#+END_SRC
+
+
+
+;; *** julia via emacs-jupyter
+;;
+;;   #+BEGIN_SRC emacs-lisp
+;;
+;;
+;; (use-package jupyter
+;;   :ensure t
+;;   :config
+;;   (require 'jupyter-julia))
+;;
+;; (setq org-src-fontify-natively t
+;;       org-src-tab-acts-natively t
+;;       org-confirm-babel-evaluate nil
+;;       org-edit-src-content-indentation 0)
+;;
+;; (org-babel-do-load-languages
+;;  'org-babel-load-languages
+;;  '((emacs-lisp . t)
+;;    (jupyter . t)))
+;;
+;; (add-to-list 'org-structure-template-alist
+;;          '("j" "#+BEGIN_SRC jupyter-julia :session jl
+;; ?
+;; #+END_SRC"))
+;;
+;; (setq org-babel-default-header-args:jupyter-julia '((:async . "yes")
+;; 						    (:exports . "both")
+;; 						    (:results . "scalar")))
+;;
+;; (use-package julia-snail
+;;   :hook (julia-mode . julia-snail-mode)
+;;   :config
+;;   (setq split-height-threshold 15))
+;;
+;;
+;;
+;; (use-package flycheck-julia
+;;      :ensure t
+;;      :config
+;;      (flycheck-julia-setup)
+;;      (add-to-list 'flycheck-global-modes 'julia-mode)
+;;      (add-to-list 'flycheck-global-modes 'ess-julia-mode))
+;;
+;;
+;; ;;(setq org-confirm-babel-evaluate nil)
+;; ;;(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
+;; ;;(add-hook 'org-mode-hook 'org-display-inline-images)
+;; ;;(add-to-list 'load-path "/path/to/org-mode/contrib/lisp")
+;; ;;(org-babel-do-load-languages
+;; ;; 'org-babel-load-languages
+;; ;; '((emacs-lisp . t) (julia . t)))
+;; #+END_SRC
 
 *** org-eww-mode
 
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'org-eww-mode)
 #+END_SRC
+
 
 *** set ORG MODE directory
 
@@ -754,12 +893,6 @@ I read somewhere that the org-mode setting should be at the file of this file.
 This defines the sequence.
 The sequence can be defined in a document like so #+TODO: TODO IN-PROGRESS WAITING DONE
 From https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html.
-
-#+BEGIN_SRC emacs-lisp
-(setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
-#+END_SRC
-
 
 
 *** Suggested key bindings from the tutorial by David O'Toole 
@@ -792,6 +925,16 @@ Settings for org-aggenda files. See agenda with the command C-c a t.
 
 
 
+*** Cycle TODOs
+
+
+#+BEGIN_SRC emacs-lisp
+(setq org-todo-keywords
+      '((sequence "TODO" "WAITING" "IN-PROGRESS" "UNDER-REVIEW" "VERIFY" "DELEGATED" "|" "DONE" )))
+#+END_SRC
+
+
+
 *** Display/update images in the buffer after I evaluate
 
 #+BEGIN_SRC emacs-lisp
@@ -812,7 +955,6 @@ Settings for org-aggenda files. See agenda with the command C-c a t.
 
 #+BEGIN_SRC emacs-lisp
 (use-package ob-ipython
-     :disabled
      :ensure t
 )
 #+END_SRC
@@ -827,10 +969,10 @@ To enable Jupyter support for source code blocks, add jupyter to org-babel-load-
 (org-babel-do-load-languages
  'org-babel-load-languages
  '( (ipython . t)
-    ))
-;;   (python . t)
-;;   (latex . t)
-;;   (jupyter . t) ) )
+   (julia . t)
+   (python . t)
+   (latex . t)
+   (jupyter . t) ) )
 #+END_SRC
 
 
