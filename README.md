@@ -485,12 +485,13 @@ Emacs has a succession plan in action.
 Richard Stallman stepped away from the project in 2008, and others took over the maintenance of the core program.
 
 Emacs has been around for 45 years. 
-According to the Lindy's Law (the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy), it should be around for another 45 years.
+According to Lindy's Law, the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
+This law suggests that Emacs should be around for another 45 years.
 
-Here, we refer to GNU Emacs. 
 Over 100 other variants of Emacs are available.
-Gnu Emacs is the base Emacs that some of the variants are built on top of.
-These include Doom Emacs, Preclude Emacs, Spacemacs, and scimax. 
+Here, we focus on GNU Emacs. 
+Gnu Emacs is the base Emacs that most of the variants are built on top of.
+These variants include Doom Emacs, Preclude Emacs, Spacemacs, and scimax. 
 
 Like PyMOL, Emacs was designed to be highly extensible.
 This is large part of its popularity.
@@ -507,9 +508,7 @@ You only really need to memorize several dozen key bindings to be productive in 
 
 Vim users can quickly become productive in Emacs because the vim key bindings are available through the add-on package called evil-mode.
 Mastery of the vim key bindings is initially painful because it is like learning how to type for the first time.
-However, Vim key bindings are more efficient for editing text, so the ability to use them in emacs lead to a powerful combination.
-The evil-mode in Emacs enables the use of Vim bindings inside of Emacs.
-The availability of the evil-mode means that vim-users can retain their vim skills. Made m
+However, Vim key bindings are more efficient for editing text, so their availability in Emacs greatly enhances a Vim user's productivity in E-macs.
 
 Modes are states of Emacs where a subset of commands are available.
 Modes avoid clashes due to functions of the same name in different packages.
