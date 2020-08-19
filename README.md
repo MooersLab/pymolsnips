@@ -429,7 +429,7 @@ The documentation for *CudaText* is located [here](http://wiki.freepascal.org/Cu
 *CudaText* uses Python3 based plugins. 
 *CudaText* expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
 I downloaded the 64-bit version of Python3.7.4 from Python.org and used the installer to install the binary in about five minutes.
-This Python is installed in the `/Applications` directory on the Mac. 
+This Python interpreter is installed in the `/Applications` directory on the Mac. 
 When I started *CudaText*, I did not have to edit any configuration files.
 
 The snippets are stored one per file.
@@ -443,15 +443,15 @@ You may have to create the `Std.PML` folder by giving the following bash command
 $ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/
 ```
 
-When executing *CudaText* for the first time on Windows it will prompt you with the need for extraction of files. 
-Proceed with extraction and choose where you want the files to be extracted to. 
+When executing *CudaText* for the first time on Windows, it will prompt you with the need for the extraction of files. 
+Proceed with the extraction and choose where you want the files to be extracted to. 
 I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText. 
 
 Create the **Std.PML** sub directory under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets`
 
 Any snippet add-on will automatically be installed in this directory.
 
-Past the files (not the folder) of `cudatextpymolsnips` into the **Std.PML** folder. 
+Paste the files (not the folder) of `cudatextpymolsnips` into the **Std.PML** folder. 
 
 After starting *CudaText*, install the snippets plugin by navigating to the `Plugins --> Addons Manager --> Install` and search for *plugin: Snippets* and select it.
 A pop-up window will appear asking you if you would like to install, click OK.
@@ -465,10 +465,10 @@ You will also need to use the same pull-down to install the *lexer: PyMOL* and t
 Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
 
 *CudaText* allows you to edit mirrored sites for uniform editing. 
-Below you can see how to edit one mirror location and travel through other mirror sites using the Tab key.
+The animation below shows how to edit one mirror location and travel to the other mirrored sites by hitting the Tab key.
 
 <p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
+     <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
 </p>
 
 </details>
@@ -481,15 +481,16 @@ Below you can see how to edit one mirror location and travel through other mirro
 [*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in emacs lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
 Emacs was initiated in 1976 by Richard M. Stallman and others.
-There is a succession plan in action.
-Richard Stallman stepped away from the project in 2008 and others took over the maintenance of the core program.
+Emacs has a succession plan in action.
+Richard Stallman stepped away from the project in 2008, and others took over the maintenance of the core program.
 
 Emacs has been around for 45 years. 
-According to the Lindy's Law (the future life expectancy of a technology is proportional to their current age, so every additional period of survival implies a longer remaining life expectancy), it should be around for another 45 years.
-Here we are referring to GNU Emacs. 
-About other variants of Emacs are available.
+According to the Lindy's Law (the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy), it should be around for another 45 years.
+
+Here, we refer to GNU Emacs. 
+Over 100 other variants of Emacs are available.
 Gnu Emacs is the base Emacs that some of the variants are built on top of.
-These include doom Emacs, preclude Emacs, spacemacs, and scimax. 
+These include Doom Emacs, Preclude Emacs, Spacemacs, and scimax. 
 
 Like PyMOL, Emacs was designed to be highly extensible.
 This is large part of its popularity.
@@ -501,7 +502,7 @@ The management and navigation of buffers is a skill that the beginner needs to m
 
 Emacs is designed to enable mouse free work although some buffers require that selections be made by using the mouse.
 Emacs is infamous for having 1800 key bindings involving heavy use of the alt or meta key.
-However, there is in-line documentation and autosuggestion that greatly ease the discovery of new key bindings. 
+However, there is in-line documentation, and some packages provide autosuggestion that greatly ease the discovery of new key bindings.
 You only really need to memorize several dozen key bindings to be productive in Emacs.
 
 Vim users can quickly become productive in Emacs because the vim key bindings are available through the add-on package called evil-mode.
