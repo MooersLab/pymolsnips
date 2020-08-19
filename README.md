@@ -244,24 +244,23 @@ Some of these text editors can take hours to customize to fit your needs; howeve
 <h3 name="atom" > Atom (Universal) </h3>
 
 [*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
-They advertise themselves as a "hackable text editor".
-It integrates with GitHub nicely and the GUI is very attractive.
+Atom advertises to be the "hackable text editor".
+It integrates with GitHub nicely, and the GUI is very attractive.
 	
-I am not as smitten with *Atom* as other programmers.
-I found that *Atom's* startup speed bogs down as more plugins are added.
+*Atom's* startup speed bogs down as more plugins are added.
 The work-around is to always keep *Atom* open.
 	
 There is a very extensive collection of plugins available for *Atom*.
-The installation and updating of plugins is quite slow compared to other editors.
+The installation and updating of plugins can be slow compared to other editors.
 
 <details>
 <summary><b>Installing and using snippets with Atom</b></summary>
 	
-You will need the `snippets` package to be able to use the above PyMOL snippets.  
+You will need the `snippets` package to be able to use the pymolpy snippets.  
 The package installer is very intuitive.
-Simply go to `Packages --> Settings View --> Install packages/themes`.
+Go to `Packages --> Settings View --> Install packages/themes`.
 Search for **snippets** and click the install button.
-It should already be installed, but make sure that the snippets package is enabled (green bar along the button).
+It may already be installed, but you must make sure that the snippets package is enabled (green bar along the button).
 
 Shown below is an enabled `snippets` package.
 
@@ -271,31 +270,34 @@ Shown below is an enabled `snippets` package.
 
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
 Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
-Click install and enjoy!
+Click install.
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
 </p>
 
-The snippets for all languages are stored in a single file that is called `snippets.cson`.
-This file is stored in hidden folder on your home directory called `~.atom/snippets.cson`.
+The snippets for all programming languages are stored in a single file that is called `snippets.cson`.
+The snippets for different lanaguages are separated by the first line of a snippet library for a specific language.
+This line contains a spefication of the scope.
+That is, the kinds of script files to which a set of snippets applies.
+The `snippets.cson` file is stored in a hidden folder on your home directory called `~.atom/snippets.cson`.
 
-You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of
-PyMOL snippets for *Atom* to your existing `snippets.cson` file.
+You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
-To do this, for Mac users enter:
+To do this, Mac users enter:
 
 ```bash
 $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 ```
 
-You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`. Or through `Atom (menu) --> Snippets...`.
+You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`. 
+Or, you can access the `snippets.cson` file through `Atom (menu) --> Snippets...`.
 
 For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
 
-A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` that way as well. 
+A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` file. 
 
-Below is an example of the *threeMaps* snippet use with mirrored tab stops. 
+Below is an example of the *threeMaps* snippet and a demonstration of its mirrored tab stops. 
 
 <p align="center">
 	  <img src="gifs/AtomSnipsUse.gif">
@@ -313,15 +315,12 @@ The plugin Hydrogen enables the running of Juptyer Notebooks inside of Atom.
 #### I need to replace this gif.
 
 <p align="center">
-	  <img src="gifs/AtomSnipsUse.gif">
+     <img src="gifs/AtomSnipsUse.gif">
 </p>
 
 
 </details>	
 <A href=#FASTLINKS2 >Return to list of editors above.</A>
-
-
-
 
 
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
@@ -900,10 +899,10 @@ This command will install both *JupyterLab* and the Jupyter Notebook.
 
 Outside of Anaconda, *JupyterLab* is installed with a package manager like any other Python module. 
 With pip, the install command is simply  `pip install --user jupyter` to install in Jupyter in a local library rather than the system library.
-The command for users of macports is `port install py38-jupyterlab`. 
+The command for users of MacPorts is `port install py38-jupyterlab`. 
 Change the version number from Python3.8 to whatever is your current version of Python.
 
-The command for users of homebrew is `brew install jupyter`.
+The command for users of Homebrew is `brew install jupyter`.
 
 The command for he user of fink is `fink install jupyter`.
 The command for the users of cygwin on Windows is `To be determined`.
@@ -926,9 +925,9 @@ Briefly, the python interpreter for which you want to make a kernel is used as f
 On Mac OS, the kernels are stored in `~/Library/jupyter/kernels`.
 A python kernel as a separate folder with three files in it.
 Two of the files are images of the python logo.
-The third file is a javascript file, `kernel.json`, that is created by the above ipykernel install operation.
+The third file is a JavaScript file, `kernel.json`, that is created by the above ipykernel install operation.
 However, it is trivial to manually create a copy of the folder and its contents to create a new kernel for a new Python interpreter.
-One has to to edit the path in the kernel.json to the Python interpreter on the third line (see code listing below) and change the `display_name` of the kernel on the nineth line.
+One has to to edit the path in the kernel.json to the Python interpreter on the third line (see code listing below) and change the `display_name` of the kernel on the ninth line.
 The display name can have any format.
 There is no need to include a period between PyMOL and python as in the example.
 The kernel.json file is a plain text file that can be edited with any text editor.
@@ -977,7 +976,7 @@ The snippets are stored with the appropriate file extension in the directory `./
 Nested submenus are created by making subfolders within the snippets folder.
 These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
 You have to use the mouse to select the snippet.
-There is no support for *MathJax* rendering of LaTeX in the label of snippet, unlike in the classica Jupyter Notebook.
+There is no support for *MathJax* rendering of LaTeX in the label of snippet, unlike in the classical Jupyter Notebook.
 
 
 When the jupyterlab-snippets extension is in synch with the current version of *JupyterLab*, the built in *JupyterLab* extension manager eases installation.
@@ -995,15 +994,15 @@ Select ` ` and then click on the install button.
 If the install fails, the extension can be installed manually in the terminal with these commands.
 
 If the above commands fail because the version of the extension in PyPi is not available yet for the current version of *JupyterLab*, you might get lucky by installing the development version of the extension. 
-The current instructions are found on the github page for this project.
+The current instructions are found on the GitHub page for this project.
 This issues tab on the GitHub page can be used to resolve any further difficulties.
 
-This project has three related webpages.
-The first page is linked to the notebook extension and is a javascript site for the project. 
-This webpage is two years out of date. 
+This project has three related web pages.
+The first page is linked to the notebook extension and is a JavaScript site for the project. 
+This web page is two years out of date. 
 The original developer of the extension is no longer supporting it.
 Two other developers have taken over the project because it is so valuable.
-There is a PyPi webpage for the project that has access to a wheel file for the nbextension and a tar file of the source code.
+There is a PyPi web page for the project that has access to a wheel file for the nbextension and a tar file of the source code.
 This page also includes a link to the GitHub page for this project.
 The GitHub page has the current information about installation trouble shooting.
 
@@ -1017,10 +1016,10 @@ It may be best to delay the *JupyterLab* upgrade until the extensions have been 
 
 The official documentation for *JupyterLab*is the found on Read the docs.
 This documentation can be viewed as html file in a browser, or it can be downloaded as a pdf for printing. 
-There is a tiny icon in the lower left of the home page for the jupyterlab read-the-docs.
+There is a tiny icon in the lower left of the home page for the JupyterLab read-the-docs.
 Click on this icon to gain access to the pdf version.
 
-In addition to the books about jupyter notebook mentioned in the section about jupyter notebooks, books have been written about *JupyterLab* exclusively (e.g., *JupyterLab Quick Start Guide*) or describe Jupyterlab in detail in context of another topic (e.g., * *).
+In addition to the books about Jupyter Notebook mentioned in the section about Jupyter notebooks, books have been written about *JupyterLab* exclusively (e.g., *JupyterLab Quick Start Guide*) or describe JupyterLab in detail in context of another topic (e.g., * *).
 The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [github site](https://github.com/PacktPublishing/Jupyterlab-Quick-Start-Guide). 
 
 
@@ -1114,7 +1113,7 @@ I made the following modifications of roundview.py to return to the notebook the
 The cmd.get_view was replaced with ipv.get_view.
 The cmd.extend was replaced with ipv.extend.
 The myRoundedList was returned for further processing.
-The new function is called `rvj()' for roundview for jupyter.
+The new function is called `rvj()' for roundview for Jupyter.
 
 The snippet rvj will be in the snippet library eventually
 It code is listed below:
