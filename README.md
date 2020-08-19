@@ -513,13 +513,13 @@ However, Vim key bindings are more efficient for editing text, so their availabi
 Modes are states of Emacs where a subset of commands are available.
 Modes avoid clashes due to functions of the same name in different packages.
 They are analogous to scopes in other text editors.
-Example, there is a python-mode for working with python script files.
+For example, there is a python-mode for working with Python script files.
 
 Some modes are multilingual and have many additional non-editing functions like org-mode.
 Org-mode was originally designed to be a planning and outlining tool, but it has been extended to support literate programming. 
-Org-mode is large package that in of itself has over 100 add-on pages.
+Org-mode is a large package that in of itself has over 100 add-on packages.
 For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex libraries.
-The latter is done in an automated fashion by using the metadata in the pdf file.
+The latter is done in an automated fashion by using the metadata in the pdf files.
 
 
 The .emacs.d configuration directory is a hidden directory in the home directory.
@@ -540,16 +540,17 @@ Vim key bindings can be used in it.
 It does have its own keybinding to be masteed.
 This leads to the problem of needing to translate Spacemacs to Gnu Emacs.
 
-Doom Emacs and *Prelude Emacs* are additional off-shoots that is suppose to be easier to adopt.
-They are similar to Spacemacs.
+*Doom Emacs* and *Prelude Emacs* are additional off-shoots that is suppose to be easier to adopt.
+They are similar to *Spacemacs*.
 
 Emacs can be downloaded from \url{} and insalled with a platform specific installer.
 Emacs comes pre-installed on Mac OS, but you may want a more recent version.
-As of 2020, version 26 is recent enough. 
+As of August 2020, version 27 is the stable release.
 Emacs is also available for a number of software repositories.
+
 The homebrew repository for Mac OS is popular.
 The brew command is \mintinline{bash}{}. 
-The resulting binary needs to be linked to an application in the Applications folder. 
+The resulting binary needs to be linked to an application file in the Applications folder. 
 
 
 
