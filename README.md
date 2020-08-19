@@ -358,45 +358,49 @@ There is also presently the lack of a PyMOL lexer for syntax highlighting.
 <h3 name="brackets"> Brackets (Universal) </h3>
 
 The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
-*Brackets* is designed for web developers with a focus on HTML, CSS, and JavaScript.
+*Brackets* was designed for web developers with a focus on HTML, CSS, and JavaScript.
 However, *Brackets* now has support for a large number of languages.
-*Brackets* provides a Quick Edit and Live Preview mode, that run simultaneously, so changes in the pml code are deployed immediately in the preview.
-*Brackets* uses icons, located on the right panel, that navigate you to interactive settings on the application.
-The zig-zag line launches Live Preview.
+*Brackets* provides a Quick Edit and Live Preview mode that run simultaneously, so changes in the pml code are dispayed immediately in the preview window.
+
+*Brackets* has icons, located on the right panel, for navigating to the interactive settings on the application.
+The zig-zag line launches the Live Preview.
 The lego piece launches the extension manager.
-Once you install an extension, a light bulb icon will appear which launches the **Snippets Manager**.
+Once you install an extension, a light bulb icon will appear that launches the **Snippets Manager**.
 
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
 	
-Go to `File --> Extension Manager` or press the lego piece on the right panel.
-Search for the `Brackets Snippets (by edc)` and install it.
-This is snippet manager that has a GUI that enables the manual creation of user defined snippets.
+Go to `File --> Extension Manager` or press the lego piece in the right panel.
+Search for `Brackets Snippets (by edc)` and install it.
+This is the snippet manager.
+It has a GUI that enables the manual creation of user-defined snippets.
 
 <p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsExtInstall.gif">
+     <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsExtInstall.gif">
 </p>
 
-It should automatically refresh, but if not, close and reopen *Brackets*.
+The GUI should automatically refresh, but if not, close and reopen *Brackets*.
 The light bulb icon will now appear in the right panel.
 Click on the light bulb to open the **Snippets Manager**.
 
 The `settings` tab opens a menu with an import button.
 Click import and choose the [`bracketspymolsnips.yml`](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page.
-You will have to first download the file to your computer.
+You have to download the file to your computer.
 
 All of the snippets for PyMOL are in this single file.
-The next step is to choose the import scheme. I chose the recommended setting to skip snippets with the same trigger.
+The next step is to choose the import scheme.
+I chose the recommended option to skip snippets with the same tab trigger name.
 
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif">
 </p>
 
-Until the PyMOL language is available for *Brackets*, use Python to get syntax highlighting.
-This means that the PyMOL file needs a file extension of `.py` while it is being edited in *Brackets*.
+Until the PyMOL language is available via a lexer for *Brackets*, use Python for the scope of the pml files.
+The Python lexer will provide some syntax highlighting.
+This means that the PyMOL file needs to have a file extension of `.py` while it is being edited in *Brackets*.
 When finished, save this file with the `.pml` extension to be able to use it in PyMOL.
 
-In the example of snippet use below, notice how all snippets that begin with **a** are suggested.
+In the example of snippet use shown below, notice how all snippets that begin with **a** are suggested.
 Only when I press `o` do the suggestions narrow.
 This is helpful when you cannot remember the short-hand for a snippet.
 
