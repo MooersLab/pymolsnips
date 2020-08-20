@@ -481,84 +481,130 @@ The animation below shows how to edit one mirror location and travel to the othe
 [*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in emacs lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
 Emacs was initiated in 1976 by Richard M. Stallman and others.
-Emacs has a succession plan in action.
+Emacs has a leadership succession plan that has been put into action.
 Richard Stallman stepped away from the project in 2008, and others took over the maintenance of the core program.
+This plan will greatly extend the lifetime of this software project.
 
 Emacs has been around for 45 years. 
 According to Lindy's Law, the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
 This law suggests that Emacs should be around for another 45 years.
 
 Over 100 other variants of Emacs are available.
-Here, we focus on GNU Emacs. 
-Gnu Emacs is the base Emacs that most of the variants are built on top of.
-These variants include Doom Emacs, Preclude Emacs, Spacemacs, and scimax. 
+*Spacemacs* is a version that has a gentler learning curve in part because it can be driven by a menu of commands that is readily accessible.
+*Spacemacs* allows the use of Vim key bindings, emacs key bindings, or both.
+*Spacemacs* does have its own keybindings that have to be mastered.
+This leads to the problem of needing to translate Spacemacs to Gnu Emacs and back again when tapping into external Emacs resources.
+ 
+*Doom Emacs* and *Prelude Emacs* are additional off-shoots that are suppose to be easier to adopt.
+They are similar to *Spacemacs*.
 
-Like PyMOL, Emacs was designed to be highly extensible.
+*scimax* is a variant of *Emacs* that is being optimized to support scientific publication and literate programming.
+
+For several reasons, we recommend becoming productive in GNU Emacs first before trying the Emacs variants.
+First, the on-line resources that support mastery of GNU Emacs are far greater than the resources that support the variants.
+Second, the documentation for the variants assume a significant amount of prior knowledge of GNU Emacs.
+Third, these variants run on top of GNU Emacs.
+
+It takes one to two weeks of nibbling away at Emacs tutorials to become productive at text editing in Emacs.
+There is a built-in tutorial in Emacs as well as many on-line tutorials.
+Visually appealing tutorial is available here https://www.gnu.org/software/emacs/tour/.
+
+It takes several months to become competent in *Emacs*.
+It takes a life-time to master *Emacs* hence *Emacs* is known as a **life-time editor**.
+
+The one danger of Emacs is that it is easy to spend countless of hours configuring the *init.el* file and adding additional packages.
+Many beginners spend too much time adding too many packages, most of which they never use.
+As a beginner, you should ease off editing your *init.el* file if it has grown to 500 lines in the first several weeks of using Emacs.
+A good practice is to add one package at a time and master each added package before adding another new package.
+Many Emacs users have shared their *init.el* files on GitHub.
+These can provide inspiration for the beginner.
+Some have complex configurations that are often too complex to be copied and applied by the beginner.
+
+Many of these packages add functionalities that are not available in other text editors or that become available years later.
+The vast group of active contributors to Emacs will probably keep it in the lead for a long time into the future.
+
+Like PyMOL, GNU Emacs was designed to be highly extensible.
 This is large part of its popularity.
 Over 4600 packages have been developed by users over the years.
 Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
+However, manual installation is often quite simple.
 
 The interface to Emacs is either a X-terminal window or a simple GUI that can be made complex by opening many *buffers*, which are like windows.
 The management and navigation of buffers is a skill that the beginner needs to master early.
 
 Emacs is designed to enable mouse free work although some buffers require that selections be made by using the mouse.
-Emacs is infamous for having 1800 key bindings involving heavy use of the alt or meta key.
-However, there is in-line documentation, and some packages provide autosuggestion that greatly ease the discovery of new key bindings.
-You only really need to memorize several dozen key bindings to be productive in Emacs.
+Emacs is infamous for having 1800 key bindings involving multiple keys.
+The key bindings make heavy use of the alt or meta key.
+However, there is in-line documentation, and some packages provide autosuggestions that greatly ease the discovery of new key bindings.
+You only really need to memorize several dozen key bindings to become productive in Emacs.
+The remaining knowledge is easy to acquire on an *as needed* basis.
 
-Vim users can quickly become productive in Emacs because the vim key bindings are available through the add-on package called evil-mode.
-Mastery of the vim key bindings is initially painful because it is like learning how to type for the first time.
-However, Vim key bindings are more efficient for editing text, so their availability in Emacs greatly enhances a Vim user's productivity in E-macs.
+Vim users can quickly become productive in Emacs because the Vim key bindings are available through the add-on package called evil-mode.
+Mastery of the Vim key bindings in Vim is initially painful because it is like learning how to type for the first time.
+Here again, mastery of a few dozen key bindings will enable you to be productive in Vim and in Evil-mode in Emacs.
+Vim key bindings are thought to bear more efficient for editing text than Emacs key-bindings, so their availability in Emacs greatly enhances a Vim user's productivity in E-macs.
 
-Modes are states of Emacs where a subset of commands are available.
+Mastery of Vim key-bindings is a wise investment because they are available in many text editors and IDEs.
+They are even available in Jupyter Notebooks!
+In addition, Vim is more widely distributed than emacs.
+
+If you are user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your init.el file and reestablish your Emacs computing environment.
+Many national facilities use Centos Linux and are unable or unwilling to make available the most recent stable version of emacs. 
+I have found that the available versions are several years out of date and hence difficult to install all of my favorite packages.
+It may take an hour of removing calls to install incompatible packages before you can establish a subset of your favorite packages.
+Hence, it is good to have the ability to tolerate getting by for short periods of time with older versions of Emacs without all of your favorite packages.
+
+Modes in Emacs are states of Emacs where a subset of commands are available.
 Modes avoid clashes due to functions of the same name in different packages.
-They are analogous to scopes in other text editors.
+Modes are analogous to scopes in other text editors.
 For example, there is a python-mode for working with Python script files.
 
-Some modes are multilingual and have many additional non-editing functions like org-mode.
-Org-mode was originally designed to be a planning and outlining tool, but it has been extended to support literate programming. 
-Org-mode is a large package that in of itself has over 100 add-on packages.
-For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex libraries.
-The latter is done in an automated fashion by using the metadata in the pdf files.
+Some modes are multilingual and have many additional non-editing functions.
+One such mode is org-mode.
+Org-mode was originally designed to be a planning and outlining tool.
+Its ease of use for outlining lead to its extension to support literate programming in numerous programming languages. 
 
+Org-mode has over 100 add-on packages.
+For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex entries.
+The latter is done in an automated fashion by using the metadata in the pdf files.
 
 The .emacs.d configuration directory is a hidden directory in the home directory.
 It is the home of the installed packages and plugins. 
 The main configuration file called *init.el* resides here.
-The *init.el* file is analog of vim's *vimrc* file.
-The commands in the *init.el* file written in elisp, but it is relatively easy to edit and augment without mastering elisp.
-
+The *init.el* file is the analog of vim's *.vimrc* configuration file.
+The commands in the *init.el* file are written in elisp.
+Fortunately, elisp is easy to edit and augment without knowing much about how to program with elisp.
 
 <details>
-<summary><b>Installing emacs</b></summary>
+<summary><b>Installing Emacs</b></summary>
 
+Like *vim*, *Emacs* can be installed as a stand-a-lone application or via software management software and a software repository.
 	
-Like *vim*, *Emacs* can be installed as a stand-a-lone application or via a software repository.
-There are several flavors of *Emacs*.
-*Spacemacs* is a version that has a gentler learning curve.
-Vim key bindings can be used in it.
-It does have its own keybinding to be masteed.
-This leads to the problem of needing to translate Spacemacs to Gnu Emacs.
+Emacs can be downloaded from https://www.gnu.org/software/emacs/ and insalled with a platform specific installer.
+Older versions of Emacs comes pre-installed on Mac OS, but you may want a more recent version.
+You should remove the old version with the commands `sudo rm /usr/bin/emacs` and `sudo rm -rf /usr/share/emacs`.
+Binaries for the Mac are available at https://emacsformacosx.com.
+As of August 2020, version 27.1-1 is the stable release.
 
-*Doom Emacs* and *Prelude Emacs* are additional off-shoots that is suppose to be easier to adopt.
-They are similar to *Spacemacs*.
-
-Emacs can be downloaded from \url{} and insalled with a platform specific installer.
-Emacs comes pre-installed on Mac OS, but you may want a more recent version.
-As of August 2020, version 27 is the stable release.
 Emacs is also available for a number of software repositories.
+It can be installed on the Mac with macports using the command `sudo port install emacs`.
+A GUI based version can be installed with the command `sudo port install emacs-app`
+The Homebrew repository for Mac OS is popular.
+The brew command is `brew update && brew install emacs --with-cocoa && brew linkapps emacs`. 
 
-The homebrew repository for Mac OS is popular.
-The brew command is \mintinline{bash}{}. 
-The resulting binary needs to be linked to an application file in the Applications folder. 
-
-
+You may want to create an alias for starting emacs.
+For the development version of the binary in installed in Applications with the above package installer for the make use,
+`e28='open /Applications/Emacs2805.app $1'`.
+For the app version installed by macports, use 
+`e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'`
+For Homebrew installed Emacs, use 
+`alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"`.
 
 
 <details>
-<summary><b>Installing and using snippets with emacs</b></summary>
+<summary><b>Installing and using snippets with Emacs</b></summary>
 
-The package yasnippets is one the most popular packages in emacs for managing snippets.
+The package yasnippets is one of the most popular packages in emacs for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
 The user can navigate the table find a relevant snippet.
 This table is redundant with ls snippet. 
@@ -965,7 +1011,7 @@ The addition of kernels for non-python programs requires different protocols tha
 <details>
 <summary><b>Documentation about using JupyterLab</b></summary>
 
-### Documentation about using JupyterLab<
+### Documentation about using JupyterLab
 </details>
 
 
