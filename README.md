@@ -568,9 +568,9 @@ Org-mode has over 100 add-on packages.
 For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex entries.
 The latter is done in an automated fashion by using the metadata in the pdf files.
 
-The .emacs.d configuration directory is a hidden directory in the home directory.
+The *.emacs.d* configuration directory is a hidden directory in the home directory.
 It is the home of the installed packages and plugins. 
-The main configuration file called *init.el* resides here.
+The main configuration file resides is this directory and is named *init.el*.
 The *init.el* file is the analog of vim's *.vimrc* configuration file.
 The commands in the *init.el* file are written in elisp.
 Fortunately, elisp is easy to edit and augment without knowing much about how to program with elisp.
@@ -578,15 +578,15 @@ Fortunately, elisp is easy to edit and augment without knowing much about how to
 <details>
 <summary><b>Installing Emacs</b></summary>
 
-Like *vim*, *Emacs* can be installed as a stand-a-lone application or via software management software and a software repository.
+Like *Vim*, *Emacs* can be installed as a stand-a-lone application or via a software management tool and a software repository.
 	
-Emacs can be downloaded from https://www.gnu.org/software/emacs/ and insalled with a platform specific installer.
-Older versions of Emacs comes pre-installed on Mac OS, but you may want a more recent version.
+*Emacs* can be downloaded from https://www.gnu.org/software/emacs/ and insalled with a platform specific installer.
+Older versions of *Emacs* comes pre-installed on Mac OS, but you may want a more recent version.
 You should remove the old version with the commands `sudo rm /usr/bin/emacs` and `sudo rm -rf /usr/share/emacs`.
 Binaries for the Mac are available at https://emacsformacosx.com.
 As of August 2020, version 27.1-1 is the stable release.
 
-Emacs is also available for a number of software repositories.
+*Emacs* is also available for a number of software repositories.
 It can be installed on the Mac with macports using the command `sudo port install emacs`.
 A GUI based version can be installed with the command `sudo port install emacs-app`
 The Homebrew repository for Mac OS is popular.
@@ -597,7 +597,7 @@ For the development version of the binary in installed in Applications with the 
 `e28='open /Applications/Emacs2805.app $1'`.
 For the app version installed by macports, use 
 `e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'`
-For Homebrew installed Emacs, use 
+For Homebrew installed *Emacs*, use 
 `alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"`.
 
 
@@ -606,11 +606,11 @@ For Homebrew installed Emacs, use
 
 The package yasnippets is one of the most popular packages in emacs for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
-The user can navigate the table find a relevant snippet.
-This table is redundant with ls snippet. 
+The user can navigate the table to find a relevant snippet.
+This table is redundant with the ls snippet. 
 
 
-The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *emacs*.
+The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *Emacs*.
 This package is installed with a builtin package manager.
 
 Each snippet is stored in a single file. 
@@ -620,13 +620,13 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 
 
 <details>
-<summary><b>Support for running and editing Jupyter in emacs </b></summary>
+<summary><b>Support for running and editing Jupyter in Emacs </b></summary>
 
 
 ### EIN: emacs ipython notebook
 
-The oldest package for this purpose [EIN](), Emacs Ipython notebook.
-It was started shortly after the Ipython Notebook became available in 2012.
+The oldest package for this purpose [EIN](https://github.com/millejoh/emacs-ipython-notebook), the Emacs Ipython Notebook.
+It was started shortly by after the Ipython Notebook became available in 2012.
 It was evolved to keep up with changes in the notebook.
 It cannot provide access to the widgets nor the notebook extensions.
 You will have to use the yasnippet library to access the PyMOL snippets.
@@ -654,7 +654,7 @@ You can create a new notebook or open an existing notebook.
 
 The [emacs-jupyter](https://github.com/dzop/emacs-jupyter) project is newer.
 it is an ''... interface to communicate with Jupyter kernels in Emacs''. 
-It is different from *ein* in that it promises to interact with Jupyter widgets.
+It is different from *EIN* in that it promises to interact with Jupyter widgets.
 
 ```emacs
 M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
