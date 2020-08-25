@@ -695,8 +695,8 @@ There is a separate stan-mode, but stan can also be run inside of R via either t
 The bio3d R-package can be installed and used analyze data from structures loaded in PyMOL. 
 
 This mode enables the editing of R-markdown documents. 
-It should be possible to run PyMOL via the reticulate from inside a R markdown document, has the file extension of 'Rmd'.
-There is a poly-R that also has to installed to turn on the recognition of R-markdown packages.
+It should be possible to run PyMOL via the reticulate package from inside a R markdown document, which has the file extension of 'Rmd'.
+There is a poly-R package that also has to installed to turn on the recognition of R-markdown packages.
 
 </details>
 
@@ -713,23 +713,21 @@ These variants might be suitable for the impatient who do not want to master GNU
 It is designed to be easier to use than Emacs.
 It can be operated with Vim, Emacs, or a hybrid of key bindings.
 You enable layers to extend its functionality.
-It can edit Jupyter Notebooks via the Ipython-layer.
+Spaceemacs can be used to edit Jupyter Notebooks via the Ipython-layer.
 
 
 ### SciMax
 
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of Emacs is being optimized for supporting the preparation of scientific manuscripts.
-Several YouTube videos of John talking about SciMax are available.
+Several YouTube videos of Professor Kitchin talking about SciMax are available.
 SciMax is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
 Hence, our recommendation to become competent with Gnu Emacs before diving into SciMax.
 
 
-
-
 ### Prelude emacs
 
-This variant of emacs is GNU emacs bundles with what the developer thinks are the essential, no-frills add-on packages.
+This variant of Emacs is GNU Emacs bundled with what the developer thinks are the essential, no-frills add-on packages.
 It does not ship with evil-mode. 
 This variant might be appropriate for beginners.
 You need to install GNU Emacs version 26.3 first.
@@ -741,7 +739,14 @@ The github page is found [here](https://github.com/bbatsov/prelude).
 
 Doom emacs appears to provide more advanced features than Prelude Emacs.
 It may be useful to study to learn about packages or features to add to a basic GNU Emacs configuration.
-I learned about replacing the init.el file with a config.org file, which can be rendered on GitHib like a markdown file.
+I learned about moving much of the code in the init.el file to code blocks in a config.org file, which can be rendered on GitHib like a markdown file.
+The code blocks can be flanked by explanatory text, hyperlinks, tables, and figures.
+The is a great way to document and share one's Emacs configuration. 
+
+Emacs reads an abbreviated init.el file which calls the config.org file.
+The code in the code blocks in the config.org file are copied to a config.el file and then executed. 
+
+See the file section at the top for an example of a working init.el and config.org file.
 
 
 </details>
@@ -769,16 +774,11 @@ The source code is also available.
 *Geany* has a plugin manager, and it is very easy to configure.
 
 <details>
-<summary><b>Installing and using snippets with Geany</b></summary>
+<summary><b>Installing snippets in Geany</b></summary>
 This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system. https://www.geany.org/download/releases/
-</details>
-
-
-<details>
-<summary><b>Installing snippet library in Geany</b></summary>
 	
 Make sure that the `.pml` filetype is defined as `#~ PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
-You will also need to add PyMOL as a group in that same file configuration.  
+You will also need to add PyMOL as a group in that same file configuration.
 It should read `#~ None=PyMOL` under Groups.
 
 <p align="center">
@@ -815,15 +815,19 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
+
 <h3 name="gedit"> gedit (Universal) </h3>
 
-[*gedit*](https://wiki.gnome.org/Apps/Gedit) is often available on the computers running Linux OS at national labs.
+[*gedit*](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
+It is commonly found on Linux operating systems.
+It is often available on the computers running Linux OS at national labs.
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 <details>
 <summary><b>Installing and using snippets with gedit</b></summary>
-
 
 The pymol.lang file has to be installed first. 
 Download it form the geditpymolsnips folder.
@@ -832,15 +836,11 @@ Download it form the geditpymolsnips folder.
 mkdir -p ~/.local/share/gtksourceview-3.0/language-specs
 ```
 
-The snippets are stored in a single file called `pymol.xml`.
-
+The snippets are stored in a file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`.
 The full path is `~.config/gedit/snippets/pymol.xml`.
-
-This file is stored in the home directory in a hidden folder called `.config`. 
-The full path is `~/.config/gedit/snippets/pymol.xml`.
-
 You may need to create this directory.
+
 To do this:
 ```bash
 $ mkdir ~/.config/gedit/snippets/pymol.xml
@@ -852,40 +852,18 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-****************    JupyterLab    *******************************************
+
 
 <h3 name="jupyterlab"> Jupyter Lab (Universal) </h3>
 
-Jupyter Lab is an integrated development environment (IDE) that runs in your web browser.
-It can read in Jupyter Notebooks.
+JupyterLab is a integrated development environment (IDE) that runs in your default web browser.
+It can read, edit, and run Jupyter Notebooks.
 It supports several kinds of windows including one for text editing. 
-It is similar to the RStudio, Rodeo, and Spyder IDEs.
+This text editor has limited support for LaTeX and markdown. 
+JupyterLab is similar to RStudio, Rodeo, and Spyder IDEs.
 Its first stable release was in 2018.
-I 
 
-The Jupyter Notebook is an electronic notebook for interactive programming in Python.
-It can be extended for use with scores of other programming languages via kernels.
-It was released initially in the fall of 2014.
-
-The Jupyter Notebook descended from the IPython Notebook project, which started in 2011.
-The IPython Notebook project emerged out of the IPython project which was started in 2001 by Fernando Perez when he was a graduate student in Physics as the U of Colorado.
-
-The Jupyter Notebook is composed of cells.
-Code cells can be edited.
-They contain blocks of code that generally do one thing.
-All of the code in a cell is run at once.
-The use of executable blocks of code eases debugging.
-
-PyMOL can be import into an active notebook as a module.
-
-Jupyter Notebooks are very fun to use when developing new code because the interleaved output in the form of beautiful figures provides instant gratification. 
-
-Jupyter Notebooks are also effective for providing training in the classroom and workshops.
-It is designed to support reproducible research and literate programming.
-The main gotcha is that you have to be aware of the state of the computer.
-That is, you have to be mindful of the order in which the cells were executed.
-
-Jupyter Notebook and Jupyter Lab have extensions that extend their capabilities, 
+Jupyter Notebook and JupyterLab have extensions that add new capabilities, 
 but their extensions are not interchangeable.
 Both have extensions for vim keybindings which will appeal to vim users.
 
@@ -1132,21 +1110,54 @@ The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the C
 
 <h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
 
-The classic *Jupyter Notebook* is very useful for the interactive testing and development of chunks of code like the functions that reside in separate cells in the notebook.
-*Juptyer Notebook* evolved from the *IPython Notebook*, which, in turn, was inspired by the *Mathematica Notebook*.
-*JuptyerLab* is an IDE that can read the classic *Jupyter Notebook* while enabling writing in text documents in parallel windows.
-See above.
-*JupyterLab* has been around for several week and has not displaced the popularity of *Jupyter Notebook* because they are so darn fun to use.
-The Joy of *Jupyter Notebook* has discouraged veterans from switching, so we decided to support the *Jupyter Notebook* because diehards will be using them for another five years.
-The one advantage of the *Jupyter Notebook* over *Jupyter Lab* is the support for embedding in notebook cells static or interactive images from PyMOL or nglview respectively.
+The Jupyter Notebook is an electronic notebook for interactive programming in Python.
+It can be extended for use with scores of other programming languages via kernels.
+It was released initially in the fall of 2014.
 
+The Jupyter Notebook descended from the IPython Notebook project, which started in late 2011.
+The IPython Notebook project emerged out of the IPython project which was started in 2001 by Fernando Perez when he was a graduate student in Physics as the U of Colorado.
+It was inspired by the  *Mathematica Notebook*, which has been available since the late 1980s.
+
+The Jupyter Notebook is composed of cells.
+Code cells can be edited.
+They contain blocks of code that generally do one thing.
+All of the code in a cell is run at once.
+The use of executable blocks of code eases debugging.
+
+PyMOL can be imported into an active notebook as a module via `from pymol import cmd`.
+This enables execution of the pml commands when enclosed withe `cmd.do(" ")` command.
+The output is returned to the cell below.
+The png command can be used to create an image.
+The image can then be loaded.
+
+```python
+from IPython.display import Image
+Image(filename ='/Users/blaine/Val804.png',width=200)
+```
+
+The enclosure of the PML code with cmd.do(" <insert PML code here") can be done around multiple commands.
+Multiple lines of commands can concatenated together while separated by semicolons. 
+This minimizes the number of enclosures that need to be made.
+A variant of the pymolsnips library called [pymolpysnips](https://github.com/MooersLab/pymolpysnips) has the pml code already enclosed.
+
+Jupyter Notebooks are very fun to use when developing new code because the interleaved output in the form of beautiful figures provides instant gratification. 
+
+Jupyter Notebooks are also effective for providing training in the classroom and workshops.
+It is designed to support reproducible research and literate programming.
+
+The main gotcha is that you have to be aware of the state of the computer.
+That is, you have to be mindful of the order in which the cells were executed.
+This seems to be a big stumbling block for users with no formal training in computing.
 
 *Jupyter Notebook* has two extensions for snippet management.
 These notebook extensions have to be installed first.
 The snippets are stored in JSON files so they are not so easy to edit because of the nested braces.
+The snippets are accessed from pulldown menus.
+The pulldown menus are limited by the height of the screen, so the snippets have to stored by category in nested submenus.
+
 
 A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension.
-The these snippets can be loaded as need by using the load magic.
+The these snippets can be loaded as needed by using the load magic.
 
 ```jupyter
 %load filePath/<snippetName>.pml
@@ -1158,6 +1169,9 @@ The animation below demonstrates the insertion of a snippet with the load magic.
 </p>
 
 </details>
+
+
+
 
 
 
