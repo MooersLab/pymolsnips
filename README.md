@@ -1329,7 +1329,7 @@ The notebook could provide an enhanced means of documenting and explaining a `.p
 
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 	
-[*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor that is now available for Mac and Windows as well as Linux.
+[*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1337,7 +1337,8 @@ The notebook could provide an enhanced means of documenting and explaining a `.p
 <summary><b>Installing and using snippets with kate</b></summary>
 	
 If installed with MacPorts, the app resides in `/Applications/macports/kate.app`.
-The snippet plugin has to be turned on. *kate* requires macOS 10.14 or newer. 
+The snippet plugin has to be turned on. 
+*kate* requires MacOS 10.14 or newer. 
 
 The snippets are stored in a single `.xml` file. 
 The storage location for this file is not in the documentation.
@@ -1362,7 +1363,10 @@ May have to create the directory MySnippets on MacOS.
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
 The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
 The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL. 
-One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace. *Komodo Edit* was derived from the Mozilla Framework. The add-on, or extension, capabilities are the same. For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/). 
+One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace. 
+*Komodo Edit* was derived from the Mozilla Framework. 
+The add-on, or extension, capabilities are the same. 
+For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/). 
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1381,16 +1385,19 @@ Then insert the snippets files from [here](https://github.com/marevebro/pymolsni
 ```bash
 $ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
 ```
-For Windows users, select where you want *Komodo Edit* to be installed. I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
+
+For Windows users, select where you want *Komodo Edit* to be installed. 
+I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
 From there, you'll need to create the `PML` directory in `...\KomodoEdit\lib\support\samples\tools\Abbreviations`.
 Then copy and paste the `komodeditpymolsnips` files into the newly created `PML` directory. 
 
-Here you can see snippet use in action:
+Here, you can see snippet use in action:
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/KomodoEditsnipuse.gif">
 </p>
 
-The snippet name works as a tab trigger. Unfortunately, snippets must be executed by memory as *Komodo Edit* does not have a suggestion window for snippets. 
+The snippet name works as a tab trigger.
+Unfortunately, snippets must be executed by memory as *Komodo Edit* does not have a suggestion window for snippets. 
 <!-- The snippet file can also be selected through the GUI.
 A pop-up menu displays the option to insert a snippet. -->
 There are tab stops and highlighted default parameter values.
@@ -1409,7 +1416,7 @@ Those users who have dabbled in *Emacs* will recognize the syntax of the setting
 It has very an attractive, uncluttered GUI.
 
 *Light Table* supports previews that enable interactive editing of code to change the output.
-For example, code chunks for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
+For example,the  code chunk for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
 The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin.
 This documentation is on a GitHub website.
 
@@ -1443,7 +1450,6 @@ $ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.
 ```
 
 Then, in *Light Table*, select from the menu in the toolbar at the top `File>Settings>User behaviors`.
-
 This will open a new window with the `users.behaviors` file ready to be edited.
 Paste inside the square brackets the following and change the path to your home directory:
 
@@ -1462,6 +1468,7 @@ Save this file.
 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
 Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`.
+
 Here is that in action!
 <p align="center">
 	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/LightTableUserBehavior.gif">
@@ -1485,7 +1492,7 @@ and then save your script file with the `.pml` file extension.
 Nonetheless, *Micro* is easier to use than *vim* or *emacs*.
 Like *nano*, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a `json` file.
-[*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD
+[*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1510,8 +1517,8 @@ plugin install snippets
 All of the snippets for one language are in a single file with the `.snippets` file extension. 
 In this case, the file is labeled `pml.snippets`.
 
-The snippets are installed to be installed in the folder `.config/micro/plugins/snippets`.
-In the *pymolsnips* directory enter:
+The snippets are installed in the folder `.config/micro/plugins/snippets`.
+In the *pymolsnips* directory, enter:
 
 ```bash
 $ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
@@ -1526,7 +1533,7 @@ Snippets for other program languages are found [here](https://github.com/tommysh
 
 A lexer for syntax highlighting is in the file called `pml.yaml`.
 This file can be downloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
-This lexer is stored in the hidden folder `.config/micro/syntax` which you will need to create.
+This lexer is stored in the hidden folder `.config/micro/syntax`, which you will need to create.
 
 ```bash
 $ mkdir ~/.config/micro/syntax
@@ -1561,7 +1568,7 @@ This feature is a big plus because it enables the rapid inspection of notebooks.
 
 **nteract** has drop down menu for access to the installed kernels.
 The kernels are installed for a particular python interpreter as described under the Jupyter Notebook above.
-Briefly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
+Briefly, the Python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
 
 ```bash
 /Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
@@ -1596,7 +1603,7 @@ Org-mode has many features that support planning and organizing hence that the `
 It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
 The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by sending Python code to a Jupyter kernel and enabling the embedding of the results from Jupyter Kernels below the code block
 Org-mode is more similar to the R Notebook than Juptyer Notebook.
-We provide a version of the snippet library for org-mode the flanks the snippets with code that makes them into executable code blocks.
+We provide a version of the snippet library for org-mode that flanks the snippets with code that makes them into executable code blocks.
 
 
 <details>
@@ -1615,7 +1622,8 @@ M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
 M-x p-ins RET ob-ipython RET
 ```
 
-You may need to modify your .emacs or .emacs.d/init.el file by adding the following lines:
+You may need to modify your .emacs.d/init.el file by adding the following lines.
+(Alternately, you can add these lines to a elisp code block in a config.org file.):
 
 ```emacs
 ;; Org-mode related settigs
@@ -1689,11 +1697,11 @@ JetBrains is a well-established Cezh firm that supplies a number of IDEs, mostly
 
 PyCharm's selling points are strong support for autosuggestions and auto-completions to speed up the writing of code.
 It also supports the interactive editing of Jupyter Notebooks.
-It is easy to switch the python interpreter used in editing a Jupyter Notebook to the one side the PyMOL application.
+It is easy to switch the Python interpreter used in editing a Jupyter Notebook to the one side the PyMOL application.
 Then PyMOL's **cmd** module can be imported into the Jupyter Notebook, and the function **cmd.do()** can be used to issue commands written in **pml**.
-The pymol.xml file containing the snippet library will be available for use.
+The *pymol.xml* file containing the snippet library will be available for use.
 
-This feature can also be found in like VSC, Spyder and other editors.
+This feature can also be found in like VSC, Spyder, and other editors.
 This last feature has been spreading across text editors like wildfire due to the growing popularity of Jupyter Notebooks.
 
 The PyCharm IDE is available in a Professional and a Community Edition.
@@ -1714,23 +1722,23 @@ Many of the more popular must-have features should really be incorporated into t
 PyCharm comes with such features already installed.
 PyCharm leans more towards the plug-and-play end of the spectrum, so beginners in academia should consider using it.
 
-For example, I wrote the first draft of this text in markdown on PyCharm as a *scratch file*.
+For example, I wrote the first draft of this text in markdown on *PyCharm* as a *scratch file*.
 The markdown file opened with a parallel window with a markdown previewer.
 I did not have to install a markdown previewer plugin, as I did with other text editors.
 Why would you want to write in markdown without a previewer?
 
-PyCharm's startup time is slower than Textmate, Sublime Text, and VSC; similar to Spyder and Komodo Edit; and much faster than that of Atom.
+*PyCharm*'s startup time is slower than Textmate, *Sublime Text*, and *VSC*; similar to  *Spyder* and *Komodo Edit*; and much faster than that of *Atom*.
 Some people contend with slow startup time by keeping the application open all of the time.
 
-The main competitor for Pycharm is the open source project Spyder.
+The main competitor for Pycharm is the open source project *Spyder*.
 Spyder's current production release does not directly support code snippets; however,
 you can edit and run Jupyter Notebooks inside Spyder. 
-While doing so, you can access the snippet library for PyMOL.
-See the section on Spyder.
+While doing so, you can access the snippet library for *PyMOL*.
+See the section on *Spyder*.
 
-In the IDE PyCharm, the snippets are called *live templates*.
+In the *PyCharm IDE*, the snippets are called *live templates*.
 A concise introduction can be found [here](http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html).
-PyCharm's on-line manual is very good at explaining the snippets.
+*PyCharm*'s on-line manual is very good at explaining the snippets.
 The snippets are stored in a xml file.
 The storage location on the above blog post is outdated.
 This file is stored in one of these three locations:
@@ -1752,7 +1760,7 @@ The snippet includes tab stops with default values.
 The default enough need to be changed.
 The cursor stops outside of the snippet when it hits that last tab stop.
 
-You can also get a preview of a PyMOL function after typing its name.
+You can also get a preview of a *PyMOL* function after typing its name.
 This preview includes a listing of the code of the function: 
 
 
@@ -1761,7 +1769,7 @@ This preview includes a listing of the code of the function:
 	<img src="images/PycharmJupyterPyMOLDocumentation.png" width="600">
 </p>
 
-PyCharm also supports the creation and editing of Jupyter Notebooks.
+*PyCharm* also supports the creation and editing of Jupyter Notebooks.
 When a Jupyter Notebook file is opened, two panels are displayed in the editor.
 On the left is a text file.
 The code, markdown, and Raw NBconvert cells are written to this file.
@@ -1789,8 +1797,8 @@ The RStudio Pro Server is available at some academic institutions.
 
 RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html) written in R Markdown.
 R Markdown supports literate programming.
-R and its predecessor S have been used for literate programming for over two decades via Sweave, Rweave, and Knitr packages.
-Many books have been assembled using Knitr.
+R and its predecessor S have been used for literate programming for over two decades via *Sweave*, *Rweave*, and *Knitr* packages.
+Many books have been assembled using *Knitr*.
 
 There are several recent books about literate programming in R.
 
@@ -1811,15 +1819,15 @@ R has a package called *reticulate* that enables the running of Python inside of
 
 
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
-Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of Emacs.
+Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of *Emacs*.
 Its command leader is the spacebar hence the word *space* in the name.
 It is very different from running the *Emacs* in evil-mode (evil-mode enables the use of vim keybindings in *Emacs*).
 As a result, it should be treated as a separate editor from *Emacs* and *Vim*.
 
-Spacemacs has its own set of mnemonic commands that you need to master.
-In other words, you will use vim, Emacs, and spacemacs commands in one editor.
-It might be less intimidating if you have mastered some of the basics of vim and Emacs.
-Spacemacs does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
+*Spacemacs* has its own set of mnemonic commands that you need to master.
+In other words, you will use *Vim*, *Emacs*, and *Spacemacs* commands in one editor.
+It might be less intimidating if you have mastered some of the basics of *Vim* and *Emacs*.
+*Spacemacs* does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1827,27 +1835,27 @@ Spacemacs does not go as far as allowing you to use vim plugins and configuratio
 
 
 <details>
-<summary><b>Installing and using snippets with spacemacs </b></summary>
+<summary><b>Installing and using snippets with Spacemacs </b></summary>
 
-Spacemacs comes with the package yasnippets installed, which is the engine for managing snippets.
+*Spacemacs* comes with the package yasnippets installed, which is the engine for managing snippets.
 Spacemacs use a layer concept to build up a specific configuration.
 The layers are managed by editing the *.spacemacs* file.
 A few suggested layers are listed under `dotspacemacs-configuration-layers`.
 Most of them are initially commented out with two semicolons on the left.
 
-Add yasnippet-snippets s is one of the defualt layers that are listed but are commented out with two semicolons on the left.
+Add *yasnippet-snippets* to one of the defualt layers that are listed but are commented out with two semicolons on the left.
 Remove the two semicolons.
 Take care to use spaces and not a tab to indent yasnippet.
 
 The snippets are installed by the *yasnippets-snippets* package.
-You can use the following command in spacemacs to install this package.
+You can use the following command in *Spacemacs* to install this package.
 
 ```emacs
 M-x package-install RETURM
 yasnippet
 ```
 
-Spacemacs may be more attractive to vi users rather than vim users who cannot part with their configuration in *Vim*.
+Spacemacs may be more attractive to *vi* users rather than *Vim* users who cannot part with their configuration in *Vim*.
 
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -1856,13 +1864,13 @@ Spacemacs may be more attractive to vi users rather than vim users who cannot pa
 
 <h3 name="spyder">Spyder (Universal)</h3>
 
-Spyder is an open source IDE for Python.
-Spyder is distributed with the Anaconda Navigator which eases its installation.
+*Spyder* is an open source IDE for Python.
+*Spyder* is distributed with the Anaconda Navigator which eases its installation.
 The current production version is in the 4.X series.
 
 
 <details>
-<summary><b>Installing and using snippets with Spyder</b></summary>
+<summary><b>Installing and using snippets with *Spyder*</b></summary>
 
 The current and development versions of *Spyder* can be installed on the Mac OS with macports.
 This 
@@ -1872,7 +1880,7 @@ sudo port install py38-spyder-devel
 ```
 
 Spyder does not support snippets.
-However, the Jupyter Notebook can be run and edited in Spyder after installing the Spyder-Notebook plugin.
+However, the Jupyter Notebook can be run and edited in Spyder after installing the *Spyder-Notebook* plugin.
 This plugin imports a full instance of the notebook with the menu bar, toolbar, and code cells.
 It can be faster to open a notebook in this fashion that via a web-browser.
 
@@ -1888,8 +1896,8 @@ The toolbar can include access to the functionality of various notebook extensio
 
 
 
-In contrast, PyCharm only imports the cells.
-The snippets from the notebook extension in Jupyter Notebooks are accessible to the code cells in the Jupyter Notebook in Spyder.
+In contrast, *PyCharm* only imports the cells.
+The snippets from the notebook extension in Jupyter Notebooks are accessible to the code cells in the Jupyter Notebook in *Spyder*.
 
 The Spyder-Notebook plugin can be installed with conda if you are using the Spyder from anaconda. 
 
@@ -1898,15 +1906,15 @@ conda install -c conda-forge spyder-notebook
 ```
 
 
-The plugin can alternately be installed using the desired Python interpreter (e.g., Python3.8 from MacPorts) and pip:
+The plugin can alternately be installed using the desired *Python* interpreter (e.g., Python3.8 from MacPorts) and pip:
 
 ```bash
 /opt/local/bin/python3.8 -m pip install spyder-notebook
 ```
 
-Note that in this case, PyMOL was installed with MacPorts Python3.8 to ease accessing pymol from the Jupyter Notebook.
+Note that in this case, *PyMOL*f was installed with MacPorts Python3.8 to ease accessing *PyMOL* from the Jupyter Notebook.
 The notebook also had full access to all other modules installed for macports Python3.8.
-PyMOL was installed with the following command. 
+*PyMOL* was installed with the following command. 
 
 ```bash
 sudo port install pymol -python38
@@ -1945,11 +1953,13 @@ The free trial period is infinite.
 	
 The snippets are stored in separate files with the file extension `.sublime-snippet`.
 
-*Sublime Text 3* strongly supports writing in LaTeX. It provides previews of figures and math equations from within a tex document before compiling it to pdf.
+*Sublime Text 3* strongly supports writing in LaTeX.
+It provides previews of figures and math equations from within a tex document before compiling it to pdf.
 Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
 
-For both all users (Mac, Windows, Linux), go to `Preferences-->Browse Packages...-->
-User-->snippets`. You may need to create the subdirectory called **snippets**. Copy and paste `st3pymolsnips` into the **snippets** folder. 
+For both all users (Mac, Windows, Linux), go to `Preferences-->Browse Packages...-->User-->snippets`.
+You may need to create the subdirectory called **snippets**. 
+Copy and paste `st3pymolsnips` into the **snippets** folder. 
 
 For command line action on the Mac, create the `snippets` directory in the *Sublime Text3* folder:
 ```bash
@@ -1963,7 +1973,7 @@ $ cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\
 
 You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`, and it should still work. 
 
-Restart *Sublime Text 3*, open a PyMOL script file, and then enter `ao` and  hit tab.
+Restart *Sublime Text 3*, open a *PyMOL* script file, and then enter `ao` and  hit tab.
 Sixteen lines of code should appear.
 
 <p align="center">
@@ -1993,7 +2003,6 @@ There is a large library of plugins available.
 
 The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide supplemental reading to the on-line documentation.
 
-*TextMate* was a pioneer application in the development of snippet libraries.
 *TextMate's* approach to snippets has served as a role model for other text editors.
 *TextMate* snippets can be ported to *Sublime Text 3* and *PyCharm*.
 Chapter 6 in the book by Gray provides a good overview of the features of snippets in *TextMate*.
@@ -2010,7 +2019,7 @@ When installing an update of the library, it is best to delete the old `PyMOL.tm
 
 
 The `PyMOL.tmbundle` folder contains several files and folders in addition to the `Snippets` folder. 
-Some of this other files include a lexer for PyMOL.
+Some of this other files include a lexer for *PyMOL*.
 The one file is the `\url{dependencies.json}` file.
 This file specifies the dependence on the pygments package.
 
@@ -2019,8 +2028,8 @@ This file has the developer's contact information, the name of the snippet colle
 
 The `PyMOL.tmbundle`  shows up in the Bundles pull-down as `PyMOL.pml`.
 Select `PyMOL.pml` and then a new menu will appear with a list of the snippets.
-The descriptions of the snippets are on the left and the corresponding tab trigger is on the right.
-The snippet can be added to the current pml document by selecting the snippet with the GUI or by entering the tabtrigger name.
+The descriptions of the snippets are on the left, and the corresponding tab trigger is on the right.
+The snippet can be added to the current *.pml document by selecting the snippet with the GUI or by entering the tab-trigger name.
 
 The bundle pull-down provides access to a bundle editor.
 This editor can be used to view and change the code in the snippets.
@@ -2036,24 +2045,26 @@ This editor can be used to view and change the code in the snippets.
 
 <h3 name="vim">Vim (Universal)</h3>
 
-[*vim*](https://vimawesome.com) is the improved terminal-based text editor *vi*.
+[*Vim*](https://vimawesome.com) is the improved terminal-based text editor *vi*.
 Vim enables the addition of plugins to extend what Vim can do.
 There are over 18,000 plugins available.
 Vim is free.
 
 A newer branch of *Vim* called *neovim* is also available.
-Either are available from software repositories like MacPorts, fink, Homebrew, or as stand-a-lone applications.
+*Vim* and *neovm* are available from software repositories like MacPorts, fink, Homebrew, or it can be downloaded as a stand-a-lone application.
 Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
 That bug has been fixed in version 8.1.2152.
 I found that the MacPorts Vim was behind this version.
-I tried to compile Vim version 8.2.12; I gave due to inference from conda in the Julia installed by Homebrew.
+I tried to compile Vim version 8.2.12; I gave up due to inference from conda in the Julia installed by Homebrew.
 I installed Vim version 8.2.0 via Homebrew.
 This version worked fine.
 
-Vim focusing on the editing process where most of the time is spent thinking and not generating new text.
-The *Vim* keybindings for text editing are so useful that the they are available for the rival text editor *Emacs* as well as many other text editors.
+*Vim* focuses on the editing process where most of the time is spent on thinking about has been written and not on generating new text.
+Most of the time spent `writing' is usually spent on rewriting.
+
+The *Vim* keybindings for text editing are so useful that the they are available for the rival text editors *Emacs* as well as many other text editors.
 The secret to keeping your sanity while using *Vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
-Numerous blog posts have lists of ways to think about and use Vim to improve your productivity.
+Numerous blog posts have lists of ways to think about and use *Vim* to improve your productivity.
 The consensus is to develop muscle memory of the commands that are useful to you by practicing their use at every opportunity.
 Another tip is to focus on mastering the basic commands before getting mired in tweaking your *.vimrc* configuration file and playing with plugins; that is, focus on mastering the *vi* part of *Vim*.
 
@@ -2067,7 +2078,7 @@ Versions of *vim* 7.X and earlier require the use of one of the plugin managers 
 Most plugins have GitHub websites of their own.
 These sites rarely mention minpac, but Vundle is always mentioned.
 
-Vundle, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file.
+*Vundle*, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file.
 It is in this file that you install and update plugins, as well as comment out unused plugins.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -2120,7 +2131,7 @@ let g:UltiSnipsJumpBackwardTrigger = ''
 let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 ```
 
-Now open Vim and run the following command:
+Now open*Vim*and run the following command:
 
 ```vim
 :PluginInstall
@@ -2131,8 +2142,7 @@ Now open Vim and run the following command:
 
 <details>
 <summary><b>Minpac</b></summary>
-
-Minpac is also a plugin manager for installing and managing plugins in *Vim*.
+*Minpac* is anther a plugin manager for installing and managing plugins in *Vim*.
 It requires *Vim* 8 or newer.
 Unfortunately, minpac does not update itself.
 Fortunately, there is a package you can add that will allow minpac to auto-update.
@@ -2153,7 +2163,7 @@ Then, add the following to your `.vimrc` file and write the file `:w`:
 packadd minpac
 call minpac#init()
 ```
-To add a plugin using minpac you will need to add this command `call minpac#add('author/reponame')` to your `.vimrc` file.
+To add a plugin using minpac you will need to add this command `call minpac#add('author/reponame')` to your *.vimrc* file.
 
 For example, if you wanted to install snippets for *UltiSnips* you would add (this will not work at the moment) to the *.vimrc* file:
 
@@ -2193,19 +2203,20 @@ You have to enable the Python3 interface with pynvim which you can install with 
 $ pip3 install --user pynvim
 ```
 
-To be more precise, you can provide the full path to the Python interpreter used by Noevim and import pip as a module between installing pynvim.
+To be more precise, you can provide the full path to the Python interpreter to be used by *neovim* and import *pip* as a module before installing pynvim.
 
 ```bash
 $ sudo -H /opt/local/bin/python3.7 -m pip install pynvim
 ```
 
-Check in *vim* or *neovim* if python3 is enabled by entering:
+Check in *Vim* or *neovim* if python3 is enabled by entering:
 
 ```vim
 :echo has("python3")
 ```
 
-If 1 is returned, you have python3 installed. If 0, you do not.
+If 1 is returned, you have python3 installed. 
+If 0 is returned, you do not.
 
 To install the plugins with Vundle, add the following to the Vundle plugin section of the  `.vimrc` file.
 
@@ -2289,7 +2300,7 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 <h4 name="snipmate"> SnipMate (for vim, universal) </h4>
 
-[*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that rovides plugin support for snippets that are available in *vim*. 
+[*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that provides plugin support for snippets that are available in *Vim*. 
 It does not depend on Python.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -2307,7 +2318,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 ```
 
-Then run the following command in vim:
+Then run the following command in *Vim*:
 
 ```vim
 :PluginInstall
@@ -2318,7 +2329,7 @@ Then run the following command in vim:
 
 
 
-<h4 name="UltiSnips"> UltiSnips (for Vim, universal) </h4>
+<h4 name="UltiSnips"> UltiSnips (for *Vim*, universal) </h4>
 	
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
 *Vim* has to be installed with the option of using Python3 enabled to be able to use *UltiSnips*.
@@ -2339,7 +2350,7 @@ In the following setup, we use the Vundle plugin manager.
 The `PyMOL.snippets` could be stored inside the *UltiSnips* directory, but they would be lost if you delete the *UltiSnips* directory.
 To help make sure your snippets are not deleted if the *UltiSnips* directory ever gets deleted you will want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
 Move the `PyMOL.snippets` file to this subdirectory.
-We will inform *vim* of this location when customizing the `.vimrc` file for *UltiSnips* a little further down.
+We will inform *Vim* of this location when customizing the `.vimrc` file for *UltiSnips* a little further down.
 
 ```bash
 $ cd .vim
@@ -2365,7 +2376,7 @@ endif
 In the Vundle plugin section of the `.vimrc` file, add the following lines:
 
 ```vim
-" Ultisnips requires Vim installed with python.
+" Ultisnips requires*Vim*installed with python.
 Plugin 'SirVer/ultisnips'
 ```
 
@@ -2386,7 +2397,7 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 
 The following step is to define the `*.pml' file type inside a *pml.vim* file.
 The *pml.vim* file is stored inside of a subfolder that contains the file type definition files.
-This subfolder is called *ftdetect* which is stored inside of the *~/.vim/bundle/ultisnips* folder.
+This subfolder is called *ftdetect*, which is stored inside of the *~/.vim/bundle/ultisnips* folder.
 This step is not necessary if you install the *bioSyntax-vim* plugin because it contains a *pml.vim* in its ftdetect subfolder.
 The *bioSyntax-vim* also provides color syntax highlighting for *.pml* files.
 
@@ -2397,14 +2408,14 @@ $ mkdir -p ~/.vim/ftdetect/
 $ cd ~/.vim/ftdetect/
 ```
 
-Some *vim* plugins require that you add a flag to your `.vimrc` file to turn off file type detection.
+Some *Vim* plugins require that you add a flag to your `.vimrc` file to turn off file type detection.
 You can set the file type for a `.pml` file with the command `:set filetype=pml`. 
 To enable autodetection of the file type in this situation, we need to make a `pml.vim` file in the `ftdetect` subdirectory of the `ultisnips` directory.
 
 ```bash
 $ cd ~/.vim/bundle/ultisnips/ftdetect/
 $ touch PyMOL.vim
-$ vim PyMOL.vim
+$*Vim*PyMOL.vim
 ```
 
 Insert the single-line code fragment below into the file `pml.vim` and save it.
@@ -2423,10 +2434,10 @@ ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
 ```
 
 To test your set up, open a PyMOL script file.
-Enter on the command line in Vim `:set filetype?`.
+Enter on the command line in *Vim* `:set filetype?`.
 You should bet back `filetype=pml`.
 
-Here is a minimal, no-frills vimrc file that uses Vundle and works with the `pml.snippets` file.
+Here is a minimal, no-frills *vimrc* file that uses Vundle and works with the `pml.snippets` file.
 You may have to edit the path to the python3 binary.
 
 ```vim
@@ -2444,7 +2455,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" Ultisnips requires Vim installed with python. This is just the engine.
+" Ultisnips requires*Vim*installed with python. This is just the engine.
 Plugin 'SirVer/ultisnips'
 
 call vundle#end()
@@ -2472,8 +2483,34 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 
 ### jupyter-vim
 
-[jupyter-vim]() is a vim plugin that runs the Jupyter Qt-console in a buffer (window) insie of vim.
-This gives the 
+[jupyter-vim](https://github.com/wmvanvliet/jupyter-vim) is a *Vim* plugin that runs the Jupyter Qt-console in a buffer (window) inside of *Vim*.
+For this plugin to work, you must have Jupyter installed in the Python environment used by *Vim's* pythonx command. 
+  
+To install this plugin with Vundle, add the following command to your vimrc file.
+
+```vim
+Plugin 'jupyter-vim/jupyter-vim'
+```
+
+To begin a session with vim using the Jupyter Console, you must enter two commands in the terminal, which can be done on one line.
+
+```vim
+jupyter qtconsole & && vim <your_script>.py
+```
+
+You could create a bash alias to save time:
+
+```bash
+alias jcv="jupyter qtconsole & && vim '$1'.pml $1"
+```
+
+That you would run as 
+
+```bash
+jcv myFile.pml
+```
+
+
 
 <details>
 <summary><b>Installing and using snippets with UltiSnips</b></summary>
@@ -2503,11 +2540,14 @@ This gives the
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
 
 The installation of plugins is painless.
-There is a marketplace within *VSC* where you can search for extensions and easily install them. 
+There is a marketplace within *VSC* where you can search for extensions and install them by clicking on an install button after reading meta data about the plugin to determine if it the right plugin for you. 
 
-The *bioSyntax* plugin is free and includes a lexer for PyMOL, so it is a good idea to install this plugin.
-The lexer will be activated when a `pml` file is opened. 
-Autocompletion of the snippet tab triggers and previews of the snippet's code are very helpful for avoiding the insertion of the wrong snippet. 
+The *bioSyntax* plugin is free and includes a lexer for PyMOL and lexers for many other file types used in bioinformatics.
+It is a good idea to install this plugin.
+The PyMOL lexer will be activated when a `pml` file is opened. 
+
+VSC provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
+The latter feature are very helpful for avoiding the insertion of the wrong snippet. 
 
 <details>
 <summary><b>Installing and using snippets with Visual Studio Code</b></summary>
@@ -2550,7 +2590,7 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 
 <h3 name="wings">Wings</h3>
 	
-[Wings](https://wingware.com) is a commercail IDE focused on Python.
+[Wings](https://wingware.com) is a commercial IDE that is focused on Python.
 It is available for all platforms.
 
 Wings is available to academics through a special license.
@@ -2567,7 +2607,35 @@ Wing comes with GUI driven installers.
 
 <h3 name="zepplin">Zepplin (universal) </h3>
 	
-[Zepplin](https://zeppelin.apache.org) is an new IDE developed by Apache. 
+[Zepplin](https://zeppelin.apache.org) is an web-driven electronic notebook that is being developed by Apache.
+It may be less alien for those with experience programming for web interfaces.
+It is similar to the Jupyter Notebook, but it has many different features.
+Zepplin is more recent and has a smaller community of users.
+As a result, it has a smaller number of extensions and supported languages. 
+It has built-in approaches to supporting polyglot literate programming, collaborative programming, and secure notebooks.
+These features address weakneess of the Jupyter Notebook that are addressed by extensions to the Jupyter Notebook.
+
+Zepplin enables data-driven, interactive data analytics, and collaborative documents with SQL, Scala, Python, Spark, and so. 
+It facilitates the use of multiple programming languages in one document.
+It comes with multiple backends for making plots.
+This functionality can be found in SOS notebooks, a variant of Jupyter Notebooks.
+
+
+Zepplin It facilitates the interactions between Python, SQL, and Spark.
+Its user guide is located [here](https://zeppelin.apache.org/docs/latest/index.html)
+It can be installed as a binary or from source. 
+Zepplin supports 20 programming languages whereas Jupyter supports 85.
+Zepplin has stronger support for collaborative work and for providing secure notebooks for end users.
+It has a jupyter interpreter plugin. 
+
+Zepplin interpreters are analogous to Jupyter kernels.
+They enable to use of a particular programming language.
+
+
+Snippets in Zepplin are called notes.
+Notes are paragraphs of code that are stored in JavaScript. 
+ 
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
