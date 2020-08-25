@@ -1111,8 +1111,11 @@ The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the C
 <h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
 
 The Jupyter Notebook is an electronic notebook for interactive programming in Python.
-It can be extended for use with scores of other programming languages via kernels.
-It was released initially in the fall of 2014.
+It can be extended for use with scores of other programming languages including R and Julia via kernels.
+The name Jupyter is a blend of Julia, Python, and R.
+These are the three most useful programming languages for data science.
+The developers of the Jupyter Notebook are trying to meet the need for a single computing environment for the developement and execution of code form multiple languages.
+The Jupyter Notebook was released initially in the fall of 2014.
 
 The Jupyter Notebook descended from the IPython Notebook project, which started in late 2011.
 The IPython Notebook project emerged out of the IPython project which was started in 2001 by Fernando Perez when he was a graduate student in Physics as the U of Colorado.
@@ -1123,6 +1126,11 @@ Code cells can be edited.
 They contain blocks of code that generally do one thing.
 All of the code in a cell is run at once.
 The use of executable blocks of code eases debugging.
+Jupyter Notebooks are also fun to use when developing new code because the interleaved output in the form of beautiful figures provides almost instant gratification. 
+The kernel for a notebook can be switched between cells. 
+This is a little convenient to do in the current Jupyter Notebook but much easier to do in a modifed notebook called the SOS or Script of Scripts.
+SOS provides stronger support for polygot literate programming.
+
 
 PyMOL can be imported into an active notebook as a module via `from pymol import cmd`.
 This enables execution of the pml commands when enclosed withe `cmd.do(" ")` command.
@@ -1140,21 +1148,26 @@ Multiple lines of commands can concatenated together while separated by semicolo
 This minimizes the number of enclosures that need to be made.
 A variant of the pymolsnips library called [pymolpysnips](https://github.com/MooersLab/pymolpysnips) has the pml code already enclosed.
 
-Jupyter Notebooks are very fun to use when developing new code because the interleaved output in the form of beautiful figures provides instant gratification. 
+If the image needs further adjustment, the PML code in the cell above the image can be edited and rerun by entering Control-Enter. 
+The only limitation is that may be more convenient to obtain initial viewport settings from an interactive session.
+It is remarkable how the desired output can be obtained in about five iterative cycles of editing the PML code and inspecting the output. 
+These cycles may take ten to twenty minutes to complete.
+The advantage of having the code and the output in close proximity in a single document is enormous. 
+It save a lot of time and frustration associated with the remaking and renumbering of images during the drafting of new manuscripts and the revision of manuscripts for re-submission.
 
 Jupyter Notebooks are also effective for providing training in the classroom and workshops.
 It is designed to support reproducible research and literate programming.
 
 The main gotcha is that you have to be aware of the state of the computer.
 That is, you have to be mindful of the order in which the cells were executed.
-This seems to be a big stumbling block for users with no formal training in computing.
+This something that experienced programmers do innately.
+However, it seems to be a big stumbling block and common source of discouragement for users with little training in computing.
 
 *Jupyter Notebook* has two extensions for snippet management.
 These notebook extensions have to be installed first.
 The snippets are stored in JSON files so they are not so easy to edit because of the nested braces.
 The snippets are accessed from pulldown menus.
 The pulldown menus are limited by the height of the screen, so the snippets have to stored by category in nested submenus.
-
 
 A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension.
 The these snippets can be loaded as needed by using the load magic.
@@ -1165,19 +1178,21 @@ The these snippets can be loaded as needed by using the load magic.
 The animation below demonstrates the insertion of a snippet with the load magic.
 
 <p align="center">
-        <img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
+<img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
 </p>
 
 </details>
 
 
 
-
-
-
 <details>
 <summary><b>Installing and using ipymol</b></summary>
 
+Another approach is to use the a RPC server to interact with an open session of PyMOL from the jupyter Notebook. 
+Such a connection between PyRosetta and PyMOL has been available for almost a decade.
+Several alternate approaches are listed on the PyMOL Wiki.
+
+One approach is to use the ipymol module.
 The *ipymol* module was developed by Carlos Hernandez: https://github.com/cxhernandez/ipymol.
 It enables the sending of commands to PyMOL and the return of data and images from PyMOL to notebook cells.
 It facilitates literate programming with PyMOL.
@@ -1208,9 +1223,9 @@ The myRoundedList was returned for further processing.
 The new function is called `rvj()' for roundview for Jupyter.
 
 The snippet rvj will be in the snippet library eventually
-It code is listed below:
+Its code is listed below:
 
-```python
+```pythonf
 def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
    """MIT License
    Copyright:
@@ -1237,11 +1252,31 @@ def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
     #Write to a text file.
     myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()
     return myRoundedList
-ipv.extend("rv", rv)
+ipv.extend("rvj", rvj)
 ```
 
 </details>
 
+Citation for roundview.py script
+
+```bibtex
+@Article{Mooers2016SimplifyingAndEnhancingTheUseOfPyMOLWithHorizontalScripts,
+  author    = {Mooers, Blaine HM},
+  journal   = {Protein Science},
+  title     = {Simplifying and enhancing the use of PyMOL with horizontal scripts},
+  year      = {2016},
+  note      = {PubMed PMID: 27488983 PMCID: PMC5029532},
+  number    = {10},
+  pages     = {1873--1882},
+  volume    = {25},
+  doi       = {10.1002/pro.2996},
+  pmcid     = {PMC5029532},
+  pmid      = {27488983},
+  publisher = {Wiley Online Library},
+}
+```
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+</details>
 
 
 <details>
@@ -1258,7 +1293,7 @@ If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
  "argv": [
   "/Applications/PyMOL.app/Contents/bin/python",
   "-m",
-  "ipykernel_launcher",
+a  "ipykernel_launcher",
   "-f",
   "{connection_file}"
  ],
@@ -1290,34 +1325,6 @@ The notebook could provide an enhanced means of documenting and explaining a `.p
 </details>
 
 
-
-
-<details>
-<summary><b>Documentation and books about Jupyter Notebooks</b></summary>
-```bibtex
-
-```
-
-Citation for roundview.py script
-
-```bibtex
-@Article{Mooers2016SimplifyingAndEnhancingTheUseOfPyMOLWithHorizontalScripts,
-  author    = {Mooers, Blaine HM},
-  journal   = {Protein Science},
-  title     = {Simplifying and enhancing the use of PyMOL with horizontal scripts},
-  year      = {2016},
-  note      = {PubMed PMID: 27488983 PMCID: PMC5029532},
-  number    = {10},
-  pages     = {1873--1882},
-  volume    = {25},
-  doi       = {10.1002/pro.2996},
-  pmcid     = {PMC5029532},
-  pmid      = {27488983},
-  publisher = {Wiley Online Library},
-}
-```
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
 
 
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
