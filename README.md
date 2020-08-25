@@ -516,11 +516,15 @@ The one danger of Emacs is that it is easy to spend countless of hours configuri
 Many beginners spend too much time adding too many packages, most of which they never use.
 As a beginner, you should ease off editing your *init.el* file if it has grown to 500 lines in the first several weeks of using Emacs.
 A good practice is to add one package at a time and master each added package before adding another new package.
+
+I find that the editing of*init.el* file occurs in widely spaced bouts.
+Once everything is working to your satisfication, there may be long periods of productivity during which there is no compelling need to fiddle with the *init.el* file.
+
 Many Emacs users have shared their *init.el* files on GitHub.
 These can provide inspiration for the beginner.
 Some have complex configurations that are often too complex to be copied and applied by the beginner.
 
-Many of these packages add functionalities that are not available in other text editors or that become available years later.
+Many of the add-on packages add functionalities that are not available in other text editors or that become available years later.
 The vast group of active contributors to Emacs will probably keep it in the lead for a long time into the future.
 
 Like PyMOL, GNU Emacs was designed to be highly extensible.
@@ -570,10 +574,14 @@ The latter is done in an automated fashion by using the metadata in the pdf file
 
 The *.emacs.d* configuration directory is a hidden directory in the home directory.
 It is the home of the installed packages and plugins. 
+
 The main configuration file resides is this directory and is named *init.el*.
 The *init.el* file is the analog of vim's *.vimrc* configuration file.
 The commands in the *init.el* file are written in elisp.
 Fortunately, elisp is easy to edit and augment without knowing much about how to program with elisp.
+
+I store my configuration in a config.el file (see file listing at top of page).
+The 
 
 <details>
 <summary><b>Installing Emacs</b></summary>
@@ -650,6 +658,13 @@ Use the left mouse button to select a kernel.
 You can create a new notebook or open an existing notebook.
 
 
+### ob-ein
+
+
+EIN can be run in org-mode via the package [ob-ein](https://github.com/millejoh/emacs-ipython-notebook/blob/master/lisp/ob-ein.el).
+
+
+
 ### emacs-jupyter
 
 The [emacs-jupyter](https://github.com/dzop/emacs-jupyter) project is newer.
@@ -672,7 +687,7 @@ See the section below on org-mode.
 <details>
 <summary><b>Support for running PyMOL through R from emacs </b></summary>
 
-The ESS package enables the editing and running of several statistical packages from inside of emacs.
+The ESS package enables the editing and running of several statistical packages from inside emacs.
 ESS stands for emacs speaks statistics. 
 The supported packages include R, BUGS, JAGS, and STATA.
 Note the absence of Stan and pymc3.
@@ -696,7 +711,7 @@ These variants might be suitable for the impatient who do not want to master GNU
 
 [Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU Emacs.
 It is designed to be easier to use than Emacs.
-It can be operated with vim, Emacs, or a hybrid of key bindings.
+It can be operated with Vim, Emacs, or a hybrid of key bindings.
 You enable layers to extend its functionality.
 It can edit Jupyter Notebooks via the Ipython-layer.
 
@@ -706,18 +721,30 @@ It can edit Jupyter Notebooks via the Ipython-layer.
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of Emacs is being optimized for supporting the preparation of scientific manuscripts.
 Several YouTube videos of John talking about SciMax are available.
-This editor is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
-</details>
+SciMax is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
+Hence, our recommendation to become competent with Gnu Emacs before diving into SciMax.
+
+
 
 
 ### Prelude emacs
 
+This variant of emacs is GNU emacs bundles with what the developer thinks are the essential, no-frills add-on packages.
+It does not ship with evil-mode. 
+This variant might be appropriate for beginners.
+You need to install GNU Emacs version 26.3 first.
+The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
+The github page is found [here](https://github.com/bbatsov/prelude).
 
 
 ### Doom Emacs
 
+Doom emacs appears to provide more advanced features than Prelude Emacs.
+It may be useful to study to learn about packages or features to add to a basic GNU Emacs configuration.
+I learned about replacing the init.el file with a config.org file, which can be rendered on GitHib like a markdown file.
 
 
+</details>
 
 
 
