@@ -1816,7 +1816,7 @@ Many books have been assembled using *Knitr*.
 
 
 <p align="center">
-     <img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PyMOLInRStudio.pdf">
+     <img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PyMOLInRStudio.png">
 </p>
 
 
