@@ -156,6 +156,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
+  * <a href="#cudatext"> cudatext </a>
   * <a href="#emacs"> emacs (uses <a href="#yasnippets">yasnippets</a> package)
   * <a href="#espresso"> Espresso </a>
   * <a href="#geany"> Geany </a>
@@ -458,6 +459,8 @@ I could not screen capture this pop-up window.
 You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*.
 Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
 
+</details>
+
 *CudaText* allows you to edit mirrored sites for uniform editing. 
 The animation below shows how to edit one mirror location and travel to the other mirrored sites by hitting the Tab key.
 
@@ -465,7 +468,7 @@ The animation below shows how to edit one mirror location and travel to the othe
      <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
 </p>
 
-</details>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
