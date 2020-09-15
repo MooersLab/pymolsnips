@@ -296,13 +296,14 @@ Or, you can access the `snippets.cson` file through `Atom (menu) --> Snippets...
 For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
 
 A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` file. 
+</details>
 
 Below is an example of the *threeMaps* snippet and a demonstration of its mirrored tab stops. 
 
 <p align="center">
 	  <img src="gifs/AtomSnipsUse.gif">
 </p>
-</details>
+
 
 
 <details>
@@ -310,13 +311,6 @@ Below is an example of the *threeMaps* snippet and a demonstration of its mirror
 
 The plugin Hydrogen enables the running of Juptyer Notebooks inside of Atom.
 
-
-
-#### I need to replace this gif.
-
-<p align="center">
-     <img src="gifs/AtomSnipsUse.gif">
-</p>
 
 
 </details>	
