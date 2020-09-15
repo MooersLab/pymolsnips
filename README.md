@@ -701,9 +701,6 @@ It should be possible to run PyMOL via the reticulate package from inside a R ma
 There is a poly-R package that also has to installed to turn on the recognition of R-markdown packages.
 
 
-<p align="center">
-     <img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PyMOLInRStudio.pdf">
-</p>
 
 
 
@@ -1815,6 +1812,14 @@ RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html
 R Markdown supports literate programming.
 R and its predecessor S have been used for literate programming for over two decades via *Sweave*, *Rweave*, and *Knitr* packages.
 Many books have been assembled using *Knitr*.
+
+
+
+<p align="center">
+     <img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PyMOLInRStudio.pdf">
+</p>
+
+
 
 There are several recent books about literate programming in R.
 
