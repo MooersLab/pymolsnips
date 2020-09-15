@@ -1922,8 +1922,9 @@ sudo port install pymol -python38
 
 On June 25, 2020, this command installed pymol version 2.4.0.
 
+</details>
 
-The panes can the rearranged as you wish.
+The panes in the Spyder IDE can the rearranged as you wish.
 In the image below, a Jupyter Notebook was opened in the pane at the bottom of the GUI. 
 This image shows the three default spyder panes opened at the top.
 
@@ -1931,7 +1932,6 @@ This image shows the three default spyder panes opened at the top.
 	<img src="images/PyMOLInSpyder.png" width="600">
 </p>
 
-</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
