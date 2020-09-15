@@ -1776,6 +1776,8 @@ This preview includes a listing of the code of the function:
 <p align="center">
 	<img src="images/PycharmJupyterPyMOLDocumentation.png" width="600">
 </p>
+</details>
+
 
 *PyCharm* also supports the creation and editing of Jupyter Notebooks.
 When a Jupyter Notebook file is opened, two panels are displayed in the editor.
@@ -1790,7 +1792,7 @@ These cells are rendered and displayed with the interleaved output in a notebook
 	<img src="images/covid19SpikeProteinD614.png" width="600">
 </p>
 
-</details>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
