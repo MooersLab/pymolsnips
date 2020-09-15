@@ -173,7 +173,7 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#PyDev"> PyDev (Universal)</a>
   * <a href="#rstudio"> RStudio</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
-  * <a href="#spyder"> Sypder</a>
+  * <a href="#spyder"> Spyjjjder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
