@@ -1928,7 +1928,7 @@ In the image below, a Jupyter Notebook was opened in the pane at the bottom of t
 This image shows the three default spyder panes opened at the top.
 
 <p align="center">
-	<img src="imagesPyMOLInSpyder.png" width="600">
+	<img src="images/PyMOLInSpyder.png" width="600">
 </p>
 
 </details>
