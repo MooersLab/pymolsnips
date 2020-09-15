@@ -1677,7 +1677,13 @@ The title can be edited but the `-*- mode: org -*-` must remain unchanged.
 A snapshot of the org-mode document is shown below after the code block was run.
 The code is run by entering `C-c C-c` where the uppercase C represents the CNTRL key and the lowercase C frepresent the `C` key.
 The file is saved by entering `C-x C-s` where the uppercase C represents the CNTRL key and the lowercase represent the `C` key.
-![Emacs gui with an org-mode docment after running PyMOL from emacs.](images/PyMOLinOrgMode.png)
+
+The image below shows that the Emacs gui with an org-mode document after running PyMOL from emacs.
+
+
+<p align="center"><img src="images/PyMOLinOrgMode.png" width="600"> </p>
+
+
 
 Note that the bg_color command as coded as a setting.
 An error message was written to a log file that appears in a second buffer below the large window. 
