@@ -694,11 +694,17 @@ Note the absence of Stan and pymc3.
 There is a separate stan-mode, but stan can also be run inside of R via either the rstan or rstanarm packages.
 The bio3d R-package can be installed and used analyze data from structures loaded in PyMOL. 
 
+</details>
+
 This mode enables the editing of R-markdown documents. 
 It should be possible to run PyMOL via the reticulate package from inside a R markdown document, which has the file extension of 'Rmd'.
 There is a poly-R package that also has to installed to turn on the recognition of R-markdown packages.
 
-</details>
+
+<p align="center">
+     <img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PyMOLInRStudio.pdf">
+</p>
+
 
 
 
