@@ -153,6 +153,11 @@ There are at least kinds of snippet systems available for Vim and neovim.
 
 
 
+
+
+
+
+
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
@@ -174,12 +179,13 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#PyDev"> PyDev (Universal)</a>
   * <a href="#rstudio"> RStudio</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
-  * <a href="#spyder"> Spyjjjder</a>
+  * <a href="#spyder"> Spyder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
   * <a href="#wings"> Wings </a>
+  * <a href="#zepplin"> Zepplin </a>
 
 
 
@@ -800,7 +806,6 @@ This heading is case sensitive.
 </details>
 
 
-<details>
 <summary><b>Using the snippet library in Geany</b></summary>
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops.
@@ -812,7 +817,6 @@ Here is an example of the `ao` snippet being used in *geany*:
 
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files.
 
-</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -867,6 +871,9 @@ Its first stable release was in 2018.
 Jupyter Notebook and JupyterLab have extensions that add new capabilities, 
 but their extensions are not interchangeable.
 Both have extensions for vim keybindings which will appeal to vim users.
+
+
+
 
 
 <h4 name="jupyterlabsnippets"> JupyterLab Snippets</h4>
@@ -1101,10 +1108,11 @@ The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [g
   year      = {2018},
 }
 ```
+</details>
 
 As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) conventions have been held.
-The [2020 JupyterCon](https://jupytercon.com) convention is on hold due to the COVID19 pandemic.
-</details>
+The [2020 JupyterCon](https://jupytercon.com) convention will occur October 12-16, 2020.
+
 
 
 
@@ -1176,14 +1184,13 @@ The these snippets can be loaded as needed by using the load magic.
 ```jupyter
 %load filePath/<snippetName>.pml
 ```
+</details>
+
 The animation below demonstrates the insertion of a snippet with the load magic.
 
 <p align="center">
 <img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
 </p>
-
-</details>
-
 
 
 <details>
@@ -1226,7 +1233,7 @@ The new function is called `rvj()' for roundview for Jupyter.
 The snippet rvj will be in the snippet library eventually
 Its code is listed below:
 
-```pythonf
+```python
 def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
    """MIT License
    Copyright:
@@ -1353,10 +1360,10 @@ Try the following on Mac (last one of the four) and Linux (first three)**Be sure
 /Users/YOURUSERNAME/Library/Application\ Support/kate/MySnippets/
 ```
 May have to create the directory MySnippets on MacOS.
-
+</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
+
 
 
 
@@ -1592,7 +1599,7 @@ The markdown cells recognize a smaller subset of LaTeX.
 For example, the equation environment is not recognized.
 This limits the optional code that can be used to render multi-line equations.
 
-While the support for full-fledged literate programming is absent in **nteract**, even experienced Jupyter Notebook will enjoy using **nteract** for rapidly interrogating foreign notebooks and starting new notebooks.
+While the support for full-fledged literate programming is absent in **nteract**, even experienced Jupyter Notebook users will enjoy using **nteract** for rapidly interrogating foreign notebooks and starting new notebooks.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1994,6 +2001,8 @@ $ cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\
 
 You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`, and it should still work. 
 
+</details>
+
 Restart *Sublime Text 3*, open a *PyMOL* script file, and then enter `ao` and  hit tab.
 Sixteen lines of code should appear.
 
@@ -2011,7 +2020,6 @@ Notice how when I type *sugar* all instances of glycan are replaced with sugar.
 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet.
 
-</details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -2051,6 +2059,7 @@ The `PyMOL.tmbundle`  shows up in the Bundles pull-down as `PyMOL.pml`.
 Select `PyMOL.pml` and then a new menu will appear with a list of the snippets.
 The descriptions of the snippets are on the left, and the corresponding tab trigger is on the right.
 The snippet can be added to the current *.pml document by selecting the snippet with the GUI or by entering the tab-trigger name.
+</details>
 
 The bundle pull-down provides access to a bundle editor.
 This editor can be used to view and change the code in the snippets.
@@ -2060,7 +2069,7 @@ This editor can be used to view and change the code in the snippets.
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
+
 
 
 
@@ -2583,6 +2592,8 @@ $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
 For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting). 
 
+</details>
+
 Next, install *bioSyntax* via `View --> Extensions`.
 Search for *bioSyntax* and hit the `Install` button.
 You will be asked to select a theme, just select bioSyntax.
@@ -2606,7 +2617,7 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 </p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
+
 
 
 <h3 name="wings">Wings</h3>
