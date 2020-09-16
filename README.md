@@ -394,6 +394,7 @@ Until the PyMOL language is available via a lexer for *Brackets*, use Python for
 The Python lexer will provide some syntax highlighting.
 This means that the PyMOL file needs to have a file extension of `.py` while it is being edited in *Brackets*.
 When finished, save this file with the `.pml` extension to be able to use it in PyMOL.
+</details>
 
 In the example of snippet use shown below, notice how all snippets that begin with **a** are suggested.
 Only when I press `o` do the suggestions narrow.
@@ -405,7 +406,7 @@ This is helpful when you cannot remember the short-hand for a snippet.
 
 Unfortunately, *Brackets* does not currently support tab stops.
 
-</details>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
