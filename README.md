@@ -1392,6 +1392,7 @@ For Windows users, select where you want *Komodo Edit* to be installed.
 I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
 From there, you'll need to create the `PML` directory in `...\KomodoEdit\lib\support\samples\tools\Abbreviations`.
 Then copy and paste the `komodeditpymolsnips` files into the newly created `PML` directory. 
+</details>
 
 Here, you can see snippet use in action:
 <p align="center">
@@ -1405,7 +1406,7 @@ A pop-up menu displays the option to insert a snippet. -->
 There are tab stops and highlighted default parameter values.
 However, there is no mirroring of tab stops at this time.
 
-</details>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
