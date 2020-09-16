@@ -1276,8 +1276,6 @@ Citation for roundview.py script
   publisher = {Wiley Online Library},
 }
 ```
-</details>
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 
@@ -1326,6 +1324,8 @@ The markdown cells support LaTeX rendering of equations and the insertion of ima
 The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
 </details>
 
+</details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 
