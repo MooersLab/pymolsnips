@@ -1256,7 +1256,7 @@ def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
 ipv.extend("rvj", rvj)
 ```
 
-</details>
+
 
 Citation for roundview.py script
 
@@ -1276,8 +1276,9 @@ Citation for roundview.py script
   publisher = {Wiley Online Library},
 }
 ```
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+<A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 
 <details>
