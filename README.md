@@ -9,9 +9,9 @@ PyMOL is also popular for making movies of moving molecules.
 The PyMOL GUI is useful for making the images of global scenes, but PyMOL rapidly becomes tedious to use to make images of detailed scenes.
 The PyMOL macro language (pml) can be used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport.
 These scenes can be made into static images for posters, seminars, and manuscripts, or they can serve as parts of molecular movies.
-The macro language sends arguments to Python functions, but its syntax is simpler and more user-friendly for non-programmers than that of Python.
+The macro language sends arguments to Python functions, but its syntax is simpler for non-programmers to understand than the syntax of Python code.
 
-The number of lines of pml commands and settings required for more sophisticated images can exceed 100.
+Over 100 lines of pml commands and settings required to make more sophisticated images.
 It is difficult to issue so many commands through PyMOL's graphical user interface (GUI) without making mistakes.
 If the commands are not saved to an open script file with a `.pml` file extension, to an opened log file, or to a frequently saved session file, the work can be lost. 
 (Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
@@ -19,7 +19,7 @@ If the commands are not saved to an open script file with a `.pml` file extensio
 Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the GUI alone.
 
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
-One solution to this problem is to use a library of code fragments, called **snippets** (or *live templates* in PyCharm), to build a script in a text editor.
+One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
 
 ### <A name="FASTLINKS">Quick links</A>
 
@@ -29,26 +29,13 @@ One solution to this problem is to use a library of code fragments, called **sni
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
 
-**pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors, integrated development environments (IDEs), and electronic notebooks**.
+**pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors**.
 Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store the computer code!***
 In doing so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
 
 Text editors have tools for supporting the editing of computer code files.
 Although these files have many different file extensions that map them to the programming language of the code that they contain, they are all simple plain text files.
 One of the editing tools available in text editors is support for the retrieval and insertion of computer code fragments (i.e, snippets) to save time and reduce errors while assembling a new script file.
-
-Text editors and IDEs can be distinguished by their appearance.
-Text editors generally fire up with one main pane in the GUI, although extra ones can be opened.
-IDEs are text editors plus extra features for debugging and testing computer code.
-They are generally recommended for programmers working with large code bases that consist of many files.
-IDEs are well suited from navigating between the files in a large code base.
-IDEs generally open with three or four panes visible.
-
-The boundary between text editors and IDEs is blurry because some text editors support code testing.
-Because of space constraints, IDEs are best used on a large monitor.
-
-Electronic notebooks such as Jupyter Notebook and Rnotebook can be edited and run on their own or from inside the more advanced IDEs (Juptyer Lab, PyCharm, Spyder) and some text editors (e.g., VSC, Atom, Sublime Text).
-Below, we will use the term *text editor* as a collective term that refers to all three categories.
 
 Protocols for snippet installation for each text editor are found <a href="#install"> below</a>.
 Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file.
@@ -151,13 +138,6 @@ There are at least kinds of snippet systems available for Vim and neovim.
 
 
 
-
-
-
-
-
-
-
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
@@ -166,35 +146,20 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#espresso"> Espresso </a>
   * <a href="#geany"> Geany </a>
   * <a href="#gedit"> Gedit </a>
-  * <a href="#jupyterlab"> JupyterLab </a>
-  * <a href="#jupyternotebook"> Jupyter Notebook</a> 
   * <a href="#kate"> Kate </a>
   * <a href="#komodo"> Komodo Edit </a>
   * <a href="#LightTable"> Light Table </a>
   * <a href="#micro"> Micro </a>
   * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
-  * <a href="#nteract"> Nteract Notebook </a>
-  * <a href="#orgmode"> org-mode </a>
-  * <a href="#PyCharm"> PyCharm (Universal)</a>
-  * <a href="#PyDev"> PyDev (Universal)</a>
-  * <a href="#rstudio"> RStudio</a>
   * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
-  * <a href="#spyder"> Spyder</a>
   * <a href="#SublimeText3"> Sublime Text 3 </a>
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
-  * <a href="#wings"> Wings </a>
-  * <a href="#zepplin"> Zepplin </a>
 
-
-
-
-If you are considering switching editors, we recommend giving PyCharm serious consideration. 
-Although PyCharm is a massive IDE, it comes with most of the plugins that you would ever want to use already installed, so it is very `plug-and-play.
-Our second choice would be Visual Studio Code (VSC). 
+If you are considering switching editors, we recommend Visual Studio Code (VSC). 
 You do have to install plugins, but the process of doing so is quite painless.
-Our third tier would be Sublime Text, Textmate, Atom, and Spyder.
+Our second tier of text editors include would be Sublime Text, Textmate, and Atom.
 
 You might also consider *Geany*.
 It is very lightweight, very fast, and very easily configurable.
@@ -202,21 +167,6 @@ It is good editor if you care about agility.
 See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
 Note that the **thonny** editor that was recommended for beginners is more of a training tool than a productive tool.
 It does not support code snippets, yet.
-
-The Jupyter Notebook is a popular platform for **literate programming** in the support of **rigorous and reproducible research**, even though it is a not a full-featured text editor.
-The Jupyter Notebook provides instant gratification by interleaving output in between blocks of code.
-Warning: too much instant gratification will alter your brain: Jupyter Notebook will become your platform of first choice.
-**Jupyter Notebook makes coding fun**.
-Jupyter Notebooks have been used to assemble tutorials, manuscripts, and books.
-
-We demonstrate below how to use PyMOL's Python interpreter inside a Jupyter Notebook.
-To bring to bear the full power of a text editor onto a Jupyter Notebook, you can edit and run blocks of code from a Jupyter Notebook inside PyCharm, Atom, Sublime Text, Spyder, Vim, VSC, Emacs and other text editors. 
-We recommend using PyCharm, Spyder or VSC for the best experience.
-Spyder stand out is still allowing access to notebook extension from inside of Spyder.
-
-For a rapid examination of Jupyter Notebook, we recommend the stand-alone application **nteract**.
-It does not use your web-browser.
-It can be set as the default application for opening notebooks by double clicking on the notebook's file icon.
 
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
 I will be notified immediately by e-mail and will try to develop a snippet library for the requested editor.
@@ -236,10 +186,6 @@ Support is planned for the following editors:
   - [SciTE](https://scintilla.org/SciTE.html)
   - [Textadept](https://foicica.com/textadept)
   - [Zeppelin](https://zeppelin.apache.org/)
-
-Note that we wanted to support the Rodeo IDE, which is like Rstudio for Python.
-However, its developer, Yhat, has abandoned this project. 
-It seem is a waste of time to invest in abandoned software when so many excellent alternatives are available. 
 
 Note that some editors that are available as binaries only for Windows like *Notepad++* can be run on Mac OS or Linux by using wine or wine bottler.
 
@@ -313,17 +259,6 @@ Below is an example of the *threeMaps* snippet and a demonstration of its mirror
 
 
 
-<details>
-<summary><b>Running a PyMOL inside a jupyter notebook running inside of Atom via the plugin Hydrogen</b></summary>
-
-The plugin Hydrogen enables the running of Juptyer Notebooks inside of Atom.
-
-
-
-</details>	
-<A href=#FASTLINKS2 >Return to list of editors above.</A>
-
-
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
@@ -354,6 +289,7 @@ There is also presently the lack of a PyMOL lexer for syntax highlighting.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
 
 
 <h3 name="brackets"> Brackets (Universal) </h3>
@@ -411,8 +347,6 @@ This is helpful when you cannot remember the short-hand for a snippet.
 </p>
 
 Unfortunately, *Brackets* does not currently support tab stops.
-
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -475,7 +409,6 @@ The animation below shows how to edit one mirror location and travel to the othe
      <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
 </p>
 
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -499,7 +432,7 @@ Over 100 other variants of Emacs are available.
 *Spacemacs* does have its own keybindings that have to be mastered.
 This leads to the problem of needing to translate Spacemacs to Gnu Emacs and back again when tapping into external Emacs resources.
  
-*Doom Emacs* and *Prelude Emacs* are additional off-shoots that are suppose to be easier to adopt.
+*Doom Emacs* and *Prelude Emacs* are additional off-shoots of emacs that are suppose to be easier to adopt.
 They are similar to *Spacemacs*.
 
 *scimax* is a variant of *Emacs* that is being optimized to support scientific publication and literate programming.
@@ -632,84 +565,6 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 
 
 <details>
-<summary><b>Support for running and editing Jupyter in Emacs </b></summary>
-
-
-### EIN: emacs ipython notebook
-
-The oldest package for this purpose [EIN](https://github.com/millejoh/emacs-ipython-notebook), the Emacs Ipython Notebook.
-It was started shortly by after the Ipython Notebook became available in 2012.
-It was evolved to keep up with changes in the notebook.
-It cannot provide access to the widgets nor the notebook extensions.
-You will have to use the yasnippet library to access the PyMOL snippets.
-
-```emacs
-M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
-M-x p-ins RET ein RET
-```
-
-In the mini-buffer at the bottom of the GUI, enter the ```M-x ein:notebooklist-login``` to start up a Jupyter server.
-Alternatively, enter the shorthand with ```M-x ein:n-l RET```.
-
-You will be asked to enter the port for the server.
-Enter `8888` to use the local server.
-You will probably have to enter a password for the Jupyter server.
-You can disable this requirement in a Jupyter configuration file.
-
-You will be asked to select a kernel from a list of kernels with checkboxes.
-Use the left mouse button to select a kernel.
-
-You can create a new notebook or open an existing notebook.
-
-
-### ob-ein
-
-
-EIN can be run in org-mode via the package [ob-ein](https://github.com/millejoh/emacs-ipython-notebook/blob/master/lisp/ob-ein.el).
-
-
-
-### emacs-jupyter
-
-The [emacs-jupyter](https://github.com/dzop/emacs-jupyter) project is newer.
-it is an ''... interface to communicate with Jupyter kernels in Emacs''. 
-It is different from *EIN* in that it promises to interact with Jupyter widgets.
-
-```emacs
-M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
-M-x p-ins RET jupyter RET
-```
-
-### ob-ipython
-
-See the section below on org-mode.
-
-</details>
-
-
-
-<details>
-<summary><b>Support for running PyMOL through R from emacs </b></summary>
-
-The ESS package enables the editing and running of several statistical packages from inside emacs.
-ESS stands for emacs speaks statistics. 
-The supported packages include R, BUGS, JAGS, and STATA.
-Note the absence of Stan and pymc3.
-There is a separate stan-mode, but stan can also be run inside of R via either the rstan or rstanarm packages.
-The bio3d R-package can be installed and used analyze data from structures loaded in PyMOL. 
-
-</details>
-
-This mode enables the editing of R-markdown documents. 
-It should be possible to run PyMOL via the reticulate package from inside a R markdown document, which has the file extension of 'Rmd'.
-There is a poly-R package that also has to installed to turn on the recognition of R-markdown packages.
-
-
-
-
-
-
-<details>
 <summary><b>Variants of emacs to consider</b></summary>
 
 These variants might be suitable for the impatient who do not want to master GNU Emacs.
@@ -755,12 +610,9 @@ The code in the code blocks in the config.org file are copied to a config.el fil
 
 See the file section at the top for an example of a working init.el and config.org file.
 
-
 </details>
-
-
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 
 <h3 name="espresso"> Espresso (Mac only) </h3>
@@ -770,6 +622,8 @@ It is for those users who desire a text editor that has a GUI that looks like a 
 The snippets are stored in a single `.xml` file.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 
 <h3 name="geany"> Geany (Universal) </h3>
@@ -857,482 +711,6 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-
-
-<h3 name="jupyterlab"> Jupyter Lab (Universal) </h3>
-
-JupyterLab is a integrated development environment (IDE) that runs in your default web browser.
-It can read, edit, and run Jupyter Notebooks.
-It supports several kinds of windows including one for text editing. 
-This text editor has limited support for LaTeX and markdown. 
-JupyterLab is similar to RStudio, Rodeo, and Spyder IDEs.
-Its first stable release was in 2018.
-
-Jupyter Notebook and JupyterLab have extensions that add new capabilities, 
-but their extensions are not interchangeable.
-Both have extensions for vim keybindings which will appeal to vim users.
-
-
-
-
-
-<h4 name="jupyterlabsnippets"> JupyterLab Snippets</h4>
-
-[JupuyterLab](https://jupyter.org/) aims to be an Integrated Development Environment that can edit Jupyter Notebooks side-by-side with a markdown or LaTeX document in a text editor.
-*JupyterLab* has multiple windows like *Rstudio*: a code console, terminal shells, Jupyter Notebook editor, a text editor, and the Jupyter Notebook editor.
-In this fashion, JupyterLab has much stronger support for literate programming than the classic *Jupyter Notebook*.
-
-Like *Rstudio*, *JupyterLab* can open and edit a variety of markup documents like markdown, html, and latex files.
-The code console can run code interactively and shows the order in which the code was executed.
-Tab completion and tooltips work in the code console as they do in Jupyter Notebook.
-Selected codes chunks in markdown and latex documents can be connected to a code console.
-The tex editor supports vim key bindings.
-Some documents can be opened with one of several alternate editors.
-Edits of markdown and LaTeX documents are rendered immediately.
-
-*JuputerLab* has several extensions for snippet libraries that is not backward compatible with the *Jupyter Notebook*.
-The snippet extension is 
-The snippets are accessible from sub-menus, and it is easy to add new snippets.
-Snippets in a category are accessible from a sub-menu.
-There is no support for tab triggers and tab stops are this time.
-
-
-<A href=#jupyternotebook>Jupyter Notebook, classic</A>has two extensions for snippet management.
-These store the snippets in a JavaScript file, and the snippets are accessed from a pull-down menu.
-Jupyter Notebook and JupyterLab also allow the use of clippings as snippets via the `%load` magic.
-
-Jupyter Notebook can be used with ipymol to send commands to PyMOL and to import output from 
-PyMOL into cells in the notebook. 
-This module enables literate programming with PyMOL.
-See below for more information.
-
-
-
-
-
-Like Jupyter Notebook extensions, *JupyterLab* extensions are written in JavaScript, but the extensions for *Jupyter Notebooks* have not been ported to *JupyterLab*.
-The corresponding functionalities are being rebuilt by many volunteer developers.
-The extensions include support for vim keybindings in the text editor as well as in the editor of Jupyter Notebooks.
-The latter functionality enables rapid navigation of the notebook cells without using the mouse.
-There are two different extensions that support snippet libraries.
-They format for these libraries differs from that for the Jupyter Notebook as described below.
-The good news is that required format is similar to the clippings for BBEdit, so it is trivial for the user to add new snippets as described below.
-The bad news is that there is no support for tab triggers and tab stops.
-
-All-in-all, new Jupyter users should start with JupyterLab, and veteran Jupyter Notebook users should switch to JupyterLab.
-<details>
-<summary><b>More reasons to switch to JupyterLab</b></summary>
-
-The *JupyterLab* provides many enhancements for the editing of *Jupyter Notebook*.
-First, the cells can be dragged and dropped to rearrange them in the notebook.
-Second, the cells can be dragged between notebooks to copy the contents. 
-Third, multiple views of a single notebook can be opened. Changes in one notebook are synchronized with the remaining notebooks.
-Fourth, a blue bar on the blue side of the cell eases the folding and unfolding of the cell.
-Fifth, longer outputs are easier to scroll.
-Sixth, the cells output can be viewed from additional synchronized views.
-Seventh, tab completion includes more information about the matched items.
-Eighth, the tooltip, activated with shift-tab, shows information about selected objects.
-
-*JupyterLab* can support manuscript writing of tex or markdown files more directly than *Jupyter Notebook*.
-This is the main reason that I would consider using *JupyterLab*.
-If you are writing manuscripts that describe computer work, it may be worth the trouble to write the part of the manuscript that refers to that code by editing it JupyterLab. 
-There is a LaTeX *JupyterLab* extension that supports the writing and compiling of latex documents.
-With this extension enabled, the tex editor supports the generation of bibliographies using a BibtTeX file.
-With a wide computer screen, you can display in parallel the tex document, a preview of the pdf, and the Jupyter Notebook that you may be describing. 
-This parallel visualization supports the accurate transfer from of code listings, output tables, and figures from the Jupyter Notebook to the manuscript.
-</details>
-
-
-<details>
-<summary><b>Installation of JupyterLab</b></summary>
-[*JupyterLab*](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) can be installed with `conda`, `pip`,`pipenv`, or `docker`.
-To install using `conda`, enter the follow command in the bash command line:
-
-```bash
-$ conda install -c conda-forge jupyterlab
-```
-
-Once installed, enter `jupyter lab` to launch. 
-*JupyterLab* uses your browser to run and a log of your activity is recorded.
-
-There are no package installers for *JupyterLab*.
-However, *JupyterLab* is pre-installed in the full Anaconda Python package.
-It is available in the base environment, but Jupyter has to be installed in new environments.
-With the Anaconda system installed, activate the desired environment where you want to install *JupyterLab* with `conda activate <env>` and then `conda install jupyter`.
-This command will install both *JupyterLab* and the Jupyter Notebook.
-
-Outside of Anaconda, *JupyterLab* is installed with a package manager like any other Python module. 
-With pip, the install command is simply  `pip install --user jupyter` to install in Jupyter in a local library rather than the system library.
-The command for users of MacPorts is `port install py38-jupyterlab`. 
-Change the version number from Python3.8 to whatever is your current version of Python.
-
-The command for users of Homebrew is `brew install jupyter`.
-
-The command for he user of fink is `fink install jupyter`.
-The command for the users of cygwin on Windows is `To be determined`.
-The command for the users of Ubuntu is `To be determined`. 
-The command for the users fo Centos is  `To be determined`.
-</details>
-
-
-<details>
-<summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
-
-The kernels are easily installed for a particular python interpreter.
-Briefly, the python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
-
-```bash
-/Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
-/Applications/PyMOL.app/Contents/bin/python -m ipykernel install
-```
-
-On Mac OS, the kernels are stored in `~/Library/jupyter/kernels`.
-A python kernel as a separate folder with three files in it.
-Two of the files are images of the python logo.
-The third file is a JavaScript file, `kernel.json`, that is created by the above ipykernel install operation.
-However, it is trivial to manually create a copy of the folder and its contents to create a new kernel for a new Python interpreter.
-One has to to edit the path in the kernel.json to the Python interpreter on the third line (see code listing below) and change the `display_name` of the kernel on the ninth line.
-The display name can have any format.
-There is no need to include a period between PyMOL and python as in the example.
-The kernel.json file is a plain text file that can be edited with any text editor.
-(JSON represents JavaScript Object Notation.)
-The kernel.json file for the Python interpreter inside the PyMOL.app on the Mac is shown below.
-
-
-```javascript
-{
- "argv": [
-  "/Applications/7PyMOL.app/Contents/bin/python",
-  "-m",
-  "ipykernel_launcher",
-  "-f",
-  "{connection_file}"
- ],
- "display_name": "pymol.python",
- "language": "python"
-}
-\end{bashcode}
-}
-}
-
-```
-
-The addition of kernels for non-python programs requires different protocols than the one given above.
-</details>
-
-
-<details>
-<summary><b>Documentation about using JupyterLab</b></summary>
-
-### Documentation about using JupyterLab
-</details>
-
-
-
-
-
-<details>
-<summary><b>Installation of *jupyterlab-snippets* for JupyterLab</b></summary>
-
-*JupyterLab* has a completely different snippet system enabled with the *JupyterLab* extension called *jupyterlab-snippets*. 
-The snippets are in individual files in analogy to the code clippings of BBEdit.
-The snippets are stored with the appropriate file extension in the directory `./Library/Jupyter/snippets` on the Mac.
-Nested submenus are created by making subfolders within the snippets folder.
-These nested submenus will appear under the menu pulldown labeled `snippets` between the `Kernel` and `Tabs`.
-You have to use the mouse to select the snippet.
-There is no support for *MathJax* rendering of LaTeX in the label of snippet, unlike in the classical Jupyter Notebook.
-
-
-When the jupyterlab-snippets extension is in synch with the current version of *JupyterLab*, the built in *JupyterLab* extension manager eases installation.
-First, install node.js.
-If you are using Anaconda, you can install node.js with the command `conda install -c conda-forge nodejs`
-On the Mac OS, use `brew install node` with homebrew or `port install nodejs14` with macports (or at least nodejs10).
-Start Jupyter Lab (e.g., `python3.8 -m jupyter-lab`).
-Click on the extension manager button in the left margin.
-It looks like a painter's palette.
-Then select the enable button to activate the extensions. 
-
-
-Enter `snip` to get a list of the snippet related extensions.
-Select ` ` and then click on the install button.
-If the install fails, the extension can be installed manually in the terminal with these commands.
-
-If the above commands fail because the version of the extension in PyPi is not available yet for the current version of *JupyterLab*, you might get lucky by installing the development version of the extension. 
-The current instructions are found on the GitHub page for this project.
-This issues tab on the GitHub page can be used to resolve any further difficulties.
-
-This project has three related web pages.
-The first page is linked to the notebook extension and is a JavaScript site for the project. 
-This web page is two years out of date. 
-The original developer of the extension is no longer supporting it.
-Two other developers have taken over the project because it is so valuable.
-There is a PyPi web page for the project that has access to a wheel file for the nbextension and a tar file of the source code.
-This page also includes a link to the GitHub page for this project.
-The GitHub page has the current information about installation trouble shooting.
-
-You should beware that the upgrading of *JupyterLab* in the future could lead to the breaking of your various *JupyterLab*extensions. 
-It may be best to delay the *JupyterLab* upgrade until the extensions have been upgraded. 
-</details>
-
-
-<details>
-<summary><b>Documentation about using JupyterLab</b></summary>
-
-The official documentation for *JupyterLab*is the found on Read the docs.
-This documentation can be viewed as html file in a browser, or it can be downloaded as a pdf for printing. 
-There is a tiny icon in the lower left of the home page for the JupyterLab read-the-docs.
-Click on this icon to gain access to the pdf version.
-
-In addition to the books about Jupyter Notebook mentioned in the section about Jupyter notebooks, books have been written about *JupyterLab* exclusively (e.g., *JupyterLab Quick Start Guide*) or describe JupyterLab in detail in context of another topic (e.g., * *).
-The book  *JupyterLab Quick Start Guide* has it code available on a dedicated [github site](https://github.com/PacktPublishing/Jupyterlab-Quick-Start-Guide). 
-
-
-```bibtex
-@book{Richman2019JupyterLabQuickStartGuide,
-  title={JupyterLab Quick Start Guide},
-  author={Richman, Lindsay and Ferrari, Melissa and Oladokun, Joseph and Banfield, Wesley and Toomey, Dan },
-  year={2019},
-  publisher={Packt Publishing Ltd}
-}
-
-@Book{Galea2018AppliedDataScienceWithPythonAndJupyter,
-  author    = {Galea, Alex},
-  publisher = {Packt Publishing Ltd},
-  title     = {Applied Data Science with Python and Jupyter},
-  year      = {2018},
-}
-
-@Book{2018AppliedDataScienceWithPythonAndJupyterUsePowerfulIndustryStandardToolsToUnlockNewActionableInsightsFromYourData,
-  publisher = {Packt Publishing Ltd},
-  title     = {Applied Data Science with Python and Jupyter: Use powerful industry-standard tools to unlock new, actionable insights from your data},
-  year      = {2018},
-}
-```
-</details>
-
-As mentioned above, several [JupyterCon](https://conferences.oreilly.com/jupyter/jup-ny) conventions have been held.
-The [2020 JupyterCon](https://jupytercon.com) convention will occur October 12-16, 2020.
-
-
-
-
-
-<h3 name="jupyternotebook"> Jupyter Notebook, Classic</h3>
-
-The Jupyter Notebook is an electronic notebook for interactive programming in Python.
-It can be extended for use with scores of other programming languages including R and Julia via kernels.
-The name Jupyter is a blend of Julia, Python, and R.
-These are the three most useful programming languages for data science.
-The developers of the Jupyter Notebook are trying to meet the need for a single computing environment for the developement and execution of code form multiple languages.
-The Jupyter Notebook was released initially in the fall of 2014.
-
-The Jupyter Notebook descended from the IPython Notebook project, which started in late 2011.
-The IPython Notebook project emerged out of the IPython project which was started in 2001 by Fernando Perez when he was a graduate student in Physics as the U of Colorado.
-It was inspired by the  *Mathematica Notebook*, which has been available since the late 1980s.
-
-The Jupyter Notebook is composed of cells.
-Code cells can be edited.
-They contain blocks of code that generally do one thing.
-All of the code in a cell is run at once.
-The use of executable blocks of code eases debugging.
-Jupyter Notebooks are also fun to use when developing new code because the interleaved output in the form of beautiful figures provides almost instant gratification. 
-The kernel for a notebook can be switched between cells. 
-This is a little convenient to do in the current Jupyter Notebook but much easier to do in a modifed notebook called the SOS or Script of Scripts.
-SOS provides stronger support for polygot literate programming.
-
-
-PyMOL can be imported into an active notebook as a module via `from pymol import cmd`.
-This enables execution of the pml commands when enclosed withe `cmd.do(" ")` command.
-The output is returned to the cell below.
-The png command can be used to create an image.
-The image can then be loaded.
-
-```python
-from IPython.display import Image
-Image(filename ='/Users/blaine/Val804.png',width=200)
-```
-
-The enclosure of the PML code with cmd.do(" <insert PML code here") can be done around multiple commands.
-Multiple lines of commands can concatenated together while separated by semicolons. 
-This minimizes the number of enclosures that need to be made.
-A variant of the pymolsnips library called [pymolpysnips](https://github.com/MooersLab/pymolpysnips) has the pml code already enclosed.
-
-If the image needs further adjustment, the PML code in the cell above the image can be edited and rerun by entering Control-Enter. 
-The only limitation is that may be more convenient to obtain initial viewport settings from an interactive session.
-It is remarkable how the desired output can be obtained in about five iterative cycles of editing the PML code and inspecting the output. 
-These cycles may take ten to twenty minutes to complete.
-The advantage of having the code and the output in close proximity in a single document is enormous. 
-It save a lot of time and frustration associated with the remaking and renumbering of images during the drafting of new manuscripts and the revision of manuscripts for re-submission.
-
-Jupyter Notebooks are also effective for providing training in the classroom and workshops.
-It is designed to support reproducible research and literate programming.
-
-The main gotcha is that you have to be aware of the state of the computer.
-That is, you have to be mindful of the order in which the cells were executed.
-This something that experienced programmers do innately.
-However, it seems to be a big stumbling block and common source of discouragement for users with little training in computing.
-
-*Jupyter Notebook* has two extensions for snippet management.
-These notebook extensions have to be installed first.
-The snippets are stored in JSON files so they are not so easy to edit because of the nested braces.
-The snippets are accessed from pulldown menus.
-The pulldown menus are limited by the height of the screen, so the snippets have to stored by category in nested submenus.
-
-A crude alternate approach is to store the snippets one per file, each with the `*.pml` file extension.
-The these snippets can be loaded as needed by using the load magic.
-
-```jupyter
-%load filePath/<snippetName>.pml
-```
-</details>
-
-The animation below demonstrates the insertion of a snippet with the load magic.
-
-<p align="center">
-<img src="https://media.giphy.com/media/RISGKb5B7zU1twCfZ0/giphy.gif" width="640" height="320" alt="jupyter clipping" />
-</p>
-
-
-<details>
-<summary><b>Installing and using ipymol</b></summary>
-
-Another approach is to use the a RPC server to interact with an open session of PyMOL from the jupyter Notebook. 
-Such a connection between PyRosetta and PyMOL has been available for almost a decade.
-Several alternate approaches are listed on the PyMOL Wiki.
-
-One approach is to use the ipymol module.
-The *ipymol* module was developed by Carlos Hernandez: https://github.com/cxhernandez/ipymol.
-It enables the sending of commands to PyMOL and the return of data and images from PyMOL to notebook cells.
-It facilitates literate programming with PyMOL.
-
-The pre-requisites for installing ipymol are as follows:
-
-1. Make a Jupyter Notebook kernel for Python interpreter inside of the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for a description of how to make one.
-2. Install the following build of ipymol at the PyMOL prompt. You need to log into your GitHub account first.
-pip install git+pip install git+https://github.com/cxhernandez/ipymol. 􏰀→git@2a30d6ec1588434e6f0f72a1d572444f89ff535b
-3. Make a bash alias to this PyMOL app file.
-4. Launch the Jupyter Notebook and select the pymol.python kernel.
-5. Open a terminal instance from the File pull-down in Jupyter Notebook.
-6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.
-7. Enter the following code to load ipymol and connect to PyMOL
-
-```python
-from ipymol import viewer as ipv 
-ipv.start() # Start PyMOL RPC server
-```
-
-Now you can change the scene manually and send the display as static image to a cell in the Jupyter Notebook.
-It is assumed that the viewer class of the ipymol model has been imported as ipv.
-
-I made the following modifications of roundview.py to return to the notebook the current settings of the scene in PyMOL. 
-The cmd.get_view was replaced with ipv.get_view.
-The cmd.extend was replaced with ipv.extend.
-The myRoundedList was returned for further processing.
-The new function is called `rvj()' for roundview for Jupyter.
-
-The snippet rvj will be in the snippet library eventually
-Its code is listed below:
-
-```python
-def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
-   """MIT License
-   Copyright:
-   Blaine Mooers and the OU Board of Regents
-   University of Oklahoma Health Sciences Center
-   Oklahoma City, OK 73104
-   29 April 2020
-          """
-    StoredView = int(StoredView) decimal_places = int(decimal_places)
-    #call the get_view function
-    m = ipv.get_view(StoredView)
-    #Make a list of the elements in the orientation matrix.
-    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9], 
-              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]
-              #Round off the matrix elements to two decimal places (two fractional places)
-              #This rounding approach solved the problem of unwanted
-              #whitespaces when I tried to use a string format statement
-    myRoundedList = [round(elem, decimal_places) for elem in myList]
-    #x is the string template for the output. The whitespace is required
-    #between the "set_view" and "("
-    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'
-    # Print to the command history window.
-    print(x.format(*myRoundedList))
-    #Write to a text file.
-    myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()
-    return myRoundedList
-ipv.extend("rvj", rvj)
-```
-
-
-
-Citation for roundview.py script
-
-```bibtex
-@Article{Mooers2016SimplifyingAndEnhancingTheUseOfPyMOLWithHorizontalScripts,
-  author    = {Mooers, Blaine HM},
-  journal   = {Protein Science},
-  title     = {Simplifying and enhancing the use of PyMOL with horizontal scripts},
-  year      = {2016},
-  note      = {PubMed PMID: 27488983 PMCID: PMC5029532},
-  number    = {10},
-  pages     = {1873--1882},
-  volume    = {25},
-  doi       = {10.1002/pro.2996},
-  pmcid     = {PMC5029532},
-  pmid      = {27488983},
-  publisher = {Wiley Online Library},
-}
-```
-
-
-
-<details>
-<summary><b>Making a pymol.python kernel for JupyterLab and Jupyter Notebook</b></summary>
-
-The following Jupyter kernel will work for both the notebook and Jupyterlab.
-It is a simple JavaScript program.
-Make a directory called 'pymol.python' the folder `~/Library/jupyter/kernels` on a Mac.
-Paste the following code in new text file named `kernel.json`.
-If needed, adjust the path to the Python interpreter inside of the PyMOL.app.
-
-```javascript
-{
- "argv": [
-  "/Applications/PyMOL.app/Contents/bin/python",
-  "-m",
-a  "ipykernel_launcher",
-  "-f",
-  "{connection_file}"
- ],
- "display_name": "pymol.python",
- "language": "python"
-}
-```
-</details>
-
-
-
-<details>
-<summary><b>Installing and using snippets with the snippet notebook extensions</b></summary>
-	
-These snippet extensions do not support tab triggers or tab stops.
-A simple alternative to the snippet extensions is to import individual snippets with the load magic.
-The snippets are in individual files without tab stops and with the pml file extension.
-
-The file finder system in *Jupyter Notebook* eases navigation to the correct file.
-The above library of snippets includes a commented out *Sublime Text 3* snippet that has tab stops.
-This commented out snippet is also printed to the cell so that it can serve as a guide to the sites in the clipping that should be considered for editing.
-
-The `pml` code cannot be sent directly to PyMOL because a `.pml` kernel for the *Jupyter Notebook* has yet to be developed.
-Instead, the *Jupyter Notebook* can be used to gather and edit code fragments.
-The notebook cells can be merged, and the code can be copied and pasted into an external `.pml` script file.
-In addition, the notebook can be used to document the cells of code with interleaved cells containing markdown code.
-The markdown cells support LaTeX rendering of equations and the insertion of images and videos.
-The notebook could provide an enhanced means of documenting and explaining a `.pml` script file.
-</details>
-
-</details>
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 
@@ -1566,43 +944,6 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 </details>
 
 
-<h3 name="nteract"> Nteract Notebook </h3>
-
-[nteract](https://nteract.io/) is a highly intuitive, slimmed-down interface for viewing, running, and editing Jupyer Notebook.
-We highly recommend **nteract** for beginning users of Jupyer Notebooks.
-**nteract** is a stand-alone application that does not use the web-browser to view and edit Jupyter Notebooks.
-The independence of **nteract** from the web makes it more secure.
-
-**nteract** can be set as the default application for opening Jupyter Notebooks by double clicking on the icon for the notebook.
-This feature is a big plus because it enables the rapid inspection of notebooks.
-
-**nteract** has drop down menu for access to the installed kernels.
-The kernels are installed for a particular python interpreter as described under the Jupyter Notebook above.
-Briefly, the Python interpreter for which you want to make a kernel is used as follows to install ipykernel and then install the kernel:
-
-```bash
-/Applications/PyMOL.app/Contents/bin/python -m pip install ipykernel 
-/Applications/PyMOL.app/Contents/bin/python -m ipykernel install
-```
-
-The IPython magics are available.
-The clippings snippet library can be loaded by using the **%%load** magic as described for the Jupyter Notebook above.
-A set of keyboard shortcuts are also available.
-
-<p align="center">
-	<img src="images/InteractNotebook2.png" width="600">
-</p>
-
-There are several major limitations to nteract compared to running Jupyter Notebook in the web-browser.
-There are no notebook extensions.
-The markdown cells recognize a smaller subset of LaTeX.
-For example, the equation environment is not recognized.
-This limits the optional code that can be used to render multi-line equations.
-
-While the support for full-fledged literate programming is absent in **nteract**, even experienced Jupyter Notebook users will enjoy using **nteract** for rapidly interrogating foreign notebooks and starting new notebooks.
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
 
 
 <h3 name="orgmode">Org-mode </h3>
@@ -1611,197 +952,6 @@ While the support for full-fledged literate programming is absent in **nteract**
 The document's file extension is `org`.
 Org-mode has many features that support planning and organizing hence that the `org` file extension.
 It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
-The [ob-ipython]](https://github.com/gregsexton/ob-ipython) extends org-mode documents by sending Python code to a Jupyter kernel and enabling the embedding of the results from Jupyter Kernels below the code block
-Org-mode is more similar to the R Notebook than Juptyer Notebook.
-We provide a version of the snippet library for org-mode that flanks the snippets with code that makes them into executable code blocks.
-
-
-<details>
-<summary><b>Installing and running ob-ipython </b></summary>
-
-It is being developed by Greg Sexton who was a long-time user of EIN.
-It can run the R kernel for Jupyter Notebooks as well as kernels for other languages.
-
-Org-mode is a large suite of packages (100s) that support literate programming in Emacs via use of a feature rich markdown language that can be converted into pdf via LaTeX.
-You will have to master org-mode on top of mastering Emacs to take advantage of this package.
-You may need to install org-babel. 
-Scimax also uses ob-ipython.
-
-```emacs
-M-x p-r-c RET ;; this refreshes the package list. RET refers to the RETURN key.
-M-x p-ins RET ob-ipython RET
-```
-
-You may need to modify your .emacs.d/init.el file by adding the following lines.
-(Alternately, you can add these lines to a elisp code block in a config.org file.):
-
-```emacs
-;; Org-mode related settigs
-(setq exec-path (append exec-path '("/opt/anaconda/envs/cctbx37/bin")))
-(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
-;;; display/update images in the buffer after I evaluate
-(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((ipython . t)
-   ;; other languages..
-   ))
-```
-
-The line starting with `;;` is a comment line.
-Edit the file path in the second line to point to the Python interpreter that you what to use.
-The Python interpreter that I selected had PyMOL 2.4.0 installed earlier.
-The third line turns off an annoying prompt.
-The fifth line updates images.
-
-The following corrected org-mode code that will generate the image below. 
-
-```emacs
-My Test of ob-ipython -*- mode: org -*-
-
-#+BEGIN_SRC ipython :session :exports both :results raw drawer
-from pymol import cmd
-cmd.do("reinitialize")
-cmd.bg_color("white")
-cmd.do("fetch 6VXX")
-cmd.do("zoom (resi 614 and chain A)")
-cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")
-cmd.do("set label_color, black; set label_size, 48")
-cmd.do("set stick_radius, 0.12")
-cmd.do("hide cartoon; show sticks")
-cmd.do("set ray_shadows, 0")
-cmd.do("draw")
-cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")
-
-from IPython.display import Image
-from IPython.core.display import HTML
-PATH = "/Users/blaine/"
-Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
-#+END_SRC
-```
-
-
-The first line above is required to tell emacs that that this is an org-mode document. 
-The title can be edited but the `-*- mode: org -*-` must remain unchanged. 
-A snapshot of the org-mode document is shown below after the code block was run.
-The code is run by entering `C-c C-c` where the uppercase C represents the CNTRL key and the lowercase C frepresent the `C` key.
-The file is saved by entering `C-x C-s` where the uppercase C represents the CNTRL key and the lowercase represent the `C` key.
-
-
-</details>
-
-The image below shows that the Emacs gui with an org-mode document after running PyMOL from emacs.
-
-
-<p align="center"><img src="images/PyMOLinOrgMode.png" width="600"> </p>
-
-
-
-Note that the bg_color command as coded as a setting.
-An error message was written to a log file that appears in a second buffer below the large window. 
-The code block above has been corrected.
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
-
-
-<h3 name="PyCharm">PyCharm </h3>
-
-[PyCharm IDE](https://www.jetbrains.com/pycharm-edu/) is a commercial Integrated Development Environment (IDE) from JetBrains Inc.
-JetBrains is a well-established Cezh firm that supplies a number of IDEs, mostly for webpage development.
-
-PyCharm's selling points are strong support for autosuggestions and auto-completions to speed up the writing of code.
-It also supports the interactive editing of Jupyter Notebooks.
-It is easy to switch the Python interpreter used in editing a Jupyter Notebook to the one side the PyMOL application.
-Then PyMOL's **cmd** module can be imported into the Jupyter Notebook, and the function **cmd.do()** can be used to issue commands written in **pml**.
-The *pymol.xml* file containing the snippet library will be available for use.
-
-This feature can also be found in like VSC, Spyder, and other editors.
-This last feature has been spreading across text editors like wildfire due to the growing popularity of Jupyter Notebooks.
-
-The PyCharm IDE is available in a Professional and a Community Edition.
-The Professional Edition is available for free to academics working on open-source projects.
-The software is issued with a license that expires after one year.
-
-
-<details>
-<summary><b>Installing and running PyCharm</b></summary>
-
-The software can be installed on multiple devices.
-It can be downloaded with platform specific installers that make the installation easy and uneventful.
-The program requires about 1 GB of diskspace.
-
-Most IDEs are top heavy with configurations that take many hours to setup.
-One also often has to spend hours installing numerous plugins to make available must-have features.
-Many of the more popular must-have features should really be incorporated into the base distribution.
-PyCharm comes with such features already installed.
-PyCharm leans more towards the plug-and-play end of the spectrum, so beginners in academia should consider using it.
-
-For example, I wrote the first draft of this text in markdown on *PyCharm* as a *scratch file*.
-The markdown file opened with a parallel window with a markdown previewer.
-I did not have to install a markdown previewer plugin, as I did with other text editors.
-Why would you want to write in markdown without a previewer?
-
-*PyCharm*'s startup time is slower than Textmate, *Sublime Text*, and *VSC*; similar to  *Spyder* and *Komodo Edit*; and much faster than that of *Atom*.
-Some people contend with slow startup time by keeping the application open all of the time.
-
-The main competitor for Pycharm is the open source project *Spyder*.
-Spyder's current production release does not directly support code snippets; however,
-you can edit and run Jupyter Notebooks inside Spyder. 
-While doing so, you can access the snippet library for *PyMOL*.
-See the section on *Spyder*.
-
-In the *PyCharm IDE*, the snippets are called *live templates*.
-A concise introduction can be found [here](http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html).
-*PyCharm*'s on-line manual is very good at explaining the snippets.
-The snippets are stored in a xml file.
-The storage location on the above blog post is outdated.
-This file is stored in one of these three locations:
-
- * Linux:
- * Mac OS: ~/Library/Application Support/JetBrains/PyCharm2020.1/templates
- * Windows OS:
-
-All of the snippets are stored in one xml file called *pymol.xml*.
-Each snippet has a unique tab trigger.
-The tab trigger's name is autosuggested after typing the first several letters.
-There is a also a description of the snippet displayed. 
-
-<p align="center">
-	<img src="images/PycharmJupyterPymolLabel.png" width="600">
-</p>
-
-The snippet includes tab stops with default values.
-The default enough need to be changed.
-The cursor stops outside of the snippet when it hits that last tab stop.
-
-You can also get a preview of a *PyMOL* function after typing its name.
-This preview includes a listing of the code of the function: 
-
-
-
-<p align="center">
-	<img src="images/PycharmJupyterPyMOLDocumentation.png" width="600">
-</p>
-</details>
-
-
-*PyCharm* also supports the creation and editing of Jupyter Notebooks.
-When a Jupyter Notebook file is opened, two panels are displayed in the editor.
-On the left is a text file.
-The code, markdown, and Raw NBconvert cells are written to this file.
-The ```#%%``` marks the beginning of a code cell.
-The ```#%% md``` marks the beginning of a markdown cell.
-The ```#%% raw``` marks the beginning of a Raw NBconvert cell.
-These cells are rendered and displayed with the interleaved output in a notebook on the right. 
- 
-<p align="center">
-	<img src="images/covid19SpikeProteinD614.png" width="600">
-</p>
-
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -1816,29 +966,14 @@ The latter version can interface with Jupyter Notebooks.
 The RStudio Pro Server is available at some academic institutions.
 
 RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html) written in R Markdown.
-R Markdown supports literate programming.
+R Markdown supports literate programming where text is interleaved with code..
 R and its predecessor S have been used for literate programming for over two decades via *Sweave*, *Rweave*, and *Knitr* packages.
 Many books have been assembled using *Knitr*.
 
+The pml code in the pymolsnips library cannot be sent to pymol api directly through R' reticulate library.
+It has to be reformatted as Python code first.
+We are working on making this happen in the [pymolpysnips project](https://github.com/MooersLab/pymolpysnips).
 
-
-<p align="center">
-     <img src="https://github.com/MooersLab/pymolsnips/blob/master/images/PyMOLInRStudio.png">
-</p>
-
-
-
-There are several recent books about literate programming in R.
-
-R also supports polyglot programming. 
-R has been extended to accommodate over twenty programming languages.
-There is a recent book about such extensions:
-
-
-<details>
-<summary><b>Installing and running RStudio</b></summary>
-
-R has a package called *reticulate* that enables the running of Python inside of R and R Markdown.
 
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -1857,10 +992,6 @@ In other words, you will use *Vim*, *Emacs*, and *Spacemacs* commands in one edi
 It might be less intimidating if you have mastered some of the basics of *Vim* and *Emacs*.
 *Spacemacs* does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 </details>
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
 
 <details>
 <summary><b>Installing and using snippets with Spacemacs </b></summary>
@@ -1887,82 +1018,6 @@ Spacemacs may be more attractive to *vi* users rather than *Vim* users who canno
 
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
-<h3 name="spyder">Spyder (Universal)</h3>
-
-*Spyder* is an open source IDE for Python.
-*Spyder* is distributed with the Anaconda Navigator which eases its installation.
-The current production version is in the 4.X series.
-
-
-<details>
-<summary><b>Installing and using snippets with *Spyder*</b></summary>
-
-The current and development versions of *Spyder* can be installed on the Mac OS with macports.
-This 
-
-```bash
-sudo port install py38-spyder-devel
-```
-
-Spyder does not support snippets.
-However, the Jupyter Notebook can be run and edited in Spyder after installing the *Spyder-Notebook* plugin.
-This plugin imports a full instance of the notebook with the menu bar, toolbar, and code cells.
-It can be faster to open a notebook in this fashion that via a web-browser.
-
-
-
-The menu bar can include customized menus that can include pull-down access to collections of code snippets (see below).
-The toolbar can include access to the functionality of various notebook extensions. 
-[Source)(https://jupyter-notebook.readthedocs.io/en/stable/).
-
-<p align="center">
-	<img src="images/NotebookHeading.png" width="600">
-</p>
-
-
-
-In contrast, *PyCharm* only imports the cells.
-The snippets from the notebook extension in Jupyter Notebooks are accessible to the code cells in the Jupyter Notebook in *Spyder*.
-
-The Spyder-Notebook plugin can be installed with conda if you are using the Spyder from anaconda. 
-
-```bash
-conda install -c conda-forge spyder-notebook 
-```
-
-
-The plugin can alternately be installed using the desired *Python* interpreter (e.g., Python3.8 from MacPorts) and pip:
-
-```bash
-/opt/local/bin/python3.8 -m pip install spyder-notebook
-```
-
-Note that in this case, *PyMOL*f was installed with MacPorts Python3.8 to ease accessing *PyMOL* from the Jupyter Notebook.
-The notebook also had full access to all other modules installed for macports Python3.8.
-*PyMOL* was installed with the following command. 
-
-```bash
-sudo port install pymol -python38
-```
-
-On June 25, 2020, this command installed pymol version 2.4.0.
-
-</details>
-
-The panes in the Spyder IDE can the rearranged as you wish.
-In the image below, a Jupyter Notebook was opened in the pane at the bottom of the GUI. 
-This image shows the three default spyder panes opened at the top.
-
-<p align="center">
-	<img src="images/PyMOLInSpyder.png" width="600">
-</p>
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
 
 
 
@@ -2510,55 +1565,6 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 ```
 </details>
 
-
-### jupyter-vim
-
-[jupyter-vim](https://github.com/wmvanvliet/jupyter-vim) is a *Vim* plugin that runs the Jupyter Qt-console in a buffer (window) inside of *Vim*.
-For this plugin to work, you must have Jupyter installed in the Python environment used by *Vim's* pythonx command. 
-  
-To install this plugin with Vundle, add the following command to your vimrc file.
-
-```vim
-Plugin 'jupyter-vim/jupyter-vim'
-```
-
-To begin a session with vim using the Jupyter Console, you must enter two commands in the terminal, which can be done on one line.
-
-```vim
-jupyter qtconsole & && vim <your_script>.py
-```
-
-You could create a bash alias to save time:
-
-```bash
-alias jcv="jupyter qtconsole & && vim '$1'.pml $1"
-```
-
-That you would run as 
-
-```bash
-jcv myFile.pml
-```
-
-
-
-<details>
-<summary><b>Installing and using snippets with UltiSnips</b></summary>
-
-
-
-
-
-/opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/jupyter-qtconsole
-
-
-
-
-</details>
-
-
-
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
@@ -2618,58 +1624,6 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-
-<h3 name="wings">Wings</h3>
-	
-[Wings](https://wingware.com) is a commercial IDE that is focused on Python.
-It is available for all platforms.
-
-Wings is available to academics through a special license.
-A free 30-day trial is available.
-
-Wing supports snippets.
-Wing has a snippet editor that eases the creation of new snippets.
-
-Wing comes with GUI driven installers.
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
-<h3 name="zepplin">Zepplin (universal) </h3>
-	
-[Zepplin](https://zeppelin.apache.org) is an web-driven electronic notebook that is being developed by Apache.
-It may be less alien for those with experience programming for web interfaces.
-It is similar to the Jupyter Notebook, but it has many different features.
-Zepplin is more recent and has a smaller community of users.
-As a result, it has a smaller number of extensions and supported languages. 
-It has built-in approaches to supporting polyglot literate programming, collaborative programming, and secure notebooks.
-These features address weakneess of the Jupyter Notebook that are addressed by extensions to the Jupyter Notebook.
-
-Zepplin enables data-driven, interactive data analytics, and collaborative documents with SQL, Scala, Python, Spark, and so. 
-It facilitates the use of multiple programming languages in one document.
-It comes with multiple backends for making plots.
-This functionality can be found in SOS notebooks, a variant of Jupyter Notebooks.
-
-
-Zepplin It facilitates the interactions between Python, SQL, and Spark.
-Its user guide is located [here](https://zeppelin.apache.org/docs/latest/index.html)
-It can be installed as a binary or from source. 
-Zepplin supports 20 programming languages whereas Jupyter supports 85.
-Zepplin has stronger support for collaborative work and for providing secure notebooks for end users.
-It has a jupyter interpreter plugin. 
-
-Zepplin interpreters are analogous to Jupyter kernels.
-They enable to use of a particular programming language.
-
-
-Snippets in Zepplin are called notes.
-Notes are paragraphs of code that are stored in JavaScript. 
- 
-
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <!--
