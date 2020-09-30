@@ -1,4 +1,4 @@
-## **pymolsnipts** library to support literate programming with PyMOL
+## **pymolsnips:** PyMOL Script Writing with Code Templates
 
 
 [PyMOL](https://pymol.org/2/) is a leading molecular graphics program for making images of proteins and nucleic acids for publication.
@@ -21,6 +21,13 @@ Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/G
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
 One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
 
+### Navigating this document
+
+This document has over 12,000 words. 
+This long document has a large number of hyperlinks that enable rapid movement to desired sites below and the return to the menus at the top of the file. 
+The hyperlinks reduce the need to scroll through the document.
+Some of the text is hidden from view and has to be toggled or unfolded to expose it. 
+
 ### <A name="FASTLINKS">Quick links</A>
 
   * <a href="#gallery"> Gallery of snippets and their output </a>
@@ -31,10 +38,11 @@ One solution to this problem is to use a library of code fragments, called **sni
 
 **pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors**.
 Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store the computer code!***
-In doing so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
+If you do so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
+In addition, word processing documents are usually binary files that are difficult to put under version control.
 
 Text editors have tools for supporting the editing of computer code files.
-Although these files have many different file extensions that map them to the programming language of the code that they contain, they are all simple plain text files.
+Although these files have many different file extensions that map them to the programming language of the code that they contain, they are all plain text files.
 One of the editing tools available in text editors is support for the retrieval and insertion of computer code fragments (i.e, snippets) to save time and reduce errors while assembling a new script file.
 
 Protocols for snippet installation for each text editor are found <a href="#install"> below</a>.
