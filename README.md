@@ -179,22 +179,6 @@ It does not support code snippets, yet.
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
 I will be notified immediately by e-mail and will try to develop a snippet library for the requested editor.
 
-Support is planned for the following editors:
-
-  - [Bluefish](http://bluefish.openoffice.nl/download.html)
-  - [Coda 2](https://panic.com/coda)
-  - [Editra](http://www.editra.org://www.editra.org)
-  - [JED](http://jedmodes.sourceforge.net)
-  - [jEdit](https://github.com/afeld/jeditable-railshttp:///www.jedit.org)
-  - [Howl](https://howl.io/getit.html)
-  - [Kakoune](http://kakoune.org)
-  - [Notepad++](https://github.com/awashValley/editor_Notepadpphttps://notepad-plus-plus.org)
-  - [Oni 2](https://www.onivim.io/)
-  - [Pydev]()
-  - [SciTE](https://scintilla.org/SciTE.html)
-  - [Textadept](https://foicica.com/textadept)
-  - [Zeppelin](https://zeppelin.apache.org/)
-
 Note that some editors that are available as binaries only for Windows like *Notepad++* can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
