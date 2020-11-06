@@ -20,7 +20,7 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
 	
 ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery")
 
-
+<link rel="stylesheet" href="style.css">
 <h2>Gallery</h2>
     <table>
        <tr>
