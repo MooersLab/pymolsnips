@@ -47,24 +47,6 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
         <td align="left"><img src="./images/coordinate.png" alt="HTML5 Icon" style="width:300px;height:224px;"> </td>
         <td align="left"><h4>Coordinate covalent bonds</h4> <p>Example of specifying coordinate covalent bonds between RNA and a sodium and H-bonds.</p> </td>
      </tr>
-
-      <tr>
-        <td align="style='text-align:center;vertical-align:middle width:130px'">filledring</td>
-        <td align="left"><img src="./images/filledring.png" alt="HTML5 Icon" style="width:284px;height:300px;"> </td>
-        <td align="left"><h4>Filled ring cartoon for nucleic acids</h4> <p>Filled ring cartoon for nucleic acids with the backbone highlighted by a flat ribbon.</p> </td>
-     </tr>
-
-      <tr>
-        <td align="style='text-align:center;vertical-align:middle width:130px'">sc222</td>
-        <td align="left"><img src="./images/sc222.png" alt="HTML5 Icon" style="width:300px;height:200px;"> </td>
-        <td align="left"><h4>Generate 2 x 2 x 2 array of unit cells with symmetry mates.</h4> <p>Run Thomas Holder's script supercell.py to generate 2 x 2 x 2 array of unit cells with symmetry mates filling the unit cells.</p> </td>
-     </tr>
-
-      <tr>
-        <td align="style='text-align:center;vertical-align:middle width:130px'">stack</td>
-        <td align="left"><img src="./images/stack.png" alt="HTML5 Icon" style="width:300px;height:166px;"> </td>
-        <td align="left"><h4>Base stacking</h4> <p>Base stacking figure for a pair of base pairs with the top base pair colored dark to enhance the depth perception. The major groove is on the top.</p> </td>
-     </tr>
     </table>
 
 
