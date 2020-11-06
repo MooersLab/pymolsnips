@@ -25,6 +25,11 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
 One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
 
+### Brief Notes on Installation and Updates
+The 
+
+
+
 ### Navigating this document
 
 This document has over 12,000 words. 
@@ -34,7 +39,6 @@ Some of the text is hidden from view and has to be toggled or unfolded to expose
 
 ### <A name="FASTLINKS">Quick links</A>
 
-  * <a href="#gallery"> Gallery of snippets and their output </a>
   * <a href="#categories"> Snippet categories</a>
   * <a href="#install">Installing snippets for each editor</a>
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
