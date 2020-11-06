@@ -25,7 +25,7 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
     <table>
        <tr>
         <th align="style='text-align:left width:250px'">Tab trigger</th>
-        <th align="style='text-align:left width:250px">Output from code </th>
+        <th align="style='text-align:left width:500px">Output from code </th>
         <th align="left">Description </th>
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">ao</td>
