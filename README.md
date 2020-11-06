@@ -18,14 +18,14 @@ If the commands are not saved to an open script file with a `.pml` file extensio
 
 Here are of figures that are impossible or tedious to make via the PyMOL GUI alone.
 	
-![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery")
-
+<!-- ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") -->
+<body bgcolor=white  style="font-family:arial;font-size:24px">
 <link rel="stylesheet" href="style.css">
 <h2>Gallery</h2>
     <table>
        <tr>
         <th align="style='text-align:left width:250px'">Tab trigger</th>
-        <th align="style='text-align:left width:500px">Output from code </th>
+        <th align="style='text-align:left width:700px">Output from code </th>
         <th align="left">Description </th>
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">ao</td>
@@ -47,6 +47,21 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
         <td align="left"><img src="./images/coordinate.png" alt="HTML5 Icon" style="width:300px;height:224px;"> </td>
         <td align="left"><h4>Coordinate covalent bonds</h4> <p>Example of specifying coordinate covalent bonds between RNA and a sodium and H-bonds.</p> </td>
      </tr>
+      <tr>
+        <td align="style='text-align:center;vertical-align:middle width:130px'">filledring</td>
+        <td align="left"><img src="./images/filledring.png" alt="HTML5 Icon" style="width:284px;height:300px;"> </td>
+        <td align="left"><h4>Filled ring cartoon for nucleic acids</h4> <p>Filled ring cartoon for nucleic acids with the backbone highlighted by a flat ribbon.</p> </td>
+     </tr>
+      <tr>
+        <td align="style='text-align:center;vertical-align:middle width:130px'">sc222</td>
+        <td align="left"><img src="./images/sc222.png" alt="HTML5 Icon" style="width:300px;height:200px;"> </td>
+        <td align="left"><h4>Generate 2 x 2 x 2 array of unit cells with symmetry mates.</h4> <p>Run Thomas Holder's script supercell.py to generate 2 x 2 x 2 array of unit cells with symmetry mates filling the unit cells.</p> </td>
+     </tr>
+      <tr>
+        <td align="style='text-align:center;vertical-align:middle width:130px'">stack</td>
+        <td align="left"><img src="./images/stack.png" alt="HTML5 Icon" style="width:300px;height:166px;"> </td>
+        <td align="left"><h4>Base stacking</h4> <p>Base stacking figure for a pair of base pairs with the top base pair colored dark to enhance the depth perception. The major groove is on the top.</p> </td>
+     </tr>    
     </table>
 
 
