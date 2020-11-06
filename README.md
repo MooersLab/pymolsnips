@@ -36,6 +36,7 @@ This document has over 12,000 words.
 This long document has a large number of hyperlinks that enable rapid movement to desired sites below and the return to the menus at the top of the file. 
 The hyperlinks reduce the need to scroll through the document.
 Some of the text is hidden from view and has to be toggled or unfolded to expose it. 
+We know; we should and will move much of the detailed information below to a github webpage.
 
 ### <A name="FASTLINKS">Quick links</A>
 
