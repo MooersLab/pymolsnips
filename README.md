@@ -16,7 +16,11 @@ It is difficult to issue so many commands through PyMOL's graphical user interfa
 If the commands are not saved to an open script file with a `.pml` file extension, to an opened log file, or to a frequently saved session file, the work can be lost. 
 (Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
 
-Here are [examples](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") of figures that are impossible or tedious to make via the GUI alone.
+Here are of figures that are impossible or tedious to make via the PyMOL GUI alone.
+	
+![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery")
+
+
 
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
 One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
@@ -84,13 +88,6 @@ If mirrored tab stops are available for a text editor, you can learn more about 
 </p>
 
 
-<h2> <A name="gallery"> Gallery of snippet names and example output </A></h2>
-
-<details>
-<summary>See what you can make with snippets!</summary>
-	
-![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery")
-</details>
 
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
 Each snippet is described below.
