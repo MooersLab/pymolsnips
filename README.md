@@ -27,7 +27,7 @@ One solution to this problem is to use a library of code fragments, called **sni
 
 ### Brief Notes on Installation and Updates
 The 
-
+https://github.com/MooersLab/pymolsnips/edit/master/README.md
 
 
 ### Navigating this document
