@@ -27,10 +27,17 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
         <th align="style='text-align:left width:250px'">Tab trigger</th>
         <th align="style='text-align:left width:1500px">Output from code </th>
         <th align="left">Description </th>
+      </tr>       
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">ao</td>
         <td align="left"><img src="./images/ao.png" alt="HTML5 Icon" style="width:600px;height:600px;"> </td>
         <td align="left"><h4>ambient occlusion</h4> <p>This code can be applied to any molecule in a sphere representation.</p> </td>
+     </tr>
+      <tr>
+	<!-- pdb code 5d99, 27-mer RNA hairpin -->
+        <td align="style='text-align:center;vertical-align:middle width:130px'">aod</td>
+        <td align="left"><img src="./images/5d99AOD.png" alt="HTML5 Icon" style="width:600px;height:600px;"> </td>
+        <td align="left"><h4>ambient occlusion</h4> <p>The variant of ambient occulusion colors the carbon atomb black. This code can be applied to any molecule in a sphere representation.</p> </td>
      </tr>
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">bw</td>
