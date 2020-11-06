@@ -19,13 +19,13 @@ If the commands are not saved to an open script file with a `.pml` file extensio
 Here are of figures that are impossible or tedious to make via the PyMOL GUI alone.
 	
 <!-- ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") -->
-<body bgcolor=white  style="font-family:arial;font-size:24px">
+
 <link rel="stylesheet" href="style.css">
 <h2>Gallery</h2>
-    <table>
+    <table style='font-family:"Courier New", Courier, monospace; font-size:24'>
        <tr>
         <th align="style='text-align:left width:250px'">Tab trigger</th>
-        <th align="style='text-align:left width:900px">Output from code </th>
+        <th align="style='text-align:left width:1500px">Output from code </th>
         <th align="left">Description </th>
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">ao</td>
