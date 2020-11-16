@@ -17,7 +17,7 @@ If the commands are not saved to an open script file with a `.pml` file extensio
 (Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
 
 Here are of figures that are impossible or tedious to make via the PyMOL GUI alone.
-	
+
 <!-- ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") -->
 
 <link rel="stylesheet" href="style.css">
@@ -84,9 +84,6 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
     </table>
 
 
-
-
-
 It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
 One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
 
@@ -113,7 +110,6 @@ We know; we should and will move much of the detailed information below to a git
   * <a href="#categories"> Snippet categories</a>
   * <a href="#install">Installing snippets for each editor</a>
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
-
 
 **pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors**.
 Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store the computer code!***
@@ -203,20 +199,16 @@ Hyperlinks will take you to a particular category.
 
 <A href=#FASTLINKS>Return to quick links section at top</A>
 
-
 <hr>
 <h2>  <A name="FASTLINKS2">Supported coding platforms:</A> </h2>
 
 PyMOL scripts can e coded in electornic notebook, integrated development environments, and text editors.
-All three types of coding platforms support the use of snippets to varying degrees. 
-
+All three types of coding platforms support the use of snippets to varying degrees.
 
 Note that some text editors use the same library of snippets.
 For example, *emacs* and *spacemacs* can use the same snippet library that is managed by the yasnippets package.
-Likewise, Vim and neovim share some of the same plugin managers and snippet libraries. 
+Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
 There are at least kinds of snippet systems available for Vim and neovim.
-
-
 
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
@@ -257,22 +249,21 @@ Some of these text editors can take hours to customize to fit your needs; howeve
 
 <h2> <A name="install">Installing and using snippets by coding platform</A></h2>
  
- 
 <h3 name="atom" > Atom (Universal) </h3>
 
 [*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
 Atom advertises to be the "hackable text editor".
 It integrates with GitHub nicely, and the GUI is very attractive.
-	
+
 *Atom's* startup speed bogs down as more plugins are added.
 The work-around is to always keep *Atom* open.
-	
+
 There is a very extensive collection of plugins available for *Atom*.
 The installation and updating of plugins can be slow compared to other editors.
 
 <details>
 <summary><b>Installing and using snippets with Atom</b></summary>
-	
+
 You will need the `snippets` package to be able to use the pymolpy snippets.  
 The package installer is very intuitive.
 Go to `Packages --> Settings View --> Install packages/themes`.
@@ -307,21 +298,19 @@ To do this, Mac users enter:
 $ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson
 ```
 
-You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`. 
+You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`.
 Or, you can access the `snippets.cson` file through `Atom (menu) --> Snippets...`.
 
 For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
 
-A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` file. 
+A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` file.
 </details>
 
-Below is an example of the *threeMaps* snippet and a demonstration of its mirrored tab stops. 
+Below is an example of the *threeMaps* snippet and a demonstration of its mirrored tab stops.
 
 <p align="center">
 	  <img src="gifs/AtomSnipsUse.gif">
 </p>
-
-
 
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
 
@@ -337,7 +326,6 @@ The clippings can be stored in folders by language.
 <summary><b>Installing and using snippets with BBEdit</b></summary>
 
 Users can create nested subfolders for groups of related snippets.
-The clippings are selected via the pulldown labeled `C` (circled). 
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
 You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to your BBEdit clippings.
 
@@ -354,8 +342,6 @@ There is also presently the lack of a PyMOL lexer for syntax highlighting.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-
-
 <h3 name="brackets"> Brackets (Universal) </h3>
 
 The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
@@ -370,7 +356,7 @@ Once you install an extension, a light bulb icon will appear that launches the *
 
 <details>
 <summary><b>Installing and using snippets with Brackets</b></summary>
-	
+
 Go to `File --> Extension Manager` or press the lego piece in the right panel.
 Search for `Brackets Snippets (by edc)` and install it.
 This is the snippet manager.
@@ -476,7 +462,6 @@ The animation below shows how to edit one mirror location and travel to the othe
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-
 <h3 name="emacs"> Emacs (universal) </h3>
 
 [*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in emacs lisp (elisp), a variant of LISP.
@@ -486,7 +471,7 @@ Emacs has a leadership succession plan that has been put into action.
 Richard Stallman stepped away from the project in 2008, and others took over the maintenance of the core program.
 This plan will greatly extend the lifetime of this software project.
 
-Emacs has been around for 45 years. 
+Emacs has been around for 45 years.
 According to Lindy's Law, the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
 This law suggests that Emacs should be around for another 45 years.
 
@@ -518,7 +503,7 @@ Many beginners spend too much time adding too many packages, most of which they 
 As a beginner, you should ease off editing your *init.el* file if it has grown to 500 lines in the first several weeks of using Emacs.
 A good practice is to add one package at a time and master each added package before adding another new package.
 
-I find that the editing of*init.el* file occurs in widely spaced bouts.
+I find that editing of *init.el* file occurs in widely spaced bouts.
 Once everything is working to your satisfication, there may be long periods of productivity during which there is no compelling need to fiddle with the *init.el* file.
 
 Many Emacs users have shared their *init.el* files on GitHub.
@@ -616,13 +601,13 @@ For Homebrew installed *Emacs*, use
 The package yasnippets is one of the most popular packages in emacs for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
 The user can navigate the table to find a relevant snippet.
-This table is redundant with the ls snippet. 
+This table is redundant with the ls snippet.
 
 
 The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *Emacs*.
 This package is installed with a builtin package manager.
 
-Each snippet is stored in a single file. 
+Each snippet is stored in a single file.
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
 
 </details>
@@ -667,7 +652,7 @@ Doom emacs appears to provide more advanced features than Prelude Emacs.
 It may be useful to study to learn about packages or features to add to a basic GNU Emacs configuration.
 I learned about moving much of the code in the init.el file to code blocks in a config.org file, which can be rendered on GitHib like a markdown file.
 The code blocks can be flanked by explanatory text, hyperlinks, tables, and figures.
-The is a great way to document and share one's Emacs configuration. 
+The is a great way to document and share one's Emacs configuration.
 
 Emacs reads an abbreviated init.el file which calls the config.org file.
 The code in the code blocks in the config.org file are copied to a config.el file and then executed. 
@@ -775,9 +760,6 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-
-
-
 <h3 name="kate"> Kate/Kwriter (Universal) </h3>
 	
 [*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
@@ -805,9 +787,6 @@ May have to create the directory MySnippets on MacOS.
 </details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 	
@@ -894,7 +873,7 @@ $ mkdir ~/.lighttable/User/snippets
 ```
 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips) folder from above.
-Move the contents of this folder **(not the folder)** to `~/.lighttable/User/snippets`. 
+Move the contents of this folder **(not the folder)** to `~/.lighttable/User/snippets`.
 To do this:
 
 ```bash
@@ -1008,8 +987,6 @@ You can make the tex larger for easier reading by entering `cmd-+` a number of t
 </details>
 
 
-
-
 <h3 name="orgmode">Org-mode </h3>
 
 [Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of Emacs.
@@ -1018,7 +995,6 @@ Org-mode has many features that support planning and organizing hence that the `
 It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
 
 <h3 name="rstudio">RStudio (Universal)</h3>
 	
@@ -1038,12 +1014,8 @@ The pml code in the pymolsnips library cannot be sent to pymol api directly thro
 It has to be reformatted as Python code first.
 We are working on making this happen in the [pymolpysnips project](https://github.com/MooersLab/pymolpysnips).
 
-
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
 
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
 Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of *Emacs*.
@@ -1083,8 +1055,6 @@ Spacemacs may be more attractive to *vi* users rather than *Vim* users who canno
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-
 <h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
 	
 [*Sublime Text 3*](https://www.sublimetext.com/3) is a GUI-based editor.
@@ -1093,11 +1063,10 @@ The free trial period is infinite.
 *Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-	
 
 <details>
 <summary><b>Installing and using snippets with Sublime Text 3</b></summary>
-	
+
 The snippets are stored in separate files with the file extension `.sublime-snippet`.
 
 *Sublime Text 3* strongly supports writing in LaTeX.
@@ -1105,8 +1074,8 @@ It provides previews of figures and math equations from within a tex document be
 Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
 
 For both all users (Mac, Windows, Linux), go to `Preferences-->Browse Packages...-->User-->snippets`.
-You may need to create the subdirectory called **snippets**. 
-Copy and paste `st3pymolsnips` into the **snippets** folder. 
+You may need to create the subdirectory called **snippets**.
+Copy and paste `st3pymolsnips` into the **snippets** folder.
 
 For command line action on the Mac, create the `snippets` directory in the *Sublime Text3* folder:
 ```bash
@@ -1118,7 +1087,7 @@ Add the snippet files to the *Sublime Text 3* folder:
 $ cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
 ```
 
-You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`, and it should still work. 
+You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`, and it should still work.
 
 </details>
 
@@ -1234,7 +1203,7 @@ It is in this file that you install and update plugins, as well as comment out u
 
 <details>
 <summary><b>Installing Vundle</b></summary>
-	
+
 To start adding a plugin to *vim* you will need to open and edit the `.vimrc` file.
 
 To download Vundle enter the following into the bash command line:
@@ -1476,10 +1445,8 @@ Then run the following command in *Vim*:
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
 
-
-
 <h4 name="UltiSnips"> UltiSnips (for *Vim*, universal) </h4>
-	
+
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
 *Vim* has to be installed with the option of using Python3 enabled to be able to use *UltiSnips*.
 The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features.
@@ -1632,8 +1599,6 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-
-
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 	
 [*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free editor from Microsoft. 
@@ -1697,9 +1662,7 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 In this category, *vim* is the most powerful editor followed by *emacs* and distantly by nano.
 -->
 
-
 <h2> <A name="snippetList" >List of the snippets by their tab trigger name and description </A> </h2>
-
 
 <h3 name="altloc"></h3>
 
@@ -1709,7 +1672,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
 
 <A href=#categories>Return to list of snippet categories near top.</A>
-
 
 <h3 name="analysis"></h3>
 
@@ -1728,9 +1690,7 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | printResiResnNameB4ResiX    | Print resn, resi, atom name, and b-factor.                                                                                |
 | printResiResnNameB4ResiXNoH | Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |
 
-
 <A href=#categories>Return to list of snippet categories above.</A>
-
 
 <h3 name="changeOrientation"></h3>
 
@@ -1743,7 +1703,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#categories>Return to list of snippet categories above.</A>
 
-
 <h3 name="colorScheme"></h3>
 
 ### Color scheme:
@@ -1755,7 +1714,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#categories>Return to list of snippet categories above.</A>
 
-
 <h3 name="coordCovalent"></h3>
 
 ### Coordinate covalent bonds:
@@ -1764,7 +1722,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | coordinate    | Coordinate covalent bonds to metals. |
 
 <A href=#categories>Return to list of snippet categories above.</A>
-
 
 <h3 name="database"></h3>
 
@@ -1787,7 +1744,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#categories>Return to list of snippet categories above.</A>
 
-
 <h3 name="fetchFile"></h3>
 
 ### Fetch file from PDB:
@@ -1797,7 +1753,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | fetchFoFc     | Fetch fofc map. |
 
 <A href=#categories>Return to list of snippet categories above.</A>
-
 
 <h3 name="fileInput"></h3>
 
@@ -1817,7 +1772,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | savePNG       | Save a png file of current scene to the current directory. |
 
 <A href=#categories>Return to list of editors above.</A>
-
 
 <h3 name="formatLabel"></h3>
 
@@ -1930,8 +1884,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#categories>Return to list of snippet categories above.</A>
 
-
-
 <h3 name="#printCoordinates"></h3>
 
 ### Print coordinates of selection:
@@ -1941,7 +1893,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#categories>Return to list of snippet categories above.</A>
 
-
 <h3 name="#printSequence"></h3>
 
 ### Print sequence:
@@ -1950,7 +1901,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | fasta         | Print Fasta from PDB file. |
 
 <A href=#categories>Return to list of snippet categories above.</A>
-
 
 <h3 name="#pymolrc"></h3>
 
@@ -1964,7 +1914,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | sigDigits     | Set number of decimals places to show in distance labels. |
 
 <A href=#categories>Return to list of snippet categories above.</A>
-
 
 <h3 name="#timestamp"></h3>
 
@@ -2000,7 +1949,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 
 <A href=#categories>Return to list of snippet categories above.</A>
 
-
 <h3 name="#specializedFigure"></h3>
 
 ### Specialized figure:
@@ -2010,7 +1958,6 @@ In this category, *vim* is the most powerful editor followed by *emacs* and dist
 | stack         | Base-stacking figure. |
 
 <A href=#categories>Return to list of snippet categories above.</A>
-
 
 <h3 name="#stereo"></h3>
 
