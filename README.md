@@ -1427,8 +1427,6 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 [*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that provides plugin support for snippets that are available in *Vim*. 
 It does not depend on Python.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
 <details>
 <summary><b>Installing and using snippets with SnipMate</b></summary>
 
@@ -1448,8 +1446,9 @@ Then run the following command in *Vim*:
 :PluginInstall
 ```
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 </details>
+
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h4 name="UltiSnips"> UltiSnips (for *Vim*, universal) </h4>
 
@@ -1464,9 +1463,8 @@ The pml.snippets file can be stored in a *my-snippets* subfolder of the hidden *
 
 *UltinSnips* can read *SnipMate* snippets.
 
-
 <details>
-<summary><h4>Installing and using snippets with UltiSnips</h4></summary>
+<summary><b>Installing and using snippets with UltiSnips</b></summary>
 
 In the following setup, we use the Vundle plugin manager.
 
@@ -1617,9 +1615,8 @@ They claim that their package will bring a *VSC*-like experience to *Vim*.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
-	
+
 [*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by MicroSoft.
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
 It is still under expoentially rapid development.
@@ -1642,48 +1639,39 @@ The PyMOL lexer will be activated when a `pml` file is opened.
 *VSC* provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
 The latter feature are very helpful for avoiding the insertion of the wrong snippet.
 
-<details>
-<summary><b>Installing and using snippets with Visual Studio Code</b></summary>
+<b>Installing and using snippets with Visual Studio Code</b>
 
-Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system. 
+Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system.
 A prompt should pop-up during your first launch of *VSC*. Install this.
 
 From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Roaming\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
 
 For Mac users in the `vscpymolsnips` folder:
+
 ```bashOS
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
-For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. 
-If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting). 
 
-</details>
+For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`.
+If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting).
 
 Next, install *bioSyntax* via `View --> Extensions`.
 Search for *bioSyntax* and hit the `Install` button.
 You will be asked to select a theme, just select bioSyntax.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif"></p>
 
 Open a file with a `.pml` file extension.
 You should see `pml` in the lower right on the bottom panel.
 Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion effect. You should see syntax highlighting.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif"></p>
 
 *VSC* also supports the use of mirrored tab stops. In the example shown below, I am using the snippet *threeMaps*.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif"></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
 
 <!--
 <h2>Text editors that are ready out of the box</h2>
