@@ -1138,10 +1138,6 @@ To download Vundle enter the following into the bash command line:
 
 Paste the following minimal code at the top of your <em>.vimrc</em> file to allow the use of Vundle:
 
-<code>
-if has('python3')<br>
-endif<br>
-</code>
 
 <!-- 
 <code>
