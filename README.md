@@ -1,22 +1,21 @@
 ## **pymolsnips:** PyMOL Script Writing with Code Templates
 
-
 [PyMOL](https://pymol.org/2/) is a leading molecular graphics program for making images of proteins and nucleic acids for publication.
-PyMOL's vast of array of parameters provide exquisite control over the appearance of the output.
+PyMOL's vast array of parameters provides exquisite control over the appearance of the output.
 PyMOL is often used to make cover images for [scientific journals](https://pymolwiki.org/index.php/Main_Page).
-PyMOL is also popular for making movies of moving molecules.
+PyMOL is also popular for making movies of molecules.
 
 The PyMOL GUI is useful for making the images of global scenes, but PyMOL rapidly becomes tedious to use to make images of detailed scenes.
 The PyMOL macro language (pml) can be used to set parameter values and execute commands to make customized scenes of biomolecules in PyMOL's viewport.
 These scenes can be made into static images for posters, seminars, and manuscripts, or they can serve as parts of molecular movies.
 The macro language sends arguments to Python functions, but its syntax is simpler for non-programmers to understand than the syntax of Python code.
 
-Over 100 lines of pml commands and settings required to make more sophisticated images.
+Over 100 lines of pml commands and settings are required to make more sophisticated images.
 It is difficult to issue so many commands through PyMOL's graphical user interface (GUI) without making mistakes.
 If the commands are not saved to an open script file with a `.pml` file extension, to an opened log file, or to a frequently saved session file, the work can be lost. 
 (Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
 
-Here are of figures that are impossible or tedious to make via the PyMOL GUI alone.
+Here are of some figures that are impossible or tedious to make via the PyMOL GUI alone.
 
 <!-- ![Gallery](https://github.com/MooersLab/pymolsnips/blob/master/images/Gallery.png?raw=true "Gallery") -->
 
@@ -83,27 +82,33 @@ Here are of figures that are impossible or tedious to make via the PyMOL GUI alo
      </tr>    
     </table>
 
-
-It is challenging to recall the pml syntax when you are not using PyMOL everyday, which is the case for most PyMOL users.
+It is challenging to recall the pml syntax when you are not using PyMOL every day, which is the situtation for most PyMOL users.
 One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
 
-### Brief Notes on Installation and Updates
+<h3>Brief Notes on Installation and Updates</h3>
 
 Users may want to update their copy of the library as new snippets are added to the library on GitHub.
-The date of the last update and its nature is recorded in the GitHub repository.
+The date of the last update and its nature are recorded in the GitHub repository.
 GitHub has only experimental support for downloading part of a repository.
 In the meantime, users must download the entire repository either as a zip file via the `code --> download zip` pull-down menu or by entering the command `git clone https://github.com/MooersLab/pymolsnips.git` if they have git on their computer.
 The second option enables subsequent updating of the library via the `git pull origin master` command.
 
+<h3>Navigating this document</h3>
 
+This document has over 12,000 words.
+You do not need to read much of it to get started.
+Just go to the section below about your favorite text editor to learn how to learn the snippet library.
 
-### Navigating this document
-
-This document has over 12,000 words. 
-This long document has a large number of hyperlinks that enable rapid movement to desired sites below and the return to the menus at the top of the file. 
+This long document has a large number of hyperlinks that enable rapid movement to desired sites below and the return to the menus at the top of the file.
 The hyperlinks reduce the need to scroll through the document.
-Some of the text is hidden from view and has to be toggled or unfolded to expose it. 
-We know; we should and will move much of the detailed information below to a github webpage.
+Some of the text is hidden from view and has to be toggled or unfolded to expose it.
+
+If you are considering switching text editors or have never used one, then you should invest an hour in reading the synopses of the 18 supported text editors.
+This can serve as a guide to selecting a text editor.
+
+Yes, we know.
+We have too much information here for a standard README.md file.
+We plan to move much of the detailed information below to a GitHubPages webpage.
 
 ### <A name="FASTLINKS">Quick links</A>
 
@@ -1117,12 +1122,14 @@ You may need to install a snippet manager package and add an autocompletion pack
 [*TextMate*](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
 There is a large library of plugins available.
+I found it to be quite intutitive to use, fast to start-up, and very robust.
+It is the editor that I use most frequently.
 
-The 2007 book *TextMate Power Editing for the Mac* by Edward Gray and the 2012 book *TextMate How-To* by Chris Mears provide supplemental reading to the on-line documentation.
+The 2007 book [*TextMate Power Editing for the Mac*](https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X) by Edward Gray and the 2012 book [*TextMate How-To*](https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2) by Chris Mears provide supplemental reading to the on-line documentation.
 
 *TextMate's* approach to snippets has served as a role model for other text editors.
 *TextMate* snippets can be ported to *Sublime Text 3* and *PyCharm*.
-Chapter 6 in the book by Gray provides a good overview of the features of snippets in *TextMate*.
+Chapter 6 in the book by Edward Gray provides a good overview of the features of snippets in *TextMate*.
 
 <details>
 <summary><b>Installing and using snippets with TextMate</b></summary>
@@ -1152,14 +1159,9 @@ The snippet can be added to the current *.pml document by selecting the snippet 
 The bundle pull-down provides access to a bundle editor.
 This editor can be used to view and change the code in the snippets.
 
-<p align="center">
-	<img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger" />
-</p>
+<p align="center"><img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger"/></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
-
 
 <h3 name="vim">Vim (Universal)</h3>
 
@@ -1171,19 +1173,36 @@ There are over 19,000 [plugins available](https://vimawesome.com/).
 Vim is free.
 
 A newer branch of *Vim* called *neovim* is also available.
-*Vim* and *neovm* are available from software managers like MacPorts, fink, Homebrew, or it can be downloaded as a stand-alone application.
+*Vim* and *neovm* are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a [stand-alone application](https://www.vim.org/download.php).
+The standard versions of both run in the terminal.
+MacVim provides a GIU version of *Vim*.
+This version of *Vim* is integrated with Mac OS.
+Unless you a developer of GUI applications for the Mac, you probably want to stick to the terminal version
+
+It is useful to be conversant with several of the above package managers because one of them is bound to have a working version of *Vim*.
 Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
 That bug has been fixed in version 8.1.2152.
 I found that the MacPorts Vim was behind this version.
-I tried to compile Vim version 8.2.12; I gave up due to inference from conda in the Julia installed by Homebrew.
-I installed Vim version 8.2.0 via Homebrew.
+I tried to compile Vim version 8.2.12; I gave up due to inference with the conda in the Julia installed by Homebrew.
+So I gave up my approach using macports, and I installed Vim version 8.2.0 via Homebrew.
 This version worked fine.
+It has been automatically updated to 8.2.1950 when running `brew update`.
+
+If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed, you can install vim with conda as follows:
+
+```bash
+conda install -c conda-forge vim
+```
 
 *Vim* focuses on the editing process.
 This process is where you spend most of your time thinking about what you have written.
 Most of the time spent *writing* is usually spent on *rewriting*.
 
-The *Vim* keybindings for text editing are so useful that they are available for the rival text editors *Emacs* as well as many other text editors including *VSC*.
+The *Vim* keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where text is edited.
+For example, vim key bindings are available for the rival text editors *Emacs* as well as many other text editors including *VSC* and even in the on-line LaTeX editor [Overleaf](https://www.overleaf).
+There is a *Vim* keybinding extension for MS Word on Windows but not on Mac OS.
+This is one of many reasons why I do most of my writing in Overleaf.
+
 The secret to keeping your sanity while using *Vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
 Numerous blog posts have lists of ways to think about and use *Vim* to improve your productivity.
 The consensus is to develop muscle memory of the commands that are useful to you by practicing their use at every opportunity.
