@@ -958,7 +958,7 @@ The snippets are installed by the <em>yasnippets-snippets</em> package.
 You can use the following command in <em>Spacemacs</em> to install this package.
 
 <code>
-M-x package-install RETURM
+M-x package-install RETURM<br>
 yasnippet
 </code>
 
@@ -979,17 +979,17 @@ The free trial period is infinite.
 
 <h3>Installing and using snippets with Sublime Text 3</h3>
 
-The snippets are stored in separate files with the file extension `.sublime-snippet`.
+The snippets are stored in separate files with the file extension <em>.sublime-snippet</em>.
 
-*Sublime Text 3* strongly supports writing in LaTeX.
+<em>Sublime Text 3</em> strongly supports writing in LaTeX.
 It provides previews of figures and math equations from within a tex document before compiling it to pdf.
 Documents can be compiled on the fly and the bug reporting is more helpful than in most platforms.
 
-For both all users (Mac, Windows, Linux), go to `Preferences-->Browse Packages...-->User-->snippets`.
-You may need to create the subdirectory called **snippets**.
-Copy and paste `st3pymolsnips` into the **snippets** folder.
+For both all users (Mac, Windows, Linux), go to <code>Preferences-->Browse Packages...-->User-->snippets</code>.
+You may need to create the subdirectory called <em>snippets</em>.
+Copy and paste <em>st3pymolsnips</em> into the <em>snippets</em> folder.
 
-For command line action on the Mac, create the `snippets` directory in the *Sublime Text3* folder:
+For command line action on the Mac, create the <em>snippets</em> directory in the <em>Sublime Text3</em> folder:
 
 <code>mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/</code>
 
@@ -1004,7 +1004,7 @@ Sixteen lines of code should appear.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif"></p>
 
-<em>Sublime Text 3</em> also supports tab stops and mirrored tab stops! 
+<em>Sublime Text 3</em> also supports tab stops and mirrored tab stops!
 Below is an example of mirrored tab stop editing with the <b>threeMaps</b> snippet.
 Notice how when I type <em>sugar</em> all instances of glycan are replaced with sugar.
 
@@ -1026,9 +1026,9 @@ It is the editor that I use most frequently.
 
 The 2007 book [<em>TextMate Power Editing for the Mac</em>](https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X) by Edward Gray and the 2012 book [<em>TextMate How-To</em>](https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2) by Chris Mears provide supplemental reading to the on-line documentation.
 
-*TextMate's* approach to snippets has served as a role model for other text editors.
-*TextMate* snippets can be ported to *Sublime Text 3* and *PyCharm*.
-Chapter 6 in the book by Edward Gray provides a good overview of the features of snippets in *TextMate*.
+<em>TextMate</em>'s approach to snippets has served as a role model for other text editors.
+<em>TextMate</em> snippets can be ported to <em>Sublime Text 3</em> and <em>PyCharm</em>.
+Chapter 6 in the book by Edward Gray provides a good overview of the features of snippets in <em>TextMate</em>.
 
 <h3>Installing and using snippets with TextMate</h3>
 
@@ -1040,7 +1040,7 @@ This folder can be dragged and dropped into the user's <code>~/Library/Applicati
 When installing an update of the library, it is best to delete the old <em>PyMOL.tmbundle</em> and then drop in the new <em>PyMOL.tmbundle</em>.
 
 The <em>PyMOL.tmbundle</em> folder contains several files and folders in addition to the <em>Snippets</em> folder. 
-Some of this other files include a lexer for *PyMOL*.
+Some of this other files include a lexer for <em>PyMOL</em>.
 The one file is the <em>dependencies.json</em> file.
 This file specifies the dependence on the pygments package.
 
@@ -1050,16 +1050,16 @@ This file has the developer's contact information, the name of the snippet colle
 The <em>PyMOL.tmbundle</em>  shows up in the Bundles pull-down as <em>PyMOL.pml</em>.
 Select <em>PyMOL.pml</em> and then a new menu will appear with a list of the snippets.
 The descriptions of the snippets are on the left, and the corresponding tab trigger is on the right.
-The snippet can be added to the current *.pml document by selecting the snippet with the GUI or by entering the tab-trigger name.
+The snippet can be added to the current <em>.pml</em> document by selecting the snippet with the GUI or by entering the tab-trigger name.
 
 The bundle pull-down provides access to a bundle editor.
 This editor can be used to view and change the code in the snippets.
 
 <p align="center"><img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger"/></p>
 
-
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 <h3 name="vim">Vim (Universal)</h3>
 
@@ -1070,19 +1070,19 @@ It is probably already installed on your computer.
 There are over 19,000 [plugins available](https://vimawesome.com/).
 <em>Vim</em> is free.
 
-A newer branch of *Vim* called *neovim* is also available.
-*Vim* and *neovm* are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a [stand-alone application](https://www.vim.org/download.php).
+A newer branch of <em>Vim</em>called <em>neovim</em> is also available.
+<em>Vim</em> and <em>neovim</em> are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a [stand-alone application](https://www.vim.org/download.php).
 The standard versions of both run in the terminal.
 MacVim provides a GIU version of <em>Vim</em>.
 This version of <em>Vim</em> is integrated with Mac OS.
 Unless you a developer of GUI applications for the Mac, you probably want to stick to the terminal version
 
 It is useful to be conversant with several of the above package managers because one of them is bound to have a working version of <em>Vim</em>.
-Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
+<em>Vim</em>  version 8.1.0 was not working on Mac OS X Catalina due to a bug in <em>Xcode</em>.
 That bug has been fixed in version 8.1.2152.
 I found that the MacPorts Vim was behind this version.
-I tried to compile Vim version 8.2.12; I gave up due to inference with the conda in the Julia installed by Homebrew.
-So I gave up my approach using macports, and I installed Vim version 8.2.0 via Homebrew.
+I tried to compile <em>Vim</em>  version 8.2.12; I gave up due to inference with the conda in the <em>Julia</em> installed by <em>Homebrew</em>.
+So I gave up my approach using macports, and I installed Vim version 8.2.0 via <em>Homebrew</em>.
 This version worked fine.
 It has been automatically updated to 8.2.1950 when running <em>brew update</em>.
 
@@ -1134,13 +1134,11 @@ To start adding a plugin to *Vim* you will need to open and edit the <em>.vimrc<
 
 To download Vundle enter the following into the bash command line:
 
-```bash
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
+<code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code>
 
-Paste the following minimal code at the top of your `.vimrc` file to allow the use of Vundle:
+Paste the following minimal code at the top of your <em>.vimrc</em> file to allow the use of Vundle:
 
-```vim 
+<code>
 if has('python3')
 endif
 
@@ -1173,43 +1171,44 @@ let g:UltiSnipsExpandTrigger = ''
 let g:UltiSnipsJumpForwardTrigger = ''
 let g:UltiSnipsJumpBackwardTrigger = ''
 let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
-```
+</code>
 
-Now open*Vim*and run the following command:
+Now open <em>Vim</em> and run the following command:
 
-```vim
-:PluginInstall
-```
-</details>
+<code>:PluginInstall</code>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<details>
-<summary><b>Minpac</b></summary>
-*Minpac* is anther a plugin manager for installing and managing plugins in *Vim*.
-It requires *Vim* 8 or newer.
+<h3>Minpac</h3>
+<em>Minpac</em> is anther a plugin manager for installing and managing plugins in <em>Vim</em>.
+It requires <em>Vim</em> 8 or newer.
 Unfortunately, minpac does not update itself.
 Fortunately, there is a package you can add that will allow minpac to auto-update.
 This is discussed below in the minpac installation section.
-</details>
 
-<details>
-<summary><b>Installing minpac</b></summary>
+
+<h4>Installing minpac</h4>
 	
-To install minpac, you need to create a directory called `minpac` and install it as an optional plugin:
-```bash
-mkdir -p ~/.vim/pack/minpac/opt
-cd ~/.vim/pack/minpac/opt
-git clone https://github.com/k-takata/minpac.git
-```
-Then, add the following to your `.vimrc` file and write the file `:w`:
-```vim
-packadd minpac
-call minpac#init()
-```
-To add a plugin using minpac you will need to add this command `call minpac#add('author/reponame')` to your *.vimrc* file.
+To install minpac, you need to create a directory called <em>minpac</em> and install it as an optional plugin:
 
-For example, if you wanted to install snippets for *UltiSnips* you would add (this will not work at the moment) to the *.vimrc* file:
+<code>
+mkdir -p ~/.vim/pack/minpac/opt<br>
+cd ~/.vim/pack/minpac/opt<br>
+git clone https://github.com/k-takata/minpac.git
+</code>
+
+Then, add the following to your <em>.vimrc<em> file and write the file <em>:w</em>:
+
+<code>
+packadd minpac<br>
+call minpac#init()
+</code>
+
+
+To add a plugin using minpac you will need to add this command <code>call minpac#add('author/reponame')</code> to your <em>.vimrc</em> file.
+
+For example, if you wanted to install snippets for <em>UltiSnips</em> you would add (this will not work at the moment) to the <em>.vimrc</em> file:
 
 ```vim
 call minpac#add('MooersLab/pml_bhmm.snippets')
