@@ -212,8 +212,8 @@ There are at least three kinds of snippet systems available for Vim and neovim.
 <li> <a href="#atom"> Atom </a></li>
 <li><a href="#bbedit"> BBEdit (limited to Mac OS)</a></li>
 <li><a href="#brackets"> Brackets </a></li>
-<li> <a href="#cudatext"> cudatext </a></li>
-<li> <a href="#emacs"> emacs (uses <a href="#yasnippets">yasnippets</a> package)</li>
+<li> <a href="#cudatext"> CudaText </a></li>
+<li> <a href="#emacs"> Emacs (uses <a href="#yasnippets">yasnippets</a> package)</li>
 <li> <a href="#espresso"> Espresso </a></li>
 <li> <a href="#geany"> Geany </a></li>
 <li> <a href="#gedit"> Gedit </a></li>
