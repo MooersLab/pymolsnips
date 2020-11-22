@@ -688,17 +688,17 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h2 name="gedit"> gedit (Universal) </h2>
+<h2 name="gedit"> Gedit (Universal) </h2>
 
-[*gedit*](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
+[*Gedit*](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
 It is commonly found on Linux operating systems.
 It is often available on the computers running Linux OS at national labs.
-*gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
+<em>Gedit</em> provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h3>Installing and using snippets with gedit</h3>
+<h3>Installing and using snippets with <em>gedit</em></h3>
 
 The pymol.lang file has to be installed first.
 Download it form the geditpymolsnips folder.
@@ -707,9 +707,9 @@ Download it form the geditpymolsnips folder.
 <code>mkdir -p ~/.local/share/gtksourceview-3.0/language-specs</code>
 
 
-The snippets are stored in a file called `pymol.xml`.
-This file is stored in the home directory in a hidden folder called `.config`.
-The full path is `~.config/gedit/snippets/pymol.xml`.
+The snippets are stored in a file called <em>pymol.xml</em>.
+This file is stored in the home directory in a hidden folder called <em>.config</em>.
+The full path is <code>~.config/gedit/snippets/pymol.xml</code>.
 You may need to create this directory.
 
 To do this:
@@ -735,9 +735,9 @@ If installed with MacPorts, the app resides in <code>/Applications/macports/kate
 The snippet plugin has to be turned on.
 *kate* requires MacOS 10.14 or newer.
 
-The snippets are stored in a single `.xml` file.
+The snippets are stored in a single <em>.xml</em> file.
 The storage location for this file is not in the documentation.
-Try the following on Mac (last one of the four) and Linux (first three)**Be sure to change the folder from *YOURUSERNAME* to your username.**:
+Try the following on Mac (last one of the four) and Linux (first three). <b>Be sure to change the folder from <em>YOURUSERNAME</em> to your username.</b>:
 
 <code>
 /Users/YOURUSERNAME/.local/share/ktexteditor_snippets/data/pml-kate.xml<br>
