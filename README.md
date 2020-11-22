@@ -1138,7 +1138,7 @@ To download Vundle enter the following into the bash command line:
 
 Paste the following minimal code at the top of your <em>.vimrc</em> file to allow the use of Vundle:
 
-<quote>
+<code>
 if has('python3')<br>
 endif<br>
 <br>
@@ -1171,7 +1171,7 @@ let g:UltiSnipsExpandTrigger = ''<br>
 let g:UltiSnipsJumpForwardTrigger = ''<br>
 let g:UltiSnipsJumpBackwardTrigger = ''<br>
 let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
-</quote>
+</code>
 
 Now open <em>Vim</em> and run the following command:
 
