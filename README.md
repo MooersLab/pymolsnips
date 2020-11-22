@@ -228,11 +228,11 @@ There are at least kinds of snippet systems available for Vim and neovim.
 
 If you are considering switching editors, we recommend Visual Studio Code (VSC). 
 You do have to install plugins, but the process of doing so is quite painless.
-Our second tier of text editors include would be Sublime Text, Textmate, and Atom.
+Our second tier of text editors includes would be Sublime Text, Textmate, and Atom.
 
 You might also consider *Geany*.
 It is very lightweight, very fast, and very easily configurable.
-It is good editor if you care about agility.  
+It is a good editor if you care about agility.  
 See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
 Note that the **thonny** editor that was recommended for beginners is more of a training tool than a productive tool.
 It does not support code snippets, yet.
@@ -250,16 +250,15 @@ Some of these text editors can take hours to customize to fit your needs; howeve
 
 [*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
 Atom advertises to be the "hackable text editor".
-It integrates with GitHub nicely, and the GUI is very attractive.
+It integrates with GitHub nicely, and the GUI is attractive.
 
 *Atom's* startup speed bogs down as more plugins are added.
-The work-around is to always keep *Atom* open.
+The work-around is to keep *Atom* open all of the time.
 
-There is a very extensive collection of plugins available for *Atom*.
+There is an extensive collection of plugins available for *Atom*.
 The installation and updating of plugins can be slow compared to other editors.
 
-<details>
-<summary><b>Installing and using snippets with Atom</b></summary>
+<details><summary><b>Installing and using snippets with Atom</b></summary>
 
 You will need the `snippets` package to be able to use the pymolpy snippets.  
 The package installer is very intuitive.
@@ -269,17 +268,13 @@ It may already be installed, but you must make sure that the snippets package is
 
 Shown below is an enabled `snippets` package.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif"></p>
 
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
 Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
 Click install.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif"></p>
 
 The snippets for all programming languages are stored in a single file that is called `snippets.cson`.
 The snippets for different lanaguages are separated by the first line of a snippet library for a specific language.
@@ -305,9 +300,7 @@ A third option available for windows users, is to navigate to the `.atom` folder
 
 Below is an example of the *threeMaps* snippet and a demonstration of its mirrored tab stops.
 
-<p align="center">
-	  <img src="gifs/AtomSnipsUse.gif">
-</p>
+<p align="center"><img src="gifs/AtomSnipsUse.gif"></p>
 
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
 
@@ -319,13 +312,11 @@ The snippets are stored as clippings with one snippet or clipping per file.
 The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language.
 
-<details>
-<summary><b>Installing and using snippets with BBEdit</b></summary>
+<details><summary><h3>Installing and using snippets with BBEdit</h3></summary>
 
 Users can create nested subfolders for groups of related snippets.
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
 You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to your BBEdit clippings.
-
 
 To do this, enter:
 
@@ -351,17 +342,14 @@ The zig-zag line launches the Live Preview.
 The lego piece launches the extension manager.
 Once you install an extension, a light bulb icon will appear that launches the **Snippets Manager**.
 
-<details>
-<summary><b>Installing and using snippets with Brackets</b></summary>
+<details><summary><b>Installing and using snippets with Brackets</b></summary>
 
 Go to `File --> Extension Manager` or press the lego piece in the right panel.
 Search for `Brackets Snippets (by edc)` and install it.
 This is the snippet manager.
 It has a GUI that enables the manual creation of user-defined snippets.
 
-<p align="center">
-     <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsExtInstall.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsExtInstall.gif"></p>
 
 The GUI should automatically refresh, but if not, close and reopen *Brackets*.
 The light bulb icon will now appear in the right panel.
@@ -375,9 +363,7 @@ All of the snippets for PyMOL are in this single file.
 The next step is to choose the import scheme.
 I chose the recommended option to skip snippets with the same tab trigger name.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif"></p>
 
 Until the PyMOL language is available via a lexer for *Brackets*, use Python for the scope of the pml files.
 The Python lexer will provide some syntax highlighting.
@@ -389,26 +375,22 @@ In the example of snippet use shown below, notice how all snippets that begin wi
 Only when I press `o` do the suggestions narrow.
 This is helpful when you cannot remember the short-hand for a snippet.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif"></p>
 
 Unfortunately, *Brackets* does not currently support tab stops.
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-<h3 name="cudatext"> CudaText (Universal) </h3>
+<h3 name="cudatext"> CudaText (Universal)</h3>
 
 [*CudaText*](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
 *Cudatext* is open source.
-Its predecessor was *SynWrite*, which is no longer supported. 
+Its predecessor was *SynWrite*, which is no longer supported.
 *CudaText* has numerous plugins available to it.
 A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons manger (thank you Alexey T.!).
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
-<details>
-<summary><b>Installing and using snippets with CudaText</b></summary>
-	
+<details><summary><b>Installing and using snippets with CudaText</b></summary>
+
 *CudaText* uses Python3 based plugins. 
 *CudaText* expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
 I downloaded the 64-bit version of Python3.7.4 from Python.org and used the installer to install the binary in about five minutes.
@@ -440,21 +422,17 @@ After starting *CudaText*, install the snippets plugin by navigating to the `Plu
 A pop-up window will appear asking you if you would like to install, click OK.
 I could not screen capture this pop-up window.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif"></p>
 
 You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*.
 Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
 
 </details>
 
-*CudaText* allows you to edit mirrored sites for uniform editing. 
+*CudaText* allows you to edit mirrored sites for uniform editing.
 The animation below shows how to edit one mirror location and travel to the other mirrored sites by hitting the Tab key.
 
-<p align="center">
-     <img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif"></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -477,7 +455,7 @@ Over 100 other variants of Emacs are available.
 *Spacemacs* allows the use of Vim key bindings, emacs key bindings, or both.
 *Spacemacs* does have its own keybindings that have to be mastered.
 This leads to the problem of needing to translate Spacemacs to Gnu Emacs and back again when tapping into external Emacs resources.
- 
+
 *Doom Emacs* and *Prelude Emacs* are additional off-shoots of emacs that are suppose to be easier to adopt.
 They are similar to *Spacemacs*.
 
@@ -556,7 +534,7 @@ For example, the org-ref package greatly eases the retrieval of pdfs, and the cr
 The latter is done in an automated fashion by using the metadata in the pdf files.
 
 The *.emacs.d* configuration directory is a hidden directory in the home directory.
-It is the home of the installed packages and plugins. 
+It is the home of the installed packages and plugins.
 
 The main configuration file resides is this directory and is named *init.el*.
 The *init.el* file is the analog of Vim's *.vimrc* configuration file.
@@ -565,9 +543,7 @@ Fortunately, elisp is easy to edit and augment without knowing much about how to
 
 I store my configuration in a config.el file (see file listing at top of page).
 
-
-<details>
-<summary><b>Installing Emacs</b></summary>
+<details><summary><b>Installing Emacs</b></summary>
 
 Like *Vim*, *Emacs* can be installed as a stand-a-lone application or via a software management tool and a software repository.
 
@@ -591,15 +567,12 @@ For the app version installed by macports, use
 For Homebrew installed *Emacs*, use 
 `alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"`.
 
-
-<details>
-<summary><b>Installing and using snippets with Emacs</b></summary>
+<details><summary><b>Installing and using snippets with Emacs</b></summary>
 
 The package yasnippets is one of the most popular packages in emacs for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
 The user can navigate the table to find a relevant snippet.
 This table is redundant with the ls snippet.
-
 
 The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *Emacs*.
 This package is installed with a builtin package manager.
@@ -609,13 +582,12 @@ The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in
 
 </details>
 
-
 <details>
 <summary><b>Variants of emacs to consider</b></summary>
 
 These variants might be suitable for the impatient who do not want to master GNU Emacs.
 
-### Spacemacs
+<h3>Spacemacs</h3>
 
 [Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU Emacs.
 It is designed to be easier to use than Emacs.
@@ -623,8 +595,7 @@ It can be operated with Vim, Emacs, or a hybrid of key bindings.
 You enable layers to extend its functionality.
 Spaceemacs can be used to edit Jupyter Notebooks via the Ipython-layer.
 
-
-### SciMax
+<h3>SciMax</h3>
 
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of Emacs is being optimized for supporting the preparation of scientific manuscripts.
@@ -632,8 +603,7 @@ Several YouTube videos of Professor Kitchin talking about SciMax are available.
 SciMax is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
 Hence, our recommendation to become competent with Gnu Emacs before diving into SciMax.
 
-
-### Prelude emacs
+<h3>Prelude emacs</h3>
 
 This variant of Emacs is GNU Emacs bundled with what the developer thinks are the essential, no-frills add-on packages.
 It does not ship with evil-mode. 
@@ -642,8 +612,7 @@ You need to install GNU Emacs version 26.3 first.
 The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
 The github page is found [here](https://github.com/bbatsov/prelude).
 
-
-### Doom Emacs
+<h3>Doom Emacs</h3>
 
 Doom emacs appears to provide more advanced features than Prelude Emacs.
 It may be useful to study to learn about packages or features to add to a basic GNU Emacs configuration.
