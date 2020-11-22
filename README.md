@@ -136,19 +136,17 @@ Each code fragment has a unique name that also serves as a tab trigger.
 The user enters the name of the code snippet and hits the `tab` key to insert the lines of code.
 Tab stops exist at sites where parameters can be edited.
 Tab stops are mirrored when the parameters are identical.
-Mirroring enable the simultaneously editing of these sites to reduce the chance of overlooking a site that needed editing.
+Mirroring enable the simultaneous editing of these sites to reduce the chance of overlooking a site that needed editing.
 
 The animation below demonstrates the use of the `ao` tab trigger in *Visual Studio Code* to insert 16 lines of code for generating the ambient occlusion effect.
 You can learn how this is done <a href="#VisualStudioCode"> here </a>.
-Two-levels of a cascading menus appear.
+Two-levels of cascading menus appear.
 The menu on the left shows the alternate tab triggers that contain the letters `a` and `o`.
 The corresponding code for the selected tab trigger is displayed in the right window.
 By entering these two letters, you have inserted 16 lines of code!
 
 	 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif"></p>
 
 One thing to note when using tab stops is that the mirrored selections are very *fragile*:
 Before you begin typing, make sure that the mirrored sections are all highlighted.
