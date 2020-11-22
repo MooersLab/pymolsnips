@@ -663,12 +663,12 @@ It should read <b>#~ None=PyMOL</b> under Groups.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif"></p>
 
-In addition, you need to edit the keybinding preferences <em>Move cursor in snippet<em> for under <b>Edit --> Preferences --> Keybindings</b> because it is blank by default.
+In addition, you need to edit the keybinding preferences <em>Move cursor in snippet</em> for under <b>Edit --> Preferences --> Keybindings</b> because it is blank by default.
 I used <b>Tab</b>.
 Press <b>enter</b> and then click <em>Allow</em> when the override window pops up.
 Without making this edit, you will not be able to advance to the second and later tab stops.
 
-The snippets for all languages are stored in groups in single file <em>~/.config/geany/snippets.conf<em>.
+The snippets for all languages are stored in groups in single file <em>~/.config/geany/snippets.conf</em>.
 The snippets in this file can be edited by using the pulldown <b>Tools --> Configuration files --> snippets.conf</b>, but it might be easier to use a text editor.
 
 Copy and paste the contents of the above <b>geanypymolsnippets.conf</b> file into the <b>snippets.conf</b> file.  
