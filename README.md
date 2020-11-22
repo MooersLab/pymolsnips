@@ -209,24 +209,34 @@ Likewise, Vim and neovim share some of the same plugin managers and snippet libr
 There are at least three kinds of snippet systems available for Vim and neovim.
 
 <ul>
-  * <a href="#atom"> Atom </a>
-  * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
-  * <a href="#brackets"> Brackets </a>
-  * <a href="#cudatext"> cudatext </a>
-  * <a href="#emacs"> emacs (uses <a href="#yasnippets">yasnippets</a> package)
-  * <a href="#espresso"> Espresso </a>
-  * <a href="#geany"> Geany </a>
-  * <a href="#gedit"> Gedit </a>
-  * <a href="#kate"> Kate </a>
-  * <a href="#komodo"> Komodo Edit </a>
-  * <a href="#LightTable"> Light Table </a>
-  * <a href="#micro"> Micro </a>
-  * <a href="#Neovim"> Neovim (uses the <a href="#Ultisnips">Ultisnips</a>, <a href="#Neosnippets">Neosnippets</a>, or <a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a>
-  * <a href="#spacemacs"> Spacemacs (uses yasnippets)</a>
-  * <a href="#SublimeText3"> Sublime Text 3 </a>
-  * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
-  * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
-  * <a href="#VisualStudioCode"> Visual Studio Code </a>
+<li> <a href="#atom"> Atom </a></li>
+<li><a href="#bbedit"> BBEdit (limited to Mac OS)</a></li>
+<li><a href="#brackets"> Brackets </a></li>
+<li> <a href="#cudatext"> cudatext </a></li>
+<li> <a href="#emacs"> emacs (uses <a href="#yasnippets">yasnippets</a> package)</li>
+<li> <a href="#espresso"> Espresso </a></li>
+<li> <a href="#geany"> Geany </a></li>
+<li> <a href="#gedit"> Gedit </a></li>
+<li> <a href="#kate"> Kate </a></li>
+<li> <a href="#komodo"> Komodo Edit </a></li>
+<li> <a href="#LightTable"> Light Table </a></li>
+<li> <a href="#micro"> Micro </a></li>
+<li> <a href="#Neovim"> Neovim</a> uses the following to manage snippet plugins</li> 
+  <ol>
+    <li><a href="#Ultisnips">Ultisnips</a></li>
+    <li><a href="#Neosnippets">Neosnippets</a></li>
+    <li><a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a></li>
+  </ol>
+<li> <a href="#spacemacs"> Spacemacs (uses yasnippets)</a></li>
+<li> <a href="#SublimeText3"> Sublime Text 3 </a></li>
+<li> <a href="#TextMate"> TextMate (limited to Mac OS)</a></li>
+<li> <a href="#Vim"> Vim </a>(uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets)</li>
+  <ol>
+    <li><a href="#Ultisnips">Ultisnips</a></li>
+    <li><a href="#Neosnippets">Neosnippets</a></li>
+    <li><a href="#Snipmate">Snipmate</a> plugins to manage snippets) </a></li>
+  </ol>
+<li> <a href="#VisualStudioCode"> Visual Studio Code </a></li>
 </ul>
 
 If you are considering switching editors, we recommend Visual Studio Code (VSC).
@@ -305,7 +315,7 @@ Below is an example of the *threeMaps* snippet and a demonstration of its mirror
 
 <p align="center"><img src="gifs/AtomSnipsUse.gif"></p>
 
-
+<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
