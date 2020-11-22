@@ -449,7 +449,7 @@ The animation below shows how to edit one mirror location and travel to the othe
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h2 name="emacs"> *Emacs* (universal) </h2>
+<h2 name="emacs"> Emacs (universal) </h2>
 
 [*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in *Emacs* lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
@@ -561,25 +561,23 @@ Like *Vim*, *Emacs* can be installed as a stand-a-lone application or via a soft
 
 *Emacs* can be downloaded from https://www.gnu.org/software/emacs/ and insalled with a platform specific installer.
 Older versions of *Emacs* comes pre-installed on Mac OS, but you may want a more recent version.
-You should remove the old version with the commands `sudo rm /usr/bin/emacs` and `sudo rm -rf /usr/share/emacs`.
-Binaries for the Mac are available at https://emacsformacosx.com.
+You should remove the old version with the commands <code>sudo rm /usr/bin/emacs</code> and <code>sudo rm -rf /usr/share/emacs</code>.
+Binaries for the Mac are [available](https://emacsformacosx.com).
 As of August 2020, version 27.1-1 is the stable release.
 
 *Emacs* is also available for a number of software repositories.
-It can be installed on the Mac with macports using the command `sudo port install emacs`.
-A GUI based version can be installed with the command `sudo port install emacs-app`
+It can be installed on the Mac with macports using the command <code>sudo port install emacs </code>.
+A GUI based version can be installed with the command <code>sudo port install emacs-app </code>.
 The Homebrew repository for Mac OS is popular.
-The brew command is `brew update && brew install emacs --with-cocoa && brew linkapps emacs`. 
+The brew command is <code>brew update && brew install emacs --with-cocoa && brew linkapps emacs <\code>.
 
-You may want to create an alias for starting emacs.
-For the development version of the binary in installed in Applications with the above package installer for the make use,
-`e28='open /Applications/Emacs2805.app $1'`.
-For the app version installed by macports, use 
-`e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'`
-For Homebrew installed *Emacs*, use 
-`alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"`.
+You may want to create an alias for starting *Emacs*.
+For the development version of the binary in installed in Applications with the above package installer for the make use, <code>e28='open /Applications/Emacs2805.app $1'</code>.
+For the app version installed by macports, use <code>e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'<\code>.
+For Homebrew installed *Emacs*, use <code>alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"</code>.
 
-<h3>Installing and using snippets with *Emacs*</h3>
+
+<h3>Installing and using snippets with <em>Emacs</em></h3>
 
 The package yasnippets is one of the most popular packages in *Emacs* for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
@@ -592,7 +590,7 @@ This package is installed with a builtin package manager.
 Each snippet is stored in a single file.
 The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
 
-<h1>Variants of *Emacs* to consider</h1>
+<h1>Variants of <em>Emacs</em> to consider</h1>
 
 These variants might be suitable for the impatient who do not want to master *GNU Emacs*.
 
@@ -602,7 +600,7 @@ These variants might be suitable for the impatient who do not want to master *GN
 It is designed to be easier to use than *Emacs*.
 It can be operated with *Vim*, *Emacs*, or a hybrid of key bindings.
 You enable layers to extend its functionality.
-*Spaceemacs* can be used to edit *Jupyter Notebooks* via the Ipython-layer.
+*Spacemacs* can be used to edit *Jupyter Notebooks* via the Ipython-layer.
 
 <h2>*SciMax*</h2>
 
@@ -612,7 +610,7 @@ Several YouTube videos of Professor Kitchin talking about SciMax are available.
 SciMax is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
 Hence, our recommendation to become competent with Gnu *Emacs* before diving into SciMax.
 
-<h2>Prelude *Emacs*</h2>
+<h2><em>Prelude Emacs</em></h2>
 
 This variant of *Emacs* is *GNU Emacs* bundled with what the developer thinks are the essential, no-frills add-on packages.
 It does not ship with evil-mode. 
@@ -621,7 +619,7 @@ You need to install *GNU Emacs* version 26.3 first.
 The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
 The github page is found [here](https://github.com/bbatsov/prelude).
 
-<h2>*Doom Emacs*</h2>
+<h2><em>*Doom Emacs</em></h2>
 
 *Doom Emacs* appears to provide more advanced features than *Prelude Emacs*.
 It may be useful to study to learn about packages or features to add to a basic *GNU Emacs* configuration.
@@ -637,7 +635,7 @@ See the file section at the top for an example of a working init.el and config.o
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h3 name="espresso"> Espresso (Mac only) </h3>
+<h2 name="espresso"> Espresso (Mac only) </h2>
 
 [*Espresso*](https://espressoapp.com/) is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
@@ -645,7 +643,8 @@ The snippets are stored in a single `.xml` file.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h2 name="geany"> Geany (Universal) </h2>
+
+<h2 name="geany"> Geany (Universal)</h2>
 
 [*Geany*](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
 *Geany* is written in C and C++.
@@ -653,61 +652,60 @@ Binaries are  available for Mac OS, Linux, and Windows.
 The source code is also available.
 *Geany* has a plugin manager, and it is very easy to configure.
 
-<details>
-<summary><b>Installing snippets in Geany</b></summary>
-This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system. https://www.geany.org/download/releases/
 
-Make sure that the `.pml` filetype is defined as `#~ PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
+<h3>Installing snippets in Geany</h3>
+
+This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system.
+
+Make sure that the <b>*.pml</b> filetype is defined as <em>#~ PyMOL=*.pml;</em> by going to <b>Tools --> Configuration files --> filetype_extensions.conf</b>.
 You will also need to add PyMOL as a group in that same file configuration.
-It should read `#~ None=PyMOL` under Groups.
+It should read <b>#~ None=PyMOL</b> under Groups.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif"></p>
 
-In addition, you need to edit the keybinding preferences `Move cursor in snippet` for under `Edit --> Preferences --> Keybindings` because it is blank by default.
-I used **Tab**.
+In addition, you need to edit the keybinding preferences `Move cursor in snippet` for under <b>Edit --> Preferences --> Keybindings</b> because it is blank by default.
+I used <b>Tab</b>.
 Press `enter` and then click "Allow" when the override window pops up.
 Without making this edit, you will not be able to advance to the second and later tab stops.
 
-The snippets for all languages are stored in groups in single file `~/.config/geany/snippets.conf`.
-The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor.
+The snippets for all languages are stored in groups in single file <em>~/.config/geany/snippets.conf<em>.
+The snippets in this file can be edited by using the pulldown <b>Tools --> Configuration files --> snippets.conf</b>, but it might be easier to use a text editor.
 
-Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
-Make sure that there is only one section with the heading `[pymol]`.
+Copy and paste the contents of the above <b>geanypymolsnippets.conf</b> file into the <b>snippets.conf</b> file.  
+Make sure that there is only one section with the heading <b>[pymol]</b>.
 This heading is case sensitive.
-</details>
 
-<summary><b>Using the snippet library in Geany</b></summary>
+
+<h3>Using the snippet library in Geany</h3>
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops.
 
 Here is an example of the `ao` snippet being used in *geany*:
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyAoSnip.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyAoSnip.gif"></p>
 
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-
-<h3 name="gedit"> gedit (Universal) </h3>
+<h2 name="gedit"> gedit (Universal) </h2>
 
 [*gedit*](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
 It is commonly found on Linux operating systems.
 It is often available on the computers running Linux OS at national labs.
 *gedit* provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<details><summary><b>Installing and using snippets with gedit</b></summary>
+
+<h3>Installing and using snippets with gedit</h3>
 
 The pymol.lang file has to be installed first. 
 Download it form the geditpymolsnips folder.
 
-```bash
-mkdir -p ~/.local/share/gtksourceview-3.0/language-specs
-```
+
+<code>mkdir -p ~/.local/share/gtksourceview-3.0/language-specs</code>
+
 
 The snippets are stored in a file called `pymol.xml`.
 This file is stored in the home directory in a hidden folder called `.config`.
@@ -715,43 +713,43 @@ The full path is `~.config/gedit/snippets/pymol.xml`.
 You may need to create this directory.
 
 To do this:
-```bash
-$ mkdir ~/.config/gedit/snippets/pymol.xml
-```
-Then to copy `pymol.xml` into that directory, do:
-```bash
-$ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
-```
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
 
-<h3 name="kate"> Kate/Kwriter (Universal) </h3>
+</code>$ mkdir ~/.config/gedit/snippets/pymol.xml</code>
+
+Then to copy `pymol.xml` into that directory, do:
+
+<code>$ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.</code>
+
+<a href=#FASTLINKS2>Return to list of editors above.</a>
+
+
+<h3 name="kate"> Kate/Kwriter (Universal)</h3>
 	
 [*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<details><summary><b>Installing and using snippets with kate</b></summary>
+<h3>Installing and using snippets with <em>Kate</em></h3>
 
-If installed with MacPorts, the app resides in `/Applications/macports/kate.app`.
-The snippet plugin has to be turned on. 
-*kate* requires MacOS 10.14 or newer. 
+If installed with MacPorts, the app resides in <code>/Applications/macports/kate.app</code>.
+The snippet plugin has to be turned on.
+*kate* requires MacOS 10.14 or newer.
 
-The snippets are stored in a single `.xml` file. 
+The snippets are stored in a single `.xml` file.
 The storage location for this file is not in the documentation.
 Try the following on Mac (last one of the four) and Linux (first three)**Be sure to change the folder from *YOURUSERNAME* to your username.**:
 
-```bash
-/Users/YOURUSERNAME/.local/share/ktexteditor_snippets/data/pml-kate.xml
-/Users/YOURUSERNAME/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml
-/Users/YOURUSERNAME/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
+<code>
+/Users/YOURUSERNAME/.local/share/ktexteditor_snippets/data/pml-kate.xml<br>
+/Users/YOURUSERNAME/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xm<br>
+/Users/YOURUSERNAME/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xm<br>
 /Users/YOURUSERNAME/Library/Application\ Support/kate/MySnippets/
-```
+</code>
 
 May have to create the directory MySnippets on MacOS.
-</details>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
 
