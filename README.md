@@ -257,9 +257,9 @@ Note that some editors that are available as binaries only for Windows like *Not
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
 
-<h2> <a name="install">Installing and using snippets by text editor</a></h2>
+<h1> <a name="install">Installing and using snippets by text editor</a></h1>
  
-<h3 name="atom"> Atom (Universal) </h3>
+<h2 name="atom"> Atom (Universal) </h2>
 
 [*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
 Atom advertises itself to be the "hackable text editor".
@@ -318,7 +318,7 @@ Below is an example of the *threeMaps* snippet and a demonstration of its mirror
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3 name="bbedit"> BBEdit (Mac only) </h3>
+<h2 name="bbedit"> BBEdit (Mac only) </h2>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
 Major upgrades require additional fees. You will need macOS 10.14.2 or later. 
@@ -328,7 +328,7 @@ The snippets are stored as clippings with one snippet or clipping per file.
 The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language.
 
-<h3>Installing and using snippets with BBEdit</h3>
+<h4>Installing and using snippets with BBEdit</h4>
 
 Users can create nested subfolders for groups of related snippets.
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
