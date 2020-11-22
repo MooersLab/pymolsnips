@@ -527,7 +527,7 @@ Emacs is infamous for having 1800 key bindings involving multiple keys.
 The key bindings make heavy use of the alt or meta key.
 However, there is in-line documentation, and some packages provide autosuggestions that greatly ease the discovery of new key bindings.
 You only really need to memorize several dozen key bindings to become productive in Emacs.
-The remaining knowledge is easy to acquire on an *as needed* basis.
+The remaining knowledge is easy to acquire on an *as-needed* basis.
 
 Vim users can quickly become productive in Emacs because the Vim key bindings are available through the add-on package called evil-mode.
 Mastery of the Vim key bindings in Vim is initially painful because it is like learning how to type for the first time.
@@ -538,7 +538,7 @@ Mastery of Vim key-bindings is a wise investment because they are available in m
 They are even available in Jupyter Notebooks!
 In addition, Vim is more widely distributed than emacs.
 
-If you are user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your init.el file and reestablish your Emacs computing environment.
+If you are a user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your init.el file and reestablish your Emacs computing environment.
 Many national facilities use Centos Linux and are unable or unwilling to make available the most recent stable version of emacs. 
 I have found that the available versions are several years out of date and hence difficult to install all of my favorite packages.
 It may take an hour of removing calls to install incompatible packages before you can establish a subset of your favorite packages.
@@ -562,18 +562,18 @@ The *.emacs.d* configuration directory is a hidden directory in the home directo
 It is the home of the installed packages and plugins. 
 
 The main configuration file resides is this directory and is named *init.el*.
-The *init.el* file is the analog of vim's *.vimrc* configuration file.
+The *init.el* file is the analog of Vim's *.vimrc* configuration file.
 The commands in the *init.el* file are written in elisp.
 Fortunately, elisp is easy to edit and augment without knowing much about how to program with elisp.
 
 I store my configuration in a config.el file (see file listing at top of page).
-The 
+
 
 <details>
 <summary><b>Installing Emacs</b></summary>
 
 Like *Vim*, *Emacs* can be installed as a stand-a-lone application or via a software management tool and a software repository.
-	
+
 *Emacs* can be downloaded from https://www.gnu.org/software/emacs/ and insalled with a platform specific installer.
 Older versions of *Emacs* comes pre-installed on Mac OS, but you may want a more recent version.
 You should remove the old version with the commands `sudo rm /usr/bin/emacs` and `sudo rm -rf /usr/share/emacs`.
@@ -920,7 +920,7 @@ and then save your script file with the `.pml` file extension.
 <h3 name="micro"> Micro (Universal) </h3>
 	
 [*Micro*](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
-Nonetheless, *Micro* is easier to use than *vim* or *emacs*.
+Nonetheless, *Micro* is easier to use than *Vim* or *emacs*.
 Like *nano*, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a `json` file.
 [*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
@@ -1020,13 +1020,13 @@ We are working on making this happen in the [pymolpysnips project](https://githu
 <h3 name="spacemacs">Spacemacs (Universal)</h3>
 Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of *Emacs*.
 Its command leader is the spacebar hence the word *space* in the name.
-It is very different from running the *Emacs* in evil-mode (evil-mode enables the use of vim keybindings in *Emacs*).
+It is very different from running the *Emacs* in evil-mode (evil-mode enables the use of Vim keybindings in *Emacs*).
 As a result, it should be treated as a separate editor from *Emacs* and *Vim*.
 
 *Spacemacs* has its own set of mnemonic commands that you need to master.
 In other words, you will use *Vim*, *Emacs*, and *Spacemacs* commands in one editor.
 It might be less intimidating if you have mastered some of the basics of *Vim* and *Emacs*.
-*Spacemacs* does not go as far as allowing you to use vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
+*Spacemacs* does not go as far as allowing you to use Vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 </details>
 
 <details>
@@ -1164,12 +1164,14 @@ This editor can be used to view and change the code in the snippets.
 <h3 name="vim">Vim (Universal)</h3>
 
 [*Vim*](https://vimawesome.com) is the improved terminal-based text editor *vi*.
-Vim enables the addition of plugins to extend what Vim can do.
-There are over 18,000 plugins available.
+*Vi* is very ubquitious.
+It is probably already installed on your computer.
+Vim enables the addition of plugins to extend what the base Vim can do.
+There are over 19,000 [plugins available](https://vimawesome.com/).
 Vim is free.
 
 A newer branch of *Vim* called *neovim* is also available.
-*Vim* and *neovm* are available from software repositories like MacPorts, fink, Homebrew, or it can be downloaded as a stand-a-lone application.
+*Vim* and *neovm* are available from software managers like MacPorts, fink, Homebrew, or it can be downloaded as a stand-alone application.
 Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
 That bug has been fixed in version 8.1.2152.
 I found that the MacPorts Vim was behind this version.
@@ -1177,21 +1179,29 @@ I tried to compile Vim version 8.2.12; I gave up due to inference from conda in 
 I installed Vim version 8.2.0 via Homebrew.
 This version worked fine.
 
-*Vim* focuses on the editing process where most of the time is spent on thinking about has been written and not on generating new text.
-Most of the time spent `writing' is usually spent on rewriting.
+*Vim* focuses on the editing process.
+This process is where you spend most of your time thinking about what you have written.
+Most of the time spent *writing* is usually spent on *rewriting*.
 
-The *Vim* keybindings for text editing are so useful that the they are available for the rival text editors *Emacs* as well as many other text editors.
+The *Vim* keybindings for text editing are so useful that they are available for the rival text editors *Emacs* as well as many other text editors including *VSC*.
 The secret to keeping your sanity while using *Vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
 Numerous blog posts have lists of ways to think about and use *Vim* to improve your productivity.
 The consensus is to develop muscle memory of the commands that are useful to you by practicing their use at every opportunity.
 Another tip is to focus on mastering the basic commands before getting mired in tweaking your *.vimrc* configuration file and playing with plugins; that is, focus on mastering the *vi* part of *Vim*.
 
+A common trap for new users is to overload their `.vimrc` configuration file with shiny new features and plugins that they find on GitHub from posts of sample `.vimrc` files.
+Some of these files are several thousand lines long and really only usable by their developers.
+New users often accidentally add one line that breaks *Vim*, get frustrated, and give up on *Vim*.
+A better practice is to slowly and irregularly build-up the vimrc file as your needs evolve.
+You can comment out features that you use infrequently and uncomment them as the need arises.
+Obviosuly, your `.vimrc` file should be kept under version control so that you can easily recover the last working version.
+
 *Vim* lacks native support for snippets.
 We have to extend *Vim* with a plugin known as a snippet manager.
 There are several plugins for managing snippets.
-*Neosnippetsi*, *SnipMate*, and *UltiSnips* will be discussed here.
+*Neosnippets*, *SnipMate*, and *UltiSnips* will be discussed here.
 
-Versions of vim 8.0 and greater can use minpac to manage plugins on top the native support for plugins.
+Versions of Vim 8.0 and greater can use minpac to manage plugins on top of the native support for plugins.
 Versions of *vim* 7.X and earlier require the use of one of the plugin managers like Vundle to install plugins.
 Most plugins have GitHub websites of their own.
 These sites rarely mention minpac, but Vundle is always mentioned.
@@ -1204,7 +1214,7 @@ It is in this file that you install and update plugins, as well as comment out u
 <details>
 <summary><b>Installing Vundle</b></summary>
 
-To start adding a plugin to *vim* you will need to open and edit the `.vimrc` file.
+To start adding a plugin to *Vim* you will need to open and edit the `.vimrc` file.
 
 To download Vundle enter the following into the bash command line:
 
@@ -1229,7 +1239,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" Ultisnips requires vim installed with python. This is just the engine.
+" Ultisnips requires Vim installed with python. This is just the engine.
 Plugin 'SirVer/ultisnips'
 
 call vundle#end()
@@ -1237,9 +1247,9 @@ call vundle#end()
 " Turn on filetype detection for plugins
 filetype plugin on
 
-" set path to Python3 interpreter that you used when installing vim
+" set path to Python3 interpreter that you used when installing Vim
 " let g:python3_host_prog = '/opt/local/bin/python3.7'
-" This was the python used to install vim with homebrew.
+" This was the python used to install Vim with homebrew.
 let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
 
 " UltiSnips related commands
@@ -1296,14 +1306,11 @@ call minpac#add('k-takata/minpac',{'type':'opt'})
 ```
 
 Then refresh *Vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
-You will not be able to use these plugins until you exit and restart *vim* by entering `:qa!` and then opening another *vim* session.
+You will not be able to use these plugins until you exit and restart *Vim* by entering `:qa!` and then opening another *Vim* session.
 </details>
 
-
-
 <h4 name="neosnippets">Neosnippets(for Vim, universal) </h4>
-	
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *vim* and *neovim*.
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *Vim* and *neovim*.
 *Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
 The use of *Neosnippets* does not require *deoplete*.
 Experienced users may find *deoplete* pop-up menus to be distracting.
@@ -1336,7 +1343,7 @@ Check in *Vim* or *neovim* if python3 is enabled by entering:
 If 1 is returned, you have python3 installed. 
 If 0 is returned, you do not.
 
-To install the plugins with Vundle, add the following to the Vundle plugin section of the  `.vimrc` file.
+To install the plugins with Vundle, add the following to the Vundle plugin section of the `.vimrc` file.
 
 ```vim
 Plugin 'Shougo/deoplete.nvim'
@@ -1416,7 +1423,7 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 
 
-<h4 name="snipmate"> SnipMate (for vim, universal) </h4>
+<h4 name="snipmate"> SnipMate (for Vim, universal) </h4>
 
 [*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that provides plugin support for snippets that are available in *Vim*. 
 It does not depend on Python.
@@ -1449,7 +1456,8 @@ Then run the following command in *Vim*:
 
 [*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
 *Vim* has to be installed with the option of using Python3 enabled to be able to use *UltiSnips*.
-The *UltiSnips* plugin is the snippet handling engine providing a large number of advanced snippet features.
+The *UltiSnips* plugin is the snippet handling engine.
+It provides a large number of advanced snippet features.
 However, it does not come with libraries of snippets.
 The snippets must be installed separately.
 The *honza/vim-snippets* plugin contains snippets for many languages.
@@ -1473,12 +1481,12 @@ $ cd .vim
 $ mkdir myultisnips
 ```
 
-In the `myultisnips` directory you can add your own snippets or add the *UltiSnips* snippets provided above in the `ultisnippymolsnips` folder.
+In the `myultisnips` directory, you can add your own snippets and add the *UltiSnips* snippets provided above in the `ultisnippymolsnips` folder.
 
 ```bash
 $ cp ~/pymolsnips/ultisnippymolsnips/* .
 ```
-[Insert GIF here?]
+
 
 Because *UltiSnips* depends on Python3, you may have to install Python3 to be able to use it.
 You can point *UltiSnips* to a particular Python3 interpreter with the following command in your `.vimrc` file.
@@ -1492,7 +1500,7 @@ endif
 In the Vundle plugin section of the `.vimrc` file, add the following lines:
 
 ```vim
-" Ultisnips requires*Vim*installed with python.
+" Ultisnips requires *Vim* installed with python.
 Plugin 'SirVer/ultisnips'
 ```
 
@@ -1511,8 +1519,8 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','UltiSnips']
 ```
 
-The following step is to define the `*.pml' file type inside a *pml.vim* file.
-The *pml.vim* file is stored inside of a subfolder that contains the file type definition files.
+The following step is to define the `*.pml` file type inside a `pml.vim` file.
+The `pml.vim` file is stored inside of a subfolder that contains the file type definition files.
 This subfolder is called *ftdetect*, which is stored inside of the *~/.vim/bundle/ultisnips* folder.
 This step is not necessary if you install the *bioSyntax-vim* plugin because it contains a *pml.vim* in its ftdetect subfolder.
 The *bioSyntax-vim* also provides color syntax highlighting for *.pml* files.
@@ -1525,7 +1533,7 @@ $ cd ~/.vim/ftdetect/
 ```
 
 Some *Vim* plugins require that you add a flag to your `.vimrc` file to turn off file type detection.
-You can set the file type for a `.pml` file with the command `:set filetype=pml`. 
+You can set the file type for a `.pml` file with the command `:set filetype=pml`.
 To enable autodetection of the file type in this situation, we need to make a `pml.vim` file in the `ftdetect` subdirectory of the `ultisnips` directory.
 
 ```bash
@@ -1594,6 +1602,18 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 " another means of escape to normal mode: Control-Carriage Return
 :inoremap <C-CR>  <Esc>
 ```
+
+<h5> More information about UtliSnips </h5>
+
+There are a number of videos on YouTube about using UltiSnips.
+The developer of UltiSnips, SirVer (aka Holger Rapp) has a series of four videos that you are highly recommended.
+The links to these videos are found in the README.md file of the [*UltiSnips GitHub Repository*](https://github.com/sirver/UltiSnips).
+
+However, for a faster introduction to UltiSnips, I recommend watching the video [*How I Use the UltiSnips VIM Plugin To Make Better Snippets*] (https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo) by Bryan Jenks.
+
+If you are an experienced snippet user and want to add intelliSense-like autocompletion of the snippet names in *Vim*, take a look at [*Conquerer of Completion*](https://github.com/neoclide/coc.nvim) by Qiming Zhao.
+They claim that their package will bring a *VSC*-like experience to *Vim*.
+
 </details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
@@ -1601,23 +1621,33 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 	
-[*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free editor from Microsoft. 
+[*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by MicroSoft.
 Its start-up speed is between that of *Sublime Text 3* and *Atom*.
+It is still under expoentially rapid development.
+It is easily ehanded with extensions.
+There is even a Grammarly extesnion!
+*VSC* has strong support for snippets and for autocompletion with intelliSense.
+It is fair to say that *VSC* is one of the most advanced text editors.
 
-The installation of plugins is painless.
-There is a marketplace within *VSC* where you can search for extensions and install them by clicking on an install button after reading meta data about the plugin to determine if it the right plugin for you. 
+The installation of *VSC* extensions is very painless and very fast.
+There is an extension marketplace that is accessible from the left column within the *VSC* GUI.
+You can search the marketplace for extensions.
+Each extension has its own html file with information about the extension.
+This html file has install and uninstall buttons.
+The installations are lightning fast.
 
 The *bioSyntax* plugin is free and includes a lexer for PyMOL and lexers for many other file types used in bioinformatics.
 It is a good idea to install this plugin.
-The PyMOL lexer will be activated when a `pml` file is opened. 
+The PyMOL lexer will be activated when a `pml` file is opened.
 
-VSC provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
-The latter feature are very helpful for avoiding the insertion of the wrong snippet. 
+*VSC* provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
+The latter feature are very helpful for avoiding the insertion of the wrong snippet.
 
 <details>
 <summary><b>Installing and using snippets with Visual Studio Code</b></summary>
 
-Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system. A prompt should pop-up during your first launch of *VSC*. Install this. 
+Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system. 
+A prompt should pop-up during your first launch of *VSC*. Install this.
 
 From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Roaming\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
 
@@ -1625,7 +1655,8 @@ For Mac users in the `vscpymolsnips` folder:
 ```bashOS
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
-For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting). 
+For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`. 
+If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting). 
 
 </details>
 
@@ -1659,7 +1690,7 @@ Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion
 <h2>Text editors that are ready out of the box</h2>
 
 <h2>Terminal based text editors</h2>
-In this category, *vim* is the most powerful editor followed by *emacs* and distantly by nano.
+In this category, *Vim* is the most powerful editor followed by *emacs* and distantly by nano.
 -->
 
 <h2> <A name="snippetList" >List of the snippets by their tab trigger name and description </A> </h2>
