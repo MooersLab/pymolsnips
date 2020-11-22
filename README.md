@@ -197,16 +197,18 @@ Hyperlinks will take you to a particular category.
 <A href=#FASTLINKS>Return to quick links section at top</A>
 
 <hr>
-<h2>  <A name="FASTLINKS2">Supported coding platforms:</A> </h2>
+<h2>  <A name="FASTLINKS2">Supported text editors:</A> </h2>
 
-PyMOL scripts can e coded in electronic notebook, integrated development environments, and text editors.
+PyMOL scripts can be coded in electronic notebook, integrated development environments, and text editors.
 All three types of coding platforms support the use of snippets to varying degrees.
+Here, we foucs only on text editors because the support for *pml* code is best with this category of coding environment.
 
 Note that some text editors use the same library of snippets.
 For example, *emacs* and *spacemacs* can use the same snippet library that is managed by the yasnippets package.
 Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
-There are at least kinds of snippet systems available for Vim and neovim.
+There are at least three kinds of snippet systems available for Vim and neovim.
 
+<ul>
   * <a href="#atom"> Atom </a>
   * <a href="#bbedit"> BBEdit (limited to Mac OS)</a>
   * <a href="#brackets"> Brackets </a>
@@ -225,8 +227,9 @@ There are at least kinds of snippet systems available for Vim and neovim.
   * <a href="#TextMate"> TextMate (limited to Mac OS)</a>
   * <a href="#Vim"> Vim (uses Ultisnips, Neosnippets, or Snipmate plugins to manage snippets) </a>
   * <a href="#VisualStudioCode"> Visual Studio Code </a>
+</ul>
 
-If you are considering switching editors, we recommend Visual Studio Code (VSC). 
+If you are considering switching editors, we recommend Visual Studio Code (VSC).
 You do have to install plugins, but the process of doing so is quite painless.
 Our second tier of text editors includes would be Sublime Text, Textmate, and Atom.
 
@@ -244,12 +247,12 @@ Note that some editors that are available as binaries only for Windows like *Not
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
 
-<h2> <A name="install">Installing and using snippets by coding platform</A></h2>
+<h2> <a name="install">Installing and using snippets by text editor</a></h2>
  
-<h3 name="atom" > Atom (Universal) </h3>
+<h3 name="atom"> Atom (Universal) </h3>
 
 [*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
-Atom advertises to be the "hackable text editor".
+Atom advertises itself to be the "hackable text editor".
 It integrates with GitHub nicely, and the GUI is attractive.
 
 *Atom's* startup speed bogs down as more plugins are added.
@@ -302,6 +305,9 @@ Below is an example of the *threeMaps* snippet and a demonstration of its mirror
 
 <p align="center"><img src="gifs/AtomSnipsUse.gif"></p>
 
+
+
+
 <h3 name="bbedit"> BBEdit (Mac only) </h3>
 
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
@@ -326,9 +332,10 @@ $ cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clip
 
 The disadvantages of these clippings include the lack of tab triggers and tab stops.
 There is also presently the lack of a PyMOL lexer for syntax highlighting.
+</details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
+
 
 <h3 name="brackets"> Brackets (Universal) </h3>
 
