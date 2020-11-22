@@ -108,7 +108,7 @@ This can serve as a guide to selecting a text editor.
 
 Yes, we know.
 We have too much information here for a standard README.md file.
-We plan to move much of the detailed information below to a GitHubPages webpage.
+We plan to move much of the detailed information below to a GitHub Pages webpage shortly.
 
 ### <A name="FASTLINKS">Quick links</A>
 
@@ -117,7 +117,7 @@ We plan to move much of the detailed information below to a GitHubPages webpage.
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
 **pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors**.
-Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store the computer code!***
+Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store computer code!***
 If you do so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
 In addition, word processing documents are usually binary files that are difficult to put under version control.
 
@@ -126,7 +126,7 @@ Although these files have many different file extensions that map them to the pr
 One of the editing tools available in text editors is support for the retrieval and insertion of computer code fragments (i.e, snippets) to save time and reduce errors while assembling a new script file.
 
 Protocols for snippet installation for each text editor are found <a href="#install"> below</a>.
-Some editors take snippet libraries in one file while other editors require that each snippet reside in a separate file.
+Some editors take snippet libraries in one file while other editors require that each snippet resides in a separate file.
 Most editors have their own format for snippets.
 The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
 The one exception is the CudaText editor.
