@@ -1139,37 +1139,37 @@ To download Vundle enter the following into the bash command line:
 Paste the following minimal code at the top of your <em>.vimrc</em> file to allow the use of Vundle:
 
 <code>
-if has('python3')
-endif
-
-"vundle
-set nocompatible filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Add only comment lines and Plugin commands between
-" call vundle#begin() and call vundle#end()
-
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-" Ultisnips requires Vim installed with python. This is just the engine.
-Plugin 'SirVer/ultisnips'
-
-call vundle#end()
-
-" Turn on filetype detection for plugins
-filetype plugin on
-
-" set path to Python3 interpreter that you used when installing Vim
-" let g:python3_host_prog = '/opt/local/bin/python3.7'
-" This was the python used to install Vim with homebrew.
-let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
-
-" UltiSnips related commands
-let g:UltiSnipsExpandTrigger = ''
-let g:UltiSnipsJumpForwardTrigger = ''
-let g:UltiSnipsJumpBackwardTrigger = ''
+if has('python3')<br>
+endif<br>
+<br>
+"vundle<br>
+set nocompatible filetype off<br>
+set rtp+=~/.vim/bundle/Vundle.vim<br>
+<br>
+" Add only comment lines and Plugin commands between<br>
+" call vundle#begin() and call vundle#end()<br>
+<br>
+call vundle#begin()<br>
+<br>
+Plugin 'VundleVim/Vundle.vim'<br>
+<br>
+" Ultisnips requires Vim installed with python. This is just the engine.<br>
+Plugin 'SirVer/ultisnips'<br>
+<br>
+call vundle#end()<br>
+<br>
+" Turn on filetype detection for plugins<br>
+filetype plugin on<br>
+<br>
+" set path to Python3 interpreter that you used when installing Vim<br>
+" let g:python3_host_prog = '/opt/local/bin/python3.7'<br>
+" This was the python used to install Vim with homebrew.<br>
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'<br>
+<br>
+" UltiSnips related commands<br>
+let g:UltiSnipsExpandTrigger = ''<br>
+let g:UltiSnipsJumpForwardTrigger = ''<br>
+let g:UltiSnipsJumpBackwardTrigger = ''<br>
 let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 </code>
 
