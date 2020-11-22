@@ -628,21 +628,16 @@ See the file section at the top for an example of a working init.el and config.o
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-
 <h3 name="espresso"> Espresso (Mac only) </h3>
-	
+
 [*Espresso*](https://espressoapp.com/) is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
 The snippets are stored in a single `.xml` file.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
+<h2 name="geany"> Geany (Universal) </h2>
 
-
-
-<h3 name="geany"> Geany (Universal) </h3>
-	
 [*Geany*](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
 *Geany* is written in C and C++.
 Binaries are  available for Mac OS, Linux, and Windows.
@@ -652,14 +647,12 @@ The source code is also available.
 <details>
 <summary><b>Installing snippets in Geany</b></summary>
 This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system. https://www.geany.org/download/releases/
-	
+
 Make sure that the `.pml` filetype is defined as `#~ PyMOL=*.pml;` by going to `Tools --> Configuration files --> filetype_extensions.conf`.
 You will also need to add PyMOL as a group in that same file configuration.
 It should read `#~ None=PyMOL` under Groups.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyFiletypeConfig1st.gif"></p>
 
 In addition, you need to edit the keybinding preferences `Move cursor in snippet` for under `Edit --> Preferences --> Keybindings` because it is blank by default.
 I used **Tab**.
@@ -670,10 +663,9 @@ The snippets for all languages are stored in groups in single file `~/.config/ge
 The snippets in this file can be edited by using the pulldown `Tools --> Configuration files --> snippets.conf`, but it might be easier to use a text editor.
 
 Copy and paste the contents of the above `geanypymolsnippets.conf` file into the snippets.conf file.  
-Make sure that there is only one section with the heading `[pymol]`. 
+Make sure that there is only one section with the heading `[pymol]`.
 This heading is case sensitive.
 </details>
-
 
 <summary><b>Using the snippet library in Geany</b></summary>
 The snippets are invoked with a tab trigger.
@@ -699,9 +691,7 @@ It is often available on the computers running Linux OS at national labs.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-
-<details>
-<summary><b>Installing and using snippets with gedit</b></summary>
+<details><summary><b>Installing and using snippets with gedit</b></summary>
 
 The pymol.lang file has to be installed first. 
 Download it form the geditpymolsnips folder.
@@ -732,9 +722,8 @@ $ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<details>
-<summary><b>Installing and using snippets with kate</b></summary>
-	
+<details><summary><b>Installing and using snippets with kate</b></summary>
+
 If installed with MacPorts, the app resides in `/Applications/macports/kate.app`.
 The snippet plugin has to be turned on. 
 *kate* requires MacOS 10.14 or newer. 
@@ -745,17 +734,18 @@ Try the following on Mac (last one of the four) and Linux (first three)**Be sure
 
 ```bash
 /Users/YOURUSERNAME/.local/share/ktexteditor_snippets/data/pml-kate.xml
-/Users/YOURUSERNAME/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml 
+/Users/YOURUSERNAME/.kde4/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/YOURUSERNAME/.kde/share/apps/ktexteditor_snippets/data/pml-kate.xml
 /Users/YOURUSERNAME/Library/Application\ Support/kate/MySnippets/
 ```
+
 May have to create the directory MySnippets on MacOS.
 </details>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="komodo"> Komodo Edit (Universal) </h3>
-	
+
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
 The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
 The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL. 
@@ -774,13 +764,16 @@ The snippets are treated as abbreviations and are stored as separate files in th
 
 Snippets are stored in a directory called `PML`, which has to be created.
 For Mac users,
-```bash
+
+<code>
 $ mkdir ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
-```
+</code>
+
 Then insert the snippets files from [here](https://github.com/marevebro/pymolsnips/tree/master/komodoeditpymolsnips) into this directory.
-```bash
+
+<code>
 $ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
-```
+</code>
 
 For Windows users, select where you want *Komodo Edit* to be installed. 
 I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
