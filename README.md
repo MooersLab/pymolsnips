@@ -328,7 +328,7 @@ The snippets are stored as clippings with one snippet or clipping per file.
 The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language.
 
-<h4>Installing and using snippets with BBEdit</h4>
+<h3>Installing and using snippets with BBEdit</h3>
 
 Users can create nested subfolders for groups of related snippets.
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
@@ -343,11 +343,10 @@ $ cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clip
 The disadvantages of these clippings include the lack of tab triggers and tab stops.
 There is also presently the lack of a PyMOL lexer for syntax highlighting.
 
-
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 
-<h3 name="brackets"> Brackets (Universal) </h3>
+<h2 name="brackets"> Brackets (Universal) </h2>
 
 The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
 *Brackets* was designed for web developers with a focus on HTML, CSS, and JavaScript.
@@ -359,7 +358,7 @@ The zig-zag line launches the Live Preview.
 The lego piece launches the extension manager.
 Once you install an extension, a light bulb icon will appear that launches the **Snippets Manager**.
 
-<details><summary><b>Installing and using snippets with Brackets</b></summary>
+<h3>Installing and using snippets with Brackets</h3>
 
 Go to `File --> Extension Manager` or press the lego piece in the right panel.
 Search for `Brackets Snippets (by edc)` and install it.
@@ -395,9 +394,11 @@ This is helpful when you cannot remember the short-hand for a snippet.
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif"></p>
 
 Unfortunately, *Brackets* does not currently support tab stops.
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h3 name="cudatext"> CudaText (Universal)</h3>
+
+<h2 name="cudatext"> CudaText (Universal)</h2>
 
 [*CudaText*](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
 *Cudatext* is open source.
@@ -406,7 +407,7 @@ Its predecessor was *SynWrite*, which is no longer supported.
 A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons manger (thank you Alexey T.!).
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
-<details><summary><b>Installing and using snippets with CudaText</b></summary>
+<h3>Installing and using snippets with CudaText</h3>
 
 *CudaText* uses Python3 based plugins. 
 *CudaText* expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
@@ -444,7 +445,6 @@ I could not screen capture this pop-up window.
 You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*.
 Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
 
-</details>
 
 *CudaText* allows you to edit mirrored sites for uniform editing.
 The animation below shows how to edit one mirror location and travel to the other mirrored sites by hitting the Tab key.
