@@ -657,7 +657,7 @@ The source code is also available.
 
 This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system.
 
-Make sure that the <b>*.pml</b> filetype is defined as <em>#~ PyMOL=*.pml;</em> by going to <b>Tools --> Configuration files --> filetype_extensions.conf</b>.
+Make sure that the <b>pml</b> filetype is defined as <em>#~ PyMOL=*.pml;</em> by going to <b>Tools --> Configuration files --> filetype_extensions.conf</b>.
 You will also need to add PyMOL as a group in that same file configuration.
 It should read <b>#~ None=PyMOL</b> under Groups.
 
