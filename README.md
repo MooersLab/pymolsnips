@@ -1206,9 +1206,6 @@ let g:UltiSnipsJumpBackwardTrigger = ''
 let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 ```
 
-
-
-
 Now open <em>Vim</em> and run the following command:
 
 <code>:PluginInstall</code>
@@ -1217,6 +1214,7 @@ Now open <em>Vim</em> and run the following command:
 
 
 <h3>Minpac</h3>
+
 <em>Minpac</em> is anther a plugin manager for installing and managing plugins in <em>Vim</em>.
 It requires <em>Vim</em> 8 or newer.
 Unfortunately, minpac does not update itself.
@@ -1224,24 +1222,22 @@ Fortunately, there is a package you can add that will allow minpac to auto-updat
 This is discussed below in the minpac installation section.
 
 
-<h4>Installing minpac</h4>
+<h3>Installing minpac</h3>
 	
 To install minpac, you need to create a directory called <em>minpac</em> and install it as an optional plugin:
 
-<code>
-mkdir -p ~/.vim/pack/minpac/opt<br>
-cd ~/.vim/pack/minpac/opt<br>
+```bash
+mkdir -p ~/.vim/pack/minpac/opt
+cd ~/.vim/pack/minpac/opt
 git clone https://github.com/k-takata/minpac.git
-</code>
+```
 
+Then, add the following to your <em>.vimrc</em> file and write the file <b>:w</b>:
 
-Then, add the following to your <em>.vimrc<em> file and write the file <em>:w</em>:
-
-<code>
-packadd minpac<br>
+```bash
+packadd minpac
 call minpac#init()
-</code>
-
+```
 
 To add a plugin using minpac you will need to add this command <code>call minpac#add('author/reponame')</code> to your <em>.vimrc</em> file.
 
