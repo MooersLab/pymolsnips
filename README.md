@@ -1390,7 +1390,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " neosnippets uses deoplete to suggest snippets
-" This might be superior to ultisnips
+" This might be superior to ultisnips.
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'Shougo/neosnippet.vim'
@@ -1421,8 +1421,6 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-
-
 
 <h4 name="snipmate"> SnipMate (for Vim, universal) </h4>
 
@@ -1468,7 +1466,7 @@ The pml.snippets file can be stored in a *my-snippets* subfolder of the hidden *
 
 
 <details>
-<summary><b>Installing and using snippets with UltiSnips</b></summary>
+<summary><h4>Installing and using snippets with UltiSnips</h4></summary>
 
 In the following setup, we use the Vundle plugin manager.
 
@@ -1604,13 +1602,13 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 :inoremap <C-CR>  <Esc>
 ```
 
-<h5> More information about UtliSnips </h5>
+<h4> More information about UtliSnips </h4>
 
 There are a number of videos on YouTube about using UltiSnips.
 The developer of UltiSnips, SirVer (aka Holger Rapp) has a series of four videos that you are highly recommended.
 The links to these videos are found in the README.md file of the [*UltiSnips GitHub Repository*](https://github.com/sirver/UltiSnips).
 
-However, for a faster introduction to UltiSnips, I recommend watching the video [*How I Use the UltiSnips VIM Plugin To Make Better Snippets*] (https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo) by Bryan Jenks.
+However, for a faster introduction to UltiSnips, I recommend watching the video [*How I Use the UltiSnips VIM Plugin To Make Better Snippets*](https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo) by Bryan Jenks.
 
 If you are an experienced snippet user and want to add intelliSense-like autocompletion of the snippet names in *Vim*, take a look at [*Conquerer of Completion*](https://github.com/neoclide/coc.nvim) by Qiming Zhao.
 They claim that their package will bring a *VSC*-like experience to *Vim*.
