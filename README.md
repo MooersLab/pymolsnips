@@ -145,7 +145,6 @@ The menu on the left shows the alternate tab triggers that contain the letters `
 The corresponding code for the selected tab trigger is displayed in the right window.
 By entering these two letters, you have inserted 16 lines of code!
 
-	 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif"></p>
 
 One thing to note when using tab stops is that the mirrored selections are very *fragile*:
@@ -157,17 +156,12 @@ Find more information about mirrored tab stops in the installation instructions 
 The animation below demonstrates the use of mirrored tab stops where changed default values are mirrored at identical sites.
 If mirrored tab stops are available for a text editor, you can learn more about them in the installation instructions of that text editor.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif">
-</p>
-
-
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif"></p>
 
 <h2>  <A name="categories"> Snippet categories: </A> </h2>
 Each snippet is described below.
 The snippets are grouped into categories.
 Hyperlinks will take you to a particular category.
-
 
 - <a href="#altloc"> Alternate locator </a>
 - <a href="#analysis"> Analysis </a>
@@ -205,7 +199,7 @@ Hyperlinks will take you to a particular category.
 <hr>
 <h2>  <A name="FASTLINKS2">Supported coding platforms:</A> </h2>
 
-PyMOL scripts can e coded in electornic notebook, integrated development environments, and text editors.
+PyMOL scripts can e coded in electronic notebook, integrated development environments, and text editors.
 All three types of coding platforms support the use of snippets to varying degrees.
 
 Note that some text editors use the same library of snippets.
