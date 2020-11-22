@@ -700,7 +700,7 @@ It is often available on the computers running Linux OS at national labs.
 
 <h3>Installing and using snippets with gedit</h3>
 
-The pymol.lang file has to be installed first. 
+The pymol.lang file has to be installed first.
 Download it form the geditpymolsnips folder.
 
 
@@ -714,9 +714,9 @@ You may need to create this directory.
 
 To do this:
 
-</code>$ mkdir ~/.config/gedit/snippets/pymol.xml</code>
+<code>$ mkdir ~/.config/gedit/snippets/pymol.xml</code>
 
-Then to copy `pymol.xml` into that directory, do:
+Then to copy <em>pymol.xml</em> into that directory, do:
 
 <code>$ cp ~/pymolsnips/geditpymolsnips/pymol.xml ~/.config/gedit/snippets/.</code>
 
