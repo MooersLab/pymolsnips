@@ -328,7 +328,7 @@ The snippets are stored as clippings with one snippet or clipping per file.
 The PyMOL pml snippets end with the file extension `*.pml`.
 The clippings can be stored in folders by language.
 
-<details><h3>Installing and using snippets with BBEdit</h3>
+<h3>Installing and using snippets with BBEdit</h3>
 
 Users can create nested subfolders for groups of related snippets.
 The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
@@ -342,7 +342,7 @@ $ cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clip
 
 The disadvantages of these clippings include the lack of tab triggers and tab stops.
 There is also presently the lack of a PyMOL lexer for syntax highlighting.
-</details>
+
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
