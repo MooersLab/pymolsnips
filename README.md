@@ -723,7 +723,7 @@ Then to copy <em>pymol.xml</em> into that directory, do:
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h3 name="kate"> Kate/Kwriter (Universal)</h3>
+<h2 name="kate"> Kate/Kwriter (Universal)</h2>
 	
 [*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
 
@@ -748,152 +748,132 @@ Try the following on Mac (last one of the four) and Linux (first three). <b>Be s
 
 May have to create the directory MySnippets on MacOS.
 
-
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<h3 name="komodo"> Komodo Edit (Universal) </h3>
+<h2 name="komodo"> Komodo Edit (Universal) </h2>
 
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
 The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
-The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL. 
-One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace. 
-*Komodo Edit* was derived from the Mozilla Framework. 
-The add-on, or extension, capabilities are the same. 
-For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/). 
+The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL.
+One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace.
+*Komodo Edit* was derived from the Mozilla Framework.
+The add-on, or extension, capabilities are the same.
+For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/).
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<details>
-<summary><b>Installing and using snippets with Komodo Edit</b></summary>
+
+<h3>Installing and using snippets with <em>Komodo Edit</em></h3>
 
 The snippets are treated as abbreviations and are stored as separate files in the tool box.
-*Komodo Edit* will read the  `.pml` extension. 
+<em>Komodo Edit</em> will read the  <em>.pml</em> extension.
 
-Snippets are stored in a directory called `PML`, which has to be created.
+Snippets are stored in a directory called <em>PML</em>, which has to be created.
 For Mac users,
 
-<code>
-$ mkdir ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
-</code>
+<code>$ mkdir ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML</code>
 
 Then insert the snippets files from [here](https://github.com/marevebro/pymolsnips/tree/master/komodoeditpymolsnips) into this directory.
 
 <code>$ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML</code>
 
-
 For Windows users, select where you want *Komodo Edit* to be installed.
-I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
-From there, you'll need to create the `PML` directory in `...\KomodoEdit\lib\support\samples\tools\Abbreviations`.
-Then copy and paste the `komodeditpymolsnips` files into the newly created `PML` directory. 
-</details>
+I chose <code>C:\Users\MYUSERNAME\AppData\KomodoEdit</code>.
+From there, you'll need to create the `PML` directory in <code>...\KomodoEdit\lib\support\samples\tools\Abbreviations</code>.
+Then copy and paste the <em>komodeditpymolsnips</em> files into the newly created `PML` directory. 
 
 Here, you can see snippet use in action:
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/KomodoEditsnipuse.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/KomodoEditsnipuse.gif"></p>
 
 The snippet name works as a tab trigger.
-Unfortunately, snippets must be executed by memory as *Komodo Edit* does not have a suggestion window for snippets. 
-<!-- The snippet file can also be selected through the GUI.
-A pop-up menu displays the option to insert a snippet. -->
+Unfortunately, snippets must be executed by memory as <em>Komodo Edit</em> does not have a suggestion window for snippets.
+The snippet file can also be selected through the GUI.
+A pop-up menu displays the option to insert a snippet.
 There are tab stops and highlighted default parameter values.
 However, there is no mirroring of tab stops at this time.
 
-
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
 <h3 name="LightTable"> Light Table (Universal) </h3>
 	
 [*Light Table*](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
-Those users who have dabbled in *Emacs* will recognize the syntax of the settings in behavior files which remind me of *Emacs* init files.
-*Light Table* is like a GUI version of *Emacs*.
+Those users who have dabbled in <em>Emacs</em> will recognize the syntax of the settings in behavior files which remind me of <em>Emacs</em> init files.
+<em>Light Table</em> is like a GUI version of <em>Emacs</em>.
 It has very an attractive, uncluttered GUI.
 
-*Light Table* supports previews that enable interactive editing of code to change the output.
+<em>Light Table</em> supports previews that enable interactive editing of code to change the output.
 For example,the  code chunk for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
 The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin.
 This documentation is on a GitHub website.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<details>
-<summary><b>Installing and using snippets with Light Table</b></summary>
+<h3>Installing and using snippets with Light Table</h3>
 
 The installation of plugins in *Light Table* is very fast.
 The number of available plugins is not as extensive as for *Atom, Sublime Text, TextMate,* or *Visual Studio Code*.
 You have to be prepared to do a bit of customization to get some of the plugins to work correctly.
 
 The snippets are managed through one master file per programming language.
-This central file has the file extension `.edn`.
-This file is used to set the scope fo the snippets (the programming language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension `.snip`.
+This central file has the file extension <em>.edn</em>.
+This file is used to set the scope fo the snippets (the programming language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension <em>.snip</em>.
 
-The snippets are stored in `~/.lighttable/User/snippets`.
+The snippets are stored in <code>~/.lighttable/User/snippets</code>.
 You will have to create this series of nested directories.
 Enter the following command in bash:
 
-```bash
-$ mkdir ~/.lighttable/User/snippets
-```
+<code>$ mkdir ~/.lighttable/User/snippets</code>
 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips) folder from above.
 Move the contents of this folder **(not the folder)** to `~/.lighttable/User/snippets`.
 To do this:
 
-```bash
-$ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.
-```
+<code>$ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.</code>
 
-Then, in *Light Table*, select from the menu in the toolbar at the top `File>Settings>User behaviors`.
-This will open a new window with the `users.behaviors` file ready to be edited.
+Then, in <em>Light Table</em>, select from the menu in the toolbar at the top <b>File>Settings>User behaviors</b>.
+This will open a new window with the <b>users.behaviors</b> file ready to be edited.
 Paste inside the square brackets the following and change the path to your home directory:
 
-This will open a new window with the `users.behaviors` file ready to be edited. 
-Paste inside the square brackets the following and change the path to your Mac home directory **be sure to change YOURUSERNAME to your name**:
+This will open a new window with the <b>users.behaviors</b> file ready to be edited.
+Paste inside the square brackets the following and change the path to your Mac home directory <b>be sure to change YOURUSERNAME to your name</b>:
 
-```ClojureScript
-;; absolute path to where you would like your snippet root directory to be
-[:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
+<code>
+;; absolute path to where you would like your snippet root directory to be <br>
+[:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir <br>
 "/Users/YOURUSERNAME/.lighttable/User/snippets"]
-```
+</code>
 
-***For Windows***
+<em><b>For Windows</b></em>
 
 Save this file.
 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
-Move the contents of this folder (not the folder) to `~/.lighttable/User/snippets`.
+Move the contents of this folder (not the folder) to <code>~/.lighttable/User/snippets</code>.
 
 Here is that in action!
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/LightTableUserBehavior.gif">
-</p>	
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/LightTableUserBehavior.gif"></p>	
 
 
-There is not a `pml` language available yet for *Light Table*.
+There is not a <em>pml</em> language available yet for <em>Light Table</em>.
 Python will have to do as the language for now.
-Use `.py` as your file extension while editing your script file in *Light Table*,
-and then save your script file with the `.pml` file extension.
+Use <em>.py</em> as your file extension while editing your script file in <em>Light Table</em>, and then save your script file with the <em>.pml</em> file extension.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
 
 
-
-
-<h3 name="micro"> Micro (Universal) </h3>
+<h2 name="micro"> Micro (Universal) </h2>
 	
 [*Micro*](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
-Nonetheless, *Micro* is easier to use than *Vim* or *emacs*.
-Like *nano*, it uses keybindings between keyboard shortcuts and commands to get work done.
-The collection of keybinding is defined in a `json` file.
+Nonetheless, <em>Micro</em> is easier to use than *Vim* or <em>Emacs</em>.
+Like <em>nano</em>, it uses keybindings between keyboard shortcuts and commands to get work done.
+The collection of keybinding is defined in a <em>json</em> file.
 [*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<details>
-<summary><b>Installing and using snippets with Micro</b></summary>
+<h3>Installing and using snippets with Micro</h3>
 
 *Micro* has a number of plugins available including one for snippets.
 You need to have `Node.js` installed.
