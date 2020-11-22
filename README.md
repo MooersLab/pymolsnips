@@ -867,7 +867,7 @@ Use <em>.py</em> as your file extension while editing your script file in <em>Li
 
 
 <h2 name="micro"> Micro (Universal) </h2>
-	
+
 [*Micro*](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
 Nonetheless, <em>Micro</em> is easier to use than *Vim* or <em>Emacs</em>.
 Like <em>nano</em>, it uses keybindings between keyboard shortcuts and commands to get work done.
@@ -878,94 +878,59 @@ The collection of keybinding is defined in a <em>json</em> file.
 
 <h3>Installing and using snippets with Micro</h3>
 
-*Micro* has a number of plugins available including one for snippets.
-You need to have `Node.js` installed.
+<em>Micro</em> has a number of plugins available including one for snippets.
+You need to have <em>Node.js</em> installed.
 
-On the Mac, it is best to use *Micro* with the free iTerm terminal emulator.
+On the Mac, it is best to use <em>Micro</em> with the free iTerm terminal emulator.
 
-Enter *Micro* on the command line to start the editor.
-`Control-E` opens the command line at the bottom of the terminal window.
+Enter <em>Micro</em> on the command line to start the editor.
+<em>Control-E</em> opens the command line at the bottom of the terminal window.
 A list of key bindings are found [here](https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md).
 
-Install the `snippets` plugin by entering `control-E` in micro to open a command panel, and then enter:
+Install the <em>snippets</em> plugin by entering <em>control-E</em> in micro to open a command panel, and then enter:
 
-```micro
-plugin install snippets
-```
+<code>plugin install snippets</code>
 
-All of the snippets for one language are in a single file with the `.snippets` file extension. 
-In this case, the file is labeled `pml.snippets`.
+All of the snippets for one language are in a single file with the <em>.snippets</em> file extension.
+In this case, the file is labeled <em>pml.snippets</em>.
 
-The snippets are installed in the folder `.config/micro/plugins/snippets`.
+The snippets are installed in the folder <code>.config/micro/plugins/snippets</code>.
 In the *pymolsnips* directory, enter:
 
-```bash
-$ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.
-```
+<code>$ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.</code>
 
 Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
 
-`Alt-S` is mapped to the `snippet0insert` command which inserts the snippet specified by a tabtrigger name.
-`Alt-W` advances the cursor to the next tab stop.
-`Alt-A` ends the editing the snippet. 
-`Alt-D` deletes the snippet that is being edited.
+<ul>
+<li><b>Alt-S</b> is mapped to the <b>snippet0insert</b> command which inserts the snippet specified by a tabtrigger name.</li>
+<li><b>Alt-W</b> advances the cursor to the next tab stop.</li>
+<li><b>Alt-A</b> ends the editing the snippet.</li>
+<li><b>Alt-D</b> deletes the snippet that is being edited.</li>
+</ul>
 
-A lexer for syntax highlighting is in the file called `pml.yaml`.
-This file can be downloaded from the [`micropymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
-This lexer is stored in the hidden folder `.config/micro/syntax`, which you will need to create.
+A lexer for syntax highlighting is in the file called <em>pml.yaml</em>.
+This file can be downloaded from the [<em>micropymolsnips</em>](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
+This lexer is stored in the hidden folder <code>.config/micro/syntax</code>, which you will need to create.
 
-```bash
-$ mkdir ~/.config/micro/syntax
-```
+<code>mkdir ~/.config/micro/syntax</code>
 
-Then in the `micropymolsnips` directory:
+Then in the <em>micropymolsnips</em> directory:
 
-```bash
-$ cp pml.yaml ~/.config/micro/syntax/.
-```
+<code>cp pml.yaml ~/.config/micro/syntax/.</code>
 
-Enter `Control-Q` and then enter `help color` to learn about the available color schemes and to learn about syntax highlighting.
-I entered `set colorscheme bubblegum` to apply a light color scheme to *Micro* as shown below.
+Enter <b>Control-Q</b> and then enter <code>help color</code> to learn about the available color schemes and to learn about syntax highlighting.
+I entered <code>set colorscheme bubblegum</code> to apply a light color scheme to <em>Micro</em> as shown below.
 A PyMOL script file has been opened and is color highlighted.
-You can make the tex larger for easier reading by entering `cmd-+` a number of times.
+You can make the tex larger for easier reading by entering <code>cmd-+</code> a number of times.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/images/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
-</details>
 
 
-<h3 name="orgmode">Org-mode </h3>
 
-[Org-mode](https://orgmode.org/manual/) is a well-established **literate programming** document that runs on top of Emacs.
-The document's file extension is `org`.
-Org-mode has many features that support planning and organizing hence that the `org` file extension.
-It uses a simple markdown language designed for rendering by LaTeX into publication quality documents.
+<h2 name="spacemacs">Spacemacs (Universal)</h2>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-<h3 name="rstudio">RStudio (Universal)</h3>
-	
-[RStudio](https://rstudio.com/products/rstudio/) is an IDE for the R statistical programming language.
-It is available for all platforms.
-Its GUI resemble a web-browser window but it does not run in the webbrower like JupyterLab and Jupyter Notebook.
-There is community version and a professional version.
-The latter version can interface with Jupyter Notebooks.
-The RStudio Pro Server is available at some academic institutions.
-
-RStudio supports [RNotebooks](https://bookdown.org/yihui/rmarkdown/notebook.html) written in R Markdown.
-R Markdown supports literate programming where text is interleaved with code..
-R and its predecessor S have been used for literate programming for over two decades via *Sweave*, *Rweave*, and *Knitr* packages.
-Many books have been assembled using *Knitr*.
-
-The pml code in the pymolsnips library cannot be sent to pymol api directly through R' reticulate library.
-It has to be reformatted as Python code first.
-We are working on making this happen in the [pymolpysnips project](https://github.com/MooersLab/pymolpysnips).
-
-</details>
-<A href=#FASTLINKS2>Return to list of editors above.</A>
-
-<h3 name="spacemacs">Spacemacs (Universal)</h3>
 Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of *Emacs*.
 Its command leader is the spacebar hence the word *space* in the name.
 It is very different from running the *Emacs* in evil-mode (evil-mode enables the use of Vim keybindings in *Emacs*).
@@ -975,45 +940,44 @@ As a result, it should be treated as a separate editor from *Emacs* and *Vim*.
 In other words, you will use *Vim*, *Emacs*, and *Spacemacs* commands in one editor.
 It might be less intimidating if you have mastered some of the basics of *Vim* and *Emacs*.
 *Spacemacs* does not go as far as allowing you to use Vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
-</details>
 
-<details>
-<summary><b>Installing and using snippets with Spacemacs </b></summary>
 
-*Spacemacs* comes with the package yasnippets installed, which is the engine for managing snippets.
-Spacemacs use a layer concept to build up a specific configuration.
-The layers are managed by editing the *.spacemacs* file.
-A few suggested layers are listed under `dotspacemacs-configuration-layers`.
+<h3>Installing and using snippets with Spacemacs</h3>
+
+<em>Spacemacs</em> comes with the package yasnippets installed, which is the engine for managing snippets.
+<em>Spacemacs</em> use a layer concept to build up a specific configuration.
+The layers are managed by editing the <b>*.spacemacs</b> file.
+A few suggested layers are listed under <em>dotspacemacs-configuration-layers</em>.
 Most of them are initially commented out with two semicolons on the left.
 
-Add *yasnippet-snippets* to one of the defualt layers that are listed but are commented out with two semicolons on the left.
+Add <em>yasnippet-snippets</em> to one of the defualt layers that are listed but are commented out with two semicolons on the left.
 Remove the two semicolons.
 Take care to use spaces and not a tab to indent yasnippet.
 
-The snippets are installed by the *yasnippets-snippets* package.
-You can use the following command in *Spacemacs* to install this package.
+The snippets are installed by the <em>yasnippets-snippets</em> package.
+You can use the following command in <em>Spacemacs</em> to install this package.
 
-```emacs
+<code>
 M-x package-install RETURM
 yasnippet
-```
+</code>
 
-Spacemacs may be more attractive to *vi* users rather than *Vim* users who cannot part with their configuration in *Vim*.
+<em>Spacemacs</em> may be more attractive to <em>vi</em> users rather than <em>Vim</em> users who cannot part with their configuration in <em>Vim</em>.
 
-</details>
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<h3 name="SublimeText3">Sublime Text 3 (Universal)</h3>
+
+
+<h2 name="SublimeText3">Sublime Text 3 (Universal)</h2>
 	
-[*Sublime Text 3*](https://www.sublimetext.com/3) is a GUI-based editor.
+[<em>Sublime Text 3</em>](https://www.sublimetext.com/3) is a GUI-based editor.
 The free trial period is infinite.
-*Sublime Text 3* starts up much faster than the other text editors for programmers.
-*Sublime Text 3* has strong support for snippets and the autocompletion of tab triggers.
+<em>Sublime Text 3</em> starts up much faster than the other text editors for programmers.
+<em>Sublime Text 3</em> has strong support for snippets and the autocompletion of tab triggers.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<details>
-<summary><b>Installing and using snippets with Sublime Text 3</b></summary>
+<h3>Installing and using snippets with Sublime Text 3</h3>
 
 The snippets are stored in separate files with the file extension `.sublime-snippet`.
 
@@ -1026,33 +990,25 @@ You may need to create the subdirectory called **snippets**.
 Copy and paste `st3pymolsnips` into the **snippets** folder.
 
 For command line action on the Mac, create the `snippets` directory in the *Sublime Text3* folder:
-```bash
-$ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
-```
 
-Add the snippet files to the *Sublime Text 3* folder:
-```bash
-$ cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/
-```
+<code>mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/</code>
 
-You can get around making the snippets subdirectory and just move `pymolsnips` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`, and it should still work.
+Add the snippet files to the <em>Sublime Text 3</em> folder:
 
-</details>
+<code>cp -a ~/pymolsnips/st3pymolsnips ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets/</code>
 
-Restart *Sublime Text 3*, open a *PyMOL* script file, and then enter `ao` and  hit tab.
+You can get around making the snippets subdirectory and just move <em>pymolsnips</em> to <code>~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/</code>, and it should still work.
+
+Restart <em>Sublime Text 3</em>, open a <em>PyMOL</em> script file, and then enter <b>ao</b> and  hit tab.
 Sixteen lines of code should appear.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SiblimeAoSnip.gif"></p>
 
-*Sublime Text 3* also supports tab stops and mirrored tab stops! 
-Below is an example of mirrored tab stop editing with the `threeMaps` snippet.
-Notice how when I type *sugar* all instances of glycan are replaced with sugar.
+<em>Sublime Text 3</em> also supports tab stops and mirrored tab stops! 
+Below is an example of mirrored tab stop editing with the <b>threeMaps</b> snippet.
+Notice how when I type <em>sugar</em> all instances of glycan are replaced with sugar.
 
-<p align="center">
-	<img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SublimeMirror.gif">
-</p>
+<p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/SublimeMirror.gif"></p>
 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet.
 
@@ -1060,123 +1016,121 @@ You may need to install a snippet manager package and add an autocompletion pack
 
 
 
-<h3 name="TextMate">TextMate (Mac only)</h3>
+<h2 name="TextMate">TextMate (Mac only)</h2>
 	
-[*TextMate*](https://macromates.com) is freely available but only for Mac OS.
+[<em>TextMate</em>](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
 There is a large library of plugins available.
 I found it to be quite intutitive to use, fast to start-up, and very robust.
 It is the editor that I use most frequently.
 
-The 2007 book [*TextMate Power Editing for the Mac*](https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X) by Edward Gray and the 2012 book [*TextMate How-To*](https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2) by Chris Mears provide supplemental reading to the on-line documentation.
+The 2007 book [<em>TextMate Power Editing for the Mac</em>](https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X) by Edward Gray and the 2012 book [<em>TextMate How-To</em>](https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2) by Chris Mears provide supplemental reading to the on-line documentation.
 
 *TextMate's* approach to snippets has served as a role model for other text editors.
 *TextMate* snippets can be ported to *Sublime Text 3* and *PyCharm*.
 Chapter 6 in the book by Edward Gray provides a good overview of the features of snippets in *TextMate*.
 
-<details>
-<summary><b>Installing and using snippets with TextMate</b></summary>
+<h3>Installing and using snippets with TextMate</h3>
 
-Each snippet is stored in a separate file with the file extension `.tmSnippet`.
+Each snippet is stored in a separate file with the file extension <em>.tmSnippet</em>.
 Each snippet file has a unique uuid string.
-The snippet files are stored in a subfolder called `Snippets`.
-This folder is stored in a folder `PyMOL.tmbundle`.
-This folder can be dragged and dropped into the user's `~/Library/Application\ Support/TextMate/Bundles` folder.
-When installing an update of the library, it is best to delete the old `PyMOL.tmbundle` and then drop in the new `PyMOL.tmbundle`.
+The snippet files are stored in a subfolder called <em>Snippets</em>.
+This folder is stored in a folder <em>PyMOL.tmbundle</em>.
+This folder can be dragged and dropped into the user's <code>~/Library/Application\ Support/TextMate/Bundles</code> folder.
+When installing an update of the library, it is best to delete the old <em>PyMOL.tmbundle</em> and then drop in the new <em>PyMOL.tmbundle</em>.
 
-
-The `PyMOL.tmbundle` folder contains several files and folders in addition to the `Snippets` folder. 
+The <em>PyMOL.tmbundle</em> folder contains several files and folders in addition to the <em>Snippets</em> folder. 
 Some of this other files include a lexer for *PyMOL*.
-The one file is the `\url{dependencies.json}` file.
+The one file is the <em>dependencies.json</em> file.
 This file specifies the dependence on the pygments package.
 
-The second file is the `\url{info.plist}` file.
-This file has the developer's contact information, the name of the snippet collection for the Bundles pull-down menu in *TextMate*, and a unique uuid string.
+The second file is the <em>info.plist</em> file.
+This file has the developer's contact information, the name of the snippet collection for the <em>Bundles</em> pull-down menu in <em>TextMate</em>, and a unique uuid string.
 
-The `PyMOL.tmbundle`  shows up in the Bundles pull-down as `PyMOL.pml`.
-Select `PyMOL.pml` and then a new menu will appear with a list of the snippets.
+The <em>PyMOL.tmbundle</em>  shows up in the Bundles pull-down as <em>PyMOL.pml</em>.
+Select <em>PyMOL.pml</em> and then a new menu will appear with a list of the snippets.
 The descriptions of the snippets are on the left, and the corresponding tab trigger is on the right.
 The snippet can be added to the current *.pml document by selecting the snippet with the GUI or by entering the tab-trigger name.
-</details>
 
 The bundle pull-down provides access to a bundle editor.
 This editor can be used to view and change the code in the snippets.
 
 <p align="center"><img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger"/></p>
 
+
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="vim">Vim (Universal)</h3>
 
-[*Vim*](https://vimawesome.com) is the improved terminal-based text editor *vi*.
-*Vi* is very ubquitious.
+[<em>Vim</em>](https://vimawesome.com) is the improved terminal-based text editor <em>vi</em>.
+<em>Vi</em> is very ubquitious.
 It is probably already installed on your computer.
-Vim enables the addition of plugins to extend what the base Vim can do.
+<em>Vim</em> enables the addition of plugins to extend what the base <em>Vim</em> can do.
 There are over 19,000 [plugins available](https://vimawesome.com/).
-Vim is free.
+<em>Vim</em> is free.
 
 A newer branch of *Vim* called *neovim* is also available.
 *Vim* and *neovm* are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a [stand-alone application](https://www.vim.org/download.php).
 The standard versions of both run in the terminal.
-MacVim provides a GIU version of *Vim*.
-This version of *Vim* is integrated with Mac OS.
+MacVim provides a GIU version of <em>Vim</em>.
+This version of <em>Vim</em> is integrated with Mac OS.
 Unless you a developer of GUI applications for the Mac, you probably want to stick to the terminal version
 
-It is useful to be conversant with several of the above package managers because one of them is bound to have a working version of *Vim*.
+It is useful to be conversant with several of the above package managers because one of them is bound to have a working version of <em>Vim</em>.
 Vim version 8.1.0 was not working on Mac OS X Catalina due to a bug in Xcode.
 That bug has been fixed in version 8.1.2152.
 I found that the MacPorts Vim was behind this version.
 I tried to compile Vim version 8.2.12; I gave up due to inference with the conda in the Julia installed by Homebrew.
 So I gave up my approach using macports, and I installed Vim version 8.2.0 via Homebrew.
 This version worked fine.
-It has been automatically updated to 8.2.1950 when running `brew update`.
+It has been automatically updated to 8.2.1950 when running <em>brew update</em>.
 
-If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed, you can install vim with conda as follows:
+If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed, you can install <em>Vim</em> with conda as follows:
 
-```bash
-conda install -c conda-forge vim
-```
+<code>conda install -c conda-forge vim</code>
 
-*Vim* focuses on the editing process.
+<em>Vim</em> focuses on the editing process.
 This process is where you spend most of your time thinking about what you have written.
 Most of the time spent *writing* is usually spent on *rewriting*.
 
-The *Vim* keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where text is edited.
-For example, vim key bindings are available for the rival text editors *Emacs* as well as many other text editors including *VSC* and even in the on-line LaTeX editor [Overleaf](https://www.overleaf).
-There is a *Vim* keybinding extension for MS Word on Windows but not on Mac OS.
-This is one of many reasons why I do most of my writing in Overleaf.
+The <em>Vim</em> keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where text is edited.
+For example, vim key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including *VSC* and even in the on-line LaTeX editor [<em>Overleaf</em>](https://www.overleaf).
+There is a <em>Vim</em> keybinding extension for <em>MS Word</em> on Windows but not on Mac OS.
+This is one of many reasons why I do most of my writing in <em>Overleaf</em>.
 
-The secret to keeping your sanity while using *Vim* is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
-Numerous blog posts have lists of ways to think about and use *Vim* to improve your productivity.
+The secret to keeping your sanity while using <em>Vim</em> is to remember to escape from the insert mode to the normal mode as soon as you finish entering a chunk of text because the normal mode is where you issue editing commands.
+Numerous blog posts have lists of ways to think about and use <em>Vim</em> to improve your productivity.
 The consensus is to develop muscle memory of the commands that are useful to you by practicing their use at every opportunity.
-Another tip is to focus on mastering the basic commands before getting mired in tweaking your *.vimrc* configuration file and playing with plugins; that is, focus on mastering the *vi* part of *Vim*.
+Another tip is to focus on mastering the basic commands before getting mired in tweaking your <em>.vimrc</em> configuration file and playing with plugins; that is, focus on mastering the <em>vi</em> part of <em>Vim</em>.
 
-A common trap for new users is to overload their `.vimrc` configuration file with shiny new features and plugins that they find on GitHub from posts of sample `.vimrc` files.
+A common trap for new users is to overload their <em>.vimrc</em> configuration file with shiny new features and plugins that they find on GitHub from posts of sample <em>.vimrc</em> files.
 Some of these files are several thousand lines long and really only usable by their developers.
-New users often accidentally add one line that breaks *Vim*, get frustrated, and give up on *Vim*.
-A better practice is to slowly and irregularly build-up the vimrc file as your needs evolve.
+New users often accidentally add one line that breaks <em>Vim</em>, get frustrated, and give up on <em>Vim</em>
+A better practice is to slowly and irregularly build-up the <em>.vimrc</em> file as your needs evolve.
 You can comment out features that you use infrequently and uncomment them as the need arises.
-Obviosuly, your `.vimrc` file should be kept under version control so that you can easily recover the last working version.
+Obviosuly, your <em>.vimrc</em> file should be kept under version control so that you can easily recover the last working version.
 
-*Vim* lacks native support for snippets.
-We have to extend *Vim* with a plugin known as a snippet manager.
+<em>Vim</em> lacks native support for snippets.
+We have to extend <em>Vim</em> with a plugin known as a snippet manager.
 There are several plugins for managing snippets.
-*Neosnippets*, *SnipMate*, and *UltiSnips* will be discussed here.
+<em>Neosnippets</em>, <em>SnipMate</em>, and <em>UltiSnips</em> will be discussed here.
 
 Versions of Vim 8.0 and greater can use minpac to manage plugins on top of the native support for plugins.
-Versions of *vim* 7.X and earlier require the use of one of the plugin managers like Vundle to install plugins.
+Versions of <em>Vim</em> 7.X and earlier require the use of one of the plugin managers like Vundle to install plugins.
 Most plugins have GitHub websites of their own.
 These sites rarely mention minpac, but Vundle is always mentioned.
 
-*Vundle*, which stands for *vim bundle*, is a plugin manager that configures your plugins directly in the `.vimrc` file.
+<em>Vundle</em>, which stands for <em>Vim bundle</em>, is a plugin manager that configures your plugins directly in the <em>.vimrc</em> file.
 It is in this file that you install and update plugins, as well as comment out unused plugins.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<details>
-<summary><b>Installing Vundle</b></summary>
 
-To start adding a plugin to *Vim* you will need to open and edit the `.vimrc` file.
+
+<b>Installing Vundle</b>
+
+To start adding a plugin to *Vim* you will need to open and edit the <em>.vimrc</em> file.
 
 To download Vundle enter the following into the bash command line:
 
