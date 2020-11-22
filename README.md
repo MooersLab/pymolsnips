@@ -771,11 +771,10 @@ $ mkdir ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
 
 Then insert the snippets files from [here](https://github.com/marevebro/pymolsnips/tree/master/komodoeditpymolsnips) into this directory.
 
-<code>
-$ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML
-</code>
+<code>$ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML</code>
 
-For Windows users, select where you want *Komodo Edit* to be installed. 
+
+For Windows users, select where you want *Komodo Edit* to be installed.
 I chose `C:\Users\MYUSERNAME\AppData\KomodoEdit`
 From there, you'll need to create the `PML` directory in `...\KomodoEdit\lib\support\samples\tools\Abbreviations`.
 Then copy and paste the `komodeditpymolsnips` files into the newly created `PML` directory. 
