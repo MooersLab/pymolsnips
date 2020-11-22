@@ -422,28 +422,28 @@ The files have the extensions of `.cuda-snippet`.
 
 You may have to create the `Std.PML` folder by giving the following bash command:
 
-```bash
+<code>
 $ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/
-```
+</code>
 
-When executing *CudaText* for the first time on Windows, it will prompt you with the need for the extraction of files. 
-Proceed with the extraction and choose where you want the files to be extracted to. 
-I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText. 
+When executing *CudaText* for the first time on Windows, it will prompt you with the need for the extraction of files.
+Proceed with the extraction and choose where you want the files to be extracted to.
+I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText.
 
-Create the **Std.PML** sub directory under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets`
+Create the **Std.PML** sub directory under <code>C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets</code>.
 
 Any snippet add-on will automatically be installed in this directory.
 
-Paste the files (not the folder) of `cudatextpymolsnips` into the **Std.PML** folder. 
+Paste the files (not the folder) of <em>cudatextpymolsnips</em> into the **Std.PML** folder.
 
-After starting *CudaText*, install the snippets plugin by navigating to the `Plugins --> Addons Manager --> Install` and search for *plugin: Snippets* and select it.
+After starting *CudaText*, install the snippets plugin by navigating to the <b>Plugins --> Addons Manager --> Install</b> and search for <b>plugin: Snippets</b> and select it.
 A pop-up window will appear asking you if you would like to install, click OK.
 I could not screen capture this pop-up window.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif"></p>
 
-You will also need to use the same pull-down to install the *lexer: PyMOL* and the *snippets: PyMOL*.
-Restart *CudaText* to see the changes. When editing snippets or plugins in *CudaText* you can also update them by going to `Plugins --> Addons Manager --> Update`.
+You will also need to use the same pull-down to install the <em>lexer: PyMOL</em> and the <em>snippets: PyMOL</em>.
+Restart *CudaText* to see the changes. When editing snippets or plugins in <b>CudaText</b> you can also update them by going to <b>Plugins --> Addons Manager --> Update</b>.
 
 
 *CudaText* allows you to edit mirrored sites for uniform editing.
