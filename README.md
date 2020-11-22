@@ -750,6 +750,8 @@ May have to create the directory MySnippets on MacOS.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
+
+
 <h2 name="komodo"> Komodo Edit (Universal) </h2>
 
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
@@ -796,7 +798,7 @@ However, there is no mirroring of tab stops at this time.
 
 
 
-<h3 name="LightTable"> Light Table (Universal) </h3>
+<h2 name="LightTable"> Light Table (Universal) </h2>
 	
 [*Light Table*](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
 Those users who have dabbled in <em>Emacs</em> will recognize the syntax of the settings in behavior files which remind me of <em>Emacs</em> init files.
@@ -845,7 +847,7 @@ Paste inside the square brackets the following and change the path to your Mac h
 "/Users/YOURUSERNAME/.lighttable/User/snippets"]
 </code>
 
-<em><b>For Windows</b></em>
+<em><h3>For Windows</h3></em>
 
 Save this file.
 
@@ -861,6 +863,7 @@ Python will have to do as the language for now.
 Use <em>.py</em> as your file extension while editing your script file in <em>Light Table</em>, and then save your script file with the <em>.pml</em> file extension.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
 
 
 <h2 name="micro"> Micro (Universal) </h2>
