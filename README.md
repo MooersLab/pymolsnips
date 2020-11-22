@@ -1141,7 +1141,10 @@ Paste the following minimal code at the top of your <em>.vimrc</em> file to allo
 <code>
 if has('python3')<br>
 endif<br>
-<br>
+</code>
+
+
+<code>
 "vundle<br>
 set nocompatible filetype off<br>
 set rtp+=~/.vim/bundle/Vundle.vim<br>
