@@ -1259,54 +1259,52 @@ You will not be able to use these plugins until you exit and restart *Vim* by en
 
 <h4 name="neosnippets">Neosnippets(for Vim, universal) </h4>
 
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors *Vim* and *neovim*.
-*Neosnippets* is similar to *SnipMate* except with *Neosnippets*, there is the option to utilize [*deoplete*](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
-The use of *Neosnippets* does not require *deoplete*.
-Experienced users may find *deoplete* pop-up menus to be distracting.
-*Deoplete* may be useful as a training tool that can be dispensable when it is no longer needed.
-*Deoplete* requires *neovim* or *Vim* versions greater than 8.0, and Python3.
+[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors <em>Vim</em> and <em>neovim</em>.
+<em>Neosnippets</em> is similar to <em>SnipMate</em> except with <em>Neosnippets</em>, there is the option to utilize [<em>deoplete</em>](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
+The use of <em>Neosnippets</em> does not require <em>deoplete</em>.
+Experienced users may find <em>deoplete</em> pop-up menus to be distracting.
+<em>Deoplete</em> may be useful as a training tool that can be dispensable when it is no longer needed.
+<em>Deoplete</em> requires <em>neovim</em> or <em>Vim</em> versions greater than 8.0, and Python3.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<details>
-<summary><b>Installing and using snippets with Neosnippets</b></summary>
+
+<h4>Installing and using snippets with Neosnippets</h4>
 
 You have to enable the Python3 interface with pynvim which you can install with this command:
 
-```bash
-$ pip3 install --user pynvim
-```
+<code>pip3 install --user pynvim<code>
 
 To be more precise, you can provide the full path to the Python interpreter to be used by *neovim* and import *pip* as a module before installing pynvim.
 
-```bash
-$ sudo -H /opt/local/bin/python3.7 -m pip install pynvim
-```
+<code>sudo -H /opt/local/bin/python3.7 -m pip install pynvim</code>
 
-Check in *Vim* or *neovim* if python3 is enabled by entering:
 
-```vim
-:echo has("python3")
-```
+Check in *Vim* or <em>neovim</em> if python3 is enabled by entering:
 
-If 1 is returned, you have python3 installed. 
+
+<code>:echo has("python3")</code>
+
+
+
+If 1 is returned, you have python3 installed.
 If 0 is returned, you do not.
 
-To install the plugins with Vundle, add the following to the Vundle plugin section of the `.vimrc` file.
+To install the plugins with Vundle, add the following to the Vundle plugin section of the <em>.vimrc</em> file.
 
 ```vim
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 ```
 
-To use *deoplete*, add the following setting to your `.vimrc` file.
+To use *deoplete*, add the following setting to your <em>.vimrc</em> file.
 
 ```vim
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 ```
 
-To install *Neosnippets*, add the following to the Vundle plugin section of the  `.vimrc` file.
+To install <em>Neosnippets</em>, add the following to the Vundle plugin section of the  <em> .vimrc</em> file.
 
 ```vim
 Plugin 'Shougo/neosnippet.vim'
@@ -1314,13 +1312,14 @@ Plugin 'Shougo/neosnippet-snippets'
 ```
 
 The last command is optional because installing default snippets is optional.
-If you choose not to install them, you must deactivate them with the following command added to the `.vimrc` file.
+If you choose not to install them, you must deactivate them with the following command added to the <em> .vimrc</em> file.
 
 ```vim
 g:neosnippet#disable_runtime_snippets
 ```
 
-A minimal `.vimrc` file for installing and using *Neosnippets* is listed below **make sure to change YOURUSERNAME to your name**:
+A minimal <em> .vimrc</em> file for installing and using <em>Neosnippets<em> is listed below. 
+<b>Make sure to change YOURUSERNAME to your name:
 
 ```vim
 if has('python3')
@@ -1370,15 +1369,16 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 </details>
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h4 name="snipmate"> SnipMate (for Vim, universal) </h4>
+<h4 name="snipmate"> SnipMate (for <em>Vim</em>, universal) </h4>
 
-[*SnipMate*](https://github.com/garbas/vim-snipmate) is an early but stable plugin manager that provides plugin support for snippets that are available in *Vim*. 
+[*SnipMate*](https://github.com/garbas/vim-snipmate) is an early, but stable plugin manager that provides plugin support for snippets that are available in <em>Vim</em>. 
 It does not depend on Python.
 
 <details>
 <summary><b>Installing and using snippets with SnipMate</b></summary>
 
 To install SnipMate, add the following to your `.vimrc` file:
+
 ```vim
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -1388,7 +1388,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 ```
 
-Then run the following command in *Vim*:
+Then run the following command in <em>Vim</em>:
 
 ```vim
 :PluginInstall
@@ -1396,45 +1396,46 @@ Then run the following command in *Vim*:
 
 </details>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<h4 name="UltiSnips"> UltiSnips (for *Vim*, universal) </h4>
 
-[*UltiSnips*](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
-*Vim* has to be installed with the option of using Python3 enabled to be able to use *UltiSnips*.
-The *UltiSnips* plugin is the snippet handling engine.
+
+<h4 name="UltiSnips"> UltiSnips (for <em>Vim</em>, universal) </h4>
+
+[<em>UltiSnips</em>](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
+<em>Vim</em> has to be installed with the option of using Python3 enabled to be able to use <em>UltiSnips</em>.
+The <em>UltiSnips</em> plugin is the snippet handling engine.
 It provides a large number of advanced snippet features.
 However, it does not come with libraries of snippets.
 The snippets must be installed separately.
-The *honza/vim-snippets* plugin contains snippets for many languages.
-The pml.snippets file can be stored in a *my-snippets* subfolder of the hidden *.vim* directory as described below.
+The <em>honza/vim-snippets</em> plugin contains snippets for many languages.
+The <em>pml.snippets</em> file can be stored in a <em>mysnippets</em> subfolder of the hidden <em>.vim</em> directory as described below.
 
-*UltinSnips* can read *SnipMate* snippets.
+<em>UltinSnips</em> can read <em>SnipMate</em> snippets.
 
-<details>
-<summary><b>Installing and using snippets with UltiSnips</b></summary>
+<h4>Installing and using snippets with UltiSnips</h4>
 
 In the following setup, we use the Vundle plugin manager.
 
-The `PyMOL.snippets` could be stored inside the *UltiSnips* directory, but they would be lost if you delete the *UltiSnips* directory.
-To help make sure your snippets are not deleted if the *UltiSnips* directory ever gets deleted you will want to create a subdirectory called `myultisnips` at the top level of the `.vim` directory.
-Move the `PyMOL.snippets` file to this subdirectory.
-We will inform *Vim* of this location when customizing the `.vimrc` file for *UltiSnips* a little further down.
+The <em>PyMOL.snippets</em> could be stored inside the <em>UltiSnips</em> directory, but they would be lost if you delete the <em>UltiSnips</em> directory.
+To help make sure your snippets are not deleted if the <em>UltiSnips</em> directory ever gets deleted you will want to create a subdirectory called <em>myultisnips</em> at the top level of the <em> .vim</em> directory.
+Move the <em>PyMOL.snippets</em> file to this subdirectory.
+We will inform <em>Vim</em> of this location when customizing the <em> .vimrc</em> file for <em>UltiSnips</em> a little further down.
 
 ```bash
 $ cd .vim
 $ mkdir myultisnips
 ```
 
-In the `myultisnips` directory, you can add your own snippets and add the *UltiSnips* snippets provided above in the `ultisnippymolsnips` folder.
+In the <em>myultisnips</em> directory, you can add your own snippets and add the <em>UltiSnips</em> snippets provided above in the <em>ultisnippymolsnips</em> folder.
 
 ```bash
 $ cp ~/pymolsnips/ultisnippymolsnips/* .
 ```
 
 
-Because *UltiSnips* depends on Python3, you may have to install Python3 to be able to use it.
-You can point *UltiSnips* to a particular Python3 interpreter with the following command in your `.vimrc` file.
+Because <em>UltiSnips</em> depends on Python3, you may have to install Python3 to be able to use it.
+You can point <em>UltiSnips</em> to a particular Python3 interpreter with the following command in your <em>.vimrc</em> file.
 At the top of the file, add:
 
 ```vim
@@ -1442,7 +1443,7 @@ if has('python3')
 endif
 ```
 
-In the Vundle plugin section of the `.vimrc` file, add the following lines:
+In the Vundle plugin section of the <em>.vimrc</em> file, add the following lines:
 
 ```vim
 " Ultisnips requires *Vim* installed with python.
@@ -1464,11 +1465,11 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','UltiSnips']
 ```
 
-The following step is to define the `*.pml` file type inside a `pml.vim` file.
-The `pml.vim` file is stored inside of a subfolder that contains the file type definition files.
-This subfolder is called *ftdetect*, which is stored inside of the *~/.vim/bundle/ultisnips* folder.
-This step is not necessary if you install the *bioSyntax-vim* plugin because it contains a *pml.vim* in its ftdetect subfolder.
-The *bioSyntax-vim* also provides color syntax highlighting for *.pml* files.
+The following step is to define the <em>*.pml</em> file type inside a <em>pml.vim</em> file.
+The <em>pml.vim</em> file is stored inside of a subfolder that contains the file type definition files.
+This subfolder is called <em>ftdetect</em>, which is stored inside of the <em>~/.vim/bundle/ultisnips</em> folder.
+This step is not necessary if you install the <em>bioSyntax-vim</em> plugin because it contains a <em>pml.vim</em> in its ftdetect subfolder.
+The <em>bioSyntax-vim</em> also provides color syntax highlighting for <em>.pml</em> files.
 
 Make a `ftdetect` directory at the top level of the `.vim` directory.
 
@@ -1477,9 +1478,9 @@ $ mkdir -p ~/.vim/ftdetect/
 $ cd ~/.vim/ftdetect/
 ```
 
-Some *Vim* plugins require that you add a flag to your `.vimrc` file to turn off file type detection.
-You can set the file type for a `.pml` file with the command `:set filetype=pml`.
-To enable autodetection of the file type in this situation, we need to make a `pml.vim` file in the `ftdetect` subdirectory of the `ultisnips` directory.
+Some <em>Vim</em> plugins require that you add a flag to your <em>.vimrc</em> file to turn off file type detection.
+You can set the file type for a <em>.pml</em> file with the command <em>:set filetype=pml</em>.
+To enable autodetection of the file type in this situation, we need to make a <em>pml.vim</em> file in the <em>ftdetect</em> subdirectory of the <em>ultisnips</em> directory.
 
 ```bash
 $ cd ~/.vim/bundle/ultisnips/ftdetect/
@@ -1487,26 +1488,26 @@ $ touch PyMOL.vim
 $*Vim*PyMOL.vim
 ```
 
-Insert the single-line code fragment below into the file `pml.vim` and save it.
-Press `i` to get into insert mode.
-Then `escape` to return to normal mode.
-To save and quit type `:wq` on the command line of normal mode.
+Insert the single-line code fragment below into the file <em>pml.vim</em> and save it.
+Press <em>i</em> to get into insert mode.
+Then <em>escape</em> to return to normal mode.
+To save and quit type <em>:wq</em> on the command line of normal mode.
 
 ```vim
 au BufNewFile,BufRead *.pml set filetype=pml
 ```
 
-Now, make a soft link to the `ftdetect` directory inside the `ultisnips` subdirectory to this new directory.
+Now, make a soft link to the <em>ftdetect</em> directory inside the <em>ultisnips</em> subdirectory to this new directory.
 
 ```bash
 ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
 ```
 
 To test your set up, open a PyMOL script file.
-Enter on the command line in *Vim* `:set filetype?`.
-You should bet back `filetype=pml`.
+Enter on the command line in <em>Vim</em> <em>:set filetype?</em>.
+You should bet back <em>filetype=pml</em>.
 
-Here is a minimal, no-frills *vimrc* file that uses Vundle and works with the `pml.snippets` file.
+Here is a minimal, no-frills <em>vimrc</em> file that uses Vundle and works with the <em>pml.snippets</em> file.
 You may have to edit the path to the python3 binary.
 
 ```vim
@@ -1552,92 +1553,91 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 
 There are a number of videos on YouTube about using UltiSnips.
 The developer of UltiSnips, SirVer (aka Holger Rapp) has a series of four videos that you are highly recommended.
-The links to these videos are found in the README.md file of the [*UltiSnips GitHub Repository*](https://github.com/sirver/UltiSnips).
+The links to these videos are found in the README.md file of the [UltiSnips GitHub Repository](https://github.com/sirver/UltiSnips).
 
-However, for a faster introduction to UltiSnips, I recommend watching the video [*How I Use the UltiSnips VIM Plugin To Make Better Snippets*](https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo) by Bryan Jenks.
+However, for a faster introduction to UltiSnips, I recommend watching the video [How I Use the UltiSnips VIM Plugin To Make Better Snippets](https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo) by Bryan Jenks.
 
-If you are an experienced snippet user and want to add intelliSense-like autocompletion of the snippet names in *Vim*, take a look at [*Conquerer of Completion*](https://github.com/neoclide/coc.nvim) by Qiming Zhao.
-They claim that their package will bring a *VSC*-like experience to *Vim*.
+If you are an experienced snippet user and want to add intelliSense-like autocompletion of the snippet names in <em>Vim</em>, take a look at [Conquerer of Completion](https://github.com/neoclide/coc.nvim) by Qiming Zhao.
+They claim that their package will bring a <em>VSC</em>-like experience to <em>Vim</em>.
 
-</details>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
 
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 
-[*Visual Studio Code*](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by MicroSoft.
-Its start-up speed is between that of *Sublime Text 3* and *Atom*.
+[<em>Visual Studio Code</em>](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by MicroSoft.
+Its start-up speed is between that of <em>Sublime Text 3</em> and <em>Atom<em>.
 It is still under expoentially rapid development.
 It is easily ehanded with extensions.
 There is even a Grammarly extesnion!
-*VSC* has strong support for snippets and for autocompletion with intelliSense.
-It is fair to say that *VSC* is one of the most advanced text editors.
+<em>VSC</em> has strong support for snippets and for autocompletion with intelliSense.
+It is fair to say that <em>VSC</em> is one of the most advanced text editors.
 
-The installation of *VSC* extensions is very painless and very fast.
+The installation of <em>VSC</em> extensions is very painless and very fast.
 There is an extension marketplace that is accessible from the left column within the *VSC* GUI.
 You can search the marketplace for extensions.
 Each extension has its own html file with information about the extension.
 This html file has install and uninstall buttons.
 The installations are lightning fast.
 
-The *bioSyntax* plugin is free and includes a lexer for PyMOL and lexers for many other file types used in bioinformatics.
+The <em>bioSyntax</em> plugin is free and includes a lexer for PyMOL and lexers for many other file types used in bioinformatics.
 It is a good idea to install this plugin.
-The PyMOL lexer will be activated when a `pml` file is opened.
+The PyMOL lexer will be activated when a <em>pml</em> file is opened.
 
-*VSC* provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
+<em>VSC</em> provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
 The latter feature are very helpful for avoiding the insertion of the wrong snippet.
 
 <b>Installing and using snippets with Visual Studio Code</b>
 
 Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system.
-A prompt should pop-up during your first launch of *VSC*. Install this.
+A prompt should pop-up during your first launch of <em>VSC</em>. Install this.
 
-From the above folder `vscpymolsnips`, download and move the file `pml.json` to `~/Library/Application\ Support/Code/User/snippets` on the Mac; on windows,`$HOME/APPDATA\Roaming\Code\User\snippets\pml.json`; on Linux, `$HOME/.config/Code/User/snippets/pml.json`.
+From the above folder <em>vscpymolsnips</em>, download and move the file <em>pml.json</em> to <em>~/Library/Application\ Support/Code/User/snippets</em> on the Mac; on windows,<em>$HOME/APPDATA\Roaming\Code\User\snippets\pml.json</em>; on Linux, <em>$HOME/.config/Code/User/snippets/pml.json</em>.
 
-For Mac users in the `vscpymolsnips` folder:
+For Mac users in the <em>vscpymolsnips</em> folder:
 
 ```bashOS
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
 
-For Windows users, select the the settings button (gear icon) in the bottom left corner. Go to `Settings>User Snippets>pml`.
-If you already have a `pml` file for snippets, simply append the `pml.json` file to the existing file (by copying and pasting).
+For Windows users, select the the settings button (gear icon) in the bottom left corner. 
+Go to <em>Settings-->User Snippets-->pml</em>.
+If you already have a <em>pml</em> file for snippets, simply append the <em>pml.json</em> file to the existing file (by copying and pasting).
 
-Next, install *bioSyntax* via `View --> Extensions`.
-Search for *bioSyntax* and hit the `Install` button.
+Next, install <em>bioSyntax</em> via <em>View --> Extensions</em>.
+Search for <em>bioSyntax</em> and hit the <b>Install</b> button.
 You will be asked to select a theme, just select bioSyntax.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCbioSyntax.gif"></p>
 
-Open a file with a `.pml` file extension.
-You should see `pml` in the lower right on the bottom panel.
-Type the tab trigger `ao` to try inserting the snippet for the ambient occlusion effect. You should see syntax highlighting.
+Open a file with a <em>.pml</em> file extension.
+You should see <em>pml</em> in the lower right on the bottom panel.
+Type the tab trigger <b>ao</b> to try inserting the snippet for the ambient occlusion effect.
+You should see syntax highlighting.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip2.gif"></p>
 
-*VSC* also supports the use of mirrored tab stops. In the example shown below, I am using the snippet *threeMaps*.
+<em>VSC</em> also supports the use of mirrored tab stops.
+In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif"></p>
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<!--
-<h2>Text editors that are ready out of the box</h2>
 
-<h2>Terminal based text editors</h2>
-In this category, *Vim* is the most powerful editor followed by *emacs* and distantly by nano.
--->
 
-<h2> <A name="snippetList" >List of the snippets by their tab trigger name and description </A> </h2>
+<h2> <a name="snippetList" >List of the snippets by their tab trigger name and description </a> </h2>
 
 <h3 name="altloc"></h3>
 
-### Alternate locators:
+<h4> Alternate locators </h4>
 | Tab trigger   | Description                                                   |
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
 
-<A href=#categories>Return to list of snippet categories near top.</A>
+<a href=#categories>Return to list of snippet categories near top.</a>
+
+
 
 <h3 name="analysis"></h3>
 
@@ -1842,7 +1842,7 @@ In this category, *Vim* is the most powerful editor followed by *emacs* and dist
 | ringMode                | Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.                    |
 | rmwater                 | Remove waters from molecular object.                                                           |
 | saxsEnvelope            | Display SAXS envelope                                                                          |
-| sc111                   | Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/. |
+| sc111                   | Display all symmetry mates in one unit cell. Uses <em>supercell.py</em> in <em>$HOME/Scripts/PyMOLscripts/.</em> |
 | scaleRadiusColor        | Scale the radius and color of atoms as spheres by property in the B-value column.              |
 | setcolor                | Set color name to a RGB code.                                                                  |
 | sidehChainHelper        | In cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
