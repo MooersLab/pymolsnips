@@ -843,11 +843,13 @@ Paste inside the square brackets the following and change the path to your home 
 This will open a new window with the <b>users.behaviors</b> file ready to be edited.
 Paste inside the square brackets the following and change the path to your Mac home directory <b>be sure to change YOURUSERNAME to your name</b>:
 
+<pre>
 <code>
-;; absolute path to where you would like your snippet root directory to be <br>
-[:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir <br>
+;; absolute path to where you would like your snippet root directory to be
+[:snippets.loader :lt.plugins.snippets.loader/set-snippet-dir
 "/Users/YOURUSERNAME/.lighttable/User/snippets"]
 </code>
+</pre>
 
 <h3>For Windows</h3>
 
