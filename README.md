@@ -408,7 +408,7 @@ The documentation for *CudaText* is located [here](http://wiki.freepascal.org/Cu
 <h3>Installing and using snippets with CudaText</h3>
 
 <em>CudaText</em> uses Python3 based plugins. 
-<em>CudaText</em> expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
+<em>CudaText</em> expects to find the Python3.X from [Python.org](https://www.python.org/downloads/release/python-374/).
 I downloaded the 64-bit version of Python3.7.4 from Python.org and used the installer to install the binary in about five minutes.
 This Python interpreter is installed in the <em>/Applications</em> directory on the Mac. 
 When I started <em>CudaText</em>, I did not have to edit any configuration files.
@@ -441,7 +441,7 @@ You will also need to use the same pull-down to install the <em>lexer: PyMOL</em
 Restart <em>CudaText</em> to see the changes. When editing snippets or plugins in <b>CudaText</b> you can also update them by going to <b>Plugins --> Addons Manager --> Update</b>.
 
 
-*CudaText* allows you to edit mirrored sites for uniform editing.
+<em>CudaText</em> allows you to edit mirrored sites for uniform editing.
 The animation below shows how to edit one mirror location and travel to the other mirrored sites by hitting the Tab key.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/cudatextMirror.gif"></p>
@@ -451,7 +451,7 @@ The animation below shows how to edit one mirror location and travel to the othe
 
 <h2 name="emacs"> Emacs (universal) </h2>
 
-[*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in <em>Emacs</em> lisp (elisp), a variant of LISP.
+[<em>emacs</em>](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in <em>Emacs</em> lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
 <em>Emacs</em> was initiated in 1976 by Richard M. Stallman and others.
 <em>Emacs</em> has a leadership succession plan that has been put into action.
@@ -462,24 +462,24 @@ This plan will greatly extend the lifetime of this software project.
 According to Lindy's Law, the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
 This law suggests that <em>Emacs</em> should be around for another 45 years.
 
-Over 100 other variants of *Emacs* are available.
+Over 100 other variants of <em>Emacs</em> are available.
 <em>Spacemacs</em> is a version that has a gentler learning curve in part because it can be driven by a menu of commands that is readily accessible.
 <em>Spacemacs</em> allows the use of Vim key bindings, <em>Emacs</em> key bindings, or both.
 <em>Spacemacs</em> does have its own keybindings that have to be mastered.
-This leads to the problem of needing to translate <em>Spacemacs</em> to Gnu <em>Emacs</em> and back again when tapping into external *Emacs* resources.
+This leads to the problem of needing to translate <em>Spacemacs</em> to Gnu <em>Emacs</em> and back again when tapping into external <em>Emacs</em> resources.
 
 <em>Doom Emacs</em> and <em>Prelude Emacs</em> are additional off-shoots of <em>Emacs</em> that are suppose to be easier to adopt.
 They are similar to <em>Spacemacs</em>.
 
-<em>SciMax</em> is a variant of *Emacs* that is being optimized to support scientific publication and literate programming.
+<em>SciMax</em> is a variant of <em>Emacs</em> that is being optimized to support scientific publication and literate programming.
 
 For several reasons, we recommend becoming productive in GNU <em>Emacs</em> first before trying the <em>Emacs</em> variants.
 First, the on-line resources that support mastery of GNU <em>Emacs</em> are far greater than the resources that support the variants.
 Second, the documentation for the variants assume a significant amount of prior knowledge of GNU <em>Emacs</em>.
 Third, these variants run on top of GNU <em>Emacs</em>.
 
-It takes one to two weeks of nibbling away at <em>Emacs</em> tutorials to become productive at text editing in *Emacs*.
-There is a built-in tutorial in *Emacs* as well as many on-line tutorials.
+It takes one to two weeks of nibbling away at <em>Emacs</em> tutorials to become productive at text editing in <em>Emacs</em>.
+There is a built-in tutorial in <em>Emacs</em> as well as many on-line tutorials.
 Visually appealing tutorial is available [here](https://www.gnu.org/software/emacs/tour/).
 
 It takes several months to become competent in <em>Emacs</em>.
@@ -487,20 +487,20 @@ It takes a life-time to master <em>Emacs</em> hence <em>Emacs</em> is known as a
 
 The one danger of <em>Emacs</em> is that it is easy to spend countless of hours configuring the <em>init.el</em> file and adding additional packages.
 Many beginners spend too much time adding too many packages, most of which they never use.
-As a beginner, you should ease off editing your <em>init.el</em> file if it has grown to 500 lines in the first several weeks of using *Emacs*.
+As a beginner, you should ease off editing your <em>init.el</em> file if it has grown to 500 lines in the first several weeks of using <em>Emacs</em>.
 A good practice is to add one package at a time and master each added package before adding another new package.
 
 I find that editing of <em>init.el</em> file occurs in widely spaced bouts.
 Once everything is working to your satisfication, there may be long periods of productivity during which there is no compelling need to fiddle with the <em>init.el</em> file.
 
-Many *Emacs* users have shared their <em>init.el</em> files on GitHub.
+Many <em>Emacs</em> users have shared their <em>init.el</em> files on GitHub.
 These can provide inspiration for the beginner.
 Some have complex configurations that are often too complex to be copied and applied by the beginner.
 
 Many of the add-on packages add functionalities that are not available in other text editors or that become available years later.
 The vast group of active contributors to <em>Emacs</em> will probably keep it in the lead for a long time into the future.
 
-Like PyMOL, GNU *Emacs* was designed to be highly extensible.
+Like PyMOL, GNU <em>Emacs</em> was designed to be highly extensible.
 This is large part of its popularity.
 Over 4600 packages have been developed by users over the years.
 Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
@@ -514,24 +514,24 @@ The management and navigation of buffers is a skill that the beginner needs to m
 The key bindings make heavy use of the alt or meta key.
 However, there is in-line documentation, and some packages provide autosuggestions that greatly ease the discovery of new key bindings.
 You only really need to memorize several dozen key bindings to become productive in <em>Emacs</em>.
-The remaining knowledge is easy to acquire on an *as-needed* basis.
+The remaining knowledge is easy to acquire on an <em>as-needed</em> basis.
 
 Vim users can quickly become productive in <em>Emacs</em> because the Vim key bindings are available through the add-on package called evil-mode.
 Mastery of the Vim key bindings in Vim is initially painful because it is like learning how to type for the first time.
 Here again, mastery of a few dozen key bindings will enable you to be productive in Vim and in Evil-mode in <em>Emacs</em>.
-Vim key bindings are thought to bear more efficient for editing text than <em>Emacs</em> key-bindings, so their availability in *Emacs* greatly enhances a Vim user's productivity in E-macs.
+Vim key bindings are thought to bear more efficient for editing text than <em>Emacs</em> key-bindings, so their availability in <em>Emacs</em> greatly enhances a <em>Vim</em> user's productivity in </em>Emacs</em>.
 
-Mastery of Vim key-bindings is a wise investment because they are available in many text editors and IDEs.
-They are even available in Jupyter Notebooks!
+Mastery of <em>Vim</em> key-bindings is a wise investment because they are available in many text editors and IDEs.
+They are even available in <em>Jupyter Notebooks</em>!
 In addition, Vim is more widely distributed than <em>Emacs</em>.
 
-If you are a user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your init.el file and reestablish your *Emacs* computing environment.
+If you are a user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your <em>init.el</em> file and reestablish your <em>Emacs</em> computing environment.
 Many national facilities use Centos Linux and are unable or unwilling to make available the most recent stable version of <em>Emacs</em>.
 I have found that the available versions are several years out of date and hence difficult to install all of my favorite packages.
 It may take an hour of removing calls to install incompatible packages before you can establish a subset of your favorite packages.
 Hence, it is good to have the ability to tolerate getting by for short periods of time with older versions of <em>Emacs</em> without all of your favorite packages.
 
-Modes in *Emacs* are states of <em>Emacs</em> where a subset of commands are available.
+Modes in <em>Emacs</em> are states of <em>Emacs</em> where a subset of commands are available.
 Modes avoid clashes due to functions of the same name in different packages.
 Modes are analogous to scopes in other text editors.
 For example, there is a python-mode for working with Python script files.
@@ -541,7 +541,7 @@ One such mode is org-mode.
 Org-mode was originally designed to be a planning and outlining tool.
 Its ease of use for outlining lead to its extension to support literate programming in numerous programming languages. 
 
-Org-mode has over 100 add-on packages.
+<em>Org-mode</em> has over 100 add-on packages.
 For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex entries.
 The latter is done in an automated fashion by using the metadata in the pdf files.
 
@@ -557,7 +557,7 @@ I store my configuration in a <em>config.el</em> file (see file listing at top o
 
 <h3>Installing <em>Emacs</em></h3>
 
-Like *Vim*, *Emacs* can be installed as a stand-a-lone application or via a software management tool and a software repository.
+Like <em>Vim</em>, <em>Emacs</em> can be installed as a stand-a-lone application or via a software management tool and a software repository.
 
 <em>Emacs</em> can be downloaded [from](https://www.gnu.org/software/emacs/) and insalled with a platform specific installer.
 Older versions of <em>Emacs</em> comes pre-installed on Mac OS, but you may want a more recent version.
@@ -565,7 +565,7 @@ You should remove the old version with the commands <code>sudo rm /usr/bin/emacs
 Binaries for the Mac are [available](https://emacsformacosx.com).
 As of August 2020, version 27.1-1 is the stable release.
 
-*Emacs* is also available for a number of software repositories.
+<em>Emacs</em> is also available for a number of software repositories.
 It can be installed on the Mac with macports using the command <code>sudo port install emacs </code>.
 A GUI based version can be installed with the command <code>sudo port install emacs-app </code>.
 The Homebrew repository for Mac OS is popular.
@@ -579,12 +579,12 @@ For Homebrew installed <em>Emacs</em>, use <code>alias emacs="/usr/local/Cellar/
 
 <h3>Installing and using snippets with <em>Emacs</em></h3>
 
-The package yasnippets is one of the most popular packages in *Emacs* for managing snippets.
+The package yasnippets is one of the most popular packages in <em>Emacs</em> for managing snippets.
 This package provides for the display of the snippets in a table that opens in a separate buffer. 
 The user can navigate the table to find a relevant snippet.
 This table is redundant with the ls snippet.
 
-The [<em>yasnippets</em>](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *Emacs*.
+The [<em>yasnippets</em>](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in <em>Emacs</em>.
 This package is installed with a builtin package manager.
 
 Each snippet is stored in a single file.
@@ -592,7 +592,7 @@ The files are stored in a subfolder in the hidden folder <code>~.eamcs.d/plugins
 
 <h1>Variants of <em>Emacs</em> to consider</h1>
 
-These variants might be suitable for the impatient who do not want to master *GNU Emacs*.
+These variants might be suitable for the impatient who do not want to master <em>GNU Emacs</em>.
 
 <h2>Spacemacs</h2>
 
@@ -602,7 +602,7 @@ It can be operated with <em>Vim</em>, <em>Emacs</em>, or a hybrid of key binding
 You enable layers to extend its functionality.
 <em>Spacemacs</em> can be used to edit <em>Jupyter Notebooks</em> via the Ipython-layer.
 
-<h2>*SciMax*</h2>
+<h2><em>SciMax</em></h2>
 
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of <em>Emacs</em> is being optimized for supporting the preparation of scientific manuscripts.
@@ -612,16 +612,16 @@ Hence, our recommendation to become competent with <em>Gnu Emacs</em> before div
 
 <h2><em>Prelude Emacs</em></h2>
 
-This variant of *Emacs* is *GNU Emacs* bundled with what the developer thinks are the essential, no-frills add-on packages.
+This variant of <em>Emacs</em> is <em>GNU Emacs</em> bundled with what the developer thinks are the essential, no-frills add-on packages.
 It does not ship with evil-mode. 
 This variant might be appropriate for beginners.
 You need to install <em>Gnu Emacs</em> version 26.3 first.
 The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
 The github page is found [here](https://github.com/bbatsov/prelude).
 
-<h2><em>*Doom Emacs</em></h2>
+<h2><em>Doom Emacs</em></h2>
 
-*Doom Emacs* appears to provide more advanced features than *Prelude Emacs*.
+<em>Doom Emacs</em> appears to provide more advanced features than <em>Prelude Emacs</em>.
 It may be useful to study to learn about packages or features to add to a basic <em>Gnu Emacs</em> configuration.
 I learned about moving much of the code in the init.el file to code blocks in a config.org file, which can be rendered on GitHib like a markdown file.
 The code blocks can be flanked by explanatory text, hyperlinks, tables, and figures.
@@ -635,22 +635,22 @@ See the file section at the top for an example of a working <em>init.el</em> and
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h2 name="espresso"> Espresso (Mac only) </h2>
+<h2 name="espresso"> <em>Espresso (Mac only)</em> </h2>
 
-[*Espresso*](https://espressoapp.com/) is a proprietary test editor for the Mac.
+[<em>Espresso</em>](https://espressoapp.com/) is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
 The snippets are stored in a single <em>.xml</em> file.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h2 name="geany"> Geany (Universal)</h2>
+<h2 name="geany"> <em>Geany (Universal)</em></h2>
 
-[*Geany*](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
-*Geany* is written in C and C++.
+[<em>Geany</em>](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
+<em>Geany</em> is written in C and C++.
 Binaries are  available for Mac OS, Linux, and Windows.
 The source code is also available.
-*Geany* has a plugin manager, and it is very easy to configure.
+<em>Geany</em> has a plugin manager, and it is very easy to configure.
 
 
 <h3>Installing snippets in Geany</h3>
@@ -680,7 +680,7 @@ This heading is case sensitive.
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops.
 
-Here is an example of the `ao` snippet being used in *geany*:
+Here is an example of the `ao` snippet being used in <em>Geany</em>:
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyAoSnip.gif"></p>
 
 A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files.
@@ -690,7 +690,7 @@ A to-be-developed pml language file is needed to enable syntax highlighting of `
 
 <h2 name="gedit"> Gedit (Universal) </h2>
 
-[*Gedit*](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
+[<em>Gedit</em>](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
 It is commonly found on Linux operating systems.
 It is often available on the computers running Linux OS at national labs.
 <em>Gedit</em> provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
@@ -725,7 +725,7 @@ Then to copy <em>pymol.xml</em> into that directory, do:
 
 <h2 name="kate"> Kate/Kwriter (Universal)</h2>
 	
-[*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
+[<em>kate</em>](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
@@ -733,11 +733,12 @@ Then to copy <em>pymol.xml</em> into that directory, do:
 
 If installed with MacPorts, the app resides in <code>/Applications/macports/kate.app</code>.
 The snippet plugin has to be turned on.
-*kate* requires MacOS 10.14 or newer.
+<em>Kate</em> requires MacOS 10.14 or newer.
 
 The snippets are stored in a single <em>.xml</em> file.
 The storage location for this file is not in the documentation.
-Try the following on Mac (last one of the four) and Linux (first three). <b>Be sure to change the folder from <em>YOURUSERNAME</em> to your username.</b>:
+Try the following on Mac (last one of the four) and Linux (first three). 
+<b>Be sure to change the folder from <em>YOURUSERNAME</em> to your username.</b>:
 
 <code>
 /Users/YOURUSERNAME/.local/share/ktexteditor_snippets/data/pml-kate.xml<br>
@@ -754,7 +755,7 @@ May have to create the directory MySnippets on MacOS.
 
 <h2 name="komodo"> Komodo Edit (Universal) </h2>
 
-[*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
+[<em>Komodo Edit</em>](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
 The developers of <em>Komodo Edit</em> have merged with the developers of ActiveState Python.
 The community version of <em>Komodo Edit</em> has enough features for the occasional writer of code for PyMOL.
 One fun aspect of <em>Komodo Edit</em> is the ability to use themes to customize your workspace.
@@ -800,7 +801,7 @@ However, there is no mirroring of tab stops at this time.
 
 <h2 name="LightTable"> Light Table (Universal) </h2>
 	
-[*Light Table*](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+[<em>Light Table</em>](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
 Those users who have dabbled in <em>Emacs</em> will recognize the syntax of the settings in behavior files which remind me of <em>Emacs</em> init files.
 <em>Light Table</em> is like a GUI version of <em>Emacs</em>.
 It has very an attractive, uncluttered GUI.
@@ -814,8 +815,8 @@ This documentation is on a GitHub website.
 
 <h3>Installing and using snippets with Light Table</h3>
 
-The installation of plugins in *Light Table* is very fast.
-The number of available plugins is not as extensive as for *Atom, Sublime Text, TextMate,* or *Visual Studio Code*.
+The installation of plugins in <em>Light Table</em> is very fast.
+The number of available plugins is not as extensive as for <em>Atom, Sublime Text, TextMate,</em> or <em>Visual Studio Code</em>.
 You have to be prepared to do a bit of customization to get some of the plugins to work correctly.
 
 The snippets are managed through one master file per programming language.
@@ -868,8 +869,8 @@ Use <em>.py</em> as your file extension while editing your script file in <em>Li
 
 <h2 name="micro"> Micro (Universal) </h2>
 
-[<em>Micro</em>](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
-Nonetheless, <em>Micro</em> is easier to use than *Vim* or <em>Emacs</em>.
+[<em>Micro</em>](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor <em>nano</em>.
+Nonetheless, <em>Micro</em> is easier to use than <em>Vim</em> or <em>Emacs</em>.
 Like <em>nano</em>, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a <em>json</em> file.
 [<em>Micro</em>](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
@@ -936,10 +937,10 @@ Its command leader is the spacebar hence the word <em>space</em> in the name.
 It is very different from running the <em>Emacs</em> in evil-mode (evil-mode enables the use of Vim keybindings in <em>Emacs</em>).
 As a result, it should be treated as a separate editor from <em>Emacs</em> and <em>Vim</em>.
 
-*Spacemacs* has its own set of mnemonic commands that you need to master.
-In other words, you will use <em>Vim</em>, <em>Emacs</em>, and *Spacemacs* commands in one editor.
+<em>Spacemacs</em> has its own set of mnemonic commands that you need to master.
+In other words, you will use <em>Vim</em>, <em>Emacs</em>, and <em>Spacemacs</em> commands in one editor.
 It might be less intimidating if you have mastered some of the basics of <em>Vim</em> and <em>Emacs</em>.
-*Spacemacs* does not go as far as allowing you to use Vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
+<em>Spacemacs</em> does not go as far as allowing you to use Vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 
 
 <h3>Installing and using snippets with Spacemacs</h3>
@@ -1254,7 +1255,7 @@ call minpac#add('k-takata/minpac',{'type':'opt'})
 ```
 
 Then refresh <em>Vim</em> giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
-You will not be able to use these plugins until you exit and restart <em>Vim</em> by entering `:qa!` and then opening another *Vim* session.
+You will not be able to use these plugins until you exit and restart <em>Vim</em> by entering `:qa!` and then opening another <em>Vim</em> session.
 
 
 
@@ -1451,7 +1452,7 @@ endif
 In the Vundle plugin section of the <em>.vimrc</em> file, add the following lines:
 
 ```vim
-" Ultisnips requires *Vim* installed with python.
+" Ultisnips requires <em>Vim</em> installed with python.
 Plugin 'SirVer/ultisnips'
 ```
 
@@ -1530,7 +1531,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" Ultisnips requires*Vim*installed with python. This is just the engine.
+" Ultisnips requires <em>Vim</em> installed with python. This is just the engine.
 Plugin 'SirVer/ultisnips'
 
 call vundle#end()
@@ -1579,7 +1580,7 @@ There is even a Grammarly extesnion!
 It is fair to say that <em>VSC</em> is one of the most advanced text editors.
 
 The installation of <em>VSC</em> extensions is very painless and very fast.
-There is an extension marketplace that is accessible from the left column within the *VSC* GUI.
+There is an extension marketplace that is accessible from the left column within the <em>VSC</em> GUI.
 You can search the marketplace for extensions.
 Each extension has its own html file with information about the extension.
 This html file has install and uninstall buttons.
