@@ -1227,39 +1227,35 @@ This is discussed below in the minpac installation section.
 	
 To install minpac, you need to create a directory called <em>minpac</em> and install it as an optional plugin:
 
-```bash
-mkdir -p ~/.vim/pack/minpac/opt
-cd ~/.vim/pack/minpac/opt
+<code>
+mkdir -p ~/.vim/pack/minpac/opt <br>
+cd ~/.vim/pack/minpac/opt <br>
 git clone https://github.com/k-takata/minpac.git
-```
+</code>
 
 Then, add the following to your <em>.vimrc</em> file and write the file <b>:w</b>:
 
-```bash
-packadd minpac
+<code>
+packadd minpac <br>
 call minpac#init()
-```
+</code>
 
 To add a plugin using minpac you will need to add this command <code>call minpac#add('author/reponame')</code> to your <em>.vimrc</em> file.
 
 For example, if you wanted to install snippets for <em>UltiSnips</em> you would add (this will not work at the moment) to the <em>.vimrc</em> file:
 
-```vim
-call minpac#add('MooersLab/pml_bhmm.snippets')
-```
+<code>call minpac#add('MooersLab/pml_bhmm.snippets')</code>
 
 To allow minipac to update itself enter:
 
-```vim
-call minpac#add('k-takata/minpac',{'type':'opt'})
-```
+<code>call minpac#add('k-takata/minpac',{'type':'opt'})</code>
 
 Then refresh <em>Vim</em> giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
 You will not be able to use these plugins until you exit and restart <em>Vim</em> by entering `:qa!` and then opening another <em>Vim</em> session.
 
 
 
-<h3 name="neosnippets">Neosnippets(for Vim, universal) </h3>
+<h3 name="neosnippets">Neosnippets(for <em>Vim</em>, universal) </h3>
 
 [<em>Neosnippets</em>](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors <em>Vim</em> and <em>neovim</em>.
 <em>Neosnippets</em> is similar to <em>SnipMate</em> except with <em>Neosnippets</em>, there is the option to utilize [<em>deoplete</em>](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
@@ -1275,7 +1271,7 @@ Experienced users may find <em>deoplete</em> pop-up menus to be distracting.
 
 You have to enable the Python3 interface with pynvim which you can install with this command:
 
-<code>pip3 install --user pynvim<code>
+<code>pip3 install --user pynvim</code>
 
 To be more precise, you can provide the full path to the Python interpreter to be used by <em>neovim</em> and import <em>pip</em> as a module before installing pynvim.
 
