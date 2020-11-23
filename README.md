@@ -178,7 +178,7 @@ Hyperlinks will take you to a particular category.
 <li><a href="#hbonds">H-bond</a></li>
 <li><a href="#help">Help</a></li>
 <li><a href="#label">Label</a></li>
-<li><a href="#labelFormat">Label Format</a></li>
+<li><a href="#LabelFormat">Label Format</a></li>
 <li><a href="#placement">Label placement</a></li>
 <li><a href="#measureSurfaceArea">measureSurfaceArea</a></li>
 <li><a href="#molecularRepresentation">Molecular representation</a></li>
@@ -1704,6 +1704,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="electronDensity">Electron density:</h3>
 
 | Tab trigger   | Description              |
@@ -1713,6 +1714,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | threeMaps     | Three electron density maps.  |
 
 <a href=#categories>Return to list of snippet categories above.</a>
+
 
 
 <h3 name="fetchFile">Fetch file from PDB:</h3>
@@ -1725,6 +1727,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="fileInput">File Input:</h3>
 
 | Tab trigger   | Description                               |
@@ -1732,6 +1735,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | loadPDBfile   | Load a pdb file in the current directory. |
 
 <a href=#categories>Return to list of snippet categories above.</a>
+
 
 
 <h3 name="fileOutput">File output:</h3>
@@ -1793,7 +1797,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 
-<h3 name="#labelFormat">Label format:</h3>
+<h3 name="#LabelFormat">Label format:</h3>
 
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
