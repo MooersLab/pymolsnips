@@ -1632,6 +1632,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <h2> <a name="snippetList" >List of the snippets by their tab trigger name and description </a> </h2>
 
 <h3 name="altloc">Alternate locators </h3>
+
 | Tab trigger   | Description                                                   |
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
