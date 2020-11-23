@@ -1,8 +1,8 @@
 <h1> <em>pymolsnips:</em> PyMOL Script Writing with Code Templates</h1>
 
-[PyMOL](https://pymol.org/2/) is a leading molecular graphics program for making images of proteins and nucleic acids for publication.
+<a href="https://pymol.org/2/">PyMOL</a> is a leading molecular graphics program for making images of proteins and nucleic acids for publication.
 PyMOL's vast array of parameters provides exquisite control over the appearance of the output.
-PyMOL is often used to make cover images for [scientific journals](https://pymolwiki.org/index.php/Main_Page).
+PyMOL is often used to make cover images for <a href="https://pymolwiki.org/index.php/Main_Page">scientific journals</a>.
 PyMOL is also popular for making movies of molecules.
 
 The PyMOL GUI is useful for making the images of global scenes, but PyMOL rapidly becomes tedious to use to make images of detailed scenes.
@@ -263,7 +263,7 @@ Some of these text editors can take hours to customize to fit your needs; howeve
  
 <h2 name="atom"> Atom (Universal) </h2>
 
-[<em>Atom</em>](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
+<a href="https://atom.io"><b>Atom</b></a> is a favorite of professional programmers because it is easily extended and customized.
 Atom advertises itself to be the "hackable text editor".
 It integrates with GitHub nicely, and the GUI is attractive.
 
@@ -297,7 +297,7 @@ This line contains a specification of the scope.
 That is the kinds of script files to which a set of snippets applies.
 The <em>snippets.cson</em> file is stored in a hidden folder on your home directory called <em>~.atom/snippets.cson</em>.
 
-You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for <em>Atom</em> to your existing <em>snippets.cson/em> file.
+You can concatenate <a href="https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips">this</a> file of PyMOL snippets for <em>Atom</em> to your existing <em>snippets.cson/em> file.
 
 To do this, Mac users enter:
 
@@ -307,7 +307,7 @@ You can also access the <em>snippets.cson</em> file via the <b>Welcome Guide</b>
 Or, you can access the <em>snippets.cson</em> file through <b>Atom (menu) --> Snippets...</b>.
 
 For windows users, it might be easiest to access the <em>snippets.cson</em> file via the <em>Welcome Guide</em>. 
-Paste the <em>snippets.cson</em> provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
+Paste the <em>snippets.cson</em> provided <a href="https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips">here</a> into this file. 
 
 A third option available for windows users, is to navigate to the <em>.atom</em> folder through the GUI of <b>File Explorer</b> and open the <em>snippets.cson</em> file.
 
@@ -320,7 +320,7 @@ Below is an example of the <em>threeMaps</em> snippet and a demonstration of its
 
 <h2 name="bbedit"> BBEdit (Mac only) </h2>
 
-[<b>BBEdit</b>](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
+<a href="https://www.barebones.com/products/bbedit/index.html"><b>BBEdit</b></a> requires a license and a one-time fee.
 Major upgrades require additional fees. You will need macOS 10.14.2 or later. 
 
 The snippet system for <em>BBedit</em> is simple and elegant.
@@ -332,7 +332,7 @@ The clippings can be stored in folders by language.
 
 Users can create nested subfolders for groups of related snippets.
 The folders of clippings are stored in <code>~/Library/Application\ Support/BBEdit/Clippings</code>. 
-You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to your BBEdit clippings.
+You will need to add <a href="https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips">this</a> snippets folder to your BBEdit clippings.
 
 To do this, enter:
 
@@ -346,7 +346,7 @@ There is also presently the lack of a PyMOL lexer for syntax highlighting.
 
 <h2 name="brackets"> Brackets (Universal) </h2>
 
-The development of [<em>Brackets</em>](http://brackets.io) is lead by a team at Adobe.
+The development of <a href="http://brackets.io"><em>Brackets</em></a> is lead by a team at Adobe.
 *Brackets* was designed for web developers with a focus on HTML, CSS, and JavaScript.
 However, <em>Brackets</em> now has support for a large number of languages.
 <em>Brackets</em> provides a Quick Edit and a Live Preview mode that run simultaneously, so changes in the <em>pml</em> code are dispayed immediately in the preview window.
@@ -370,7 +370,7 @@ The light bulb icon will now appear in the right panel.
 Click on the light bulb to open the <b>Snippets Manager</b>.
 
 The <b>settings</b> tab opens a menu with an import button.
-Click <b>import</b> and choose the [<em>bracketspymolsnips.yml</em>](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page.
+Click <b>import</b> and choose the <a href="https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips"><em>bracketspymolsnips.yml</em></a> file that is available at the top of this page.
 You have to download the file to your computer.
 
 All of the snippets for PyMOL are in this single file.
@@ -383,7 +383,6 @@ Until the PyMOL language is available via a lexer for <em>Brackets</em>, use Pyt
 The Python lexer will provide some syntax highlighting.
 This means that the PyMOL file needs to have a file extension of <em>.py</em> while it is being edited in *Brackets*.
 When finished, save this file with the <em>.pml</em> extension to be able to use it in PyMOL.
-</details>
 
 In the example of snippet use shown below, notice how all snippets that begin with <b>a</b> are suggested.
 Only when I press <b>o</b> do the suggestions narrow.
@@ -398,17 +397,17 @@ Unfortunately, <em>Brackets</em> does not currently support tab stops.
 
 <h2 name="cudatext"> CudaText (Universal)</h2>
 
-[<b>CudaText</b>](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
+<a href="http://uvviewsoft.com/cudatext/"><em>CudaText</em></a> is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
 <em>Cudatext</em> is open source.
 Its predecessor was <em>SynWrite</em>, which is no longer supported.
 <em>CudaText</em> has numerous plugins available to it.
 A PyMOL lexer and PyMOL snippets are available through the <em>CudaText</em> add-ons manager (thank you Alexey T.!).
-The documentation for <em>CudaText</em> is located [here](http://wiki.freepascal.org/CudaText).
+The documentation for <em>CudaText</em> is located <a href="http://wiki.freepascal.org/CudaText">here</a>.
 
 <h3>Installing and using snippets with CudaText</h3>
 
 <em>CudaText</em> uses Python3 based plugins. 
-<em>CudaText</em> expects to find the Python3.X from [Python.org](https://www.python.org/downloads/release/python-374/).
+<em>CudaText</em> expects to find the Python3.X from <a href="https://www.python.org/downloads/release/python-374/">Python.org</a>.
 I downloaded the 64-bit version of Python3.7.4 from Python.org and used the installer to install the binary in about five minutes.
 This Python interpreter is installed in the <em>/Applications</em> directory on the Mac. 
 When I started <em>CudaText</em>, I did not have to edit any configuration files.
@@ -438,7 +437,8 @@ I could not screen capture this pop-up window.
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif"></p>
 
 You will also need to use the same pull-down to install the <em>lexer: PyMOL</em> and the <em>snippets: PyMOL</em>.
-Restart <em>CudaText</em> to see the changes. When editing snippets or plugins in <b>CudaText</b> you can also update them by going to <b>Plugins --> Addons Manager --> Update</b>.
+Restart <em>CudaText</em> to see the changes. 
+When editing snippets or plugins in <b>CudaText</b> you can also update them by going to <b>Plugins --> Addons Manager --> Update</b>.
 
 
 <em>CudaText</em> allows you to edit mirrored sites for uniform editing.
@@ -451,7 +451,7 @@ The animation below shows how to edit one mirror location and travel to the othe
 
 <h2 name="emacs"> Emacs (universal) </h2>
 
-[<em>emacs</em>](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in <em>Emacs</em> lisp (elisp), a variant of LISP.
+<a href="http://uvviewsoft.com/cudatext/"><em>Emacs</em></a> is a free, open-source, cross-platform editor that is written in <em>Emacs</em> lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
 <em>Emacs</em> was initiated in 1976 by Richard M. Stallman and others.
 <em>Emacs</em> has a leadership succession plan that has been put into action.
@@ -480,7 +480,7 @@ Third, these variants run on top of GNU <em>Emacs</em>.
 
 It takes one to two weeks of nibbling away at <em>Emacs</em> tutorials to become productive at text editing in <em>Emacs</em>.
 There is a built-in tutorial in <em>Emacs</em> as well as many on-line tutorials.
-A visually appealing tutorial is available [here](https://www.gnu.org/software/emacs/tour/).
+A visually appealing tutorial is available <a href="https://www.gnu.org/software/emacs/tour/">here</a>.
 
 It takes several months to become competent in <em>Emacs</em>.
 It takes a life-time to master <em>Emacs</em> hence <em>Emacs</em> is known as a <b>life-time editor</b>.
@@ -503,7 +503,7 @@ The vast group of active contributors to <em>Emacs</em> will probably keep it in
 Like PyMOL, GNU <em>Emacs</em> was designed to be highly extensible.
 This is a large part of its popularity.
 Over 4600 packages have been developed by users over the years.
-Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
+Several package managers, including the <a href="https://melpa.org">melpa</a>, greatly ease package installation.
 However, manual installation is often quite simple.
 
 The interface to <em>Emacs</em> is either a X-terminal window or a simple GUI that can be made complex by opening many <em>buffers</em>, which are like windows.
@@ -559,10 +559,10 @@ I store my configuration in a <em>config.el</em> file (see file listing at top o
 
 Like <em>Vim</em>, <em>Emacs</em> can be installed as a stand-a-lone application or via a software management tool and a software repository.
 
-<em>Emacs</em> can be downloaded [from](https://www.gnu.org/software/emacs/) and insalled with a platform specific installer.
+<em>Emacs</em> can be downloaded <a href="https://www.gnu.org/software/emacs/">from</a> and insalled with a platform specific installer.
 Older versions of <em>Emacs</em> comes pre-installed on Mac OS, but you may want a more recent version.
 You should remove the old version with the commands <code>sudo rm /usr/bin/emacs</code> and <code>sudo rm -rf /usr/share/emacs</code>.
-Binaries for the Mac are [available](https://emacsformacosx.com).
+Binaries for the Mac are <a href="https://emacsformacosx.com">available</a>.
 As of August 2020, version 27.1-1 is the stable release.
 
 <em>Emacs</em> is also available for a number of software repositories.
@@ -584,7 +584,7 @@ This package provides for the display of the snippets in a table that opens in a
 The user can navigate the table to find a relevant snippet.
 This table is redundant with the ls snippet.
 
-The [<em>yasnippets</em>](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in <em>Emacs</em>.
+The <a href="https://www.emacswiki.org/emacs/Yasnippet"><em>yasnippets</em></a> package is used to manage snippets in <em>Emacs</em>.
 This package is installed with a built-in package manager.
 
 Each snippet is stored in a single file.
@@ -596,7 +596,7 @@ These variants might be suitable for the impatient who do not want to master <em
 
 <h2>Spacemacs</h2>
 
-[Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU <em>Emacs</em>.
+<a href="https://www.spacemacs.org">Spacemacs</a> (see below) is built ontop of GNU <em>Emacs</em>.
 It is designed to be easier to use than <em>Emacs</em>.
 It can be operated with <em>Vim</em>, <em>Emacs</em>, or a hybrid of key bindings.
 You enable layers to extend its functionality.
@@ -604,7 +604,7 @@ You enable layers to extend its functionality.
 
 <h2><em>SciMax</em></h2>
 
-[SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
+<a href="http://kitchingroup.cheme.cmu.edu/scimax"><em>SciMax</em></a> is being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of <em>Emacs</em> is being optimized for supporting the preparation of scientific manuscripts.
 Several YouTube videos of Professor Kitchin talking about <em>SciMax</em> are available.
 <em>SciMax</em> is on the to-be-added later list because the documentation for this project is lagging so the user has to be more self-reliant.
@@ -616,8 +616,8 @@ This variant of <em>Emacs</em> is <em>GNU Emacs</em> bundled with what the devel
 It does not ship with evil-mode. 
 This variant might be appropriate for beginners.
 You need to install <em>Gnu Emacs</em> version 26.3 first.
-The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
-The GitHub page is found [here](https://github.com/bbatsov/prelude).
+The <a href="https://prelude.emacsredux.com/en/latest/modules/python/">documentation </a> is on-line.
+The GitHub page is found <a href="https://github.com/bbatsov/prelude">here</a>.
 
 <h2><em>Doom Emacs</em></h2>
 
@@ -637,7 +637,7 @@ See the file section at the top for an example of a working <em>init.el</em> and
 
 <h2 name="espresso"> <em>Espresso (Mac only)</em> </h2>
 
-[<em>Espresso</em>](https://espressoapp.com/) is a proprietary test editor for the Mac.
+<a href="https://espressoapp.com/"><em>Espresso</em></a> is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
 The snippets are stored in a single <em>.xml</em> file.
 
@@ -646,7 +646,7 @@ The snippets are stored in a single <em>.xml</em> file.
 
 <h2 name="geany"> <em>Geany (Universal)</em></h2>
 
-[<em>Geany</em>](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
+<a href="https://www.geany.org"><em>Geany</em></a> is a free and lightweight GUI-based text editor that has been under development since 2005.
 <em>Geany</em> is written in C and C++.
 Binaries are available for Mac OS, Linux, and Windows.
 The source code is also available.
@@ -655,7 +655,7 @@ The source code is also available.
 
 <h3>Installing snippets in Geany</h3>
 
-This [webpage](https://www.geany.org/download/releases/) has links to installers for each operating system.
+This <a href="https://www.geany.org/download/releases/">webpage</a> has links to installers for each operating system.
 
 Make sure that the <b>pml</b> filetype is defined as <em>#~ PyMOL=*.pml;</em> by going to <b>Tools --> Configuration files --> filetype_extensions.conf</b>.
 You will also need to add PyMOL as a group in that same file configuration.
@@ -680,17 +680,17 @@ This heading is case sensitive.
 The snippets are invoked with a tab trigger.
 The snippets have tab stops, but there is no support for the mirroring of tab stops.
 
-Here is an example of the `ao` snippet being used in <em>Geany</em>:
+Here is an example of the <b>ao</b> snippet being used in <em>Geany</em>:
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/geanyAoSnip.gif"></p>
 
-A to-be-developed pml language file is needed to enable syntax highlighting of `pml` files.
+A to-be-developed pml language file is needed to enable syntax highlighting of <b>pml</b> files.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 <h2 name="gedit"> Gedit (Universal) </h2>
 
-[<em>Gedit</em>](https://wiki.gnome.org/Apps/Gedit) is the GUI-based text editor developed by the GNU project.
+<a href="https://wiki.gnome.org/Apps/Gedit"><em>Gedit</em></a> is the GUI-based text editor developed by the GNU project.
 It is commonly found on Linux operating systems.
 It is often available on the computers running Linux OS at national labs.
 <em>Gedit</em> provides an uncluttered GUI with access to the snippets through a pulldown menu or by a tab trigger.
@@ -698,7 +698,7 @@ It is often available on the computers running Linux OS at national labs.
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
-<h3>Installing and using snippets with <em>gedit</em></h3>
+<h3>Installing and using snippets with <em>Gedit</em></h3>
 
 The pymol.lang file has to be installed first.
 Download it from the geditpymolsnips folder.
@@ -725,7 +725,7 @@ Then to copy <em>pymol.xml</em> into that directory, do:
 
 <h2 name="kate"> Kate/Kwriter (Universal)</h2>
 	
-[<em>kate</em>](https://kate-editor.org/get-it/) is a free but KDE-dependent text editor for Linux that is now available for Mac and Windows.
+<a href=>"https://kate-editor.org/get-it/"><em>kate</em></a> is a free but KDE-dependent text editor for Linux that is now available for Mac and Windows.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
