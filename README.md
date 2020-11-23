@@ -1,4 +1,4 @@
-## **pymolsnips:** PyMOL Script Writing with Code Templates
+<h1> <em>pymolsnips:</em> PyMOL Script Writing with Code Templates</h1>
 
 [PyMOL](https://pymol.org/2/) is a leading molecular graphics program for making images of proteins and nucleic acids for publication.
 PyMOL's vast array of parameters provides exquisite control over the appearance of the output.
@@ -12,8 +12,8 @@ The macro language sends arguments to Python functions, but its syntax is simple
 
 Over 100 lines of pml commands and settings are required to make more sophisticated images.
 It is difficult to issue so many commands through PyMOL's graphical user interface (GUI) without making mistakes.
-If the commands are not saved to an open script file with a `.pml` file extension, to an opened log file, or to a frequently saved session file, the work can be lost. 
-(Use the **spse** function in the `pymolshortcuts.py` file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
+If the commands are not saved to an open script file with a <em>.pml</em> file extension, to an opened log file, or to a frequently saved session file, the work can be lost. 
+(Use the <b>spse</b> function in the <em>pymolshortcuts.py</em> file in the <a href="https://github.com/MooersLab/pymolshortcuts">pymolshortcuts</a> repository to save session files with time stamps to avoid overwriting previously saved session files.)
 
 Here are of some figures that are impossible or tedious to make via the PyMOL GUI alone.
 
@@ -83,15 +83,15 @@ Here are of some figures that are impossible or tedious to make via the PyMOL GU
     </table>
 
 It is challenging to recall the pml syntax when you are not using PyMOL every day, which is the situtation for most PyMOL users.
-One solution to this problem is to use a library of code fragments, called **snippets** or **templates**, to build a script in a text editor.
+One solution to this problem is to use a library of code fragments, called <b>snippets</b> or <b>templates</b>, to build a script in a text editor.
 
 <h3>Brief Notes on Installation and Updates</h3>
 
 Users may want to update their copy of the library as new snippets are added to the library on GitHub.
 The date of the last update and its nature are recorded in the GitHub repository.
 GitHub has only experimental support for downloading part of a repository.
-In the meantime, users must download the entire repository either as a zip file via the `code --> download zip` pull-down menu or by entering the command `git clone https://github.com/MooersLab/pymolsnips.git` if they have git on their computer.
-The second option enables subsequent updating of the library via the `git pull origin master` command.
+In the meantime, users must download the entire repository either as a zip file via the <b>code --> download zip</b> pull-down menu or by entering the command <b>git clone https://github.com/MooersLab/pymolsnips.git</b> if they have git on their computer.
+The second option enables subsequent updating of the library via the <b>git pull origin master</b> command.
 
 <h3>Navigating this document</h3>
 
@@ -110,14 +110,14 @@ Yes, we know.
 We have too much information here for a standard README.md file.
 We plan to move much of the detailed information below to a GitHub Pages webpage shortly.
 
-### <A name="FASTLINKS">Quick links</A>
+<h2> <a name="FASTLINKS">Quick links</a></h2>
 
   * <a href="#categories"> Snippet categories</a>
   * <a href="#install">Installing snippets for each editor</a>
   * <a href="#snippetList">List of snippets by category and tab trigger names</a>
 
-**pymolsnips** is a library of pml code fragments that have been formatted for several popular **text editors**.
-Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: ***word processors should never be used to store computer code!***
+<em>pymolsnips</em> is a library of pml code fragments that have been formatted for several popular <em>text editors</em>.
+Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: <em>word processors should never be used to store computer code!</em>
 If you do so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
 In addition, word processing documents are usually binary files that are difficult to put under version control.
 
@@ -133,21 +133,21 @@ The one exception is the CudaText editor.
 The snippets come pre-installed with this editor.
 
 Each code fragment has a unique name that also serves as a tab trigger.
-The user enters the name of the code snippet and hits the `tab` key to insert the lines of code.
+The user enters the name of the code snippet and hits the <b>tab</b> key to insert the lines of code.
 Tab stops exist at sites where parameters can be edited.
 Tab stops are mirrored when the parameters are identical.
 Mirroring enable the simultaneous editing of these sites to reduce the chance of overlooking a site that needed editing.
 
-The animation below demonstrates the use of the `ao` tab trigger in *Visual Studio Code* to insert 16 lines of code for generating the ambient occlusion effect.
+The animation below demonstrates the use of the <b>ao</b> tab trigger in <em>Visual Studio Code</em> to insert 16 lines of code for generating the ambient occlusion effect.
 You can learn how this is done <a href="#VisualStudioCode"> here </a>.
 Two-levels of cascading menus appear.
-The menu on the left shows the alternate tab triggers that contain the letters `a` and `o`.
+The menu on the left shows the alternate tab triggers that contain the letters <b>a</b> and <b>o</b>.
 The corresponding code for the selected tab trigger is displayed in the right window.
 By entering these two letters, you have inserted 16 lines of code!
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCaoSnip.gif"></p>
 
-One thing to note when using tab stops is that the mirrored selections are very *fragile*:
+One thing to note when using tab stops is that the mirrored selections are very <em>fragile</em>:
 Before you begin typing, make sure that the mirrored sections are all highlighted.
 It is easy to exit the tab stop selections by the click of a mouse or even a keyboard movement!
 Getting your selections re-highlighted is not difficult, but the required steps vary between text editors.
@@ -158,55 +158,57 @@ If mirrored tab stops are available for a text editor, you can learn more about 
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif"></p>
 
-<h2>  <A name="categories"> Snippet categories: </A> </h2>
+<h2>  <a name="categories"> Snippet categories: </a> </h2>
 Each snippet is described below.
 The snippets are grouped into categories.
 Hyperlinks will take you to a particular category.
 
-- <a href="#altloc"> Alternate locator </a>
-- <a href="#analysis"> Analysis </a>
-- <a href="#changeOrientation"> Change orientation </a>
-- <a href="#colorScheme"> Color scheme </a>
-- <a href="#coordCovalent"> Coordinate covalent bonds </a>
-- <a href="#database">Database function</a>
-- <a href="#electronDensity">Electron density</a>
-- <a href="#fetchFile">Fetch file from PDB </a>
-- <a href="#fileInput"> File Input</a>
-- <a href="#fileOutput">File Output </a>
-- <a href="#formatLabel">Format label </a>
-- <a href="#hbonds">H-bond</a>
-- <a href="#help">Help</a>
-- <a href="#label">Label</a>
-- <a href="#labelFormat">Label Format</a>
-- <a href="#placement">Label placement</a>
-- <a href="#measureSurfaceArea">measureSurfaceArea</a>
-- <a href="#molecularRepresentation">Molecular representation</a>
-- <a href="#printCoordinates">Print coordinaes of selection</a>
-- <a href="#printSequence">Print sequence</a>
-- <a href="#pymolrc">PyMOLRC</a>
-- <a href="#timestamp">Save output file with time stamp</a>
-- <a href="#selection">Selections</a>
-- <a href="#specializedFigure">Specialized figure</a>
-- <a href="#stereo">Stereo images</a>
-- <a href="#supercell">Unit cell display</a>
-- <a href="#waterPentagon">Water pentagon</a>
-- <a href="#saltBridge">Selection</a>
-- <a href="#selection">Selection</a>
-- <a href="#workshop">Workshop</a>
+<ul>
+<li><a href="#altloc"> Alternate locator </a></li>
+<li><a href="#analysis"> Analysis </a></li>
+<li><a href="#changeOrientation"> Change orientation </a></li>
+<li><a href="#colorScheme"> Color scheme </a></li>
+<li><a href="#coordCovalent"> Coordinate covalent bonds </a></li>
+<li><a href="#database">Database function</a></li>
+<li><a href="#electronDensity">Electron density</a></li>
+<li><a href="#fetchFile">Fetch file from PDB </a></li>
+<li><a href="#fileInput"> File Input</a></li>
+<li><a href="#fileOutput">File Output </a></li>
+<li><a href="#formatLabel">Format label </a></li>
+<li><a href="#hbonds">H-bond</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#label">Label</a></li>
+<li><a href="#labelFormat">Label Format</a></li>
+<li><a href="#placement">Label placement</a></li>
+<li><a href="#measureSurfaceArea">measureSurfaceArea</a></li>
+<li><a href="#molecularRepresentation">Molecular representation</a></li>
+<li><a href="#printCoordinates">Print coordinaes of selection</a></li>
+<li><a href="#printSequence">Print sequence</a></li>
+<li><a href="#pymolrc">PyMOLRC</a></li>
+<li><a href="#timestamp">Save output file with time stamp</a></li>
+<li><a href="#selection">Selections</a></li>
+<li><a href="#specializedFigure">Specialized figure</a></li>
+<li><a href="#stereo">Stereo images</a></li>
+<li><a href="#supercell">Unit cell display</a></li>
+<li><a href="#waterPentagon">Water pentagon</a></li>
+<li><a href="#saltBridge">Selection</a></li>
+<li><a href="#selection">Selection</a></li>
+<li><a href="#workshop">Workshop</a></li>
+</ul>
 
-<A href=#FASTLINKS>Return to quick links section at top</A>
+<a href=#FASTLINKS>Return to quick links section at top</a>
 
 <hr>
-<h2>  <A name="FASTLINKS2">Supported text editors:</A> </h2>
+<h2>  <a name="FASTLINKS2">Supported text editors:</a> </h2>
 
 PyMOL scripts can be coded in electronic notebook, integrated development environments, and text editors.
 All three types of coding platforms support the use of snippets to varying degrees.
 Here, we foucs only on text editors because the support for *pml* code is best with this category of coding environment.
 
 Note that some text editors use the same library of snippets.
-For example, *emacs* and *spacemacs* can use the same snippet library that is managed by the yasnippets package.
-Likewise, Vim and neovim share some of the same plugin managers and snippet libraries.
-There are at least three kinds of snippet systems available for Vim and neovim.
+For example, <em>Emacs</em> and <em>spacemacs</em> can use the same snippet library that is managed by the yasnippets package.
+Likewise, <em>Vim</em> and <em>neovim</em> share some of the same plugin managers and snippet libraries.
+There are at least three kinds of snippet systems available for <em>Vim</em> and <em>neovim</em>.
 
 <ul>
 <li> <a href="#atom"> Atom </a></li>
@@ -243,17 +245,17 @@ If you are considering switching editors, we recommend Visual Studio Code (VSC).
 You do have to install plugins, but the process of doing so is quite painless.
 Our second tier of text editors includes would be Sublime Text, Textmate, and Atom.
 
-You might also consider *Geany*.
+You might also consider <em>Geany</em>.
 It is very lightweight, very fast, and very easily configurable.
 It is a good editor if you care about agility.  
 See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
-Note that the **thonny** editor that was recommended for beginners is more of a training tool than a productive tool.
+Note that the <em>thonny</em> editor that was recommended for beginners is more of a training tool than a productive tool.
 It does not support code snippets, yet.
 
 If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
 I will be notified immediately by e-mail and will try to develop a snippet library for the requested editor.
 
-Note that some editors that are available as binaries only for Windows like *Notepad++* can be run on Mac OS or Linux by using wine or wine bottler.
+Note that some editors that are available as binaries only for Windows like <em>Notepad++</em> can be run on Mac OS or Linux by using wine or wine bottler.
 
 Some of these text editors can take hours to customize to fit your needs; however, you only need to know about 5% of the options to become productive with these editors.
 
@@ -261,39 +263,39 @@ Some of these text editors can take hours to customize to fit your needs; howeve
  
 <h2 name="atom"> Atom (Universal) </h2>
 
-[*Atom*](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
+[<em>Atom</em>](https://atom.io) is a favorite of professional programmers because it is easily extended and customized.
 Atom advertises itself to be the "hackable text editor".
 It integrates with GitHub nicely, and the GUI is attractive.
 
-*Atom's* startup speed bogs down as more plugins are added.
-The work-around is to keep *Atom* open all of the time.
+<em>Atom's</em> startup speed bogs down as more plugins are added.
+The work-around is to keep <em>Atom</em> open all of the time.
 
-There is an extensive collection of plugins available for *Atom*.
+There is an extensive collection of plugins available for <em>Atom</em>.
 The installation and updating of plugins can be slow compared to other editors.
 
 <h3>Installing and using snippets with Atom</h3>
 
-You will need the `snippets` package to be able to use the pymolpy snippets.  
+You will need the <em>snippets</em> package to be able to use the pymolpy snippets.  
 The package installer is very intuitive.
-Go to `Packages --> Settings View --> Install packages/themes`.
-Search for **snippets** and click the install button.
+Go to <b>Packages --> Settings View --> Install packages/themes</b>.
+Search for <em>snippets</em> and click the install button.
 It may already be installed, but you must make sure that the snippets package is enabled (green bar along the button).
 
-Shown below is an enabled `snippets` package.
+Shown below is an enabled <em>snippets</em> package.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomSnippetsEnable.gif"></p>
 
 Others have developed a PyMOL lexer for *Atom* so that you can enjoy syntax highlighting.
-Go to `Packages --> Settings View --> Install packages/theme` and search for **language-pymol**.
+Go to <b>Packages --> Settings View --> Install packages/theme</b> and search for <em>.language-pymol</em>.
 Click install.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif"></p>
 
-The snippets for all programming languages are stored in a single file that is called `snippets.cson`.
+The snippets for all programming languages are stored in a single file that is called <em>snippets.cson</em>.
 The snippets for different lanaguages are separated by the first line of a snippet library for a specific language.
 This line contains a spefication of the scope.
 That is, the kinds of script files to which a set of snippets applies.
-The `snippets.cson` file is stored in a hidden folder on your home directory called `~.atom/snippets.cson`.
+The <em>snippets.cson</em> file is stored in a hidden folder on your home directory called <em>~.atom/snippets.cson</em>.
 
 You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for *Atom* to your existing `snippets.cson` file.
 
@@ -301,14 +303,15 @@ To do this, Mac users enter:
 
 <code>$ cp -a ~/pymolsnips/atompymolsnips/pymolsnippets.cson ~/.atom/snippets.cson</code>
 
-You can also access the `snippets.cson` file via the *Welcome Guide* of *Atom*, under the section called `<>Add a Snippet --> Open your snippets`.
-Or, you can access the `snippets.cson` file through `Atom (menu) --> Snippets...`.
+You can also access the <em>snippets.cson</em> file via the <b>Welcome Guide</b> of <b>Atom</b>, under the section called <b>Add a Snippet --> Open your snippets</b>.
+Or, you can access the <em>snippets.cson</em> file through <b>Atom (menu) --> Snippets...</b>.
 
-For windows users, it might be easiest to access the `snippets.cson` file via the *Welcome Guide*. Paste the `snippets.cson` provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
+For windows users, it might be easiest to access the <em>snippets.cson</em> file via the <em>Welcome Guide</em>. 
+Paste the <em>snippets.cson</em> provided [here](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) into this file. 
 
-A third option available for windows users, is to navigate to the `.atom` folder through the GUI of **File Explorer** and open the `snippets.cson` file.
+A third option available for windows users, is to navigate to the <em>.atom</em> folder through the GUI of <b>File Explorer</b> and open the <em>snippets.cson</em> file.
 
-Below is an example of the *threeMaps* snippet and a demonstration of its mirrored tab stops.
+Below is an example of the <em>threeMaps</em> snippet and a demonstration of its mirrored tab stops.
 
 <p align="center"><img src="gifs/AtomSnipsUse.gif"></p>
 
@@ -320,22 +323,20 @@ Below is an example of the *threeMaps* snippet and a demonstration of its mirror
 [*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
 Major upgrades require additional fees. You will need macOS 10.14.2 or later. 
 
-The snippet system for *BBedit* is simple and elegant.
+The snippet system for <em>BBedit</em> is simple and elegant.
 The snippets are stored as clippings with one snippet or clipping per file.
-The PyMOL pml snippets end with the file extension `*.pml`.
+The PyMOL pml snippets end with the file extension <em>*.pml</em>.
 The clippings can be stored in folders by language.
 
 <h3>Installing and using snippets with BBEdit</h3>
 
 Users can create nested subfolders for groups of related snippets.
-The folders of clippings are stored in `~/Library/Application\ Support/BBEdit/Clippings`. 
+The folders of clippings are stored in <code>~/Library/Application\ Support/BBEdit/Clippings</code>. 
 You will need to add [this](https://github.com/MooersLab/pymolsnips/tree/master/bbeditpymolsnips) snippets folder to your BBEdit clippings.
 
 To do this, enter:
 
-```bash
-$ cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clippings/
-```
+<code>cp -a ~/pymolsnips/bbeditpymolsnips ~/Library/Application\ Support/BBEdit/Clippings/</code>
 
 The disadvantages of these clippings include the lack of tab triggers and tab stops.
 There is also presently the lack of a PyMOL lexer for syntax highlighting.
@@ -345,20 +346,20 @@ There is also presently the lack of a PyMOL lexer for syntax highlighting.
 
 <h2 name="brackets"> Brackets (Universal) </h2>
 
-The development of [*Brackets*](http://brackets.io) is lead by a team at Adobe.
+The development of [<b>Brackets</b>](http://brackets.io) is lead by a team at Adobe.
 *Brackets* was designed for web developers with a focus on HTML, CSS, and JavaScript.
-However, *Brackets* now has support for a large number of languages.
-*Brackets* provides a Quick Edit and Live Preview mode that run simultaneously, so changes in the pml code are dispayed immediately in the preview window.
+However, <em>Brackets</em> now has support for a large number of languages.
+<em>Brackets</em> provides a Quick Edit and Live Preview mode that run simultaneously, so changes in the pml code are dispayed immediately in the preview window.
 
-*Brackets* has icons, located on the right panel, for navigating to the interactive settings on the application.
+<em>Brackets</em> has icons, located on the right panel, for navigating to the interactive settings on the application.
 The zig-zag line launches the Live Preview.
 The lego piece launches the extension manager.
-Once you install an extension, a light bulb icon will appear that launches the **Snippets Manager**.
+Once you install an extension, a light bulb icon will appear that launches the <b>Snippets Manager</b>.
 
 <h3>Installing and using snippets with Brackets</h3>
 
-Go to `File --> Extension Manager` or press the lego piece in the right panel.
-Search for `Brackets Snippets (by edc)` and install it.
+Go to <b>File --> Extension Manager</b> or press the lego piece in the right panel.
+Search for <b>Brackets Snippets (by edc)</b> and install it.
 This is the snippet manager.
 It has a GUI that enables the manual creation of user-defined snippets.
 
@@ -366,9 +367,9 @@ It has a GUI that enables the manual creation of user-defined snippets.
 
 The GUI should automatically refresh, but if not, close and reopen *Brackets*.
 The light bulb icon will now appear in the right panel.
-Click on the light bulb to open the **Snippets Manager**.
+Click on the light bulb to open the <b>Snippets Manager</b>.
 
-The `settings` tab opens a menu with an import button.
+The <b>settings</b> tab opens a menu with an import button.
 Click import and choose the [`bracketspymolsnips.yml`](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page.
 You have to download the file to your computer.
 
@@ -378,67 +379,66 @@ I chose the recommended option to skip snippets with the same tab trigger name.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsInstall.gif"></p>
 
-Until the PyMOL language is available via a lexer for *Brackets*, use Python for the scope of the pml files.
+Until the PyMOL language is available via a lexer for <em>Brackets</em>, use Python for the scope of the pml files.
 The Python lexer will provide some syntax highlighting.
-This means that the PyMOL file needs to have a file extension of `.py` while it is being edited in *Brackets*.
-When finished, save this file with the `.pml` extension to be able to use it in PyMOL.
+This means that the PyMOL file needs to have a file extension of <em>.py</em> while it is being edited in *Brackets*.
+When finished, save this file with the <em>.pml</em> extension to be able to use it in PyMOL.
 </details>
 
-In the example of snippet use shown below, notice how all snippets that begin with **a** are suggested.
-Only when I press `o` do the suggestions narrow.
+In the example of snippet use shown below, notice how all snippets that begin with <b>a</b> are suggested.
+Only when I press <b>o</b> do the suggestions narrow.
 This is helpful when you cannot remember the short-hand for a snippet.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif"></p>
 
 Unfortunately, *Brackets* does not currently support tab stops.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 <h2 name="cudatext"> CudaText (Universal)</h2>
 
 [*CudaText*](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
-*Cudatext* is open source.
-Its predecessor was *SynWrite*, which is no longer supported.
-*CudaText* has numerous plugins available to it.
+<em>Cudatext</em> is open source.
+Its predecessor was <em>SynWrite</em>, which is no longer supported.
+<em>CudaText</em> has numerous plugins available to it.
 A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons manger (thank you Alexey T.!).
 The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
 
 <h3>Installing and using snippets with CudaText</h3>
 
-*CudaText* uses Python3 based plugins. 
-*CudaText* expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
+<em>CudaText</em> uses Python3 based plugins. 
+<em>CudaText</em> expects to find the Python3.* from [Python.org](https://www.python.org/downloads/release/python-374/).
 I downloaded the 64-bit version of Python3.7.4 from Python.org and used the installer to install the binary in about five minutes.
-This Python interpreter is installed in the `/Applications` directory on the Mac. 
-When I started *CudaText*, I did not have to edit any configuration files.
-
+This Python interpreter is installed in the <em>/Applications</em> directory on the Mac. 
+When I started <em>CudaText</em>, I did not have to edit any configuration files.
 The snippets are stored one per file.
-The files have the extensions of `.cuda-snippet`. 
-*CudaText* snippets have names (i.e., descriptions), ids (i.e., tab triggers), and markers (i.e., tab stops).
-*CudaText* snippets are stored in the user's Library on the Mac: `./Library/Application\ Support/CudaText/data/snippets/Std.PML` folder.
+The files have the extensions of <em>.cuda-snippet</em>. 
+<em>CudaText</em> snippets have names (i.e., descriptions), ids (i.e., tab triggers), and markers (i.e., tab stops).
+<em>CudaText</em> snippets are stored in the user's Library on the Mac: <b>./Library/Application\ Support/CudaText/data/snippets/Std.PML</b> folder.
 
-You may have to create the `Std.PML` folder by giving the following bash command:
+You may have to create the <em>Std.PML</em> folder by giving the following bash command:
 
 <code>$ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/</code>
 
-When executing *CudaText* for the first time on Windows, it will prompt you with the need for the extraction of files.
+When executing <em>CudaText</em> for the first time on Windows, it will prompt you with the need for the extraction of files.
 Proceed with the extraction and choose where you want the files to be extracted to.
-I chose to store it under `C:\Users\YOURUSERNAME\AppData\Roaming\CudaText` where I created the folder CudaText.
+I chose to store it under <code>C:\Users\YOURUSERNAME\AppData\Roaming\CudaText</code> where I created the folder CudaText.
 
-Create the **Std.PML** sub directory under <code>C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets</code>.
+Create the <em>Std.PML</em> sub directory under <code>C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets</code>.
 
 Any snippet add-on will automatically be installed in this directory.
 
-Paste the files (not the folder) of <em>cudatextpymolsnips</em> into the **Std.PML** folder.
+Paste the files (not the folder) of <em>cudatextpymolsnips</em> into the <em>Std.PML</em> folder.
 
-After starting *CudaText*, install the snippets plugin by navigating to the <b>Plugins --> Addons Manager --> Install</b> and search for <b>plugin: Snippets</b> and select it.
+After starting <em>CudaText</em>, install the snippets plugin by navigating to the <b>Plugins --> Addons Manager --> Install</b> and search for <b>plugin: Snippets</b> and select it.
 A pop-up window will appear asking you if you would like to install, click OK.
 I could not screen capture this pop-up window.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/CudaTextpluginInstall.gif"></p>
 
 You will also need to use the same pull-down to install the <em>lexer: PyMOL</em> and the <em>snippets: PyMOL</em>.
-Restart *CudaText* to see the changes. When editing snippets or plugins in <b>CudaText</b> you can also update them by going to <b>Plugins --> Addons Manager --> Update</b>.
+Restart <em>CudaText</em> to see the changes. When editing snippets or plugins in <b>CudaText</b> you can also update them by going to <b>Plugins --> Addons Manager --> Update</b>.
 
 
 *CudaText* allows you to edit mirrored sites for uniform editing.
@@ -451,54 +451,54 @@ The animation below shows how to edit one mirror location and travel to the othe
 
 <h2 name="emacs"> Emacs (universal) </h2>
 
-[*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in *Emacs* lisp (elisp), a variant of LISP.
+[*emacs*](http://uvviewsoft.com/cudatext/) is a free, open-source, cross-platform editor that is written in <em>Emacs</em> lisp (elisp), a variant of LISP.
 LISP was developed in the early 1960s to support work on artificial intelligence.
-*Emacs* was initiated in 1976 by Richard M. Stallman and others.
-*Emacs* has a leadership succession plan that has been put into action.
+<em>Emacs</em> was initiated in 1976 by Richard M. Stallman and others.
+<em>Emacs</em> has a leadership succession plan that has been put into action.
 Richard Stallman stepped away from the project in 2008, and others took over the maintenance of the core program.
 This plan will greatly extend the lifetime of this software project.
 
-*Emacs* has been around for 45 years.
+<em>Emacs</em> has been around for 45 years.
 According to Lindy's Law, the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
-This law suggests that *Emacs* should be around for another 45 years.
+This law suggests that <em>Emacs</em> should be around for another 45 years.
 
 Over 100 other variants of *Emacs* are available.
-*Spacemacs* is a version that has a gentler learning curve in part because it can be driven by a menu of commands that is readily accessible.
-*Spacemacs* allows the use of Vim key bindings, *Emacs* key bindings, or both.
-*Spacemacs* does have its own keybindings that have to be mastered.
-This leads to the problem of needing to translate *Spacemacs* to Gnu *Emacs* and back again when tapping into external *Emacs* resources.
+<em>Spacemacs</em> is a version that has a gentler learning curve in part because it can be driven by a menu of commands that is readily accessible.
+<em>Spacemacs</em> allows the use of Vim key bindings, <em>Emacs</em> key bindings, or both.
+<em>Spacemacs</em> does have its own keybindings that have to be mastered.
+This leads to the problem of needing to translate <em>Spacemacs</em> to Gnu <em>Emacs</em> and back again when tapping into external *Emacs* resources.
 
-*Doom Emacs* and *Prelude Emacs* are additional off-shoots of *Emacs* that are suppose to be easier to adopt.
-They are similar to *Spacemacs*.
+<em>Doom Emacs</em> and <em>Prelude Emacs</em> are additional off-shoots of <em>Emacs</em> that are suppose to be easier to adopt.
+They are similar to <em>Spacemacs</em>.
 
-*SciMax* is a variant of *Emacs* that is being optimized to support scientific publication and literate programming.
+<em>SciMax</em> is a variant of *Emacs* that is being optimized to support scientific publication and literate programming.
 
-For several reasons, we recommend becoming productive in GNU *Emacs* first before trying the *Emacs* variants.
-First, the on-line resources that support mastery of GNU *Emacs* are far greater than the resources that support the variants.
-Second, the documentation for the variants assume a significant amount of prior knowledge of GNU *Emacs*.
-Third, these variants run on top of GNU *Emacs*.
+For several reasons, we recommend becoming productive in GNU <em>Emacs</em> first before trying the <em>Emacs</em> variants.
+First, the on-line resources that support mastery of GNU <em>Emacs</em> are far greater than the resources that support the variants.
+Second, the documentation for the variants assume a significant amount of prior knowledge of GNU <em>Emacs</em>.
+Third, these variants run on top of GNU <em>Emacs</em>.
 
-It takes one to two weeks of nibbling away at *Emacs* tutorials to become productive at text editing in *Emacs*.
+It takes one to two weeks of nibbling away at <em>Emacs</em> tutorials to become productive at text editing in *Emacs*.
 There is a built-in tutorial in *Emacs* as well as many on-line tutorials.
-Visually appealing tutorial is available here https://www.gnu.org/software/emacs/tour/.
+Visually appealing tutorial is available [here](https://www.gnu.org/software/emacs/tour/).
 
-It takes several months to become competent in *Emacs*.
-It takes a life-time to master *Emacs* hence *Emacs* is known as a **life-time editor**.
+It takes several months to become competent in <em>Emacs</em>.
+It takes a life-time to master <em>Emacs</em> hence <em>Emacs</em> is known as a <b>life-time editor</b>.
 
-The one danger of *Emacs* is that it is easy to spend countless of hours configuring the *init.el* file and adding additional packages.
+The one danger of <em>Emacs</em> is that it is easy to spend countless of hours configuring the <em>init.el</em> file and adding additional packages.
 Many beginners spend too much time adding too many packages, most of which they never use.
-As a beginner, you should ease off editing your *init.el* file if it has grown to 500 lines in the first several weeks of using *Emacs*.
+As a beginner, you should ease off editing your <em>init.el</em> file if it has grown to 500 lines in the first several weeks of using *Emacs*.
 A good practice is to add one package at a time and master each added package before adding another new package.
 
-I find that editing of *init.el* file occurs in widely spaced bouts.
-Once everything is working to your satisfication, there may be long periods of productivity during which there is no compelling need to fiddle with the *init.el* file.
+I find that editing of <em>init.el</em> file occurs in widely spaced bouts.
+Once everything is working to your satisfication, there may be long periods of productivity during which there is no compelling need to fiddle with the <em>init.el</em> file.
 
-Many *Emacs* users have shared their *init.el* files on GitHub.
+Many *Emacs* users have shared their <em>init.el</em> files on GitHub.
 These can provide inspiration for the beginner.
 Some have complex configurations that are often too complex to be copied and applied by the beginner.
 
 Many of the add-on packages add functionalities that are not available in other text editors or that become available years later.
-The vast group of active contributors to *Emacs* will probably keep it in the lead for a long time into the future.
+The vast group of active contributors to <em>Emacs</em> will probably keep it in the lead for a long time into the future.
 
 Like PyMOL, GNU *Emacs* was designed to be highly extensible.
 This is large part of its popularity.
@@ -506,32 +506,32 @@ Over 4600 packages have been developed by users over the years.
 Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
 However, manual installation is often quite simple.
 
-The interface to *Emacs* is either a X-terminal window or a simple GUI that can be made complex by opening many *buffers*, which are like windows.
+The interface to <em>Emacs</em> is either a X-terminal window or a simple GUI that can be made complex by opening many <em>buffers</em>, which are like windows.
 The management and navigation of buffers is a skill that the beginner needs to master early.
 
-*Emacs* is designed to enable mouse free work although some buffers require that selections be made by using the mouse.
-*Emacs* is infamous for having 1800 key bindings involving multiple keys.
+<em>Emacs</em> is designed to enable mouse free work although some buffers require that selections be made by using the mouse.
+<em>Emacs</em> is infamous for having 1800 key bindings involving multiple keys.
 The key bindings make heavy use of the alt or meta key.
 However, there is in-line documentation, and some packages provide autosuggestions that greatly ease the discovery of new key bindings.
-You only really need to memorize several dozen key bindings to become productive in *Emacs*.
+You only really need to memorize several dozen key bindings to become productive in <em>Emacs</em>.
 The remaining knowledge is easy to acquire on an *as-needed* basis.
 
-Vim users can quickly become productive in *Emacs* because the Vim key bindings are available through the add-on package called evil-mode.
+Vim users can quickly become productive in <em>Emacs</em> because the Vim key bindings are available through the add-on package called evil-mode.
 Mastery of the Vim key bindings in Vim is initially painful because it is like learning how to type for the first time.
-Here again, mastery of a few dozen key bindings will enable you to be productive in Vim and in Evil-mode in *Emacs*.
-Vim key bindings are thought to bear more efficient for editing text than *Emacs* key-bindings, so their availability in *Emacs* greatly enhances a Vim user's productivity in E-macs.
+Here again, mastery of a few dozen key bindings will enable you to be productive in Vim and in Evil-mode in <em>Emacs</em>.
+Vim key bindings are thought to bear more efficient for editing text than <em>Emacs</em> key-bindings, so their availability in *Emacs* greatly enhances a Vim user's productivity in E-macs.
 
 Mastery of Vim key-bindings is a wise investment because they are available in many text editors and IDEs.
 They are even available in Jupyter Notebooks!
-In addition, Vim is more widely distributed than *Emacs*.
+In addition, Vim is more widely distributed than <em>Emacs</em>.
 
 If you are a user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your init.el file and reestablish your *Emacs* computing environment.
-Many national facilities use Centos Linux and are unable or unwilling to make available the most recent stable version of *Emacs*.
+Many national facilities use Centos Linux and are unable or unwilling to make available the most recent stable version of <em>Emacs</em>.
 I have found that the available versions are several years out of date and hence difficult to install all of my favorite packages.
 It may take an hour of removing calls to install incompatible packages before you can establish a subset of your favorite packages.
-Hence, it is good to have the ability to tolerate getting by for short periods of time with older versions of *Emacs* without all of your favorite packages.
+Hence, it is good to have the ability to tolerate getting by for short periods of time with older versions of <em>Emacs</em> without all of your favorite packages.
 
-Modes in *Emacs* are states of *Emacs* where a subset of commands are available.
+Modes in *Emacs* are states of <em>Emacs</em> where a subset of commands are available.
 Modes avoid clashes due to functions of the same name in different packages.
 Modes are analogous to scopes in other text editors.
 For example, there is a python-mode for working with Python script files.
@@ -545,22 +545,22 @@ Org-mode has over 100 add-on packages.
 For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex entries.
 The latter is done in an automated fashion by using the metadata in the pdf files.
 
-The *.emacs.d* configuration directory is a hidden directory in the home directory.
+The <em>.emacs.d</em> configuration directory is a hidden directory in the home directory.
 It is the home of the installed packages and plugins.
 
-The main configuration file resides is this directory and is named *init.el*.
-The *init.el* file is the analog of Vim's *.vimrc* configuration file.
-The commands in the *init.el* file are written in elisp.
+The main configuration file resides is this directory and is named <em>init.el</em>.
+The <em>init.el</em> file is the analog of Vim's <em>.vimrc</em> configuration file.
+The commands in the <em>init.el</em> file are written in elisp.
 Fortunately, elisp is easy to edit and augment without knowing much about how to program with elisp.
 
-I store my configuration in a config.el file (see file listing at top of page).
+I store my configuration in a <em>config.el</em> file (see file listing at top of page).
 
-<h3>Installing *Emacs*</h3>
+<h3>Installing <em>Emacs</em></h3>
 
 Like *Vim*, *Emacs* can be installed as a stand-a-lone application or via a software management tool and a software repository.
 
-*Emacs* can be downloaded from https://www.gnu.org/software/emacs/ and insalled with a platform specific installer.
-Older versions of *Emacs* comes pre-installed on Mac OS, but you may want a more recent version.
+<em>Emacs</em> can be downloaded [from](https://www.gnu.org/software/emacs/) and insalled with a platform specific installer.
+Older versions of <em>Emacs</em> comes pre-installed on Mac OS, but you may want a more recent version.
 You should remove the old version with the commands <code>sudo rm /usr/bin/emacs</code> and <code>sudo rm -rf /usr/share/emacs</code>.
 Binaries for the Mac are [available](https://emacsformacosx.com).
 As of August 2020, version 27.1-1 is the stable release.
@@ -571,10 +571,10 @@ A GUI based version can be installed with the command <code>sudo port install em
 The Homebrew repository for Mac OS is popular.
 The brew command is <code>brew update && brew install emacs --with-cocoa && brew linkapps emacs <\code>.
 
-You may want to create an alias for starting *Emacs*.
+You may want to create an alias for starting <em>Emacs</em>.
 For the development version of the binary in installed in Applications with the above package installer for the make use, <code>e28='open /Applications/Emacs2805.app $1'</code>.
-For the app version installed by macports, use <code>e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'<\code>.
-For Homebrew installed *Emacs*, use <code>alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"</code>.
+For the app version installed by macports, use <code>e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'</code>.
+For Homebrew installed <em>Emacs</em>, use <code>alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"</code>.
 
 
 <h3>Installing and using snippets with <em>Emacs</em></h3>
@@ -584,11 +584,11 @@ This package provides for the display of the snippets in a table that opens in a
 The user can navigate the table to find a relevant snippet.
 This table is redundant with the ls snippet.
 
-The [*yasnippets*](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *Emacs*.
+The [<em>yasnippets</em>](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in *Emacs*.
 This package is installed with a builtin package manager.
 
 Each snippet is stored in a single file.
-The files are stored in a subfolder in the hidden folder `~.eamcs.d/plugins/` in the home directory.
+The files are stored in a subfolder in the hidden folder <code>~.eamcs.d/plugins/</code> in the home directory.
 
 <h1>Variants of <em>Emacs</em> to consider</h1>
 
@@ -596,41 +596,41 @@ These variants might be suitable for the impatient who do not want to master *GN
 
 <h2>Spacemacs</h2>
 
-[Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU *Emacs*.
-It is designed to be easier to use than *Emacs*.
-It can be operated with *Vim*, *Emacs*, or a hybrid of key bindings.
+[Spacemacs](https://www.spacemacs.org) (see below) is built ontop of GNU <em>Emacs</em>.
+It is designed to be easier to use than <em>Emacs</em>.
+It can be operated with <em>Vim</em>, <em>Emacs</em>, or a hybrid of key bindings.
 You enable layers to extend its functionality.
-*Spacemacs* can be used to edit *Jupyter Notebooks* via the Ipython-layer.
+<em>Spacemacs</em> can be used to edit <em>Jupyter Notebooks</em> via the Ipython-layer.
 
 <h2>*SciMax*</h2>
 
 [SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
-This variant of *Emacs* is being optimized for supporting the preparation of scientific manuscripts.
-Several YouTube videos of Professor Kitchin talking about SciMax are available.
-SciMax is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
-Hence, our recommendation to become competent with Gnu *Emacs* before diving into SciMax.
+This variant of <em>Emacs</em> is being optimized for supporting the preparation of scientific manuscripts.
+Several YouTube videos of Professor Kitchin talking about <em>SciMax</em> are available.
+<em>SciMax</em> is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
+Hence, our recommendation to become competent with <em>Gnu Emacs</em> before diving into <em>SciMax</em>.
 
 <h2><em>Prelude Emacs</em></h2>
 
 This variant of *Emacs* is *GNU Emacs* bundled with what the developer thinks are the essential, no-frills add-on packages.
 It does not ship with evil-mode. 
 This variant might be appropriate for beginners.
-You need to install *GNU Emacs* version 26.3 first.
+You need to install <em>Gnu Emacs</em> version 26.3 first.
 The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
 The github page is found [here](https://github.com/bbatsov/prelude).
 
 <h2><em>*Doom Emacs</em></h2>
 
 *Doom Emacs* appears to provide more advanced features than *Prelude Emacs*.
-It may be useful to study to learn about packages or features to add to a basic *GNU Emacs* configuration.
+It may be useful to study to learn about packages or features to add to a basic <em>Gnu Emacs</em> configuration.
 I learned about moving much of the code in the init.el file to code blocks in a config.org file, which can be rendered on GitHib like a markdown file.
 The code blocks can be flanked by explanatory text, hyperlinks, tables, and figures.
-The is a great way to document and share one's *Emacs* configuration.
+The is a great way to document and share one's <em>Emacs</em> configuration.
 
-*Emacs* reads an abbreviated init.el file which calls the config.org file.
-The code in the code blocks in the config.org file are copied to a config.el file and then executed. 
+<em>Emacs</em> reads an abbreviated init.el file which calls the <em>config.org</em> file.
+The code in the code blocks in the config.org file are copied to a <em>config.el</em> file and then executed. 
 
-See the file section at the top for an example of a working init.el and config.org file.
+See the file section at the top for an example of a working <em>init.el</em> and <em>config.org</em> file.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
@@ -639,9 +639,9 @@ See the file section at the top for an example of a working init.el and config.o
 
 [*Espresso*](https://espressoapp.com/) is a proprietary test editor for the Mac.
 It is for those users who desire a text editor that has a GUI that looks like a native Mac app.
-The snippets are stored in a single `.xml` file.
+The snippets are stored in a single <em>.xml</em> file.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 <h2 name="geany"> Geany (Universal)</h2>
@@ -727,7 +727,7 @@ Then to copy <em>pymol.xml</em> into that directory, do:
 	
 [*kate*](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 <h3>Installing and using snippets with <em>Kate</em></h3>
 
@@ -755,14 +755,14 @@ May have to create the directory MySnippets on MacOS.
 <h2 name="komodo"> Komodo Edit (Universal) </h2>
 
 [*Komodo Edit*](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
-The developers of *Komodo Edit* have merged with the developers of ActiveState Python.
-The community version of *Komodo Edit* has enough features for the occasional writer of code for PyMOL.
-One fun aspect of *Komodo Edit* is the ability to use themes to customize your workspace.
-*Komodo Edit* was derived from the Mozilla Framework.
+The developers of <em>Komodo Edit</em> have merged with the developers of ActiveState Python.
+The community version of <em>Komodo Edit</em> has enough features for the occasional writer of code for PyMOL.
+One fun aspect of <em>Komodo Edit</em> is the ability to use themes to customize your workspace.
+<em>Komodo Edit</em> was derived from the Mozilla Framework.
 The add-on, or extension, capabilities are the same.
-For *Komodo Edit* documentation, see [here](http://docs.activestate.com/komodo/11/).
+For <em>Komodo Edit</em> documentation, see [here](http://docs.activestate.com/komodo/11/).
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 <h3>Installing and using snippets with <em>Komodo Edit</em></h3>
@@ -779,10 +779,10 @@ Then insert the snippets files from [here](https://github.com/marevebro/pymolsni
 
 <code>$ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML</code>
 
-For Windows users, select where you want *Komodo Edit* to be installed.
+For Windows users, select where you want <em>Komodo Edit</em> to be installed.
 I chose <code>C:\Users\MYUSERNAME\AppData\KomodoEdit</code>.
-From there, you'll need to create the `PML` directory in <code>...\KomodoEdit\lib\support\samples\tools\Abbreviations</code>.
-Then copy and paste the <em>komodeditpymolsnips</em> files into the newly created `PML` directory. 
+From there, you'll need to create the <em>PML</em> directory in <code>...\KomodoEdit\lib\support\samples\tools\Abbreviations</code>.
+Then copy and paste the <em>komodeditpymolsnips</em> files into the newly created <em>PML</em> directory. 
 
 Here, you can see snippet use in action:
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/KomodoEditsnipuse.gif"></p>
@@ -829,7 +829,7 @@ Enter the following command in bash:
 <code>$ mkdir ~/.lighttable/User/snippets</code>
 
 Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips) folder from above.
-Move the contents of this folder **(not the folder)** to `~/.lighttable/User/snippets`.
+Move the contents of this folder <b>(not the folder)</b> to `~/.lighttable/User/snippets`.
 To do this:
 
 <code>$ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.</code>
@@ -868,11 +868,11 @@ Use <em>.py</em> as your file extension while editing your script file in <em>Li
 
 <h2 name="micro"> Micro (Universal) </h2>
 
-[*Micro*](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
+[<em>Micro</em>](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor *nano*.
 Nonetheless, <em>Micro</em> is easier to use than *Vim* or <em>Emacs</em>.
 Like <em>nano</em>, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a <em>json</em> file.
-[*Micro*](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
+[<em>Micro</em>](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
@@ -895,7 +895,7 @@ All of the snippets for one language are in a single file with the <em>.snippets
 In this case, the file is labeled <em>pml.snippets</em>.
 
 The snippets are installed in the folder <code>.config/micro/plugins/snippets</code>.
-In the *pymolsnips* directory, enter:
+In the <em>pymolsnips</em> directory, enter:
 
 <code>$ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.</code>
 
@@ -931,14 +931,14 @@ You can make the tex larger for easier reading by entering <code>cmd-+</code> a 
 
 <h2 name="spacemacs">Spacemacs (Universal)</h2>
 
-Spacemacs (pronounced *space macs*) is a *Vim* emulator that runs on top of *Emacs*.
-Its command leader is the spacebar hence the word *space* in the name.
-It is very different from running the *Emacs* in evil-mode (evil-mode enables the use of Vim keybindings in *Emacs*).
-As a result, it should be treated as a separate editor from *Emacs* and *Vim*.
+Spacemacs (pronounced <em>space macs</em>) is a <em>Vim</em> emulator that runs on top of <em>Emacs</em>.
+Its command leader is the spacebar hence the word <em>space</em> in the name.
+It is very different from running the <em>Emacs</em> in evil-mode (evil-mode enables the use of Vim keybindings in <em>Emacs</em>).
+As a result, it should be treated as a separate editor from <em>Emacs</em> and <em>Vim</em>.
 
 *Spacemacs* has its own set of mnemonic commands that you need to master.
-In other words, you will use *Vim*, *Emacs*, and *Spacemacs* commands in one editor.
-It might be less intimidating if you have mastered some of the basics of *Vim* and *Emacs*.
+In other words, you will use <em>Vim</em>, <em>Emacs</em>, and *Spacemacs* commands in one editor.
+It might be less intimidating if you have mastered some of the basics of <em>Vim</em> and <em>Emacs</em>.
 *Spacemacs* does not go as far as allowing you to use Vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 
 
@@ -1092,10 +1092,10 @@ If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.
 
 <em>Vim</em> focuses on the editing process.
 This process is where you spend most of your time thinking about what you have written.
-Most of the time spent *writing* is usually spent on *rewriting*.
+Most of the time spent <em>writing</em> is usually spent on <em>rewriting</em>.
 
 The <em>Vim</em> keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where text is edited.
-For example, vim key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including *VSC* and even in the on-line LaTeX editor [<em>Overleaf</em>](https://www.overleaf).
+For example, vim key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including <em>VSC</em> and even in the on-line LaTeX editor [<em>Overleaf</em>](https://www.overleaf).
 There is a <em>Vim</em> keybinding extension for <em>MS Word</em> on Windows but not on Mac OS.
 This is one of many reasons why I do most of my writing in <em>Overleaf</em>.
 
@@ -1124,13 +1124,13 @@ These sites rarely mention minpac, but Vundle is always mentioned.
 <em>Vundle</em>, which stands for <em>Vim bundle</em>, is a plugin manager that configures your plugins directly in the <em>.vimrc</em> file.
 It is in this file that you install and update plugins, as well as comment out unused plugins.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
 <b>Installing Vundle</b>
 
-To start adding a plugin to *Vim* you will need to open and edit the <em>.vimrc</em> file.
+To start adding a plugin to <em>Vim</em> you will need to open and edit the <em>.vimrc</em> file.
 
 To download Vundle enter the following into the bash command line:
 
@@ -1174,36 +1174,36 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 -->
 
 ```bash
-if has('python3')
-endif
-
-vundle
-set nocompatible filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Add only comment lines and Plugin commands between
-" call vundle#begin() and call vundle#end()
-
-call vundle#begin()
-plugin 'VundleVim/Vundle.vim'
-
-" Ultisnips requires Vim installed with python. This is just the engine.
-Plugin 'SirVer/ultisnips'
-call vundle#end()
-
-" Turn on filetype detection for plugins
-filetype plugin on
-
-" set path to Python3 interpreter that you used when installing Vim
-" let g:python3_host_prog = '/opt/local/bin/python3.7'
-" This was the python used to install Vim with homebrew.
-let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
-
-" UltiSnips related commands
-let g:UltiSnipsExpandTrigger = ''
-let g:UltiSnipsJumpForwardTrigger = ''
-let g:UltiSnipsJumpBackwardTrigger = ''
-let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
+	if has('python3')
+	endif
+	
+	vundle
+	set nocompatible filetype off
+	set rtp+=~/.vim/bundle/Vundle.vim
+	
+	" Add only comment lines and Plugin commands between
+	" call vundle#begin() and call vundle#end()
+	
+	call vundle#begin()
+	plugin 'VundleVim/Vundle.vim'
+	
+	" Ultisnips requires Vim installed with python. This is just the engine.
+	Plugin 'SirVer/ultisnips'
+	call vundle#end()
+	
+	" Turn on filetype detection for plugins
+	filetype plugin on
+	
+	" set path to Python3 interpreter that you used when installing Vim
+	" let g:python3_host_prog = '/opt/local/bin/python3.7'
+	" This was the python used to install Vim with homebrew.
+	let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
+	
+	" UltiSnips related commands
+	let g:UltiSnipsExpandTrigger = ''
+	let g:UltiSnipsJumpForwardTrigger = ''
+	let g:UltiSnipsJumpBackwardTrigger = ''
+	let g:UltiSnipsSnippetDirectories=[$HOME.'.vim/my-snippets/Ultisnips']
 ```
 
 Now open <em>Vim</em> and run the following command:
@@ -1253,13 +1253,14 @@ To allow minipac to update itself enter:
 call minpac#add('k-takata/minpac',{'type':'opt'})
 ```
 
-Then refresh *Vim* giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
-You will not be able to use these plugins until you exit and restart *Vim* by entering `:qa!` and then opening another *Vim* session.
-</details>
+Then refresh <em>Vim</em> giving the `:source %` command and update minpac plugins with `:call minpac#update()`.
+You will not be able to use these plugins until you exit and restart <em>Vim</em> by entering `:qa!` and then opening another *Vim* session.
 
-<h4 name="neosnippets">Neosnippets(for Vim, universal) </h4>
 
-[*Neosnippets*](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors <em>Vim</em> and <em>neovim</em>.
+
+<h3 name="neosnippets">Neosnippets(for Vim, universal) </h3>
+
+[<em>Neosnippets</em>](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors <em>Vim</em> and <em>neovim</em>.
 <em>Neosnippets</em> is similar to <em>SnipMate</em> except with <em>Neosnippets</em>, there is the option to utilize [<em>deoplete</em>](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
 The use of <em>Neosnippets</em> does not require <em>deoplete</em>.
 Experienced users may find <em>deoplete</em> pop-up menus to be distracting.
@@ -1275,12 +1276,12 @@ You have to enable the Python3 interface with pynvim which you can install with 
 
 <code>pip3 install --user pynvim<code>
 
-To be more precise, you can provide the full path to the Python interpreter to be used by *neovim* and import *pip* as a module before installing pynvim.
+To be more precise, you can provide the full path to the Python interpreter to be used by <em>neovim</em> and import <em>pip</em> as a module before installing pynvim.
 
 <code>sudo -H /opt/local/bin/python3.7 -m pip install pynvim</code>
 
 
-Check in *Vim* or <em>neovim</em> if python3 is enabled by entering:
+Check in <em>Vim</em> or <em>neovim</em> if python3 is enabled by entering:
 
 
 <code>:echo has("python3")</code>
@@ -1297,7 +1298,7 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 ```
 
-To use *deoplete*, add the following setting to your <em>.vimrc</em> file.
+To use <em>deoplete</em>, add the following setting to your <em>.vimrc</em> file.
 
 ```vim
 " Use deoplete.
@@ -1318,8 +1319,8 @@ If you choose not to install them, you must deactivate them with the following c
 g:neosnippet#disable_runtime_snippets
 ```
 
-A minimal <em> .vimrc</em> file for installing and using <em>Neosnippets<em> is listed below. 
-<b>Make sure to change YOURUSERNAME to your name:
+A minimal <em> .vimrc</em> file for installing and using <em>Neosnippets</em> is listed below. 
+Make sure to change YOURUSERNAME to your name:
 
 ```vim
 if has('python3')
@@ -1366,16 +1367,18 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 :inoremap <C-CR>  <Esc>
 ```
 
-</details>
+
 <A href=#FASTLINKS2>Return to list of editors above.</A>
 
-<h4 name="snipmate"> SnipMate (for <em>Vim</em>, universal) </h4>
 
-[*SnipMate*](https://github.com/garbas/vim-snipmate) is an early, but stable plugin manager that provides plugin support for snippets that are available in <em>Vim</em>. 
+
+<h3 name="snipmate"> SnipMate (for <em>Vim</em>, universal) </h3>
+
+[<b>SnipMate</b>](https://github.com/garbas/vim-snipmate) is an early, but stable plugin manager that provides plugin support for snippets that are available in <em>Vim</em>. 
 It does not depend on Python.
 
-<details>
-<summary><b>Installing and using snippets with SnipMate</b></summary>
+
+<h4>Installing and using snippets with SnipMate</h4>
 
 To install SnipMate, add the following to your `.vimrc` file:
 
@@ -1412,6 +1415,8 @@ The <em>honza/vim-snippets</em> plugin contains snippets for many languages.
 The <em>pml.snippets</em> file can be stored in a <em>mysnippets</em> subfolder of the hidden <em>.vim</em> directory as described below.
 
 <em>UltinSnips</em> can read <em>SnipMate</em> snippets.
+
+
 
 <h4>Installing and using snippets with UltiSnips</h4>
 
@@ -1566,7 +1571,7 @@ They claim that their package will bring a <em>VSC</em>-like experience to <em>V
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 
 [<em>Visual Studio Code</em>](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by MicroSoft.
-Its start-up speed is between that of <em>Sublime Text 3</em> and <em>Atom<em>.
+Its start-up speed is between that of <em>Sublime Text 3</em> and <em>Atom</em>.
 It is still under expoentially rapid development.
 It is easily ehanded with extensions.
 There is even a Grammarly extesnion!
