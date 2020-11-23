@@ -574,7 +574,7 @@ The brew command is <code>brew update && brew install emacs --with-cocoa && brew
 You may want to create an alias for starting <em>Emacs</em>.
 For the development version of the binary in installed in Applications with the above package installer for the make use, <code>e28='open /Applications/Emacs2805.app $1'</code>.
 For the app version installed by macports, use <code>e27='open -a /Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'</code>.
-For Homebrew installed <em>Emacs</em>, use <code>alias emacs="/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw"</code>.
+For Homebrew installed <em>Emacs</em>, use <code> alias emacs='/usr/local/Cellar/emacs/24.x/Emacs.app/Contents/MacOS/Emacs -nw' </code>.
 
 
 <h3>Installing and using snippets with <em>Emacs</em></h3>
@@ -686,6 +686,7 @@ Here is an example of the <b>ao</b> snippet being used in <em>Geany</em>:
 A to-be-developed pml language file is needed to enable syntax highlighting of <b>pml</b> files.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
+
 
 
 <h2 name="gedit"> Gedit (Universal) </h2>
@@ -829,7 +830,7 @@ Enter the following command in bash:
 
 <code>$ mkdir ~/.lighttable/User/snippets</code>
 
-Download the <a href="https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips"> <em>lighttablepymolsnips</em> folder from above.
+Download the <a href="https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips"> <em>lighttablepymolsnips</em></a> folder from above.
 Move the contents of this folder <b>(not the folder)</b> to <code>~/.lighttable/User/snippets</code>.
 To do this:
 
