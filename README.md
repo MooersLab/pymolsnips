@@ -979,6 +979,8 @@ The free trial period is infinite.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
+
+
 <h3>Installing and using snippets with Sublime Text 3</h3>
 
 The snippets are stored in separate files with the file extension <em>.sublime-snippet</em>.
@@ -1014,7 +1016,7 @@ Notice how when I type <em>sugar</em> all instances of glycan are replaced with 
 
 You may need to install a snippet manager package and add an autocompletion package to be able to get autocompletion of the tab triggers and a description of the snippet.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
@@ -1023,7 +1025,7 @@ You may need to install a snippet manager package and add an autocompletion pack
 [<em>TextMate</em>](https://macromates.com) is freely available but only for Mac OS.
 It is a mature project with occasional updates.
 There is a large library of plugins available.
-I found it to be quite intutitive to use, fast to start-up, and very robust.
+I found it to be quite intuitive to use, fast to start-up, and very robust.
 It is the editor that I use most frequently.
 
 The 2007 book [<em>TextMate Power Editing for the Mac</em>](https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X) by Edward Gray and the 2012 book [<em>TextMate How-To</em>](https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2) by Chris Mears provide supplemental reading to the on-line documentation.
@@ -1059,7 +1061,7 @@ This editor can be used to view and change the code in the snippets.
 
 <p align="center"><img src="https://media.giphy.com/media/dvO0a4s2sArYieymKr/giphy.gif" width="640" height="480" alt="ao tab trigger"/></p>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
@@ -1096,8 +1098,8 @@ If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.
 This process is where you spend most of your time thinking about what you have written.
 Most of the time spent <em>writing</em> is usually spent on <em>rewriting</em>.
 
-The <em>Vim</em> keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where text is edited.
-For example, vim key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including <em>VSC</em> and even in the on-line LaTeX editor [<em>Overleaf</em>](https://www.overleaf).
+The <em>Vim</em> keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where the text is edited.
+For example, <em>Vim</em> key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including <em>VSC</em> and even in the on-line LaTeX editor [<em>Overleaf</em>](https://www.overleaf).
 There is a <em>Vim</em> keybinding extension for <em>MS Word</em> on Windows but not on Mac OS.
 This is one of many reasons why I do most of my writing in <em>Overleaf</em>.
 
@@ -1111,7 +1113,7 @@ Some of these files are several thousand lines long and really only usable by th
 New users often accidentally add one line that breaks <em>Vim</em>, get frustrated, and give up on <em>Vim</em>
 A better practice is to slowly and irregularly build-up the <em>.vimrc</em> file as your needs evolve.
 You can comment out features that you use infrequently and uncomment them as the need arises.
-Obviosuly, your <em>.vimrc</em> file should be kept under version control so that you can easily recover the last working version.
+Obviosly, your <em>.vimrc</em> file should be kept under version control so that you can easily recover the last working version.
 
 <em>Vim</em> lacks native support for snippets.
 We have to extend <em>Vim</em> with a plugin known as a snippet manager.
@@ -1364,7 +1366,7 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 ```
 
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
@@ -1504,7 +1506,7 @@ Now, make a soft link to the <em>ftdetect</em> directory inside the <em>ultisnip
 ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
 ```
 
-To test your set up, open a PyMOL script file.
+To test your setup, open a PyMOL script file.
 Enter on the command line in <em>Vim</em> <em>:set filetype?</em>.
 You should bet back <em>filetype=pml</em>.
 
@@ -1566,10 +1568,10 @@ They claim that their package will bring a <em>VSC</em>-like experience to <em>V
 
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 
-[<em>Visual Studio Code</em>](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by MicroSoft.
+[<em>Visual Studio Code</em>](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by Microsoft.
 Its start-up speed is between that of <em>Sublime Text 3</em> and <em>Atom</em>.
-It is still under expoentially rapid development.
-It is easily ehanded with extensions.
+It is still under exponentially rapid development.
+It is easily enhanced with extensions.
 There is even a Grammarly extesnion!
 <em>VSC</em> has strong support for snippets and for autocompletion with intelliSense.
 It is fair to say that <em>VSC</em> is one of the most advanced text editors.
@@ -1577,16 +1579,16 @@ It is fair to say that <em>VSC</em> is one of the most advanced text editors.
 The installation of <em>VSC</em> extensions is very painless and very fast.
 There is an extension marketplace that is accessible from the left column within the <em>VSC</em> GUI.
 You can search the marketplace for extensions.
-Each extension has its own html file with information about the extension.
-This html file has install and uninstall buttons.
-The installations are lightning fast.
+Each extension has its own HTML  file with information about the extension.
+This HTML file has <b>install</b> and <b>uninstall</b> buttons.
+The installations are lightning-fast.
 
 The <em>bioSyntax</em> plugin is free and includes a lexer for PyMOL and lexers for many other file types used in bioinformatics.
 It is a good idea to install this plugin.
 The PyMOL lexer will be activated when a <em>pml</em> file is opened.
 
 <em>VSC</em> provides for autocompletion of the snippet tab triggers and previews of the snippet's code.
-The latter feature are very helpful for avoiding the insertion of the wrong snippet.
+The latter feature is very helpful for avoiding the insertion of the wrong snippet.
 
 <b>Installing and using snippets with Visual Studio Code</b>
 
@@ -1601,7 +1603,7 @@ For Mac users in the <em>vscpymolsnips</em> folder:
 $ mv pml.json ~/Library/Application\ Support/Code/User/snippets
 ```
 
-For Windows users, select the the settings button (gear icon) in the bottom left corner. 
+For Windows users, select the settings button (gear icon) in the bottom left corner. 
 Go to <em>Settings-->User Snippets-->pml</em>.
 If you already have a <em>pml</em> file for snippets, simply append the <em>pml.json</em> file to the existing file (by copying and pasting).
 
@@ -1623,15 +1625,13 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/VSCMirror.gif"></p>
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
 <h2> <a name="snippetList" >List of the snippets by their tab trigger name and description </a> </h2>
 
-<h3 name="altloc"></h3>
-
-<h4> Alternate locators </h4>
+<h3 name="altloc">Alternate locators </h3>
 | Tab trigger   | Description                                                   |
 |:--------------|:--------------------------------------------------------------|
 | hidealtloc    | Hide alt loc., the alternate locator for disordered residues. |
@@ -1640,121 +1640,103 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 
-<h3 name="analysis"></h3>
-
-### Analysis:
+<h3 name="analysis">Analysis:</h3>
 | Tab trigger    | Description                                                                          |
 |:---------------|:-------------------------------------------------------------------------------------|
 | averageB       | iFind the average B-value of a selection. Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed. |
 | findHbonds     | Find hbonds around a residue.                                                        |
 | printBs        | Print the B-factors of a residue.                                                    |
 | printBs2digits | Print B-values for a residue with the B's rounded off to two decimal places.         |
-| printBspartB   | Print B factors of part B of a disorderd residue.                                    |
+| printBspartB   | Print B factors of part B of a disordered residue.                                    |
 | aveB4resiX                  | AveBResiX, prints the residue number and the average bfactor.                                                             |
-|                             | Uses reduce and lambda, builtin Python functional programming functions.                                                  |
+|                             | Uses reduce and lambda, built-in Python functional programming functions.                                                  |
 |                             | Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. |
 | printNameB4ResiX            | Print name and b-factor for a residue.                                                                                    |
 | printResiResnNameB4ResiX    | Print resn, resi, atom name, and b-factor.                                                                                |
 | printResiResnNameB4ResiXNoH | Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.                                    |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="changeOrientation"></h3>
-
-### Change orientation:
+<h3 name="changeOrientation">Change orientation:</h3>
 | Tab trigger   | Description                        |
 |:--------------|:-----------------------------------|
 | rotate        | Rotate about axis.                 |
 | rv            | Return settings in a compact format on one line. |
 | turnAboutAxis | Turn about axis.                   |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="colorScheme"></h3>
 
-### Color scheme:
+<h3 name="colorScheme">Color scheme:</h3>
 | Tab trigger   | Description                                    |
 |:--------------|:-----------------------------------------------|
 | cblind        | Eanble color blind friendly colors.            |
 | cribbon       | Color ribbon H red, strand yellow, loop green. |
 | volumeRamp    | Volume ramp.                                   |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="coordCovalent"></h3>
 
-### Coordinate covalent bonds:
+<h3 name="coordCovalent">Coordinate covalent bonds:</h3>
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | coordinate    | Coordinate covalent bonds to metals. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="database"></h3>
-
-### Database function:
+<h3 name="database">Database function:</h3>
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | lsSnips       | List all snips by tab trigger and description |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="electronDensity"></h3>
-
-### Electron density:
+<h3 name="electronDensity">Electron density:</h3>
 | Tab trigger   | Description              |
 |:--------------|:-------------------------|
 | carvedDensity | Carved electron density map. |
 | fetch2FoFc    | Fetch 2FoFc map.         |
 | threeMaps     | Three electron density maps.  |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="fetchFile"></h3>
 
-### Fetch file from PDB:
+<h3 name="fetchFile">Fetch file from PDB:</h3>
 | Tab trigger   | Description     |
 |:--------------|:----------------|
 | fetchCIF      | Fetch cif file. |
 | fetchFoFc     | Fetch fofc map. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="fileInput"></h3>
 
-### File Input:
+<h3 name="fileInput">File Input:</h3>
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | loadPDBfile   | Load a pdb file in the current directory. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="fileOutput"></h3>
-
-### File output:
+<h3 name="fileOutput">File output:</h3>
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
-| savePNG       | Save a png file of current scene to the current directory. |
+| savePNG       | Save a png file of the current scene in the viewport to the current directory. |
 
-<A href=#categories>Return to list of editors above.</A>
+<a href=#categories>Return to list of editors above.</a>
 
-<h3 name="formatLabel"></h3>
-
-### Format label:
+<h3 name="formatLabel">Format label:</h3>
 | Tab trigger   | Description                                         |
 |:--------------|:----------------------------------------------------|
 | labelResnResi | Label CA atom with residue name and residue number. |
 | labelSS       | Label SS.                                           |
 | oneLetter     | One letter amino acid.                              |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="hbonds"></h3>
-
-### H-bonds:
+<h3 name="hbonds">H-bonds:</h3>
 | Tab trigger   | Description       |
 |:--------------|:------------------|
 | distance      | H-bond distances. |
@@ -1762,23 +1744,19 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | hbond         | H-bond setup.     |
 | hbonddash     | H-bond dashes.    |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#help"></h3>
-
-### Help:
+<h3 name="#help">Help:</h3>
 | Tab trigger                | Description                                                                |
 |:---------------------------|:---------------------------------------------------------------------------|
 | printDoc                   | Print document string of a function.                                       |
 | writeCommandReference2HTML | Write the command reference to html file in the present working directory. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#label"></h3>
-
-### Label:
+<h3 name="#label">Label:</h3>
 | Tab trigger    | Description                                        |
 |:---------------|:---------------------------------------------------|
 | labelCAs       | Label the CA atoms with the Ala333 style format    |
@@ -1786,53 +1764,45 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | labelWatersHOH | Label waters HOH.                                  |
 | labelWatersW   | Label waters W.                                    |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
 
-<h3 name="#labelFormat"></h3>
-
-### Label format:
+<h3 name="#labelFormat">Label format:</h3>
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | sigang        | Set angle labels to display 2 decimals places |
 | sigdist       | Set distance labels to display 2 decimals     |
 
-<A href=#categories>Return to list of snippet categories above.</A>>
+<a href=#categories>Return to list of snippet categories above.</a>>
 
 
-<h3 name="#labelPlacement"></h3>
-
-### Label placement:
+<h3 name="#labelPlacement">Label placement:</h3>
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | centerpi      | Center pi.    |
 | pseudolabel   | Position label with pseudoatom. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#measureSurfaceArea"></h3>
-
-### Measurement surface area:
+<h3 name="#measureSurfaceArea"> Measurement surface area: </h3>
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | ms            | Measure surface area. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#molecularRepresentation"></h3>
-
-### Molecular representation:
+<h3 name="#molecularRepresentation"> Molecular representation: </h3>
 | Tab trigger             | Description                                                                                    |
 |:------------------------|:-----------------------------------------------------------------------------------------------|
-| ao                      | Ambient occlussion.                                                                            |
+| ao                      | Ambient occlusion.                                                                             |
 | bs                      | Ball and stick representation.                                                                 |
 | cspheres                | Colored spheres.                                                                               |
 | discreteCartoonColoring | Turn on discrete colors between secondary structure elements.                                  |
 | doubleBond              | Valence bond.                                                                                  |
-| ellipcol                | Set thermal ellipsoid color.                                                                           |
+| ellipcol                | Set thermal ellipsoid color.                                                                   |
 | filledRing              | Filled rings in nucleic acids.                                                                 |
 | fog                     | Blur the background atoms.                                                                     |
 | loadPDBbs               | Load PDB ball-and-stick.                                                                       |
@@ -1841,67 +1811,60 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | pearl                   | The pearl effect is made with two spheres with the outer sphere being transparent.             |
 | puttyCartoon            | Create a putty cartoon.                                                                        |
 | ringMode                | Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.                    |
-| rmwater                 | Remove waters from molecular object.                                                           |
+| rmwater                 | Remove waters from the molecular object.                                                       |
 | saxsEnvelope            | Display SAXS envelope                                                                          |
 | sc111                   | Display all symmetry mates in one unit cell. Uses <em>supercell.py</em> in <em>$HOME/Scripts/PyMOLscripts/.</em> |
 | scaleRadiusColor        | Scale the radius and color of atoms as spheres by property in the B-value column.              |
 | setcolor                | Set color name to a RGB code.                                                                  |
 | sidehChainHelper        | In cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
-| solventRadius           | Set radius of ball used to make solvent accessible surface.                                    |
+| solventRadius           | Set radius of ball used to make a solvent-accessible surface.                                  |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="#printCoordinates"></h3>
-
-### Print coordinates of selection:
+<h3 name="#printCoordinates"> Print coordinates of selection:</h3>
 | Tab trigger    | Description      |
 |:---------------|:-----------------|
 | getCoordinates | Get coordinates. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="#printSequence"></h3>
 
-### Print sequence:
+<h3 name="#printSequence">Print sequence:</h3>
 | Tab trigger   | Description                |
 |:--------------|:---------------------------|
 | fasta         | Print Fasta from PDB file. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="#pymolrc"></h3>
 
-### Pymolrc:
+<h3 name="#pymolrc">Pymolrc:</h3>
 | Tab trigger   | Description                                               |
 |:--------------|:----------------------------------------------------------|
 | antialias     | Set antialias to get smooth edges                         |
-| fetchPath     | Set path for location to save fetched pdb files.          |
+| fetchPath     | Set path for the location to save fetched pdb files.      |
 | lspymolrc     | Print list of active pymolrc files.                       |
-| setpath       | Set additional path for PyMOL to search on startup        |
-| sigDigits     | Set number of decimals places to show in distance labels. |
+| setpath       | Set an additional path for PyMOL to search on startup.    |
+| sigDigits     | Set the number of decimals places to show in distance labels. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="#timestamp"></h3>
 
-### Save png flle with timestamp:
+<h3 name="#timestamp">Save png flle with timestamp:</h3>
 | Tab trigger   | Description                  |
 |:--------------|:-----------------------------|
-| spng          | Save png flle with timestamp |
-| spse          | Save pse flle with timestamp |
+| spng          | Save png file with timestamp. |
+| spse          | Save pse file with timestamp. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#selection"></h3>
-
-### Selection:
+<h3 name="#selection">Selection:</h3>
 | Tab trigger          | Description                                                  |
 |:---------------------|:-------------------------------------------------------------|
 | duplicateObject      | Duplicate object.                                            |
 | extractPartObj       | Create a new object from part of an existing object.         |
-| hideSelection        | Turn off magenta squares on current selection.               |
-| selectAllBut         | Select all nitrogen atom in a selection except from lysine.  |
+| hideSelection        | Turn off magenta squares on the current selection.           |
+| selectAllBut         | Select all nitrogen atoms in a selection except from lysine.  |
 | selectAtomsAround    | Select atoms within a radius around a ligand.                |
 | selectChain          | Select a chain.                                              |
 | selectElement        | Select atoms by element.                                     |
@@ -1914,32 +1877,27 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | selectStrands        | Select atoms by beta strands.                                |
 | undoSelection        | Undo a selection.                                            |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="#specializedFigure"></h3>
-
-### Specialized figure:
+<h3 name="#specializedFigure">Specialized figure:</h3>
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | bu            | Biological unit.      |
 | stack         | Base-stacking figure. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<h3 name="#stereo"></h3>
 
-### Stereo:
+<h3 name="#stereo"> Stereo: </h3>
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | stereoDraw    | Stereo draw.  |
 | stereoRay     | Stereo ray.   |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#supercell"></h3>
-
-### Unit cell display:
+<h3 name="#supercell">Unit cell display:</h3>
 | Tab trigger   | Description                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|
 |sc111     	   	|Make a lattice of 1 x 1 x 1 unit cells.  				                             |
@@ -1951,46 +1909,41 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 |sc133          |Make a lattice of 1 x 3 x 3 unit cells.                            				   |
 |sc333          |Make a lattice of 3 x 3 x 3 unit cells.                                       |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#waterPentagon"></h3>
+<h3 name="#waterPentagon">Water pentagon:</h3>
 
-### Water pentagon:
 | Tab trigger   | Description            |
 |:--------------|:-----------------------|
 | waterTriple   | triple water pentagon. |
 
+<a href=#categories>Return to list of snippet categories above.</a>
 
-<A href=#categories>Return to list of snippet categories above.</A>
 
+<h3 name="#saltBridge">Salt-bridge:</h3>
 
-<h3 name="#saltBridge"></h3>
-
-### salt-bridge:
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | his31asp70    | Asp70-His31 salt-bridge from T4 lysozyme. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#selection"></h3>
+<h3 name="#selection"> Selection:</h3>
 
-### selection:
 | Tab trigger   | Description                     |
 |:--------------|:--------------------------------|
 | ligandSelect  | Make selection of ligand atoms. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
 
 
-<h3 name="#workshop"></h3>
+<h3 name="#workshop"> Workshop:</h3>
 
-### workshop:
 | Tab trigger      | Description                        |
 |:-----------------|:------------------------------------------------------------------------|
-| internalGUImode2 | Make the background of the internal gui transparent to expand viewport. |
-| internalGUIwidth | Set the width of the internal gui. |
+| internalGUImode2 | Make the background of the internal GUI transparent to expand viewport. |
+| internalGUIwidth | Set the width of the internal GUI. |
 
-<A href=#categories>Return to list of snippet categories above.</A>
+<a href=#categories>Return to list of snippet categories above.</a>
