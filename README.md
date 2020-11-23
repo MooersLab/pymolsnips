@@ -248,7 +248,7 @@ Our second tier of text editors includes would be Sublime Text, Textmate, and At
 You might also consider <em>Geany</em>.
 It is very lightweight, very fast, and very easily configurable.
 It is a good editor if you care about agility.  
-See the following for second opinions on the best Python editor [beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and for all [users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
+See the following for second opinions on the best Python editor [for beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and [for all users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
 Note that the <em>thonny</em> editor that was recommended for beginners is more of a training tool than a productive tool.
 It does not support code snippets, yet.
 
@@ -292,12 +292,12 @@ Click install.
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/atomPyLanguageInstall.gif"></p>
 
 The snippets for all programming languages are stored in a single file that is called <em>snippets.cson</em>.
-The snippets for different lanaguages are separated by the first line of a snippet library for a specific language.
-This line contains a spefication of the scope.
-That is, the kinds of script files to which a set of snippets applies.
+The snippets for different languages are separated by the first line of a snippet library for a specific language.
+This line contains a specification of the scope.
+That is the kinds of script files to which a set of snippets applies.
 The <em>snippets.cson</em> file is stored in a hidden folder on your home directory called <em>~.atom/snippets.cson</em>.
 
-You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for *Atom* to your existing `snippets.cson` file.
+You can concatenate [this](https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips) file of PyMOL snippets for <em>Atom</em> to your existing <em>snippets.cson/em> file.
 
 To do this, Mac users enter:
 
@@ -320,7 +320,7 @@ Below is an example of the <em>threeMaps</em> snippet and a demonstration of its
 
 <h2 name="bbedit"> BBEdit (Mac only) </h2>
 
-[*BBEdit*](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
+[<b>BBEdit</b>](https://www.barebones.com/products/bbedit/index.html) requires a license and a one-time fee.
 Major upgrades require additional fees. You will need macOS 10.14.2 or later. 
 
 The snippet system for <em>BBedit</em> is simple and elegant.
@@ -346,10 +346,10 @@ There is also presently the lack of a PyMOL lexer for syntax highlighting.
 
 <h2 name="brackets"> Brackets (Universal) </h2>
 
-The development of [<b>Brackets</b>](http://brackets.io) is lead by a team at Adobe.
+The development of [<em>Brackets</em>](http://brackets.io) is lead by a team at Adobe.
 *Brackets* was designed for web developers with a focus on HTML, CSS, and JavaScript.
 However, <em>Brackets</em> now has support for a large number of languages.
-<em>Brackets</em> provides a Quick Edit and Live Preview mode that run simultaneously, so changes in the pml code are dispayed immediately in the preview window.
+<em>Brackets</em> provides a Quick Edit and a Live Preview mode that run simultaneously, so changes in the <em>pml</em> code are dispayed immediately in the preview window.
 
 <em>Brackets</em> has icons, located on the right panel, for navigating to the interactive settings on the application.
 The zig-zag line launches the Live Preview.
@@ -370,7 +370,7 @@ The light bulb icon will now appear in the right panel.
 Click on the light bulb to open the <b>Snippets Manager</b>.
 
 The <b>settings</b> tab opens a menu with an import button.
-Click import and choose the [`bracketspymolsnips.yml`](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page.
+Click <b>import</b> and choose the [<em>bracketspymolsnips.yml</em>](https://github.com/MooersLab/pymolsnips/tree/master/bracketspymolsnips) file that is available at the top of this page.
 You have to download the file to your computer.
 
 All of the snippets for PyMOL are in this single file.
@@ -391,19 +391,19 @@ This is helpful when you cannot remember the short-hand for a snippet.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/gifs/bracketsSnipsUse.gif"></p>
 
-Unfortunately, *Brackets* does not currently support tab stops.
+Unfortunately, <em>Brackets</em> does not currently support tab stops.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 <h2 name="cudatext"> CudaText (Universal)</h2>
 
-[*CudaText*](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
+[<b>CudaText</b>](http://uvviewsoft.com/cudatext/) is a free, cross-platform editor that is written in Lazarus, a variant of Pascal.
 <em>Cudatext</em> is open source.
 Its predecessor was <em>SynWrite</em>, which is no longer supported.
 <em>CudaText</em> has numerous plugins available to it.
-A PyMOL lexer and PyMOL snippets are available through the *CudaText* add-ons manger (thank you Alexey T.!).
-The documentation for *CudaText* is located [here](http://wiki.freepascal.org/CudaText).
+A PyMOL lexer and PyMOL snippets are available through the <em>CudaText</em> add-ons manager (thank you Alexey T.!).
+The documentation for <em>CudaText</em> is located [here](http://wiki.freepascal.org/CudaText).
 
 <h3>Installing and using snippets with CudaText</h3>
 
@@ -422,7 +422,7 @@ You may have to create the <em>Std.PML</em> folder by giving the following bash 
 <code>$ mkdir ./Library/Application\ Support/CudaText/data/snippets/Std.PML/</code>
 
 When executing <em>CudaText</em> for the first time on Windows, it will prompt you with the need for the extraction of files.
-Proceed with the extraction and choose where you want the files to be extracted to.
+Proceed with the extraction and choose where you want the files to be extracted.
 I chose to store it under <code>C:\Users\YOURUSERNAME\AppData\Roaming\CudaText</code> where I created the folder CudaText.
 
 Create the <em>Std.PML</em> sub directory under <code>C:\Users\YOURUSERNAME\AppData\Roaming\CudaText\data\snippets</code>.
@@ -459,7 +459,7 @@ Richard Stallman stepped away from the project in 2008, and others took over the
 This plan will greatly extend the lifetime of this software project.
 
 <em>Emacs</em> has been around for 45 years.
-According to Lindy's Law, the future life expectancy of a technology is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
+According to Lindy's Law, the future life expectancy of a software program is proportional to its current age, so every additional period of survival implies a longer remaining life expectancy.
 This law suggests that <em>Emacs</em> should be around for another 45 years.
 
 Over 100 other variants of <em>Emacs</em> are available.
@@ -475,12 +475,12 @@ They are similar to <em>Spacemacs</em>.
 
 For several reasons, we recommend becoming productive in GNU <em>Emacs</em> first before trying the <em>Emacs</em> variants.
 First, the on-line resources that support mastery of GNU <em>Emacs</em> are far greater than the resources that support the variants.
-Second, the documentation for the variants assume a significant amount of prior knowledge of GNU <em>Emacs</em>.
+Second, the documentation for the variants assumes a significant amount of prior knowledge of GNU <em>Emacs</em>.
 Third, these variants run on top of GNU <em>Emacs</em>.
 
 It takes one to two weeks of nibbling away at <em>Emacs</em> tutorials to become productive at text editing in <em>Emacs</em>.
 There is a built-in tutorial in <em>Emacs</em> as well as many on-line tutorials.
-Visually appealing tutorial is available [here](https://www.gnu.org/software/emacs/tour/).
+A visually appealing tutorial is available [here](https://www.gnu.org/software/emacs/tour/).
 
 It takes several months to become competent in <em>Emacs</em>.
 It takes a life-time to master <em>Emacs</em> hence <em>Emacs</em> is known as a <b>life-time editor</b>.
@@ -491,7 +491,7 @@ As a beginner, you should ease off editing your <em>init.el</em> file if it has 
 A good practice is to add one package at a time and master each added package before adding another new package.
 
 I find that editing of <em>init.el</em> file occurs in widely spaced bouts.
-Once everything is working to your satisfication, there may be long periods of productivity during which there is no compelling need to fiddle with the <em>init.el</em> file.
+Once everything is working to your satisfaction, there may be long periods of productivity during which there is no compelling need to fiddle with the <em>init.el</em> file.
 
 Many <em>Emacs</em> users have shared their <em>init.el</em> files on GitHub.
 These can provide inspiration for the beginner.
@@ -501,7 +501,7 @@ Many of the add-on packages add functionalities that are not available in other 
 The vast group of active contributors to <em>Emacs</em> will probably keep it in the lead for a long time into the future.
 
 Like PyMOL, GNU <em>Emacs</em> was designed to be highly extensible.
-This is large part of its popularity.
+This is a large part of its popularity.
 Over 4600 packages have been developed by users over the years.
 Several package managers, including the [melpa](https://melpa.org), greatly ease package installation.
 However, manual installation is often quite simple.
@@ -542,7 +542,7 @@ Org-mode was originally designed to be a planning and outlining tool.
 Its ease of use for outlining lead to its extension to support literate programming in numerous programming languages. 
 
 <em>Org-mode</em> has over 100 add-on packages.
-For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of bibtex entries.
+For example, the org-ref package greatly eases the retrieval of pdfs, and the creation of BibTex entries.
 The latter is done in an automated fashion by using the metadata in the pdf files.
 
 The <em>.emacs.d</em> configuration directory is a hidden directory in the home directory.
@@ -551,7 +551,7 @@ It is the home of the installed packages and plugins.
 The main configuration file resides is this directory and is named <em>init.el</em>.
 The <em>init.el</em> file is the analog of Vim's <em>.vimrc</em> configuration file.
 The commands in the <em>init.el</em> file are written in elisp.
-Fortunately, elisp is easy to edit and augment without knowing much about how to program with elisp.
+Fortunately, <em>elisp</em> is easy to edit and augment without knowing much about how to program with <em>elisp</em>.
 
 I store my configuration in a <em>config.el</em> file (see file listing at top of page).
 
@@ -585,7 +585,7 @@ The user can navigate the table to find a relevant snippet.
 This table is redundant with the ls snippet.
 
 The [<em>yasnippets</em>](https://www.emacswiki.org/emacs/Yasnippet) package is used to manage snippets in <em>Emacs</em>.
-This package is installed with a builtin package manager.
+This package is installed with a built-in package manager.
 
 Each snippet is stored in a single file.
 The files are stored in a subfolder in the hidden folder <code>~.eamcs.d/plugins/</code> in the home directory.
@@ -604,10 +604,10 @@ You enable layers to extend its functionality.
 
 <h2><em>SciMax</em></h2>
 
-[SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is a being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
+[SciMax](http://kitchingroup.cheme.cmu.edu/scimax) is being developed by the chemical engineer John Kitchin at Carnegie Mellon University.
 This variant of <em>Emacs</em> is being optimized for supporting the preparation of scientific manuscripts.
 Several YouTube videos of Professor Kitchin talking about <em>SciMax</em> are available.
-<em>SciMax</em> is on the to-be-added later list because the documentation for this project is lagging so the user has be more self-reliant.
+<em>SciMax</em> is on the to-be-added later list because the documentation for this project is lagging so the user has to be more self-reliant.
 Hence, our recommendation to become competent with <em>Gnu Emacs</em> before diving into <em>SciMax</em>.
 
 <h2><em>Prelude Emacs</em></h2>
@@ -617,13 +617,13 @@ It does not ship with evil-mode.
 This variant might be appropriate for beginners.
 You need to install <em>Gnu Emacs</em> version 26.3 first.
 The [documentation](https://prelude.emacsredux.com/en/latest/modules/python/) is on-line.
-The github page is found [here](https://github.com/bbatsov/prelude).
+The GitHub page is found [here](https://github.com/bbatsov/prelude).
 
 <h2><em>Doom Emacs</em></h2>
 
 <em>Doom Emacs</em> appears to provide more advanced features than <em>Prelude Emacs</em>.
 It may be useful to study to learn about packages or features to add to a basic <em>Gnu Emacs</em> configuration.
-I learned about moving much of the code in the init.el file to code blocks in a config.org file, which can be rendered on GitHib like a markdown file.
+I learned about moving much of the code in the init.el file to code blocks in a config.org file, which can be rendered on GitHub like a markdown file.
 The code blocks can be flanked by explanatory text, hyperlinks, tables, and figures.
 The is a great way to document and share one's <em>Emacs</em> configuration.
 
@@ -648,7 +648,7 @@ The snippets are stored in a single <em>.xml</em> file.
 
 [<em>Geany</em>](https://www.geany.org) is a free and lightweight GUI-based text editor that has been under development since 2005.
 <em>Geany</em> is written in C and C++.
-Binaries are  available for Mac OS, Linux, and Windows.
+Binaries are available for Mac OS, Linux, and Windows.
 The source code is also available.
 <em>Geany</em> has a plugin manager, and it is very easy to configure.
 
@@ -701,7 +701,7 @@ It is often available on the computers running Linux OS at national labs.
 <h3>Installing and using snippets with <em>gedit</em></h3>
 
 The pymol.lang file has to be installed first.
-Download it form the geditpymolsnips folder.
+Download it from the geditpymolsnips folder.
 
 
 <code>mkdir -p ~/.local/share/gtksourceview-3.0/language-specs</code>
@@ -725,7 +725,7 @@ Then to copy <em>pymol.xml</em> into that directory, do:
 
 <h2 name="kate"> Kate/Kwriter (Universal)</h2>
 	
-[<em>kate</em>](https://kate-editor.org/get-it/) is a free but kde dependent text editor for Linux that is now available for Mac and Windows.
+[<em>kate</em>](https://kate-editor.org/get-it/) is a free but KDE-dependent text editor for Linux that is now available for Mac and Windows.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
@@ -801,13 +801,13 @@ However, there is no mirroring of tab stops at this time.
 
 <h2 name="LightTable"> Light Table (Universal) </h2>
 	
-[<em>Light Table</em>](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is dialect of Lisp and that has a powerful macro system.
+[<em>Light Table</em>](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is a dialect of Lisp and that has a powerful macro system.
 Those users who have dabbled in <em>Emacs</em> will recognize the syntax of the settings in behavior files which remind me of <em>Emacs</em> init files.
 <em>Light Table</em> is like a GUI version of <em>Emacs</em>.
-It has very an attractive, uncluttered GUI.
+It has a very attractive, uncluttered GUI.
 
 <em>Light Table</em> supports previews that enable interactive editing of code to change the output.
-For example,the  code chunk for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
+For example, the code chunk for generating a plot is evaluated in-line and the plot is displayed in an adjacent window.
 The plugin manager can be used to install plugins, update them, and gain access to the documentation for the plugin.
 This documentation is on a GitHub website.
 
@@ -821,7 +821,7 @@ You have to be prepared to do a bit of customization to get some of the plugins 
 
 The snippets are managed through one master file per programming language.
 This central file has the file extension <em>.edn</em>.
-This file is used to set the scope fo the snippets (the programming language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension <em>.snip</em>.
+This file is used to set the scope of the snippets (the programming language) and call the snippets, especially ones with multiple lines and indenting, from individual files with the file extension <em>.snip</em>.
 
 The snippets are stored in <code>~/.lighttable/User/snippets</code>.
 You will have to create this series of nested directories.
@@ -860,10 +860,11 @@ Here is that in action!
 
 
 There is not a <em>pml</em> language available yet for <em>Light Table</em>.
-Python will have to do as the language for now.
-Use <em>.py</em> as your file extension while editing your script file in <em>Light Table</em>, and then save your script file with the <em>.pml</em> file extension.
+Select the Python lexer. 
+It will work well enough.
+To invoke the Pytho lexer, use <em>.py</em> as your file extension while editing your script file in <em>Light Table</em>, and then save your script file with the <em>.pml</em> file extension.
 
-<A href=#FASTLINKS2>Return to list of editors above.</A>
+<a href=#FASTLINKS2>Return to list of editors above.</a>
 
 
 
@@ -921,7 +922,7 @@ Then in the <em>micropymolsnips</em> directory:
 
 Enter <b>Control-Q</b> and then enter <code>help color</code> to learn about the available color schemes and to learn about syntax highlighting.
 I entered <code>set colorscheme bubblegum</code> to apply a light color scheme to <em>Micro</em> as shown below.
-A PyMOL script file has been opened and is color highlighted.
+A PyMOL script file has been opened and is color-highlighted.
 You can make the tex larger for easier reading by entering <code>cmd-+</code> a number of times.
 
 <p align="center"><img src="https://github.com/MooersLab/pymolsnips/blob/master/images/microBubblrGumColorScheme.png" width="640" height="400" alt="colorscheme"/></p>
@@ -1227,18 +1228,18 @@ This is discussed below in the minpac installation section.
 	
 To install minpac, you need to create a directory called <em>minpac</em> and install it as an optional plugin:
 
-<code>
-mkdir -p ~/.vim/pack/minpac/opt <br>
-cd ~/.vim/pack/minpac/opt <br>
+```bash
+mkdir -p ~/.vim/pack/minpac/opt
+cd ~/.vim/pack/minpac/opt
 git clone https://github.com/k-takata/minpac.git
-</code>
+```
 
 Then, add the following to your <em>.vimrc</em> file and write the file <b>:w</b>:
 
-<code>
+```bash
 packadd minpac <br>
 call minpac#init()
-</code>
+```
 
 To add a plugin using minpac you will need to add this command <code>call minpac#add('author/reponame')</code> to your <em>.vimrc</em> file.
 
@@ -1312,9 +1313,7 @@ Plugin 'Shougo/neosnippet-snippets'
 The last command is optional because installing default snippets is optional.
 If you choose not to install them, you must deactivate them with the following command added to the <em> .vimrc</em> file.
 
-```vim
-g:neosnippet#disable_runtime_snippets
-```
+<code>g:neosnippet#disable_runtime_snippets</code>
 
 A minimal <em> .vimrc</em> file for installing and using <em>Neosnippets</em> is listed below. 
 Make sure to change YOURUSERNAME to your name:
