@@ -297,7 +297,7 @@ This line contains a specification of the scope.
 That is the kinds of script files to which a set of snippets applies.
 The <em>snippets.cson</em> file is stored in a hidden folder on your home directory called <em>~.atom/snippets.cson</em>.
 
-You can concatenate <a href="https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips">this</a> file of PyMOL snippets for <em>Atom</em> to your existing <em>snippets.cson/em> file.
+You can concatenate <a href="https://github.com/MooersLab/pymolsnips/tree/master/atompymolsnips">this</a> file of PyMOL snippets for <em>Atom</em> to your existing <em>snippets.cson</em> file.
 
 To do this, Mac users enter:
 
