@@ -1262,8 +1262,8 @@ You will not be able to use these plugins until you exit and restart <em>Vim</em
 
 <h3 name="neosnippets">Neosnippets(for <em>Vim</em>, universal) </h3>
 
-[<em>Neosnippets</em>](https://github.com/Shougo/neosnippet.vim) is a snippet management plugin for the text editors <em>Vim</em> and <em>neovim</em>.
-<em>Neosnippets</em> is similar to <em>SnipMate</em> except with <em>Neosnippets</em>, there is the option to utilize [<em>deoplete</em>](https://github.com/Shougo/deoplete.nvim) interface to suggest in-line alternate snippets.
+<a href="https://github.com/Shougo/neosnippet.vim"><em>Neosnippets</em></a> is a snippet management plugin for the text editors <em>Vim</em> and <em>neovim</em>.
+<em>Neosnippets</em> is similar to <em>SnipMate</em> except with <em>Neosnippets</em>, there is the option to utilize <a href="https://github.com/Shougo/deoplete.nvim"><em>deoplete</em></a> interface to suggest in-line alternate snippets.
 The use of <em>Neosnippets</em> does not require <em>deoplete</em>.
 Experienced users may find <em>deoplete</em> pop-up menus to be distracting.
 <em>Deoplete</em> may be useful as a training tool that can be dispensable when it is no longer needed.
@@ -1374,7 +1374,7 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 <h3 name="snipmate"> SnipMate (for <em>Vim</em>, universal) </h3>
 
-[<b>SnipMate</b>](https://github.com/garbas/vim-snipmate) is an early, but stable plugin manager that provides plugin support for snippets that are available in <em>Vim</em>. 
+<a href="https://github.com/garbas/vim-snipmate"><em>SnipMate</em></a> is an early, but stable plugin manager that provides plugin support for snippets that are available in <em>Vim</em>. 
 It does not depend on Python.
 
 
@@ -1405,7 +1405,7 @@ Then run the following command in <em>Vim</em>:
 
 <h4 name="UltiSnips"> UltiSnips (for <em>Vim</em>, universal) </h4>
 
-[<em>UltiSnips</em>](https://github.com/SirVer/ultisnips) is a more recent plugin manager that depends on Python3.
+<a href="https://github.com/SirVer/ultisnips"><em>UltiSnips</em></a> is a more recent plugin manager that depends on Python3.
 <em>Vim</em> has to be installed with the option of using Python3 enabled to be able to use <em>UltiSnips</em>.
 The <em>UltiSnips</em> plugin is the snippet handling engine.
 It provides a large number of advanced snippet features.
@@ -1558,11 +1558,10 @@ let g:UltiSnipsSnippetDirectories=['/Users/blaine/.vim/my-snippets/Ultisnips','U
 
 There are a number of videos on YouTube about using UltiSnips.
 The developer of UltiSnips, SirVer (aka Holger Rapp) has a series of four videos that you are highly recommended.
-The links to these videos are found in the README.md file of the [UltiSnips GitHub Repository](https://github.com/sirver/UltiSnips).
+The links to these videos are found in the README.md file of the <a href="https://github.com/sirver/UltiSnips"><em>UltiSnips GitHub Repository</em></a>.
+However, for a faster introduction to UltiSnips, I recommend watching the video <a href="https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo"><em>How I Use the UltiSnips VIM Plugin To Make Better Snippets</em></a> by Bryan Jenks.
 
-However, for a faster introduction to UltiSnips, I recommend watching the video [How I Use the UltiSnips VIM Plugin To Make Better Snippets](https://www.youtube.com/watch?v=F9Wss9GkF9Q&feature=emb_logo) by Bryan Jenks.
-
-If you are an experienced snippet user and want to add intelliSense-like autocompletion of the snippet names in <em>Vim</em>, take a look at [Conquerer of Completion](https://github.com/neoclide/coc.nvim) by Qiming Zhao.
+If you are an experienced snippet user and want to add intelliSense-like autocompletion of the snippet names in <em>Vim</em>, take a look at <a href="https://github.com/neoclide/coc.nvim"><em>Conquerer of Completion</em></a> by Qiming Zhao.
 They claim that their package will bring a <em>VSC</em>-like experience to <em>Vim</em>.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
@@ -1570,7 +1569,7 @@ They claim that their package will bring a <em>VSC</em>-like experience to <em>V
 
 <h3 name="VisualStudioCode"> Visual Studio Code (Universal)</h3>
 
-[<em>Visual Studio Code</em>](https://code.visualstudio.com) (VSC) is a free text editor that was recently bought by Microsoft.
+<a href="https://code.visualstudio.com"><em>Visual Studio Code</em></a> (VSC) is a free text editor that was recently bought by Microsoft.
 Its start-up speed is between that of <em>Sublime Text 3</em> and <em>Atom</em>.
 It is still under exponentially rapid development.
 It is easily enhanced with extensions.
@@ -1597,7 +1596,7 @@ The latter feature is very helpful for avoiding the insertion of the wrong snipp
 Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system.
 A prompt should pop-up during your first launch of <em>VSC</em>. Install this.
 
-From the above folder <em>vscpymolsnips</em>, download and move the file <em>pml.json</em> to <em>~/Library/Application\ Support/Code/User/snippets</em> on the Mac; on windows,<em>$HOME/APPDATA\Roaming\Code\User\snippets\pml.json</em>; on Linux, <em>$HOME/.config/Code/User/snippets/pml.json</em>.
+From the above folder <em>vscpymolsnips</em>, download and move the file <em>pml.json</em> to <code>~/Library/Application\ Support/Code/User/snippets</code> on the Mac; on windows,<code>$HOME/APPDATA\Roaming\Code\User\snippets\pml.json</code>; on Linux, <code>$HOME/.config/Code/User/snippets/pml.json</code>.
 
 For Mac users in the <em>vscpymolsnips</em> folder:
 
@@ -1851,7 +1850,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | ringMode                | Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.                    |
 | rmwater                 | Remove waters from the molecular object.                                                       |
 | saxsEnvelope            | Display SAXS envelope                                                                          |
-| sc111                   | Display all symmetry mates in one unit cell. Uses <em>supercell.py</em> in <em>$HOME/Scripts/PyMOLscripts/.</em> |
+| sc111                   | Display all symmetry mates in one unit cell. Uses <em>supercell.py</em> in <code>$HOME/Scripts/PyMOLscripts/.</code> |
 | scaleRadiusColor        | Scale the radius and color of atoms as spheres by property in the B-value column.              |
 | setcolor                | Set color name to a RGB code.                                                                  |
 | sidehChainHelper        | In cartoons, hide the backbone atoms of selected residues when showing then as sticks.         |
