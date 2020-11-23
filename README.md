@@ -1642,6 +1642,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 <h3 name="analysis">Analysis:</h3>
+
 | Tab trigger    | Description                                                                          |
 |:---------------|:-------------------------------------------------------------------------------------|
 | averageB       | iFind the average B-value of a selection. Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed. |
@@ -1658,7 +1659,10 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 <a href=#categories>Return to list of snippet categories above.</a>
 
+
+
 <h3 name="changeOrientation">Change orientation:</h3>
+
 | Tab trigger   | Description                        |
 |:--------------|:-----------------------------------|
 | rotate        | Rotate about axis.                 |
@@ -1668,7 +1672,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="colorScheme">Color scheme:</h3>
+
 | Tab trigger   | Description                                    |
 |:--------------|:-----------------------------------------------|
 | cblind        | Eanble color blind friendly colors.            |
@@ -1678,7 +1684,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="coordCovalent">Coordinate covalent bonds:</h3>
+
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | coordinate    | Coordinate covalent bonds to metals. |
@@ -1694,6 +1702,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 <h3 name="electronDensity">Electron density:</h3>
+
 | Tab trigger   | Description              |
 |:--------------|:-------------------------|
 | carvedDensity | Carved electron density map. |
@@ -1704,6 +1713,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 <h3 name="fetchFile">Fetch file from PDB:</h3>
+
 | Tab trigger   | Description     |
 |:--------------|:----------------|
 | fetchCIF      | Fetch cif file. |
@@ -1713,6 +1723,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 <h3 name="fileInput">File Input:</h3>
+
 | Tab trigger   | Description                               |
 |:--------------|:------------------------------------------|
 | loadPDBfile   | Load a pdb file in the current directory. |
@@ -1721,13 +1732,17 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 <h3 name="fileOutput">File output:</h3>
+
 | Tab trigger   | Description                                                |
 |:--------------|:-----------------------------------------------------------|
 | savePNG       | Save a png file of the current scene in the viewport to the current directory. |
 
 <a href=#categories>Return to list of editors above.</a>
 
+
+
 <h3 name="formatLabel">Format label:</h3>
+
 | Tab trigger   | Description                                         |
 |:--------------|:----------------------------------------------------|
 | labelResnResi | Label CA atom with residue name and residue number. |
@@ -1737,7 +1752,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="hbonds">H-bonds:</h3>
+
 | Tab trigger   | Description       |
 |:--------------|:------------------|
 | distance      | H-bond distances. |
@@ -1748,7 +1765,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#help">Help:</h3>
+
 | Tab trigger                | Description                                                                |
 |:---------------------------|:---------------------------------------------------------------------------|
 | printDoc                   | Print document string of a function.                                       |
@@ -1757,7 +1776,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#label">Label:</h3>
+
 | Tab trigger    | Description                                        |
 |:---------------|:---------------------------------------------------|
 | labelCAs       | Label the CA atoms with the Ala333 style format    |
@@ -1770,6 +1791,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 
 <h3 name="#labelFormat">Label format:</h3>
+
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | sigang        | Set angle labels to display 2 decimals places |
@@ -1778,7 +1800,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>>
 
 
+
 <h3 name="#labelPlacement">Label placement:</h3>
+
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | centerpi      | Center pi.    |
@@ -1787,7 +1811,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#measureSurfaceArea"> Measurement surface area: </h3>
+
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | ms            | Measure surface area. |
@@ -1795,7 +1821,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#molecularRepresentation"> Molecular representation: </h3>
+
 | Tab trigger             | Description                                                                                    |
 |:------------------------|:-----------------------------------------------------------------------------------------------|
 | ao                      | Ambient occlusion.                                                                             |
@@ -1822,7 +1850,10 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 <a href=#categories>Return to list of snippet categories above.</a>
 
+
+
 <h3 name="#printCoordinates"> Print coordinates of selection:</h3>
+
 | Tab trigger    | Description      |
 |:---------------|:-----------------|
 | getCoordinates | Get coordinates. |
@@ -1830,7 +1861,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#printSequence">Print sequence:</h3>
+
 | Tab trigger   | Description                |
 |:--------------|:---------------------------|
 | fasta         | Print Fasta from PDB file. |
@@ -1838,7 +1871,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#pymolrc">Pymolrc:</h3>
+
 | Tab trigger   | Description                                               |
 |:--------------|:----------------------------------------------------------|
 | antialias     | Set antialias to get smooth edges                         |
@@ -1850,7 +1885,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#timestamp">Save png flle with timestamp:</h3>
+
 | Tab trigger   | Description                  |
 |:--------------|:-----------------------------|
 | spng          | Save png file with timestamp. |
@@ -1859,7 +1896,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#selection">Selection:</h3>
+
 | Tab trigger          | Description                                                  |
 |:---------------------|:-------------------------------------------------------------|
 | duplicateObject      | Duplicate object.                                            |
@@ -1880,7 +1919,10 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 <a href=#categories>Return to list of snippet categories above.</a>
 
+
+
 <h3 name="#specializedFigure">Specialized figure:</h3>
+
 | Tab trigger   | Description           |
 |:--------------|:----------------------|
 | bu            | Biological unit.      |
@@ -1889,7 +1931,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#stereo"> Stereo: </h3>
+
 | Tab trigger   | Description   |
 |:--------------|:--------------|
 | stereoDraw    | Stereo draw.  |
@@ -1898,7 +1942,9 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#supercell">Unit cell display:</h3>
+
 | Tab trigger   | Description                                                                  |
 |:--------------|:-----------------------------------------------------------------------------|
 |sc111     	   	|Make a lattice of 1 x 1 x 1 unit cells.  				                             |
@@ -1913,6 +1959,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#waterPentagon">Water pentagon:</h3>
 
 | Tab trigger   | Description            |
@@ -1920,6 +1967,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | waterTriple   | triple water pentagon. |
 
 <a href=#categories>Return to list of snippet categories above.</a>
+
 
 
 <h3 name="#saltBridge">Salt-bridge:</h3>
@@ -1931,6 +1979,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 <a href=#categories>Return to list of snippet categories above.</a>
 
 
+
 <h3 name="#selection"> Selection:</h3>
 
 | Tab trigger   | Description                     |
@@ -1938,6 +1987,7 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 | ligandSelect  | Make selection of ligand atoms. |
 
 <a href=#categories>Return to list of snippet categories above.</a>
+
 
 
 <h3 name="#workshop"> Workshop:</h3>
