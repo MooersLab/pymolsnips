@@ -755,13 +755,13 @@ May have to create the directory MySnippets on MacOS.
 
 <h2 name="komodo"> Komodo Edit (Universal) </h2>
 
-[<em>Komodo Edit</em>](https://www.activestate.com/products/komodo-edit/) is a proprietary program with a community version that can be used for free.
+<a href="https://www.activestate.com/products/komodo-edit/"><em>Komodo Edit</em></a> is a proprietary program with a community version that can be used for free.
 The developers of <em>Komodo Edit</em> have merged with the developers of ActiveState Python.
 The community version of <em>Komodo Edit</em> has enough features for the occasional writer of code for PyMOL.
 One fun aspect of <em>Komodo Edit</em> is the ability to use themes to customize your workspace.
 <em>Komodo Edit</em> was derived from the Mozilla Framework.
 The add-on, or extension, capabilities are the same.
-For <em>Komodo Edit</em> documentation, see [here](http://docs.activestate.com/komodo/11/).
+For <em>Komodo Edit</em> documentation, see <a href="http://docs.activestate.com/komodo/11/">here</a>.
 
 <a href=#FASTLINKS2>Return to list of editors above.</a>
 
@@ -776,7 +776,7 @@ For Mac users,
 
 <code>$ mkdir ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML</code>
 
-Then insert the snippets files from [here](https://github.com/marevebro/pymolsnips/tree/master/komodoeditpymolsnips) into this directory.
+Then insert the snippets files from <a href="https://github.com/marevebro/pymolsnips/tree/master/komodoeditpymolsnips">here</a> into this directory.
 
 <code>$ cp -a ~/pymolsnips/komodoeditpymolsnips ~/Library/Application\ Support/KomodoEdit/11.1/tools/Abbreviations/PML</code>
 
@@ -801,7 +801,7 @@ However, there is no mirroring of tab stops at this time.
 
 <h2 name="LightTable"> Light Table (Universal) </h2>
 	
-[<em>Light Table</em>](http://lighttable.com/) is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is a dialect of Lisp and that has a powerful macro system.
+<a href="http://lighttable.com/"><em>Light Table</em></a> is a highly malleable text editor that is written in ClojureScript, a programming language for the web that is a dialect of Lisp and that has a powerful macro system.
 Those users who have dabbled in <em>Emacs</em> will recognize the syntax of the settings in behavior files which remind me of <em>Emacs</em> init files.
 <em>Light Table</em> is like a GUI version of <em>Emacs</em>.
 It has a very attractive, uncluttered GUI.
@@ -829,8 +829,8 @@ Enter the following command in bash:
 
 <code>$ mkdir ~/.lighttable/User/snippets</code>
 
-Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips) folder from above.
-Move the contents of this folder <b>(not the folder)</b> to `~/.lighttable/User/snippets`.
+Download the <a href="https://github.com/MooersLab/pymolsnips/tree/master/lighttablepymolsnips"> <em>lighttablepymolsnips</em> folder from above.
+Move the contents of this folder <b>(not the folder)</b> to <code>~/.lighttable/User/snippets</code>.
 To do this:
 
 <code>$ cp -a ~/pymolsnips/lighttablepymolsnips ~/.lighttable/User/snippets/.</code>
@@ -852,7 +852,7 @@ Paste inside the square brackets the following and change the path to your Mac h
 
 Save this file.
 
-Download the [`lighttablepymolsnips`](https://github.com/MooersLab/pymolsnips#cudatext) folder from above.
+Download the <a href="https://github.com/MooersLab/pymolsnips#cudatext"><em>lighttablepymolsnips</em></a> folder from above.
 Move the contents of this folder (not the folder) to <code>~/.lighttable/User/snippets</code>.
 
 Here is that in action!
@@ -870,13 +870,15 @@ To invoke the Pytho lexer, use <em>.py</em> as your file extension while editing
 
 <h2 name="micro"> Micro (Universal) </h2>
 
-[<em>Micro</em>](https://github.com/zyedidia/micro/releases/tag/v1.4.1) is an advance on the terminal-based editor <em>nano</em>.
+<a href="https://github.com/zyedidia/micro/releases/tag/v1.4.1"><em>Micro</em></a> is an advance on the terminal-based editor <em>nano</em>.
 Nonetheless, <em>Micro</em> is easier to use than <em>Vim</em> or <em>Emacs</em>.
 Like <em>nano</em>, it uses keybindings between keyboard shortcuts and commands to get work done.
 The collection of keybinding is defined in a <em>json</em> file.
-[<em>Micro</em>](https://github.com/zyedidia/micro) has binaries available for Mac, Windows, Linux, and three flavors of BSD.
+<a href="https://github.com/zyedidia/micro"><em>Micro</em></a> has binaries available for Mac, Windows, Linux, and three flavors of BSD.
 
 <A href=#FASTLINKS2>Return to list of editors above.</A>
+
+
 
 <h3>Installing and using snippets with Micro</h3>
 
@@ -887,7 +889,7 @@ On the Mac, it is best to use <em>Micro</em> with the free iTerm terminal emulat
 
 Enter <em>Micro</em> on the command line to start the editor.
 <em>Control-E</em> opens the command line at the bottom of the terminal window.
-A list of key bindings are found [here](https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md).
+A list of key bindings are found <a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md">here</a>.
 
 Install the <em>snippets</em> plugin by entering <em>control-E</em> in micro to open a command panel, and then enter:
 
@@ -901,7 +903,7 @@ In the <em>pymolsnips</em> directory, enter:
 
 <code>$ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.</code>
 
-Snippets for other program languages are found [here](https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets).
+Snippets for other program languages are found <a href="https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets">here</a>.
 
 <ul>
 <li><b>Alt-S</b> is mapped to the <b>snippet0insert</b> command which inserts the snippet specified by a tabtrigger name.</li>
@@ -911,7 +913,7 @@ Snippets for other program languages are found [here](https://github.com/tommysh
 </ul>
 
 A lexer for syntax highlighting is in the file called <em>pml.yaml</em>.
-This file can be downloaded from the [<em>micropymolsnips</em>](https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips) folder above.
+This file can be downloaded from the <a href="https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips"><em>micropymolsnips</em></a> folder above.
 This lexer is stored in the hidden folder <code>.config/micro/syntax</code>, which you will need to create.
 
 <code>mkdir ~/.config/micro/syntax</code>
@@ -972,7 +974,7 @@ yasnippet
 
 <h2 name="SublimeText3">Sublime Text 3 (Universal)</h2>
 	
-[<em>Sublime Text 3</em>](https://www.sublimetext.com/3) is a GUI-based editor.
+<a href="https://www.sublimetext.com/3"><em>Sublime Text 3</em></a> is a GUI-based editor.
 The free trial period is infinite.
 <em>Sublime Text 3</em> starts up much faster than the other text editors for programmers.
 <em>Sublime Text 3</em> has strong support for snippets and the autocompletion of tab triggers.
@@ -1028,7 +1030,7 @@ There is a large library of plugins available.
 I found it to be quite intuitive to use, fast to start-up, and very robust.
 It is the editor that I use most frequently.
 
-The 2007 book [<em>TextMate Power Editing for the Mac</em>](https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X) by Edward Gray and the 2012 book [<em>TextMate How-To</em>](https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2) by Chris Mears provide supplemental reading to the on-line documentation.
+The 2007 book <a href="https://www.amazon.com/Textmate-James-Edward-II-Gray/dp/097873923X"><em>TextMate Power Editing for the Mac</em></a> by Edward Gray and the 2012 book <a href="https://www.amazon.com/TextMate-How-Chris-Mears-ebook/dp/B009XB55PW/ref=sr_1_2?dchild=1&keywords=TextMate+How-To&qid=1606051948&s=books&sr=1-2"><em>TextMate How-To</em></a> by Chris Mears provide supplemental reading to the on-line documentation.
 
 <em>TextMate</em>'s approach to snippets has served as a role model for other text editors.
 <em>TextMate</em> snippets can be ported to <em>Sublime Text 3</em> and <em>PyCharm</em>.
@@ -1067,15 +1069,15 @@ This editor can be used to view and change the code in the snippets.
 
 <h3 name="vim">Vim (Universal)</h3>
 
-[<em>Vim</em>](https://vimawesome.com) is the improved terminal-based text editor <em>vi</em>.
+<a href="https://vimawesome.com"><em>Vim</em></a> is the improved terminal-based text editor <em>vi</em>.
 <em>Vi</em> is very ubquitious.
 It is probably already installed on your computer.
 <em>Vim</em> enables the addition of plugins to extend what the base <em>Vim</em> can do.
-There are over 19,000 [plugins available](https://vimawesome.com/).
+There are over 19,000 <a href="https://vimawesome.com/"><em>plugins available</em></a>.
 <em>Vim</em> is free.
 
 A newer branch of <em>Vim</em>called <em>neovim</em> is also available.
-<em>Vim</em> and <em>neovim</em> are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a [stand-alone application](https://www.vim.org/download.php).
+<em>Vim</em> and <em>neovim</em> are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a <a href="https://www.vim.org/download.php"> stand-alone application</a>.
 The standard versions of both run in the terminal.
 MacVim provides a GIU version of <em>Vim</em>.
 This version of <em>Vim</em> is integrated with Mac OS.
@@ -1090,7 +1092,7 @@ So I gave up my approach using macports, and I installed Vim version 8.2.0 via <
 This version worked fine.
 It has been automatically updated to 8.2.1950 when running <em>brew update</em>.
 
-If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed, you can install <em>Vim</em> with conda as follows:
+If you have <a href="https://anaconda.org/"><em>Anaconda</em></a> or <a href="https://docs.conda.io/en/latest/miniconda.html"><em>Miniconda</em></a> installed, you can install <em>Vim</em> with conda as follows:
 
 <code>conda install -c conda-forge vim</code>
 
@@ -1098,8 +1100,8 @@ If you have [Anaconda](https://anaconda.org/) or [Miniconda](https://docs.conda.
 This process is where you spend most of your time thinking about what you have written.
 Most of the time spent <em>writing</em> is usually spent on <em>rewriting</em>.
 
-The <em>Vim</em> keybindings for text editing are so useful that have been ported to many [other applications](https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/) where the text is edited.
-For example, <em>Vim</em> key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including <em>VSC</em> and even in the on-line LaTeX editor [<em>Overleaf</em>](https://www.overleaf).
+The <em>Vim</em> keybindings for text editing are so useful that have been ported to many <a href="https://www.reddit.com/r/vim/comments/3tluqr/my_list_of_applications_with_vi_keybindings/"><em>other applications</em></a> where the text is edited.
+For example, <em>Vim</em> key bindings are available for the rival text editors <em>Emacs</em> as well as many other text editors including <em>VSC</em> and even in the on-line LaTeX editor <a href="https://www.overleaf"> <em>Overleaf</em></a>.
 There is a <em>Vim</em> keybinding extension for <em>MS Word</em> on Windows but not on Mac OS.
 This is one of many reasons why I do most of my writing in <em>Overleaf</em>.
 
