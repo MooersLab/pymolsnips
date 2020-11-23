@@ -1693,7 +1693,10 @@ In the example shown below, I am using the snippet <em>threeMaps</em>.
 
 <a href=#categories>Return to list of snippet categories above.</a>
 
+
+
 <h3 name="database">Database function:</h3>
+
 | Tab trigger   | Description                                   |
 |:--------------|:----------------------------------------------|
 | lsSnips       | List all snips by tab trigger and description |
