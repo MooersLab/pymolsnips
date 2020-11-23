@@ -248,11 +248,11 @@ Our second tier of text editors includes would be Sublime Text, Textmate, and At
 You might also consider <em>Geany</em>.
 It is very lightweight, very fast, and very easily configurable.
 It is a good editor if you care about agility.  
-See the following for second opinions on the best Python editor [for beginners](https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners) and [for all users](https://www.slant.co/topics/366/~best-python-ides-or-editors). 
+See the following for second opinions on the best Python editor <a href="https://www.slant.co/topics/18408/~python-ides-or-editors-for-beginners">for beginners</a> and <a href="https://www.slant.co/topics/366/~best-python-ides-or-editors"> for all users </a>. 
 Note that the <em>thonny</em> editor that was recommended for beginners is more of a training tool than a productive tool.
 It does not support code snippets, yet.
 
-If your favorite editor is not listed, please post an issue [here](https://github.com/MooersLab/pymolsnips/issues).
+If your favorite editor is not listed, please post an issue <a href="https://github.com/MooersLab/pymolsnips/issues">here</a>.
 I will be notified immediately by e-mail and will try to develop a snippet library for the requested editor.
 
 Note that some editors that are available as binaries only for Windows like <em>Notepad++</em> can be run on Mac OS or Linux by using wine or wine bottler.
@@ -848,7 +848,7 @@ Paste inside the square brackets the following and change the path to your Mac h
 "/Users/YOURUSERNAME/.lighttable/User/snippets"]
 </code>
 
-<em><h3>For Windows</h3></em>
+<h3>For Windows</h3>
 
 Save this file.
 
