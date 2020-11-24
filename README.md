@@ -41,7 +41,7 @@ Here are of some figures that are impossible or tedious to make via the PyMOL GU
      <tr>
 	<!-- pdb code 5d99, 27-mer RNA hairpin -->
         <td align="style='text-align:center;vertical-align:middle width:130px'">aobw</td>
-        <td align="left"><img src="./images/AOBWdsRNA.png" alt="HTML5 Icon" style="width:600px;height:600px;"> </td>
+        <td align="left"><img src="./images/AOBWdsRNA.png" alt="HTML5 Icon" style="width:364px;height:630px;"> </td>
         <td align="left"><h4>ambient occlusion</h4> <p>This is the grayscale verison of ambient occlusions. Grayscale is not an option available through a pulldown in PyMOL. This code can be applied to any molecule in the sphere representation.</p> </td>
      </tr>
      <tr>
@@ -58,7 +58,7 @@ Here are of some figures that are impossible or tedious to make via the PyMOL GU
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">carved</td>
         <td align="left"><img src="./images/carved.png" alt="HTML5 Icon" style="width:300px;height:246px;"> </td>
-        <td align="left"><h4>Carved electron density</h4> <p>A 2Fo-Fc electron density map is carved around a glycan. .</p></td>
+        <td align="left"><h4>Carved electron density</h4> <p>A 2Fo-Fc electron density map is carved around a glycan.</p></td>
      </tr>
       <tr>
         <td align="style='text-align:center;vertical-align:middle width:130px'">coordinate</td>
@@ -894,9 +894,7 @@ Enter <em>Micro</em> on the command line to start the editor.
 <em>Control-E</em> opens the command line at the bottom of the terminal window.
 A list of key bindings are found <a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md">here</a>.
 
-Install the <em>snippets</em> plugin by entering <em>control-E</em> in micro to open a command panel, and then enter:
-
-<code>plugin install snippets</code>
+Install the <em>snippets</em> plugin by entering <em>control-E</em> in micro to open a command panel, and then enter <code>plugin install snippets</code>.
 
 All of the snippets for one language are in a single file with the <em>.snippets</em> file extension.
 In this case, the file is labeled <em>pml.snippets</em>.
@@ -904,7 +902,9 @@ In this case, the file is labeled <em>pml.snippets</em>.
 The snippets are installed in the folder <code>.config/micro/plugins/snippets</code>.
 In the <em>pymolsnips</em> directory, enter:
 
+<pre>
 <code>$ cp pml.snippets ~/.config/micro/plugins/snippets/snippets/.</code>
+</pre>
 
 Snippets for other program languages are found <a href="https://github.com/tommyshem/micro-snippets-plugin/tree/master/snippets">here</a>.
 
@@ -919,11 +919,15 @@ A lexer for syntax highlighting is in the file called <em>pml.yaml</em>.
 This file can be downloaded from the <a href="https://github.com/MooersLab/pymolsnips/tree/master/micropymolsnips"><em>micropymolsnips</em></a> folder above.
 This lexer is stored in the hidden folder <code>.config/micro/syntax</code>, which you will need to create.
 
+<pre>
 <code>mkdir ~/.config/micro/syntax</code>
+</pre>
 
 Then in the <em>micropymolsnips</em> directory:
 
+<pre>
 <code>cp pml.yaml ~/.config/micro/syntax/.</code>
+</pre>
 
 Enter <b>Control-Q</b> and then enter <code>help color</code> to learn about the available color schemes and to learn about syntax highlighting.
 I entered <code>set colorscheme bubblegum</code> to apply a light color scheme to <em>Micro</em> as shown below.
@@ -964,10 +968,12 @@ Take care to use spaces and not a tab to indent yasnippet.
 The snippets are installed by the <em>yasnippets-snippets</em> package.
 You can use the following command in <em>Spacemacs</em> to install this package.
 
+<pre>
 <code>
-M-x package-install RETURM<br>
+M-x package-install RETURM
 yasnippet
 </code>
+</pre>
 
 <em>Spacemacs</em> may be more attractive to <em>vi</em> users rather than <em>Vim</em> users who cannot part with their configuration in <em>Vim</em>.
 
