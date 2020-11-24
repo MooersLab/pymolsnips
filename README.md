@@ -47,7 +47,7 @@ Here are of some figures that are impossible or tedious to make via the PyMOL GU
      <tr>
 	<!-- pdb code 5d99, 27-mer RNA hairpin -->
         <td align="style='text-align:center;vertical-align:middle width:130px'">aodbw</td>
-        <td align="left"><img src="./images/5d99aodbw.png" alt="HTML5 Icon" style="width:600px;height:600px;"> </td>
+        <td align="left"><img src="./images/U8AODBW.png" alt="HTML5 Icon" style="width:600px;height:600px;"> </td>
         <td align="left"><h4>ambient occlusion</h4> <p>This variant of ambient occulusion colors the carbon atoms black and then applies grayscale. Grayscale is not an option available through a pulldown in PyMOL. This code can be applied to any molecule in a sphere representation.</p> </td>
      </tr>
       <tr>
