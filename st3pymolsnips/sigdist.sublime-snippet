@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>sigdist</tabTrigger>
 <scope></scope>
-<description>set distance labels to display 2 decimals</description>
+<caption>set distance labels to display 2 decimals</caption>
 </snippet>

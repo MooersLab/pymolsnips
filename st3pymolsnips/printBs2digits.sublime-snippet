@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>printBs2digits</tabTrigger>
 <scope></scope>
-<description>Print B-values for a residue with the B's rounded off to two decimal places.</description>
+<caption>Print B-values for a residue with the B's rounded off to two decimal places.</caption>
 </snippet>

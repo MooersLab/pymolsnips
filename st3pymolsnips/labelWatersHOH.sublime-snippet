@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>labelWatersHOH</tabTrigger>
 <scope></scope>
-<description>Label waters HOH.</description>
+<caption>Label waters HOH.</caption>
 </snippet>

@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>github</tabTrigger>
 <scope></scope>
-<description>Print url of README.md file of the pymolsnips repository.</description>
+<caption>Print url of README.md file of the pymolsnips repository.</caption>
 </snippet>

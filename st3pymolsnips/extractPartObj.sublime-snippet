@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>extractPartObj</tabTrigger>
 <scope></scope>
-<description>Create a new object from part of an existing object.</description>
+<caption>Create a new object from part of an existing object.</caption>
 </snippet>

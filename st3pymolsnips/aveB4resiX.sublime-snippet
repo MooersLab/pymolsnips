@@ -11,5 +11,5 @@ ${0}
 ]]></content>
 <tabTrigger>aveB4resiX</tabTrigger>
 <scope></scope>
-<description>AveBResiX, prints the resiude number and the average bfactor. </description>
+<caption>AveBResiX, prints the resiude number and the average bfactor. </caption>
 </snippet>

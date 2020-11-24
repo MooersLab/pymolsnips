@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>fog</tabTrigger>
 <scope></scope>
-<description>Blur the background atoms.</description>
+<caption>Blur the background atoms.</caption>
 </snippet>

@@ -21,5 +21,5 @@ ${0}
 ]]></content>
 <tabTrigger>ao</tabTrigger>
 <scope></scope>
-<description>Ambient occlussion.</description>
+<caption>Ambient occlussion.</caption>
 </snippet>

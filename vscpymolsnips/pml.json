@@ -1,464 +1,212 @@
 {
 "ao": {
     "prefix": "ao",
-    "body": ["set_color oxygen, [1.0,0.4,0.4];",
-"set_color nitrogen, [0.5,0.5,1.0];",
-"remove solvent;",
-"as spheres;",
-"util.cbaw;",
-"bg white;",
-"set light_count,10;",
-"set spec_count,1;",
-"set shininess, 10;",
-"set specular,0.25;",
-"set ambient,0;",
-"set direct,0;",
-"set reflect,1.5;",
-"set ray_shadow_decay_factor, 0.1;",
-"set ray_shadow_decay_range, 2;",
-"unset depth_cue;",
-"ray;",
-"${0}"]
-,
-    "description": "Ambient occlussion.",
+    "body": placeHolder,
+    "caption": "Apply the ambient occlussion effect to get the photorealistic effect.",
+    "scope": "text.pml"
+},
+"sas": {
+    "prefix": "sas",
+    "body": placeHolder,
+    "caption": "Show the solvent excluded surface.",
     "scope": "text.pml"
 },
 "ellipcol": {
     "prefix": "ellipcol",
-    "body": ["set ellipsoid_color, ${1:color};","${0}"],
-    "description": "Set ellipsoid color.",
+    "body": placeHolder,
+    "caption": "Set ellipsoid color.",
     "scope": "text.pml"
 },
 "sigdist": {
     "prefix": "sigdist",
-    "body": ["set label_distance_digits, ${1:2}",
-"{$0}"],
-    "description": "set distance labels to display 2 decimals",
+    "body": placeHolder,
+    "caption": "set distance labels to display 2 decimals",
     "scope": "text.pml"
 },
 "sigang": {
     "prefix": "sigang",
-    "body": ["set label_angle_digits, ${1:2};","${0}"],
-    "description": "Set angle labels to display 2 decimals places",
+    "body": placeHolder,
+    "caption": "Set angle labels to display 2 decimals places",
     "scope": "text.pml"
 },
 "bs": {
     "prefix": "bs",
-    "body": ["show sticks;",
-"set stick_radius, 0.12;",
-"set stick_ball, on;",
-"set stick_ball_ratio, 1.9;",
-"show nb_spheres;",
-"set nb_spheres_size=0.33;",
-"$0"]
-,
-    "description": "Ball and stick representation. ",
+    "body": placeHolder,
+    "caption": "Ball and stick representation. ",
     "scope": "text.pml"
 },
 "stack": {
     "prefix": "stack",
-    "body": ["delete all;",
-"fetch ${1:4PCO}, type=pdb,async=0;",
-"select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );",
-"hide everything, element h; ",
-"remove not ${2:G2G3};",
-"bg_color white;",
-"show sticks;",
-"set stick_radius=0.14;",
-"set stick_ball, on; ",
-"set stick_ball_ratio,1.9;",
-"set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);",
-"hide everything, element H;",
-"select carbon1, element C and (resi ${4:3} or resi ${5:8}) ",
-"# select lower base pair;",
-"select carbon2, element C and (resi ${3:2} or resi ${6:9}) ",
-"#select upper base pair;",
-"color gray70,carbon1;",
-"color gray10,carbon2;",
-"space cmyk;",
-"distance hbond1,/${1:4PCO}//B/U`9/N3,/${1:4PCO}//A/G`2/O6;",
-"distance hbond2,/${1:4PCO}//B/U`9/O2,/${1:4PCO}//A/G`2/N1;",
-"distance hbond3,/${1:4PCO}//A/U`3/N3,/${1:4PCO}//B/G`8/O6;",
-"distance hbond4,/${1:4PCO}//A/U`3/O2,/${1:4PCO}//B/G`8/N1;",
-"color black, hbond1;",
-"color black, hbond2;",
-"color gray70, hbond3;",
-"color gray70, hbond4;",
-"show nb_spheres;",
-"set nb_spheres_size, 0.35;",
-"hide labels;",
-"ray 1600,1000;",
-"png ${1:4PCO}.png;",
-"$0"]
-,
-    "description": "Base-stacking figure.",
+    "body": placeHolder,
+    "caption": "Base-stacking figure.",
     "scope": "text.pml"
 },
 "bu": {
     "prefix": "bu",
-    "body": ["run ~/Scripts/PyMOLScripts/quat.py;",
-"quat;",
-"${0}"],
-    "description": "Biological unit.",
+    "body": placeHolder,
+    "caption": "Generate the biological unit using the quat.py script.",
     "scope": "text.pml"
 },
 "doubleBond": {
     "prefix": "doubleBond",
-    "body": ["set valence, 1; ",
-"set valence_mode, 1;",
-"${0}"],
-    "description": "Valence bond. ",
+    "body": placeHolder,
+    "caption": "Valence bond. ",
     "scope": "text.pml"
 },
 "cblind": {
     "prefix": "cblind",
-    "body": ["run ~/Pymol-script-repo/colorblindfriendly.py;",
-"as cartoon;",
-"color cb_red, ss H;",
-"color cb_yellow,ss S;",
-"color cb_green, ss L+; ",
-"$0"],
-    "description": "Color blindness.",
+    "body": placeHolder,
+    "caption": "Apply color blind friendly to ribbon diagrams.",
     "scope": "text.pml"
 },
 "centerpi": {
     "prefix": "centerpi",
-    "body": ["pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;"
-"dist pi_cent////ps1, b/${4:U`15}/${5:aaa};"
-"$0"]
-,
-    "description": "Center pi.",
+    "body": placeHolder,
+    "caption": "Center pi.",
     "scope": "text.pml"
 },
 "cribbon": {
     "prefix": "cribbon",
-    "body": ["as cartoon;",
-"color red, ss H;",
-"color yellow,ss S;",
-"color green, ss L+;",
-"$0"],
-    "description": "Color ribbon H red, strand yellow, loop green.",
+    "body": placeHolder,
+    "caption": "Color ribbon H red, strand yellow, loop green.",
     "scope": "text.pml"
 },
 "cspheres": {
     "prefix": "cspheres",
-    "body": ["as spheres;",    
-"color gray30, chain %0;",    
-"color white, chain %1;",    
-"color green, name CL;",    
-"color brown, resn NAG;",    
-"color red, resi 381;",    
-"remove solvent;",    
-"unset specular;",   
-"set ray_trace_gain, 0;",    
-"set ray_trace_mode, 3;",    
-"bg_color white;",    
-"set ray_trace_color, black;",    
-"unset depth_cue;",    
-"$0"]
-,
-    "description": "Colored spheres.",
+    "body": placeHolder,
+    "caption": "Colored spheres.",
     "scope": "text.pml"
 },
 "coordinate": {
     "prefix": "coordinate",
-    "body": ["viewport 900,600;",
-"fetch 3nd4, type=pdb, async=0;",
-"run ~/Scripts/PyMOLScripts/quat.py;",
-"quat 3nd4;",
-"show sticks;",
-"set stick_radius=0.125;",
-"hide everything, name H*;",
-"bg_color white;",
-"create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));",
-"bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);",
-"bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);",
-"bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);",
-"bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);",
-"bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);    ",
-"distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);",
-"distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);",
-"distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);",
-"distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);",
-"show nb_spheres;",
-"set nb_spheres_size, .35;",
-"distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;",
-"distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;",
-"distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O",
-"distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;",
-"distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;",
-"distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;",
-"distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;",
-"distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;",
-"distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;",
-"distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;",
-"distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;",
-"distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;",
-"distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;",
-"distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6",
-"distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;",
-"distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;",
-"distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;",
-"distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;",
-"set depth_cue=0;",
-"set ray_trace_fog=0;",
-"set dash_color, black;",
-"set label_font_id, 5;",
-"set label_size, 36",
-"set label_position, (0.5, 1.0, 2.0)",
-"set label_color, black;",
-"set dash_gap, 0.2;",
-"set dash_width, 2.0;",
-"set dash_length, 0.2;",
-"set label_color, black;",
-"set dash_gap, 0.2",
-"set dash_width, 2.0",
-"set dash_length, 0.2;",
-"select carbon, element C;",
-"color yellow, carbon;",
-"disable carbon;",
-"set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)",
-"$0"],
-    "description": "Coordinate covalent bonds to metals and H-bonds friom RNA.",
+    "body": placeHolder,
+    "caption": "Coordinate covalent bonds to metals and H-bonds from RNA.",
     "scope": "text.pml"
 },
 "distance": {
     "prefix": "distance",
-    "body": ["distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B,} ${3:/rcsb074137//B/IOD`605/I`A}","${0}"],
-    "description": "H-bond distances.",
+    "body": placeHolder,
+    "caption": "H-bond distance between a H-bond donor and acceptor.",
     "scope": "text.pml"
 },
 "drawHbonds": {
     "prefix": "drawHbonds",
-    "body": ["hide everything, hydrogens;",
-"hide labels;",
-"set dash_color, ${1:black};", 
-"set dash_gap, 0.4;",
-"set dash_radius, 0.08;",
-"$0"]
-,
-    "description": "Draw H-bonds. ",
+    "body": placeHolder,
+    "caption": "Display H-bonds as dashes colored black. ",
     "scope": "text.pml"
 },
-"carvedDensity": {
-    "prefix": "carvedDensity",
-    "body": ["delete all;",
-"fetch 4dgr, async=0;",
-"fetch 4dgr, type=2fofc,async=0;",
-"select LongGlycan, resi 469:477;",
-"orient LongGlycan;",
-"remove not LongGlycan;",
-"remove name H*;",
-"isomesh 2fofcmap, 4dgr_2fofc, 1, LongGlycan, carve = 1.8;",
-"color density, 2fofcmap;", 
-"show sticks;",
-"show spheres;",
-"set stick_radius, .07;",
-"set sphere_scale, .19;",
-"set sphere_scale, .13, elem H;",
-"set bg_rgb=[1, 1, 1];",
-"set stick_quality, 50;",
-"set sphere_quality, 4;",
-"color gray85, elem C;",
-"color red, elem O;",
-"color slate, elem N;",
-"color gray98, elem H;",
-"set stick_color, gray50;",
-"set ray_trace_mode, 1;",
-"set ray_texture, 2;",
-"set antialias, 3;",
-"set ambient, 0.5;",
-"set spec_count, 5;",
-"set shininess, 50;",
-"set specular, 1;",
-"set reflect, .1;",
-"set dash_gap, 0;",
-"set dash_color, black;",
-"set dash_gap, .15;",
-"set dash_length, .05;",
-"set dash_round_ends, 0;",
-"set dash_radius, .05;",
-"set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);",
-"preset.ball_and_stick("all",mode=1);",
-"draw;",
-"${0}"]
-,
-    "description": "Carved electron density. ",
+"carvedIsomesh": {
+    "prefix": "carvedIsomesh",
+    "body": placeHolder,
+    "caption": "Carved isomesh representation of electron density. ",
     "scope": "text.pml"
 },
-"fetch2FoFc": {
-    "prefix": "fetch2FoFc",
-    "body": ["fetch ${1:3nd4}, type=2fofc, async=0;",
-"$0"],
-    "description": "Fetch 2FoFc map.",
+"fetch2FoFcIsomesh": {
+    "prefix": "fetch2FoFcIsomesh",
+    "body": placeHolder,
+    "caption": "Fetch 2FoFc map as an isomesh.",
     "scope": "text.pml"
 },
 "fetchCIF": {
     "prefix": "fetchCIF",
-    "body": ["fetch ${1:3nd4}, type=cif, async=0;",
-"$0"]
-,
-    "description": "Fetch cif file.",
+    "body": placeHolder,
+    "caption": "Fetch cif file.",
     "scope": "text.pml"
 },
 "fetchFoFc": {
     "prefix": "fetchFoFc",
-    "body": ["fetch ${1:3nd4}, type=fofc, async=0;",
-"$0"],
-    "description": "Fetch fofc map.",
+    "body": placeHolder,
+    "caption": "Fetch fofc map.",
     "scope": "text.pml"
 },
 "filledRing": {
     "prefix": "filledRing",
-    "body": ["show sticks;set cartoon_ring_mode, 3;",
-"set cartoon_ring_finder, 1;",
-"set cartoon_ladder_mode, 1;",
-"set cartoon_nucleic_acid_mode, 4;",
-"set cartoon_ring_transparency, 0.5;",
-"as cartoon;",
-"$0"],
-    "description": "Filled rings in nucleic acids. ",
+    "body": placeHolder,
+    "caption": "Filled rings in nucleic acids. ",
     "scope": "text.pml"
 },
 "getCoordinates": {
     "prefix": "getCoordinates",
-    "body": ["print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');",
-"$0"]
-,
-    "description": "Get coordinates. ",
+    "body": placeHolder,
+    "caption": "Get coordinates. ",
     "scope": "text.pml"
 },
 "hbonddash": {
     "prefix": "hbonddash",
-    "body": ["hide everything, hydrogens;",
-"hide labels;",
-"set dash_color, black;", 
-"set dash_gap, 0.4;",
-"set dash_radius, 0.08;",
-"$0"],
-    "description": "H-bond dashes.",
-    "scope": "text.pml"
-},
-"hbond": {
-    "prefix": "hbond",
-    "body": ["hide everything, hydrogens;",
-"hide labels;",
-"set dash_color, black;", 
-"set dash_gap, 0.4;",
-"set dash_radius, 0.08;",
-"$0"],
-    "description": "Hbond setup. ",
+    "body": placeHolder,
+    "caption": "Set up H-bond dashes.",
     "scope": "text.pml"
 },
 "hidealtloc": {
     "prefix": "hidealtloc",
-    "body": ["select altconf, alt ${1:b}  # select B alternative locators;",
-"hide everything, altconf  # hide alt B locators;",
-"$0"],
-    "description": "Hide alt loc.",
+    "body": placeHolder,
+    "caption": "Hide the b alternate locator.",
     "scope": "text.pml"
 },
 "labelResnResi": {
     "prefix": "labelResnResi",
-    "body": ["label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi});",
-"$0"],
-    "description": "Label CA atom with single-letter residue name and residue number.",
+    "body": placeHolder,
+    "caption": "Label CA atom with single-letter residue name and residue number.",
     "scope": "text.pml"
 },
 "labelSS": {
     "prefix": "labelSS",
-    "body": ["alter ${1:}, ss='%1';",
-"label (%2),'%3';",
-"$0"],
-    "description": "Label SS. ",
+    "body": placeHolder,
+    "caption": "Label SS. ",
     "scope": "text.pml"
 },
 "loadPDBbs": {
     "prefix": "loadPDBbs",
-    "body": ["fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;",
-"hide (name H*);",
-"hide lines;",
-"show sticks;",
-"set stick_radius, ${2:1.2};",
-"set nb_sphere_radius, ${3:0.35};",
-"orient;",
-"$0"],
-    "description": "Load PDB ball-and-stick.",
+    "body": placeHolder,
+    "caption": "Load PDB ball-and-stick.",
     "scope": "text.pml"
 },
 "loadPDBnb": {
     "prefix": "loadPDBnb",
-    "body": ["fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;",
-"orient;",
-"set stick_radius, ${2:1.2};",
-"hide (name H*);",
-"set nb_sphere_size, ${3:0.35};",
-"set nb_spheres_quality, ${4:1};",
-"show nb_spheres;",
-"$0"],
-    "description": "Load PDB nb spheres. ",
+    "body": placeHolder,
+    "caption": "Load PDB nb spheres. ",
     "scope": "text.pml"
 },
 "ms": {
     "prefix": "ms",
-    "body": ["fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;",
-"select ${2:temp}, ${3:3nd3} and chain A;",
-"run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};",
-"calc_msms_area ${2:temp};",
-"$0"],
-    "description": "Measure surface area. ",
+    "body": placeHolder,
+    "caption": "Measure surface area of the selection with the msms_pymol.py script. ",
     "scope": "text.pml"
 },
 "molscriptRibbon": {
     "prefix": "molscriptRibbon",
-    "body": ["set cartoon_highlight_color, grey;",
-"show cartoon;",
-"set cartoon_flat_sheets, 0;",
-"set cartoon_smooth_loops, 0;",
-"set cartoon_fancy_helices, 1;",
-"$0"],
-    "description": "Molscript ribbons.",
+    "body": placeHolder,
+    "caption": "Show cartoon in the style of Molscript ribbons.",
     "scope": "text.pml"
 },
 "oneLetter": {
     "prefix": "oneLetter",
-    "body": ["one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%;",
-"$0"],
-    "description": "One letter amino acid. ",
+    "body": placeHolder,
+    "caption": "Switch from three letter code to one-letter code for amino acids. ",
     "scope": "text.pml"
 },
 "fasta": {
     "prefix": "fasta",
-    "body": ["print cmd.get_fastastr('all');",
-"${0}"],
-    "description": "Print Fasta from PDB file. ",
+    "body": placeHolder,
+    "caption": "Print Fasta from PDB file. ",
     "scope": "text.pml"
 },
 "pseudolabel": {
     "prefix": "pseudolabel",
-    "body": ["pseudoatom ${1:forLabel};",
-"label ${1:forLabel}, '%0';",
-"set label_color, ${2:red};",
-"$0"],
-    "description": "Position label with pseudoatom. ",
+    "body": placeHolder,
+    "caption": "Position label with pseudoatom. ",
     "scope": "text.pml"
 },
 "rotate": {
     "prefix": "rotate",
-    "body": ["rotate ${1:x}, ${2:45}, ${3:pept};",
-"$0"],
-    "description": "Rotate about axis.",
+    "body": placeHolder,
+    "caption": "Rotate a selection about and axis by a given angle.",
     "scope": "text.pml"
 },
 "stereoDraw": {
     "prefix": "stereoDraw",
-    "body": ["stereo walleye;",
-"set ray_shadow, off;", 
-"#draw 3200,2000;",
-"draw ${1:1600,1000};", 
-"png ${2:aaa}.png;",
-"$0"],
-    "description": "Stereo draw.",
+    "body": placeHolder,
+    "caption": "Stereo draw.",
     "scope": "text.pml"
 },
 "stereoRay": {
@@ -468,46 +216,34 @@
 "ray ${1:2400,1200};",
 "png ${2:aaa}.png;",
 "$0"],
-    "description": "Stereo ray.",
+    "caption": "Stereo ray.",
     "scope": "text.pml"
 },
-"threeMaps": {
-    "prefix": "threeMaps",
-    "body": ["load ${1:4dgr}.pdb;",
-"# Make sure to rename map file so that;",
-"# the root filename differs from pdb root filename;",
-"load ${1:4dgr}_2fofc.ccp4, 2fofc;",
-"load ${1:4dgr}_fofc.ccp4, fofc;",
-"select  ${2:glycan}, resid 200 or (resid 469:477);",
-"isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};",
-"color density, ${3:mesh1};",
-"isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};",
-"color green, ${4:mesh2};",
-"isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};",
-"color red, ${5:mesh2};",
-"${0}"],
-    "description": "Three electron density. ",
+"loadThreeMaps": {
+    "prefix": "loadThreeMaps",
+    "body": placeHolder,
+    "caption": "Three electron density as Isomesh. ",
     "scope": "text.pml"
 },
 "turnAboutAxis": {
     "prefix": "turnAboutAxis",
     "body": ["turn ${1:x},${2:90};",
 "$0"],
-    "description": "Turn about axis. ",
+    "caption": "Turn about axis. ",
     "scope": "text.pml"
 },
 "volumeRamp": {
     "prefix": "volumeRamp",
     "body": ["cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,]);",
 "$0"],
-    "description": "Volume ramp.",
+    "caption": "Volume ramp.",
     "scope": "text.pml"
 },
 "solventRadius": {
     "prefix": "solventRadius",
     "body": ["set solvent_radius, ${1:1.55};",
 "${0}"],
-    "description": "Set radius of ball used to make solvent accessible surface.",
+    "caption": "Set radius of ball used to make solvent accessible surface.",
     "scope": "text.pml"
 },
 "scaleRadiusColor": {
@@ -540,14 +276,14 @@
 "set specular_intensity , 0.25;",
 "${0}"]
 ,
-    "description": "Scale the radius and color of atoms as spheres by property in the B-value column.",
+    "caption": "Scale the radius and color of atoms as spheres by property in the B-value column.",
     "scope": "text.pml"
 },
 "rv": {
     "prefix": "rv",
     "body": ["run roundview.py;",
 "${0}"],
-    "description": "Return settings in rounded format.",
+    "caption": "Return settings in rounded format.",
     "scope": "text.pml"
 },
 "spng": {
@@ -561,7 +297,7 @@
 "end python;",
 "$0"]
 ,
-    "description": "Save png flle with timestamp",
+    "caption": "Save png flle with timestamp",
     "scope": "text.pml"
 },
 "spse": {
@@ -574,7 +310,7 @@
 "cmd.save(stemName+s+'.png');", 
 "end python;", 
 "$0"],
-    "description": "Save pse flle with timestamp",
+    "caption": "Save pse flle with timestamp",
     "scope": "text.pml"
 },
 "sc222": {
@@ -583,31 +319,26 @@
 "supercell 2, 2, 2, , orange, supercell2,1;",
 "$0"]
 ,
-    "description": "Run Tom Holder's supercell script to generate three cells in all directions.",
+    "caption": "Run supercell script to generate three cells in all directions. This script was written by Thomas Holder.",
     "scope": "text.pml"
 },
 "pearl": {
     "prefix": "pearl",
-    "body": ["create ${1:sodium2}, ${1:sodium1};",
-"set sphere_transparency, 0.4, ${1:sodium2};",
-"set sphere_scale, 1.05, ${1:sodium2};",
-"ray;"
-"$0"]
-,
-    "description": "The pearl effect is made with two spheres with the outer sphere being transparent.",
+    "body": placeHolder,
+    "caption": "The pearl effect is made with two spheres with the outer sphere being transparent.",
     "scope": "text.pml"
 },
 "fog": {
     "prefix": "fog",
-    "body": ["set fog, 0";"$0"],
-    "description": "Blur the background atoms.",
+    "body": placeHolder,
+    "caption": "Blur the background atoms.",
     "scope": "text.pml"
 },
 "rmwater": {
     "prefix": "rmwater",
     "body": ["remove resn HOH;", 
 "$0"],
-    "description": "Remove waters from molecular object.",
+    "caption": "Remove waters from molecular object.",
     "scope": "text.pml"
 },
 "setcolor": {
@@ -616,105 +347,104 @@
 "color ${1:bark}, ${5:protein};",
 "${0}"]
 ,
-    "description": "Set color name to a RGB code.",
+    "caption": "Set color name to a RGB code.",
     "scope": "text.pml"
 },
 "duplicateObject": {
     "prefix": "duplicateObject",
-    "body": ["create ${1:t4l},${2:1lw9};",
-"$0"],
-    "description": "Duplicate object.",
+    "body": placeHolder,
+    "caption": "Duplicate object.",
     "scope": "text.pml"
 },
 "selectChain": {
     "prefix": "selectChain",
     "body": ["select ${1:rna}, chain ${2:B};",
 ${0}],
-    "description": "Select a chain. ",
+    "caption": "Select a chain. ",
     "scope": "text.pml"
 },
 "selectResidues": {
     "prefix": "selectResidues",
     "body": ["select aromatic, resnphe+tyr+trp;", 
 "${0}"],
-    "description": "Select residues by name.",
+    "caption": "Select residues by name.",
     "scope": "text.pml"
 },
 "selectResi": {
     "prefix": "selectResi",
     "body": ["select se;2. resi 1-100;",
 "$0"],
-    "description": "Select residues by a range of numbers.",
+    "caption": "Select residues by a range of numbers.",
     "scope": "text.pml"
 },
 "selectElement": {
     "prefix": "selectElement",
     "body": ["select ${1:oxygen}, elem ${2:O};",
 "${0}"],
-    "description": "Select atoms by elemnt.",
+    "caption": "Select atoms by element.",
     "scope": "text.pml"
 },
 "selectName": {
     "prefix": "selectName",
     "body": ["select ${1:oxygen2}, name ${2:O2};","${0}"],
-    "description": "Select atoms by name.",
+    "caption": "Select atoms by name.",
     "scope": "text.pml"
 },
 "selectHelices": {
     "prefix": "selectHelices",
     "body": ["select ${1:helices}, ss h;","${0}"],
-    "description": "Select atoms by alpha helices.",
+    "caption": "Select atoms by alpha helices.",
     "scope": "text.pml"
 },
 "selectStrands": {
     "prefix": "selectStrands",
     "body": ["select ${1:strands}, ss s;","${0}"],
-    "description": "Select atoms by beta strands.",
+    "caption": "Select atoms by beta strands.",
     "scope": "text.pml"
 },
 "selectLoops": {
     "prefix": "selectLoops",
     "body": ["select ${1:loops},  ss l;","${0}"],
-    "description": "Select atoms by beta loops.",
+    "caption": "Select atoms by beta loops.",
     "scope": "text.pml"
 },
 "selectAllBut": {
     "prefix": "selectAllBut",
     "body": ["select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};","${0}"],
-    "description": "Select all nitrogen atom in a selelction except from lysine.",
+    "caption": "Select all nitrogen atom in a selelction except from lysine.",
     "scope": "text.pml"
 },
 "selectAtomsAround": {
     "prefix": "selectAtomsAround",
     "body": ["select ${1:nearby}, resn ${2:drug} around ${3:5};",
 "${0}"],
-    "description": "Select atoms within a radius around a ligand.",
+    "caption": "Select atoms within a radius around a ligand.",
     "scope": "text.pml"
 },
 "selectResiduesAround": {
     "prefix": "selectResiduesAround",
     "body": ["select ${1:nearby}, br. resn ${2:drug} around ${3:5};",
 "${0}"],
-    "description": "Select residues within a radius around a ligand.",
+    "caption": "Select residues within a radius around a ligand.",
     "scope": "text.pml"
 },
 "undoSelection": {
     "prefix": "undoSelection",
     "body": ["disable ${1:sele};","${0}"],
-    "description": "Undo a selection.",
+    "caption": "Undo a selection.",
     "scope": "text.pml"
 },
 "loadPDBfile": {
     "prefix": "loadPDBfile",
-    "body": ["load ${1:my.pdb};","${0}"],
-    "description": "Load a pdb file in the current directory.",
+    "body": placeHolder,
+    "caption": "Load a pdb file in the current directory.",
     "scope": "text.pml"
 },
 "savePNG": {
     "prefix": "savePNG",
     "body": ["png ${1:saveMe.png};",
 "${0}"],
-    "description": "Save a png file of current scene to the current directory.",
+    "caption": "Save a png file of current scene to the current directory.",
     "scope": "text.pml"
 },
 "ringMode": {
@@ -722,20 +452,19 @@ ${0}],
     "body": ["show cartoon, ${1:rna};", 
 "set cartoon_ring_mode, ${2:3};",
 "${0}"],
-    "description": "Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.",
+    "caption": "Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.",
     "scope": "text.pml"
 },
 "sidehChainHelper": {
     "prefix": "sidehChainHelper",
     "body": ["set cartoon_side_chain_helper, on;","${0}"],
-    "description": "In cartoons, hide the backbone atoms of selected residues when showing then as sticks.",
+    "caption": "In cartoons, hide the backbone atoms of selected residues when showing then as sticks.",
     "scope": "text.pml"
 },
 "extractPartObj": {
     "prefix": "extractPartObj",
-    "body": ["extract ${1:new_obj}, chain ${2:A};",
-"${0}"],
-    "description": "Create a new object from part of an existing object.",
+    "body": placeHolder,
+    "caption": "Create a new object from part of an existing object.",
     "scope": "text.pml"
 },
 "puttyCartoon": {
@@ -746,20 +475,19 @@ ${0}],
 "unset cartoon_flat_sheets;",
 "${0}"]
 ,
-    "description": "Create a putty cartoon.",
+    "caption": "Create a putty cartoon.",
     "scope": "text.pml"
 },
 "hideSelection": {
     "prefix": "hideSelection",
-    "body": ["indicate none;",
-"${0}"],
-    "description": "Trun off magenta squares on current selection.",
+    "body": placeHolder,
+    "caption": "Turn off magenta squares on current selection.",
     "scope": "text.pml"
 },
 "discreteCartoonColoring": {
     "prefix": "discreteCartoonColoring",
-    "body": ["set cartoon_discrete_colors, on","$0"],
-    "description": "Turn on discrete colors between secondary structure elements.",
+    "body": placeHolder,
+    "caption": "Turn on discrete colors between secondary structure elements.",
     "scope": "text.pml"
 },
 "sc111": {
@@ -768,7 +496,7 @@ ${0}],
 "supercell 1, 1, 1, , orange, supercell1, 1;", 
 "${0}"]
 ,
-    "description": "Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "caption": "Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "saxsEnvelope": {
@@ -776,7 +504,7 @@ ${0}],
     "body": ["alter ${1:refine_A_Ave_SM_015_0_370-374-0r, vdw=3.0};", 
 "set solvent_radius = 3.0;",
 "${0}"],
-    "description": "Display SAXS envelope",
+    "caption": "Display SAXS envelope",
     "scope": "text.pml"
 },
 "setpath": {
@@ -784,28 +512,25 @@ ${0}],
     "body": ["os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};",
 "$0"]
 ,
-    "description": "Set additional path for PyMOL to search on startup",
+    "caption": "Set additional path for PyMOL to search on startup",
     "scope": "text.pml"
 },
 "fetchPath": {
     "prefix": "fetchPath",
-    "body": ["set fetch_path, ${1:/Users/blaine/pdbFiles};",
-"$0"],
-    "description": "Set path for location to save fetched pdb files. ",
+    "body": placeHolder,
+    "caption": "Set path for location to save fetched pdb files. ",
     "scope": "text.pml"
 },
 "antialias": {
     "prefix": "antialias",
-    "body": ["set antialias, 1;",
-"$0"],
-    "description": "Set antialias to get smooth edges",
+    "body": placeHolder,
+    "caption": "Set antialias to on to get smoother edges.",
     "scope": "text.pml"
 },
 "lspymolrc": {
     "prefix": "lspymolrc",
-    "body": ["print invocation.options.deferred;"
-"$0"],
-    "description": "Print list of active pymolrc files.",
+    "body": placeHolder,
+    "caption": "Print list of active pymolrc files.",
     "scope": "text.pml"
 },
 "sigDigits": {
@@ -814,66 +539,55 @@ ${0}],
 "set label_angle_digits, ${2:2};",
 "$0"]
 ,
-    "description": "Set number of decimals places to show in distance labels. ",
+    "caption": "Set number of decimals places to show in distance labels. ",
     "scope": "text.pml"
 },
 "labelCAs": {
     "prefix": "labelCAs",
-    "body": ["label name CA,"%s%s" % (resn,resi);",
-"%0"]
-,
-    "description": "Label the CA atoms with the Ala333 style format",
+    "body": placeHolder,
+    "caption": "Label the CA atoms with the Ala333 style format.",
     "scope": "text.pml"
 },
 "labelWatersHOH": {
     "prefix": "labelWatersHOH",
-    "body": ["label resn HOH ,"%s%s" % (resn,resi);",
-"$0"],
-    "description": "Label waters HOH.",
+    "body": placeHolder,
+    "caption": "Label waters with HOH and their residue number.",
     "scope": "text.pml"
 },
 "labelWatersW": {
     "prefix": "labelWatersW",
-    "body": ["label resn HOH ,"W%s" % (resi);",
-"$0"]
-,
-    "description": "Label waters W.",
+    "body": placeHolder,
+    "caption": "Label waters with W and their reisude number.",
     "scope": "text.pml"
 },
 "findHbonds": {
     "prefix": "findHbonds",
-    "body": ["remove element h; distance hbonds, all, all, 3.2, mode=2;",
-"$0"],
-    "description": "Find hbonds around a residue.",
+    "body": placeHolder,
+    "caption": "Find H-bonds around a residue.",
     "scope": "text.pml"
 },
 "printBs": {
     "prefix": "printBs",
-    "body": ["remove element h; iterate resi %{1:133}, print resi, name,b;",
-"$0"],
-    "description": "Print the B-factors of a residue. ",
+    "body": placeHolder,
+    "caption": "Print the B-factors of a residue. ",
     "scope": "text.pml"
 },
 "labelMainChain": {
     "prefix": "labelMainChain",
-    "body": ["label name n+c+o+ca,"%s%s%s" % (resn,resi,name);",
-"$0"]
-,
-    "description": "Label the main chain atoms by resn,resi,atom name.",
+    "body": placeHolder,
+    "caption": "Label the main chain atoms with the following: resn,resi,atom name.",
     "scope": "text.pml"
 },
 "printBspartB": {
     "prefix": "printBspartB",
-    "body": ["iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;",
-"$0"],
-    "description": "Print B factors of part B of a residue.",
+    "body": placeHolder,
+    "caption": "Print B factors of part B of a residue.",
     "scope": "text.pml"
 },
 "printBs2digits": {
     "prefix": "printBs2digits",
-    "body": ["iterate (resi %{1:133}), print(name + " %.2f" % b);",
-"$0"],
-    "description": "Print B-values for a residue with the B's rounded off to two decimal places.",
+    "body": placeHolder,
+    "caption": "Print B--factors for a residue with the B-factors rounded off to two decimal places.",
     "scope": "text.pml"
 },
 "writeCommandReference2HTML": {
@@ -881,195 +595,67 @@ ${0}],
     "body": ["cmd.write_html_ref('pymol-command-ref.html');",
 "$0"]
 ,
-    "description": "Write the command reference to html file in the present working directory. ",
+    "caption": "Write the command reference to html file in the present working directory. ",
     "scope": "text.pml"
 },
 "averageB": {
     "prefix": "averageB",
-    "body": [""""Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""",
-"Bfactors = []; ",
-"iterate (resi %{1:133}), Bfactors.append(b);",
-"print("Sum = ", "%.2f" % (sum(Bfactors)));",
-"print("Number of atoms = ", len(Bfactors));",
-"print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));",
-"%0"]
-,
-    "description": "Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.",
+    "body": placeHolder,
+    "caption": "Average the B-factors by using a regular list as opposed to a stored list in PyMOL. Edit the selection as needed.",
     "scope": "text.pml"
 },
 "aveB4resiX": {
     "prefix": "aveB4resiX",
-    "body": [" """AveBResiX, prints the resiude number and the average bfactor. ",
-"Uses reduce and lambda, builtin Python functional porgramming functions. ",
-"Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. ",
-""" ";,
-"Bfactors = [];", 
-"iterate (resi %{1:133}), Bfactors.append(b);",
-"print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) );",
-%0"],
-    "description": "AveBResiX, prints the resiude number and the average bfactor. ",
+    "body": placeHolder,
+    "caption": "AveBResiX, prints the residue number and the average bfactor. ",
     "scope": "text.pml"
 },
 "printNameB4ResiX": {
     "prefix": "printNameB4ResiX",
-    "body": ["Bfac_dict = { 'Bfactors3' : [] };",
-"cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));",
-"$0"]
-,
-    "description": "Print name and b-factor for a residue.",
+    "body": placeHolder,
+    "caption": "Print name and b-factor for a residue.",
     "scope": "text.pml"
 },
 "printResiResnNameB4ResiX": {
     "prefix": "printResiResnNameB4ResiX",
-    "body": ["Bfac_dict = { 'Bfactors3' : [] };",
-"cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", "space=Bfac_dict);", "for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));",
-"$0"]
-,
-    "description": "Print resn, resi, atom name, and b-factor. ",
+    "body": placeHolder,
+    "caption": "Print resn, resi, atom name, and b-factor. ",
     "scope": "text.pml"
 },
 "printResiResnNameB4ResiXNoH": {
     "prefix": "printResiResnNameB4ResiXNoH",
-    "body": ["Bfac_dict = { 'Bfactors3' : [] };",
-"cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict);",
-"for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));",
-"$0"],
-    "description": "Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.",
+    "body": placeHolder,
+    "caption": "Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.",
     "scope": "text.pml"
 },
-"internalGUImode2 ": {
-    "prefix": "internalGUImode2 ",
-    "body": ["internal_gui_mode=2;",\n"$0"],
-    "description": "Make the background of the internal gui transparent to expand viewport.",
+"internalGUImode2": {
+    "prefix": "internalGUImode2",
+    "body": placeHolder,
+    "caption": "Make the background of the internal gui transparent to expand viewport.",
     "scope": "text.pml"
 },
 "internalGUIwidth": {
     "prefix": "internalGUIwidth",
-    "body": ["internal_gui_width=${1:20};",\n"$0"],
-    "description": "Set the width of the internal gui. 
-",
+    "body": placeHolder,
+    "caption": "Set the width of the internal gui.",
     "scope": "text.pml"
 },
 "printDoc": {
     "prefix": "printDoc",
-    "body": ["print ${1:my_func}.__doc__;",\n"$0"],
-    "description": "Print document string of a function.",
+    "body": placeHolder,
+    "caption": "Print document string of a function.",
     "scope": "text.pml"
 },
 "lsSnips": {
     "prefix": "lsSnips",
-    "body": ["   Tab trigger                  Description",
-"---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------",
-"antialias                    Set antialias to get smooth edges",
-"ao                           Ambient occlussion.",
-"aveB4resiX                   Prints the resiude number and the average bfactor.",
-"averageB                     Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.",
-"bs                           Ball and stick representation.",
-"bu                           Biological unit.",
-"carvedDensity                Carved electron density.",
-"cblind                       Color blindness.",
-"centerpi                     Center pi.",
-"coordinate                   Coordinate covalent bonds to metals and H-bonds friom RNA.",
-"cribbon                      Color ribbon H red, strand yellow, loop green.",
-"cspheres                     Colored spheres.",
-"discreteCartoonColoring      Turn on discrete colors between secondary structure elements.",
-"distance                     H-bond distances.",
-"doubleBond                   Valence bond.",
-"drawHbonds                   Draw H-bonds.",
-"duplicateObject              Duplicate object.",
-"ellipcol                     Set ellipsoid color.",
-"extractPartObj               Create a new object from part of an existing object.",
-"fasta                        Print Fasta from PDB file.",
-"fetch2FoFc                   Fetch 2FoFc map.",
-"fetchCIF                     Fetch cif file.",
-"fetchFoFc                    Fetch fofc map.",
-"fetchPath                    Set path for location to save fetched pdb files.",
-"filledRing                   Filled rings in nucleic acids.",
-"findHbonds                   Find hbonds around a residue.",
-"fog                          Blur the background atoms.",
-"getCoordinates               Get coordinates.",
-"hbond                        Hbond setup.",
-"hbonddash                    H-bond dashes.",
-"hideSelection                Trun off magenta squares on current selection.",
-"hidealtloc                   Hide alt loc.",
-"internalGUImode2             Make the background of the internal gui transparent to expand viewport.",
-"internalGUIwidth             Set the width of the internal gui.",
-"labelCAs                     Label the CA atoms with the Ala333 style format",
-"labelMainChain               Label the main chain atoms by resn,resi,atom name.",
-"labelResnResi                Label CA atom with residue name and residue number.",
-"labelSS                      Label SS.",
-"labelWatersHOH               Label waters HOH.",
-"labelWatersW                 Label waters W.",
-"loadPDBbs                    Load PDB ball-and-stick.",
-"loadPDBfile                  Load a pdb file in the current directory.",
-"loadPDBnb                    Load PDB nb spheres.",
-"lsSnips                      List all snips by tab trigger and description",
-"lspymolrc                    Print list of active pymolrc files.",
-"molscriptRibbon              Molscript ribbons.",
-"ms                           Measure surface area.",
-"oneLetter                    One letter amino acid.",
-"pearl                        The pearl effect is made with two spheres with the outer sphere being transparent.",
-"printBs                      Print the B-factors of a residue.",
-"printBs2digits               Print B-values for a residue with the B's rounded off to two decimal places.",
-"printBspartB                 Print B factors of part B of a rsidues.",
-"printDoc                     Print document string of a function.",
-"printNameB4ResiX             Print name and b-factor for a residue.",
-"printResiResnNameB4ResiX     Print resn, resi, atom name, and b-factor.",
-"printResiResnNameB4ResiXNoH  Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.",
-"pseudolabel                  Position label with pseudoatom.",
-"puttyCartoon                 Create a putty cartoon.",
-"ringMode                     Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.",
-"rmwater                      Remove waters from molecular object.",
-"rotate                       Rotate about axis.",
-"rv                           Return settings in rounded format.",
-"savePNG                      Save a png file of current scene to the current directory.",
-"saxsEnvelope                 Display SAXS envelope",
-"sc111                        Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
-"sc222                        Generate two unit cells in all directions. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
-"scaleRadiusColor             Scale the radius and color of atoms as spheres by property in the B-value column.",
-"selectAllBut                 Select all nitrogen atom in a selelction except from lysine.",
-"selectAtomsAround            Select atoms within a radius around a ligand.",
-"selectChain                  Select a chain.",
-"selectElement                Select atoms by elemnt.",
-"selectHelices                Select atoms by alpha helices.",
-"selectLoops                  Select atoms by beta loops.",
-"selectName                   Select atoms by name.",
-"selectResi                   Select residues by a range of numbers.",
-"selectResidues               Select residues by name.",
-"selectResiduesAround         Select residues within a radius around a ligand.",
-"selectStrands                Select atoms by beta strands.",
-"setcolor                     Set color name to a RGB code.",
-"setpath                      Set additional path for PyMOL to search on startup",
-"sidehChainHelper             In cartoons, hide the backbone atoms of selected residues when showing then as sticks.",
-"sigDigits                    Set number of decimals places to show in distance labels.",
-"sigang                       Set angle labels to display 2 decimals places",
-"sigdist                      set distance labels to display 2 decimals",
-"solventRadius                Set radius of ball used to make solvent accessible surface.",
-"spng                         Save png flle with timestamp",
-"spse                         Save pse flle with timestamp",
-"stack                        Base-stacking figure.",
-"stereoDraw                   Stereo draw.",
-"stereoRay                    Stereo ray.",
-"threeMaps                    Three electron density.",
-"turnAboutAxis                Turn about axis.",
-"undoSelection                Undo a selection.",
-"volumeRamp                   Volume ramp.",
-"writeCommandReference2HTML   Write the command reference to html file in the present working directory.",
-"${0]"],
-    "description": "List all snips by tab trigger and description",
+    "body": placeHolder,
+    "caption": "List all snips by tab trigger and description",
     "scope": "text.pml"
 },
 "his31asp70": {
     "prefix": "his31asp70",
-    "body": ["fetch 1lw9, async=0;",
-"zoom (resi 31 or resi 70);", 
-"preset.technical(selection='all');", 
-"bg_color gray70;", 
-"clip slab, 7,(resi 31 or resi 70);",
-"rock;",
-"${0}"]
-,
-    "description": "Asp70-His31 salt-bridge from T4 lysozyme. ",
+    "body": placeHolder,
+    "caption": "Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. ",
     "scope": "text.pml"
 },
 "waterTriple": {
@@ -1080,26 +666,1171 @@ ${0}],
 "${0}"]
   
 ,
-    "description": "triple water pentagon.",
+    "caption": "triple water pentagon.",
     "scope": "text.pml"
 },
 "ligandSelect": {
     "prefix": "ligandSelect",
-    "body": ["select substrates, organic;",
-"${0}"]
-,
-    "description": "Make selection of ligand atoms.",
+    "body": placeHolder,
+    "caption": "Make selection of ligand atoms.",
     "scope": "text.pml"
 },
 "github": {
     "prefix": "github",
-    "body": ["https://github.com/MooersLab/pymolsnips/blob/master/README.md",\n\"${0}\"],
-    "description": "Print url of README.md file of the pymolsnips repository.",
+    "body": placeHolder,
+    "caption": "Print url of README.md file of the pymolsnips repository.",
     "scope": "text.pml"
 },
 "sigdihedral": {
     "prefix": "sigdihedral",
     "body": ["set label_dihedral_digits, ${1:2}"; \n${0}"]],
-    "description": "Set dihedral labels to display 2 decimals places to the right of the decimal point.",
+    "caption": "Set dihedral labels to display 2 decimals places to the right of the decimal point.",
+    "scope": "text.pml"
+},
+"stateOne": {
+    "prefix": "stateOne",
+    "body": cmd.create('newobject', 'oldobject', '1', '1'),
+    "caption": "Select state 1 from a model with multiple states.",
+    "scope": "text.pml"
+},
+"sc112": {
+    "prefix": "sc112",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in two unit cells along the c axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc113": {
+    "prefix": "sc113",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc311": {
+    "prefix": "sc311",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates three three unit cells along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc131": {
+    "prefix": "sc131",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in three unit cells along b. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc211": {
+    "prefix": "sc211",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in two unit cell along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc121": {
+    "prefix": "sc121",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc122": {
+    "prefix": "sc122",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 1 x 2 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc221": {
+    "prefix": "sc221",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in 2 x 2 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc212": {
+    "prefix": "sc212",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 2 x 1 x 2 arrays of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc133": {
+    "prefix": "sc133",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in 1 x 3 x 3 array of unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc313": {
+    "prefix": "sc313",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 3 x 1 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc331": {
+    "prefix": "sc331",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in 3 x 3 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc233": {
+    "prefix": "sc233",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 2 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc323": {
+    "prefix": "sc323",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 3 x 2 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc332": {
+    "prefix": "sc332",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in 3 x 3 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc333": {
+    "prefix": "sc333",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in 3 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc114": {
+    "prefix": "sc114",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in four unit cells stacked long c-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc141": {
+    "prefix": "sc141",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in four unit cells stacked long b-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc411": {
+    "prefix": "sc411",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"saln": {
+    "prefix": "saln",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.aln');",
+"end python;",
+"$0"]
+,
+    "caption": "Save an aln flle with a timestamp.",
+    "scope": "text.pml"
+},
+"sccp4": {
+    "prefix": "sccp4",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.png');",
+"end python;",
+"$0"]
+,
+    "caption": "Save electron density map flle with timestamp",
+    "scope": "text.pml"
+},
+"sdae": {
+    "prefix": "sdae",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.png');",
+"end python;",
+"$0"]
+,
+    "caption": "Save dae flle with timestamp",
+    "scope": "text.pml"
+},
+"carvedIsosurface": {
+    "prefix": "carvedIsosurface",
+    "body": placeHolder,
+    "caption": "Carved isosurface representation of electron density. ",
+    "scope": "text.pml"
+},
+"fetch2FoFcIsosurface": {
+    "prefix": "fetch2FoFcIsosurface",
+    "body": placeHolder,
+    "caption": "Fetch 2FoFc map as an isosurface.",
+    "scope": "text.pml"
+},
+"threeMapsIsosurface": {
+    "prefix": "threeMapsIsosurface",
+    "body": ["load ${1:4dgr}.pdb;",
+"# Make sure to rename map file so that;",
+"# the root filename differs from pdb root filename;",
+"load ${1:4dgr}_2fofc.ccp4, 2fofc;",
+"load ${1:4dgr}_fofc.ccp4, fofc;",
+"select  ${2:glycan}, resid 200 or (resid 469:477);",
+"isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};",
+"color density, ${3:mesh1};",
+"isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};",
+"color green, ${4:mesh2};",
+"isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};",
+"color red, ${5:mesh2};",
+"${0}"],
+    "caption": "Three electron density as isosurface. ",
+    "scope": "text.pml"
+},
+"carvedVolume": {
+    "prefix": "carvedVolume",
+    "body": placeHolder,
+    "caption": "Carved volume representation of electron density. ",
+    "scope": "text.pml"
+},
+"fetch2FoFcVolume": {
+    "prefix": "fetch2FoFcVolume",
+    "body": placeHolder,
+    "caption": "Fetch 2FoFc map as a volume.",
+    "scope": "text.pml"
+},
+"threeMapsVolume": {
+    "prefix": "threeMapsVolume",
+    "body": ["load ${1:4dgr}.pdb;",
+"# Make sure to rename map file so that;",
+"# the root filename differs from pdb root filename;",
+"load ${1:4dgr}_2fofc.ccp4, 2fofc;",
+"load ${1:4dgr}_fofc.ccp4, fofc;",
+"select  ${2:glycan}, resid 200 or (resid 469:477);",
+"isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};",
+"color density, ${3:mesh1};",
+"isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};",
+"color green, ${4:mesh2};",
+"isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};",
+"color red, ${5:mesh2};",
+"${0}"],
+    "caption": "Three electron density as volumes. ",
+    "scope": "text.pml"
+},
+"rvi": {
+    "prefix": "rvi",
+    "body": placeHolder,
+    "caption": "Return settings in rounded format while running PyMOL via the RCP server ipymol in a jupyter notebook. This is a modified version of the roundview.py script.",
+    "scope": "text.pml"
+},
+"rdkrpcChem": {
+    "prefix": "rdkrpcChem",
+    "body": placeHolder,
+    "caption": "Demo of the use of the RPC server with a drug compound via the rdkit python module.",
+    "scope": "text.pml"
+},
+"kernel": {
+    "prefix": "kernel",
+    "body": placeHolder,
+    "caption": "A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels.",
+    "scope": "text.pml"
+},
+"rdkrpcProtein": {
+    "prefix": "rdkrpcProtein",
+    "body": placeHolder,
+    "caption": "Demo of the use of the RPC server with a protein via rdkit.",
+    "scope": "text.pml"
+},
+"ipymolStart": {
+    "prefix": "ipymolStart",
+    "body": placeHolder,
+    "caption": "Code to start the RPC server with ipymol.",
+    "scope": "text.pml"
+},
+"ipymolProtein": {
+    "prefix": "ipymolProtein",
+    "body": placeHolder,
+    "caption": "Demo of the use of the RPC server with a protein via ipymol.",
+    "scope": "text.pml"
+},
+"rvr": {
+    "prefix": "rvr",
+    "body": placeHolder,
+    "caption": "Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script.",
+    "scope": "text.pml"
+},
+"cmddocs": {
+    "prefix": "cmddocs",
+    "body": placeHolder,
+    "caption": "Print in the command history window the docstrings of all of the functions in the cmd module.",
+    "scope": "text.pml"
+},
+"pymoldocs": {
+    "prefix": "pymoldocs",
+    "body": placeHolder,
+    "caption": "Return to the command history window the docstrings for all of the functions in a module.",
+    "scope": "text.pml"
+},
+"numResiProtein": {
+    "prefix": "numResiProtein",
+    "body": placeHolder,
+    "caption": "Print the number of residues in a protein.",
+    "scope": "text.pml"
+},
+"numResiProteinChainA": {
+    "prefix": "numResiProteinChainA",
+    "body": placeHolder,
+    "caption": "Print the number of residues in chain A of a protein.",
+    "scope": "text.pml"
+},
+"numResiNucleic": {
+    "prefix": "numResiNucleic",
+    "body": placeHolder,
+    "caption": "Print the number of residues in a nulceic acid (all chains).",
+    "scope": "text.pml"
+},
+"numResiNucleicChainA": {
+    "prefix": "numResiNucleicChainA",
+    "body": placeHolder,
+    "caption": "Print the number of residues in a nulceic acid chain.",
+    "scope": "text.pml"
+},
+"brokenNucleicBackbone": {
+    "prefix": "brokenNucleicBackbone",
+    "body": placeHolder,
+    "caption": "Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long.",
+    "scope": "text.pml"
+},
+"oneBondThicknessColor": {
+    "prefix": "oneBondThicknessColor",
+    "body": placeHolder,
+    "caption": "To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
+",
+    "scope": "text.pml"
+},
+"drawLinks": {
+    "prefix": "drawLinks",
+    "body": placeHolder,
+    "caption": "Connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18. Note that this example requires the draw_links.py [http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py] by Robert Campbell.",
+    "scope": "text.pml"
+},
+"printPath": {
+    "prefix": "printPath",
+    "body": placeHolder,
+    "caption": "Print the path to the currently used PyMOL binary.",
+    "scope": "text.pml"
+},
+"setLigandValenceOn": {
+    "prefix": "setLigandValenceOn",
+    "body": placeHolder,
+    "caption": "Turn on the ligand valence.",
+    "scope": "text.pml"
+},
+"presetDocs": {
+    "prefix": "presetDocs",
+    "body": placeHolder,
+    "caption": "Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset).",
+    "scope": "text.pml"
+},
+"helpDocs": {
+    "prefix": "helpDocs",
+    "body": placeHolder,
+    "caption": "Return the docustring for the help submodule. This command is more concise:  help help.",
+    "scope": "text.pml"
+},
+"loadAmberTrajs": {
+    "prefix": "loadAmberTrajs",
+    "body": placeHolder,
+    "caption": "The amber trajectories have to be loaded into the same object.",
+    "scope": "text.pml"
+},
+"saveSeppy": {
+    "prefix": "saveSeppy",
+    "body": placeHolder,
+    "caption": "Saves multiple objects into multiple files using an optional prefix name.",
+    "scope": "text.pml"
+},
+"optAlignRNA": {
+    "prefix": "optAlignRNA",
+    "body": placeHolder,
+    "caption": "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures.",
+    "scope": "text.pml"
+},
+"loadManyFiles": {
+    "prefix": "loadManyFiles",
+    "body": placeHolder,
+    "caption": "Load into PyMOL multiple files with a common file stem. The is a script by Robert Campbell that has been updated for Python3.",
+    "scope": "text.pml"
+},
+"loadAndAlignManyFiles3": {
+    "prefix": "loadAndAlignManyFiles3",
+    "body": placeHolder,
+    "caption": "These are the instructions for loading and aligning multiple files.",
+    "scope": "text.pml"
+},
+"allPairs": {
+    "prefix": "allPairs",
+    "body": placeHolder,
+    "caption": "This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with any other function that operations on a pair of structrures.",
+    "scope": "text.pml"
+},
+"dssrBlock1": {
+    "prefix": "dssrBlock1",
+    "body": placeHolder,
+    "caption": "Combining DSSR block representation with regular PyMOL cartoons after loading the dssr_block.py script by Thomas Holder.",
+    "scope": "text.pml"
+},
+"dssrBlock2": {
+    "prefix": "dssrBlock2",
+    "body": placeHolder,
+    "caption": "DSSR block representation with fused blocks after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.",
+    "scope": "text.pml"
+},
+"dssrBlock3": {
+    "prefix": "dssrBlock3",
+    "body": placeHolder,
+    "caption": "DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.",
+    "scope": "text.pml"
+},
+"dssrBlock4": {
+    "prefix": "dssrBlock4",
+    "body": placeHolder,
+    "caption": "DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.",
+    "scope": "text.pml"
+},
+"nucleicAcidCartoon": {
+    "prefix": "nucleicAcidCartoon",
+    "body": placeHolder,
+    "caption": "Settings for nucliec acid cartoon.",
+    "scope": "text.pml"
+},
+"nucleicAcidCartoon2Strands": {
+    "prefix": "nucleicAcidCartoon2Strands",
+    "body": placeHolder,
+    "caption": "Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. The set command has the syntax of setting_name [, setting_value [, selection [,state ]]] . In this case, the selection has to be global, object, object-state, or per-atom settings. It cannot be a named selection. This is a weak spot in PyMOL. Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. Many double-stranded helices have one strand in the asymmetric unit. The second strand is in the biological unit. The coordinates for the second strand are in the pdb1 file type at the PDB. The second strand is in the second state, which is equivalent to the second model in the pdb file. The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting). The bases are colored differently too (via the cartoon_ladder_color setting).
+",
+    "scope": "text.pml"
+},
+"nucleicAcidColorbySequence": {
+    "prefix": "nucleicAcidColorbySequence",
+    "body": placeHolder,
+    "caption": "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid.",
+    "scope": "text.pml"
+},
+"nucleicAcidFlatRibbonColorbySequence": {
+    "prefix": "nucleicAcidFlatRibbonColorbySequence",
+    "body": placeHolder,
+    "caption": "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid. It is dervied from the CR shortcut. The backcone is shown as a flatten ribbon.",
+    "scope": "text.pml"
+},
+"nucleicAcidCartoonFilledRings": {
+    "prefix": "nucleicAcidCartoonFilledRings",
+    "body": placeHolder,
+    "caption": "The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py.",
+    "scope": "text.pml"
+},
+"basePairStacking": {
+    "prefix": "basePairStacking",
+    "body": placeHolder,
+    "caption": "This code make as standard base stacking diagram with ball and stick representation. ",
+    "scope": "text.pml"
+},
+"nucleicAcidDumbellCartoonColorbySequence": {
+    "prefix": "nucleicAcidDumbellCartoonColorbySequence",
+    "body": placeHolder,
+    "caption": "This code colors by the nucleotides by base seqence. The backcone is shown as a flatten ribbon with rolled edges that give the dumbell effect. The code can be applied to any nucleic acid. The code is dervied from the CR and DU shortcuts. ",
+    "scope": "text.pml"
+},
+"stereokb": {
+    "prefix": "stereokb",
+    "body": placeHolder,
+    "caption": "Set keyboard shortcut by mapping F1 to stereo.",
+    "scope": "text.pml"
+},
+"listSettings2": {
+    "prefix": "listSettings2",
+    "body": placeHolder,
+    "caption": "Print to the screen the settings and their current parameter values.",
+    "scope": "text.pml"
+},
+"listSettings": {
+    "prefix": "listSettings",
+    "body": placeHolder,
+    "caption": "Print to the screen the settings and their current parameter values. This is the more compact version.",
+    "scope": "text.pml"
+},
+"displayFonts": {
+    "prefix": "displayFonts",
+    "body": placeHolder,
+    "caption": "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.",
+    "scope": "text.pml"
+},
+"listObjects": {
+    "prefix": "listObjects",
+    "body": placeHolder,
+    "caption": "Create a list of objects in the internal gui and print this list to the screen.",
+    "scope": "text.pml"
+},
+"listLigandProteinDistances": {
+    "prefix": "listLigandProteinDistances",
+    "body": placeHolder,
+    "caption": "Print a list of protein--ligand distances. Code by Dan Kulp. Updated for Python3.",
+    "scope": "text.pml"
+},
+"nucleicAcidBackboneTubesSticks": {
+    "prefix": "nucleicAcidBackboneTubesSticks",
+    "body": placeHolder,
+    "caption": "This code shows the cartoon backbone tube as 65% transparent. It hides the rungs of the cartoon. It shows all of the non-H atoms are sticks. The motivation is to have the cartoon highlight the backbone without dominanting the scene.",
+    "scope": "text.pml"
+},
+"symexp": {
+    "prefix": "symexp",
+    "body": placeHolder,
+    "caption": "The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***.",
+    "scope": "text.pml"
+},
+"addAxis": {
+    "prefix": "addAxis",
+    "body": placeHolder,
+    "caption": "Adds the function draw_axis(). Used to a symmetry axis, a ncs axis, or scale bar to a scene.",
+    "scope": "text.pml"
+},
+"synch": {
+    "prefix": "synch",
+    "body": placeHolder,
+    "caption": "Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns.",
+    "scope": "text.pml"
+},
+"renumResi": {
+    "prefix": "renumResi",
+    "body": placeHolder,
+    "caption": "Add or substract a residue number offset.",
+    "scope": "text.pml"
+},
+"renumAtoms": {
+    "prefix": "renumAtoms",
+    "body": placeHolder,
+    "caption": "Add or substract a atom number offset.",
+    "scope": "text.pml"
+},
+"renameChain": {
+    "prefix": "renameChain",
+    "body": placeHolder,
+    "caption": "Rename a chain. ",
+    "scope": "text.pml"
+},
+"printAtomNumbers": {
+    "prefix": "printAtomNumbers",
+    "body": placeHolder,
+    "caption": "Print the atom number2 of a residue.",
+    "scope": "text.pml"
+},
+"printAtomNames": {
+    "prefix": "printAtomNames",
+    "body": placeHolder,
+    "caption": "Print the atom names of a residue.",
+    "scope": "text.pml"
+},
+"printBfactors": {
+    "prefix": "printBfactors",
+    "body": placeHolder,
+    "caption": "Print the bfactors of a residue.",
+    "scope": "text.pml"
+},
+"printVDWradii": {
+    "prefix": "printVDWradii",
+    "body": placeHolder,
+    "caption": "Print the van der Waals radii of the atoms in of a residue.",
+    "scope": "text.pml"
+},
+"printCoordinates": {
+    "prefix": "printCoordinates",
+    "body": placeHolder,
+    "caption": "Print the coordinates of the atoms in a residue.",
+    "scope": "text.pml"
+},
+"printNamesCoordinates": {
+    "prefix": "printNamesCoordinates",
+    "body": placeHolder,
+    "caption": "Print the atom names and coordinates of the atoms in a residue.",
+    "scope": "text.pml"
+},
+"printNamesCoordinates": {
+    "prefix": "printNamesCoordinates",
+    "body": placeHolder,
+    "caption": "Print the atom names as tuples and coordinates of the atoms in a residue as a list.",
+    "scope": "text.pml"
+},
+"emacsjupyterSourceBlock": {
+    "prefix": "emacsjupyterSourceBlock",
+    "body": placeHolder,
+    "caption": "Source block template in org-mode with emacs-jupyter package. ",
+    "scope": "text.pml"
+},
+"obipythonSourceBlock": {
+    "prefix": "obipythonSourceBlock",
+    "body": placeHolder,
+    "caption": "Source block template in org-mode with the ob-ipython package. ",
+    "scope": "text.pml"
+},
+"importPyMOLcmd": {
+    "prefix": "importPyMOLcmd",
+    "body": placeHolder,
+    "caption": "Import the cmd class from the pymol api.",
+    "scope": "text.pml"
+},
+"importIPythonDisplay": {
+    "prefix": "importIPythonDisplay",
+    "body": placeHolder,
+    "caption": "Imports for using IPython to display images loaded from disk in notebook cells.",
+    "scope": "text.pml"
+},
+"loadImage": {
+    "prefix": "loadImage",
+    "body": placeHolder,
+    "caption": "Load image.",
+    "scope": "text.pml"
+},
+"imports4PyMOLjupyter": {
+    "prefix": "imports4PyMOLjupyter",
+    "body": placeHolder,
+    "caption": "Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.",
+    "scope": "text.pml"
+},
+"getCoordinatespy": {
+    "prefix": "getCoordinatespy",
+    "body": placeHolder,
+    "caption": "Python version of getCoordinates snippets. Note that the python2 print statement stills works at the PyMOL prompt in pml scripts. ",
+    "scope": "text.pml"
+},
+"fastapy": {
+    "prefix": "fastapy",
+    "body": placeHolder,
+    "caption": "Python version of the command to print the sequence from a PDB file in the fasta format.",
+    "scope": "text.pml"
+},
+"fetchThreeMaps": {
+    "prefix": "fetchThreeMaps",
+    "body": placeHolder,
+    "caption": "Display three electron density maos as isomesh. ",
+    "scope": "text.pml"
+},
+"scaleRadiusColorpy": {
+    "prefix": "scaleRadiusColorpy",
+    "body": ["bg_color white;",
+"hide everything;",
+"show spheres;",
+"set  stick_radius = 0.1;",
+"hide everything, HET;",
+"show spheres, HET;",
+"set sphere_quality=3;",
+"show sticks, resi 1102;",
+"from pymol import stored;",
+"# set the stored array equal to the b−values; or use your own values ;",
+"stored.bb = [ ];",
+"iterate, stored.bb.append(b);",
+"# execute a python−block;",
+"python;",
+"# scale the b−values;",
+"M = max(stored.bb);",
+"scaledBB = map(lambda x: float (x/M), stored.bb);",
+"count = 0;",
+"# set the sphere radii independently;",
+"for x in scaledBB:",
+"  cmd.set('sphere_scale', x ,'ID %s'%count);",
+"  count = count + 1;",
+"python end;",
+"spectrum b, selection=4gdx;",
+"space cmyk;",
+"set specular_intensity , 0.25;",
+"${0}"]
+,
+    "caption": "Scale the radius and color of atoms as spheres by property in the B-value column.",
+    "scope": "text.pml"
+},
+"scaleRadiusColorPythonInsertpy": {
+    "prefix": "scaleRadiusColorPythonInsertpy",
+    "body": ["bg_color white;",
+"hide everything;",
+"show spheres;",
+"set  stick_radius = 0.1;",
+"hide everything, HET;",
+"show spheres, HET;",
+"set sphere_quality=3;",
+"show sticks, resi 1102;",
+"from pymol import stored;",
+"# set the stored array equal to the b−values; or use your own values ;",
+"stored.bb = [ ];",
+"iterate, stored.bb.append(b);",
+"# execute a python−block;",
+"python;",
+"# scale the b−values;",
+"M = max(stored.bb);",
+"scaledBB = map(lambda x: float (x/M), stored.bb);",
+"count = 0;",
+"# set the sphere radii independently;",
+"for x in scaledBB:",
+"  cmd.set('sphere_scale', x ,'ID %s'%count);",
+"  count = count + 1;",
+"python end;",
+"spectrum b, selection=4gdx;",
+"space cmyk;",
+"set specular_intensity , 0.25;",
+"${0}"]
+,
+    "caption": "Python block insert for scaleRadiusColorpy.",
+    "scope": "text.pml"
+},
+"spngpy": {
+    "prefix": "spngpy",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.png');",
+"end python;",
+"$0"]
+,
+    "caption": "Save png flle with timestamp",
+    "scope": "text.pml"
+},
+"displayFontspy": {
+    "prefix": "displayFontspy",
+    "body": placeHolder,
+    "caption": "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.",
+    "scope": "text.pml"
+},
+"aveB4resiXpy": {
+    "prefix": "aveB4resiXpy",
+    "body": placeHolder,
+    "caption": "AveBResiX, prints the residue number and the average bfactor. ",
+    "scope": "text.pml"
+},
+"sc441": {
+    "prefix": "sc441",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc444": {
+    "prefix": "sc444",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc414": {
+    "prefix": "sc414",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 4 x 1 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc144": {
+    "prefix": "sc144",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in in a 1 x 4 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sc444": {
+    "prefix": "sc444",
+    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
+"supercell 1, 1, 1, , orange, supercell1, 1;", 
+"${0}"]
+,
+    "caption": "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "scope": "text.pml"
+},
+"sdaepy": {
+    "prefix": "sdaepy",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.png');",
+"end python;",
+"$0"]
+,
+    "caption": "Save dae flle with timestamp",
+    "scope": "text.pml"
+},
+"sccp4py": {
+    "prefix": "sccp4py",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.png');",
+"end python;",
+"$0"]
+,
+    "caption": "Save electron density map flle with timestamp",
+    "scope": "text.pml"
+},
+"salnpy": {
+    "prefix": "salnpy",
+    "body": ["python;",
+"import datetime;",
+"from pymol import cmd ;",
+"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
+"s = str(DT) ;",
+"cmd.save(stemName+s+'.aln');",
+"end python;",
+"$0"]
+,
+    "caption": "Save an aln flle with a timestamp. Python version.",
+    "scope": "text.pml"
+},
+"lspymolrcpy": {
+    "prefix": "lspymolrcpy",
+    "body": placeHolder,
+    "caption": "Print list of active pymolrc files.",
+    "scope": "text.pml"
+},
+"printDocpy": {
+    "prefix": "printDocpy",
+    "body": placeHolder,
+    "caption": "Print document string of a function.",
+    "scope": "text.pml"
+},
+"printPathpy": {
+    "prefix": "printPathpy",
+    "body": placeHolder,
+    "caption": "Print the path to the currently used PyMOL binary.",
+    "scope": "text.pml"
+},
+"pymoldocspy": {
+    "prefix": "pymoldocspy",
+    "body": placeHolder,
+    "caption": "Return to the command history window the docstrings for all of the functions in a module.",
+    "scope": "text.pml"
+},
+"aobw": {
+    "prefix": "aobw",
+    "body": placeHolder,
+    "caption": "Ambient occlussion in grayscale.",
+    "scope": "text.pml"
+},
+"aod": {
+    "prefix": "aod",
+    "body": placeHolder,
+    "caption": "Ambient occlussion with carbon atoms colored black.",
+    "scope": "text.pml"
+},
+"aodbw": {
+    "prefix": "aodbw",
+    "body": placeHolder,
+    "caption": "Ambient occlussion in grayscale with carbon atoms colored black.",
+    "scope": "text.pml"
+},
+"addAxispy": {
+    "prefix": "addAxispy",
+    "body": placeHolder,
+    "caption": "Adds the function draw_axis(). Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.",
+    "scope": "text.pml"
+},
+"grayscalepy": {
+    "prefix": "grayscalepy",
+    "body": placeHolder,
+    "caption": "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via gscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command.",
+    "scope": "text.pml"
+},
+"importShortcuts": {
+    "prefix": "importShortcuts",
+    "body": placeHolder,
+    "caption": "Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv')..",
+    "scope": "text.pml"
+},
+"rv": {
+    "prefix": "rv",
+    "body": placeHolder,
+    "caption": "Run the rv function from the pymolshortcuts.py file. ",
+    "scope": "text.pml"
+},
+"AO": {
+    "prefix": "AO",
+    "body": placeHolder,
+    "caption": "Run the AO function from the pymolshortcuts.py file to generate the photorealistic effect. ",
+    "scope": "text.pml"
+},
+"AOBW": {
+    "prefix": "AOBW",
+    "body": placeHolder,
+    "caption": "Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. ",
+    "scope": "text.pml"
+},
+"AOD": {
+    "prefix": "AOD",
+    "body": placeHolder,
+    "caption": "Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black.",
+    "scope": "text.pml"
+},
+"AODBW": {
+    "prefix": "AODBW",
+    "body": placeHolder,
+    "caption": "Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale. ",
+    "scope": "text.pml"
+},
+"unitCellEdgesColorBlack": {
+    "prefix": "unitCellEdgesColorBlack",
+    "body": ["cmd.write_html_ref('pymol-command-ref.html');",
+"$0"]
+,
+    "caption": "Color unit cell edges black. The settings for controlling the unit cell color are hard to find.",
+    "scope": "text.pml"
+},
+"printColorByAtomCodes": {
+    "prefix": "printColorByAtomCodes",
+    "body": ["cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,]);",
+"$0"],
+    "caption": "Print the codes for color-by-atom (util.cba*) alternates.",
+    "scope": "text.pml"
+},
+"grayscale": {
+    "prefix": "grayscale",
+    "body": placeHolder,
+    "caption": "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via grayscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command.",
+    "scope": "text.pml"
+},
+"yrb": {
+    "prefix": "yrb",
+    "body": placeHolder,
+    "caption": "Run the yrb function from the pymolshortcuts.py file. ",
+    "scope": "text.pml"
+},
+"timcolor": {
+    "prefix": "timcolor",
+    "body": placeHolder,
+    "caption": "Run the timcolor function from the pymolshortcuts.py file to color atoms accordings to Tim Mather's biophysical coloring scheme for proteins.. ",
+    "scope": "text.pml"
+},
+"colorh1": {
+    "prefix": "colorh1",
+    "body": placeHolder,
+    "caption": "Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. ",
+    "scope": "text.pml"
+},
+"colorh2": {
+    "prefix": "colorh2",
+    "body": placeHolder,
+    "caption": "Run the colorh2 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 2. ",
+    "scope": "text.pml"
+},
+"cav": {
+    "prefix": "cav",
+    "body": placeHolder,
+    "caption": "Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces.",
+    "scope": "text.pml"
+},
+"PE125": {
+    "prefix": "PE125",
+    "body": placeHolder,
+    "caption": "Run the PE125 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.125 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"PE25": {
+    "prefix": "PE25",
+    "body": placeHolder,
+    "caption": "Run the PE25 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.25 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"PE50": {
+    "prefix": "PE50",
+    "body": placeHolder,
+    "caption": "Run the PE50 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.50 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"PE75": {
+    "prefix": "PE75",
+    "body": placeHolder,
+    "caption": "Run the PE75 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.75 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"PE85": {
+    "prefix": "PE85",
+    "body": placeHolder,
+    "caption": "Run the PE85 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.85 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"PE66": {
+    "prefix": "PE66",
+    "body": placeHolder,
+    "caption": "Run the PE66 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.66 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"PE33": {
+    "prefix": "PE33",
+    "body": placeHolder,
+    "caption": "Run the PE33 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.33 of the van der Waals surface.",
+    "scope": "text.pml"
+},
+"cntccp4emaps": {
+    "prefix": "cntccp4emaps",
+    "body": placeHolder,
+    "caption": "Count number of *.ccp4 (electron density map) files in current directory.",
+    "scope": "text.pml"
+},
+"cntfiles": {
+    "prefix": "cntfiles",
+    "body": placeHolder,
+    "caption": "Count number of files in current directory.",
+    "scope": "text.pml"
+},
+"cntlogs": {
+    "prefix": "cntlogs",
+    "body": placeHolder,
+    "caption": "Count number of *.log files in current directory.",
+    "scope": "text.pml"
+},
+"cntmtzs": {
+    "prefix": "cntmtzs",
+    "body": placeHolder,
+    "caption": "Count number of *.mtz files in current directory.",
+    "scope": "text.pml"
+},
+"cntpdbs": {
+    "prefix": "cntpdbs",
+    "body": placeHolder,
+    "caption": "Count number of *.pdb files in current directory.",
+    "scope": "text.pml"
+},
+"cntpmls": {
+    "prefix": "cntpmls",
+    "body": placeHolder,
+    "caption": "Count number of *.pml files in current directory.",
+    "scope": "text.pml"
+},
+"cntpngs": {
+    "prefix": "cntpngs",
+    "body": placeHolder,
+    "caption": "Count number of *.png files in current directory.",
+    "scope": "text.pml"
+},
+"cntpses": {
+    "prefix": "cntpses",
+    "body": placeHolder,
+    "caption": "Count number of *.pse files in current directory.",
+    "scope": "text.pml"
+},
+"rmhb": {
+    "prefix": "rmhb",
+    "body": placeHolder,
+    "caption": "Delete all H-bonds in the selection, which is all by default.",
+    "scope": "text.pml"
+},
+"hb": {
+    "prefix": "hb",
+    "body": placeHolder,
+    "caption": "Creates an object of all H-bonds found by PyMOL.",
+    "scope": "text.pml"
+},
+"rmd": {
+    "prefix": "rmd",
+    "body": placeHolder,
+    "caption": "Remove all measurement objects in the interal GUI.",
+    "scope": "text.pml"
+},
+"nmr": {
+    "prefix": "nmr",
+    "body": placeHolder,
+    "caption": "Show all models in a nmr structure.",
+    "scope": "text.pml"
+},
+"nmroff": {
+    "prefix": "nmroff",
+    "body": placeHolder,
+    "caption": "Hide all but first model in a nmr structure.",
+    "scope": "text.pml"
+},
+"nmroffpy": {
+    "prefix": "nmroffpy",
+    "body": placeHolder,
+    "caption": "Hide all but the first model in a nmr structure.",
+    "scope": "text.pml"
+},
+"nmrpy": {
+    "prefix": "nmrpy",
+    "body": placeHolder,
+    "caption": "Show all models in a nmr structure.",
+    "scope": "text.pml"
+},
+"loadAndAlignManyFiles1": {
+    "prefix": "loadAndAlignManyFiles1",
+    "body": placeHolder,
+    "caption": "These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.",
+    "scope": "text.pml"
+},
+"loadAndAlignManyFiles2": {
+    "prefix": "loadAndAlignManyFiles2",
+    "body": placeHolder,
+    "caption": "To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms.",
+    "scope": "text.pml"
+},
+"optAlignRNA": {
+    "prefix": "optAlignRNA",
+    "body": placeHolder,
+    "caption": "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures.",
     "scope": "text.pml"
 },

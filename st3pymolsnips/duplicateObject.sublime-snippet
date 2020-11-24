@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>duplicateObject</tabTrigger>
 <scope></scope>
-<description>Duplicate object.</description>
+<caption>Duplicate object.</caption>
 </snippet>

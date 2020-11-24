@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>undoSelection</tabTrigger>
 <scope></scope>
-<description>Undo a selection.</description>
+<caption>Undo a selection.</caption>
 </snippet>

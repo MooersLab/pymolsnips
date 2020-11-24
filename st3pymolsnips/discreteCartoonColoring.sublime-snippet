@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>discreteCartoonColoring</tabTrigger>
 <scope></scope>
-<description>Turn on discrete colors between secondary structure elements.</description>
+<caption>Turn on discrete colors between secondary structure elements.</caption>
 </snippet>

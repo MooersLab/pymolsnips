@@ -6,5 +6,5 @@ ${0}
 ]]></content>
 <tabTrigger>sc111</tabTrigger>
 <scope></scope>
-<description>Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</description>
+<caption>Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
 </snippet>

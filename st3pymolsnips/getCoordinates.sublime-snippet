@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>getCoordinates</tabTrigger>
 <scope></scope>
-<description>Get coordinates. </description>
+<caption>Get coordinates. </caption>
 </snippet>

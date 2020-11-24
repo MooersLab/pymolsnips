@@ -9,5 +9,5 @@ ${0}
 ]]></content>
 <tabTrigger>drawHbonds</tabTrigger>
 <scope></scope>
-<description>Draw H-bonds. </description>
+<caption>Draw H-bonds. </caption>
 </snippet>

@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>labelMainChain</tabTrigger>
 <scope></scope>
-<description>Label the main chain atoms by resn,resi,atom name.</description>
+<caption>Label the main chain atoms by resn,resi,atom name.</caption>
 </snippet>

@@ -60,5 +60,5 @@ ${0}
 ]]></content>
 <tabTrigger>coordinate</tabTrigger>
 <scope></scope>
-<description>Coordinate covalent bonds to metals and H-bonds friom RNA.</description>
+<caption>Coordinate covalent bonds to metals and H-bonds friom RNA.</caption>
 </snippet>

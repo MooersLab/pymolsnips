@@ -10,5 +10,5 @@ ${0}
 ]]></content>
 <tabTrigger>averageB</tabTrigger>
 <scope></scope>
-<description>Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.</description>
+<caption>Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.</caption>
 </snippet>

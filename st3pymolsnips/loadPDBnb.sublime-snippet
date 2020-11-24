@@ -11,5 +11,5 @@ ${0}
 ]]></content>
 <tabTrigger>loadPDBnb</tabTrigger>
 <scope></scope>
-<description>Load PDB nb spheres. </description>
+<caption>Load PDB nb spheres. </caption>
 </snippet>

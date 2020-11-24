@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>savePNG</tabTrigger>
 <scope></scope>
-<description>Save a png file of current scene to the current directory.</description>
+<caption>Save a png file of current scene to the current directory.</caption>
 </snippet>

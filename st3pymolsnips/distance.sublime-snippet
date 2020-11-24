@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>distance</tabTrigger>
 <scope></scope>
-<description>H-bond distances.</description>
+<caption>H-bond distances.</caption>
 </snippet>

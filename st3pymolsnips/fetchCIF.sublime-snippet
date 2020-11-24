@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>fetchCIF</tabTrigger>
 <scope></scope>
-<description>Fetch cif file.</description>
+<caption>Fetch cif file.</caption>
 </snippet>

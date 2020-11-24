@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>fetchPath</tabTrigger>
 <scope></scope>
-<description>Set path for location to save fetched pdb files. </description>
+<caption>Set path for location to save fetched pdb files. </caption>
 </snippet>

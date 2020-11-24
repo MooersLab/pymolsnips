@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>ellipcol</tabTrigger>
 <scope></scope>
-<description>Set ellipsoid color.</description>
+<caption>Set ellipsoid color.</caption>
 </snippet>

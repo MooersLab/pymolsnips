@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>printDoc</tabTrigger>
 <scope></scope>
-<description>Print document string of a function.</description>
+<caption>Print document string of a function.</caption>
 </snippet>

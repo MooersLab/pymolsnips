@@ -9,5 +9,5 @@ ${0}
 ]]></content>
 <tabTrigger>molscriptRibbon</tabTrigger>
 <scope></scope>
-<description>Molscript ribbons.</description>
+<caption>Molscript ribbons.</caption>
 </snippet>

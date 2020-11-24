@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>printBspartB</tabTrigger>
 <scope></scope>
-<description>Print B factors of part B of a residue.</description>
+<caption>Print B factors of part B of a residue.</caption>
 </snippet>

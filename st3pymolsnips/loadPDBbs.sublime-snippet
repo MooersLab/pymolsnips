@@ -11,5 +11,5 @@ ${0}
 ]]></content>
 <tabTrigger>loadPDBbs</tabTrigger>
 <scope></scope>
-<description>Load PDB ball-and-stick.</description>
+<caption>Load PDB ball-and-stick.</caption>
 </snippet>

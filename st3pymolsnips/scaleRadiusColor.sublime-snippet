@@ -30,5 +30,5 @@ ${0}
 ]]></content>
 <tabTrigger>scaleRadiusColor</tabTrigger>
 <scope></scope>
-<description>Scale the radius and color of atoms as spheres by property in the B-value column.</description>
+<caption>Scale the radius and color of atoms as spheres by property in the B-value column.</caption>
 </snippet>

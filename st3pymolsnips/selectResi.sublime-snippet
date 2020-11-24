@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectResi</tabTrigger>
 <scope></scope>
-<description>Select residues by a range of numbers.</description>
+<caption>Select residues by a range of numbers.</caption>
 </snippet>

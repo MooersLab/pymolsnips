@@ -36,5 +36,5 @@ ${0}
 ]]></content>
 <tabTrigger>stack</tabTrigger>
 <scope></scope>
-<description>Base-stacking figure.</description>
+<caption>Base-stacking figure.</caption>
 </snippet>

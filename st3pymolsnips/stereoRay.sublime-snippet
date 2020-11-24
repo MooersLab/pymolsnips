@@ -8,5 +8,5 @@ ${0}
 ]]></content>
 <tabTrigger>stereoRay</tabTrigger>
 <scope></scope>
-<description>Stereo ray.</description>
+<caption>Stereo ray.</caption>
 </snippet>

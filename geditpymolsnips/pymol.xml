@@ -1,1093 +1,2755 @@
 <?xml version='1.0' encoding='utf-8'?> 
   <snippets language="pymol"> 
   <snippet>
-    <description>Ambient occlussion.</description>
+    <caption>Ambient occlussion.</caption>
     <tag>ao</tag>
-    <text><![CDATA[set_color oxygen, [1.0,0.4,0.4];
-set_color nitrogen, [0.5,0.5,1.0];
-remove solvent;
-as spheres;
-util.cbaw;
-bg white;
-set light_count,10;
-set spec_count,1;
-set shininess, 10;
-set specular,0.25;
-set ambient,0;
-set direct,0;
-set reflect,1.5;
-set ray_shadow_decay_factor, 0.1;
-set ray_shadow_decay_range, 2;
-unset depth_cue;
-ray;
-$0
+    <text><![CDATA[      cmd.do('set_color oxygen, [1.0,0.4,0.4];')
+      cmd.do('set_color nitrogen, [0.5,0.5,1.0];')
+      cmd.do('remove solvent;')
+      cmd.do('as spheres;')
+      cmd.do('util.cbaw;')
+      cmd.do('bg white;')
+      cmd.do('set light_count,10;')
+      cmd.do('set spec_count,1;')
+      cmd.do('set shininess, 10;')
+      cmd.do('set specular,0.25;')
+      cmd.do('set ambient,0;')
+      cmd.do('set direct,0;')
+      cmd.do('set reflect,1.5;')
+      cmd.do('set ray_shadow_decay_factor, 0.1;')
+      cmd.do('set ray_shadow_decay_range, 2;')
+      cmd.do('unset depth_cue;')
+      cmd.do('ray;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set ellipsoid color.</description>
+    <caption>Set ellipsoid color.</caption>
     <tag>ellipcol</tag>
-    <text><![CDATA[set ellipsoid_color, ${1:color};
-$0
+    <text><![CDATA[      cmd.do('set ellipsoid_color, ${1:color};')
+      cmd.do('${0}')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>set distance labels to display 2 decimals</description>
+    <caption>set distance labels to display 2 decimals</caption>
     <tag>sigdist</tag>
-    <text><![CDATA[set label_distance_digits, ${1:2};
-$0
+    <text><![CDATA[      cmd.do('set label_distance_digits, ${1:2};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set angle labels to display 2 decimals places</description>
+    <caption>Set angle labels to display 2 decimals places</caption>
     <tag>sigang</tag>
-    <text><![CDATA[set label_angle_digits, ${1:2};
-$0
+    <text><![CDATA[      cmd.do('set label_angle_digits, ${1:2};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Ball and stick representation. </description>
+    <caption>Ball and stick representation. </caption>
     <tag>bs</tag>
-    <text><![CDATA[show sticks;
-set stick_radius, 0.12;
-set stick_ball, on;
-set stick_ball_ratio, 1.9;
-show nb_spheres;
-set nb_spheres_size=0.33;
-$0
+    <text><![CDATA[      cmd.do('show sticks;')
+      cmd.do('set stick_radius, 0.12;')
+      cmd.do('set stick_ball, on;')
+      cmd.do('set stick_ball_ratio, 1.9;')
+      cmd.do('show nb_spheres;')
+      cmd.do('set nb_spheres_size=0.33;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Base-stacking figure.</description>
+    <caption>Base-stacking figure.</caption>
     <tag>stack</tag>
-    <text><![CDATA[delete all;
-fetch ${1:4PCO}, type=pdb,async=0;
-select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );
-hide everything, element h; 
-remove not ${2:G2G3};
-bg_color white;
-show sticks;
-set stick_radius=0.14;
-set stick_ball, on; 
-set stick_ball_ratio,1.9;
-set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
-hide everything, element H;
-select carbon1, element C and (resi ${4:3} or resi ${5:8}) 
-# select lower base pair;
-select carbon2, element C and (resi ${3:2} or resi ${6:9}) 
-#select upper base pair;
-color gray70,carbon1;
-color gray10,carbon2;
-space cmyk;
-distance hbond1,/${1:4PCO}//B/U`9/N3,/${1:4PCO}//A/G`2/O6;
-distance hbond2,/${1:4PCO}//B/U`9/O2,/${1:4PCO}//A/G`2/N1;
-distance hbond3,/${1:4PCO}//A/U`3/N3,/${1:4PCO}//B/G`8/O6;
-distance hbond4,/${1:4PCO}//A/U`3/O2,/${1:4PCO}//B/G`8/N1;
-color black, hbond1;
-color black, hbond2;
-color gray70, hbond3;
-color gray70, hbond4;
-show nb_spheres;
-set nb_spheres_size, 0.35;
-hide labels;
-ray 1600,1000;
-png ${1:4PCO}.png
-$0
+    <text><![CDATA[      cmd.do('delete all;')
+      cmd.do('fetch ${1:4PCO}, type=pdb,async=0;')
+      cmd.do('select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );')
+      cmd.do('hide everything, element h; ')
+      cmd.do('remove not ${2:G2G3};')
+      cmd.do('bg_color white;')
+      cmd.do('show sticks;')
+      cmd.do('set stick_radius=0.14;')
+      cmd.do('set stick_ball, on; ')
+      cmd.do('set stick_ball_ratio,1.9;')
+      cmd.do('set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);')
+      cmd.do('hide everything, element H;')
+      cmd.do('select carbon1, element C and (resi ${4:3} or resi ${5:8}); ')
+      cmd.do('# select lower base pair;')
+      cmd.do('select carbon2, element C and (resi ${3:2} or resi ${6:9});')
+      cmd.do('#select upper base pair;')
+      cmd.do('color gray70,carbon1;')
+      cmd.do('color gray10,carbon2;')
+      cmd.do('space cmyk;')
+      cmd.do('distance hbond1,/${1:4PCO}//B/U`9/N3,/${1:4PCO}//A/G`2/O6;')
+      cmd.do('distance hbond2,/${1:4PCO}//B/U`9/O2,/${1:4PCO}//A/G`2/N1;')
+      cmd.do('distance hbond3,/${1:4PCO}//A/U`3/N3,/${1:4PCO}//B/G`8/O6;')
+      cmd.do('distance hbond4,/${1:4PCO}//A/U`3/O2,/${1:4PCO}//B/G`8/N1;')
+      cmd.do('color black, hbond1;')
+      cmd.do('color black, hbond2;')
+      cmd.do('color gray70, hbond3;')
+      cmd.do('color gray70, hbond4;')
+      cmd.do('show nb_spheres;')
+      cmd.do('set nb_spheres_size, 0.35;')
+      cmd.do('hide labels;')
+      cmd.do('ray 1600,1000;')
+      cmd.do('png ${1:4PCO}.png')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Biological unit.</description>
+    <caption>Biological unit.</caption>
     <tag>bu</tag>
-    <text><![CDATA[run ~/Scripts/PyMOLScripts/quat.py; quat
-$0
+    <text><![CDATA[      cmd.do('run ~/Scripts/PyMOLScripts/quat.py; quat')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Valence bond. </description>
+    <caption>Valence bond. </caption>
     <tag>doubleBond</tag>
-    <text><![CDATA[set valence, 1; 
-set valence_mode, 1;
-$0
+    <text><![CDATA[      cmd.do('set valence, 1; ')
+      cmd.do('set valence_mode, 1;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Color blindness.</description>
+    <caption>Color blindness.</caption>
     <tag>cblind</tag>
-    <text><![CDATA[run ~/Pymol-script-repo/colorblindfriendly.py;
-as cartoon;
-color cb_red, ss H;
-color cb_yellow,ss S;
-color cb_green, ss L+; 
-$0
+    <text><![CDATA[      cmd.do('run ~/Pymol-script-repo/colorblindfriendly.py;')
+      cmd.do('as cartoon;')
+      cmd.do('color cb_red, ss H;')
+      cmd.do('color cb_yellow,ss S;')
+      cmd.do('color cb_green, ss L+;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Center pi.</description>
+    <caption>Center pi.</caption>
     <tag>centerpi</tag>
-    <text><![CDATA[pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;
-dist pi_cent////ps1, b/${4:U`15}/${5:aaa};
-$0
+    <text><![CDATA[      cmd.do('pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;')
+      cmd.do('dist pi_cent////ps1, b/${4:U`15}/${5:aaa};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Color ribbon H red, strand yellow, loop green.</description>
+    <caption>Color ribbon H red, strand yellow, loop green.</caption>
     <tag>cribbon</tag>
-    <text><![CDATA[as cartoon;
-color red, ss H;
-color yellow,ss S;
-color green, ss L+; 
-$0
+    <text><![CDATA[      cmd.do('as cartoon;')
+      cmd.do('color red, ss H;')
+      cmd.do('color yellow,ss S;')
+      cmd.do('color green, ss L+;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Colored spheres.</description>
+    <caption>Colored spheres.</caption>
     <tag>cspheres</tag>
-    <text><![CDATA[as spheres;    
-color gray30, chain %0;    
-color white, chain %1;    
-color green, name CL;    
-color brown, resn NAG;    
-color red, resi 381;    
-remove solvent;    
-unset specular;    
-set ray_trace_gain, 0;    
-set ray_trace_mode, 3;    
-bg_color white;    
-set ray_trace_color, black;    
-unset depth_cue;    
-$0
+    <text><![CDATA[      cmd.do('as spheres;')
+      cmd.do('color gray30, chain ${1:A};')
+      cmd.do('color white, chain ${2:B};')
+      cmd.do('color green, name CL;')
+      cmd.do('color brown, resn NAG;')
+      cmd.do('color red, resi 381;')
+      cmd.do('remove solvent;')
+      cmd.do('unset specular;')
+      cmd.do('set ray_trace_gain, 0;')
+      cmd.do('set ray_trace_mode, 3;')
+      cmd.do('bg_color white;')
+      cmd.do('set ray_trace_color, black;')
+      cmd.do('unset depth_cue;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Coordinate covalent bonds to metals and H-bonds friom RNA.</description>
+    <caption>Coordinate covalent bonds to metals and H-bonds friom RNA.</caption>
     <tag>coordinate</tag>
-    <text><![CDATA[viewport 900,600;    
-fetch 3nd4, type=pdb, async=0;    
-run ~/Scripts/PyMOLScripts/quat.py;    
-quat 3nd4;    
-show sticks;    
-set stick_radius=0.125;    
-hide everything, name H*;    
-bg_color white;        
-create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));        
-bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);        
-distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);    
-distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);    
-distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);    
-distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);    
-show nb_spheres;     
-set nb_spheres_size, .35;        
-distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;    
-distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;    
-distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;   
-distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;    
-distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;    
-distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    
-distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;    
-distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;    
-distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;    
-distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;    
-distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;    
-distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
-distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
-distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
- distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
-distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
-distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
-distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
-set depth_cue=0;    
-set ray_trace_fog=0;    
-set dash_color, black;    
-set label_font_id, 5;    
-set label_size, 36;
-set label_position, (0.5, 1.0, 2.0);   
-set label_color, black;    
-set dash_gap, 0.2;    
-set dash_width, 2.0;    
-set dash_length, 0.2;
-set label_color, black;    
-set dash_gap, 0.2; 
-set dash_width, 2.0;
-set dash_length, 0.2;
-select carbon, element C;
-color yellow, carbon;
-disable carbon;
-set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0) 
-$0
+    <text><![CDATA[      cmd.do('viewport 900,600;')
+      cmd.do('fetch 3nd4, type=pdb, async=0;')
+      cmd.do('run ~/Scripts/PyMOLScripts/quat.py;')
+      cmd.do('quat 3nd4;')
+      cmd.do('show sticks;')
+      cmd.do('set stick_radius=0.125;')
+      cmd.do('hide everything, name H*;')
+      cmd.do('bg_color white;')
+      cmd.do('create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));')
+      cmd.do('bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);')
+      cmd.do('bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);')
+      cmd.do('bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);')
+      cmd.do('bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);')
+      cmd.do('bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);')
+      cmd.do('distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);')
+      cmd.do('distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);')
+      cmd.do('distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);')
+      cmd.do('distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);')
+      cmd.do('show nb_spheres; ')
+      cmd.do('set nb_spheres_size, .35;')
+      cmd.do('distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;')
+      cmd.do('distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;')
+      cmd.do('distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;')
+      cmd.do('distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;')
+      cmd.do('distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;')
+      cmd.do('distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;')
+      cmd.do('distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;')
+      cmd.do('distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;')
+      cmd.do('distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;')
+      cmd.do('distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;')
+      cmd.do('distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;')
+      cmd.do('distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;')
+      cmd.do('distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;')
+      cmd.do('distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;')
+      cmd.do(' distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;')
+      cmd.do('distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;')
+      cmd.do('distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;')
+      cmd.do('distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    ')
+      cmd.do('set depth_cue=0;')
+      cmd.do('set ray_trace_fog=0;')
+      cmd.do('set dash_color, black;')
+      cmd.do('set label_font_id, 5;')
+      cmd.do('set label_size, 36;')
+      cmd.do('set label_position, (0.5, 1.0, 2.0);')
+      cmd.do('set label_color, black;')
+      cmd.do('set dash_gap, 0.2;')
+      cmd.do('set dash_width, 2.0;')
+      cmd.do('set dash_length, 0.2;')
+      cmd.do('set label_color, black;')
+      cmd.do('set dash_gap, 0.2;')
+      cmd.do('set dash_width, 2.0;')
+      cmd.do('set dash_length, 0.2;')
+      cmd.do('select carbon, element C;')
+      cmd.do('color yellow, carbon;')
+      cmd.do('disable carbon;')
+      cmd.do('set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>H-bond distances.</description>
+    <caption>H-bond distances.</caption>
     <tag>distance</tag>
-    <text><![CDATA[distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
-$0
+    <text><![CDATA[      cmd.do('distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Draw H-bonds. </description>
+    <caption>Draw H-bonds. </caption>
     <tag>drawHbonds</tag>
-    <text><![CDATA[hide everything, hydrogens
-hide labels
-set dash_color, ${1:black}${2:yelow} 
-set dash_gap, 0.4
-set dash_radius, 0.08
-$0
+    <text><![CDATA[      cmd.do('hide everything, hydrogens')
+      cmd.do('hide labels')
+      cmd.do('set dash_color, ${1:black}${2:yelow} ')
+      cmd.do('set dash_gap, 0.4')
+      cmd.do('set dash_radius, 0.08')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Carved electron density. </description>
-    <tag>carvedDensity</tag>
-    <text><![CDATA[delete all;
-fetch ${1:4dgr}, async=0;
-fetch ${1:4dgr}, type=2fofc,async=0;
-select ${2:LongGlycan}, resi ${3:469:477};
-orient ${2:LongGlycan};
-remove not ${2:LongGlycan};
-remove name H*;
-isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
-color density, 2fofcmap; 
-show sticks;
-show spheres;
-set stick_radius, .07;
-set sphere_scale, .19;
-set sphere_scale, .13, elem H;
-set bg_rgb=[1, 1, 1];
-set stick_quality, 50;
-set sphere_quality, 4;
-color gray85, elem C;
-color red, elem O;
-color slate, elem N;
-color gray98, elem H;
-set stick_color, gray50;
-set ray_trace_mode, 1;
-set ray_texture, 2;
-set antialias, 3;
-set ambient, 0.5;
-set spec_count, 5;
-set shininess, 50;
-set specular, 1;
-set reflect, .1;
-set dash_gap, 0;
-set dash_color, black;
-set dash_gap, .15;
-set dash_length, .05;
-set dash_round_ends, 0;
-set dash_radius, .05;
-set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
-preset.ball_and_stick("all",mode=1);
-draw;
-$0
+    <caption>Carved isomesh representation of electron density. </caption>
+    <tag>carvedIsomesh</tag>
+    <text><![CDATA[      cmd.do('delete all;')
+      cmd.do('fetch ${1:4dgr}, async=0;')
+      cmd.do('fetch ${1:4dgr}, type=2fofc,async=0;')
+      cmd.do('select ${2:LongGlycan}, resi ${3:469:477};')
+      cmd.do('orient ${2:LongGlycan};')
+      cmd.do('remove not ${2:LongGlycan};')
+      cmd.do('remove name H*;')
+      cmd.do('isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;')
+      cmd.do('color density, 2fofcmap; ')
+      cmd.do('show sticks;')
+      cmd.do('show spheres;')
+      cmd.do('set stick_radius, .07;')
+      cmd.do('set sphere_scale, .19;')
+      cmd.do('set sphere_scale, .13, elem H;')
+      cmd.do('set bg_rgb=[1, 1, 1];')
+      cmd.do('set stick_quality, 50;')
+      cmd.do('set sphere_quality, 4;')
+      cmd.do('color gray85, elem C;')
+      cmd.do('color red, elem O;')
+      cmd.do('color slate, elem N;')
+      cmd.do('color gray98, elem H;')
+      cmd.do('set stick_color, gray50;')
+      cmd.do('set ray_trace_mode, 1;')
+      cmd.do('set ray_texture, 2;')
+      cmd.do('set antialias, 3;')
+      cmd.do('set ambient, 0.5;')
+      cmd.do('set spec_count, 5;')
+      cmd.do('set shininess, 50;')
+      cmd.do('set specular, 1;')
+      cmd.do('set reflect, .1;')
+      cmd.do('set dash_gap, 0;')
+      cmd.do('set dash_color, black;')
+      cmd.do('set dash_gap, .15;')
+      cmd.do('set dash_length, .05;')
+      cmd.do('set dash_round_ends, 0;')
+      cmd.do('set dash_radius, .05;')
+      cmd.do('set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);')
+      cmd.do('preset.ball_and_stick("all",mode=1);')
+      cmd.do('draw;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Fetch 2FoFc map.</description>
-    <tag>fetch2FoFc</tag>
-    <text><![CDATA[fetch ${1:3nd4}, type=2fofc, async=0
-$0
+    <caption>Fetch 2FoFc map as an isomesh.</caption>
+    <tag>fetch2FoFcIsomesh</tag>
+    <text><![CDATA[      cmd.do('fetch ${1:3nd4}_2fofc, type=2fofc, async=0;')
+      cmd.do('isomesh 2fofcmap, ${1:3nd4_2fofc}, 1, ${2:LongGlycan}, carve = 1.8;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Fetch cif file.</description>
+    <caption>Fetch cif file.</caption>
     <tag>fetchCIF</tag>
-    <text><![CDATA[fetch ${1:3nd4}, type=cif, async=0;
-$0
+    <text><![CDATA[      cmd.do('fetch ${1:3nd4}, type=cif, async=0;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Fetch fofc map.</description>
+    <caption>Fetch fofc map.</caption>
     <tag>fetchFoFc</tag>
-    <text><![CDATA[fetch ${1:3nd4}, type=fofc, async=0;
-$0
+    <text><![CDATA[      cmd.do('fetch ${1:3nd4}, type=fofc, async=0;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Filled rings in nucleic acids. </description>
+    <caption>Filled rings in nucleic acids. </caption>
     <tag>filledRing</tag>
-    <text><![CDATA[show sticks;set cartoon_ring_mode, 3;
-set cartoon_ring_finder, 1;
-set cartoon_ladder_mode, 1;
-set cartoon_nucleic_acid_mode, 4;
-set cartoon_ring_transparency, 0.5;
-as cartoon;
-$0
+    <text><![CDATA[      cmd.do('show sticks;set cartoon_ring_mode, 3;')
+      cmd.do('set cartoon_ring_finder, 1;')
+      cmd.do('set cartoon_ladder_mode, 1;')
+      cmd.do('set cartoon_nucleic_acid_mode, 4;')
+      cmd.do('set cartoon_ring_transparency, 0.5;')
+      cmd.do('as cartoon;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Get coordinates. </description>
+    <caption>Get coordinates. </caption>
     <tag>getCoordinates</tag>
-    <text><![CDATA[print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
-$0
+    <text><![CDATA[      cmd.do('print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>H-bond dashes.</description>
+    <caption>H-bond dashes.</caption>
     <tag>hbonddash</tag>
-    <text><![CDATA[hide everything, hydrogens;
-hide labels;
-set dash_color, black; 
-set dash_gap, 0.4;
-set dash_radius, 0.08;
-$0
+    <text><![CDATA[      cmd.do('hide everything, hydrogens;')
+      cmd.do('hide labels;')
+      cmd.do('set dash_color, black; ')
+      cmd.do('set dash_gap, 0.4;')
+      cmd.do('set dash_radius, 0.08;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Hbond setup. </description>
+    <caption>Hbond setup. </caption>
     <tag>hbond</tag>
-    <text><![CDATA[hide labels;
-set dash_color, black ;
-set dash_length, ${1:0.15};
-set dash_gap, ${2:0.35};
-set dash_width,  ${3:3.0};
-$0
+    <text><![CDATA[      cmd.do('hide labels;')
+      cmd.do('set dash_color, black ;')
+      cmd.do('set dash_length, ${1:0.15};')
+      cmd.do('set dash_gap, ${2:0.35};')
+      cmd.do('set dash_width,  ${3:3.0};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Hide alt loc.</description>
+    <caption>Hide alt loc.</caption>
     <tag>hidealtloc</tag>
-    <text><![CDATA[select altconf, alt ${1:b}  # select B alternative locators;
-hide everything, altconf  # hide alt B locators;
-$0
+    <text><![CDATA[      cmd.do('select altconf, alt ${1:b}  # select B alternative locators;')
+      cmd.do('hide everything, altconf  # hide alt B locators;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Label CA atom with single-letter residue name and residue number.</description>
+    <caption>Label CA atom with single-letter residue name and residue number.</caption>
     <tag>labelResnResi</tag>
-    <text><![CDATA[label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
-$0
+    <text><![CDATA[      cmd.do('label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi});')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Label SS. </description>
+    <caption>Label SS. </caption>
     <tag>labelSS</tag>
-    <text><![CDATA[alter ${1:}, ss='%1';
-label (%2),'%3';
-$0
+    <text><![CDATA[      cmd.do('alter ${1:}, ss='%1';')
+      cmd.do('label (%2),'%3';')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Load PDB ball-and-stick.</description>
+    <caption>Load PDB ball-and-stick.</caption>
     <tag>loadPDBbs</tag>
-    <text><![CDATA[fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
-hide (name H*);
-hide lines;
-show sticks;
-set stick_radius, ${2:1.2};
-set nb_sphere_radius, ${3:0.35};
-orient;
-$0
+    <text><![CDATA[      cmd.do('fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0')
+      cmd.do('hide (name H*);')
+      cmd.do('hide lines;')
+      cmd.do('show sticks;')
+      cmd.do('set stick_radius, ${2:1.2};')
+      cmd.do('set nb_sphere_radius, ${3:0.35};')
+      cmd.do('orient;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Load PDB nb spheres. </description>
+    <caption>Load PDB nb spheres. </caption>
     <tag>loadPDBnb</tag>
-    <text><![CDATA[fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
-orient;
-set stick_radius, ${2:1.2};
-hide (name H*);
-set nb_sphere_size, ${3:0.35};
-set nb_spheres_quality, ${4:1};
-show nb_spheres;
-$0
+    <text><![CDATA[      cmd.do('fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;')
+      cmd.do('orient;')
+      cmd.do('set stick_radius, ${2:1.2};')
+      cmd.do('hide (name H*);')
+      cmd.do('set nb_sphere_size, ${3:0.35};')
+      cmd.do('set nb_spheres_quality, ${4:1};')
+      cmd.do('show nb_spheres;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Measure surface area. </description>
+    <caption>Measure surface area. </caption>
     <tag>ms</tag>
-    <text><![CDATA[fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
-select ${2:temp}, ${3:3nd3} and chain A;
-run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
-calc_msms_area ${2:temp};
-$0
+    <text><![CDATA[      cmd.do('fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0')
+      cmd.do('select ${2:temp}, ${3:3nd3} and chain A;')
+      cmd.do('run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};')
+      cmd.do('calc_msms_area ${2:temp};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Molscript ribbons.</description>
+    <caption>Molscript ribbons.</caption>
     <tag>molscriptRibbon</tag>
-    <text><![CDATA[set cartoon_highlight_color, grey;
-show cartoon;
-set cartoon_flat_sheets, 0;
-set cartoon_smooth_loops, 0;
-set cartoon_fancy_helices, 1;
-$0
+    <text><![CDATA[      cmd.do('set cartoon_highlight_color, grey;')
+      cmd.do('show cartoon;')
+      cmd.do('set cartoon_flat_sheets, 0;')
+      cmd.do('set cartoon_smooth_loops, 0;')
+      cmd.do('set cartoon_fancy_helices, 1;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>One letter amino acid. </description>
+    <caption>One letter amino acid. </caption>
     <tag>oneLetter</tag>
-    <text><![CDATA[one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%
-'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%
-'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%
-$0
+    <text><![CDATA[      cmd.do('one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%')
+      cmd.do(''ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%')
+      cmd.do(''SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print Fasta from PDB file. </description>
+    <caption>Print Fasta from PDB file. </caption>
     <tag>fasta</tag>
-    <text><![CDATA[print cmd.get_fastastr('all')
-$0
+    <text><![CDATA[      cmd.do('print cmd.get_fastastr('all')')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Position label with pseudoatom. </description>
+    <caption>Position label with pseudoatom. </caption>
     <tag>pseudolabel</tag>
-    <text><![CDATA[pseudoatom ${1:forLabel};
-label ${1:forLabel}, '%0';
-set label_color, ${2:red};
-$0
+    <text><![CDATA[      cmd.do('pseudoatom ${1:forLabel};')
+      cmd.do('label ${1:forLabel}, '%0';')
+      cmd.do('set label_color, ${2:red};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Rotate about axis.</description>
+    <caption>Rotate about axis.</caption>
     <tag>rotate</tag>
-    <text><![CDATA[rotate ${1:x}, ${2:45}, ${3:pept}
-$0
+    <text><![CDATA[      cmd.do('rotate ${1:x}, ${2:45}, ${3:pept};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Stereo draw.</description>
+    <caption>Stereo draw.</caption>
     <tag>stereoDraw</tag>
-    <text><![CDATA[stereo walleye; 
-set ray_shadow, off; 
-#draw 3200,2000;
-draw ${1:1600,1000}; 
-png ${2:aaa}.png
-$0
+    <text><![CDATA[      cmd.do('stereo walleye; ')
+      cmd.do('set ray_shadow, off; ')
+      cmd.do('#draw 3200,2000;')
+      cmd.do('draw ${1:1600,1000}; ')
+      cmd.do('png ${2:aaa}.png')
+      cmd.do('${0}')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Stereo ray.</description>
+    <caption>Stereo ray.</caption>
     <tag>stereoRay</tag>
-    <text><![CDATA[stereo; 
-set ray_shadow, off;
-ray ${1:2400,1200};
-png ${2:aaa}.png
-$0
+    <text><![CDATA[      cmd.do('stereo; ')
+      cmd.do('set ray_shadow, off;')
+      cmd.do('ray ${1:2400,1200};')
+      cmd.do('png ${2:aaa}.png;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Three electron density. </description>
-    <tag>threeMaps</tag>
-    <text><![CDATA[load ${1:4dgr}.pdb
-# Make sure to rename map file so that 
-# the root filename differs from pdb root filename
-load ${1:4dgr}_2fofc.ccp4, 2fofc;
-load ${1:4dgr}_fofc.ccp4, fofc;
-select  ${2:glycan}, resid 200 or (resid 469:477);
-isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};
-color density, ${3:mesh1};
-isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
-color green, ${4:mesh2};
-isomesh ${5:mesh3}, fofc, -3.0, ${2:glycan};
-color red, ${5:mesh3};
-$0
+    <caption>Three electron density as Isomesh. </caption>
+    <tag>threeMapsIsomesh</tag>
+    <text><![CDATA[      cmd.do('load ${1:4dgr}.pdb')
+      cmd.do('# Make sure to rename map file so that ')
+      cmd.do('# the root filename differs from pdb root filename')
+      cmd.do('load ${1:4dgr}_2fofc.ccp4, 2fofc;')
+      cmd.do('load ${1:4dgr}_fofc.ccp4, fofc;')
+      cmd.do('select  ${2:glycan}, resid 200 or (resid 469:477);')
+      cmd.do('isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};')
+      cmd.do('color density, ${3:mesh1};')
+      cmd.do('isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};')
+      cmd.do('color green, ${4:mesh2};')
+      cmd.do('isomesh ${5:mesh3}, fofc, -3.0, ${2:glycan};')
+      cmd.do('color red, ${5:mesh3};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Turn about axis. </description>
+    <caption>Turn about axis. </caption>
     <tag>turnAboutAxis</tag>
-    <text><![CDATA[turn ${1:x},${2:90};
-$0
+    <text><![CDATA[      cmd.do('turn ${1:x},${2:90};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Volume ramp.</description>
+    <caption>Volume ramp.</caption>
     <tag>volumeRamp</tag>
-    <text><![CDATA[cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
-$0
+    <text><![CDATA[      cmd.do('cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set radius of ball used to make solvent accessible surface.</description>
+    <caption>Set radius of ball used to make solvent accessible surface.</caption>
     <tag>solventRadius</tag>
-    <text><![CDATA[set solvent_radius, ${1:1.55};
-$0
+    <text><![CDATA[      cmd.do('set solvent_radius, ${1:1.55};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Scale the radius and color of atoms as spheres by property in the B-value column.</description>
+    <caption>Scale the radius and color of atoms as spheres by property in the B-value column.</caption>
     <tag>scaleRadiusColor</tag>
-    <text><![CDATA[bg_color white
-hide everything
-show spheres
-set  stick_radius = 0.1
-hide everything, HET
-show spheres, HET
-set sphere_quality=3
-show sticks, resi 1102
-from pymol import stored
-# set the stored array equal to the b−values; or use your own values 
-stored.bb = [ ]
-iterate, stored.bb.append(b)
-# execute a python−block
-python
-# scale the b−values
-M = max(stored.bb)
-scaledBB = map(lambda x: float (x/M), stored.bb)
-count = 0
-# set the sphere radii independently
-for x in scaledBB:
-  cmd.set("sphere_scale", x ,"ID %s"%count)
-  count = count + 1
-python end
-spectrum b, selection=4gdx
-space cmyk
-set specular_intensity , 0.25
-$0
+    <text><![CDATA[      cmd.do('bg_color white;')
+      cmd.do('hide everything;')
+      cmd.do('show spheres;')
+      cmd.do('set  stick_radius = 0.1;')
+      cmd.do('hide everything, HET;')
+      cmd.do('show spheres, HET;')
+      cmd.do('set sphere_quality=3;')
+      cmd.do('show sticks, resi $1{1102};')
+      cmd.do('from pymol import stored;')
+      cmd.do('# set the stored array equal to the b−values or use your own values; ')
+      cmd.do('stored.bb = [ ];')
+      cmd.do('iterate all, stored.bb.append(b);')
+      cmd.do('# execute a python−block;')
+      cmd.do('python;')
+      cmd.do('# scale the b−values;')
+      cmd.do('M = max(stored.bb);')
+      cmd.do('scaledBB = map(lambda x: float (x/M), stored.bb);')
+      cmd.do('count = 0;')
+      cmd.do('# set the sphere radii independently;')
+      cmd.do('#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB]')
+      cmd.do('for x in scaledBB:')
+      cmd.do('  cmd.set("sphere_scale", x ,"ID %s"%count)')
+      cmd.do('  count = count + 1')
+      cmd.do('python end')
+      cmd.do('spectrum b, selection=${2:4gdx};')
+      cmd.do('space cmyk;')
+      cmd.do('set specular_intensity , 0.25;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Return settings in rounded format.</description>
+    <caption>Return settings in rounded format.</caption>
     <tag>rv</tag>
-    <text><![CDATA[run roundview.py;
-$0
+    <text><![CDATA[      cmd.do('run roundview.py;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Save png flle with timestamp</description>
+    <caption>Save png flle with timestamp</caption>
     <tag>spng</tag>
-    <text><![CDATA[python;
-import datetime;
-from pymol import cmd; 
-DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
-s = str(DT); 
-cmd.save(stemName+s+".png"); 
-end python;
-$0
+    <text><![CDATA[      cmd.do('python;')
+      cmd.do('import datetime;')
+      cmd.do('from pymol import cmd; ')
+      cmd.do('DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");')
+      cmd.do('s = str(DT); ')
+      cmd.do('cmd.save(stemName+s+".png"); ')
+      cmd.do('end python;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Save pse flle with timestamp</description>
+    <caption>Save pse flle with timestamp</caption>
     <tag>spse</tag>
-    <text><![CDATA[python;
-import datetime;
-from pymol import cmd; 
-DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
-s = str(DT); 
-cmd.save(stemName+s+".pse"); 
-end python;
-$0
+    <text><![CDATA[      cmd.do('python;')
+      cmd.do('import datetime;')
+      cmd.do('from pymol import cmd; ')
+      cmd.do('DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");')
+      cmd.do('s = str(DT); ')
+      cmd.do('cmd.save(stemName+s+".pse"); ')
+      cmd.do('end python;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Run Tom Holder's supercell script to generate three cells in all directions.</description>
+    <caption>Run supercell script to generate three cells in all directions. This script was written by Thomas Holder.</caption>
     <tag>sc222</tag>
-    <text><![CDATA[run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 2, 2, 2, , orange, supercell2, 1
-$0
+    <text><![CDATA[      cmd.do('run ${1:$HOME/Scripts/PyMOLscripts/supercell.py};')
+      cmd.do('supercell 2, 2, 2, , orange, supercell2, 1;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>The pearl effect is made with two spheres with the outer sphere being transparent.</description>
+    <caption>The pearl effect is made with two spheres with the outer sphere being transparent.</caption>
     <tag>pearl</tag>
-    <text><![CDATA[create ${1:sodium2}, ${2:sodium1}
-set sphere_transparency, 0.4, ${1:sodium2}
-set sphere_scale, 1.05, ${1:sodium2}
-ray
-$0
+    <text><![CDATA[      cmd.do('create ${1:sodium2}, ${2:sodium1};')
+      cmd.do('set sphere_transparency, 0.4, ${1:sodium2};')
+      cmd.do('set sphere_scale, 1.05, ${1:sodium2};')
+      cmd.do('ray;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Blur the background atoms.</description>
+    <caption>Blur the background atoms.</caption>
     <tag>fog</tag>
-    <text><![CDATA[set fog, 0
-$0
+    <text><![CDATA[      cmd.do('set fog, 0;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Remove waters from molecular object.</description>
+    <caption>Remove waters from molecular object.</caption>
     <tag>rmwater</tag>
-    <text><![CDATA[remove resn HOH
-$0
+    <text><![CDATA[      cmd.do('remove resn HOH;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set color name to a RGB code.</description>
+    <caption>Set color name to a RGB code.</caption>
     <tag>setcolor</tag>
-    <text><![CDATA[set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}]
-color ${1:bark}, ${5:protein}
-$0
+    <text><![CDATA[      cmd.do('set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}];')
+      cmd.do('color ${1:bark}, ${5:protein};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Duplicate object.</description>
+    <caption>Duplicate object.</caption>
     <tag>duplicateObject</tag>
-    <text><![CDATA[create ${1:t4l}, ${2:1lw9}; 
-$0
+    <text><![CDATA[      cmd.do('create ${1:t4l}, ${2:1lw9};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select a chain. </description>
+    <caption>Select a chain. </caption>
     <tag>selectChain</tag>
-    <text><![CDATA[select rna, chain B
-$0
+    <text><![CDATA[      cmd.do('select rna, chain B;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select residues by name.</description>
+    <caption>Select residues by name.</caption>
     <tag>selectResidues</tag>
-    <text><![CDATA[select aromatic, resn phe+tyr+trp;
-$0
+    <text><![CDATA[      cmd.do('select aromatic, resn phe+tyr+trp;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select residues by a range of numbers.</description>
+    <caption>Select residues by a range of numbers.</caption>
     <tag>selectResi</tag>
-    <text><![CDATA[select se;2. resi 1-100
-$0
+    <text><![CDATA[      cmd.do('select ${!:se}; resi ${2:1-100};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select atoms by elemnt.</description>
+    <caption>Select atoms by element.</caption>
     <tag>selectElement</tag>
-    <text><![CDATA[select ${1:oxygen}, elem ${2:O}
-$0
+    <text><![CDATA[      cmd.do('select ${1:oxygen}, elem ${2:O}')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select atoms by name.</description>
+    <caption>Select atoms by name.</caption>
     <tag>selectName</tag>
-    <text><![CDATA[select ${1:oxygen2}, name ${2:O2}
-$0
+    <text><![CDATA[      cmd.do('select ${1:oxygen2}, name ${2:O2}')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select atoms by alpha helices.</description>
+    <caption>Select atoms by alpha helices.</caption>
     <tag>selectHelices</tag>
-    <text><![CDATA[select ${1:helices}, ss h; 
-$0
+    <text><![CDATA[      cmd.do('select ${1:helices}, ss h; ')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select atoms by beta strands.</description>
+    <caption>Select atoms by beta strands.</caption>
     <tag>selectStrands</tag>
-    <text><![CDATA[select ${1:strands}, ss s; 
-$0
+    <text><![CDATA[      cmd.do('select ${1:strands}, ss s; ')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select atoms by beta loops.</description>
+    <caption>Select atoms by beta loops.</caption>
     <tag>selectLoops</tag>
-    <text><![CDATA[select ${1:loops}, ss l;
-$0
+    <text><![CDATA[      cmd.do('select ${1:loops}, ss l;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select all nitrogen atom in a selelction except from lysine.</description>
+    <caption>Select all nitrogen atom in a selelction except from lysine.</caption>
     <tag>selectAllBut</tag>
-    <text><![CDATA[select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};
-$0
+    <text><![CDATA[      cmd.do('select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select atoms within a radius around a ligand.</description>
+    <caption>Select atoms within a radius around a ligand.</caption>
     <tag>selectAtomsAround</tag>
-    <text><![CDATA[select ${1:nearby}, resn ${2:drug} around ${3:5};
-$0
+    <text><![CDATA[      cmd.do('select ${1:nearby}, resn ${2:drug} around ${3:5};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Select residues within a radius around a ligand.</description>
+    <caption>Select residues within a radius around a ligand.</caption>
     <tag>selectResiduesAround</tag>
-    <text><![CDATA[select ${1:nearby}, br. resn ${2:drug} around ${3:5};
-$0
+    <text><![CDATA[      cmd.do('select ${1:nearby}, br. resn ${2:drug} around ${3:5};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Undo a selection.</description>
+    <caption>Undo a selection.</caption>
     <tag>undoSelection</tag>
-    <text><![CDATA[disable ${1:sele}; 
-$0
+    <text><![CDATA[      cmd.do('disable ${1:sele}; ')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Load a pdb file in the current directory.</description>
+    <caption>Load a pdb file in the current directory.</caption>
     <tag>loadPDBfile</tag>
-    <text><![CDATA[load ${1:my.pdb};
-$0
+    <text><![CDATA[      cmd.do('load ${1:my.pdb};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Save a png file of current scene to the current directory.</description>
+    <caption>Save a png file of current scene to the current directory.</caption>
     <tag>savePNG</tag>
-    <text><![CDATA[png ${1:saveMe.png}; 
-$0
+    <text><![CDATA[      cmd.do('png ${1:saveMe.png};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.</description>
+    <caption>Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.</caption>
     <tag>ringMode</tag>
-    <text><![CDATA[show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};
-$0
+    <text><![CDATA[      cmd.do('show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>In cartoons, hide the backbone atoms of selected residues when showing then as sticks.</description>
+    <caption>In cartoons, hide the backbone atoms of selected residues when showing then as sticks.</caption>
     <tag>sidehChainHelper</tag>
-    <text><![CDATA[set cartoon_side_chain_helper, on;
-$0
+    <text><![CDATA[      cmd.do('set cartoon_side_chain_helper, on;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Create a new object from part of an existing object.</description>
+    <caption>Create a new object from part of an existing object.</caption>
     <tag>extractPartObj</tag>
-    <text><![CDATA[extract new_obj, chain A
-$0
+    <text><![CDATA[      cmd.do('extract new_obj, chain A;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Create a putty cartoon.</description>
+    <caption>Create a putty cartoon.</caption>
     <tag>puttyCartoon</tag>
-    <text><![CDATA[show cartoon;
-cartoon putty;
-unset cartoon_smooth_loops;
-unset cartoon_flat_sheets;
-$0
+    <text><![CDATA[      cmd.do('show cartoon;')
+      cmd.do('cartoon putty;')
+      cmd.do('unset cartoon_smooth_loops;')
+      cmd.do('unset cartoon_flat_sheets;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Trun off magenta squares on current selection.</description>
+    <caption>Trun off magenta squares on current selection.</caption>
     <tag>hideSelection</tag>
-    <text><![CDATA[indicate none
-$0
+    <text><![CDATA[      cmd.do('indicate none')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Turn on discrete colors between secondary structure elements.</description>
+    <caption>Turn on discrete colors between secondary structure elements.</caption>
     <tag>discreteCartoonColoring</tag>
-    <text><![CDATA[set cartoon_discrete_colors, on
-$0
+    <text><![CDATA[      cmd.do('set cartoon_discrete_colors, on;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</description>
+    <caption>Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
     <tag>sc111</tag>
-    <text><![CDATA[run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 1, 1, 1, , orange, supercell1, 1
-$0
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, , orange, supercell1, 1;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Display SAXS envelope</description>
+    <caption>Display SAXS envelope</caption>
     <tag>saxsEnvelope</tag>
-    <text><![CDATA[alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0
-set solvent_radius = 3.0
-$0
+    <text><![CDATA[      cmd.do('alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0;')
+      cmd.do('set solvent_radius = 3.0;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set additional path for PyMOL to search on startup</description>
+    <caption>Set additional path for PyMOL to search on startup</caption>
     <tag>setpath</tag>
-    <text><![CDATA[os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
-$0
+    <text><![CDATA[      cmd.do('os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set path for location to save fetched pdb files. </description>
+    <caption>Set path for location to save fetched pdb files. </caption>
     <tag>fetchPath</tag>
-    <text><![CDATA[set fetch_path, ${1:/Users/blaine/pdbFiles};
-$0
+    <text><![CDATA[      cmd.do('set fetch_path, ${1:/Users/blaine/pdbFiles};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set antialias to get smooth edges</description>
+    <caption>Set antialias to get smooth edges</caption>
     <tag>antialias</tag>
-    <text><![CDATA[set antialias, 1;
-$0
+    <text><![CDATA[      cmd.do('set antialias, 1;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print list of active pymolrc files.</description>
+    <caption>Print list of active pymolrc files.</caption>
     <tag>lspymolrc</tag>
-    <text><![CDATA[print invocation.options.deferred;
-$0
+    <text><![CDATA[      cmd.do('print invocation.options.deferred;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set number of decimals places to show in distance labels. </description>
+    <caption>Set number of decimals places to show in distance labels. </caption>
     <tag>sigDigits</tag>
-    <text><![CDATA[set label_distance_digits, ${1:2};
-set label_angle_digits, ${2:2};
-$0
+    <text><![CDATA[      cmd.do('set label_distance_digits, ${1:2};')
+      cmd.do('set label_angle_digits, ${2:2};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Label the CA atoms with the Ala333 style format</description>
+    <caption>Label the CA atoms with the Ala333 style format</caption>
     <tag>labelCAs</tag>
-    <text><![CDATA[label name CA,"%s%s" % (resn,resi);
-$0
+    <text><![CDATA[      cmd.do('label name CA,"%s%s" % (resn,resi);')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Label waters HOH.</description>
+    <caption>Label waters HOH.</caption>
     <tag>labelWatersHOH</tag>
-    <text><![CDATA[label resn HOH ,"%s%s" % (resn,resi);
-$0
+    <text><![CDATA[      cmd.do('label resn HOH ,"%s%s" % (resn,resi);')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Label waters W.</description>
+    <caption>Label waters W.</caption>
     <tag>labelWatersW</tag>
-    <text><![CDATA[label resn HOH ,"W%s" % (resi);
-$0
+    <text><![CDATA[      cmd.do('label resn HOH ,"W%s" % (resi);')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Find hbonds around a residue.</description>
+    <caption>Find hbonds around a residue.</caption>
     <tag>findHbonds</tag>
-    <text><![CDATA[remove element h; distance hbonds, all, all, 3.2, mode=2;
-$0
+    <text><![CDATA[      cmd.do('remove element h; distance hbonds, all, all, 3.2, mode=2;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print the B-factors of a residue. </description>
+    <caption>Print the B-factors of a residue. </caption>
     <tag>printBs</tag>
-    <text><![CDATA[remove element h; iterate resi %{1:133}, print resi, name,b;
-$0
+    <text><![CDATA[      cmd.do('remove element h; iterate resi %{1:133}, print resi, name,b;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Label the main chain atoms by resn,resi,atom name.</description>
+    <caption>Label the main chain atoms by resn,resi,atom name.</caption>
     <tag>labelMainChain</tag>
-    <text><![CDATA[label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
-$0
+    <text><![CDATA[      cmd.do('label name n+c+o+ca,"%s%s%s" % (resn,resi,name);')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print B factors of part B of a residue.</description>
+    <caption>Print B factors of part B of a residue.</caption>
     <tag>printBspartB</tag>
-    <text><![CDATA[iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
-$0
+    <text><![CDATA[      cmd.do('iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print B-values for a residue with the B's rounded off to two decimal places.</description>
+    <caption>Print B--factors for a residue with the B-factors rounded off to two decimal places.</caption>
     <tag>printBs2digits</tag>
-    <text><![CDATA[iterate (resi %{1:133}), print(name + " %.2f" % b);
-$0
+    <text><![CDATA[      cmd.do('iterate (resi %{1:133}), print(name + " %.2f" % b);')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Write the command reference to html file in the present working directory. </description>
+    <caption>Write the command reference to html file in the present working directory. </caption>
     <tag>writeCommandReference2HTML</tag>
-    <text><![CDATA[cmd.write_html_ref('pymol-command-ref.html');
-$0
+    <text><![CDATA[      cmd.do('cmd.write_html_ref('pymol-command-ref.html');')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed.</description>
+    <caption>Average the B-factors by using  a regular list as opposed to a stored list in PyMOL. Edit the selection as needed.</caption>
     <tag>averageB</tag>
-    <text><![CDATA[""" Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
-Bfactors = []; 
-iterate (resi ${1:133}), Bfactors.append(b);
-print("Sum = ", "%.2f" % (sum(Bfactors)));
-print("Number of atoms = ", len(Bfactors));
-print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));
-$0
+    <text><![CDATA[      cmd.do('"""Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""')
+      cmd.do('Bfactors = []; ')
+      cmd.do('iterate (resi ${1:133}), Bfactors.append(b);')
+      cmd.do('print("Sum = ", "%.2f" % (sum(Bfactors)));')
+      cmd.do('print("Number of atoms = ", len(Bfactors));')
+      cmd.do('print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>AveBResiX, prints the resiude number and the average bfactor. </description>
+    <caption>AveBResiX, prints the resiude number and the average bfactor. </caption>
     <tag>aveB4resiX</tag>
-    <text><![CDATA[""""AveBResiX, prints the resiude number and the average bfactor. 
-Uses reduce and lambda, builtin Python functional porgramming functions. 
-Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
-"""
-Bfactors = []; 
-iterate (resi ${1:133}), Bfactors.append(b);
-print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-$0
+    <text><![CDATA[      cmd.do('""""AveBResiX, prints the resiude number and the average bfactor. ')
+      cmd.do('Uses reduce and lambda, builtin Python functional porgramming functions. ')
+      cmd.do('Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. ')
+      cmd.do('"""')
+      cmd.do('Bfactors = [];')
+      cmd.do('iterate (resi ${1:133}), Bfactors.append(b);')
+      cmd.do('print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print name and b-factor for a residue.</description>
+    <caption>Print name and b-factor for a residue.</caption>
     <tag>printNameB4ResiX</tag>
-    <text><![CDATA[Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
-$0
+    <text><![CDATA[      cmd.do('Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print resn, resi, atom name, and b-factor. </description>
+    <caption>Print resn, resi, atom name, and b-factor. </caption>
     <tag>printResiResnNameB4ResiX</tag>
-    <text><![CDATA[Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
+    <text><![CDATA[      cmd.do('Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.</description>
+    <caption>Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.</caption>
     <tag>printResiResnNameB4ResiXNoH</tag>
-    <text><![CDATA[Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
+    <text><![CDATA[      cmd.do('Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Make the background of the internal gui transparent to expand viewport.</description>
+    <caption>Make the background of the internal gui transparent to expand viewport.</caption>
     <tag>internalGUImode2 </tag>
-    <text><![CDATA[internal_gui_mode=2;
-$0
+    <text><![CDATA[      cmd.do('internal_gui_mode=2;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set the width of the internal gui. 
-</description>
+    <caption>Set the width of the internal gui. 
+</caption>
     <tag>internalGUIwidth</tag>
-    <text><![CDATA[internal_gui_width=%{1:20};
-$0
+    <text><![CDATA[      cmd.do('internal_gui_width=%{1:20};')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print document string of a function.</description>
+    <caption>Print document string of a function.</caption>
     <tag>printDoc</tag>
-    <text><![CDATA[print ${1:my_func}.__doc__;
-$0
+    <text><![CDATA[      cmd.do('print ${1:my_func}.__doc__;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>List all snips by tab trigger and description</description>
+    <caption>List all snips by tab trigger and description</caption>
     <tag>lsSnips</tag>
-    <text><![CDATA[Tab trigger                  Description
----------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-antialias                    Set antialias to get smooth edges
-ao                           Ambient occlussion.
-aveB4resiX                   AveBResiX, prints the resiude number and the average bfactor.
-                             Uses reduce and lambda, builtin Python functional porgramming functions.
-                             Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.
-averageB                     Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.
-bs                           Ball and stick representation.
-bu                           Biological unit.
-carvedDensity                Carved electron density.
-cblind                       Color blindness.
-centerpi                     Center pi.
-coordinate                   Coordinate covalent bonds to metals and H-bonds friom RNA.
-cribbon                      Color ribbon H red, strand yellow, loop green.
-cspheres                     Colored spheres.
-discreteCartoonColoring      Turn on discrete colors between secondary structure elements.
-distance                     H-bond distances.
-doubleBond                   Valence bond.
-drawHbonds                   Draw H-bonds.
-duplicateObject              Duplicate object.
-ellipcol                     Set ellipsoid color.
-extractPartObj               Create a new object from part of an existing object.
-fasta                        Print Fasta from PDB file.
-fetch2FoFc                   Fetch 2FoFc map.
-fetchCIF                     Fetch cif file.
-fetchFoFc                    Fetch fofc map.
-fetchPath                    Set path for location to save fetched pdb files.
-filledRing                   Filled rings in nucleic acids.
-findHbonds                   Find hbonds around a residue.
-fog                          Blur the background atoms.
-getCoordinates               Get coordinates.
-hbond                        Hbond setup.
-hbonddash                    H-bond dashes.
-hideSelection                Trun off magenta squares on current selection.
-hidealtloc                   Hide alt loc.
-internalGUImode2             Makes the background of the internal gui transparent with the viewport extended into this region of the gui. This may be a useful mode for workshops.
-internalGUIwidth             Set the width of the internal gui.
-labelCAs                     Label the CA atoms with the Ala333 style format
-labelMainChain               Label the main chain atoms by resn,resi,atom name.
-labelResnResi                Label CA atom with residue name and residue number.
-labelSS                      Label SS.
-labelWatersHOH               Label waters HOH.
-labelWatersW                 Label waters W.
-loadPDBbs                    Load PDB ball-and-stick.
-loadPDBfile                  Load a pdb file in the current directory.
-loadPDBnb                    Load PDB nb spheres.
-lsSnips                      List all snips by tab trigger and description
-lspymolrc                    Print list of active pymolrc files.
-molscriptRibbon              Molscript ribbons.
-ms                           Measure surface area.
-oneLetter                    One letter amino acid.
-pearl                        The pearl effect is made with two spheres with the outer sphere being transparent.
-printBs                      Print the B-factors of a residue.
-printBs2digits               Print B-values for a residue with the B's rounded off to two decimal places.
-printBspartB                 Print B factors of part B of a rsidues.
-printDoc                     Print document string of a function.
-printNameB4ResiX             Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). Use the noH variant if H atoms are present.
-printResiResnNameB4ResiX     Print resn, resi, atom name, and b-factor.
-printResiResnNameB4ResiXNoH  Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). The noH variant.
-pseudolabel                  Position label with pseudoatom.
-puttyCartoon                 Create a putty cartoon.
-ringMode                     Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.
-rmwater                      Remove waters from molecular object.
-rotate                       Rotate about axis.
-rv                           Return settings in rounded format.
-savePNG                      Save a png file of current scene to the current directory.
-saxsEnvelope                 Display SAXS envelope
-sc111                        Display all symmetry mates in one unit cell. Asumes supercell.py (sse PyMOL Wiki) is in $HOME/Scripts/PyMOLscripts/.
-sc222                        Run Tom Holder's supercell script to generate three cells in all directions.
-scaleRadiusColor             Scale the radius and color of atoms as spheres by property in the B-value column.
-selectAllBut                 Select all nitrogen atom in a selelction except from lysine.
-selectAtomsAround            Select atoms within a radius around a ligand.
-selectChain                  Select a chain.
-selectElement                Select atoms by elemnt.
-selectHelices                Select atoms by alpha helices.
-selectLoops                  Select atoms by beta loops.
-selectName                   Select atoms by name.
-selectResi                   Select residues by a range of numbers.
-selectResidues               Select residues by name.
-selectResiduesAround         Select residues within a radius around a ligand.
-selectStrands                Select atoms by beta strands.
-setcolor                     Set color name to a RGB code.
-setpath                      Set additional path for PyMOL to search on startup
-sidehChainHelper             In cartoons, hide the backbone atoms of selected residues when showing then as sticks.
-sigDigits                    Set number of decimals places to show in distance labels.
-sigang                       Set angle labels to display 2 decimals places
-sigdist                      set distance labels to display 2 decimals
-solventRadius                Set radius of ball used to make solvent accessible surface.
-spng                         Save png flle with timestamp
-spse                         Save pse flle with timestamp
-stack                        Base-stacking figure.
-stereoDraw                   Stereo draw.
-stereoRay                    Stereo ray.
-threeMaps                    Three electron density.
-turnAboutAxis                Turn about axis.
-undoSelection                Undo a selection.
-volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.
-$0
+    <text><![CDATA[      cmd.do('"""Tab trigger                  Description')
+      cmd.do('---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------')
+      cmd.do('antialias                    Set antialias to get smooth edges')
+      cmd.do('ao                           Ambient occlussion.')
+      cmd.do('aveB4resiX                   AveBResiX, prints the resiude number and the average bfactor.')
+      cmd.do('                             Uses reduce and lambda, builtin Python functional porgramming functions.')
+      cmd.do('                             Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.')
+      cmd.do('averageB                     Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.')
+      cmd.do('bs                           Ball and stick representation.')
+      cmd.do('bu                           Biological unit.')
+      cmd.do('carvedDensity                Carved electron density.')
+      cmd.do('cblind                       Color blindness.')
+      cmd.do('centerpi                     Center pi.')
+      cmd.do('coordinate                   Coordinate covalent bonds to metals and H-bonds friom RNA.')
+      cmd.do('cribbon                      Color ribbon H red, strand yellow, loop green.')
+      cmd.do('cspheres                     Colored spheres.')
+      cmd.do('discreteCartoonColoring      Turn on discrete colors between secondary structure elements.')
+      cmd.do('distance                     H-bond distances.')
+      cmd.do('doubleBond                   Valence bond.')
+      cmd.do('drawHbonds                   Draw H-bonds.')
+      cmd.do('duplicateObject              Duplicate object.')
+      cmd.do('ellipcol                     Set ellipsoid color.')
+      cmd.do('extractPartObj               Create a new object from part of an existing object.')
+      cmd.do('fasta                        Print Fasta from PDB file.')
+      cmd.do('fetch2FoFc                   Fetch 2FoFc map.')
+      cmd.do('fetchCIF                     Fetch cif file.')
+      cmd.do('fetchFoFc                    Fetch fofc map.')
+      cmd.do('fetchPath                    Set path for location to save fetched pdb files.')
+      cmd.do('filledRing                   Filled rings in nucleic acids.')
+      cmd.do('findHbonds                   Find hbonds around a residue.')
+      cmd.do('fog                          Blur the background atoms.')
+      cmd.do('getCoordinates               Get coordinates.')
+      cmd.do('hbond                        Hbond setup.')
+      cmd.do('hbonddash                    H-bond dashes.')
+      cmd.do('hideSelection                Trun off magenta squares on current selection.')
+      cmd.do('hidealtloc                   Hide alt loc.')
+      cmd.do('internalGUImode2             Makes the background of the internal gui transparent with the viewport extended into this region of the gui. This may be a useful mode for workshops.')
+      cmd.do('internalGUIwidth             Set the width of the internal gui.')
+      cmd.do('labelCAs                     Label the CA atoms with the Ala333 style format')
+      cmd.do('labelMainChain               Label the main chain atoms by resn,resi,atom name.')
+      cmd.do('labelResnResi                Label CA atom with residue name and residue number.')
+      cmd.do('labelSS                      Label SS.')
+      cmd.do('labelWatersHOH               Label waters HOH.')
+      cmd.do('labelWatersW                 Label waters W.')
+      cmd.do('loadPDBbs                    Load PDB ball-and-stick.')
+      cmd.do('loadPDBfile                  Load a pdb file in the current directory.')
+      cmd.do('loadPDBnb                    Load PDB nb spheres.')
+      cmd.do('lsSnips                      List all snips by tab trigger and description')
+      cmd.do('lspymolrc                    Print list of active pymolrc files.')
+      cmd.do('molscriptRibbon              Molscript ribbons.')
+      cmd.do('ms                           Measure surface area.')
+      cmd.do('oneLetter                    One letter amino acid.')
+      cmd.do('pearl                        The pearl effect is made with two spheres with the outer sphere being transparent.')
+      cmd.do('printBs                      Print the B-factors of a residue.')
+      cmd.do('printBs2digits               Print B-values for a residue with the B's rounded off to two decimal places.')
+      cmd.do('printBspartB                 Print B factors of part B of a rsidues.')
+      cmd.do('printDoc                     Print document string of a function.')
+      cmd.do('printNameB4ResiX             Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). Use the noH variant if H atoms are present.')
+      cmd.do('printResiResnNameB4ResiX     Print resn, resi, atom name, and b-factor.')
+      cmd.do('printResiResnNameB4ResiXNoH  Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). The noH variant.')
+      cmd.do('pseudolabel                  Position label with pseudoatom.')
+      cmd.do('puttyCartoon                 Create a putty cartoon.')
+      cmd.do('ringMode                     Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.')
+      cmd.do('rmwater                      Remove waters from molecular object.')
+      cmd.do('rotate                       Rotate about axis.')
+      cmd.do('rv                           Return settings in rounded format.')
+      cmd.do('savePNG                      Save a png file of current scene to the current directory.')
+      cmd.do('saxsEnvelope                 Display SAXS envelope')
+      cmd.do('sc111                        Display all symmetry mates in one unit cell. Asumes supercell.py (sse PyMOL Wiki) is in $HOME/Scripts/PyMOLscripts/.')
+      cmd.do('sc222                        Run Tom Holder's supercell script to generate three cells in all directions.')
+      cmd.do('scaleRadiusColor             Scale the radius and color of atoms as spheres by property in the B-value column.')
+      cmd.do('selectAllBut                 Select all nitrogen atom in a selelction except from lysine.')
+      cmd.do('selectAtomsAround            Select atoms within a radius around a ligand.')
+      cmd.do('selectChain                  Select a chain.')
+      cmd.do('selectElement                Select atoms by elemnt.')
+      cmd.do('selectHelices                Select atoms by alpha helices.')
+      cmd.do('selectLoops                  Select atoms by beta loops.')
+      cmd.do('selectName                   Select atoms by name.')
+      cmd.do('selectResi                   Select residues by a range of numbers.')
+      cmd.do('selectResidues               Select residues by name.')
+      cmd.do('selectResiduesAround         Select residues within a radius around a ligand.')
+      cmd.do('selectStrands                Select atoms by beta strands.')
+      cmd.do('setcolor                     Set color name to a RGB code.')
+      cmd.do('setpath                      Set additional path for PyMOL to search on startup')
+      cmd.do('sidehChainHelper             In cartoons, hide the backbone atoms of selected residues when showing then as sticks.')
+      cmd.do('sigDigits                    Set number of decimals places to show in distance labels.')
+      cmd.do('sigang                       Set angle labels to display 2 decimals places')
+      cmd.do('sigdist                      set distance labels to display 2 decimals')
+      cmd.do('solventRadius                Set radius of ball used to make solvent accessible surface.')
+      cmd.do('spng                         Save png flle with timestamp')
+      cmd.do('spse                         Save pse flle with timestamp')
+      cmd.do('stack                        Base-stacking figure.')
+      cmd.do('stereoDraw                   Stereo draw.')
+      cmd.do('stereoRay                    Stereo ray.')
+      cmd.do('threeMaps                    Three electron density.')
+      cmd.do('turnAboutAxis                Turn about axis.')
+      cmd.do('undoSelection                Undo a selection.')
+      cmd.do('volumeRamp                   Volume ramp.')
+      cmd.do('writeCommandReference2HTML   Write the command reference to html file in the present working directory."""')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Asp70-His31 salt-bridge from T4 lysozyme. </description>
+    <caption>Asp70-His31 salt-bridge from T4 lysozyme. </caption>
     <tag>his31asp70</tag>
-    <text><![CDATA[fetch 1lw9, async=0; 
-zoom (resi 31 or resi 70); 
-preset.technical(selection='all'); 
-bg_color gray70; 
-clip slab, 7,(resi 31 or resi 70);
-rock;
-$0
+    <text><![CDATA[      cmd.do('fetch 1lw9, async=0; ')
+      cmd.do('zoom (resi 31 or resi 70); ')
+      cmd.do('preset.technical(selection='all'); ')
+      cmd.do('bg_color gray70; ')
+      cmd.do('clip slab, 7,(resi 31 or resi 70);')
+      cmd.do('rock;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>triple water pentagon.</description>
+    <caption>triple water pentagon.</caption>
     <tag>waterTriple</tag>
-    <text><![CDATA[fetch 1lw9, async=0; 
-zoom resi 313; 
-preset.technical(selection='all', mode=1);
-$0
+    <text><![CDATA[      cmd.do('fetch 1lw9, async=0; ')
+      cmd.do('zoom resi 313; ')
+      cmd.do('preset.technical(selection='all', mode=1);')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Make selection of ligand atoms.</description>
+    <caption>Make selection of ligand atoms.</caption>
     <tag>ligandSelect</tag>
-    <text><![CDATA[select substrates, organic;
-$0
+    <text><![CDATA[      cmd.do('select substrates, organic;')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Print url of README.md file of the pymolsnips repository.</description>
+    <caption>Print url of README.md file of the pymolsnips repository.</caption>
     <tag>github</tag>
-    <text><![CDATA[https://github.com/MooersLab/pymolsnips/blob/master/README.md
-$0
+    <text><![CDATA[      cmd.do('https://github.com/MooersLab/pymolsnips/blob/master/README.md')
+      
+      ${0}
 ]]></text>
   </snippet>
   <snippet>
-    <description>Set dihedral labels to display 2 decimals places to the right of the decimal point.</description>
+    <caption>Set dihedral labels to display 2 decimals places to the right of the decimal point.</caption>
     <tag>sigdihedral</tag>
-    <text><![CDATA[set label_dihedral_digits, ${1:2};
-$0
+    <text><![CDATA[      cmd.do('set label_dihedral_digits, ${1:2};')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Select state 1 from a model with multiple states.</caption>
+    <tag>stateOne</tag>
+    <text><![CDATA[      cmd.do('cmd.create('newobject', 'oldobject', '1', '1');')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in two unit cells along the c axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc112</tag>
+    <text><![CDATA[      cmd.do('run $HOME/${1:Scripts/PyMOLscripts/supercell.py};')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc113</tag>
+    <text><![CDATA[      cmd.do('run $HOME/${1:Scripts/PyMOLscripts/supercell.py};')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates three three unit cells along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc311</tag>
+    <text><![CDATA[      cmd.do('run $HOME/${1:Scripts/PyMOLscripts/supercell.py};')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in three unit cells along b. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc131</tag>
+    <text><![CDATA[      cmd.do('run $HOME/${1:Scripts/PyMOLscripts/supercell.py};')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in two unit cell along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc211</tag>
+    <text><![CDATA[      cmd.do('run $HOME/${1:Scripts/PyMOLscripts/supercell.py};')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc121</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in a 1 x 2 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc122</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in 2 x 2 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc221</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in a 2 x 1 x 2 arrays of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc212</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in 1 x 3 x 3 array of unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc133</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in a 3 x 1 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc313</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in 3 x 3 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc331</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in a 2 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc233</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in a 3 x 2 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc323</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in 3 x 3 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc332</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in 3 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc333</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in four unit cells stacked long c-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc114</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in four unit cells stacked long b-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc141</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+    <tag>sc411</tag>
+    <text><![CDATA[      cmd.do('run $HOME/Scripts/PyMOLscripts/supercell.py;')
+      cmd.do('supercell 1, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Save aln flle with timestamp</caption>
+    <tag>saln</tag>
+    <text><![CDATA[      cmd.do('python;')
+      cmd.do('import datetime;')
+      cmd.do('from pymol import cmd;')
+      cmd.do('DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");')
+      cmd.do('s = str(DT);')
+      cmd.do('cmd.save(stemName+s+".aln");')
+      cmd.do('end python;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Save electron density map flle with timestamp</caption>
+    <tag>sccp4</tag>
+    <text><![CDATA[      cmd.do('python;')
+      cmd.do('import datetime;')
+      cmd.do('from pymol import cmd; ')
+      cmd.do('DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");')
+      cmd.do('s = str(DT); ')
+      cmd.do('cmd.save(stemName+s+".ccp4"); ')
+      cmd.do('end python;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Save dae flle with timestamp</caption>
+    <tag>sdae</tag>
+    <text><![CDATA[      cmd.do('python;')
+      cmd.do('import datetime;')
+      cmd.do('from pymol import cmd; ')
+      cmd.do('DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");')
+      cmd.do('s = str(DT); ')
+      cmd.do('cmd.save(stemName+s+".dae"); ')
+      cmd.do('end python;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Carved isosurface representation of electron density. </caption>
+    <tag>carvedIsosurface</tag>
+    <text><![CDATA[      cmd.do('delete all;')
+      cmd.do('fetch ${1:4dgr}, async=0;')
+      cmd.do('fetch ${1:4dgr}, type=2fofc,async=0;')
+      cmd.do('select ${2:LongGlycan}, resi ${3:469:477};')
+      cmd.do('orient ${2:LongGlycan};')
+      cmd.do('remove not ${2:LongGlycan};')
+      cmd.do('remove name H*;')
+      cmd.do('isosurface 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;')
+      cmd.do('color density, 2fofcmap; ')
+      cmd.do('show sticks;')
+      cmd.do('show spheres;')
+      cmd.do('set stick_radius, .07;')
+      cmd.do('set sphere_scale, .19;')
+      cmd.do('set sphere_scale, .13, elem H;')
+      cmd.do('set bg_rgb=[1, 1, 1];')
+      cmd.do('set stick_quality, 50;')
+      cmd.do('set sphere_quality, 4;')
+      cmd.do('color gray85, elem C;')
+      cmd.do('color red, elem O;')
+      cmd.do('color slate, elem N;')
+      cmd.do('color gray98, elem H;')
+      cmd.do('set stick_color, gray50;')
+      cmd.do('set ray_trace_mode, 1;')
+      cmd.do('set ray_texture, 2;')
+      cmd.do('set antialias, 3;')
+      cmd.do('set ambient, 0.5;')
+      cmd.do('set spec_count, 5;')
+      cmd.do('set shininess, 50;')
+      cmd.do('set specular, 1;')
+      cmd.do('set reflect, .1;')
+      cmd.do('set dash_gap, 0;')
+      cmd.do('set dash_color, black;')
+      cmd.do('set dash_gap, .15;')
+      cmd.do('set dash_length, .05;')
+      cmd.do('set dash_round_ends, 0;')
+      cmd.do('set dash_radius, .05;')
+      cmd.do('set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);')
+      cmd.do('preset.ball_and_stick("all",mode=1);')
+      cmd.do('draw;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Fetch 2FoFc map as an isosurface.</caption>
+    <tag>fetch2FoFcIsosurface</tag>
+    <text><![CDATA[      cmd.do('fetch ${1:3nd4}_2fofc, type=2fofc, async=0;')
+      cmd.do('isosurface 2fofcmap, ${1:3nd4}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Three electron density as isosurface. </caption>
+    <tag>threeMapsIsosurface</tag>
+    <text><![CDATA[      cmd.do('load ${1:4dgr}.pdb')
+      cmd.do('# Make sure to rename map file so that ')
+      cmd.do('# the root filename differs from pdb root filename')
+      cmd.do('load ${1:4dgr}_2fofc.ccp4, 2fofc;')
+      cmd.do('load ${1:4dgr}_fofc.ccp4, fofc;')
+      cmd.do('select  ${2:glycan}, resid 200 or (resid 469:477);')
+      cmd.do('isosurface ${3:mesh1}, 2fofc, 1.0, ${2:glycan};')
+      cmd.do('color density, ${3:mesh1};')
+      cmd.do('isosurface  ${4:mesh2}, fofc, 3.0, ${2:glycan};')
+      cmd.do('color green, ${4:mesh2};')
+      cmd.do('isosurface  ${5:mesh3}, fofc, -3.0, ${2:glycan};')
+      cmd.do('color red, ${5:mesh3};')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Carved volume representation of electron density. </caption>
+    <tag>carvedVolume</tag>
+    <text><![CDATA[      cmd.do('delete all;')
+      cmd.do('fetch ${1:4dgr}, async=0;')
+      cmd.do('fetch ${1:4dgr}, type=2fofc,async=0;')
+      cmd.do('select ${2:LongGlycan}, resi ${3:469:477};')
+      cmd.do('orient ${2:LongGlycan};')
+      cmd.do('remove not ${2:LongGlycan};')
+      cmd.do('remove name H*;')
+      cmd.do('surface 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;')
+      cmd.do('color density, 2fofcmap; ')
+      cmd.do('show sticks;')
+      cmd.do('show spheres;')
+      cmd.do('set stick_radius, .07;')
+      cmd.do('set sphere_scale, .19;')
+      cmd.do('set sphere_scale, .13, elem H;')
+      cmd.do('set bg_rgb=[1, 1, 1];')
+      cmd.do('set stick_quality, 50;')
+      cmd.do('set sphere_quality, 4;')
+      cmd.do('color gray85, elem C;')
+      cmd.do('color red, elem O;')
+      cmd.do('color slate, elem N;')
+      cmd.do('color gray98, elem H;')
+      cmd.do('set stick_color, gray50;')
+      cmd.do('set ray_trace_mode, 1;')
+      cmd.do('set ray_texture, 2;')
+      cmd.do('set antialias, 3;')
+      cmd.do('set ambient, 0.5;')
+      cmd.do('set spec_count, 5;')
+      cmd.do('set shininess, 50;')
+      cmd.do('set specular, 1;')
+      cmd.do('set reflect, .1;')
+      cmd.do('set dash_gap, 0;')
+      cmd.do('set dash_color, black;')
+      cmd.do('set dash_gap, .15;')
+      cmd.do('set dash_length, .05;')
+      cmd.do('set dash_round_ends, 0;')
+      cmd.do('set dash_radius, .05;')
+      cmd.do('set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);')
+      cmd.do('preset.ball_and_stick("all",mode=1);')
+      cmd.do('draw;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Fetch 2FoFc map as a volume.</caption>
+    <tag>fetch2FoFcVolume</tag>
+    <text><![CDATA[      cmd.do('fetch ${1:3nd4}, type=2fofc, async=0;')
+      cmd.do('volume 2fofcmap, ${1:3nd4}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Three electron density as volumes. </caption>
+    <tag>threeMapsVolume</tag>
+    <text><![CDATA[      cmd.do('load ${1:4dgr}.pdb')
+      cmd.do('# Make sure to rename map file so that ')
+      cmd.do('# the root filename differs from pdb root filename')
+      cmd.do('load ${1:4dgr}_2fofc.ccp4, 2fofc;')
+      cmd.do('load ${1:4dgr}_fofc.ccp4, fofc;')
+      cmd.do('select  ${2:glycan}, resid 200 or (resid 469:477);')
+      cmd.do('volume ${3:mesh1}, 2fofc, 1.0, ${2:glycan};')
+      cmd.do('color density, ${3:mesh1};')
+      cmd.do('volume ${4:mesh2}, fofc, 3.0, ${2:glycan};')
+      cmd.do('color green, ${4:mesh2};')
+      cmd.do('volume ${5:mesh3}, fofc, -3.0, ${2:glycan};')
+      cmd.do('color red, ${5:mesh3};')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Return settings in rounded format while running PyMOL via the RCP server ipymol in a jupuyter notebook. This is a modified version of the roundview.py script.</caption>
+    <tag>rvi</tag>
+    <text><![CDATA[      cmd.do('def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):')
+      cmd.do('    """')
+      cmd.do('    rvj() is a modification of the the rv() function (aka the roundview.py) ')
+      cmd.do('    so that it can run in Jupyter notebooks with the ipymol.viewer. ')
+      cmd.do('    A set_view string is printed to the noteobook in a format that is ready ')
+      cmd.do('    for reuse. ')
+      cmd.do('    ')
+      cmd.do('    The ipymol module was developed by Carlos Hernandez:')
+      cmd.do('    ')
+      cmd.do('    https://github.com/cxhernandez/ipymol')
+      cmd.do('    ')
+      cmd.do('    The pre-requisites for installing ipymol are as follows:')
+      cmd.do('    ')
+      cmd.do('    1. Make a jupyter notebook kernel for Python interpreter inside of ')
+      cmd.do('       the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for ')
+      cmd.do('       a description of how to make one.')
+      cmd.do('    2. Install the following build of ipymol at the PyMOL prompt.')
+      cmd.do('       You need to log into your GitHub account first.')
+      cmd.do('    ')
+      cmd.do('    pip install git+pip install git+https://github.com/cxhernandez/ipymol.git@2a30d6ec1588434e6f0f72a1d572444f89ff535b')
+      cmd.do('    ')
+      cmd.do('    3. Make a bash alias to this PyMOL app file.')
+      cmd.do('    ')
+      cmd.do('    4. Launch the jupyter notebook and select the pymol.python kernel.')
+      cmd.do('    ')
+      cmd.do('    5. Open a terminal instance from the File pulldown in jupyter notebook.')
+      cmd.do('    ')
+      cmd.do('    6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.')
+      cmd.do('    ')
+      cmd.do('    7. Enter the following code to load ipymol and conmect to PyMOL')
+      cmd.do('    ')
+      cmd.do('    from ipymol import viewer as ipv')
+      cmd.do('    ipv.start()   # Start PyMOL RPC server')
+      cmd.do('    ')
+      cmd.do('    Now you can change the scene manually and send the display as static ')
+      cmd.do('    image to a cell in the jupyter notebook.')
+      cmd.do('    ')
+      cmd.do('    It is assumed that the viewer class of the ipymol moduel has been ')
+      cmd.do('    imported as ipv. ')
+      cmd.do('    ')
+      cmd.do('    I made the following modifications of roundview.py.')
+      cmd.do('    The cmd.get_view was replaced with ipv.get_view.')
+      cmd.do('    The cmd.extend was replaced with ipv.extend.')
+      cmd.do('    The myRoundedList was returned for further processing.')
+      cmd.do('    ')
+      cmd.do('    MIT License')
+      cmd.do('    ')
+      cmd.do('    Copyright:')
+      cmd.do('    Blaine Mooers and the OU Board of Regents')
+      cmd.do('    Uniersity of Oklahoma Health Sciences Center')
+      cmd.do('    Oklahoma City, OK 73104')
+      cmd.do('    ')
+      cmd.do('    29 April 2020')
+      cmd.do('    ')
+      cmd.do('    """')
+      cmd.do('    ')
+      cmd.do(' ')
+      cmd.do('    StoredView = int(StoredView)')
+      cmd.do('    decimal_places = int(decimal_places)')
+      cmd.do(' ')
+      cmd.do('    #call the get_view function')
+      cmd.do(' ')
+      cmd.do('    m = ipv.get_view(StoredView)')
+      cmd.do(' ')
+      cmd.do(' ')
+      cmd.do('    #Make a list of the elements in the orientation matrix.')
+      cmd.do(' ')
+      cmd.do('    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9],')
+      cmd.do('              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]')
+      cmd.do(' ')
+      cmd.do('    #Round off the matrix elements to two decimal places (two fractional places)')
+      cmd.do('    #This rounding approach solved the problem of unwanted')
+      cmd.do('    #whitespaces when I tried to use a string format statement')
+      cmd.do(' ')
+      cmd.do('    myRoundedList = [round(elem, decimal_places) for elem in myList]')
+      cmd.do('    ')
+      cmd.do('    #x is the string template for the output. The whitespace is required')
+      cmd.do('    #between the "set_view" and "("')
+      cmd.do(' ')
+      cmd.do('    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'')
+      cmd.do(' ')
+      cmd.do('    # Print to the command history window.')
+      cmd.do('    print(x.format(*myRoundedList))')
+      cmd.do(' ')
+      cmd.do('    #Write to a text file.')
+      cmd.do('    myFile = open("roundedview.txt", "a")')
+      cmd.do('    myFile.write(x.format(*myRoundedList) + "")')
+      cmd.do('    myFile.close()')
+      cmd.do('    return myRoundedList')
+      cmd.do('ipv.extend("rv", rv)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Demo of the use of the RPC server with a drug compound via rdkit.</caption>
+    <tag>rdkrpcChem</tag>
+    <text><![CDATA[      cmd.do('import os;')
+      cmd.do('import rdkit;')
+      cmd.do('from rdkit import Chem;')
+      cmd.do('from rdkit.Chem import AllChem;')
+      cmd.do('from rdkit.Chem import PyMol;')
+      cmd.do('')
+      cmd.do('s = PyMOL.MolViewer();')
+      cmd.do('mol = Chem.MolFromSmiles \')
+      cmd.do('   ('CCOCCn1c(C2CC[NH+](CCc3ccc(C(C)(C)C(=O)[O-])cc3)CC2)nc2ccccc21');')
+      cmd.do('mol = AllChem.AddHs(mol);')
+      cmd.do('AllChem.EmbedMolecule(mol);')
+      cmd.do('AllChem.MMFFOptimizeMolecule(mol);')
+      cmd.do('s.ShowMol(mol, name = 'bilastine', showOnly = False);')
+      cmd.do('s.Zoom('bilastine');')
+      cmd.do('s.SetDisplayStyle('bilastine', 'sticks');')
+      cmd.do('s.GetPNG(preDelay=5);')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. </caption>
+    <tag>kernel</tag>
+    <text><![CDATA[      cmd.do('framerule=2pt,')
+      cmd.do('framesep=2mm,')
+      cmd.do('framesep=2mm,')
+      cmd.do('breaklines=True,')
+      cmd.do('baselinestretch=1.2')
+      cmd.do(']{bash}')
+      cmd.do('{')
+      cmd.do(' "argv": [')
+      cmd.do('  "/Applications/PyMOL.app/Contents/bin/python",')
+      cmd.do('  "-m",')
+      cmd.do('  "ipykernel_launcher",')
+      cmd.do('  "-f",')
+      cmd.do('  "{connection_file}"')
+      cmd.do(' ],')
+      cmd.do(' "display_name": "pymol.python",')
+      cmd.do(' "language": "python"')
+      cmd.do('}')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Demo of the use of the RPC server with a protein via rdkit.</caption>
+    <tag>rdkrpcProtein</tag>
+    <text><![CDATA[      cmd.do('from rdkit.Chem import PyMol;')
+      cmd.do('')
+      cmd.do('Usage=""""Start pymol from command line with -R flag.')
+      cmd.do('Select the pymol.python kernel in Jupyter notebook. """;')
+      cmd.do('')
+      cmd.do('s = PyMol.MolViewer();')
+      cmd.do('du = s.server.do;')
+      cmd.do('du('rein; bg_color white; fetch 1lw9, type=pdb, async=0, show;nb_spheres; set_view (0.46,-0.28,-0.84,0.74,-0.41,0.54,-0.49,-0.87,0.02,0.0,0.0,\')
+      cmd.do(' -155.16,35.13,11.48,9.72,122.33,187.99,-20.0);');')
+      cmd.do('s.GetPNG(preDelay=3);')
+      cmd.do('du('png T4L600dpi.png, dpi=600');')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Code to start the RPC server with ipymol.</caption>
+    <tag>ipymolStart</tag>
+    <text><![CDATA[      cmd.do('# Start pymol in terminal with pymol -R;')
+      cmd.do('# Select pymol.python as kernel in juptyer;')
+      cmd.do('from ipymol import viewer as ipv;')
+      cmd.do('ipv.start() # Start PyMOL RPC server;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Demo of the use of the RPC server with a protein via ipymol.</caption>
+    <tag>ipymolProtein</tag>
+    <text><![CDATA[      cmd.do('# Start pymol in terminal with pymol -R;')
+      cmd.do('# Select pymol.python as kernel in juptyer;')
+      cmd.do('from ipymol import viewer as ipv;')
+      cmd.do('ipv.start() # Start PyMOL RPC server;')
+      cmd.do('')
+      cmd.do('ipv.do('fetch 1lw9');')
+      cmd.do('ipv.do('rv');')
+      cmd.do('# The double parentheses are required when set_view is run this way.;')
+      cmd.do('ipv.set_view((-0.13,-0.4,-0.91,0.89,-0.45,0.07,-0.44,-0.8,0.41,0.0,0.0,-182.47,35.13,11.48,9.72,149.64,215.3,-20.0));')
+      cmd.do('ipv.do('AOD');')
+      cmd.do('ipv.png('testipymolT4L.png');')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script.</caption>
+    <tag>rvr</tag>
+    <text><![CDATA[      cmd.do('def rvr(StoredView=0, decimal_places=2, outname="roundedview.txt"):')
+      cmd.do('   """MIT License')
+      cmd.do('    Copyright:')
+      cmd.do('    Blaine Mooers and the OU Board of Regents')
+      cmd.do('    University of Oklahoma Health Sciences Center')
+      cmd.do('    Oklahoma City, OK 73104')
+      cmd.do('    30 April 2020')
+      cmd.do('    ')
+      cmd.do('    First run the following:')
+      cmd.do('    ')
+      cmd.do('    from rdkit.Chem import PyMol')
+      cmd.do('    s = PyMol.MolViewer()')
+      cmd.do('    du = s.server.do')
+      cmd.do('')
+      cmd.do('    """')
+      cmd.do('    StoredView = int(StoredView) decimal_places = int(decimal_places)')
+      cmd.do('    #call the get_view function')
+      cmd.do('    m = s.get_view(StoredView)')
+      cmd.do('    #Make a list of the elements in the orientation matrix.')
+      cmd.do('    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9], ')
+      cmd.do('              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]')
+      cmd.do('    #Round off the matrix elements to two decimal places (two fractional places)')
+      cmd.do('    #This rounding approach solved the problem of unwanted')
+      cmd.do('    #whitespaces when I tried to use a string format statement')
+      cmd.do('    myRoundedList = [round(elem, decimal_places) for elem in myList]')
+      cmd.do('    #x is the string template for the output. The whitespace is required')
+      cmd.do('    #between the "set_view" and "("')
+      cmd.do('    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'')
+      cmd.do('    # Print to the command history window.')
+      cmd.do('    print(x.format(*myRoundedList))')
+      cmd.do('    #Write to a text file.')
+      cmd.do('    myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()')
+      cmd.do('    return myRoundedList')
+      cmd.do('du.extend("rvr", rvr)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Return to the command history window the docstrings for all of the functions in the cmd module.</caption>
+    <tag>cmddocs</tag>
+    <text><![CDATA[      cmd.do('[help(i) for i in dir(cmd)];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Return to the command history window the docstrings for all of the functions in a module.</caption>
+    <tag>pymoldocs</tag>
+    <text><![CDATA[      cmd.do('[help(i) for i in dir(pymol)];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the number of residues in a protein.</caption>
+    <tag>numResiProtein</tag>
+    <text><![CDATA[      cmd.do('sel = 'polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the number of residues in chain A of a protein.</caption>
+    <tag>numResiProteinChainA</tag>
+    <text><![CDATA[      cmd.do('sel = 'chain A and polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the number of residues in a nulceic acid (all chains).</caption>
+    <tag>numResiNucleic</tag>
+    <text><![CDATA[      cmd.do('sel = 'polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the number of residues in a nulceic acid chain.</caption>
+    <tag>numResiNucleicChainA</tag>
+    <text><![CDATA[      cmd.do('sel = 'chain A and polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Create bonds between phosphorous and O3* atoms in a low resolution DNA structure that is 80 base pairs long.</caption>
+    <tag>brokenNucleicBackbone</tag>
+    <text><![CDATA[      cmd.do('[cmd.bond(f"/5fur//E/{i}/O3'", f"/5fur//E/{i+1}/P") for i in range(${1:1}, ${2:80})]; ')
+      cmd.do('[cmd.bond(f"/5fur//F/{i}/O3'", f"/5fur//F/{i+1}/P") for i in range(${3:81}, ${3:160})];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
+</caption>
+    <tag>oneBondThicknessColor</tag>
+    <text><![CDATA[      cmd.do('# To change stick color and radius for the bond between atom 2 and 3;')
+      cmd.do('set_bond stick_color, ${1:yellow}, index 2, index 3;')
+      cmd.do('set_bond stick_radius, ${2:0.2}, index 2, index 3;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18. Note that this example requires the draw_links.py [http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py] by Robert Campbell.</caption>
+    <tag>drawLinks</tag>
+    <text><![CDATA[      cmd.do('# Requires draw_links.py http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py by Robert Campbell')
+      cmd.do('# To connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18.')
+      cmd.do('draw_links ${1:mol1} & chain ${2:A} & name  ${3:CA} & resi ${4:1+6+7+8}, ${5:mol1} & chain ${6:A}& name ${7:CA} & resi ${8:10+16+17+18} ')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the path to the currently used PyMOL binary.</caption>
+    <tag>printPath</tag>
+    <text><![CDATA[      cmd.do('# Print the path to the current used PyMOL binary.')
+      cmd.do('print pymol.__path__')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Turn on the ligand valence.</caption>
+    <tag>setLigandValenceOn</tag>
+    <text><![CDATA[      cmd.do('#Set on the valence of the ligand only')
+      cmd.do('set valence, on, resn ${1:RZS}; set valence, off, not resn ${2:RZS}')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset).</caption>
+    <tag>presetDocs</tag>
+    <text><![CDATA[      cmd.do('help(preset)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Return the docustring for the help submodule. The command help help is more concise.</caption>
+    <tag>helpDocs</tag>
+    <text><![CDATA[      cmd.do('help(help)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>The amber trajectories have to be loaded into the same object.</caption>
+    <tag>loadAmberTrajs</tag>
+    <text><![CDATA[      cmd.do('load file.top, protein;')
+      cmd.do('load file.rst, protein')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Saves multiple objects into multiple files using an optional prefix name.</caption>
+    <tag>saveSep</tag>
+    <text><![CDATA[      cmd.do('from pymol import cmd')
+      cmd.do('import glob')
+      cmd.do('import re')
+      cmd.do('')
+      cmd.do('def saveSep(prefix=''):')
+      cmd.do('  """')
+      cmd.do('  save_sep <prefix>')
+      cmd.do('')
+      cmd.do('  saves multiple objects into multiple files using an optional prefix name.')
+      cmd.do('')
+      cmd.do('  e.g. save_sep prefix')
+      cmd.do('  """')
+      cmd.do('  obj_list = cmd.get_names("all")')
+      cmd.do('')
+      cmd.do('  if obj_list:')
+      cmd.do('    for i in range(len(obj_list)):')
+      cmd.do('      obj_name = "%s%s.pdb" % (prefix, obj_list[i])')
+      cmd.do('      cmd.save(obj_name, obj_list[i])')
+      cmd.do('      print("Saving %s" %  obj_name)')
+      cmd.do('  else:')
+      cmd.do('    print("No objects found")')
+      cmd.do('    ')
+      cmd.do('cmd.extend('saveSep',saveSep)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures.</caption>
+    <tag>optAlignRNA</tag>
+    <text><![CDATA[      cmd.do('#!python')
+      cmd.do(' ')
+      cmd.do('##############################################################################')
+      cmd.do('#')
+      cmd.do('# @SUMMARY: -- QKabsch.py.  A python implementation of the optimal superposition')
+      cmd.do('#     of two sets of vectors as proposed by Kabsch 1976 & 1978.')
+      cmd.do('#')
+      cmd.do('# @AUTHOR: Jason Vertrees')
+      cmd.do('# @COPYRIGHT: Jason Vertrees (C), 2005-2007')
+      cmd.do('# @LICENSE: Released under GPL:')
+      cmd.do('# This program is free software; you can redistribute it and/or modify')
+      cmd.do('#    it under the terms of the GNU General Public License as published by')
+      cmd.do('#    the Free Software Foundation; either version 2 of the License, or')
+      cmd.do('#    (at your option) any later version.')
+      cmd.do('# This program is distributed in the hope that it will be useful, but WITHOUT')
+      cmd.do('# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS')
+      cmd.do('# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.')
+      cmd.do('#')
+      cmd.do('# You should have received a copy of the GNU General Public License along with')
+      cmd.do('# this program; if not, write to the Free Software Foundation, Inc., 51 Franklin')
+      cmd.do('# Street, Fifth Floor, Boston, MA 02110-1301, USA ')
+      cmd.do('#')
+      cmd.do('# DATE  : 2007-01-01')
+      cmd.do('# REV   : 2')
+      cmd.do('# REQUIREMENTS: numpy')
+      cmd.do('#')
+      cmd.do('#')
+      cmd.do('# Modified optAlign.py to use C1' carbon atoms of RNA for alignment.')
+      cmd.do('# Jan. 29, 2020 ')
+      cmd.do('# Blaine Mooers, PhD')
+      cmd.do('# Univ. of Oklahoma Health Sciences Center')
+      cmd.do('#')
+      cmd.do('#############################################################################')
+      cmd.do('from array import *')
+      cmd.do(' ')
+      cmd.do('# system stuff')
+      cmd.do('import os')
+      cmd.do('import copy')
+      cmd.do(' ')
+      cmd.do('# pretty printing')
+      cmd.do('import pprint')
+      cmd.do(' ')
+      cmd.do('# for importing as a plugin into PyMol')
+      cmd.do('from pymol import cmd')
+      cmd.do('from pymol import stored')
+      cmd.do('from pymol import selector')
+      cmd.do(' ')
+      cmd.do('# using numpy for linear algebra')
+      cmd.do('import numpy')
+      cmd.do(' ')
+      cmd.do('def optAlignRNA( sel1, sel2 ):')
+      cmd.do('	"""')
+      cmd.do('	optAlignRNA performs the Kabsch alignment algorithm upon the C1' carbons of two selections.')
+      cmd.do('	Example: optAlignRNA 1JU7 and i. 1-16 and n. C1', 1CLL and i. 4-146 and n. C1'')
+      cmd.do(' ')
+      cmd.do('	Two RMSDs are returned.  One comes from the Kabsch algorithm and the other from')
+      cmd.do('	PyMOL based upon your selections.')
+      cmd.do('	')
+      cmd.do('	This function can be run in a for loop to fit multiple structures  with a common prefix name:')
+      cmd.do('	')
+      cmd.do('	for x in cmd.get_names(): optAlignRNA(x, "1JU7_0001")')
+      cmd.do('	 ')
+      cmd.do('	or get the rmsds for all combinations, do the following:')
+      cmd.do('	 ')
+      cmd.do('	[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()]')
+      cmd.do('')
+      cmd.do('	"""')
+      cmd.do('	cmd.reset()')
+      cmd.do(' ')
+      cmd.do('	# make the lists for holding coordinates')
+      cmd.do('	# partial lists')
+      cmd.do('	stored.sel1 = []')
+      cmd.do('	stored.sel2 = []')
+      cmd.do('	# full lists')
+      cmd.do('	stored.mol1 = []')
+      cmd.do('	stored.mol2 = []')
+      cmd.do(' ')
+      cmd.do('	# -- CUT HERE')
+      cmd.do('	sel1 += " and N. C1'"')
+      cmd.do('	sel2 += " and N. C1'"')
+      cmd.do('	# -- CUT HERE')
+      cmd.do(' ')
+      cmd.do('	# Get the selected coordinates.  We')
+      cmd.do('	# align these coords.')
+      cmd.do('	cmd.iterate_state(1, selector.process(sel1), "stored.sel1.append([x,y,z])")')
+      cmd.do('	cmd.iterate_state(1, selector.process(sel2), "stored.sel2.append([x,y,z])")')
+      cmd.do(' ')
+      cmd.do('	# get molecule name')
+      cmd.do('	mol1 = cmd.identify(sel1,1)[0][0]')
+      cmd.do('	mol2 = cmd.identify(sel2,1)[0][0]')
+      cmd.do(' ')
+      cmd.do('	# Get all molecule coords.  We do this because')
+      cmd.do('	# we have to rotate the whole molcule, not just')
+      cmd.do('	# the aligned selection')
+      cmd.do('	cmd.iterate_state(1, mol1, "stored.mol1.append([x,y,z])")')
+      cmd.do('	cmd.iterate_state(1, mol2, "stored.mol2.append([x,y,z])")')
+      cmd.do(' ')
+      cmd.do('	# check for consistency')
+      cmd.do('	assert len(stored.sel1) == len(stored.sel2)')
+      cmd.do('	L = len(stored.sel1)')
+      cmd.do('	assert L > 0')
+      cmd.do(' ')
+      cmd.do('	# must alway center the two proteins to avoid')
+      cmd.do('	# affine transformations.  Center the two proteins')
+      cmd.do('	# to their selections.')
+      cmd.do('	COM1 = numpy.sum(stored.sel1,axis=0) / float(L)')
+      cmd.do('	COM2 = numpy.sum(stored.sel2,axis=0) / float(L)')
+      cmd.do('	stored.sel1 -= COM1')
+      cmd.do('	stored.sel2 -= COM2')
+      cmd.do(' ')
+      cmd.do('	# Initial residual, see Kabsch.')
+      cmd.do('	E0 = numpy.sum( numpy.sum(stored.sel1 * stored.sel1,axis=0),axis=0) + numpy.sum( numpy.sum(stored.sel2 * stored.sel2,axis=0),axis=0)')
+      cmd.do(' ')
+      cmd.do('	#')
+      cmd.do('	# This beautiful step provides the answer.  V and Wt are the orthonormal')
+      cmd.do('	# bases that when multiplied by each other give us the rotation matrix, U.')
+      cmd.do('	# S, (Sigma, from SVD) provides us with the error!  Isn't SVD great!')
+      cmd.do('	V, S, Wt = numpy.linalg.svd( numpy.dot( numpy.transpose(stored.sel2), stored.sel1))')
+      cmd.do(' ')
+      cmd.do('	# we already have our solution, in the results from SVD.')
+      cmd.do('	# we just need to check for reflections and then produce')
+      cmd.do('	# the rotation.  V and Wt are orthonormal, so their det's')
+      cmd.do('	# are +/-1.')
+      cmd.do('	reflect = float(str(float(numpy.linalg.det(V) * numpy.linalg.det(Wt))))')
+      cmd.do(' ')
+      cmd.do('	if reflect == -1.0:')
+      cmd.do('		S[-1] = -S[-1]')
+      cmd.do('		V[:,-1] = -V[:,-1]')
+      cmd.do(' ')
+      cmd.do('	RMSD = E0 - (2.0 * sum(S))')
+      cmd.do('	RMSD = numpy.sqrt(abs(RMSD / L))')
+      cmd.do(' ')
+      cmd.do('	#U is simply V*Wt')
+      cmd.do('	U = numpy.dot(V, Wt)')
+      cmd.do(' ')
+      cmd.do('	# rotate and translate the molecule')
+      cmd.do('	stored.sel2 = numpy.dot((stored.mol2 - COM2), U)')
+      cmd.do('	stored.sel2 = stored.sel2.tolist()')
+      cmd.do('	# center the molecule')
+      cmd.do('	stored.sel1 = stored.mol1 - COM1')
+      cmd.do('	stored.sel1 = stored.sel1.tolist()')
+      cmd.do(' ')
+      cmd.do('	# let PyMol know about the changes to the coordinates')
+      cmd.do('	cmd.alter_state(1,mol1,"(x,y,z)=stored.sel1.pop(0)")')
+      cmd.do('	cmd.alter_state(1,mol2,"(x,y,z)=stored.sel2.pop(0)")')
+      cmd.do(' ')
+      cmd.do('	#print("Moved: %s Reference: %s RMSD = %f" % mol1, mol2, RMSD)')
+      cmd.do('	print("% s, % s,% 5.3f" % (mol1, mol2, RMSD))')
+      cmd.do(' ')
+      cmd.do('	# make the alignment OBVIOUS')
+      cmd.do('	cmd.hide('everything')')
+      cmd.do('	cmd.show('ribbon', sel1 + ' or ' + sel2)')
+      cmd.do('	cmd.color('gray70', mol1 )')
+      cmd.do('	cmd.color('magenta', mol2 )')
+      cmd.do('	cmd.color('red', 'visible')')
+      cmd.do('	cmd.show('ribbon', 'not visible')')
+      cmd.do('	cmd.center('visible')')
+      cmd.do('	cmd.orient()')
+      cmd.do('	cmd.zoom('visible')')
+      cmd.do(' ')
+      cmd.do('cmd.extend("optAlignRNA", optAlignRNA)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Load into PyMOL multiple files with a common file stem. The is a script by Robert Campbell that updated for Python3.</caption>
+    <tag>loadManyFiles</tag>
+    <text><![CDATA[      cmd.do('# Copyright (c) 2004 Robert L. Campbell')
+      cmd.do('#')
+      cmd.do('# Modified for use with Python3.')
+      cmd.do('# Jan. 29, 2020 ')
+      cmd.do('# Blaine Mooers, PhD')
+      cmd.do('# Univ. of Oklahoma Health Sciences Center')
+      cmd.do('#')
+      cmd.do('#')
+      cmd.do('from pymol import cmd')
+      cmd.do('import glob')
+      cmd.do('')
+      cmd.do('def loadFiles(files):')
+      cmd.do('  """')
+      cmd.do('  load_files <files>')
+      cmd.do('')
+      cmd.do('  loads multiple files (using filename globbing)')
+      cmd.do('  into a multiple objects named as the files are (e.g. collection of')
+      cmd.do('  downloaded PDB files).')
+      cmd.do('')
+      cmd.do('  e.g. load_files prot_*.pdb')
+      cmd.do('  """')
+      cmd.do('  file_list = glob.glob(files)')
+      cmd.do('  if file_list:')
+      cmd.do('    file_list.sort()')
+      cmd.do('    for i in file_list:')
+      cmd.do('      #obj_name = i.replace('.pdb','')')
+      cmd.do('      #cmd.load(file_list[i],obj_name)')
+      cmd.do('      cmd.load(i)')
+      cmd.do('  else:')
+      cmd.do('    print("No files found for pattern %s" % files)')
+      cmd.do('')
+      cmd.do('cmd.extend('loadFiles',loadFiles)')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>These are the instructions for loading and aligning multiple files.</caption>
+    <tag>loadAndAlignManyFiles</tag>
+    <text><![CDATA[      cmd.do('To load a bunch of related files from inside PyMOL all at once:')
+      cmd.do('')
+      cmd.do('run loadFiles.py')
+      cmd.do('loadFiles refine_*.pdb')
+      cmd.do('')
+      cmd.do('')
+      cmd.do('To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms:')
+      cmd.do('')
+      cmd.do('run optAlignRNA.py')
+      cmd.do('[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()]')
+      cmd.do('')
+      cmd.do('(Yes, that construct is a list comprehension inside a list comprehension!)')
+      cmd.do('')
+      cmd.do('To save a multiple models in a file to separate pdb files,')
+      cmd.do('')
+      cmd.do('run saveSep.py')
+      cmd.do('saveSep ')
+      cmd.do('or ')
+      cmd.do('saveSep prefix')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>This is a two-fold nested list comprehension for any all parwise operation on the currently loaded objects. Replace optAlginRNA with any other function that operations on a pair of structrures.</caption>
+    <tag>allPairs</tag>
+    <text><![CDATA[      cmd.do('[[${1:optAlignRNA}(x, y) for x in cmd.get_names()] for y in cmd.get_names()]')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Combining DSSR block representation with regular PyMOL cartoons after loading the dssr_block.py script by Thomas Holder.</caption>
+    <tag>dssrBlock</tag>
+    <text><![CDATA[      cmd.do('fetch 1ehz, async=0;')
+      cmd.do('as cartoon;')
+      cmd.do('set cartoon_ladder_radius, 0.1;')
+      cmd.do('set cartoon_ladder_color, gray;')
+      cmd.do('set cartoon_nucleic_acid_mode, 1;')
+      cmd.do('dssr_block')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>DSSR block representation with fused blocks after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.</caption>
+    <tag>dssrBlock</tag>
+    <text><![CDATA[      cmd.do('fetch 1ehz, async=0;')
+      cmd.do('dssr_block block_file=wc')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.</caption>
+    <tag>dssrBlock</tag>
+    <text><![CDATA[      cmd.do('fetch 2n2d, async=0;')
+      cmd.do('dssr_block 2n2d, 0;')
+      cmd.do('set all_states;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.</caption>
+    <tag>dssrBlock</tag>
+    <text><![CDATA[      cmd.do('fetch 1msy, async=0;')
+      cmd.do('dssr_block block_color=N red | minor 0.9 | major yellow;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Settings for nucliec acid cartoon.</caption>
+    <tag>nucleicAcidCartoon</tag>
+    <text><![CDATA[      cmd.do('set cartoon_ladder_color, ${1:density};')
+      cmd.do('set cartoon_ladder_radius, ${2:0.2};')
+      cmd.do('set cartoon_nucleic_acid_color, ${3:red};')
+      cmd.do('set cartoon_ring_mode, ${4:2};')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. The set command as the syntax of  setting_name [, setting_value [, selection [,state ]]] . In this case, the selection has to be global, object, object-state, or per-atom settings. It cannot be a named selection. This is a weak spot in PyMOL. Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. Many double-stranded helices have one strand in the asymmetric unit. The second strand is in the biological unit. The coordinates for the second strand are in the pdb1 file type at the PDB. The second strand is in the second state, which is equivalent to the second model in the pdb file. The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting). The bases are colored differently too (via the cartoon_ladder_color setting).
+</caption>
+    <tag>nucleicAcidCartoon2Strands</tag>
+    <text><![CDATA[      cmd.do('# There is not support for applying different settings to different selections.')
+      cmd.do('# Instead, this can be done for different objects.')
+      cmd.do('# Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands.')
+      cmd.do('# The set command as the syntax of  setting_name [, setting_value [, selection [,state ]]]')
+      cmd.do('# In this case, the selection has to be global, object, object-state, or per-atom settings.')
+      cmd.do('# It cannot be a named selection.')
+      cmd.do('# Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands.')
+      cmd.do('# Many double-stranded helices have one strand in the asymmetric unit.')
+      cmd.do('# The second strand is in the biological unit.;')
+      cmd.do('# The coordinates for the second strand are in the pdb1 file type at the PDB.;')
+      cmd.do('# The second strand is in the second state, which is equivalent to the second model in the pdb file.;')
+      cmd.do('# The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting).;')
+      cmd.do('# The bases are colored differently too (via the cartoon_ladder_color setting).;')
+      cmd.do('fetch ${1:3nd3}, ${2:3nd3}, type=${3:pdb1};')
+      cmd.do('set all_states, on;')
+      cmd.do('create chA, ${2:3nd3}, 1, 1;')
+      cmd.do('create chB, ${2:3nd3}, 2, 1;')
+      cmd.do('# colors only the backbone;')
+      cmd.do('set cartoon_nucleic_acid_color, ${4:magenta}, chA;')
+      cmd.do('set cartoon_nucleic_acid_color, ${5:orange}, chB;')
+      cmd.do('# color the bases;')
+      cmd.do('set cartoon_ladder_color,  ${6:density}, chA;')
+      cmd.do('set cartoon_ladder_color,  ${7:yellow}, chB;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>This code colors by the nucleotides by base seqence. It can be applied to any nucleic acid. It could make a good shortcut.</caption>
+    <tag>nucleicAcidColorbySequence</tag>
+    <text><![CDATA[      cmd.do('select rna_A, resn A;')
+      cmd.do('select rna_C, resn C;')
+      cmd.do('select rna_G, resn G;')
+      cmd.do('select rna_U, resn U;')
+      cmd.do('select dna_T, resn T;')
+      cmd.do('color ${1:yellow}, rna_A;')
+      cmd.do('color ${2:red}, rna_C; ')
+      cmd.do('color ${3:gray40}, rna_G;')
+      cmd.do('color ${4:palecyan}, rna_U;')
+      cmd.do('color ${5:brown}, dna_T;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>This code colors by the nucleotides by base seqence. It can be applied to any nucleic acid. It is dervied from the CR shortcut. The backcone is shown as a flatten ribbon.</caption>
+    <tag>nucleicAcidFlatRibbonColorbySequence</tag>
+    <text><![CDATA[      cmd.do('bg_color white;')
+      cmd.do('set cartoon_oval_length, ${1:1.85};')
+      cmd.do('set cartoon_oval_width, ${2:0.5};')
+      cmd.do('cartoon oval;')
+      cmd.do('set cartoon_ring_mode, ${3:3};')
+      cmd.do('# set the color of the backbone oval;')
+      cmd.do('set cartoon_nucleic_acid_color, ${4:blue};')
+      cmd.do('select rna_A, resn A;')
+      cmd.do('select rna_C, resn C;')
+      cmd.do('select rna_G, resn G;')
+      cmd.do('select rna_U, resn U;')
+      cmd.do('select dna_T, resn T;')
+      cmd.do('color ${5:yellow}, rna_A;')
+      cmd.do('color ${6:red}, rna_C; ')
+      cmd.do('color ${7:gray40}, rna_G;')
+      cmd.do('color ${8:palecyan}, rna_U;')
+      cmd.do('color ${9:brown}, dna_T;')
+      cmd.do('as cartoon;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct.</caption>
+    <tag>nucleicAcidCartoonFilledRings</tag>
+    <text><![CDATA[      cmd.do('bg_color white;')
+      cmd.do('show sticks;')
+      cmd.do('set cartoon_ring_mode, 3;')
+      cmd.do('set cartoon_ring_finder, 1;')
+      cmd.do('set cartoon_ladder_mode, 1;')
+      cmd.do('set cartoon_nucleic_acid_mode, 4;')
+      cmd.do('set cartoon_ring_transparency, 0.5;')
+      cmd.do('as cartoon;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>This code make as standard base stacking diagram with ball and stick representation. </caption>
+    <tag>basePairStacking</tag>
+    <text><![CDATA[      cmd.do('delete all;')
+      cmd.do('fetch 4PCO, type=pdb, async=0;')
+      cmd.do('select G2G3, ( ((resi 2 or resi 3) and chain A) or ((resi 8 or resi 9) and chain B));')
+      cmd.do('remove not G2G3;')
+      cmd.do('bg_color white;')
+      cmd.do('show sticks;')
+      cmd.do('set stick_radius=0.14;')
+      cmd.do('set stick_ball, on; ')
+      cmd.do('set stick_ball_ratio,1.9;')
+      cmd.do('set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7.24,9.55,11.78,29.46,57.91,-20.0);')
+      cmd.do('remove name H*;')
+      cmd.do('select carbon1, element C and (resi 3 or resi 8) ')
+      cmd.do('# select lower base pair;')
+      cmd.do('select carbon2, element C and (resi 2 or resi 9) ')
+      cmd.do('#select upper base pair;')
+      cmd.do('color gray70, carbon1;')
+      cmd.do('color gray10, carbon2;')
+      cmd.do('show sticks;')
+      cmd.do('space cmyk;')
+      cmd.do('distance hbond1, /4PCO//B/U`9/N3,/4PCO//A/G`2/O6;')
+      cmd.do('distance hbond2, /4PCO//B/U`9/O2,/4PCO//A/G`2/N1;')
+      cmd.do('distance hbond3, /4PCO//A/U`3/N3,/4PCO//B/G`8/O6;')
+      cmd.do('distance hbond4, /4PCO//A/U`3/O2,/4PCO//B/G`8/N1;')
+      cmd.do('color black, hbond1;')
+      cmd.do('color black, hbond2;')
+      cmd.do('color gray70, hbond3;')
+      cmd.do('color gray70, hbond4;')
+      cmd.do('show nb_spheres;')
+      cmd.do('set nb_spheres_size, 0.35;')
+      cmd.do('hide labels;')
+      cmd.do('ray 1600,1000;')
+      cmd.do('png 4PCO.png;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>This code colors by the nucleotides by base seqence. The backcone is shown as a flatten ribbon with rolled edges that give the dumbell effect. The code can be applied to any nucleic acid. The code is dervied from the CR and DU shortcuts. </caption>
+    <tag>nucleicAcidDumbellCartoonColorbySequence</tag>
+    <text><![CDATA[      cmd.do('bg_color white;')
+      cmd.do('set cartoon_oval_length, ${1:1.85}')
+      cmd.do('set cartoon_oval_width, ${2:0.5}')
+      cmd.do('cartoon oval;')
+      cmd.do('cartoon dumbbell;')
+      cmd.do('set cartoon_dumbbell_width, 0.2;')
+      cmd.do('set cartoon_dumbbell_radius, 0.4;')
+      cmd.do('set cartoon_ring_mode, ${3:3};')
+      cmd.do('# set the color of the backbone oval')
+      cmd.do('set cartoon_nucleic_acid_color, ${4:blue};')
+      cmd.do('select rna_A, resn A;')
+      cmd.do('select rna_C, resn C;')
+      cmd.do('select rna_G, resn G;')
+      cmd.do('select rna_U, resn U;')
+      cmd.do('select dna_T, resn T;')
+      cmd.do('color ${5:yellow}, rna_A;')
+      cmd.do('color ${6:red}, rna_C; ')
+      cmd.do('color ${7:gray40}, rna_G;')
+      cmd.do('color ${8:palecyan}, rna_U;')
+      cmd.do('color ${9:brown}, dna_T;')
+      cmd.do('as cartoon;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Set keyboard shortcut by mapping F1 to stereo.</caption>
+    <tag>stereokb</tag>
+    <text><![CDATA[      cmd.do('cmd.set_key('F1',lambda:cmd.stereo({'on':0,'off':1}[cmd.get('stereo')]));')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print to the screen the settings and their current parameter values.</caption>
+    <tag>listSettings2</tag>
+    <text><![CDATA[      cmd.do('list = setting.get_name_list();[print("%s => %s" % (name, setting.get_setting_text(name))) for name in list];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print to the screen the settings and their current parameter values. This is the more compact version.</caption>
+    <tag>listSettings</tag>
+    <text><![CDATA[      cmd.do('[print("%s => %s" % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print to the screen as labels that 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.</caption>
+    <tag>displayFonts</tag>
+    <text><![CDATA[      cmd.do('python;')
+      cmd.do('from pymol import cmd;')
+      cmd.do('for i in range(1,21):')
+      cmd.do('     name = 'label%d' % i;')
+      cmd.do('     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));')
+      cmd.do('     cmd.set('label_font_id', i, name);')
+      cmd.do('cmd.set('label_size', 50);')
+      cmd.do('cmd.set('grid_mode');')
+      cmd.do('python end;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print to disk a list of H-bond pairs and this H-bond length.</caption>
+    <tag>listHBonds</tag>
+    <text><![CDATA[      cmd.do('Finish latter. See file listHBonds.py.;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Create a list of objects in the internal gui and print this list to the screen.</caption>
+    <tag>listObjects</tag>
+    <text><![CDATA[      cmd.do('objList = cmd.get_names("objects");print(objList);')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print a list of protein--ligand distances. Code by Dan Kulp. Updated for Python3.</caption>
+    <tag>listLigandProteinDistances</tag>
+    <text><![CDATA[      cmd.do('from pymol import cmd')
+      cmd.do('"""')
+      cmd.do('Find all distances betwen all ligand atoms and all protein atoms. ')
+      cmd.do('')
+      cmd.do('Adapted and updated from script by Dan Kulp posted here')
+      cmd.do('https://sourceforge.net/p/pymol/mailman/message/10097804/')
+      cmd.do('')
+      cmd.do('There are probably better solutions like finding just the ')
+      cmd.do('distances to proein atoms within a certain distance from ')
+      cmd.do('the ligand.')
+      cmd.do('')
+      cmd.do('Due to the nested for loops, this script is takes several second')
+      cmd.do('to run on a medium-sized human protein. This script is a ')
+      cmd.do('good candidate for vectorization. ')
+      cmd.do('')
+      cmd.do('It is also a good candiate for becoming a function and a shortcut. ')
+      cmd.do('')
+      cmd.do('"""')
+      cmd.do('')
+      cmd.do('# customize these lines to your protein.')
+      cmd.do('cmd.fetch("6NEC")')
+      cmd.do('cmd.select("prot","not resn XIN and not resn HOH and not chain C")')
+      cmd.do('cmd.select("lig", "resn XIN and not chain C")')
+      cmd.do('')
+      cmd.do('dist_list = {}')
+      cmd.do('pro_atoms = cmd.get_model("prot")')
+      cmd.do('lig_atoms = cmd.get_model("lig")')
+      cmd.do('')
+      cmd.do('for l_at in lig_atoms.atom:')
+      cmd.do('    for p_at in pro_atoms.atom:')
+      cmd.do('        dist_list[str(l_at.resn) +')
+      cmd.do('                     ":" +')
+      cmd.do('                      str(l_at.resi) +')
+      cmd.do('                      " " +')
+      cmd.do('                      l_at.name +')
+      cmd.do('                      " ---- " + ')
+      cmd.do('                      str(p_at.resn) +')
+      cmd.do('                      ":" +')
+      cmd.do('                      str(p_at.resi) +')
+      cmd.do('                      " " +')
+      cmd.do('                      p_at.name] = cmd.dist("foo", ')
+      cmd.do('                                            "index " +')
+      cmd.do('                                            str(l_at.index),"index " + str(p_at.index))')
+      cmd.do('        cmd.delete("foo")')
+      cmd.do('print("List of all pairwise ligand--protein atom-atom distances:")')
+      cmd.do('# [print("Distance of " + d + " is " + str(dist_list[d])) for d in dist_list.keys()]')
+      cmd.do('')
+      cmd.do('# More compact print statement. Need an f-string format statement.')
+      cmd.do('[print( d + " " + str(dist_list[d])) for d in dist_list.keys()]')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>This code shows that cartoon backbone tube as 65% transparent. It hides the rungs of the cartoon. It shows all of the non-H atoms are sticks. The motivation is to have the cartoon highlight the backbone without dominanting the scene.</caption>
+    <tag>nucleicAcidBackboneTubesSticks</tag>
+    <text><![CDATA[      cmd.do('set bg_rgb, white;')
+      cmd.do('hide everything, all;')
+      cmd.do('show cartoon, ${1:3nd3};')
+      cmd.do('set cartoon_sampling,1;')
+      cmd.do('set cartoon_tube_radius, 0.5;')
+      cmd.do('set cartoon_ladder_mode, 0;')
+      cmd.do('set cartoon_transparency, ${2:0.65};')
+      cmd.do('set stick_radius ${3:0.12};')
+      cmd.do('show sticks;')
+      cmd.do('hide sticks, element H;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***.</caption>
+    <tag>symexp</tag>
+    <text><![CDATA[      cmd.do('symexp ${1:symm}, ${2:3fa0}, (${2:3fa0}), ${3:20},${4:1};')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Adds the function draw_axis(). Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.</caption>
+    <tag>addAxis</tag>
+    <text><![CDATA[      cmd.do('from pymol.cgo import *    # get constants')
+      cmd.do('from pymol import cmd')
+      cmd.do('')
+      cmd.do('import math')
+      cmd.do('')
+      cmd.do('class Counter:')
+      cmd.do('    """')
+      cmd.do('    draw_line')
+      cmd.do('    source https://www.pymolwiki.org/index.php/Symmetry_Axis')
+      cmd.do('    ')
+      cmd.do('    Pymol script copyright Matthew O'Meara and Xavier Ambroggio 2007')
+      cmd.do('    ')
+      cmd.do('    Under  GNU Free Documentation License 1.2')
+      cmd.do('    ')
+      cmd.do('    Example:')
+      cmd.do('    ')
+      cmd.do('    draw_axis(x=18.232, y=17.150, z=9.488,i=-.226639, j=0.708772, k=-.668039, r=1, b=0, g=0, width=1, length=100)')
+      cmd.do('    ')
+      cmd.do('    Updated 15 June 2020 ')
+      cmd.do('    Blaine Mooers')
+      cmd.do('    ')
+      cmd.do('    Notes:')
+      cmd.do('    1) Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.')
+      cmd.do('    2) The postion (xyz) is the middle of the line, not one end as expected for a vector.')
+      cmd.do('    3) Another example: draw_axis(x=0, y=0, z=0,i=0, j=0, k=1, r=1, b=0, g=0, width=300, length=96) ')
+      cmd.do('    4) Changed print statement to Python3 print function.')
+      cmd.do('    5) Replaced cmd.extend() with function generator.')
+      cmd.do('    """')
+      cmd.do('   def __init__(self):')
+      cmd.do('       self.state = 1')
+      cmd.do('counter = Counter()')
+      cmd.do('')
+      cmd.do('@cmd.extend')
+      cmd.do('def draw_axis(x=None, y=None, z=None, i=None, j=None, k=None, length=20.0, r=1.0, g=1.0, b=1.0, width=1.0 ):')
+      cmd.do('   if x == None or y == None or z == None or i == None or j == None or k== None :')
+      cmd.do('       print('Usage: draw_axis x,y,z, i,k,j, length, r,g,b, width')')
+      cmd.do('       print('draw a line centered at (x,y,z) with the direction vector (i,j,k)')')
+      cmd.do('       print('length, color (r,g,b), and width arguments are optional')')
+      cmd.do('#        print 'For a fun example of the command, run draw_axis_example'')
+      cmd.do('   else :')
+      cmd.do('       x,y,z = float(x), float(y), float(z)')
+      cmd.do('       i,j,k = float(i), float(j), float(k)')
+      cmd.do('       r,g,b = float(r), float(g), float(b)')
+      cmd.do('       width = float(width)')
+      cmd.do('       length = float(length) / 2.0')
+      cmd.do('')
+      cmd.do('       x1,y1,z1 = (x+i*length,y+j*length,z+k*length)')
+      cmd.do('       x2,y2,z2 = (x-i*length,y-j*length,z-k*length)')
+      cmd.do('')
+      cmd.do('       obj = [')
+      cmd.do('           LINEWIDTH, width,')
+      cmd.do('           BEGIN, LINES,')
+      cmd.do('')
+      cmd.do('           COLOR,   r,  g,  b,')
+      cmd.do('           VERTEX, x1, y1, z1,')
+      cmd.do('           VERTEX, x2, y2, z2,')
+      cmd.do('')
+      cmd.do('           END')
+      cmd.do('           ]')
+      cmd.do('')
+      cmd.do('       cmd.load_cgo(obj,'axis'+str(counter.state))')
+      cmd.do('       counter.state += 1')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns.</caption>
+    <tag>synch</tag>
+    <text><![CDATA[      cmd.do('cmd.sync(timeout=${1:1.0},poll=${2:0.05});')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Add or substract a residue number offset.</caption>
+    <tag>renumResi</tag>
+    <text><![CDATA[      cmd.do('alter ${1:3fa0}, resi=str(int(resi)+${2:100});sort;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Add or substract a atom number offset.</caption>
+    <tag>renumAtoms</tag>
+    <text><![CDATA[      cmd.do('alter {$1:3fa0}, ID=ID+${2:100};')
+      cmd.do('sort;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Rename a chain. </caption>
+    <tag>renameChain</tag>
+    <text><![CDATA[      cmd.do('alter ${1:3fa0} and chain ${2:A}, chain=${3:"C"};')
+      cmd.do('sort;')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the atom number2 of a residue.</caption>
+    <tag>printAtomNumbers</tag>
+    <text><![CDATA[      cmd.do('iterate (resi 1), print(name + " %i5" % ID);')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the atom names of a residue.</caption>
+    <tag>printAtomNames</tag>
+    <text><![CDATA[      cmd.do('iterate (resi ${1:101}), print(name);')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the bfactors of a residue.</caption>
+    <tag>printBfactors</tag>
+    <text><![CDATA[      cmd.do('iterate (resi ${1:101}), print(name + " %.2f" % b);')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the van Der Waals radii of the atoms in of a residue.</caption>
+    <tag>printVDWradii</tag>
+    <text><![CDATA[      cmd.do('iterate (resi ${1:101}), print(name + " %.2f" % vdw);')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the coordinates of the atoms in a residue.</caption>
+    <tag>printCoordinates</tag>
+    <text><![CDATA[      cmd.do('stored.coords = []; ')
+      cmd.do('iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); ')
+      cmd.do('[print(i) for i in stored.coords];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the atom names and coordinates of the atoms in a residue.</caption>
+    <tag>printNamesCoordinates</tag>
+    <text><![CDATA[      cmd.do('stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]); ')
+      cmd.do('stored.coords = []; iterate_state 1, (resi ${1:101})), stored.coords.append([x,y,z]); ')
+      cmd.do('[print(i,j) for i,j in zip(stored.names, stored.coords)];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Print the atom names as tuples and coordinates of the atoms in a residue as a list.</caption>
+    <tag>printNamesCoordinates</tag>
+    <text><![CDATA[      cmd.do('stored.coords = []; iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); ')
+      cmd.do('stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]);')
+      cmd.do('stored.names3 = [tuple(i) for i in stored.names];')
+      cmd.do('[print(i,j) for i,j in(zip(stored.names3, stored.coords)];')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Source block template in org-mode with emacs-jupyter package. </caption>
+    <tag>emacsjupyterSourceBlock</tag>
+    <text><![CDATA[      cmd.do('#+BEGIN_SRC jupyter-python :session py :kernel pymol.python :exports both :results raw drawer ')
+      cmd.do('from pymol import cmd')
+      cmd.do('cmd.do("reinitialize")')
+      cmd.do('cmd.bg_color("white")')
+      cmd.do('cmd.do("fetch 6VXX")')
+      cmd.do('cmd.do("zoom (resi 614 and chain A)")')
+      cmd.do('cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")')
+      cmd.do('cmd.do("set label_color, black; set label_size, 48")')
+      cmd.do('cmd.do("set stick_radius, 0.12")')
+      cmd.do('cmd.do("hide cartoon; show sticks")')
+      cmd.do('cmd.do("set ray_shadows, 0")')
+      cmd.do('cmd.do("draw")')
+      cmd.do('cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")')
+      cmd.do('from IPython.display import Image')
+      cmd.do('from IPython.core.display import HTML')
+      cmd.do('PATH = "/Users/blaine/"')
+      cmd.do('Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)')
+      cmd.do('#+END_SRC')
+      cmd.do('')
+      cmd.do('#+RESULTS:')
+      cmd.do('$0')
+      
+      ${0}
+]]></text>
+  </snippet>
+  <snippet>
+    <caption>Source block template in org-mode with ob-ipython package. </caption>
+    <tag>obipythonSourceBlock</tag>
+    <text><![CDATA[      cmd.do('#+BEGIN_SRC ipython :session py :kernel pymol.python :exports both :results raw drawer ')
+      cmd.do('from pymol import cmd')
+      cmd.do('cmd.do("reinitialize")')
+      cmd.do('cmd.bg_color("white")')
+      cmd.do('cmd.do("fetch 6VXX")')
+      cmd.do('cmd.do("zoom (resi 614 and chain A)")')
+      cmd.do('cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")')
+      cmd.do('cmd.do("set label_color, black; set label_size, 48")')
+      cmd.do('cmd.do("set stick_radius, 0.12")')
+      cmd.do('cmd.do("hide cartoon; show sticks")')
+      cmd.do('cmd.do("set ray_shadows, 0")')
+      cmd.do('cmd.do("draw")')
+      cmd.do('cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")')
+      cmd.do('from IPython.display import Image')
+      cmd.do('from IPython.core.display import HTML')
+      cmd.do('PATH = "/Users/blaine/"')
+      cmd.do('Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)')
+      cmd.do('#+END_SRC')
+      cmd.do('')
+      cmd.do('#+RESULTS:')
+      
+      ${0}
 ]]></text>
   </snippet>

@@ -124,9 +124,9 @@ It is much more important to have the complete information in one section rather
 
 Likewise, we will need to describe the installation of the snipmate, neosnippets, and ultisnips libararies separately under neovim and Vim.
 
-Please remember to do the following:
+Please remember to do the following while editing the README.md file:
 - use two blank lines between major sections
 - use blank lines to flank code blocks
-- keep on sentence per line
+- keep one sentence per line
 - remove whitespaces beyond the period at the end of a sentence.
 

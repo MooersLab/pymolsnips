@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectAllBut</tabTrigger>
 <scope></scope>
-<description>Select all nitrogen atom in a selelction except from lysine.</description>
+<caption>Select all nitrogen atom in a selelction except from lysine.</caption>
 </snippet>

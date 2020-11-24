@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectChain</tabTrigger>
 <scope></scope>
-<description>Select a chain. </description>
+<caption>Select a chain. </caption>
 </snippet>

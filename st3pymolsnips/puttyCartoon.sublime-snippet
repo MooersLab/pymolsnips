@@ -8,5 +8,5 @@ ${0}
 ]]></content>
 <tabTrigger>puttyCartoon</tabTrigger>
 <scope></scope>
-<description>Create a putty cartoon.</description>
+<caption>Create a putty cartoon.</caption>
 </snippet>

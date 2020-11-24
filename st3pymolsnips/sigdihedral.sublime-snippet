@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>sigdihedral</tabTrigger>
 <scope></scope>
-<description>Set dihedral labels to display 2 decimals places to the right of the decimal point.</description>
+<caption>Set dihedral labels to display 2 decimals places to the right of the decimal point.</caption>
 </snippet>

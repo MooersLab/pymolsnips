@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectName</tabTrigger>
 <scope></scope>
-<description>Select atoms by name.</description>
+<caption>Select atoms by name.</caption>
 </snippet>

@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectResiduesAround</tabTrigger>
 <scope></scope>
-<description>Select residues within a radius around a ligand.</description>
+<caption>Select residues within a radius around a ligand.</caption>
 </snippet>

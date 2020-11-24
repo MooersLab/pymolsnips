@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectResidues</tabTrigger>
 <scope></scope>
-<description>Select residues by name.</description>
+<caption>Select residues by name.</caption>
 </snippet>

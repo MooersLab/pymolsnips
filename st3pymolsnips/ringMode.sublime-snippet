@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>ringMode</tabTrigger>
 <scope></scope>
-<description>Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.</description>
+<caption>Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.</caption>
 </snippet>

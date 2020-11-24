@@ -8,5 +8,5 @@ ${0}
 ]]></content>
 <tabTrigger>ms</tabTrigger>
 <scope></scope>
-<description>Measure surface area. </description>
+<caption>Measure surface area. </caption>
 </snippet>

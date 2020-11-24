@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>hideSelection</tabTrigger>
 <scope></scope>
-<description>Trun off magenta squares on current selection.</description>
+<caption>Trun off magenta squares on current selection.</caption>
 </snippet>

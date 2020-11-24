@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>internalGUImode2 </tabTrigger>
 <scope></scope>
-<description>Make the background of the internal gui transparent to expand viewport.</description>
+<caption>Make the background of the internal gui transparent to expand viewport.</caption>
 </snippet>

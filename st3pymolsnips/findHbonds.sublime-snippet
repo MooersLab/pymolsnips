@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>findHbonds</tabTrigger>
 <scope></scope>
-<description>Find hbonds around a residue.</description>
+<caption>Find hbonds around a residue.</caption>
 </snippet>

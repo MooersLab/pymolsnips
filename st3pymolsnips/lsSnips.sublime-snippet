@@ -103,5 +103,5 @@ ${0}
 ]]></content>
 <tabTrigger>lsSnips</tabTrigger>
 <scope></scope>
-<description>List all snips by tab trigger and description</description>
+<caption>List all snips by tab trigger and description</caption>
 </snippet>

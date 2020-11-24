@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>printResiResnNameB4ResiX</tabTrigger>
 <scope></scope>
-<description>Print resn, resi, atom name, and b-factor. </description>
+<caption>Print resn, resi, atom name, and b-factor. </caption>
 </snippet>

@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>labelResnResi</tabTrigger>
 <scope></scope>
-<description>Label CA atom with single-letter residue name and residue number.</description>
+<caption>Label CA atom with single-letter residue name and residue number.</caption>
 </snippet>

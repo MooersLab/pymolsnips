@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectElement</tabTrigger>
 <scope></scope>
-<description>Select atoms by elemnt.</description>
+<caption>Select atoms by element.</caption>
 </snippet>

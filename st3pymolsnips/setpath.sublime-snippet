@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>setpath</tabTrigger>
 <scope></scope>
-<description>Set additional path for PyMOL to search on startup</description>
+<caption>Set additional path for PyMOL to search on startup</caption>
 </snippet>

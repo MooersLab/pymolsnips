@@ -9,5 +9,5 @@ ${0}
 ]]></content>
 <tabTrigger>stereoDraw</tabTrigger>
 <scope></scope>
-<description>Stereo draw.</description>
+<caption>Stereo draw.</caption>
 </snippet>

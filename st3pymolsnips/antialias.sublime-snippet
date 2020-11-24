@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>antialias</tabTrigger>
 <scope></scope>
-<description>Set antialias to get smooth edges</description>
+<caption>Set antialias to get smooth edges</caption>
 </snippet>

@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>rv</tabTrigger>
 <scope></scope>
-<description>Return settings in rounded format.</description>
+<caption>Return settings in rounded format.</caption>
 </snippet>

@@ -8,5 +8,5 @@ ${0}
 ]]></content>
 <tabTrigger>cribbon</tabTrigger>
 <scope></scope>
-<description>Color ribbon H red, strand yellow, loop green.</description>
+<caption>Color ribbon H red, strand yellow, loop green.</caption>
 </snippet>

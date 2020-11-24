@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectAtomsAround</tabTrigger>
 <scope></scope>
-<description>Select atoms within a radius around a ligand.</description>
+<caption>Select atoms within a radius around a ligand.</caption>
 </snippet>

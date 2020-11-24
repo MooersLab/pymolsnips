@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>sigang</tabTrigger>
 <scope></scope>
-<description>Set angle labels to display 2 decimals places</description>
+<caption>Set angle labels to display 2 decimals places</caption>
 </snippet>

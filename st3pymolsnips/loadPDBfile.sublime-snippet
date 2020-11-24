@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>loadPDBfile</tabTrigger>
 <scope></scope>
-<description>Load a pdb file in the current directory.</description>
+<caption>Load a pdb file in the current directory.</caption>
 </snippet>

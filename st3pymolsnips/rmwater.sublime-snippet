@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>rmwater</tabTrigger>
 <scope></scope>
-<description>Remove waters from molecular object.</description>
+<caption>Remove waters from molecular object.</caption>
 </snippet>

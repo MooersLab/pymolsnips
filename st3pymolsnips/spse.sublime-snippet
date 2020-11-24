@@ -11,5 +11,5 @@ ${0}
 ]]></content>
 <tabTrigger>spse</tabTrigger>
 <scope></scope>
-<description>Save pse flle with timestamp</description>
+<caption>Save pse flle with timestamp</caption>
 </snippet>

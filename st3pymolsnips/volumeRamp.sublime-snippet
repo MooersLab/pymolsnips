@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>volumeRamp</tabTrigger>
 <scope></scope>
-<description>Volume ramp.</description>
+<caption>Volume ramp.</caption>
 </snippet>

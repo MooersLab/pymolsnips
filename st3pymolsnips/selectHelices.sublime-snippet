@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectHelices</tabTrigger>
 <scope></scope>
-<description>Select atoms by alpha helices.</description>
+<caption>Select atoms by alpha helices.</caption>
 </snippet>

@@ -10,5 +10,5 @@ ${0}
 ]]></content>
 <tabTrigger>filledRing</tabTrigger>
 <scope></scope>
-<description>Filled rings in nucleic acids. </description>
+<caption>Filled rings in nucleic acids. </caption>
 </snippet>

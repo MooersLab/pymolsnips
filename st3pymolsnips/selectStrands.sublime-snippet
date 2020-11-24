@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>selectStrands</tabTrigger>
 <scope></scope>
-<description>Select atoms by beta strands.</description>
+<caption>Select atoms by beta strands.</caption>
 </snippet>

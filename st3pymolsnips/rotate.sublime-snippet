@@ -5,5 +5,5 @@ ${0}
 ]]></content>
 <tabTrigger>rotate</tabTrigger>
 <scope></scope>
-<description>Rotate about axis.</description>
+<caption>Rotate about axis.</caption>
 </snippet>
