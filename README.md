@@ -13,11 +13,12 @@ By entering these two letters, you have inserted 16 lines of code!
 
 <p align="center"><img src="gifs/VSCaoSnip.gif"></p>
 
-The result of applying a variant of the above code to a 27-nucleotide hairpin is shown below.
+The result of applying a variant of the above code to a 27-nucleotide RNA hairpin is shown below.
 
 <p align="center"><img src="./images/5d99AOD.png" alt="HTML5 Icon" style="width:364px;height:630px;"></p>
 
 There is not an option in a pulldown menu in PyMOL to make such an image: A script is required.
+This code can be applied to molecule in PyMOL.
 
 
 ## Application Description
