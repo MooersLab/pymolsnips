@@ -4,11 +4,6 @@
 
 ## GIF of the application (Demo)
 
-Provide a screenshot or GIF of your application. Using a GIF is generally more pleasing as people can see in real time how the application works.
-
-![Demo Screenshot / GIF](Link)
-
-
 <p>The animation below demonstrates the use of the <b>ao</b> tab trigger in the text editor <em>Visual Studio Code</em> to insert 16 lines of code for generating the ambient occlusion effect.
 Two-levels of cascading menus appear.
 The menu on the left shows the alternate tab triggers that contain the letters <b>a</b> and <b>o</b>.
