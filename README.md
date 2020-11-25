@@ -20,7 +20,7 @@ By entering these two letters, you have inserted 16 lines of code!
 
 The result of applying a variant of the above code to a 27-nucleotide hairpin is shown below.
 
-<p align="center"><img src="./images/AOBWdsRNA.png" alt="HTML5 Icon" style="width:364px;height:630px;"></p>
+<p align="center"><img src="./images/AODdsRNA.png" alt="HTML5 Icon" style="width:364px;height:630px;"></p>
 
 There is not an option in a pulldown menu in PyMOL to make such an image: A script is required.
 
@@ -55,7 +55,7 @@ Give this page a few seconds to load  the images and gifs. The page has the cont
 | Python  3.7     |  Programming language          |
 
 Some of the snips have Python3 code.
-If you are using an ancient version of PyMOL that relies on Python2, I can buy a license to the current version of PyMOL, install a free open-source version of PyMOL that depends on Python3 (See the PyMOL Wiki), or you can rewrite the code to be Python2 compliant. 
+If you are using an ancient version of PyMOL that relies on Python2, you can buy a license to the current version of PyMOL, install a free open-source version of PyMOL that depends on Python3 (See the PyMOL Wiki), or you can rewrite the code to be Python2 compliant. 
 Note that multiple versions of PyMOL can operate side-by-side on a computer: You do not have to delete that ancient version of PyMOL.
 
 
