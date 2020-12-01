@@ -20,14 +20,18 @@ The result of applying a variant of the above code to a 27-nucleotide RNA hairpi
 <p align="center"><img src="./images/5d99AOD.png" alt="HTML5 Icon" style="width:364px;height:630px;"></p>
 
 There is not an option in a pulldown menu in PyMOL to make such an image: A script is required.
-This code can be applied to molecule in PyMOL.
+
+This code can be applied to any molecular object in PyMOL's veiwport, not just RNA.
 
 
 ## Application Description
 
 The pymolsnips library contains 256 code fragments (i.e, templates or snippets) written in the PyMOL macro language (pml) for eighteen text editors.
-For more details on using the snippets, a gallery of output, the supported text editors, **library installation**, and the content of the library, please see the associated [GitHub Page](https://mooerslab.github.io/pymolsnips/). 
-Give this page a few seconds to load  the images and gifs. The page has the content of the old README.md referred to in the associated manuscript. The migration to the webpage was made on 25 November 2020.
+For more details on using the snippets, a gallery of output, the supported text editors, **library installation**, and the content of the library, please see the associated [GitHub Page](https://mooerslab.github.io/pymolsnips/).
+This page takes several seconds to load due to a large number of animated gifs.
+
+The page has the content of the old *README.md* referred to in the associated manuscript.
+The old *README.md* file was moved to the webpage on 25 November 2020.
 
 
 ## Table of Contents
@@ -67,49 +71,60 @@ Alternatively you download all of the libraries as a zip file by clicking on the
 
 See the [GitHub Page](https://mooerslab.github.io/pymolsnips/) for installation instructions for a specific text editor.
 
-## Configuration Setup
+<a id="configuration-setup"><h2>Configuration Setup</h2></a>
 
 The snippet libraries are independent of PyMOL. 
 No modification of PyMOL is required. 
 The configuring of text editors is found on the [GitHub Page](https://mooerslab.github.io/pymolsnips/) .
 
-## Usage
 
-Examples of usage are found in gifs on the  [GitHub Page](https://mooerslab.github.io/pymolsnips/). 
-These gifs convey the required knowledge in seconds 
+<a id="configuration-setup"><h2>Configuration Setup</h2></a>
 
-## Testing
+Examples of the snippets in use in various editors are found in the animated gifs on the [GitHub Page](https://mooerslab.github.io/pymolsnips/). 
+These gifs convey the essential knowledge in seconds.
+
+
+
+<a id="esting"><h2>Testing</h2></a>
 
 Try the **ao** snippet. You should get a result similar to the one should in the demo above.
 
 
-## Requests for new snippets and text editors
 
-Use the **Issues tab** above to request support for additional text editors and to suggest additional snippets. 
+<a id="requests"><h2>Requests for new snippets and text editors</h2></a>
+
+Please use the **Issues tab** above to request support for additional text editors, to suggest additional snippets, or to ask questions.
+Alternatiley, you can send [e-mail](#contact-information) to me.
+
 Questions about PyMOL should be directed to the [PyMOL Mailing List](https://pymolwiki.org/index.php/PyMOL_mailing_list).
 
 
-## Bug reports
+<a id="bugreports"><h2>Bug reports</h2></a>
 
-Use the **Issues tab** above to report bugs.
+Use the **Issues tab** above to report bugs or send [e-mail](#contact-information) to me.
 Refer bugs in the text editors to the developers of the text editors. 
 
 
-## License
+<a id="license"><h2>License</h2></a>
 
 We use the permissive MIT license.
 This license information for this project is found in the License.txt file above. 
 
 
-## Contact Information 
+<a id="contact-information"><h2>Contact Information</h2></a>
 
-I can be reached via the Issue tab or e-mail: `blaine-mooers at ouhsc.edu`.
+I can be reached via the Issue tab above or via e-mail: `blaine-mooers at ouhsc.edu`.
 
 
-## Citation
+<a id="citation"><h2>Citation</h2></a>
+
 
 If you use this library to make figures for publication, please site the following publication:
 
+
+Mooers, B. H., & Brown, M. (2020). Templates for Writing PyMOL Scripts. Protein Science. 30 Nov. 10.1002/pro.3997
+
+For BibTex:
 
 ```bibtex
 @article{mooers2020templates,
@@ -119,6 +134,24 @@ If you use this library to make figures for publication, please site the followi
   year={2020},
   publisher={Wiley Online Library},
   url={https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.3997}
+  doi=(10.1002/pro.3997)
+  abstract={PyMOL commands are used to exert exquisite control over the 
+  appearance of a molecular model.This control has made PyMOL popular 
+  for making images of protein structures for publications and presentations. 
+  However, many users have poor recall of the commands due to infrequent 
+  use of PyMOL. This poor recall hinders the writing of new code in scripts. 
+  One solution is to build the new script by using code fragments as 
+  templates for modular parts of the task at hand. The code fragments 
+  can be accessed from a library while writing the code from inside a 
+  text editor (e.g., Visual Studio Code, Vim, and Emacs). We developed a 
+  library of PyMOL code templates or snippets called pymolsnips to ease 
+  the writing of PyMOL code in scripts. We made pymolsnips available on 
+  GitHub in formats for 18 popular text editors. Most of the supported 
+  text editors are available for Mac, Windows, and Linux operating systems. 
+  The GitHub site includes animations that complement the instructions
+  for installing the library for each text editor. We expect that the 
+  library will help many PyMOL users to be more productive when writing 
+  PyMOL script files.}
 }
 ```
 
