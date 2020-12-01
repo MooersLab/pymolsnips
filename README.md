@@ -3,8 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4300682.svg)](https://doi.org/10.5281/zenodo.4300682)
 [![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
-<--!
-https://hits.dwyl.com
+
+<!--
+Goto for https://hits.dwyl.com to set up markdown for the counter.
 -->
 
 
