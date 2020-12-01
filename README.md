@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+For more details on installing libraries for specific editors, go to the [GitHub Page](https://mooerslab.github.io/pymolsnips/).
+
 ## GIF of the application (Demo)
 
 <p>The animation below demonstrates the use of the <b>ao</b> tab trigger in the text editor <em>Visual Studio Code</em> to insert 16 lines of code for generating the ambient occlusion effect.
@@ -30,7 +32,7 @@ Give this page a few seconds to load  the images and gifs. The page has the cont
 
 ## Table of Contents
 
-* [Tech Stack](#tech-stack)
+* [Tech Stack](#technology-stack)
 * [Installation](#installation)
 * [Configuration Setup](#configuration-setup)
 * [Usage](#usage)
@@ -43,7 +45,7 @@ Give this page a few seconds to load  the images and gifs. The page has the cont
 
 
 
-## Technology Stack
+<a id="technology-stack"><h2>Technology Stack</h2></a>
 
 | Technology | Description                               |
 |------------|-------------------------------------------|
@@ -54,18 +56,22 @@ Some of the snips have Python3 code.
 If you are using an ancient version of PyMOL that relies on Python2, you can buy a license to the current version of PyMOL, install a free open-source version of PyMOL that depends on Python3 (See the PyMOL Wiki), or you can rewrite the code to be Python2 compliant. 
 Note that multiple versions of PyMOL can operate side-by-side on a computer: You do not have to delete that ancient version of PyMOL.
 
+<a id="installation"><h2>Installation</h2></a>
 
-## Installation
+Unfortunately, GitHub does not yet provide an easy way to download part of repository. 
+It is easist to download the whole repository, pull out the parts that you need, and delete the rest.
+Setting up and maintaining 18 separate repositories was too unwieldly.
 
-Download all of the libraries by git clone or as a zip file by clicking on the green *code* button above.
-(Sorry, the download of individual libraries would have required 18 different repositories.)
+Download all of the libraries by using the command `git clone https://github.com/MooersLab/pymolsnips.git` in a terminal window if you have *git* installed.
+Alternatively you download all of the libraries as a zip file by clicking on the green **code** button above.
+
 See the [GitHub Page](https://mooerslab.github.io/pymolsnips/) for installation instructions for a specific text editor.
 
 ## Configuration Setup
 
 The snippet libraries are independent of PyMOL. 
 No modification of PyMOL is required. 
-The configuring of text editors is found on the   [GitHub Page](https://mooerslab.github.io/pymolsnips/) .
+The configuring of text editors is found on the [GitHub Page](https://mooerslab.github.io/pymolsnips/) .
 
 ## Usage
 
