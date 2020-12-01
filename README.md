@@ -1,4 +1,4 @@
-# pymolsnips: PyMOL Script Writing with Code Templates
+# pymolsnips: Templates for writing PyMOL scripts.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -23,7 +23,8 @@ There is not an option in a pulldown menu in PyMOL to make such an image: A scri
 
 This code can be applied to any molecular object in PyMOL's veiwport, not just RNA.
 
-If you are not ready to write PyMOL scripts, please consider using pymol shortcuts to enhance your productivity in PyMOL interactive sessions.
+If you are not ready to write PyMOL scripts, please consider using [PyMOL shortcuts](https://github.com/MooersLab/pymolshortcuts) to enhance your productivity in PyMOL interactive sessions.
+For example, the above ambient occlussion effect can be invoked at anytime by entering `AO` at the PyMOL prompt, if the pymolshortcuts.py file has been loaded.
 
 ## Application Description
 
@@ -60,6 +61,7 @@ Some of the snippets have Python3 code.
 If you are using an ancient version of PyMOL that relies on Python2, you can buy a license to the current version of PyMOL, install a free open-source version of PyMOL that depends on Python3 (See the PyMOL Wiki), or you can rewrite the snippet's code to be Python2 compliant. 
 This often merely involves replacing print statements in Python2 with print() functions in Python3.
 Note that multiple versions of PyMOL can operate side-by-side on a computer: You do not have to delete that ancient version of PyMOL.
+
 [Return to Table of Contents](#table-of-contents)
 
 
@@ -73,6 +75,7 @@ Download all of the libraries by using the command `git clone https://github.com
 Alternatively, you download all of the libraries as a zip file by clicking on the green **code** button above.
 
 See the [GitHub Page](https://mooerslab.github.io/pymolsnips/) for installation instructions for a specific text editor.
+
 [Return to Table of Contents](#table-of-contents)
 
 
@@ -81,7 +84,8 @@ See the [GitHub Page](https://mooerslab.github.io/pymolsnips/) for installation 
 
 The snippet libraries are independent of PyMOL. 
 No modification of PyMOL is required. 
-The configuring of text editors is found on the [GitHub Page](https://mooerslab.github.io/pymolsnips/) .
+The configuring of text editors is found on the [GitHub Page](https://mooerslab.github.io/pymolsnips/).
+
 [Return to Table of Contents](#table-of-contents)
 
 
@@ -91,11 +95,14 @@ The configuring of text editors is found on the [GitHub Page](https://mooerslab.
 Examples of the snippets in use in various editors are found in the animated gifs on the [GitHub Page](https://mooerslab.github.io/pymolsnips/). 
 These gifs convey the essential knowledge in seconds.
 
+[Return to Table of Contents](#table-of-contents)
+
 
 
 <a id="testing"><h2>Testing</h2></a>
 
 Try the **ao** snippet. You should get a result similar to the one should in the demo above.
+
 [Return to Table of Contents](#table-of-contents)
 
 
@@ -106,11 +113,14 @@ Alternatiley, you can send [e-mail](#contact-information) to me.
 
 Questions about PyMOL should be directed to the [PyMOL Mailing List](https://pymolwiki.org/index.php/PyMOL_mailing_list).
 
+[Return to Table of Contents](#table-of-contents)
+
 
 <a id="bugreports"><h2>Bug reports</h2></a>
 
 Use the **Issues tab** above to report bugs or send [e-mail](#contact-information) to me.
-Refer bugs in the text editors to the developers of the text editors. 
+Refer bugs in the text editors to the developers of the text editors.
+
 [Return to Table of Contents](#table-of-contents)
 
 
@@ -119,10 +129,13 @@ Refer bugs in the text editors to the developers of the text editors.
 We use the permissive MIT license.
 The license information for this project is found in the License.txt file above. 
 
+[Return to Table of Contents](#table-of-contents)
+
 
 <a id="contact-information"><h2>Contact Information</h2></a>
 
 I can be reached via the Issue tab above or via e-mail: `blaine-mooers at ouhsc.edu`.
+
 [Return to Table of Contents](#table-of-contents)
 
 
@@ -181,6 +194,5 @@ For ENDNOTE library.enw file.
 %D 2020
 %I Wiley Online Library
 ```
-
 
 [Return to Table of Contents](#table-of-contents)
