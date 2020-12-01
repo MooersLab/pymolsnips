@@ -4,7 +4,7 @@
 
 For more details on installing libraries for specific editors, go to the [GitHub Page](https://mooerslab.github.io/pymolsnips/).
 
-## GIF of the application (Demo)
+## Animated demo of snippet use in Visual Studio Code
 
 <p>The animation below demonstrates the use of the <b>ao</b> tab trigger in the text editor <em>Visual Studio Code</em> to insert 16 lines of code for generating the ambient occlusion effect.
 Two-levels of cascading menus appear.
@@ -23,6 +23,7 @@ There is not an option in a pulldown menu in PyMOL to make such an image: A scri
 
 This code can be applied to any molecular object in PyMOL's veiwport, not just RNA.
 
+If you are not ready to write PyMOL scripts, please consider using pymol shortcuts to enhance your productivity in PyMOL interactive sessions.
 
 ## Application Description
 
@@ -33,8 +34,7 @@ This page takes several seconds to load due to a large number of animated gifs.
 The page has the content of the old *README.md* referred to in the associated manuscript.
 The old *README.md* file was moved to the webpage on 25 November 2020.
 
-
-## Table of Contents
+<a id="table-of-contents"><h2>Table of Contents</h2></a>
 
 * [Tech Stack](#technology-stack)
 * [Installation](#installation)
@@ -56,39 +56,47 @@ The old *README.md* file was moved to the webpage on 25 November 2020.
 | PyMOL   2.4   | Molecular graphics program         | 
 | Python  3.7     |  Programming language          |
 
-Some of the snips have Python3 code.
-If you are using an ancient version of PyMOL that relies on Python2, you can buy a license to the current version of PyMOL, install a free open-source version of PyMOL that depends on Python3 (See the PyMOL Wiki), or you can rewrite the code to be Python2 compliant. 
+Some of the snippets have Python3 code.
+If you are using an ancient version of PyMOL that relies on Python2, you can buy a license to the current version of PyMOL, install a free open-source version of PyMOL that depends on Python3 (See the PyMOL Wiki), or you can rewrite the snippet's code to be Python2 compliant. 
+This often merely involves replacing print statements in Python2 with print() functions in Python3.
 Note that multiple versions of PyMOL can operate side-by-side on a computer: You do not have to delete that ancient version of PyMOL.
+[Return to Table of Contents](#table-of-contents)
+
 
 <a id="installation"><h2>Installation</h2></a>
 
-Unfortunately, GitHub does not yet provide an easy way to download part of repository. 
-It is easist to download the whole repository, pull out the parts that you need, and delete the rest.
-Setting up and maintaining 18 separate repositories was too unwieldly.
+Unfortunately, GitHub does not yet provide an easy way to download part of a repository. 
+It is easier to download the whole repository, pull out the parts that you need, and delete the rest.
+Setting up and maintaining 18 separate repositories was too unwieldy.
 
 Download all of the libraries by using the command `git clone https://github.com/MooersLab/pymolsnips.git` in a terminal window if you have *git* installed.
-Alternatively you download all of the libraries as a zip file by clicking on the green **code** button above.
+Alternatively, you download all of the libraries as a zip file by clicking on the green **code** button above.
 
 See the [GitHub Page](https://mooerslab.github.io/pymolsnips/) for installation instructions for a specific text editor.
+[Return to Table of Contents](#table-of-contents)
+
+
 
 <a id="configuration-setup"><h2>Configuration Setup</h2></a>
 
 The snippet libraries are independent of PyMOL. 
 No modification of PyMOL is required. 
 The configuring of text editors is found on the [GitHub Page](https://mooerslab.github.io/pymolsnips/) .
+[Return to Table of Contents](#table-of-contents)
 
 
-<a id="configuration-setup"><h2>Configuration Setup</h2></a>
+
+<a id="usage"><h2>Usage</h2></a>
 
 Examples of the snippets in use in various editors are found in the animated gifs on the [GitHub Page](https://mooerslab.github.io/pymolsnips/). 
 These gifs convey the essential knowledge in seconds.
 
 
 
-<a id="esting"><h2>Testing</h2></a>
+<a id="testing"><h2>Testing</h2></a>
 
 Try the **ao** snippet. You should get a result similar to the one should in the demo above.
-
+[Return to Table of Contents](#table-of-contents)
 
 
 <a id="requests"><h2>Requests for new snippets and text editors</h2></a>
@@ -103,17 +111,19 @@ Questions about PyMOL should be directed to the [PyMOL Mailing List](https://pym
 
 Use the **Issues tab** above to report bugs or send [e-mail](#contact-information) to me.
 Refer bugs in the text editors to the developers of the text editors. 
+[Return to Table of Contents](#table-of-contents)
 
 
 <a id="license"><h2>License</h2></a>
 
 We use the permissive MIT license.
-This license information for this project is found in the License.txt file above. 
+The license information for this project is found in the License.txt file above. 
 
 
 <a id="contact-information"><h2>Contact Information</h2></a>
 
 I can be reached via the Issue tab above or via e-mail: `blaine-mooers at ouhsc.edu`.
+[Return to Table of Contents](#table-of-contents)
 
 
 <a id="citation"><h2>Citation</h2></a>
@@ -124,7 +134,11 @@ If you use this library to make figures for publication, please site the followi
 
 Mooers, B. H., & Brown, M. (2020). Templates for Writing PyMOL Scripts. Protein Science. 30 Nov. 10.1002/pro.3997
 
-For BibTex:
+OR
+
+Mooers, BHM, Brown, ME. Templates for writing PyMOL scripts. Protein Science. 2020; 1–8. https://doi.org/10.1002/pro.3997
+
+For BibTex library.bib file:
 
 ```bibtex
 @article{mooers2020templates,
@@ -155,7 +169,7 @@ For BibTex:
 }
 ```
 
-For ENDNOTE
+For ENDNOTE library.enw file.
 
 ```bash
 %0 Journal Article
@@ -168,3 +182,5 @@ For ENDNOTE
 %I Wiley Online Library
 ```
 
+
+[Return to Table of Contents](#table-of-contents)
