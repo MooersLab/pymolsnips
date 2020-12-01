@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4300682.svg)](https://doi.org/10.5281/zenodo.4300682)
+[![Created Badge](https://badges.pufler.dev/created/puf17640/git-badges)](https://badges.pufler.dev)
+
 
 For more details on installing libraries for specific editors, go to the [GitHub Page](https://mooerslab.github.io/pymolsnips/).
 
