@@ -4,8 +4,13 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4300682.svg)](https://doi.org/10.5281/zenodo.4300682)
 [![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
 ![GitHub release](https://img.shields.io/github/v/release/Mooerslab/pymolsnips?include_prereleases)
+![GitHub all releases](https://img.shields.io/github/downloads/MooersLab/pymolsnips/total)
+
 <!--
-Goto for https://hits.dwyl.com to set up markdown for the counter.
+Get zendo badge at Zendo.
+Go to for https://hits.dwyl.com to hit counter (all-time hits starting December 1).
+Go to https://shields.io/category/version to generate release badge in Markdown.
+Go to https://shields.io/downloads to generate badge for all downloads.
 -->
 
 
