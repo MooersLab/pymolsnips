@@ -41,6 +41,14 @@ For example, the above ambient occlussion effect can be invoked at anytime by en
 ## Application Description
 
 The pymolsnips library contains 256 code fragments (i.e, templates or snippets) written in the PyMOL macro language (pml) for eighteen text editors.
+It is highly likely that you have experience with one of this text editors.
+If you want a additional text editor support, open an issue under the issues tab or send me an e-mail. 
+My contact information is at the bottom.
+
+Note that each line in a snippet is terminated with a semicolon. 
+This means that a user can copy multilines of code out of their script file and paste at the PyMOL prompt to test the code. 
+This is an alternative to saving and reloading the script file.
+
 For more details on using the snippets, a gallery of output, the supported text editors, **library installation**, and the content of the library, please see the associated [GitHub Page](https://mooerslab.github.io/pymolsnips/).
 This page takes several seconds to load due to a large number of animated gifs.
 
