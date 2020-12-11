@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black.
+cmd.do('AOD')
+</string>
+    <key>keyEquivalent</key>
+    <string>AOD</string>
+    <key>name</key>
+    <string>Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>AOD</string>
+    <key>uuid</key>
+    <string>9874aa6c-8827-457b-bbe4-b354dcb295a9</string>
+</dict>
+</plist>

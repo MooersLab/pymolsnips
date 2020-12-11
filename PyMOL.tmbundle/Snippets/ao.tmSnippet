@@ -4,7 +4,7 @@
 <dict>
     <key>content</key>
     <string>
-% Ambient occlussion.
+% Apply the ambient occlussion effect to get the photorealistic effect.
 set_color oxygen, [1.0,0.4,0.4];
 set_color nitrogen, [0.5,0.5,1.0];
 remove solvent;
@@ -20,19 +20,19 @@ set direct,0;
 set reflect,1.5;
 set ray_shadow_decay_factor, 0.1;
 set ray_shadow_decay_range, 2;
-unset depth_cue;
+set depth_cue, 0;
 ray;
-$0
+
 </string>
     <key>keyEquivalent</key>
     <string>ao</string>
     <key>name</key>
-    <string>Ambient occlussion.</string>
+    <string>Apply the ambient occlussion effect to get the photorealistic effect.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>ao</string>
     <key>uuid</key>
-    <string>f697b2e4-8cdd-449d-906f-69224751b608</string>
+    <string>4fcf3974-8123-4cdc-b4cd-1670948b8b5b</string>
 </dict>
 </plist>

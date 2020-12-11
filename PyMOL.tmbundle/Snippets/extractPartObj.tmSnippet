@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Create a new object from part of an existing object.
-extract new_obj, chain A
-$0
+extract new_obj, chain A;
 </string>
     <key>keyEquivalent</key>
     <string>extractPartObj</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>extractPartObj</string>
     <key>uuid</key>
-    <string>87e4e0d6-212e-497e-a835-cf0f7228d8e8</string>
+    <string>2ff037e1-150e-4c08-a6b7-94a07db4e48e</string>
 </dict>
 </plist>

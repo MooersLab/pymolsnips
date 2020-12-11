@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Select atoms by name.
-select ${1:oxygen2}, name ${2:O2}
-$0
+select ${1:oxygen2}, name ${2:O2};
 </string>
     <key>keyEquivalent</key>
     <string>selectName</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectName</string>
     <key>uuid</key>
-    <string>c0551ca0-353b-4701-a38d-b026346c1ab9</string>
+    <string>22d23852-8be1-4832-82a0-8d527dc00521</string>
 </dict>
 </plist>

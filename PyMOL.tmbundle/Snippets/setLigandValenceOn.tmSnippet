@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Turn on the ligand valence.
+#Set on the valence of the ligand only;
+set valence, on, resn ${1:RZS}; set valence, off, not resn ${2:RZS};
+</string>
+    <key>keyEquivalent</key>
+    <string>setLigandValenceOn</string>
+    <key>name</key>
+    <string>Turn on the ligand valence.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>setLigandValenceOn</string>
+    <key>uuid</key>
+    <string>4c181925-31c8-46fd-a6ee-2b5a14eddefe</string>
+</dict>
+</plist>

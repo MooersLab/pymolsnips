@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Label the CA atoms with the Ala333 style format
+% Label the CA atoms with the Ala333 style format.
 label name CA,"%s%s" % (resn,resi);
-$0
 </string>
     <key>keyEquivalent</key>
     <string>labelCAs</string>
     <key>name</key>
-    <string>Label the CA atoms with the Ala333 style format</string>
+    <string>Label the CA atoms with the Ala333 style format.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>labelCAs</string>
     <key>uuid</key>
-    <string>34be0164-38c4-441d-859f-32e0d38401d7</string>
+    <string>473cb27a-db37-4cb2-b888-8bdaf95a228b</string>
 </dict>
 </plist>

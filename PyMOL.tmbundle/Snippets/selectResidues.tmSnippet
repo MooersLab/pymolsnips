@@ -6,7 +6,6 @@
     <string>
 % Select residues by name.
 select aromatic, resn phe+tyr+trp;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>selectResidues</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectResidues</string>
     <key>uuid</key>
-    <string>16132388-e5ed-47eb-9cb0-1287b17c036e</string>
+    <string>d41c212e-a86d-4c76-95cd-9e3b20f07834</string>
 </dict>
 </plist>

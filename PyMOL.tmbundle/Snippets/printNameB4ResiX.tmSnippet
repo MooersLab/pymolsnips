@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Print name and b-factor for a residue.
-Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
-$0
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133})","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
 </string>
     <key>keyEquivalent</key>
     <string>printNameB4ResiX</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>printNameB4ResiX</string>
     <key>uuid</key>
-    <string>faa47d0e-80c1-4184-b3c5-09822413207a</string>
+    <string>b2462e18-8e19-4ea7-910f-fc676d809cc3</string>
 </dict>
 </plist>

@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.
-Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133} and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
 </string>
     <key>keyEquivalent</key>
     <string>printResiResnNameB4ResiXNoH</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>printResiResnNameB4ResiXNoH</string>
     <key>uuid</key>
-    <string>048a107f-7f1b-4dcd-8b94-4af955b6ad8c</string>
+    <string>cc91463b-042c-4626-a181-3fe9fb4e9ad6</string>
 </dict>
 </plist>

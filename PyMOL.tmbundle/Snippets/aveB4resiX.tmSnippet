@@ -4,25 +4,24 @@
 <dict>
     <key>content</key>
     <string>
-% AveBResiX, prints the resiude number and the average bfactor. 
-""""AveBResiX, prints the resiude number and the average bfactor. 
-Uses reduce and lambda, builtin Python functional porgramming functions. 
-Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
-"""
-Bfactors = []; 
+% AveBResiX, prints the residue number and the average bfactor. 
+# AveBResiX, prints the resiude number and the average bfactor.;
+# Uses reduce and lambda, builtin Python functional porgramming functions.;
+# Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.; 
+Bfactors = [];
+# edit the selection below, which is a range of residue numbers here.;
 iterate (resi ${1:133}), Bfactors.append(b);
-print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-$0
+print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) );
 </string>
     <key>keyEquivalent</key>
     <string>aveB4resiX</string>
     <key>name</key>
-    <string>AveBResiX, prints the resiude number and the average bfactor. </string>
+    <string>AveBResiX, prints the residue number and the average bfactor. </string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>aveB4resiX</string>
     <key>uuid</key>
-    <string>340c8816-4072-43cf-8ae0-e0b3d96e2b28</string>
+    <string>d506b8f2-0955-49c3-904a-32630a472b98</string>
 </dict>
 </plist>

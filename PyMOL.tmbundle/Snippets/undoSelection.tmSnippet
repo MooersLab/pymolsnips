@@ -6,7 +6,6 @@
     <string>
 % Undo a selection.
 disable ${1:sele}; 
-$0
 </string>
     <key>keyEquivalent</key>
     <string>undoSelection</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>undoSelection</string>
     <key>uuid</key>
-    <string>f6ea8673-cf8d-4436-8420-5d08aaf62769</string>
+    <string>ce24da3b-060a-44cf-9880-cf57d2bdeaf6</string>
 </dict>
 </plist>

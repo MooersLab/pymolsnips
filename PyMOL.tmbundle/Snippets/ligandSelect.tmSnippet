@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Make selection of ligand atoms.
-select substrates, organic;
-$0
+select ${1:ligand}, organic;
 </string>
     <key>keyEquivalent</key>
     <string>ligandSelect</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>ligandSelect</string>
     <key>uuid</key>
-    <string>0b1de41d-7ab6-4a45-b796-a4b28005395a</string>
+    <string>e737c9b8-bfd8-4771-8010-91e35b192895</string>
 </dict>
 </plist>

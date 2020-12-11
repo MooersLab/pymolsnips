@@ -6,7 +6,6 @@
     <string>
 % Print document string of a function.
 print ${1:my_func}.__doc__;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>printDoc</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>printDoc</string>
     <key>uuid</key>
-    <string>61c71e25-d6c9-4165-8f66-784d06d25067</string>
+    <string>f691f678-bfa2-4f42-940b-415d68b9b09d</string>
 </dict>
 </plist>

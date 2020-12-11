@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Print the B-factors of a residue. 
-remove element h; iterate resi %{1:133}, print resi, name,b;
-$0
+remove element h; iterate resi ${1: 1:13}, print(resi, name,b);
 </string>
     <key>keyEquivalent</key>
     <string>printBs</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>printBs</string>
     <key>uuid</key>
-    <string>e54796c6-ed18-41ad-b9e7-3ac588def0b7</string>
+    <string>e7b3b98b-a493-4624-8aad-856147f97dc6</string>
 </dict>
 </plist>

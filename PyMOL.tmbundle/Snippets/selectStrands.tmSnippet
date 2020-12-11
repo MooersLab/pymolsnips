@@ -6,7 +6,6 @@
     <string>
 % Select atoms by beta strands.
 select ${1:strands}, ss s; 
-$0
 </string>
     <key>keyEquivalent</key>
     <string>selectStrands</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectStrands</string>
     <key>uuid</key>
-    <string>d497e12d-ee79-4cf5-b8b3-47e1c5b60c21</string>
+    <string>25b6f900-f5fa-4396-b5e5-40036991cac7</string>
 </dict>
 </plist>

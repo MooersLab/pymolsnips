@@ -5,14 +5,13 @@
     <key>content</key>
     <string>
 % Load PDB nb spheres. 
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
+fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;
 orient;
 set stick_radius, ${2:1.2};
 hide (name H*);
 set nb_sphere_size, ${3:0.35};
 set nb_spheres_quality, ${4:1};
 show nb_spheres;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>loadPDBnb</string>
@@ -23,6 +22,6 @@ $0
     <key>tabTrigger</key>
     <string>loadPDBnb</string>
     <key>uuid</key>
-    <string>3d6810ca-76b3-492f-993d-854a1f4c2b2a</string>
+    <string>8ffac283-11b5-42d6-9377-e616dfeca264</string>
 </dict>
 </plist>

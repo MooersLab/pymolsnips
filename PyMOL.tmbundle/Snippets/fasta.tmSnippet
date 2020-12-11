@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Print Fasta from PDB file. 
-print cmd.get_fastastr('all')
-$0
+print cmd.get_fastastr("all")
 </string>
     <key>keyEquivalent</key>
     <string>fasta</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>fasta</string>
     <key>uuid</key>
-    <string>a621165b-7a0e-4a3a-9951-7074f76a6533</string>
+    <string>40c025f2-4597-4048-8083-8db584093f08</string>
 </dict>
 </plist>

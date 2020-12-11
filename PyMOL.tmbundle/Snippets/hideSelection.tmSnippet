@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Trun off magenta squares on current selection.
+% Turn off magenta squares on current selection.
 indicate none
-$0
 </string>
     <key>keyEquivalent</key>
     <string>hideSelection</string>
     <key>name</key>
-    <string>Trun off magenta squares on current selection.</string>
+    <string>Turn off magenta squares on current selection.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>hideSelection</string>
     <key>uuid</key>
-    <string>3846bb7f-0721-47fd-a631-192c403db5ac</string>
+    <string>ea9f1c6d-147b-40f5-bc07-e24dac2e4309</string>
 </dict>
 </plist>

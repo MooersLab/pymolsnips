@@ -6,7 +6,6 @@
     <string>
 % set distance labels to display 2 decimals
 set label_distance_digits, ${1:2};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>sigdist</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>sigdist</string>
     <key>uuid</key>
-    <string>03965da9-a9a6-48da-8f2a-b67ce4aae9ec</string>
+    <string>f800c8f2-000d-4b10-b84c-a0b3ad226d36</string>
 </dict>
 </plist>

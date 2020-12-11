@@ -5,8 +5,8 @@
     <key>content</key>
     <string>
 % Fetch cif file.
+# Fetch the atomic coordinates as a cif file. Requires internet connection.
 fetch ${1:3nd4}, type=cif, async=0;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>fetchCIF</string>
@@ -17,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>fetchCIF</string>
     <key>uuid</key>
-    <string>de2e9adc-8f1e-4d76-91cb-260dbb46aeb9</string>
+    <string>762c7529-5b16-4d83-ba3d-fb597f9c9489</string>
 </dict>
 </plist>

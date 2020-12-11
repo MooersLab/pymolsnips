@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Return to the command history window the docstrings for all of the functions in a module.
+[help(i) for i in dir(pymol)];
+</string>
+    <key>keyEquivalent</key>
+    <string>pymoldocs</string>
+    <key>name</key>
+    <string>Return to the command history window the docstrings for all of the functions in a module.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>pymoldocs</string>
+    <key>uuid</key>
+    <string>9193a05b-1580-42f0-bbbd-bf01d2d7030b</string>
+</dict>
+</plist>

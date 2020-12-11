@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Show the solvent excluded surface.
+set surface_solvent, ${1:on}
+</string>
+    <key>keyEquivalent</key>
+    <string>sas</string>
+    <key>name</key>
+    <string>Show the solvent excluded surface.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sas</string>
+    <key>uuid</key>
+    <string>7ad7d636-8713-4084-8175-089cbbb96fac</string>
+</dict>
+</plist>

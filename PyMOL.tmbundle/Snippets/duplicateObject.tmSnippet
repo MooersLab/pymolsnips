@@ -5,8 +5,8 @@
     <key>content</key>
     <string>
 % Duplicate object.
-create ${1:t4l}, ${2:1lw9}; 
-$0
+# Create an object with the first argument using the selection which is the second argument.;
+create ${1:t4l}, ${2:1lw9};
 </string>
     <key>keyEquivalent</key>
     <string>duplicateObject</string>
@@ -17,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>duplicateObject</string>
     <key>uuid</key>
-    <string>fb627f67-a9e6-470a-91a3-3c0bf3589565</string>
+    <string>143f40de-8a24-4e63-b195-3c13c2a953ff</string>
 </dict>
 </plist>

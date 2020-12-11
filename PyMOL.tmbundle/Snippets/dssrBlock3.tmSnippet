@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.
+reinitialize;
+# Edit the path to Thomas Holder's block script.;
+run ${1:"/Users/blaine/.pymol/startup/dssr_block.py;
+fetch ${2:2n2d}, async=0;
+dssr_block  ${2:2n2d}, 0;
+set all_states;
+</string>
+    <key>keyEquivalent</key>
+    <string>dssrBlock3</string>
+    <key>name</key>
+    <string>DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>dssrBlock3</string>
+    <key>uuid</key>
+    <string>3d56e28e-5624-41a3-9d20-e3dbbcecc9a4</string>
+</dict>
+</plist>

@@ -4,19 +4,20 @@
 <dict>
     <key>content</key>
     <string>
-% Biological unit.
-run ~/Scripts/PyMOLScripts/quat.py; quat
-$0
+% Generate the biological unit using the quat.py script.
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/${1:Scripts/PyMOLScripts}/quat.py; quat;
 </string>
     <key>keyEquivalent</key>
     <string>bu</string>
     <key>name</key>
-    <string>Biological unit.</string>
+    <string>Generate the biological unit using the quat.py script.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>bu</string>
     <key>uuid</key>
-    <string>481fc7da-8a72-45aa-a0f1-1981a542dbb3</string>
+    <string>147f1751-7279-4f58-b5db-1627f10be66f</string>
 </dict>
 </plist>

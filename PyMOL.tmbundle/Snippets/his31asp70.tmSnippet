@@ -4,24 +4,23 @@
 <dict>
     <key>content</key>
     <string>
-% Asp70-His31 salt-bridge from T4 lysozyme. 
-fetch 1lw9, async=0; 
-zoom (resi 31 or resi 70); 
+% Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. 
+fetch ${1:1lw9}, async=0; 
+zoom (${2:resi 31 or resi 70}); 
 preset.technical(selection='all'); 
-bg_color gray70; 
-clip slab, 7,(resi 31 or resi 70);
+bg_color ${3:gray70}; 
+clip slab, 7,(${4:resi 31 or resi 70});
 rock;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>his31asp70</string>
     <key>name</key>
-    <string>Asp70-His31 salt-bridge from T4 lysozyme. </string>
+    <string>Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. </string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>his31asp70</string>
     <key>uuid</key>
-    <string>69b2dc6c-0a63-4613-a38d-fa21658283d0</string>
+    <string>4f64dc15-ae3a-42ec-a59a-43bca59c641d</string>
 </dict>
 </plist>

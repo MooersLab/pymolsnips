@@ -7,7 +7,6 @@
 % Set number of decimals places to show in distance labels. 
 set label_distance_digits, ${1:2};
 set label_angle_digits, ${2:2};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>sigDigits</string>
@@ -18,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>sigDigits</string>
     <key>uuid</key>
-    <string>a299ef7a-2d58-4a41-88fe-c4afbd7863e3</string>
+    <string>30a74225-b785-419c-b5e9-ee62c1d42c2d</string>
 </dict>
 </plist>

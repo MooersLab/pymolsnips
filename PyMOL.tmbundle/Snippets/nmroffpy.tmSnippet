@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Hide all but the first model in a nmr structure.
+cmd.do('set all_states, off')
+</string>
+    <key>keyEquivalent</key>
+    <string>nmroffpy</string>
+    <key>name</key>
+    <string>Hide all but the first model in a nmr structure.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>nmroffpy</string>
+    <key>uuid</key>
+    <string>197dbef4-938c-4efe-a1da-687f40283607</string>
+</dict>
+</plist>

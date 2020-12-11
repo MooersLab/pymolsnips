@@ -5,9 +5,8 @@
     <key>content</key>
     <string>
 % Set color name to a RGB code.
-set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}]
-color ${1:bark}, ${5:protein}
-$0
+set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}];
+color ${1:bark}, ${5:protein};
 </string>
     <key>keyEquivalent</key>
     <string>setcolor</string>
@@ -18,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>setcolor</string>
     <key>uuid</key>
-    <string>a8243af1-c171-42af-975b-2abde1be06d4</string>
+    <string>a17ff983-53ed-4bc4-8763-9378fc84bbb7</string>
 </dict>
 </plist>

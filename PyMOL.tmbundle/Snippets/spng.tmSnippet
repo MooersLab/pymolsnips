@@ -11,8 +11,7 @@ from pymol import cmd;
 DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
 s = str(DT); 
 cmd.save(stemName+s+".png"); 
-end python;
-$0
+python end;
 </string>
     <key>keyEquivalent</key>
     <string>spng</string>
@@ -23,6 +22,6 @@ $0
     <key>tabTrigger</key>
     <string>spng</string>
     <key>uuid</key>
-    <string>8af251b7-47f1-4581-b793-27a7ade27b43</string>
+    <string>8b2d53c5-2a3d-44ea-a858-0977f6769ee0</string>
 </dict>
 </plist>

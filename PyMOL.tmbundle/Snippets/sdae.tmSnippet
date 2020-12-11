@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Save dae flle with timestamp
+import datetime;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".dae"); 
+
+</string>
+    <key>keyEquivalent</key>
+    <string>sdae</string>
+    <key>name</key>
+    <string>Save dae flle with timestamp</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sdae</string>
+    <key>uuid</key>
+    <string>7f7c2fe0-f834-4bd4-b315-9479396b74b5</string>
+</dict>
+</plist>

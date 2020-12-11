@@ -8,8 +8,7 @@
 stereo; 
 set ray_shadow, off;
 ray ${1:2400,1200};
-png ${2:aaa}.png
-$0
+png ${2:aaa}.png;
 </string>
     <key>keyEquivalent</key>
     <string>stereoRay</string>
@@ -20,6 +19,6 @@ $0
     <key>tabTrigger</key>
     <string>stereoRay</string>
     <key>uuid</key>
-    <string>b5c4bbe0-5d06-4745-b509-36ffcbbfccb9</string>
+    <string>f6800cea-c40d-4901-8710-d53056f958cb</string>
 </dict>
 </plist>

@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Return settings in rounded format.
-run roundview.py;
-$0
+% Run the rv function from the pymolshortcuts.py file. 
+cmd.do('rv')
 </string>
     <key>keyEquivalent</key>
     <string>rv</string>
     <key>name</key>
-    <string>Return settings in rounded format.</string>
+    <string>Run the rv function from the pymolshortcuts.py file. </string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>rv</string>
     <key>uuid</key>
-    <string>61dd6ec5-57e6-45eb-a9e9-3007c99446d4</string>
+    <string>ffe550d3-2745-4d36-bb31-efa8b7fd1f73</string>
 </dict>
 </plist>

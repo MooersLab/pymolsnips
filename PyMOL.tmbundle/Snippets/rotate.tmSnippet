@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Rotate about axis.
-rotate ${1:x}, ${2:45}, ${3:pept}
-$0
+% Rotate a selection about and axis by a given angle.
+rotate ${1:x}, ${2:45}, ${3:pept};
 </string>
     <key>keyEquivalent</key>
     <string>rotate</string>
     <key>name</key>
-    <string>Rotate about axis.</string>
+    <string>Rotate a selection about and axis by a given angle.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>rotate</string>
     <key>uuid</key>
-    <string>c281fafa-83c2-44ef-9f67-2a2169e52711</string>
+    <string>993abdb3-d31d-4c92-9fc7-6457af7c8bd6</string>
 </dict>
 </plist>

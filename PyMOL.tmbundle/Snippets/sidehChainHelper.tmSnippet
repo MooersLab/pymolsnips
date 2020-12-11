@@ -6,7 +6,6 @@
     <string>
 % In cartoons, hide the backbone atoms of selected residues when showing then as sticks.
 set cartoon_side_chain_helper, on;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>sidehChainHelper</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>sidehChainHelper</string>
     <key>uuid</key>
-    <string>92a1174d-168b-4b9e-b8d4-61aa15314aa2</string>
+    <string>68e9d609-53f3-47dd-a7fa-85af86058c34</string>
 </dict>
 </plist>

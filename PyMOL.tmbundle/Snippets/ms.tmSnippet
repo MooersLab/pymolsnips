@@ -4,22 +4,21 @@
 <dict>
     <key>content</key>
     <string>
-% Measure surface area. 
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
-select ${2:temp}, ${3:3nd3} and chain A;
-run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
+% Measure surface area of the selection with the msms_pymol.py script. 
+fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;
+select ${2:temp}, ${1:3nd3} and chain ${4:A};
+run ${5:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
 calc_msms_area ${2:temp};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>ms</string>
     <key>name</key>
-    <string>Measure surface area. </string>
+    <string>Measure surface area of the selection with the msms_pymol.py script. </string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>ms</string>
     <key>uuid</key>
-    <string>8d6f02fb-8a1d-40d4-bf32-d618952618ae</string>
+    <string>fbc889e8-6a9d-453b-a07f-8f3ad5099203</string>
 </dict>
 </plist>

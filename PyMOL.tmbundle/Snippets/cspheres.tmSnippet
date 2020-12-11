@@ -5,20 +5,19 @@
     <key>content</key>
     <string>
 % Colored spheres.
-as spheres;    
-color gray30, chain %0;    
-color white, chain %1;    
-color green, name CL;    
-color brown, resn NAG;    
-color red, resi 381;    
-remove solvent;    
-unset specular;    
-set ray_trace_gain, 0;    
-set ray_trace_mode, 3;    
-bg_color white;    
-set ray_trace_color, black;    
-unset depth_cue;    
-$0
+as spheres;
+color gray30, chain ${1:A};
+color white, chain ${2:B};
+color green, name CL;
+color brown, resn NAG;
+color red, resi 381;
+remove solvent;
+set specular, 0;
+set ray_trace_gain, 0;
+set ray_trace_mode, 3;
+bg_color white;
+set ray_trace_color, black;
+set depth_cue,0;
 </string>
     <key>keyEquivalent</key>
     <string>cspheres</string>
@@ -29,6 +28,6 @@ $0
     <key>tabTrigger</key>
     <string>cspheres</string>
     <key>uuid</key>
-    <string>639b9861-ba87-4c62-8923-e7ef4a438167</string>
+    <string>6c8e3c5d-d0ca-4b75-a021-ba4ff71f9013</string>
 </dict>
 </plist>

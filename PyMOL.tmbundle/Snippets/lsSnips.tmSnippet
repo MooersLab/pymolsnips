@@ -5,7 +5,7 @@
     <key>content</key>
     <string>
 % List all snips by tab trigger and description
-Tab trigger                  Description
+"""Tab trigger                  Description
 ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 antialias                    Set antialias to get smooth edges
 ao                           Ambient occlussion.
@@ -103,8 +103,8 @@ threeMaps                    Three electron density.
 turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.
-$0
+writeCommandReference2HTML   Write the command reference to html file in the present working directory."""
+
 </string>
     <key>keyEquivalent</key>
     <string>lsSnips</string>
@@ -115,6 +115,6 @@ $0
     <key>tabTrigger</key>
     <string>lsSnips</string>
     <key>uuid</key>
-    <string>38ad4c43-6a9d-485b-8d14-05612c851c3a</string>
+    <string>c7f44eb0-461e-40e1-abb7-97eb5840397c</string>
 </dict>
 </plist>

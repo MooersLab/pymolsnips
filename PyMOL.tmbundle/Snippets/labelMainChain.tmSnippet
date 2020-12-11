@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Label the main chain atoms by resn,resi,atom name.
+% Label the main chain atoms with the following: resn,resi,atom name.
 label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
-$0
 </string>
     <key>keyEquivalent</key>
     <string>labelMainChain</string>
     <key>name</key>
-    <string>Label the main chain atoms by resn,resi,atom name.</string>
+    <string>Label the main chain atoms with the following: resn,resi,atom name.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>labelMainChain</string>
     <key>uuid</key>
-    <string>93b263dd-f616-44b5-bdab-b8a9b5f47736</string>
+    <string>b9d7ceab-25db-408c-ab4b-d19541dec94d</string>
 </dict>
 </plist>

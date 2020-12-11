@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the yrb function from the pymolshortcuts.py file. 
+cmd.do('yrb')
+</string>
+    <key>keyEquivalent</key>
+    <string>yrb</string>
+    <key>name</key>
+    <string>Run the yrb function from the pymolshortcuts.py file. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>yrb</string>
+    <key>uuid</key>
+    <string>e7f90f17-6ec3-4c85-bf6e-abef5f7b4ee9</string>
+</dict>
+</plist>

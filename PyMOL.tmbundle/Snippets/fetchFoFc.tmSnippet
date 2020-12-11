@@ -5,8 +5,8 @@
     <key>content</key>
     <string>
 % Fetch fofc map.
-fetch ${1:3nd4}, type=fofc, async=0;
-$0
+# fetch 2fofc map. The argument is its object name.;
+fetch ${1:3nd4},  ${1:3nd4}_2fofc, type=fofc, async=0;
 </string>
     <key>keyEquivalent</key>
     <string>fetchFoFc</string>
@@ -17,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>fetchFoFc</string>
     <key>uuid</key>
-    <string>5a920726-fbf3-49fc-af86-9723b602bac3</string>
+    <string>56813833-9b2b-43e3-a5e5-6a10406c4d59</string>
 </dict>
 </plist>

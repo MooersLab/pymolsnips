@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print to the screen the settings and their current parameter values. This is the more compact version.
+[print("%s => %s" % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];
+</string>
+    <key>keyEquivalent</key>
+    <string>listSettings</string>
+    <key>name</key>
+    <string>Print to the screen the settings and their current parameter values. This is the more compact version.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>listSettings</string>
+    <key>uuid</key>
+    <string>281a0ddb-1793-431c-a856-0b360cc801f7</string>
+</dict>
+</plist>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Display three electron density maps as isomesh. 
+fetch ${1:4dgr}, type=pdb;
+# Make sure to rename map file so that ;
+# the root filename differs from pdb root filename;
+fetch ${1:4dgr},  ${1:4dgr}_2fofc, type=2fofc;
+fetch ${1:4dgr}, ${1:4dgr}_fofc, type=fofc;
+select  ${2:glycan}, ${3:resid 200 or resid 469:477};
+isomesh ${4:mesh1}, 2fofc, 1.0, ${2:glycan};
+color density, ${4:mesh1};
+isomesh ${5:mesh2}, fofc, 3.0, ${2:glycan};
+color green, ${5:mesh2};
+isomesh ${6:mesh3}, fofc, -3.0, ${2:glycan};
+color red, ${6:mesh3};
+</string>
+    <key>keyEquivalent</key>
+    <string>fetchThreeMaps</string>
+    <key>name</key>
+    <string>Display three electron density maps as isomesh. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fetchThreeMaps</string>
+    <key>uuid</key>
+    <string>983b10b6-e2a0-47f9-bded-93f40c9f4edb</string>
+</dict>
+</plist>

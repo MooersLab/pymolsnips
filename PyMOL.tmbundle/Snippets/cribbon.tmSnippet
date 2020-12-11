@@ -8,8 +8,7 @@
 as cartoon;
 color red, ss H;
 color yellow,ss S;
-color green, ss L+; 
-$0
+color green, ss L+;
 </string>
     <key>keyEquivalent</key>
     <string>cribbon</string>
@@ -20,6 +19,6 @@ $0
     <key>tabTrigger</key>
     <string>cribbon</string>
     <key>uuid</key>
-    <string>52d82256-fe13-4033-8490-1464927ff28e</string>
+    <string>be6a18ae-7bd3-4d64-b42a-4029d3330336</string>
 </dict>
 </plist>

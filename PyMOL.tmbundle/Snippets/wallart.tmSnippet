@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"
+# Reset hash_max from 100 to 2000 to enable the saving of images of large size for office wall hangings, eg. 30 x 30 inches. 
+hash_max=2000
+</string>
+    <key>keyEquivalent</key>
+    <string>wallart</string>
+    <key>name</key>
+    <string>Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>wallart</string>
+    <key>uuid</key>
+    <string>22739331-fd1e-4156-affe-09b05f562cbb</string>
+</dict>
+</plist>

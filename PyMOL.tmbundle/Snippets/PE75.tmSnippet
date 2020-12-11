@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the PE75 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.75 of the van der Waals surface.
+cmd.do('PE75')
+</string>
+    <key>keyEquivalent</key>
+    <string>PE75</string>
+    <key>name</key>
+    <string>Run the PE75 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.75 of the van der Waals surface.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>PE75</string>
+    <key>uuid</key>
+    <string>a9b045d2-567e-46b0-9721-46d40a0ae557</string>
+</dict>
+</plist>

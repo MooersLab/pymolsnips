@@ -6,7 +6,6 @@
     <string>
 % Select atoms within a radius around a ligand.
 select ${1:nearby}, resn ${2:drug} around ${3:5};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>selectAtomsAround</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectAtomsAround</string>
     <key>uuid</key>
-    <string>f802bd7a-aca1-4eb0-b7db-66b724d8708f</string>
+    <string>886541cf-333d-4427-8f7b-0f9e5728ee52</string>
 </dict>
 </plist>

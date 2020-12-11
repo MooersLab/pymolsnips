@@ -11,7 +11,6 @@ set cartoon_ladder_mode, 1;
 set cartoon_nucleic_acid_mode, 4;
 set cartoon_ring_transparency, 0.5;
 as cartoon;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>filledRing</string>
@@ -22,6 +21,6 @@ $0
     <key>tabTrigger</key>
     <string>filledRing</string>
     <key>uuid</key>
-    <string>c1df334a-2a90-461b-9190-827d596c5655</string>
+    <string>ae8a14fe-3a7a-4dcf-92c6-cbab7c936a4e</string>
 </dict>
 </plist>

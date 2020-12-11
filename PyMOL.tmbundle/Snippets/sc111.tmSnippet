@@ -5,9 +5,9 @@
     <key>content</key>
     <string>
 % Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
-run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 1, 1, 1, , orange, supercell1, 1
-$0
+# 1: change to your path to supercell.py.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;
 </string>
     <key>keyEquivalent</key>
     <string>sc111</string>
@@ -18,6 +18,6 @@ $0
     <key>tabTrigger</key>
     <string>sc111</string>
     <key>uuid</key>
-    <string>4b940e53-d43e-48e5-a444-654684ff516d</string>
+    <string>7000a0fc-43e5-4052-bddf-4145028f9304</string>
 </dict>
 </plist>

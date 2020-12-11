@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.
+reinitialize;
+${1:run /Users/blaine/.pymol/startup/dssr_block.py};
+fetch ${2:1msy}, async=0;
+set cartoon_nucleic_acid_color, ${3:orange};
+dssr_block block_color=N red | minor 0.9 | major yellow;
+</string>
+    <key>keyEquivalent</key>
+    <string>dssrBlock4</string>
+    <key>name</key>
+    <string>DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>dssrBlock4</string>
+    <key>uuid</key>
+    <string>7da99bdf-7412-48c1-894b-5b7abba1acae</string>
+</dict>
+</plist>

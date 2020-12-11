@@ -6,7 +6,6 @@
     <string>
 % Print list of active pymolrc files.
 print invocation.options.deferred;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>lspymolrc</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>lspymolrc</string>
     <key>uuid</key>
-    <string>a5166196-7de7-4a92-a689-bf9e3d6fb9b7</string>
+    <string>7a8755a3-a6db-43e3-9975-66e3fbe6d435</string>
 </dict>
 </plist>

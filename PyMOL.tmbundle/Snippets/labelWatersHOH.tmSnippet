@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Label waters HOH.
+% Label waters with HOH and their residue number.
 label resn HOH ,"%s%s" % (resn,resi);
-$0
 </string>
     <key>keyEquivalent</key>
     <string>labelWatersHOH</string>
     <key>name</key>
-    <string>Label waters HOH.</string>
+    <string>Label waters with HOH and their residue number.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>labelWatersHOH</string>
     <key>uuid</key>
-    <string>6aa83a78-f04b-45c7-8b38-c115a07852b0</string>
+    <string>367c7195-be9f-4e34-9416-74cdd138c210</string>
 </dict>
 </plist>

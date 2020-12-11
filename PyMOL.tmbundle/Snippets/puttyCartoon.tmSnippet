@@ -7,9 +7,19 @@
 % Create a putty cartoon.
 show cartoon;
 cartoon putty;
-unset cartoon_smooth_loops;
-unset cartoon_flat_sheets;
-$0
+set cartoon_smooth_loops, 0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+# unset cartoon_smooth_loops; 
+set cartoon_flat_sheets, 0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+# unset cartoon_smooth_loops; 
+set cartoon_smooth_loops,0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+## unset cartoon_smooth_loops;
+
 </string>
     <key>keyEquivalent</key>
     <string>puttyCartoon</string>
@@ -20,6 +30,6 @@ $0
     <key>tabTrigger</key>
     <string>puttyCartoon</string>
     <key>uuid</key>
-    <string>1cec58ab-0b15-477f-8c20-f7b098aca366</string>
+    <string>2952b25c-27d0-4e73-b84b-8952da27629c</string>
 </dict>
 </plist>

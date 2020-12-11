@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Count number of *.pml files in current directory.
+print("Count the number of pml (Pymol macro language) files in current directory.");
+print("Usage: cntpmls");
+myPath = os.getcwd();
+pmlCounter = len(glob.glob1(myPath,"*.pml"));
+print("Number of pml files in the current directory: ", pmlCounter);
+</string>
+    <key>keyEquivalent</key>
+    <string>cntpmls</string>
+    <key>name</key>
+    <string>Count number of *.pml files in current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cntpmls</string>
+    <key>uuid</key>
+    <string>80b78873-d7dc-4a62-9507-26f0919eb905</string>
+</dict>
+</plist>

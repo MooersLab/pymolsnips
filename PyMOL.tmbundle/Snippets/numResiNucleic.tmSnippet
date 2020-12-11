@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the number of residues in a nulceic acid (all chains).
+sel = 'polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+</string>
+    <key>keyEquivalent</key>
+    <string>numResiNucleic</string>
+    <key>name</key>
+    <string>Print the number of residues in a nulceic acid (all chains).</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>numResiNucleic</string>
+    <key>uuid</key>
+    <string>c10a3519-39d3-4a55-a8e9-69f577a6eca4</string>
+</dict>
+</plist>

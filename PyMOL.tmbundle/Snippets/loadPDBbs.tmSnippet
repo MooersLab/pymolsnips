@@ -5,14 +5,13 @@
     <key>content</key>
     <string>
 % Load PDB ball-and-stick.
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
 hide (name H*);
 hide lines;
 show sticks;
 set stick_radius, ${2:1.2};
 set nb_sphere_radius, ${3:0.35};
 orient;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>loadPDBbs</string>
@@ -23,6 +22,6 @@ $0
     <key>tabTrigger</key>
     <string>loadPDBbs</string>
     <key>uuid</key>
-    <string>cc196db6-e828-42dd-80c1-e81f7c01f85e</string>
+    <string>dcd7e692-729f-4ffe-9460-f3c32d185a9b</string>
 </dict>
 </plist>

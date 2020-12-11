@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Color unit cell edges black. The settings for controlling the unit cell color are hard to find.
+# show the unit cell;
+show cell;
+color black, ${1:1lw9};
+# color by atom with carbons colored green,
+util.${2:cbag};
+set cgo_line_width, 2.5;
+png  ${3:testCell3}.png, ${4:1600},${5:1600};${6:600};${7:0}
+</string>
+    <key>keyEquivalent</key>
+    <string>unitCellEdgesColorBlack</string>
+    <key>name</key>
+    <string>Color unit cell edges black. The settings for controlling the unit cell color are hard to find.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>unitCellEdgesColorBlack</string>
+    <key>uuid</key>
+    <string>2d3d36cd-a23a-404b-8946-a00c18a126b8</string>
+</dict>
+</plist>

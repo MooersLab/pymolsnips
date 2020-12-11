@@ -7,7 +7,6 @@
 % Valence bond. 
 set valence, 1; 
 set valence_mode, 1;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>doubleBond</string>
@@ -18,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>doubleBond</string>
     <key>uuid</key>
-    <string>3b103944-c372-42e7-9437-c13cdd749abd</string>
+    <string>900fef20-003e-4527-a15c-aeff212f8e78</string>
 </dict>
 </plist>

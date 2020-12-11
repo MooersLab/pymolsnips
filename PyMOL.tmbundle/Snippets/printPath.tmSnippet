@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the path to the currently used PyMOL binary.
+# Print the path to the current used PyMOL binary.
+print pymol.__path__
+</string>
+    <key>keyEquivalent</key>
+    <string>printPath</string>
+    <key>name</key>
+    <string>Print the path to the currently used PyMOL binary.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printPath</string>
+    <key>uuid</key>
+    <string>d6ec88a4-b264-4c41-8aad-9609a3ed6795</string>
+</dict>
+</plist>

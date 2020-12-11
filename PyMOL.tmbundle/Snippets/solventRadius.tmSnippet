@@ -6,8 +6,6 @@
     <string>
 % Set radius of ball used to make solvent accessible surface.
 set solvent_radius, ${1:1.55};
-$0
-
 </string>
     <key>keyEquivalent</key>
     <string>solventRadius</string>
@@ -18,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>solventRadius</string>
     <key>uuid</key>
-    <string>39fc5e7e-c104-4f69-8af2-aa5bde4c0815</string>
+    <string>cc3740a0-ea23-476a-a9e9-92b1dc10e941</string>
 </dict>
 </plist>

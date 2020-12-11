@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Remove all measurement objects in the interal GUI.
+cmd.do('delete measure*')
+cmd.do('delete m*_*')
+cmd.do('delete dist*')
+</string>
+    <key>keyEquivalent</key>
+    <string>rmd</string>
+    <key>name</key>
+    <string>Remove all measurement objects in the interal GUI.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>rmd</string>
+    <key>uuid</key>
+    <string>06006561-1d58-42fe-8de5-4d8b91d6b0d6</string>
+</dict>
+</plist>

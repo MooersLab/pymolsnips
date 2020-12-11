@@ -4,23 +4,22 @@
 <dict>
     <key>content</key>
     <string>
-% Molscript ribbons.
+% Show cartoon in the style of Molscript ribbons.
 set cartoon_highlight_color, grey;
 show cartoon;
 set cartoon_flat_sheets, 0;
 set cartoon_smooth_loops, 0;
 set cartoon_fancy_helices, 1;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>molscriptRibbon</string>
     <key>name</key>
-    <string>Molscript ribbons.</string>
+    <string>Show cartoon in the style of Molscript ribbons.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>molscriptRibbon</string>
     <key>uuid</key>
-    <string>1d26b317-e2f0-4d88-87bd-180dc3bbd3f3</string>
+    <string>c07f4ae8-7b49-4a86-8e4c-25567bc2cc9d</string>
 </dict>
 </plist>

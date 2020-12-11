@@ -4,23 +4,22 @@
 <dict>
     <key>content</key>
     <string>
-% H-bond dashes.
+% Set up H-bond dashes.
 hide everything, hydrogens;
 hide labels;
 set dash_color, black; 
 set dash_gap, 0.4;
 set dash_radius, 0.08;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>hbonddash</string>
     <key>name</key>
-    <string>H-bond dashes.</string>
+    <string>Set up H-bond dashes.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>hbonddash</string>
     <key>uuid</key>
-    <string>3a5c6a55-56f9-4dae-aa64-8a29d9ec847f</string>
+    <string>5d180374-7ede-4732-b505-90c1e4824993</string>
 </dict>
 </plist>

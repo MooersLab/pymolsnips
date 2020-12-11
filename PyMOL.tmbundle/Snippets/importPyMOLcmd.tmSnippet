@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Import the cmd class from the pymol api.
+from pymol import cmd
+</string>
+    <key>keyEquivalent</key>
+    <string>importPyMOLcmd</string>
+    <key>name</key>
+    <string>Import the cmd class from the pymol api.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>importPyMOLcmd</string>
+    <key>uuid</key>
+    <string>89343c49-77a7-4817-bce4-3fc10941e265</string>
+</dict>
+</plist>

@@ -4,21 +4,20 @@
 <dict>
     <key>content</key>
     <string>
-% One letter amino acid. 
+% Switch from three letter code to one-letter code for amino acids. 
 one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%
 'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%
 'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%
-$0
 </string>
     <key>keyEquivalent</key>
     <string>oneLetter</string>
     <key>name</key>
-    <string>One letter amino acid. </string>
+    <string>Switch from three letter code to one-letter code for amino acids. </string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>oneLetter</string>
     <key>uuid</key>
-    <string>279b002a-0f4c-4d08-a624-19fd429f61ce</string>
+    <string>35584ab7-75d5-4f1a-8833-f7919b921cbc</string>
 </dict>
 </plist>

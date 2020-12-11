@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the bfactors of a residue.
+iterate (resi ${1:101}), print(name + " %.2f" % b);
+</string>
+    <key>keyEquivalent</key>
+    <string>printBfactors</string>
+    <key>name</key>
+    <string>Print the bfactors of a residue.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printBfactors</string>
+    <key>uuid</key>
+    <string>5e854daa-f63c-464b-b416-d5f8eb0456ee</string>
+</dict>
+</plist>

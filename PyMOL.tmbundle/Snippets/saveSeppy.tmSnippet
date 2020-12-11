@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Saves multiple objects into multiple files using an optional prefix name.
+from pymol import cmd
+import glob
+import re
+
+def saveSep(prefix=''):
+  """
+  save_sep <prefix>
+
+  saves multiple objects into multiple files using an optional prefix name.
+
+  e.g. save_sep prefix
+  """
+  obj_list = cmd.get_names("all")
+
+  if obj_list:
+    for i in range(len(obj_list)):
+      obj_name = "%s%s.pdb" % (prefix, obj_list[i])
+      cmd.save(obj_name, obj_list[i])
+      print("Saving %s" %  obj_name)
+  else:
+    print("No objects found")
+    
+cmd.extend('saveSep',saveSep)
+</string>
+    <key>keyEquivalent</key>
+    <string>saveSeppy</string>
+    <key>name</key>
+    <string>Saves multiple objects into multiple files using an optional prefix name.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>saveSeppy</string>
+    <key>uuid</key>
+    <string>2ec335bb-73fc-4700-b995-0d63e7c4d14c</string>
+</dict>
+</plist>

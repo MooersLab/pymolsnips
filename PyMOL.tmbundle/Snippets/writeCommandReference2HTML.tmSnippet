@@ -6,8 +6,6 @@
     <string>
 % Write the command reference to html file in the present working directory. 
 cmd.write_html_ref('pymol-command-ref.html');
-$0
-
 </string>
     <key>keyEquivalent</key>
     <string>writeCommandReference2HTML</string>
@@ -18,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>writeCommandReference2HTML</string>
     <key>uuid</key>
-    <string>06e4d7e0-6fe2-4a65-a8c7-76f3643401eb</string>
+    <string>0fc7d347-8a1c-4da5-9c03-a292ddfefe95</string>
 </dict>
 </plist>

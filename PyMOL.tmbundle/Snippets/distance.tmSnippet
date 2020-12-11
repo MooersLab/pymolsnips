@@ -4,19 +4,19 @@
 <dict>
     <key>content</key>
     <string>
-% H-bond distances.
-distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
-$0
+% H-bond distance between a H-bond donor and acceptor.
+# Edit the name for the ditance, the selection criteria for atom 1, and the selection criteria for atom 2.;
+distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A};
 </string>
     <key>keyEquivalent</key>
     <string>distance</string>
     <key>name</key>
-    <string>H-bond distances.</string>
+    <string>H-bond distance between a H-bond donor and acceptor.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>distance</string>
     <key>uuid</key>
-    <string>8cd73c2e-666e-4805-8741-e1a4f0435bdc</string>
+    <string>da2f128d-9aea-4ac4-b625-afe521c8b1d2</string>
 </dict>
 </plist>

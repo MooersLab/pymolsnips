@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Find hbonds around a residue.
+% Find H-bonds around a residue.
 remove element h; distance hbonds, all, all, 3.2, mode=2;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>findHbonds</string>
     <key>name</key>
-    <string>Find hbonds around a residue.</string>
+    <string>Find H-bonds around a residue.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>findHbonds</string>
     <key>uuid</key>
-    <string>bfe9b2dc-aac1-460e-a038-1f990f4d955e</string>
+    <string>574cc8f2-69bf-42da-88e8-48814955a619</string>
 </dict>
 </plist>

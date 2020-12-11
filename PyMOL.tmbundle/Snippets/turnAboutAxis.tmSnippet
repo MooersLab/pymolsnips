@@ -6,7 +6,6 @@
     <string>
 % Turn about axis. 
 turn ${1:x},${2:90};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>turnAboutAxis</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>turnAboutAxis</string>
     <key>uuid</key>
-    <string>89998831-3273-4cde-ab6b-74cad120da02</string>
+    <string>30ad7ac8-4741-484e-bb2a-1a8fd232f696</string>
 </dict>
 </plist>

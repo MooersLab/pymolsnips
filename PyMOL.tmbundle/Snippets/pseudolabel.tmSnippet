@@ -8,7 +8,6 @@
 pseudoatom ${1:forLabel};
 label ${1:forLabel}, '%0';
 set label_color, ${2:red};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>pseudolabel</string>
@@ -19,6 +18,6 @@ $0
     <key>tabTrigger</key>
     <string>pseudolabel</string>
     <key>uuid</key>
-    <string>3bb5f0fd-18e2-4857-9fdc-0996c154b18a</string>
+    <string>46968647-7e33-4ff0-a541-74f4fd68686b</string>
 </dict>
 </plist>

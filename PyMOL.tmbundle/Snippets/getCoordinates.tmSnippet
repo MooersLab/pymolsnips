@@ -6,7 +6,6 @@
     <string>
 % Get coordinates. 
 print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
-$0
 </string>
     <key>keyEquivalent</key>
     <string>getCoordinates</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>getCoordinates</string>
     <key>uuid</key>
-    <string>05109f3b-bed3-44cf-a2e9-2e71719dfb78</string>
+    <string>6ddcc205-7427-47c4-894e-c1fb211504d5</string>
 </dict>
 </plist>

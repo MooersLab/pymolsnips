@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Select atoms by elemnt.
-select ${1:oxygen}, elem ${2:O}
-$0
+% Select atoms by element.
+select ${1:oxygen}, elem ${2:O};
 </string>
     <key>keyEquivalent</key>
     <string>selectElement</string>
     <key>name</key>
-    <string>Select atoms by elemnt.</string>
+    <string>Select atoms by element.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>selectElement</string>
     <key>uuid</key>
-    <string>8cc67905-705f-46d3-8efa-cb887a221882</string>
+    <string>99f94d57-92c4-498b-a053-31dffc68a4ef</string>
 </dict>
 </plist>

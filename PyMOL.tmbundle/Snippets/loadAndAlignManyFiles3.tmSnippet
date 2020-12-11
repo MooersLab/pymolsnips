@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% These are the instructions for loading and aligning multiple files.
+# To save a multiple models in a file to separate pdb files.
+run {1:~/Scripts/}saveSep.py
+saveSep 
+</string>
+    <key>keyEquivalent</key>
+    <string>loadAndAlignManyFiles3</string>
+    <key>name</key>
+    <string>These are the instructions for loading and aligning multiple files.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadAndAlignManyFiles3</string>
+    <key>uuid</key>
+    <string>fb4251f1-b185-4eb8-bace-d96f9a4cb918</string>
+</dict>
+</plist>

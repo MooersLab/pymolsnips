@@ -5,8 +5,8 @@
     <key>content</key>
     <string>
 % Load a pdb file in the current directory.
-load ${1:my.pdb};
-$0
+# Load into pymol a pdb file in the current directory.
+load ${1:my}.pdb;
 </string>
     <key>keyEquivalent</key>
     <string>loadPDBfile</string>
@@ -17,6 +17,6 @@ $0
     <key>tabTrigger</key>
     <string>loadPDBfile</string>
     <key>uuid</key>
-    <string>069e7278-46dc-4047-852d-e1d233974fd7</string>
+    <string>54c77421-3a45-4b5f-b25c-15e2a97be7de</string>
 </dict>
 </plist>

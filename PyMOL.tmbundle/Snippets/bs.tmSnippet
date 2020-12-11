@@ -11,7 +11,6 @@ set stick_ball, on;
 set stick_ball_ratio, 1.9;
 show nb_spheres;
 set nb_spheres_size=0.33;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>bs</string>
@@ -22,6 +21,6 @@ $0
     <key>tabTrigger</key>
     <string>bs</string>
     <key>uuid</key>
-    <string>c7466ef8-bfa9-4cf2-a63e-fd6177f1616c</string>
+    <string>916905c3-93f3-4b02-b151-9a5c22b97a06</string>
 </dict>
 </plist>

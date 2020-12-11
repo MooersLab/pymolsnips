@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Create a list of objects in the internal gui and print this list to the screen.
+objList = cmd.get_names("objects");print(objList);
+</string>
+    <key>keyEquivalent</key>
+    <string>listObjects</string>
+    <key>name</key>
+    <string>Create a list of objects in the internal gui and print this list to the screen.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>listObjects</string>
+    <key>uuid</key>
+    <string>27ad6e76-4eb2-4588-84fa-c1530f7bfe79</string>
+</dict>
+</plist>

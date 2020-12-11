@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Label waters W.
+% Label waters with W and their reisude number.
 label resn HOH ,"W%s" % (resi);
-$0
 </string>
     <key>keyEquivalent</key>
     <string>labelWatersW</string>
     <key>name</key>
-    <string>Label waters W.</string>
+    <string>Label waters with W and their reisude number.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>labelWatersW</string>
     <key>uuid</key>
-    <string>f10f9368-8270-48d4-b714-9e57426099b0</string>
+    <string>3f2061c5-b4d1-4dd6-b8c8-da1293373d16</string>
 </dict>
 </plist>

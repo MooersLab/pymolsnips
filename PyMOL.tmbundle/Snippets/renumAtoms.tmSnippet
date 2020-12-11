@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Add or substract a atom number offset.
+alter {$1:3fa0}, ID=ID+${2:100};
+sort;
+</string>
+    <key>keyEquivalent</key>
+    <string>renumAtoms</string>
+    <key>name</key>
+    <string>Add or substract a atom number offset.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>renumAtoms</string>
+    <key>uuid</key>
+    <string>5a6b0f0a-53bd-4423-8c65-e1a7965528b5</string>
+</dict>
+</plist>

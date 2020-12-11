@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% This code colors the nucleotides by base seqence. It can be applied to any nucleic acid.
+select rna_A, resn A;
+select rna_C, resn C;
+select rna_G, resn G;
+select rna_U, resn U;
+select dna_T, resn T;
+color ${1:yellow}, rna_A;
+color ${2:red}, rna_C; 
+color ${3:gray40}, rna_G;
+color ${4:palecyan}, rna_U;
+color ${5:brown}, dna_T;
+</string>
+    <key>keyEquivalent</key>
+    <string>nucleicAcidColorbySequence</string>
+    <key>name</key>
+    <string>This code colors the nucleotides by base seqence. It can be applied to any nucleic acid.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>nucleicAcidColorbySequence</string>
+    <key>uuid</key>
+    <string>ff001b09-dc88-4681-892d-74ce87b46dd1</string>
+</dict>
+</plist>

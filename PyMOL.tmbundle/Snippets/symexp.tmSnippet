@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***.
+symexp ${1:symm}, ${2:3fa0}, (${2:3fa0}), ${3:20},${4:1};
+</string>
+    <key>keyEquivalent</key>
+    <string>symexp</string>
+    <key>name</key>
+    <string>The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>symexp</string>
+    <key>uuid</key>
+    <string>1fc0c1f7-6012-4600-ba1b-a44c6c5b5d9f</string>
+</dict>
+</plist>

@@ -6,7 +6,6 @@
     <string>
 % Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.
 show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>ringMode</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>ringMode</string>
     <key>uuid</key>
-    <string>17eadf18-3a62-4bf0-bdec-0398121771af</string>
+    <string>741b9750-d3ec-47eb-a4c0-7515d7fe6d1d</string>
 </dict>
 </plist>

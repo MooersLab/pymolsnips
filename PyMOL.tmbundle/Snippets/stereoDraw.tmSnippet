@@ -9,8 +9,7 @@ stereo walleye;
 set ray_shadow, off; 
 #draw 3200,2000;
 draw ${1:1600,1000}; 
-png ${2:aaa}.png
-$0
+png ${2:aaa}.png;
 </string>
     <key>keyEquivalent</key>
     <string>stereoDraw</string>
@@ -21,6 +20,6 @@ $0
     <key>tabTrigger</key>
     <string>stereoDraw</string>
     <key>uuid</key>
-    <string>ede388bf-1dec-435b-8bc9-61c2e555c2d7</string>
+    <string>942913ed-b215-4c19-a93a-d01719cb6952</string>
 </dict>
 </plist>

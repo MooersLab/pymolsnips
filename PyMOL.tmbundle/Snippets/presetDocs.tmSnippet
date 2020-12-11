@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset).
+help(preset)
+</string>
+    <key>keyEquivalent</key>
+    <string>presetDocs</string>
+    <key>name</key>
+    <string>Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset).</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>presetDocs</string>
+    <key>uuid</key>
+    <string>4c649216-d8c3-4efd-bb5b-5c32bb202f98</string>
+</dict>
+</plist>

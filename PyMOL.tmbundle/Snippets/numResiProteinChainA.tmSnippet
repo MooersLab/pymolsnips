@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the number of residues in chain A of a protein.
+sel = '${1:chain A} and polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+</string>
+    <key>keyEquivalent</key>
+    <string>numResiProteinChainA</string>
+    <key>name</key>
+    <string>Print the number of residues in chain A of a protein.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>numResiProteinChainA</string>
+    <key>uuid</key>
+    <string>ad7a1505-35ea-433d-ab2f-0ed0ef19b02a</string>
+</dict>
+</plist>

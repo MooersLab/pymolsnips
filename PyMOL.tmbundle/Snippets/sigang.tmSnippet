@@ -6,7 +6,6 @@
     <string>
 % Set angle labels to display 2 decimals places
 set label_angle_digits, ${1:2};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>sigang</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>sigang</string>
     <key>uuid</key>
-    <string>01139c94-72d9-4239-b228-1a2da69c8c36</string>
+    <string>2bb51139-baf4-45bd-a8da-1dabece7e2dc</string>
 </dict>
 </plist>

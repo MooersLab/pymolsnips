@@ -11,8 +11,7 @@ from pymol import cmd;
 DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
 s = str(DT); 
 cmd.save(stemName+s+".pse"); 
-end python;
-$0
+python end;
 </string>
     <key>keyEquivalent</key>
     <string>spse</string>
@@ -23,6 +22,6 @@ $0
     <key>tabTrigger</key>
     <string>spse</string>
     <key>uuid</key>
-    <string>a026a5f8-c3a2-4eeb-92bb-06d57bf50fa4</string>
+    <string>3bda10b3-5d26-4f7c-9acc-d1bd1a1ab2eb</string>
 </dict>
 </plist>

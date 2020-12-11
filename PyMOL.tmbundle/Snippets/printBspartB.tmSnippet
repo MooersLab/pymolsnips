@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Print B factors of part B of a residue.
-iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
-$0
+iterate resi ${1:38} and altloc ${2:B}, print resi, name, alt, b;
 </string>
     <key>keyEquivalent</key>
     <string>printBspartB</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>printBspartB</string>
     <key>uuid</key>
-    <string>12924e24-59f7-4639-b6f7-46cd1bd7c048</string>
+    <string>2464f713-8391-4b64-aefd-63f72d65c0b0</string>
 </dict>
 </plist>

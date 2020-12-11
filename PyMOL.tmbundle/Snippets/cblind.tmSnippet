@@ -4,23 +4,24 @@
 <dict>
     <key>content</key>
     <string>
-% Color blindness.
-run ~/Pymol-script-repo/colorblindfriendly.py;
+% Apply color blind friendly to ribbon diagrams.
+# Edit the path to the Pymol-script-repo in your computer account.;
+# See PyMOL wiki for more information about the Pymol-script-reo.;
+run ~/${1:Pymol-script-repo}/colorblindfriendly.py;
 as cartoon;
 color cb_red, ss H;
 color cb_yellow,ss S;
-color cb_green, ss L+; 
-$0
+color cb_green, ss L+;
 </string>
     <key>keyEquivalent</key>
     <string>cblind</string>
     <key>name</key>
-    <string>Color blindness.</string>
+    <string>Apply color blind friendly to ribbon diagrams.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>cblind</string>
     <key>uuid</key>
-    <string>dfa335f4-4d8c-4a8f-ac21-948b70a38b4b</string>
+    <string>4bc76a34-a468-43d5-aa96-1c8a66f65734</string>
 </dict>
 </plist>

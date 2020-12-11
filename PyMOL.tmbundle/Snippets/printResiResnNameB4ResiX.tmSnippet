@@ -5,8 +5,7 @@
     <key>content</key>
     <string>
 % Print resn, resi, atom name, and b-factor. 
-Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133})","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
 </string>
     <key>keyEquivalent</key>
     <string>printResiResnNameB4ResiX</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>printResiResnNameB4ResiX</string>
     <key>uuid</key>
-    <string>6e551173-0445-4513-8b73-927904106402</string>
+    <string>6a88e00b-4f63-4cda-a8c4-43cba12e3014</string>
 </dict>
 </plist>

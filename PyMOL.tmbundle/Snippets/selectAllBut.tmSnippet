@@ -6,7 +6,6 @@
     <string>
 % Select all nitrogen atom in a selelction except from lysine.
 select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>selectAllBut</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectAllBut</string>
     <key>uuid</key>
-    <string>795d2260-974e-42a4-9a17-8f25d29940be</string>
+    <string>445d6db5-b07a-42da-9ee4-a0dfb8986b74</string>
 </dict>
 </plist>

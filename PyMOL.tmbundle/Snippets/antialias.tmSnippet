@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Set antialias to get smooth edges
+% Set antialias to on to get smoother edges.
 set antialias, 1;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>antialias</string>
     <key>name</key>
-    <string>Set antialias to get smooth edges</string>
+    <string>Set antialias to on to get smoother edges.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>antialias</string>
     <key>uuid</key>
-    <string>d9981627-1490-4fab-bb3c-5cadb1c0d93f</string>
+    <string>06639610-8405-4aa8-8151-013399179e44</string>
 </dict>
 </plist>

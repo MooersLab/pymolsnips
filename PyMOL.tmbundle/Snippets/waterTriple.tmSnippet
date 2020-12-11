@@ -5,10 +5,10 @@
     <key>content</key>
     <string>
 % triple water pentagon.
-fetch 1lw9, async=0; 
-zoom resi 313; 
+fetch ${1:lw9}, async=0; 
+# zoom in on the selection. Edit by chaning the residue number.
+zoom resi ${2:313}; 
 preset.technical(selection='all', mode=1);
-$0
 </string>
     <key>keyEquivalent</key>
     <string>waterTriple</string>
@@ -19,6 +19,6 @@ $0
     <key>tabTrigger</key>
     <string>waterTriple</string>
     <key>uuid</key>
-    <string>821dbaa3-172e-42fc-b194-e88ee067bc11</string>
+    <string>f43cf514-1a3e-4fb8-8367-716a5f82f31a</string>
 </dict>
 </plist>

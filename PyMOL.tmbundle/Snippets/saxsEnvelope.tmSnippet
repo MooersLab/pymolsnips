@@ -5,9 +5,9 @@
     <key>content</key>
     <string>
 % Display SAXS envelope
-alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0
-set solvent_radius = 3.0
-$0
+# 1: enter the name of the bead model object;
+alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0;
+set solvent_radius = 3.0;
 </string>
     <key>keyEquivalent</key>
     <string>saxsEnvelope</string>
@@ -18,6 +18,6 @@ $0
     <key>tabTrigger</key>
     <string>saxsEnvelope</string>
     <key>uuid</key>
-    <string>ad4e74eb-1e11-457a-8b65-833f92cb594e</string>
+    <string>4e7d2b8c-ddaa-44c3-8e5e-3a8da8e390e4</string>
 </dict>
 </plist>

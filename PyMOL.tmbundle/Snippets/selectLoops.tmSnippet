@@ -6,7 +6,6 @@
     <string>
 % Select atoms by beta loops.
 select ${1:loops}, ss l;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>selectLoops</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectLoops</string>
     <key>uuid</key>
-    <string>04d24add-235c-4a20-a0c2-e81f631d33f0</string>
+    <string>a4d48e19-61b2-42a0-a0d3-bc951f5463f3</string>
 </dict>
 </plist>

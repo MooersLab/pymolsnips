@@ -4,20 +4,19 @@
 <dict>
     <key>content</key>
     <string>
-% Hide alt loc.
+% Hide the b alternate locator.
 select altconf, alt ${1:b}  # select B alternative locators;
 hide everything, altconf  # hide alt B locators;
-$0
 </string>
     <key>keyEquivalent</key>
     <string>hidealtloc</string>
     <key>name</key>
-    <string>Hide alt loc.</string>
+    <string>Hide the b alternate locator.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>hidealtloc</string>
     <key>uuid</key>
-    <string>6ca8fea1-3241-41ad-bc37-a9a03218d3db</string>
+    <string>fb297b77-1cf9-44a7-ac2c-715a40e3ee29</string>
 </dict>
 </plist>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script.
+def rvr(StoredView=0, decimal_places=2, outname="roundedview.txt"):
+   """MIT License
+    Copyright:
+    Blaine Mooers and the OU Board of Regents
+    University of Oklahoma Health Sciences Center
+    Oklahoma City, OK 73104
+    30 April 2020
+    
+    First run the following:
+    
+    from rdkit.Chem import PyMol
+    s = PyMol.MolViewer()
+    du = s.server.do
+
+    """
+    StoredView = int(StoredView) decimal_places = int(decimal_places)
+    #call the get_view function
+    m = s.get_view(StoredView)
+    #Make a list of the elements in the orientation matrix.
+    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9], 
+              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]
+    #Round off the matrix elements to two decimal places (two fractional places)
+    #This rounding approach solved the problem of unwanted
+    #whitespaces when I tried to use a string format statement
+    myRoundedList = [round(elem, decimal_places) for elem in myList]
+    #x is the string template for the output. The whitespace is required
+    #between the "set_view" and "("
+    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'
+    # Print to the command history window.
+    print(x.format(*myRoundedList))
+    #Write to a text file.
+    myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()
+    return myRoundedList
+du.extend("rvr", rvr)
+
+</string>
+    <key>keyEquivalent</key>
+    <string>rvr</string>
+    <key>name</key>
+    <string>Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>rvr</string>
+    <key>uuid</key>
+    <string>e7b5fba6-2a5e-4855-893b-098ba4ca066c</string>
+</dict>
+</plist>

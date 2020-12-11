@@ -4,20 +4,19 @@
 <dict>
     <key>content</key>
     <string>
-% Run Tom Holder's supercell script to generate three cells in all directions.
-run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 2, 2, 2, , orange, supercell2, 1
-$0
+% Run supercell script to generate three cells in all directions. This script was written by Thomas Holder.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 2, 2, , ${2:orange},  ${3:supercell1}, 1;
 </string>
     <key>keyEquivalent</key>
     <string>sc222</string>
     <key>name</key>
-    <string>Run Tom Holder's supercell script to generate three cells in all directions.</string>
+    <string>Run supercell script to generate three cells in all directions. This script was written by Thomas Holder.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>sc222</string>
     <key>uuid</key>
-    <string>fd26fc05-1253-44d0-87e9-addbd7c8851f</string>
+    <string>ec1cff8f-6ac5-4888-b70c-b62e43204813</string>
 </dict>
 </plist>

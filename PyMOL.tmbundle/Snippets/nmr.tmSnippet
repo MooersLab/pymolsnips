@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Show all models in a nmr structure.
+set all_states, on
+</string>
+    <key>keyEquivalent</key>
+    <string>nmr</string>
+    <key>name</key>
+    <string>Show all models in a nmr structure.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>nmr</string>
+    <key>uuid</key>
+    <string>80260802-e0b2-4bd2-a410-245575ff45c3</string>
+</dict>
+</plist>

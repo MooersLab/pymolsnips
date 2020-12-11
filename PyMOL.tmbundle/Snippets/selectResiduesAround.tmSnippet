@@ -6,7 +6,6 @@
     <string>
 % Select residues within a radius around a ligand.
 select ${1:nearby}, br. resn ${2:drug} around ${3:5};
-$0
 </string>
     <key>keyEquivalent</key>
     <string>selectResiduesAround</string>
@@ -17,6 +16,6 @@ $0
     <key>tabTrigger</key>
     <string>selectResiduesAround</string>
     <key>uuid</key>
-    <string>8245bfc5-9fc9-46a1-951e-1a948468b247</string>
+    <string>716455ad-bae6-4a68-b282-5a483c77e4e3</string>
 </dict>
 </plist>

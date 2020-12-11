@@ -4,19 +4,18 @@
 <dict>
     <key>content</key>
     <string>
-% Print B-values for a residue with the B's rounded off to two decimal places.
-iterate (resi %{1:133}), print(name + " %.2f" % b);
-$0
+% Print B--factors for a residue with the B-factors rounded off to two decimal places.
+iterate (resi ${1:133}), print(name + " %.2f" % b);
 </string>
     <key>keyEquivalent</key>
     <string>printBs2digits</string>
     <key>name</key>
-    <string>Print B-values for a residue with the B's rounded off to two decimal places.</string>
+    <string>Print B--factors for a residue with the B-factors rounded off to two decimal places.</string>
     <key>scope</key>
     <string>text.pml</string>
     <key>tabTrigger</key>
     <string>printBs2digits</string>
     <key>uuid</key>
-    <string>7c8ed441-af98-428f-983e-aaf19f6fba2e</string>
+    <string>49546247-e7b4-491f-8b98-7e1917afb3fc</string>
 </dict>
 </plist>

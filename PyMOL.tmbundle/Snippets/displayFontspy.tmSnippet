@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+cmd.set('label_size', 50);
+cmd.set('grid_mode');
+
+</string>
+    <key>keyEquivalent</key>
+    <string>displayFontspy</string>
+    <key>name</key>
+    <string>Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>displayFontspy</string>
+    <key>uuid</key>
+    <string>d79085ed-c050-4e68-ad25-c277a1ecfd58</string>
+</dict>
+</plist>

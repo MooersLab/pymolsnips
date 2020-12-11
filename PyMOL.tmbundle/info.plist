@@ -6,11 +6,11 @@
 	<string>blaine-mooers@ouhsc.edu</string>
 	<key>contactName</key>
 	<string>Blaine Mooers</string>
-	<key>description</key>
+	<key>caption</key>
 	<string>Customized snippets for working more efficiently in LaTeX.</string>
 	<key>name</key>
 	<string>PyMOL</string>
 	<key>uuid</key>
-	<string>e59324a4-f5eb-4e83-85ec-efcb8cb216f0</string>
+	<string>674a0e4f-882a-4189-8725-133b6579c7a3</string>
 </dict>
 </plist>
