@@ -1,8 +1,11 @@
 {:modes {:+ #{:editor.python}}
 :snippets [
-           {:name "Ambient occlussion."
+           {:name "Apply the ambient occlussion effect to get the photorealistic effect."
             :key "ao"
             :snippet-file "ao.snip"}
+           {:name "Show the solvent excluded surface."
+            :key "sas"
+            :snippet-file "sas.snip"}
            {:name "Set ellipsoid color."
             :key "ellipcol"
             :snippet-file "ellipcol.snip"}
@@ -18,13 +21,13 @@
            {:name "Base-stacking figure."
             :key "stack"
             :snippet-file "stack.snip"}
-           {:name "Biological unit."
+           {:name "Generate the biological unit using the quat.py script."
             :key "bu"
             :snippet-file "bu.snip"}
            {:name "Valence bond. "
             :key "doubleBond"
             :snippet-file "doubleBond.snip"}
-           {:name "Color blindness."
+           {:name "Apply color blind friendly to ribbon diagrams."
             :key "cblind"
             :snippet-file "cblind.snip"}
            {:name "Center pi."
@@ -36,21 +39,21 @@
            {:name "Colored spheres."
             :key "cspheres"
             :snippet-file "cspheres.snip"}
-           {:name "Coordinate covalent bonds to metals and H-bonds friom RNA."
+           {:name "Coordinate covalent bonds to metals and H-bonds from RNA."
             :key "coordinate"
             :snippet-file "coordinate.snip"}
-           {:name "H-bond distances."
+           {:name "H-bond distance between a H-bond donor and acceptor."
             :key "distance"
             :snippet-file "distance.snip"}
-           {:name "Draw H-bonds. "
+           {:name "Display H-bonds as dashes colored black. "
             :key "drawHbonds"
             :snippet-file "drawHbonds.snip"}
-           {:name "Carved electron density. "
-            :key "carvedDensity"
-            :snippet-file "carvedDensity.snip"}
-           {:name "Fetch 2FoFc map."
-            :key "fetch2FoFc"
-            :snippet-file "fetch2FoFc.snip"}
+           {:name "Carved isomesh representation of electron density. "
+            :key "carvedIsomesh"
+            :snippet-file "carvedIsomesh.snip"}
+           {:name "Fetch 2FoFc map as an isomesh."
+            :key "fetch2FoFcIsomesh"
+            :snippet-file "fetch2FoFcIsomesh.snip"}
            {:name "Fetch cif file."
             :key "fetchCIF"
             :snippet-file "fetchCIF.snip"}
@@ -63,13 +66,10 @@
            {:name "Get coordinates. "
             :key "getCoordinates"
             :snippet-file "getCoordinates.snip"}
-           {:name "H-bond dashes."
+           {:name "Set up H-bond dashes."
             :key "hbonddash"
             :snippet-file "hbonddash.snip"}
-           {:name "Hbond setup. "
-            :key "hbond"
-            :snippet-file "hbond.snip"}
-           {:name "Hide alt loc."
+           {:name "Hide the b alternate locator."
             :key "hidealtloc"
             :snippet-file "hidealtloc.snip"}
            {:name "Label CA atom with single-letter residue name and residue number."
@@ -84,13 +84,13 @@
            {:name "Load PDB nb spheres. "
             :key "loadPDBnb"
             :snippet-file "loadPDBnb.snip"}
-           {:name "Measure surface area. "
+           {:name "Measure surface area of the selection with the msms_pymol.py script. "
             :key "ms"
             :snippet-file "ms.snip"}
-           {:name "Molscript ribbons."
+           {:name "Show cartoon in the style of Molscript ribbons."
             :key "molscriptRibbon"
             :snippet-file "molscriptRibbon.snip"}
-           {:name "One letter amino acid. "
+           {:name "Switch from three letter code to one-letter code for amino acids. "
             :key "oneLetter"
             :snippet-file "oneLetter.snip"}
            {:name "Print Fasta from PDB file. "
@@ -99,7 +99,7 @@
            {:name "Position label with pseudoatom. "
             :key "pseudolabel"
             :snippet-file "pseudolabel.snip"}
-           {:name "Rotate about axis."
+           {:name "Rotate a selection about and axis by a given angle."
             :key "rotate"
             :snippet-file "rotate.snip"}
            {:name "Stereo draw."
@@ -108,9 +108,9 @@
            {:name "Stereo ray."
             :key "stereoRay"
             :snippet-file "stereoRay.snip"}
-           {:name "Three electron density. "
-            :key "threeMaps"
-            :snippet-file "threeMaps.snip"}
+           {:name "Three electron density as Isomesh. "
+            :key "loadThreeMaps"
+            :snippet-file "loadThreeMaps.snip"}
            {:name "Turn about axis. "
             :key "turnAboutAxis"
             :snippet-file "turnAboutAxis.snip"}
@@ -132,7 +132,7 @@
            {:name "Save pse flle with timestamp"
             :key "spse"
             :snippet-file "spse.snip"}
-           {:name "Run Tom Holder's supercell script to generate three cells in all directions."
+           {:name "Run supercell script to generate three cells in all directions. This script was written by Thomas Holder."
             :key "sc222"
             :snippet-file "sc222.snip"}
            {:name "The pearl effect is made with two spheres with the outer sphere being transparent."
@@ -159,7 +159,7 @@
            {:name "Select residues by a range of numbers."
             :key "selectResi"
             :snippet-file "selectResi.snip"}
-           {:name "Select atoms by elemnt."
+           {:name "Select atoms by element."
             :key "selectElement"
             :snippet-file "selectElement.snip"}
            {:name "Select atoms by name."
@@ -204,7 +204,7 @@
            {:name "Create a putty cartoon."
             :key "puttyCartoon"
             :snippet-file "puttyCartoon.snip"}
-           {:name "Trun off magenta squares on current selection."
+           {:name "Turn off magenta squares on current selection."
             :key "hideSelection"
             :snippet-file "hideSelection.snip"}
            {:name "Turn on discrete colors between secondary structure elements."
@@ -222,7 +222,7 @@
            {:name "Set path for location to save fetched pdb files. "
             :key "fetchPath"
             :snippet-file "fetchPath.snip"}
-           {:name "Set antialias to get smooth edges"
+           {:name "Set antialias to on to get smoother edges."
             :key "antialias"
             :snippet-file "antialias.snip"}
            {:name "Print list of active pymolrc files."
@@ -231,37 +231,37 @@
            {:name "Set number of decimals places to show in distance labels. "
             :key "sigDigits"
             :snippet-file "sigDigits.snip"}
-           {:name "Label the CA atoms with the Ala333 style format"
+           {:name "Label the CA atoms with the Ala333 style format."
             :key "labelCAs"
             :snippet-file "labelCAs.snip"}
-           {:name "Label waters HOH."
+           {:name "Label waters with HOH and their residue number."
             :key "labelWatersHOH"
             :snippet-file "labelWatersHOH.snip"}
-           {:name "Label waters W."
+           {:name "Label waters with W and their reisude number."
             :key "labelWatersW"
             :snippet-file "labelWatersW.snip"}
-           {:name "Find hbonds around a residue."
+           {:name "Find H-bonds around a residue."
             :key "findHbonds"
             :snippet-file "findHbonds.snip"}
            {:name "Print the B-factors of a residue. "
             :key "printBs"
             :snippet-file "printBs.snip"}
-           {:name "Label the main chain atoms by resn,resi,atom name."
+           {:name "Label the main chain atoms with the following: resn,resi,atom name."
             :key "labelMainChain"
             :snippet-file "labelMainChain.snip"}
            {:name "Print B factors of part B of a residue."
             :key "printBspartB"
             :snippet-file "printBspartB.snip"}
-           {:name "Print B-values for a residue with the B's rounded off to two decimal places."
+           {:name "Print B--factors for a residue with the B-factors rounded off to two decimal places."
             :key "printBs2digits"
             :snippet-file "printBs2digits.snip"}
            {:name "Write the command reference to html file in the present working directory. "
             :key "writeCommandReference2HTML"
             :snippet-file "writeCommandReference2HTML.snip"}
-           {:name "Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed."
+           {:name "Average the B-factors by using a regular list as opposed to a stored list in PyMOL. Edit the selection as needed."
             :key "averageB"
             :snippet-file "averageB.snip"}
-           {:name "AveBResiX, prints the resiude number and the average bfactor. "
+           {:name "AveBResiX, prints the residue number and the average bfactor. "
             :key "aveB4resiX"
             :snippet-file "aveB4resiX.snip"}
            {:name "Print name and b-factor for a residue."
@@ -274,10 +274,9 @@
             :key "printResiResnNameB4ResiXNoH"
             :snippet-file "printResiResnNameB4ResiXNoH.snip"}
            {:name "Make the background of the internal gui transparent to expand viewport."
-            :key "internalGUImode2 "
-            :snippet-file "internalGUImode2 .snip"}
-           {:name "Set the width of the internal gui. 
-"
+            :key "internalGUImode2"
+            :snippet-file "internalGUImode2.snip"}
+           {:name "Set the width of the internal gui."
             :key "internalGUIwidth"
             :snippet-file "internalGUIwidth.snip"}
            {:name "Print document string of a function."
@@ -286,7 +285,7 @@
            {:name "List all snips by tab trigger and description"
             :key "lsSnips"
             :snippet-file "lsSnips.snip"}
-           {:name "Asp70-His31 salt-bridge from T4 lysozyme. "
+           {:name "Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. "
             :key "his31asp70"
             :snippet-file "his31asp70.snip"}
            {:name "triple water pentagon."
@@ -301,4 +300,489 @@
            {:name "Set dihedral labels to display 2 decimals places to the right of the decimal point."
             :key "sigdihedral"
             :snippet-file "sigdihedral.snip"}
+           {:name "Select state 1 from a model with multiple states."
+            :key "stateOne"
+            :snippet-file "stateOne.snip"}
+           {:name "Display all symmetry mates in two unit cells along the c axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc112"
+            :snippet-file "sc112.snip"}
+           {:name "Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc113"
+            :snippet-file "sc113.snip"}
+           {:name "Display all symmetry mates three three unit cells along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc311"
+            :snippet-file "sc311.snip"}
+           {:name "Display all symmetry mates in three unit cells along b. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc131"
+            :snippet-file "sc131.snip"}
+           {:name "Display all symmetry mates in two unit cell along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc211"
+            :snippet-file "sc211.snip"}
+           {:name "Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc121"
+            :snippet-file "sc121.snip"}
+           {:name "Display all symmetry mates in a 1 x 2 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc122"
+            :snippet-file "sc122.snip"}
+           {:name "Display all symmetry mates in 2 x 2 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc221"
+            :snippet-file "sc221.snip"}
+           {:name "Display all symmetry mates in a 2 x 1 x 2 arrays of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc212"
+            :snippet-file "sc212.snip"}
+           {:name "Display all symmetry mates in 1 x 3 x 3 array of unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc133"
+            :snippet-file "sc133.snip"}
+           {:name "Display all symmetry mates in a 3 x 1 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc313"
+            :snippet-file "sc313.snip"}
+           {:name "Display all symmetry mates in 3 x 3 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc331"
+            :snippet-file "sc331.snip"}
+           {:name "Display all symmetry mates in a 2 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc233"
+            :snippet-file "sc233.snip"}
+           {:name "Display all symmetry mates in a 3 x 2 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc323"
+            :snippet-file "sc323.snip"}
+           {:name "Display all symmetry mates in 3 x 3 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc332"
+            :snippet-file "sc332.snip"}
+           {:name "Display all symmetry mates in 3 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc333"
+            :snippet-file "sc333.snip"}
+           {:name "Display all symmetry mates in four unit cells stacked long c-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc114"
+            :snippet-file "sc114.snip"}
+           {:name "Display all symmetry mates in four unit cells stacked long b-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc141"
+            :snippet-file "sc141.snip"}
+           {:name "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc411"
+            :snippet-file "sc411.snip"}
+           {:name "Save an aln flle with a timestamp."
+            :key "saln"
+            :snippet-file "saln.snip"}
+           {:name "Save electron density map flle with timestamp"
+            :key "sccp4"
+            :snippet-file "sccp4.snip"}
+           {:name "Save dae flle with timestamp"
+            :key "sdae"
+            :snippet-file "sdae.snip"}
+           {:name "Carved isosurface representation of electron density. "
+            :key "carvedIsosurface"
+            :snippet-file "carvedIsosurface.snip"}
+           {:name "Fetch 2FoFc map as an isosurface."
+            :key "fetch2FoFcIsosurface"
+            :snippet-file "fetch2FoFcIsosurface.snip"}
+           {:name "Three electron density as isosurface. "
+            :key "threeMapsIsosurface"
+            :snippet-file "threeMapsIsosurface.snip"}
+           {:name "Carved volume representation of electron density. "
+            :key "carvedVolume"
+            :snippet-file "carvedVolume.snip"}
+           {:name "Fetch 2FoFc map as a volume."
+            :key "fetch2FoFcVolume"
+            :snippet-file "fetch2FoFcVolume.snip"}
+           {:name "Three electron density as volumes. "
+            :key "threeMapsVolume"
+            :snippet-file "threeMapsVolume.snip"}
+           {:name "Return settings in rounded format while running PyMOL via the RCP server ipymol in a jupyter notebook. This is a modified version of the roundview.py script."
+            :key "rvi"
+            :snippet-file "rvi.snip"}
+           {:name "Demo of the use of the RPC server with a drug compound via the rdkit python module."
+            :key "rdkrpcChem"
+            :snippet-file "rdkrpcChem.snip"}
+           {:name "A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels."
+            :key "kernel"
+            :snippet-file "kernel.snip"}
+           {:name "Demo of the use of the RPC server with a protein via rdkit."
+            :key "rdkrpcProtein"
+            :snippet-file "rdkrpcProtein.snip"}
+           {:name "Code to start the RPC server with ipymol."
+            :key "ipymolStart"
+            :snippet-file "ipymolStart.snip"}
+           {:name "Demo of the use of the RPC server with a protein via ipymol."
+            :key "ipymolProtein"
+            :snippet-file "ipymolProtein.snip"}
+           {:name "Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script."
+            :key "rvr"
+            :snippet-file "rvr.snip"}
+           {:name "Print in the command history window the docstrings of all of the functions in the cmd module."
+            :key "cmddocs"
+            :snippet-file "cmddocs.snip"}
+           {:name "Return to the command history window the docstrings for all of the functions in a module."
+            :key "pymoldocs"
+            :snippet-file "pymoldocs.snip"}
+           {:name "Print the number of residues in a protein."
+            :key "numResiProtein"
+            :snippet-file "numResiProtein.snip"}
+           {:name "Print the number of residues in chain A of a protein."
+            :key "numResiProteinChainA"
+            :snippet-file "numResiProteinChainA.snip"}
+           {:name "Print the number of residues in a nulceic acid (all chains)."
+            :key "numResiNucleic"
+            :snippet-file "numResiNucleic.snip"}
+           {:name "Print the number of residues in a nulceic acid chain."
+            :key "numResiNucleicChainA"
+            :snippet-file "numResiNucleicChainA.snip"}
+           {:name "Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long."
+            :key "brokenNucleicBackbone"
+            :snippet-file "brokenNucleicBackbone.snip"}
+           {:name "To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
+"
+            :key "oneBondThicknessColor"
+            :snippet-file "oneBondThicknessColor.snip"}
+           {:name "Connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18. Note that this example requires the draw_links.py [http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py] by Robert Campbell."
+            :key "drawLinks"
+            :snippet-file "drawLinks.snip"}
+           {:name "Print the path to the currently used PyMOL binary."
+            :key "printPath"
+            :snippet-file "printPath.snip"}
+           {:name "Turn on the ligand valence."
+            :key "setLigandValenceOn"
+            :snippet-file "setLigandValenceOn.snip"}
+           {:name "Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset)."
+            :key "presetDocs"
+            :snippet-file "presetDocs.snip"}
+           {:name "Return the docustring for the help submodule. This command is more concise:  help help."
+            :key "helpDocs"
+            :snippet-file "helpDocs.snip"}
+           {:name "The amber trajectories have to be loaded into the same object."
+            :key "loadAmberTrajs"
+            :snippet-file "loadAmberTrajs.snip"}
+           {:name "Saves multiple objects into multiple files using an optional prefix name."
+            :key "saveSeppy"
+            :snippet-file "saveSeppy.snip"}
+           {:name "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures."
+            :key "optAlignRNA"
+            :snippet-file "optAlignRNA.snip"}
+           {:name "Load into PyMOL multiple files with a common file stem. The is a script by Robert Campbell that has been updated for Python3."
+            :key "loadManyFiles"
+            :snippet-file "loadManyFiles.snip"}
+           {:name "These are the instructions for loading and aligning multiple files."
+            :key "loadAndAlignManyFiles3"
+            :snippet-file "loadAndAlignManyFiles3.snip"}
+           {:name "This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures."
+            :key "allPairs"
+            :snippet-file "allPairs.snip"}
+           {:name "Combining DSSR block representation with regular PyMOL cartoons after loading the dssr_block.py script by Thomas Holder."
+            :key "dssrBlock1"
+            :snippet-file "dssrBlock1.snip"}
+           {:name "DSSR block representation with fused blocks after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH."
+            :key "dssrBlock2"
+            :snippet-file "dssrBlock2.snip"}
+           {:name "DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH."
+            :key "dssrBlock3"
+            :snippet-file "dssrBlock3.snip"}
+           {:name "DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH."
+            :key "dssrBlock4"
+            :snippet-file "dssrBlock4.snip"}
+           {:name "Settings for nucliec acid cartoon."
+            :key "nucleicAcidCartoon"
+            :snippet-file "nucleicAcidCartoon.snip"}
+           {:name "Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. The set command has the syntax of setting_name [, setting_value [, selection [,state ]]] . In this case, the selection has to be global, object, object-state, or per-atom settings. It cannot be a named selection. This is a weak spot in PyMOL. Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. Many double-stranded helices have one strand in the asymmetric unit. The second strand is in the biological unit. The coordinates for the second strand are in the pdb1 file type at the PDB. The second strand is in the second state, which is equivalent to the second model in the pdb file. The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting). The bases are colored differently too (via the cartoon_ladder_color setting).
+"
+            :key "nucleicAcidCartoon2Strands"
+            :snippet-file "nucleicAcidCartoon2Strands.snip"}
+           {:name "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid."
+            :key "nucleicAcidColorbySequence"
+            :snippet-file "nucleicAcidColorbySequence.snip"}
+           {:name "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid. It is dervied from the CR shortcut. The backcone is shown as a flatten ribbon."
+            :key "nucleicAcidFlatRibbonColorbySequence"
+            :snippet-file "nucleicAcidFlatRibbonColorbySequence.snip"}
+           {:name "The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py."
+            :key "nucleicAcidCartoonFilledRings"
+            :snippet-file "nucleicAcidCartoonFilledRings.snip"}
+           {:name "This code make as standard base stacking diagram with ball and stick representation. "
+            :key "basePairStacking"
+            :snippet-file "basePairStacking.snip"}
+           {:name "This code colors by the nucleotides by base seqence. The backcone is shown as a flatten ribbon with rolled edges that give the dumbell effect. The code can be applied to any nucleic acid. The code is dervied from the CR and DU shortcuts. "
+            :key "nucleicAcidDumbellCartoonColorbySequence"
+            :snippet-file "nucleicAcidDumbellCartoonColorbySequence.snip"}
+           {:name "Set keyboard shortcut by mapping F1 to stereo."
+            :key "stereokb"
+            :snippet-file "stereokb.snip"}
+           {:name "Print to the screen the settings and their current parameter values."
+            :key "listSettings2"
+            :snippet-file "listSettings2.snip"}
+           {:name "Print to the screen the settings and their current parameter values. This is the more compact version."
+            :key "listSettings"
+            :snippet-file "listSettings.snip"}
+           {:name "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts."
+            :key "displayFonts"
+            :snippet-file "displayFonts.snip"}
+           {:name "Create a list of objects in the internal gui and print this list to the screen."
+            :key "listObjects"
+            :snippet-file "listObjects.snip"}
+           {:name "Print a list of protein--ligand distances. Code by Dan Kulp. Updated for Python3."
+            :key "listLigandProteinDistances"
+            :snippet-file "listLigandProteinDistances.snip"}
+           {:name "This code shows the cartoon backbone tube as 65% transparent. It hides the rungs of the cartoon. It shows all of the non-H atoms are sticks. The motivation is to have the cartoon highlight the backbone without dominanting the scene."
+            :key "nucleicAcidBackboneTubesSticks"
+            :snippet-file "nucleicAcidBackboneTubesSticks.snip"}
+           {:name "The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***."
+            :key "symexp"
+            :snippet-file "symexp.snip"}
+           {:name "Adds the function draw_axis(). Used to a symmetry axis, a ncs axis, or scale bar to a scene."
+            :key "addAxis"
+            :snippet-file "addAxis.snip"}
+           {:name "Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns."
+            :key "synch"
+            :snippet-file "synch.snip"}
+           {:name "Add or substract a residue number offset."
+            :key "renumResi"
+            :snippet-file "renumResi.snip"}
+           {:name "Add or substract a atom number offset."
+            :key "renumAtoms"
+            :snippet-file "renumAtoms.snip"}
+           {:name "Rename a chain. "
+            :key "renameChain"
+            :snippet-file "renameChain.snip"}
+           {:name "Print the atom number2 of a residue."
+            :key "printAtomNumbers"
+            :snippet-file "printAtomNumbers.snip"}
+           {:name "Print the atom names of a residue."
+            :key "printAtomNames"
+            :snippet-file "printAtomNames.snip"}
+           {:name "Print the bfactors of a residue."
+            :key "printBfactors"
+            :snippet-file "printBfactors.snip"}
+           {:name "Print the van der Waals radii of the atoms in of a residue."
+            :key "printVDWradii"
+            :snippet-file "printVDWradii.snip"}
+           {:name "Print the coordinates of the atoms in a residue."
+            :key "printCoordinates"
+            :snippet-file "printCoordinates.snip"}
+           {:name "Print the atom names and coordinates of the atoms in a residue."
+            :key "printNamesCoordinates"
+            :snippet-file "printNamesCoordinates.snip"}
+           {:name "Print the atom names as tuples and coordinates of the atoms in a residue as a list."
+            :key "printNamesCoordinates"
+            :snippet-file "printNamesCoordinates.snip"}
+           {:name "Source block template in org-mode with emacs-jupyter package. "
+            :key "emacsjupyterSourceBlock"
+            :snippet-file "emacsjupyterSourceBlock.snip"}
+           {:name "Source block template in org-mode with the ob-ipython package. "
+            :key "obipythonSourceBlock"
+            :snippet-file "obipythonSourceBlock.snip"}
+           {:name "Import the cmd class from the pymol api."
+            :key "importPyMOLcmd"
+            :snippet-file "importPyMOLcmd.snip"}
+           {:name "Imports for using IPython to display images loaded from disk in notebook cells."
+            :key "importIPythonDisplay"
+            :snippet-file "importIPythonDisplay.snip"}
+           {:name "Load image."
+            :key "loadImage"
+            :snippet-file "loadImage.snip"}
+           {:name "Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay."
+            :key "imports4PyMOLjupyter"
+            :snippet-file "imports4PyMOLjupyter.snip"}
+           {:name "Python version of getCoordinates snippets. Note that the python2 print statement stills works  in pml scripts. "
+            :key "getCoordinatespy"
+            :snippet-file "getCoordinatespy.snip"}
+           {:name "Python version of the command to print the sequence from a PDB file in the fasta format."
+            :key "fastapy"
+            :snippet-file "fastapy.snip"}
+           {:name "Display three electron density maps as isomesh. "
+            :key "fetchThreeMaps"
+            :snippet-file "fetchThreeMaps.snip"}
+           {:name "Scale the radius and color of atoms as spheres by property in the B-value column."
+            :key "scaleRadiusColorpy"
+            :snippet-file "scaleRadiusColorpy.snip"}
+           {:name "Python block insert for scaleRadiusColorpy."
+            :key "scaleRadiusColorPythonInsertpy"
+            :snippet-file "scaleRadiusColorPythonInsertpy.snip"}
+           {:name "Save png flle with timestamp"
+            :key "spngpy"
+            :snippet-file "spngpy.snip"}
+           {:name "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts."
+            :key "displayFontspy"
+            :snippet-file "displayFontspy.snip"}
+           {:name "AveBResiX, prints the residue number and the average bfactor. "
+            :key "aveB4resiXpy"
+            :snippet-file "aveB4resiXpy.snip"}
+           {:name "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc441"
+            :snippet-file "sc441.snip"}
+           {:name "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc444"
+            :snippet-file "sc444.snip"}
+           {:name "Display all symmetry mates in a 4 x 1 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc414"
+            :snippet-file "sc414.snip"}
+           {:name "Display all symmetry mates in in a 1 x 4 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc144"
+            :snippet-file "sc144.snip"}
+           {:name "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/."
+            :key "sc444"
+            :snippet-file "sc444.snip"}
+           {:name "Save dae flle with timestamp"
+            :key "sdaepy"
+            :snippet-file "sdaepy.snip"}
+           {:name "Save electron density map flle with timestamp"
+            :key "sccp4py"
+            :snippet-file "sccp4py.snip"}
+           {:name "Save an aln flle with a timestamp. Python version."
+            :key "salnpy"
+            :snippet-file "salnpy.snip"}
+           {:name "Print list of active pymolrc files."
+            :key "lspymolrcpy"
+            :snippet-file "lspymolrcpy.snip"}
+           {:name "Print document string of a function."
+            :key "printDocpy"
+            :snippet-file "printDocpy.snip"}
+           {:name "Print the path to the currently used PyMOL binary."
+            :key "printPathpy"
+            :snippet-file "printPathpy.snip"}
+           {:name "Return to the command history window the docstrings for all of the functions in a module."
+            :key "pymoldocspy"
+            :snippet-file "pymoldocspy.snip"}
+           {:name "Ambient occlussion in grayscale."
+            :key "aobw"
+            :snippet-file "aobw.snip"}
+           {:name "Ambient occlussion with carbon atoms colored black."
+            :key "aod"
+            :snippet-file "aod.snip"}
+           {:name "Ambient occlussion in grayscale with carbon atoms colored black."
+            :key "aodbw"
+            :snippet-file "aodbw.snip"}
+           {:name "Adds the function draw_axis(). Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene."
+            :key "addAxispy"
+            :snippet-file "addAxispy.snip"}
+           {:name "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via gscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command."
+            :key "grayscalepy"
+            :snippet-file "grayscalepy.snip"}
+           {:name "Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv').."
+            :key "importShortcuts"
+            :snippet-file "importShortcuts.snip"}
+           {:name "Run the rv function from the pymolshortcuts.py file. "
+            :key "rv"
+            :snippet-file "rv.snip"}
+           {:name "Run the AO function from the pymolshortcuts.py file to generate the photorealistic effect. "
+            :key "AO"
+            :snippet-file "AO.snip"}
+           {:name "Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. "
+            :key "AOBW"
+            :snippet-file "AOBW.snip"}
+           {:name "Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black."
+            :key "AOD"
+            :snippet-file "AOD.snip"}
+           {:name "Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale. "
+            :key "AODBW"
+            :snippet-file "AODBW.snip"}
+           {:name "Color unit cell edges black. The settings for controlling the unit cell color are hard to find."
+            :key "unitCellEdgesColorBlack"
+            :snippet-file "unitCellEdgesColorBlack.snip"}
+           {:name "Print the codes for color-by-atom (util.cba*) alternates."
+            :key "printColorByAtomCodes"
+            :snippet-file "printColorByAtomCodes.snip"}
+           {:name "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via grayscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command."
+            :key "grayscale"
+            :snippet-file "grayscale.snip"}
+           {:name "Run the yrb function from the pymolshortcuts.py file. "
+            :key "yrb"
+            :snippet-file "yrb.snip"}
+           {:name "Run the timcolor function from the pymolshortcuts.py file to color atoms accordings to Tim Mather's biophysical coloring scheme for proteins.. "
+            :key "timcolor"
+            :snippet-file "timcolor.snip"}
+           {:name "Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. "
+            :key "colorh1"
+            :snippet-file "colorh1.snip"}
+           {:name "Run the colorh2 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 2. "
+            :key "colorh2"
+            :snippet-file "colorh2.snip"}
+           {:name "Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces."
+            :key "cav"
+            :snippet-file "cav.snip"}
+           {:name "Run the PE125 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.125 of the van der Waals surface."
+            :key "PE125"
+            :snippet-file "PE125.snip"}
+           {:name "Run the PE25 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.25 of the van der Waals surface."
+            :key "PE25"
+            :snippet-file "PE25.snip"}
+           {:name "Run the PE50 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.50 of the van der Waals surface."
+            :key "PE50"
+            :snippet-file "PE50.snip"}
+           {:name "Run the PE75 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.75 of the van der Waals surface."
+            :key "PE75"
+            :snippet-file "PE75.snip"}
+           {:name "Run the PE85 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.85 of the van der Waals surface."
+            :key "PE85"
+            :snippet-file "PE85.snip"}
+           {:name "Run the PE66 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.66 of the van der Waals surface."
+            :key "PE66"
+            :snippet-file "PE66.snip"}
+           {:name "Run the PE33 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.33 of the van der Waals surface."
+            :key "PE33"
+            :snippet-file "PE33.snip"}
+           {:name "Count number of *.ccp4 (electron density map) files in current directory."
+            :key "cntccp4emaps"
+            :snippet-file "cntccp4emaps.snip"}
+           {:name "Count number of files in current directory."
+            :key "cntfiles"
+            :snippet-file "cntfiles.snip"}
+           {:name "Count number of *.log files in current directory."
+            :key "cntlogs"
+            :snippet-file "cntlogs.snip"}
+           {:name "Count number of *.mtz files in current directory."
+            :key "cntmtzs"
+            :snippet-file "cntmtzs.snip"}
+           {:name "Count number of *.pdb files in current directory."
+            :key "cntpdbs"
+            :snippet-file "cntpdbs.snip"}
+           {:name "Count number of *.pml files in current directory."
+            :key "cntpmls"
+            :snippet-file "cntpmls.snip"}
+           {:name "Count number of *.png files in current directory."
+            :key "cntpngs"
+            :snippet-file "cntpngs.snip"}
+           {:name "Count number of *.pse files in current directory."
+            :key "cntpses"
+            :snippet-file "cntpses.snip"}
+           {:name "Delete all H-bonds in the selection, which is all by default."
+            :key "rmhb"
+            :snippet-file "rmhb.snip"}
+           {:name "Creates an object of all H-bonds found by PyMOL."
+            :key "hb"
+            :snippet-file "hb.snip"}
+           {:name "Remove all measurement objects in the interal GUI."
+            :key "rmd"
+            :snippet-file "rmd.snip"}
+           {:name "Show all models in a nmr structure."
+            :key "nmr"
+            :snippet-file "nmr.snip"}
+           {:name "Hide all but first model in a nmr structure."
+            :key "nmroff"
+            :snippet-file "nmroff.snip"}
+           {:name "Hide all but the first model in a nmr structure."
+            :key "nmroffpy"
+            :snippet-file "nmroffpy.snip"}
+           {:name "Show all models in a nmr structure."
+            :key "nmrpy"
+            :snippet-file "nmrpy.snip"}
+           {:name "These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files."
+            :key "loadAndAlignManyFiles1"
+            :snippet-file "loadAndAlignManyFiles1.snip"}
+           {:name "To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms."
+            :key "loadAndAlignManyFiles2"
+            :snippet-file "loadAndAlignManyFiles2.snip"}
+           {:name "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures."
+            :key "optAlignRNA"
+            :snippet-file "optAlignRNA.snip"}
+           {:name "Apply the ambient occlussion effect to get the photorealistic effect."
+            :key "ao"
+            :snippet-file "ao.snip"}
+           {:name "Ball-and-stick plus filled rings. "
+            :key "bsfr"
+            :snippet-file "bsfr.snip"}
+           {:name "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28""
+            :key "wallart"
+            :snippet-file "wallart.snip"}
+           {:name "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28""
+            :key "wallartpy"
+            :snippet-file "wallartpy.snip"}
+           {:name "Color cartoon with colorblind friendly colors. Requires that the pymolshortcuts.py file is loaded. This has been applied to PDB-ID 7JU6. The protein is human RET kinase, and the drug is selpercatinib, a FDA approved drug for treating several cancers."
+            :key "cblindCartoon"
+            :snippet-file "cblindCartoon.snip"}
            ]}

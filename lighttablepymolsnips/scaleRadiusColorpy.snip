@@ -1,0 +1,23 @@
+cmd.do('bg_color white;')
+cmd.do('hide everything;')
+cmd.do('show spheres;')
+cmd.do('set  stick_radius = 0.1;')
+cmd.do('hide everything, HET;')
+cmd.do('show spheres, HET;')
+cmd.do('set sphere_quality=3;')
+cmd.do('show sticks, resi 1102;')
+cmd.do('from pymol import stored;')
+cmd.do('# set the stored array equal to the b−values or use your own values; ')
+cmd.do('stored.bb = [ ];')
+cmd.do('iterate all, stored.bb.append(b);')
+# scale the b−values;
+cmd.do('M = max(stored.bb);')
+cmd.do('scaledBB = map(lambda x: float (x/M), stored.bb);')
+count = 0;
+# set the sphere radii independently;
+for x in scaledBB:
+     cmd.set("sphere_scale", x ,"ID %s"%count)
+     count = count + 1
+cmd.do('spectrum b, selection=4gdx;')
+cmd.do('space cmyk;')
+cmd.do('set specular_intensity , 0.25;')

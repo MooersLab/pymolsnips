@@ -1,0 +1,1 @@
+print(invocation.options.deferred);
