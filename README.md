@@ -1,9 +1,8 @@
 # pymolsnips: Templates for writing PyMOL scripts.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4300682.svg)](https://doi.org/10.5281/zenodo.4300682)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4317774.svg)](https://doi.org/10.5281/zenodo.4317774)
 [![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
-![GitHub release](https://img.shields.io/github/v/release/Mooerslab/pymolsnips?include_prereleases)
 ![GitHub all releases](https://img.shields.io/github/downloads/MooersLab/pymolsnips/total)
 
 <!--
