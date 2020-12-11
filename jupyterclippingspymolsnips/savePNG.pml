@@ -1,4 +1,21 @@
 """"
-png ${1:saveMe.png}; 
-""""
-png saveMe.png; 
+# PyMOL writes out only png files. 
+# This may need to be converted to tiff.
+# See the png2tiff snippet for a bash script that converts all png files in a folder into tiff files.
+# 1: png filename
+# 2: x-dimension in pixels
+# 3: y-dimension in pixels, 1600 x 1000 approximates the golden ratio. Usually want a square for multipanel figures.
+# 4: dots per inch, 
+# 5: ray tracing off, 0; ray tracing on, 1
+# should also consider image without ray tracing shadows. 
+png ${1:saveMe}.png, ${2:1920}, ${3:1920}, ${4:600}, ${5:1};""""
+# PyMOL writes out only png files. 
+# This may need to be converted to tiff.
+# See the png2tiff snippet for a bash script that converts all png files in a folder into tiff files.
+# 1: png filename
+# 2: x-dimension in pixels
+# 3: y-dimension in pixels, 1600 x 1000 approximates the golden ratio. Usually want a square for multipanel figures.
+# 4: dots per inch, 
+# 5: ray tracing off, 0; ray tracing on, 1
+# should also consider image without ray tracing shadows. 
+png saveMe.png, 1920, 1920, 600, 1;

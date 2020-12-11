@@ -1,4 +1,7 @@
 """"
-run ~/Scripts/PyMOLScripts/quat.py; quat
-""""
-run ~/Scripts/PyMOLScripts/quat.py; quat
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/${1:Scripts/PyMOLScripts}/quat.py; quat;""""
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/Scripts/PyMOLScripts/quat.py; quat;

@@ -1,4 +1,3 @@
 """"
-disable ${1:sele}; 
-""""
+disable ${1:sele}; """"
 disable sele; 

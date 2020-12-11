@@ -1,4 +1,7 @@
 """"
-set ellipsoid_color, ${1:color};
-""""
-set ellipsoid_color, color;
+# set the colore of the thermal ellipsoids;
+# PyMOL colors: https://pymolwiki.org/index.php/Color_Values;
+set ellipsoid_color, ${1:red};""""
+# set the colore of the thermal ellipsoids;
+# PyMOL colors: https://pymolwiki.org/index.php/Color_Values;
+set ellipsoid_color, red;

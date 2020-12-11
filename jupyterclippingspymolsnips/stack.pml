@@ -11,9 +11,9 @@ set stick_ball, on;
 set stick_ball_ratio,1.9;
 set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
 hide everything, element H;
-select carbon1, element C and (resi ${4:3} or resi ${5:8}) 
+select carbon1, element C and (resi ${4:3} or resi ${5:8}); 
 # select lower base pair;
-select carbon2, element C and (resi ${3:2} or resi ${6:9}) 
+select carbon2, element C and (resi ${3:2} or resi ${6:9});
 #select upper base pair;
 color gray70,carbon1;
 color gray10,carbon2;
@@ -44,9 +44,9 @@ set stick_ball, on;
 set stick_ball_ratio,1.9;
 set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
 hide everything, element H;
-select carbon1, element C and (resi 3 or resi 8) 
+select carbon1, element C and (resi 3 or resi 8); 
 # select lower base pair;
-select carbon2, element C and (resi 2 or resi 9) 
+select carbon2, element C and (resi 2 or resi 9);
 #select upper base pair;
 color gray70,carbon1;
 color gray10,carbon2;

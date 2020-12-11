@@ -1,0 +1,14 @@
+""""
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+cmd.set('label_size', 50);
+cmd.set('grid_mode');
+""""
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+cmd.set('label_size', 50);
+cmd.set('grid_mode');

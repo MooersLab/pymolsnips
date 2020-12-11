@@ -1,0 +1,9 @@
+""""
+# To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms;
+#  Yes, this construct is a list comprehension inside a list comprehension!;
+run ${1:~/Scripts/}optAlignRNA.py;
+[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()];""""
+# To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms;
+#  Yes, this construct is a list comprehension inside a list comprehension!;
+run ~/Scripts/optAlignRNA.py;
+[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()];

@@ -1,5 +1,5 @@
 """"
-Tab trigger                  Description
+"""Tab trigger                  Description
 ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 antialias                    Set antialias to get smooth edges
 ao                           Ambient occlussion.
@@ -97,9 +97,9 @@ threeMaps                    Three electron density.
 turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+writeCommandReference2HTML   Write the command reference to html file in the present working directory."""
 """"
-Tab trigger                  Description
+"""Tab trigger                  Description
 ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 antialias                    Set antialias to get smooth edges
 ao                           Ambient occlussion.
@@ -197,4 +197,4 @@ threeMaps                    Three electron density.
 turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.
+writeCommandReference2HTML   Write the command reference to html file in the present working directory."""

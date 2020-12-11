@@ -14,7 +14,7 @@ set direct,0;
 set reflect,1.5;
 set ray_shadow_decay_factor, 0.1;
 set ray_shadow_decay_range, 2;
-unset depth_cue;
+set depth_cue, 0;
 ray;
 """"
 set_color oxygen, [1.0,0.4,0.4];
@@ -32,5 +32,5 @@ set direct,0;
 set reflect,1.5;
 set ray_shadow_decay_factor, 0.1;
 set ray_shadow_decay_range, 2;
-unset depth_cue;
+set depth_cue, 0;
 ray;

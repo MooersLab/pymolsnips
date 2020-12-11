@@ -1,4 +1,3 @@
 """"
-select substrates, organic;
-""""
-select substrates, organic;
+select ${1:ligand}, organic;""""
+select ligand, organic;

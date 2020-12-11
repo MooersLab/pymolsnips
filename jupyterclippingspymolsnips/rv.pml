@@ -1,4 +1,3 @@
 """"
-run roundview.py;
-""""
-run roundview.py;
+cmd.do('rv')""""
+cmd.do('rv')
