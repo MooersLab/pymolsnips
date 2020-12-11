@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. 
+cmd.do('AOBW')
+</string>
+    <key>keyEquivalent</key>
+    <string>AOBW</string>
+    <key>name</key>
+    <string>Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>AOBW</string>
+    <key>uuid</key>
+    <string>90e99969-c9f3-4e61-aaf5-e07588bc4309</string>
+</dict>
+</plist>

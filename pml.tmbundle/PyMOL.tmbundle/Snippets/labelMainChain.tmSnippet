@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label the main chain atoms with the following: resn,resi,atom name.
+label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
+</string>
+    <key>keyEquivalent</key>
+    <string>labelMainChain</string>
+    <key>name</key>
+    <string>Label the main chain atoms with the following: resn,resi,atom name.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelMainChain</string>
+    <key>uuid</key>
+    <string>b9d7ceab-25db-408c-ab4b-d19541dec94d</string>
+</dict>
+</plist>

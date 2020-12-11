@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmail</key>
+	<string>blaine-mooers@ouhsc.edu</string>
+	<key>contactName</key>
+	<string>Blaine Mooers</string>
+	<key>caption</key>
+	<string>Customized snippets for working more efficiently in LaTeX.</string>
+	<key>name</key>
+	<string>PyMOL</string>
+	<key>uuid</key>
+	<string>674a0e4f-882a-4189-8725-133b6579c7a3</string>
+</dict>
+</plist>

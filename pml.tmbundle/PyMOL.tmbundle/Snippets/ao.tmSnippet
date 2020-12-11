@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Apply the ambient occlussion effect to get the photorealistic effect.
+set_color oxygen, [1.0,0.4,0.4];
+set_color nitrogen, [0.5,0.5,1.0];
+remove solvent;
+as spheres;
+util.cbaw;
+bg white;
+set light_count,10;
+set spec_count,1;
+set shininess, 10;
+set specular,0.25;
+set ambient,0;
+set direct,0;
+set reflect,1.5;
+set ray_shadow_decay_factor, 0.1;
+set ray_shadow_decay_range, 2;
+set depth_cue, 0;
+ray;
+
+</string>
+    <key>keyEquivalent</key>
+    <string>ao</string>
+    <key>name</key>
+    <string>Apply the ambient occlussion effect to get the photorealistic effect.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>ao</string>
+    <key>uuid</key>
+    <string>4fcf3974-8123-4cdc-b4cd-1670948b8b5b</string>
+</dict>
+</plist>

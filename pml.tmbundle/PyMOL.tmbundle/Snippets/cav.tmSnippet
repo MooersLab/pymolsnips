@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces.
+cmd.do('cav')
+</string>
+    <key>keyEquivalent</key>
+    <string>cav</string>
+    <key>name</key>
+    <string>Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cav</string>
+    <key>uuid</key>
+    <string>217fc7ab-292b-4646-bb59-5a0a26171941</string>
+</dict>
+</plist>

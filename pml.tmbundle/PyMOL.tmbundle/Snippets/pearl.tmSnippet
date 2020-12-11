@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% The pearl effect is made with two spheres with the outer sphere being transparent.
+create ${1:sodium2}, ${2:sodium1};
+set sphere_transparency, 0.4, ${1:sodium2};
+set sphere_scale, 1.05, ${1:sodium2};
+ray;
+</string>
+    <key>keyEquivalent</key>
+    <string>pearl</string>
+    <key>name</key>
+    <string>The pearl effect is made with two spheres with the outer sphere being transparent.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>pearl</string>
+    <key>uuid</key>
+    <string>8b37bd91-b57b-4ffb-97f3-0330db442030</string>
+</dict>
+</plist>

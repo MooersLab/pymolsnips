@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select atoms by name.
+select ${1:oxygen2}, name ${2:O2};
+</string>
+    <key>keyEquivalent</key>
+    <string>selectName</string>
+    <key>name</key>
+    <string>Select atoms by name.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectName</string>
+    <key>uuid</key>
+    <string>22d23852-8be1-4832-82a0-8d527dc00521</string>
+</dict>
+</plist>

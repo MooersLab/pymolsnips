@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Return the docustring for the help submodule. This command is more concise:  help help.
+help(help)
+</string>
+    <key>keyEquivalent</key>
+    <string>helpDocs</string>
+    <key>name</key>
+    <string>Return the docustring for the help submodule. This command is more concise:  help help.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>helpDocs</string>
+    <key>uuid</key>
+    <string>62eca489-1a7e-4f35-be68-0d383bf05279</string>
+</dict>
+</plist>

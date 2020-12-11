@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Turn off magenta squares on current selection.
+indicate none
+</string>
+    <key>keyEquivalent</key>
+    <string>hideSelection</string>
+    <key>name</key>
+    <string>Turn off magenta squares on current selection.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>hideSelection</string>
+    <key>uuid</key>
+    <string>ea9f1c6d-147b-40f5-bc07-e24dac2e4309</string>
+</dict>
+</plist>

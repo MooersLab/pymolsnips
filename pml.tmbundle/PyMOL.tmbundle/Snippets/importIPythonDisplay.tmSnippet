@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Imports for using IPython to display images loaded from disk in notebook cells.
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+</string>
+    <key>keyEquivalent</key>
+    <string>importIPythonDisplay</string>
+    <key>name</key>
+    <string>Imports for using IPython to display images loaded from disk in notebook cells.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>importIPythonDisplay</string>
+    <key>uuid</key>
+    <string>e8c05a12-3f64-4fd9-871c-23af49c1fd75</string>
+</dict>
+</plist>

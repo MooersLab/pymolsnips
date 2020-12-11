@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Save png flle with timestamp
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".png"); 
+
+</string>
+    <key>keyEquivalent</key>
+    <string>spngpy</string>
+    <key>name</key>
+    <string>Save png flle with timestamp</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>spngpy</string>
+    <key>uuid</key>
+    <string>4291901a-bdf9-4ea7-9a3f-b04acab10e02</string>
+</dict>
+</plist>

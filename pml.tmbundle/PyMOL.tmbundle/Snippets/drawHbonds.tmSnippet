@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Display H-bonds as dashes colored black. 
+hide everything, hydrogens;
+hide labels;
+# set the color of the dashed lines representing the H-bond.;
+set dash_color, ${1:black};
+set dash_gap, 0.4;
+set dash_radius, 0.08;
+</string>
+    <key>keyEquivalent</key>
+    <string>drawHbonds</string>
+    <key>name</key>
+    <string>Display H-bonds as dashes colored black. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>drawHbonds</string>
+    <key>uuid</key>
+    <string>1e453628-026d-40ec-9e4a-6e59c2a6382b</string>
+</dict>
+</plist>

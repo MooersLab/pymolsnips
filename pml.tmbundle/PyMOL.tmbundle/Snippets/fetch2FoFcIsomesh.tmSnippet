@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Fetch 2FoFc map as an isomesh.
+# Fetch a 2fofc electron density map. Edit the PDB-ID code.;
+fetch ${1:3nd4}, ${1:3nd4}_2fofc, type=2fofc, async=0;
+# Render and display a contour of this map as chicken wire.;
+isomesh 2fofcmap, ${1:3nd4}_2fofc, 1, ${1:3nd4}, carve = 1.8;
+</string>
+    <key>keyEquivalent</key>
+    <string>fetch2FoFcIsomesh</string>
+    <key>name</key>
+    <string>Fetch 2FoFc map as an isomesh.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fetch2FoFcIsomesh</string>
+    <key>uuid</key>
+    <string>dc36402b-9180-4d96-a200-4aa5665cd38f</string>
+</dict>
+</plist>

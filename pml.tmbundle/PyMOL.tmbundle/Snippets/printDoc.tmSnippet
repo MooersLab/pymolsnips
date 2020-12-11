@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print document string of a function.
+print ${1:my_func}.__doc__;
+</string>
+    <key>keyEquivalent</key>
+    <string>printDoc</string>
+    <key>name</key>
+    <string>Print document string of a function.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printDoc</string>
+    <key>uuid</key>
+    <string>f691f678-bfa2-4f42-940b-415d68b9b09d</string>
+</dict>
+</plist>

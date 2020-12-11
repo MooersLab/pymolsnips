@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Save an aln flle with a timestamp.
+python;
+import datetime;
+from pymol import cmd;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT);
+cmd.save(stemName+s+".aln");
+python end;
+</string>
+    <key>keyEquivalent</key>
+    <string>saln</string>
+    <key>name</key>
+    <string>Save an aln flle with a timestamp.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>saln</string>
+    <key>uuid</key>
+    <string>c47330a4-7d4b-427b-b1d7-85cd81cbb046</string>
+</dict>
+</plist>

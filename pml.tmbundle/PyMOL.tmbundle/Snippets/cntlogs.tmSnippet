@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Count number of *.log files in current directory.
+print("Count the number of log image files in current directory.");
+print("Usage: cntlogs");
+myPath = os.getcwd();
+logCounter = len(glob.glob1(myPath,"*.log"));
+print("Number of number of log image files in the current directory: ", logCounter);
+</string>
+    <key>keyEquivalent</key>
+    <string>cntlogs</string>
+    <key>name</key>
+    <string>Count number of *.log files in current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cntlogs</string>
+    <key>uuid</key>
+    <string>e0e2c6d6-f1ee-4c9c-9a37-460569c27182</string>
+</dict>
+</plist>

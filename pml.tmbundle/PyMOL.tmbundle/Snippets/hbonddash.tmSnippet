@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set up H-bond dashes.
+hide everything, hydrogens;
+hide labels;
+set dash_color, black; 
+set dash_gap, 0.4;
+set dash_radius, 0.08;
+</string>
+    <key>keyEquivalent</key>
+    <string>hbonddash</string>
+    <key>name</key>
+    <string>Set up H-bond dashes.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>hbonddash</string>
+    <key>uuid</key>
+    <string>5d180374-7ede-4732-b505-90c1e4824993</string>
+</dict>
+</plist>

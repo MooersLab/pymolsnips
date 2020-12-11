@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Make selection of ligand atoms.
+select ${1:ligand}, organic;
+</string>
+    <key>keyEquivalent</key>
+    <string>ligandSelect</string>
+    <key>name</key>
+    <string>Make selection of ligand atoms.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>ligandSelect</string>
+    <key>uuid</key>
+    <string>e737c9b8-bfd8-4771-8010-91e35b192895</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Volume ramp.
+cmd.volume_ramp_new("ramp_magenta", [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
+</string>
+    <key>keyEquivalent</key>
+    <string>volumeRamp</string>
+    <key>name</key>
+    <string>Volume ramp.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>volumeRamp</string>
+    <key>uuid</key>
+    <string>9629e015-44aa-4a5e-ac1e-2d69b94a282c</string>
+</dict>
+</plist>

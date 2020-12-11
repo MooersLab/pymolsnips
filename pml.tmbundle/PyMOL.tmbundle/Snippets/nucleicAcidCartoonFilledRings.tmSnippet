@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py.
+bg_color white;
+show sticks;
+set cartoon_ring_mode, 3;
+set cartoon_ring_finder, 1;
+set cartoon_ladder_mode, 1;
+set cartoon_nucleic_acid_mode, 4;
+set cartoon_ring_transparency, 0.5;
+as cartoon;
+</string>
+    <key>keyEquivalent</key>
+    <string>nucleicAcidCartoonFilledRings</string>
+    <key>name</key>
+    <string>The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>nucleicAcidCartoonFilledRings</string>
+    <key>uuid</key>
+    <string>bfbaa394-9301-4bb8-89fe-49156cd7f2bc</string>
+</dict>
+</plist>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. 
+fetch ${1:1lw9}, async=0; 
+zoom (${2:resi 31 or resi 70}); 
+preset.technical(selection='all'); 
+bg_color ${3:gray70}; 
+clip slab, 7,(${4:resi 31 or resi 70});
+rock;
+</string>
+    <key>keyEquivalent</key>
+    <string>his31asp70</string>
+    <key>name</key>
+    <string>Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>his31asp70</string>
+    <key>uuid</key>
+    <string>4f64dc15-ae3a-42ec-a59a-43bca59c641d</string>
+</dict>
+</plist>

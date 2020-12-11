@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the codes for color-by-atom (util.cba*) alternates.
+print('util.cbag, green carbons atoms \nutil.cbac, cyan carbon atoms \nutil.cbam, magenta carbon atoms \nutil.cbay, yellow carbons atoms \nutil.cbas, salmon carbons atoms \nutil.cbaw, white carbons atoms \nutil.cbab, slate carbons atoms \nutil.cbao, bright orange carbons atoms \nutil.cbap, purple carbons atoms \nutil.cbap, pink carbons atoms')
+</string>
+    <key>keyEquivalent</key>
+    <string>printColorByAtomCodes</string>
+    <key>name</key>
+    <string>Print the codes for color-by-atom (util.cba*) alternates.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printColorByAtomCodes</string>
+    <key>uuid</key>
+    <string>b4fcc8be-20a1-40ee-870a-0e53cf4fbacb</string>
+</dict>
+</plist>

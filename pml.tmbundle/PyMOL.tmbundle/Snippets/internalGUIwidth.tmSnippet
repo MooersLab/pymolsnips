@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set the width of the internal gui.
+# set to 0 to make the internal gui vanish;
+set internal_gui_width=${1:0};
+</string>
+    <key>keyEquivalent</key>
+    <string>internalGUIwidth</string>
+    <key>name</key>
+    <string>Set the width of the internal gui.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>internalGUIwidth</string>
+    <key>uuid</key>
+    <string>ffcab7c4-fd07-4a24-be32-b7c6837666ab</string>
+</dict>
+</plist>

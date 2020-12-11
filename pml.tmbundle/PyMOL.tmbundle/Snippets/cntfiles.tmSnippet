@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Count number of files in current directory.
+print("Count the files in the directory.")
+print("Usage: cntfiles.")
+# simple version for working with CWD
+print("Number of files in current working directory: ", len([name for name in os.listdir('.') if os.path.isfile(name)]))
+</string>
+    <key>keyEquivalent</key>
+    <string>cntfiles</string>
+    <key>name</key>
+    <string>Count number of files in current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cntfiles</string>
+    <key>uuid</key>
+    <string>8f2e762e-88ef-4f1d-9019-b9e7d5b66d65</string>
+</dict>
+</plist>

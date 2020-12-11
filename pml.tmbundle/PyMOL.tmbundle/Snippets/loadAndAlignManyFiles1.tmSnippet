@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.
+# To load a bunch of related files from inside PyMOL all at once;
+run ${1:~/Scripts/}loadFiles.py;
+loadFiles ${2:refine_*}.pdb;
+</string>
+    <key>keyEquivalent</key>
+    <string>loadAndAlignManyFiles1</string>
+    <key>name</key>
+    <string>These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadAndAlignManyFiles1</string>
+    <key>uuid</key>
+    <string>e17ec382-fda1-4d4e-9253-be4b0a94b6a2</string>
+</dict>
+</plist>

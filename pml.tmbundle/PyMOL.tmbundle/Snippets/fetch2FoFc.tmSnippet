@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Fetch 2FoFc map.
+fetch ${1:3nd4}, type=2fofc, async=0
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>fetch2FoFc</string>
+    <key>name</key>
+    <string>Fetch 2FoFc map.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fetch2FoFc</string>
+    <key>uuid</key>
+    <string>5bf1c1db-eed6-40d0-bfd2-29fe7689e474</string>
+</dict>
+</plist>

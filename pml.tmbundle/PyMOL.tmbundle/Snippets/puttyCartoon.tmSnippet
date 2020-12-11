@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Create a putty cartoon.
+show cartoon;
+cartoon putty;
+set cartoon_smooth_loops, 0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+# unset cartoon_smooth_loops; 
+set cartoon_flat_sheets, 0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+# unset cartoon_smooth_loops; 
+set cartoon_smooth_loops,0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+## unset cartoon_smooth_loops;
+
+</string>
+    <key>keyEquivalent</key>
+    <string>puttyCartoon</string>
+    <key>name</key>
+    <string>Create a putty cartoon.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>puttyCartoon</string>
+    <key>uuid</key>
+    <string>2952b25c-27d0-4e73-b84b-8952da27629c</string>
+</dict>
+</plist>

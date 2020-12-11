@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Settings for nucliec acid cartoon.
+# The dark blue used for electron density maps is called 'density'.;
+set cartoon_ladder_color, ${1:density};
+# The cartoon_ladder_radius should be renamed the cartoon_rung_radius. The dimensions are in Angstroms.;
+set cartoon_ladder_radius, ${2:0.2};
+set cartoon_nucleic_acid_color, ${3:red};
+# The cartoon ring modes range from 0 to 4.;
+set cartoon_ring_mode, ${4:2};
+</string>
+    <key>keyEquivalent</key>
+    <string>nucleicAcidCartoon</string>
+    <key>name</key>
+    <string>Settings for nucliec acid cartoon.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>nucleicAcidCartoon</string>
+    <key>uuid</key>
+    <string>b984f14e-8291-4831-8f38-d9568a9a4bb0</string>
+</dict>
+</plist>

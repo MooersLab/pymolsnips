@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale. 
+cmd.do('AODBW')
+</string>
+    <key>keyEquivalent</key>
+    <string>AODBW</string>
+    <key>name</key>
+    <string>Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>AODBW</string>
+    <key>uuid</key>
+    <string>bd128f7d-86d5-44e9-a808-85517e6feeaa</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133} and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
+</string>
+    <key>keyEquivalent</key>
+    <string>printResiResnNameB4ResiXNoH</string>
+    <key>name</key>
+    <string>Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printResiResnNameB4ResiXNoH</string>
+    <key>uuid</key>
+    <string>cc91463b-042c-4626-a181-3fe9fb4e9ad6</string>
+</dict>
+</plist>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Color ribbon H red, strand yellow, loop green.
+as cartoon;
+color red, ss H;
+color yellow,ss S;
+color green, ss L+;
+</string>
+    <key>keyEquivalent</key>
+    <string>cribbon</string>
+    <key>name</key>
+    <string>Color ribbon H red, strand yellow, loop green.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cribbon</string>
+    <key>uuid</key>
+    <string>be6a18ae-7bd3-4d64-b42a-4029d3330336</string>
+</dict>
+</plist>

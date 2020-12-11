@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Delete all H-bonds in the selection, which is all by default.
+cmd.delete('hbonds')
+</string>
+    <key>keyEquivalent</key>
+    <string>rmhb</string>
+    <key>name</key>
+    <string>Delete all H-bonds in the selection, which is all by default.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>rmhb</string>
+    <key>uuid</key>
+    <string>39923a94-754a-4346-aa19-8a0539ba7c8d</string>
+</dict>
+</plist>

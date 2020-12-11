@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Get coordinates. 
+print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
+</string>
+    <key>keyEquivalent</key>
+    <string>getCoordinates</string>
+    <key>name</key>
+    <string>Get coordinates. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>getCoordinates</string>
+    <key>uuid</key>
+    <string>6ddcc205-7427-47c4-894e-c1fb211504d5</string>
+</dict>
+</plist>

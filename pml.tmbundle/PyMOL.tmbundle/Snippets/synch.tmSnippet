@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns.
+cmd.sync(timeout=${1:1.0},poll=${2:0.05});
+</string>
+    <key>keyEquivalent</key>
+    <string>synch</string>
+    <key>name</key>
+    <string>Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>synch</string>
+    <key>uuid</key>
+    <string>e412dc62-e6e7-4c15-917e-1568fe86741d</string>
+</dict>
+</plist>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Generate the biological unit using the quat.py script.
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/${1:Scripts/PyMOLScripts}/quat.py; quat;
+</string>
+    <key>keyEquivalent</key>
+    <string>bu</string>
+    <key>name</key>
+    <string>Generate the biological unit using the quat.py script.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>bu</string>
+    <key>uuid</key>
+    <string>147f1751-7279-4f58-b5db-1627f10be66f</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select atoms by beta strands.
+select ${1:strands}, ss s; 
+</string>
+    <key>keyEquivalent</key>
+    <string>selectStrands</string>
+    <key>name</key>
+    <string>Select atoms by beta strands.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectStrands</string>
+    <key>uuid</key>
+    <string>25b6f900-f5fa-4396-b5e5-40036991cac7</string>
+</dict>
+</plist>

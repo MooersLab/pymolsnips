@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Write the command reference to html file in the present working directory. 
+cmd.write_html_ref('pymol-command-ref.html');
+</string>
+    <key>keyEquivalent</key>
+    <string>writeCommandReference2HTML</string>
+    <key>name</key>
+    <string>Write the command reference to html file in the present working directory. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>writeCommandReference2HTML</string>
+    <key>uuid</key>
+    <string>0fc7d347-8a1c-4da5-9c03-a292ddfefe95</string>
+</dict>
+</plist>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
+
+# To change stick color and radius for the bond between atom 2 and 3;
+set_bond stick_color, ${1:yellow}, index 2, index 3;
+set_bond stick_radius, ${2:0.2}, index 2, index 3;
+</string>
+    <key>keyEquivalent</key>
+    <string>oneBondThicknessColor</string>
+    <key>name</key>
+    <string>To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
+</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>oneBondThicknessColor</string>
+    <key>uuid</key>
+    <string>77255953-2623-480e-a414-2478ac2bc0ff</string>
+</dict>
+</plist>

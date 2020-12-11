@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Python version of the command to print the sequence from a PDB file in the fasta format.
+# Get the sequences of all molecular objects.;
+print(cmd.get_fastastr('${1:all}'));
+</string>
+    <key>keyEquivalent</key>
+    <string>fastapy</string>
+    <key>name</key>
+    <string>Python version of the command to print the sequence from a PDB file in the fasta format.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fastapy</string>
+    <key>uuid</key>
+    <string>978f7e45-0c92-42d9-9380-11352d6c8604</string>
+</dict>
+</plist>

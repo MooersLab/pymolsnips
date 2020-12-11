@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.
+from pymol import cmd
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+</string>
+    <key>keyEquivalent</key>
+    <string>imports4PyMOLjupyter</string>
+    <key>name</key>
+    <string>Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>imports4PyMOLjupyter</string>
+    <key>uuid</key>
+    <string>3792fede-9a0c-41a9-b168-3025b1e5bad7</string>
+</dict>
+</plist>

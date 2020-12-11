@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print B factors of part B of a residue.
+iterate resi ${1:38} and altloc ${2:B}, print resi, name, alt, b;
+</string>
+    <key>keyEquivalent</key>
+    <string>printBspartB</string>
+    <key>name</key>
+    <string>Print B factors of part B of a residue.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printBspartB</string>
+    <key>uuid</key>
+    <string>2464f713-8391-4b64-aefd-63f72d65c0b0</string>
+</dict>
+</plist>

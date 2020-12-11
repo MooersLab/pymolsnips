@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. 
+cmd.do('colorh1')
+</string>
+    <key>keyEquivalent</key>
+    <string>colorh1</string>
+    <key>name</key>
+    <string>Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>colorh1</string>
+    <key>uuid</key>
+    <string>dfcfa7b3-a88d-4c6d-929f-36e7645ab13b</string>
+</dict>
+</plist>

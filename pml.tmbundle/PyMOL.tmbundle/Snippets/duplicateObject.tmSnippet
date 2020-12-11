@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Duplicate object.
+# Create an object with the first argument using the selection which is the second argument.;
+create ${1:t4l}, ${2:1lw9};
+</string>
+    <key>keyEquivalent</key>
+    <string>duplicateObject</string>
+    <key>name</key>
+    <string>Duplicate object.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>duplicateObject</string>
+    <key>uuid</key>
+    <string>143f40de-8a24-4e63-b195-3c13c2a953ff</string>
+</dict>
+</plist>

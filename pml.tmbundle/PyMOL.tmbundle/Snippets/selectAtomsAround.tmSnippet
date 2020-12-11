@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select atoms within a radius around a ligand.
+select ${1:nearby}, resn ${2:drug} around ${3:5};
+</string>
+    <key>keyEquivalent</key>
+    <string>selectAtomsAround</string>
+    <key>name</key>
+    <string>Select atoms within a radius around a ligand.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectAtomsAround</string>
+    <key>uuid</key>
+    <string>886541cf-333d-4427-8f7b-0f9e5728ee52</string>
+</dict>
+</plist>

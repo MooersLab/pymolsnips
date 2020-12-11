@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Stereo draw.
+stereo walleye; 
+set ray_shadow, off; 
+#draw 3200,2000;
+draw ${1:1600,1000}; 
+png ${2:aaa}.png;
+</string>
+    <key>keyEquivalent</key>
+    <string>stereoDraw</string>
+    <key>name</key>
+    <string>Stereo draw.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>stereoDraw</string>
+    <key>uuid</key>
+    <string>942913ed-b215-4c19-a93a-d01719cb6952</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Add or substract a residue number offset.
+alter ${1:3fa0}, resi=str(int(resi)+${2:100});sort;
+</string>
+    <key>keyEquivalent</key>
+    <string>renumResi</string>
+    <key>name</key>
+    <string>Add or substract a residue number offset.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>renumResi</string>
+    <key>uuid</key>
+    <string>0829dd92-c986-411b-b555-5c6bea03ff87</string>
+</dict>
+</plist>

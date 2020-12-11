@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select residues by name.
+select aromatic, resn phe+tyr+trp;
+</string>
+    <key>keyEquivalent</key>
+    <string>selectResidues</string>
+    <key>name</key>
+    <string>Select residues by name.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectResidues</string>
+    <key>uuid</key>
+    <string>d41c212e-a86d-4c76-95cd-9e3b20f07834</string>
+</dict>
+</plist>

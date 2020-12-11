@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label waters with W and their reisude number.
+label resn HOH ,"W%s" % (resi);
+</string>
+    <key>keyEquivalent</key>
+    <string>labelWatersW</string>
+    <key>name</key>
+    <string>Label waters with W and their reisude number.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelWatersW</string>
+    <key>uuid</key>
+    <string>3f2061c5-b4d1-4dd6-b8c8-da1293373d16</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print in the command history window the docstrings of all of the functions in the cmd module.
+[help(i) for i in dir(cmd)];
+</string>
+    <key>keyEquivalent</key>
+    <string>cmddocs</string>
+    <key>name</key>
+    <string>Print in the command history window the docstrings of all of the functions in the cmd module.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cmddocs</string>
+    <key>uuid</key>
+    <string>f6c80259-add6-47a6-b97a-5e016148f894</string>
+</dict>
+</plist>

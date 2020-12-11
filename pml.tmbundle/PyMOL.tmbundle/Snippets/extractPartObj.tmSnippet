@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Create a new object from part of an existing object.
+extract new_obj, chain A;
+</string>
+    <key>keyEquivalent</key>
+    <string>extractPartObj</string>
+    <key>name</key>
+    <string>Create a new object from part of an existing object.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>extractPartObj</string>
+    <key>uuid</key>
+    <string>2ff037e1-150e-4c08-a6b7-94a07db4e48e</string>
+</dict>
+</plist>

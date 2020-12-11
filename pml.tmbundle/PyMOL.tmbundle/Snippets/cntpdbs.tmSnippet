@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Count number of *.pdb files in current directory.
+print("Count the number of pdb files in the current directory.")
+print("Usage: cntpdb")
+myPath = os.getcwd()
+pdbCounter = len(glob.glob1(myPath,"*.pdb"))
+print("Number of pdb files in the current directory: ", pdbCounter)
+</string>
+    <key>keyEquivalent</key>
+    <string>cntpdbs</string>
+    <key>name</key>
+    <string>Count number of *.pdb files in current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cntpdbs</string>
+    <key>uuid</key>
+    <string>2f6cf346-a1a7-403f-8382-2e3ea3362c96</string>
+</dict>
+</plist>

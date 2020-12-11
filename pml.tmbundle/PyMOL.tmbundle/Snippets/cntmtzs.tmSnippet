@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Count number of *.mtz files in current directory.
+print("Count the number of mtz structure factor files in current directory.");
+print("Usage: cntmtzs");
+myPath = os.getcwd();
+mtzCounter = len(glob.glob1(myPath,"*.mtz"));
+print("Number of number of mtz structure factor  files in the current directory: ", mtzCounter);
+</string>
+    <key>keyEquivalent</key>
+    <string>cntmtzs</string>
+    <key>name</key>
+    <string>Count number of *.mtz files in current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>cntmtzs</string>
+    <key>uuid</key>
+    <string>239196bf-3d88-4848-aec5-fe0dfd6c4837</string>
+</dict>
+</plist>

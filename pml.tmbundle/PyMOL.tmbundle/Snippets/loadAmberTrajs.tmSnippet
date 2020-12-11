@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% The amber trajectories have to be loaded into the same object.
+load ${1:file}.top, ${2:protein};
+load ${1:file}.rst, ${2:protein};
+</string>
+    <key>keyEquivalent</key>
+    <string>loadAmberTrajs</string>
+    <key>name</key>
+    <string>The amber trajectories have to be loaded into the same object.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadAmberTrajs</string>
+    <key>uuid</key>
+    <string>59db2258-3346-403f-9ee8-0e36970feba4</string>
+</dict>
+</plist>

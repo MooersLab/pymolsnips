@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Save electron density map flle with timestamp
+python;
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".ccp4"); 
+python end;
+</string>
+    <key>keyEquivalent</key>
+    <string>sccp4</string>
+    <key>name</key>
+    <string>Save electron density map flle with timestamp</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sccp4</string>
+    <key>uuid</key>
+    <string>ae78108f-db17-4718-87c2-52e1fd8859d6</string>
+</dict>
+</plist>

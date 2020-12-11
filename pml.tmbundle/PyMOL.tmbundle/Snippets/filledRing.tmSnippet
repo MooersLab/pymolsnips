@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Filled rings in nucleic acids. 
+show sticks;set cartoon_ring_mode, 3;
+set cartoon_ring_finder, 1;
+set cartoon_ladder_mode, 1;
+set cartoon_nucleic_acid_mode, 4;
+set cartoon_ring_transparency, 0.5;
+as cartoon;
+</string>
+    <key>keyEquivalent</key>
+    <string>filledRing</string>
+    <key>name</key>
+    <string>Filled rings in nucleic acids. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>filledRing</string>
+    <key>uuid</key>
+    <string>ae8a14fe-3a7a-4dcf-92c6-cbab7c936a4e</string>
+</dict>
+</plist>

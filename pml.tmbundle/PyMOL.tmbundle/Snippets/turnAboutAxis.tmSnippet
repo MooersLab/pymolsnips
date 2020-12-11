@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Turn about axis. 
+turn ${1:x},${2:90};
+</string>
+    <key>keyEquivalent</key>
+    <string>turnAboutAxis</string>
+    <key>name</key>
+    <string>Turn about axis. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>turnAboutAxis</string>
+    <key>uuid</key>
+    <string>30ad7ac8-4741-484e-bb2a-1a8fd232f696</string>
+</dict>
+</plist>

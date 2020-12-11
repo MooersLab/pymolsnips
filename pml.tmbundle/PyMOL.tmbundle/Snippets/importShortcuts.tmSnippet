@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv')..
+cmd.do('run /Users/blaine/Scripts/PyMOLScripts/pymolshortcuts.py')
+</string>
+    <key>keyEquivalent</key>
+    <string>importShortcuts</string>
+    <key>name</key>
+    <string>Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv')..</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>importShortcuts</string>
+    <key>uuid</key>
+    <string>36f918c5-fceb-4ffd-9699-5807c57e5e00</string>
+</dict>
+</plist>

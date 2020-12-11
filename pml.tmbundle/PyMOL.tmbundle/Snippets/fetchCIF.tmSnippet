@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Fetch cif file.
+# Fetch the atomic coordinates as a cif file. Requires internet connection.
+fetch ${1:3nd4}, type=cif, async=0;
+</string>
+    <key>keyEquivalent</key>
+    <string>fetchCIF</string>
+    <key>name</key>
+    <string>Fetch cif file.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fetchCIF</string>
+    <key>uuid</key>
+    <string>762c7529-5b16-4d83-ba3d-fb597f9c9489</string>
+</dict>
+</plist>

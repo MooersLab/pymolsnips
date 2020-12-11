@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Display SAXS envelope
+# 1: enter the name of the bead model object;
+alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0;
+set solvent_radius = 3.0;
+</string>
+    <key>keyEquivalent</key>
+    <string>saxsEnvelope</string>
+    <key>name</key>
+    <string>Display SAXS envelope</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>saxsEnvelope</string>
+    <key>uuid</key>
+    <string>4e7d2b8c-ddaa-44c3-8e5e-3a8da8e390e4</string>
+</dict>
+</plist>

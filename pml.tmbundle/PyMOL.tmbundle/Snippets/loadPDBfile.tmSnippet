@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Load a pdb file in the current directory.
+# Load into pymol a pdb file in the current directory.
+load ${1:my}.pdb;
+</string>
+    <key>keyEquivalent</key>
+    <string>loadPDBfile</string>
+    <key>name</key>
+    <string>Load a pdb file in the current directory.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadPDBfile</string>
+    <key>uuid</key>
+    <string>54c77421-3a45-4b5f-b25c-15e2a97be7de</string>
+</dict>
+</plist>

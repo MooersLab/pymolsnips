@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms.
+# To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms;
+#  Yes, this construct is a list comprehension inside a list comprehension!;
+run ${1:~/Scripts/}optAlignRNA.py;
+[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()];
+</string>
+    <key>keyEquivalent</key>
+    <string>loadAndAlignManyFiles2</string>
+    <key>name</key>
+    <string>To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>loadAndAlignManyFiles2</string>
+    <key>uuid</key>
+    <string>d1c1e74d-24b5-4651-ae32-55dfdc45a847</string>
+</dict>
+</plist>

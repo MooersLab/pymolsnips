@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the atom names of a residue.
+iterate (resi ${1:101}), print(name);
+</string>
+    <key>keyEquivalent</key>
+    <string>printAtomNames</string>
+    <key>name</key>
+    <string>Print the atom names of a residue.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printAtomNames</string>
+    <key>uuid</key>
+    <string>8ac3216f-8b6e-48e7-a3f2-470a7c37d9be</string>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label SS. 
+alter ${1:chain A}, ss='${2:helix}';
+label (%2),'%3';
+</string>
+    <key>keyEquivalent</key>
+    <string>labelSS</string>
+    <key>name</key>
+    <string>Label SS. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelSS</string>
+    <key>uuid</key>
+    <string>ad2e3fff-b527-41b8-ae14-c8aa92945a1e</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set path for location to save fetched pdb files. 
+set fetch_path, ${1:/Users/blaine/pdbFiles};
+</string>
+    <key>keyEquivalent</key>
+    <string>fetchPath</string>
+    <key>name</key>
+    <string>Set path for location to save fetched pdb files. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>fetchPath</string>
+    <key>uuid</key>
+    <string>e045b27e-6352-4184-9e23-8253640821a7</string>
+</dict>
+</plist>

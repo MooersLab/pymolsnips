@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% set distance labels to display 2 decimals
+set label_distance_digits, ${1:2};
+</string>
+    <key>keyEquivalent</key>
+    <string>sigdist</string>
+    <key>name</key>
+    <string>set distance labels to display 2 decimals</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sigdist</string>
+    <key>uuid</key>
+    <string>f800c8f2-000d-4b10-b84c-a0b3ad226d36</string>
+</dict>
+</plist>

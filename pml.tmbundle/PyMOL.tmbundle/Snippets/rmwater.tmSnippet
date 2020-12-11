@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Remove waters from molecular object.
+remove resn HOH;
+</string>
+    <key>keyEquivalent</key>
+    <string>rmwater</string>
+    <key>name</key>
+    <string>Remove waters from molecular object.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>rmwater</string>
+    <key>uuid</key>
+    <string>99f6e758-8161-4fc4-9a31-0c3d04a8f10c</string>
+</dict>
+</plist>

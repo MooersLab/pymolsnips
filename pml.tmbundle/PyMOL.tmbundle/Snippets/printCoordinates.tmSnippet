@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Print the coordinates of the atoms in a residue.
+stored.coords = []; 
+iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); 
+[print(i) for i in stored.coords];
+</string>
+    <key>keyEquivalent</key>
+    <string>printCoordinates</string>
+    <key>name</key>
+    <string>Print the coordinates of the atoms in a residue.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>printCoordinates</string>
+    <key>uuid</key>
+    <string>b5ce7a31-9d37-4703-a97b-b73e64bc2dae</string>
+</dict>
+</plist>

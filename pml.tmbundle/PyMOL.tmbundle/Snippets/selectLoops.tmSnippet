@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select atoms by beta loops.
+select ${1:loops}, ss l;
+</string>
+    <key>keyEquivalent</key>
+    <string>selectLoops</string>
+    <key>name</key>
+    <string>Select atoms by beta loops.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectLoops</string>
+    <key>uuid</key>
+    <string>a4d48e19-61b2-42a0-a0d3-bc951f5463f3</string>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Valence bond. 
+set valence, 1; 
+set valence_mode, 1;
+</string>
+    <key>keyEquivalent</key>
+    <string>doubleBond</string>
+    <key>name</key>
+    <string>Valence bond. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>doubleBond</string>
+    <key>uuid</key>
+    <string>900fef20-003e-4527-a15c-aeff212f8e78</string>
+</dict>
+</plist>

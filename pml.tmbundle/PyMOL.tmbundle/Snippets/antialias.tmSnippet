@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set antialias to on to get smoother edges.
+set antialias, 1;
+</string>
+    <key>keyEquivalent</key>
+    <string>antialias</string>
+    <key>name</key>
+    <string>Set antialias to on to get smoother edges.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>antialias</string>
+    <key>uuid</key>
+    <string>06639610-8405-4aa8-8151-013399179e44</string>
+</dict>
+</plist>

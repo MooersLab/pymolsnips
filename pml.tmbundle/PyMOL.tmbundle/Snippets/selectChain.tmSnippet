@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Select a chain. 
+select ${1:rna}, ${2:chain B};
+</string>
+    <key>keyEquivalent</key>
+    <string>selectChain</string>
+    <key>name</key>
+    <string>Select a chain. </string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>selectChain</string>
+    <key>uuid</key>
+    <string>babd89a9-162f-4f6e-8a3b-0fab5c0b5a1e</string>
+</dict>
+</plist>

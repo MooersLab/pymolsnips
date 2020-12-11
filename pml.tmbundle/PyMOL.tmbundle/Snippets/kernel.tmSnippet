@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels.
+framerule=2pt,
+framesep=2mm,
+framesep=2mm,
+breaklines=True,
+baselinestretch=1.2
+]{bash}
+{
+ "argv": [
+  "/Applications/PyMOL.app/Contents/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "pymol.python",
+ "language": "python"
+}
+</string>
+    <key>keyEquivalent</key>
+    <string>kernel</string>
+    <key>name</key>
+    <string>A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>kernel</string>
+    <key>uuid</key>
+    <string>cf1acce2-4bd2-4965-94d6-fdb164d5fe7d</string>
+</dict>
+</plist>

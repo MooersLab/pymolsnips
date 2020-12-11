@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Set ellipsoid color.
+# set the colore of the thermal ellipsoids;
+# PyMOL colors: https://pymolwiki.org/index.php/Color_Values;
+set ellipsoid_color, ${1:red};
+</string>
+    <key>keyEquivalent</key>
+    <string>ellipcol</string>
+    <key>name</key>
+    <string>Set ellipsoid color.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>ellipcol</string>
+    <key>uuid</key>
+    <string>98c73c83-c01c-42e3-b584-1fce6d58f3c5</string>
+</dict>
+</plist>

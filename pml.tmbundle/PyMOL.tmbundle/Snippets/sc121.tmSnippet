@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 2, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+</string>
+    <key>keyEquivalent</key>
+    <string>sc121</string>
+    <key>name</key>
+    <string>Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>sc121</string>
+    <key>uuid</key>
+    <string>b3b828e3-5dcc-47c9-85a7-535802e1b7a3</string>
+</dict>
+</plist>

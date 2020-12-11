@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Label waters with HOH and their residue number.
+label resn HOH ,"%s%s" % (resn,resi);
+</string>
+    <key>keyEquivalent</key>
+    <string>labelWatersHOH</string>
+    <key>name</key>
+    <string>Label waters with HOH and their residue number.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>labelWatersHOH</string>
+    <key>uuid</key>
+    <string>367c7195-be9f-4e34-9416-74cdd138c210</string>
+</dict>
+</plist>

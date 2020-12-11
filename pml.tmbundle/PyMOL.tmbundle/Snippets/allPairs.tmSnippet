@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures.
+[[${1:optAlignRNA}(x, y) for x in cmd.get_names()] for y in cmd.get_names()];
+</string>
+    <key>keyEquivalent</key>
+    <string>allPairs</string>
+    <key>name</key>
+    <string>This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>allPairs</string>
+    <key>uuid</key>
+    <string>d59113dd-4cb5-40b8-9c89-60dc9733d5da</string>
+</dict>
+</plist>

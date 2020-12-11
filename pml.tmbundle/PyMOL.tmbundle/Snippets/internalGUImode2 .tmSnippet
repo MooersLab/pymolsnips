@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>content</key>
+    <string>
+% Make the background of the internal gui transparent to expand viewport.
+internal_gui_mode=2;
+$0
+</string>
+    <key>keyEquivalent</key>
+    <string>internalGUImode2 </string>
+    <key>name</key>
+    <string>Make the background of the internal gui transparent to expand viewport.</string>
+    <key>scope</key>
+    <string>text.pml</string>
+    <key>tabTrigger</key>
+    <string>internalGUImode2 </string>
+    <key>uuid</key>
+    <string>a0f7ea1a-33f1-40f9-96dc-5da93509c3fb</string>
+</dict>
+</plist>
