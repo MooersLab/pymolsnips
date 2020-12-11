@@ -1120,7 +1120,7 @@ ${0}],
 "allPairs": {
     "prefix": "allPairs",
     "body": placeHolder,
-    "caption": "This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with any other function that operations on a pair of structrures.",
+    "caption": "This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures.",
     "scope": "text.pml"
 },
 "dssrBlock1": {
@@ -1349,7 +1349,7 @@ ${0}],
 "getCoordinatespy": {
     "prefix": "getCoordinatespy",
     "body": placeHolder,
-    "caption": "Python version of getCoordinates snippets. Note that the python2 print statement stills works at the PyMOL prompt in pml scripts. ",
+    "caption": "Python version of getCoordinates snippets. Note that the python2 print statement stills works  in pml scripts. ",
     "scope": "text.pml"
 },
 "fastapy": {
@@ -1361,7 +1361,7 @@ ${0}],
 "fetchThreeMaps": {
     "prefix": "fetchThreeMaps",
     "body": placeHolder,
-    "caption": "Display three electron density maos as isomesh. ",
+    "caption": "Display three electron density maps as isomesh. ",
     "scope": "text.pml"
 },
 "scaleRadiusColorpy": {
@@ -1832,5 +1832,35 @@ ${0}],
     "prefix": "optAlignRNA",
     "body": placeHolder,
     "caption": "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures.",
+    "scope": "text.pml"
+},
+"ao": {
+    "prefix": "ao",
+    "body": placeHolder,
+    "caption": "Apply the ambient occlussion effect to get the photorealistic effect.",
+    "scope": "text.pml"
+},
+"bsfr": {
+    "prefix": "bsfr",
+    "body": placeHolder,
+    "caption": "Ball-and-stick plus filled rings. ",
+    "scope": "text.pml"
+},
+"wallart": {
+    "prefix": "wallart",
+    "body": placeHolder,
+    "caption": "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"",
+    "scope": "text.pml"
+},
+"wallartpy": {
+    "prefix": "wallartpy",
+    "body": placeHolder,
+    "caption": "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"",
+    "scope": "text.pml"
+},
+"cblindCartoon": {
+    "prefix": "cblindCartoon",
+    "body": placeHolder,
+    "caption": "Color cartoon with colorblind friendly colors. Requires that the pymolshortcuts.py file is loaded. This has been applied to PDB-ID 7JU6. The protein is human RET kinase, and the drug is selpercatinib, a FDA approved drug for treating several cancers.",
     "scope": "text.pml"
 },
