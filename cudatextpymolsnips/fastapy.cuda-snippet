@@ -1,0 +1,6 @@
+name=Python version of the command to print the sequence from a PDB file in the fasta format.
+id=fastapy
+lex=PML_
+text=
+# Get the sequences of all molecular objects.;
+print(cmd.get_fastastr('${1:all}'));

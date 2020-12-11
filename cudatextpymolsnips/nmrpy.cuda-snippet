@@ -1,0 +1,5 @@
+name=Show all models in a nmr structure.
+id=nmrpy
+lex=PML_
+text=
+cmd.do('set all_states, on')

@@ -3,4 +3,3 @@ id=lspymolrc
 lex=PML_
 text=
 print invocation.options.deferred;
-$0

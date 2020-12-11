@@ -2,5 +2,4 @@ name=Remove waters from molecular object.
 id=rmwater
 lex=PML_
 text=
-remove resn HOH
-$0
+remove resn HOH;

@@ -1,11 +1,10 @@
-name=Asp70-His31 salt-bridge from T4 lysozyme. 
+name=Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. 
 id=his31asp70
 lex=PML_
 text=
-fetch 1lw9, async=0; 
-zoom (resi 31 or resi 70); 
+fetch ${1:1lw9}, async=0; 
+zoom (${2:resi 31 or resi 70}); 
 preset.technical(selection='all'); 
-bg_color gray70; 
-clip slab, 7,(resi 31 or resi 70);
+bg_color ${3:gray70}; 
+clip slab, 7,(${4:resi 31 or resi 70});
 rock;
-$0

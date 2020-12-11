@@ -1,0 +1,5 @@
+name=Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces.
+id=cav
+lex=PML_
+text=
+cmd.do('cav')

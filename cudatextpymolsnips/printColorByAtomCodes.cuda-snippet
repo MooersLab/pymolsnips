@@ -1,0 +1,5 @@
+name=Print the codes for color-by-atom (util.cba*) alternates.
+id=printColorByAtomCodes
+lex=PML_
+text=
+print('util.cbag, green carbons atoms \nutil.cbac, cyan carbon atoms \nutil.cbam, magenta carbon atoms \nutil.cbay, yellow carbons atoms \nutil.cbas, salmon carbons atoms \nutil.cbaw, white carbons atoms \nutil.cbab, slate carbons atoms \nutil.cbao, bright orange carbons atoms \nutil.cbap, purple carbons atoms \nutil.cbap, pink carbons atoms')

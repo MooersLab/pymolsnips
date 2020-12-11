@@ -2,5 +2,5 @@ name=Fetch fofc map.
 id=fetchFoFc
 lex=PML_
 text=
-fetch ${1:3nd4}, type=fofc, async=0;
-$0
+# fetch 2fofc map. The argument is its object name.;
+fetch ${1:3nd4},  ${1:3nd4}_2fofc, type=fofc, async=0;

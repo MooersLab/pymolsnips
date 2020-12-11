@@ -1,6 +1,5 @@
-name=Label waters HOH.
+name=Label waters with HOH and their residue number.
 id=labelWatersHOH
 lex=PML_
 text=
 label resn HOH ,"%s%s" % (resn,resi);
-$0

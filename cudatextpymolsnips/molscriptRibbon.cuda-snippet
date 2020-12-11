@@ -1,4 +1,4 @@
-name=Molscript ribbons.
+name=Show cartoon in the style of Molscript ribbons.
 id=molscriptRibbon
 lex=PML_
 text=
@@ -7,4 +7,3 @@ show cartoon;
 set cartoon_flat_sheets, 0;
 set cartoon_smooth_loops, 0;
 set cartoon_fancy_helices, 1;
-$0

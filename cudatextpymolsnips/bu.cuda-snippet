@@ -1,6 +1,7 @@
-name=Biological unit.
+name=Generate the biological unit using the quat.py script.
 id=bu
 lex=PML_
 text=
-run ~/Scripts/PyMOLScripts/quat.py; quat
-$0
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/${1:Scripts/PyMOLScripts}/quat.py; quat;

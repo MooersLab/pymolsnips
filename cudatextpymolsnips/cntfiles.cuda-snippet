@@ -1,0 +1,8 @@
+name=Count number of files in current directory.
+id=cntfiles
+lex=PML_
+text=
+print("Count the files in the directory.")
+print("Usage: cntfiles.")
+# simple version for working with CWD
+print("Number of files in current working directory: ", len([name for name in os.listdir('.') if os.path.isfile(name)]))

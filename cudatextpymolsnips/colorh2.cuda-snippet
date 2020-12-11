@@ -1,0 +1,5 @@
+name=Run the colorh2 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 2. 
+id=colorh2
+lex=PML_
+text=
+cmd.do('colorh2')

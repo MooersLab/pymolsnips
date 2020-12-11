@@ -2,5 +2,4 @@ name=Label CA atom with single-letter residue name and residue number.
 id=labelResnResi
 lex=PML_
 text=
-label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
-$0
+label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi});

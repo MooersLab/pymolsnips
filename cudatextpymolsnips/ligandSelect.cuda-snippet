@@ -2,5 +2,4 @@ name=Make selection of ligand atoms.
 id=ligandSelect
 lex=PML_
 text=
-select substrates, organic;
-$0
+select ${1:ligand}, organic;

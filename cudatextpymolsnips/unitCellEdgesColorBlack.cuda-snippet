@@ -1,0 +1,11 @@
+name=Color unit cell edges black. The settings for controlling the unit cell color are hard to find.
+id=unitCellEdgesColorBlack
+lex=PML_
+text=
+# show the unit cell;
+show cell;
+color black, ${1:1lw9};
+# color by atom with carbons colored green,
+util.${2:cbag};
+set cgo_line_width, 2.5;
+png  ${3:testCell3}.png, ${4:1600},${5:1600};${6:600};${7:0}

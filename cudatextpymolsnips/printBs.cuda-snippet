@@ -2,5 +2,4 @@ name=Print the B-factors of a residue.
 id=printBs
 lex=PML_
 text=
-remove element h; iterate resi %{1:133}, print resi, name,b;
-$0
+remove element h; iterate resi ${1: 1:13}, print(resi, name,b);

@@ -1,0 +1,9 @@
+name=Save dae flle with timestamp
+id=sdaepy
+lex=PML_
+text=
+import datetime;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".dae"); 
+

@@ -1,0 +1,5 @@
+name=Add or substract a residue number offset.
+id=renumResi
+lex=PML_
+text=
+alter ${1:3fa0}, resi=str(int(resi)+${2:100});sort;

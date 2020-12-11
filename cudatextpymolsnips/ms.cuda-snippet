@@ -1,9 +1,8 @@
-name=Measure surface area. 
+name=Measure surface area of the selection with the msms_pymol.py script. 
 id=ms
 lex=PML_
 text=
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
-select ${2:temp}, ${3:3nd3} and chain A;
-run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
+fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;
+select ${2:temp}, ${1:3nd3} and chain ${4:A};
+run ${5:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
 calc_msms_area ${2:temp};
-$0

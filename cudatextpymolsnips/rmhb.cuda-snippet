@@ -1,0 +1,5 @@
+name=Delete all H-bonds in the selection, which is all by default.
+id=rmhb
+lex=PML_
+text=
+cmd.delete('hbonds')

@@ -1,0 +1,5 @@
+name=Print the bfactors of a residue.
+id=printBfactors
+lex=PML_
+text=
+iterate (resi ${1:101}), print(name + " %.2f" % b);

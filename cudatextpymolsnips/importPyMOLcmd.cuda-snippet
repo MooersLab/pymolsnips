@@ -1,0 +1,5 @@
+name=Import the cmd class from the pymol api.
+id=importPyMOLcmd
+lex=PML_
+text=
+from pymol import cmd

@@ -1,0 +1,5 @@
+name=Print the van der Waals radii of the atoms in of a residue.
+id=printVDWradii
+lex=PML_
+text=
+iterate (resi ${1:101}), print(name + " %.2f" % vdw);

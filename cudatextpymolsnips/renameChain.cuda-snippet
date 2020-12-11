@@ -1,0 +1,6 @@
+name=Rename a chain. 
+id=renameChain
+lex=PML_
+text=
+alter ${1:3fa0} and chain ${2:A}, chain=${3:"C"};
+sort;

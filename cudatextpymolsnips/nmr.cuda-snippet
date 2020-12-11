@@ -1,0 +1,5 @@
+name=Show all models in a nmr structure.
+id=nmr
+lex=PML_
+text=
+set all_states, on

@@ -1,0 +1,5 @@
+name=Print in the command history window the docstrings of all of the functions in the cmd module.
+id=cmddocs
+lex=PML_
+text=
+[help(i) for i in dir(cmd)];

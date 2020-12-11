@@ -1,0 +1,6 @@
+name=The amber trajectories have to be loaded into the same object.
+id=loadAmberTrajs
+lex=PML_
+text=
+load ${1:file}.top, ${2:protein};
+load ${1:file}.rst, ${2:protein};

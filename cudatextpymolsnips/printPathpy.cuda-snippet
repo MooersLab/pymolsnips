@@ -1,0 +1,6 @@
+name=Print the path to the currently used PyMOL binary.
+id=printPathpy
+lex=PML_
+text=
+# Print the path to the current used PyMOL binary.
+print(pymol.__path__)

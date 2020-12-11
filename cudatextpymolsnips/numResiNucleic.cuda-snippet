@@ -1,0 +1,5 @@
+name=Print the number of residues in a nulceic acid (all chains).
+id=numResiNucleic
+lex=PML_
+text=
+sel = 'polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));

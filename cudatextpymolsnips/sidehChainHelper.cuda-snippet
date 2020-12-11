@@ -3,4 +3,3 @@ id=sidehChainHelper
 lex=PML_
 text=
 set cartoon_side_chain_helper, on;
-$0

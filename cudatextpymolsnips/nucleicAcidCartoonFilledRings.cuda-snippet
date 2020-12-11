@@ -1,0 +1,12 @@
+name=The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py.
+id=nucleicAcidCartoonFilledRings
+lex=PML_
+text=
+bg_color white;
+show sticks;
+set cartoon_ring_mode, 3;
+set cartoon_ring_finder, 1;
+set cartoon_ladder_mode, 1;
+set cartoon_nucleic_acid_mode, 4;
+set cartoon_ring_transparency, 0.5;
+as cartoon;

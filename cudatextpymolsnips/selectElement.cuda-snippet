@@ -1,6 +1,5 @@
-name=Select atoms by elemnt.
+name=Select atoms by element.
 id=selectElement
 lex=PML_
 text=
-select ${1:oxygen}, elem ${2:O}
-$0
+select ${1:oxygen}, elem ${2:O};

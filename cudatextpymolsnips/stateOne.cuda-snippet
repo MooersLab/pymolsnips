@@ -1,0 +1,5 @@
+name=Select state 1 from a model with multiple states.
+id=stateOne
+lex=PML_
+text=
+cmd.create('newobject', 'oldobject', '1', '1');

@@ -3,4 +3,3 @@ id=sigang
 lex=PML_
 text=
 set label_angle_digits, ${1:2};
-$0

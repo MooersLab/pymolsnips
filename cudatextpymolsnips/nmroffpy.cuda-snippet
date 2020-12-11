@@ -1,0 +1,5 @@
+name=Hide all but the first model in a nmr structure.
+id=nmroffpy
+lex=PML_
+text=
+cmd.do('set all_states, off')

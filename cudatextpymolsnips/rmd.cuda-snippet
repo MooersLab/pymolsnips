@@ -1,0 +1,7 @@
+name=Remove all measurement objects in the interal GUI.
+id=rmd
+lex=PML_
+text=
+cmd.do('delete measure*')
+cmd.do('delete m*_*')
+cmd.do('delete dist*')

@@ -1,4 +1,4 @@
-name=H-bond dashes.
+name=Set up H-bond dashes.
 id=hbonddash
 lex=PML_
 text=
@@ -7,4 +7,3 @@ hide labels;
 set dash_color, black; 
 set dash_gap, 0.4;
 set dash_radius, 0.08;
-$0

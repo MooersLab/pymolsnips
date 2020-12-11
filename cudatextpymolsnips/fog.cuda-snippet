@@ -2,5 +2,4 @@ name=Blur the background atoms.
 id=fog
 lex=PML_
 text=
-set fog, 0
-$0
+set fog, 0;

@@ -1,7 +1,6 @@
-name=Hide alt loc.
+name=Hide the b alternate locator.
 id=hidealtloc
 lex=PML_
 text=
 select altconf, alt ${1:b}  # select B alternative locators;
 hide everything, altconf  # hide alt B locators;
-$0

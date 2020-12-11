@@ -1,0 +1,5 @@
+name=Run the timcolor function from the pymolshortcuts.py file to color atoms accordings to Tim Mather's biophysical coloring scheme for proteins.. 
+id=timcolor
+lex=PML_
+text=
+cmd.do('timcolor')

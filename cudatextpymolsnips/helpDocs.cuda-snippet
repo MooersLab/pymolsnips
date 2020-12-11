@@ -1,0 +1,5 @@
+name=Return the docustring for the help submodule. This command is more concise:  help help.
+id=helpDocs
+lex=PML_
+text=
+help(help)

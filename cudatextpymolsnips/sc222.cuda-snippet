@@ -1,7 +1,6 @@
-name=Run Tom Holder's supercell script to generate three cells in all directions.
+name=Run supercell script to generate three cells in all directions. This script was written by Thomas Holder.
 id=sc222
 lex=PML_
 text=
-run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 2, 2, 2, , orange, supercell2, 1
-$0
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 2, 2, , ${2:orange},  ${3:supercell1}, 1;

@@ -1,0 +1,6 @@
+name=Display all symmetry mates in two unit cells along the c axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+id=sc112
+lex=PML_
+text=
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 2, ,  ${2:orange},  ${3:supercell1}, 1;

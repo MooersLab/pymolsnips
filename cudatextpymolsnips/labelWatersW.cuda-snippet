@@ -1,6 +1,5 @@
-name=Label waters W.
+name=Label waters with W and their reisude number.
 id=labelWatersW
 lex=PML_
 text=
 label resn HOH ,"W%s" % (resi);
-$0

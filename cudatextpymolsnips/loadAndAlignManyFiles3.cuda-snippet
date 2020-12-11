@@ -1,0 +1,7 @@
+name=These are the instructions for loading and aligning multiple files.
+id=loadAndAlignManyFiles3
+lex=PML_
+text=
+# To save a multiple models in a file to separate pdb files.
+run {1:~/Scripts/}saveSep.py
+saveSep 

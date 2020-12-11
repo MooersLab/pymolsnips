@@ -1,0 +1,6 @@
+name=Add or substract a atom number offset.
+id=renumAtoms
+lex=PML_
+text=
+alter {$1:3fa0}, ID=ID+${2:100};
+sort;

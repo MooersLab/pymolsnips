@@ -1,6 +1,5 @@
-name=Return settings in rounded format.
+name=Run the rv function from the pymolshortcuts.py file. 
 id=rv
 lex=PML_
 text=
-run roundview.py;
-$0
+cmd.do('rv')

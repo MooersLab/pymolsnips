@@ -2,5 +2,4 @@ name=Select a chain.
 id=selectChain
 lex=PML_
 text=
-select rna, chain B
-$0
+select ${1:rna}, ${2:chain B};

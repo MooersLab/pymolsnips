@@ -1,0 +1,5 @@
+name=Return to the command history window the docstrings for all of the functions in a module.
+id=pymoldocspy
+lex=PML_
+text=
+[help(i) for i in dir(pymol)];

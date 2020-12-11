@@ -1,0 +1,7 @@
+name=These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.
+id=loadAndAlignManyFiles1
+lex=PML_
+text=
+# To load a bunch of related files from inside PyMOL all at once;
+run ${1:~/Scripts/}loadFiles.py;
+loadFiles ${2:refine_*}.pdb;

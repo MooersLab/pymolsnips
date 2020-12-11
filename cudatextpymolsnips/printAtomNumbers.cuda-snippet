@@ -1,0 +1,5 @@
+name=Print the atom number2 of a residue.
+id=printAtomNumbers
+lex=PML_
+text=
+iterate (resi ${1:1}), print(name + " %i${1:5}" % ID);

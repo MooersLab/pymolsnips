@@ -1,0 +1,5 @@
+name=Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black.
+id=AOD
+lex=PML_
+text=
+cmd.do('AOD')

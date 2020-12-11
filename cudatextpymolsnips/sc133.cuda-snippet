@@ -1,0 +1,6 @@
+name=Display all symmetry mates in 1 x 3 x 3 array of unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+id=sc133
+lex=PML_
+text=
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 3, 3, , ${2:orange},  ${3:supercell1}, 1;

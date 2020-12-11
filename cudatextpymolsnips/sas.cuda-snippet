@@ -1,0 +1,5 @@
+name=Show the solvent excluded surface.
+id=sas
+lex=PML_
+text=
+set surface_solvent, ${1:on}

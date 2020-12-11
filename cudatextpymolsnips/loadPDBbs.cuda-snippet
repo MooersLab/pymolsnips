@@ -2,11 +2,10 @@ name=Load PDB ball-and-stick.
 id=loadPDBbs
 lex=PML_
 text=
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
 hide (name H*);
 hide lines;
 show sticks;
 set stick_radius, ${2:1.2};
 set nb_sphere_radius, ${3:0.35};
 orient;
-$0

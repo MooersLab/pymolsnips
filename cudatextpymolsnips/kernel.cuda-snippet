@@ -1,0 +1,21 @@
+name=A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels.
+id=kernel
+lex=PML_
+text=
+framerule=2pt,
+framesep=2mm,
+framesep=2mm,
+breaklines=True,
+baselinestretch=1.2
+]{bash}
+{
+ "argv": [
+  "/Applications/PyMOL.app/Contents/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "pymol.python",
+ "language": "python"
+}

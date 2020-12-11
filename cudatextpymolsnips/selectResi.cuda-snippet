@@ -2,5 +2,4 @@ name=Select residues by a range of numbers.
 id=selectResi
 lex=PML_
 text=
-select se;2. resi 1-100
-$0
+select ${!:se}; resi ${2: 1:100};

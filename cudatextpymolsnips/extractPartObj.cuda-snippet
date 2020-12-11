@@ -2,5 +2,4 @@ name=Create a new object from part of an existing object.
 id=extractPartObj
 lex=PML_
 text=
-extract new_obj, chain A
-$0
+extract new_obj, chain A;

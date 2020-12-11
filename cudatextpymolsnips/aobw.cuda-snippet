@@ -1,0 +1,5 @@
+name=Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. 
+id=AOBW
+lex=PML_
+text=
+cmd.do('AOBW')

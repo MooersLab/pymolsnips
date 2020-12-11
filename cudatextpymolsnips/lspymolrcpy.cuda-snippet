@@ -1,0 +1,5 @@
+name=Print list of active pymolrc files.
+id=lspymolrcpy
+lex=PML_
+text=
+print(invocation.options.deferred);

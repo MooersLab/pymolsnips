@@ -1,0 +1,5 @@
+name=Print to the screen the settings and their current parameter values. This is the more compact version.
+id=listSettings
+lex=PML_
+text=
+[print("%s => %s" % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];

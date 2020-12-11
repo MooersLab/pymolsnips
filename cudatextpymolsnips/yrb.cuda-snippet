@@ -1,0 +1,5 @@
+name=Run the yrb function from the pymolshortcuts.py file. 
+id=yrb
+lex=PML_
+text=
+cmd.do('yrb')

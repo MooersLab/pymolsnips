@@ -1,0 +1,8 @@
+name=Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.
+id=imports4PyMOLjupyter
+lex=PML_
+text=
+from pymol import cmd
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
