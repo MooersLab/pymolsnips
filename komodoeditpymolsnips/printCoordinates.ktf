@@ -1,0 +1,13 @@
+// komodo tool: printCoordinates
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+stored.coords = []; 
+iterate_state 1, (resi [[%tabstop:101]]), stored.coords.append([x,y,z]); 
+[print(i) for i in stored.coords];

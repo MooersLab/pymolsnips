@@ -1,0 +1,15 @@
+// komodo tool: dssrBlock4
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+reinitialize;
+[[%tabstop:run /Users/blaine/.pymol/startup/dssr_block.py]];
+fetch [[%tabstop:1msy]], async=0;
+set cartoon_nucleic_acid_color, [[%tabstop:orange]];
+dssr_block block_color=N red | minor 0.9 | major yellow;

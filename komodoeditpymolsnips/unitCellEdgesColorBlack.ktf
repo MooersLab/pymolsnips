@@ -1,0 +1,17 @@
+// komodo tool: unitCellEdgesColorBlack
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# show the unit cell;
+show cell;
+color black, [[%tabstop:1lw9]];
+# color by atom with carbons colored green,
+util.[[%tabstop:cbag]];
+set cgo_line_width, 2.5;
+png  [[%tabstop:testCell3]].png, [[%tabstop:1600]],[[%tabstop:1600]];[[%tabstop:600]];[[%tabstop:0]]

@@ -8,6 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-alter ${1:}, ss='%1';
+alter [[%tabstop:chain A]], ss='[[%tabstop:helix]]';
 label (%2),'%3';
-!@#_currentPos!@#_anchor

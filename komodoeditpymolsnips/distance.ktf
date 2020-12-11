@@ -8,5 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-distance [[%tabstop:dist3]], [[%tabstop:/rcsb074137//B/IOD`605/I`B]], [[%tabstop:/rcsb074137//B/IOD`605/I`A]]
-!@#_currentPos!@#_anchor
+# Edit the name for the ditance, the selection criteria for atom 1, and the selection criteria for atom 2.;
+distance [[%tabstop:dist3]], [[%tabstop:/rcsb074137//B/IOD`605/I`B]], [[%tabstop:/rcsb074137//B/IOD`605/I`A]];

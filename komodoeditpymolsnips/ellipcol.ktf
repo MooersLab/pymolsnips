@@ -8,5 +8,6 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-set ellipsoid_color, [[%tabstop:color]];
-!@#_currentPos!@#_anchor
+# set the colore of the thermal ellipsoids;
+# PyMOL colors: https://pymolwiki.org/index.php/Color_Values;
+set ellipsoid_color, [[%tabstop:red]];

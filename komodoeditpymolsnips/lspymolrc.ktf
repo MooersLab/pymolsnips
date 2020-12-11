@@ -9,4 +9,3 @@
 // version: 1.1.5
 // ==================
 print invocation.options.deferred;
-!@#_currentPos!@#_anchor

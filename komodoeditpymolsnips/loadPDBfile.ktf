@@ -8,5 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-load [[%tabstop:my.pdb]];
-!@#_currentPos!@#_anchor
+# Load into pymol a pdb file in the current directory.
+load [[%tabstop:my]].pdb;

@@ -1,0 +1,12 @@
+// komodo tool: sc444
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+run $HOME/[[%tabstop:Scripts/PyMOLscripts/]]supercell.py;
+supercell 4, 4, 4, ,  [[%tabstop:orange]],  [[%tabstop:supercell1]], 1;

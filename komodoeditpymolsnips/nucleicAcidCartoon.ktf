@@ -1,0 +1,17 @@
+// komodo tool: nucleicAcidCartoon
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# The dark blue used for electron density maps is called 'density'.;
+set cartoon_ladder_color, [[%tabstop:density]];
+# The cartoon_ladder_radius should be renamed the cartoon_rung_radius. The dimensions are in Angstroms.;
+set cartoon_ladder_radius, [[%tabstop:0.2]];
+set cartoon_nucleic_acid_color, [[%tabstop:red]];
+# The cartoon ring modes range from 0 to 4.;
+set cartoon_ring_mode, [[%tabstop:2]];

@@ -8,11 +8,10 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-fetch [[%tabstop:3nd3]],name=[[%tabstop:3nd3]], type=pdb, async=0;
+fetch [[%tabstop:3nd3]], name=[[%tabstop:3nd3]], type=pdb, async=0;
 orient;
 set stick_radius, [[%tabstop:1.2]];
 hide (name H*);
 set nb_sphere_size, [[%tabstop:0.35]];
 set nb_spheres_quality, [[%tabstop:1]];
 show nb_spheres;
-!@#_currentPos!@#_anchor

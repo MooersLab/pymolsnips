@@ -8,5 +8,4 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-rotate [[%tabstop:x]], [[%tabstop:45]], [[%tabstop:pept]]
-!@#_currentPos!@#_anchor
+rotate [[%tabstop:x]], [[%tabstop:45]], [[%tabstop:pept]];

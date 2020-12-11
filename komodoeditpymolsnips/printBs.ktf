@@ -8,5 +8,4 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-remove element h; iterate resi %{1:133}, print resi, name,b;
-!@#_currentPos!@#_anchor
+remove element h; iterate resi [[%tabstop: 1:13]], print(resi, name,b);

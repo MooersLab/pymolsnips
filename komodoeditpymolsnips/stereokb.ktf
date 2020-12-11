@@ -1,0 +1,11 @@
+// komodo tool: stereokb
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+cmd.set_key('F1',lambda:cmd.stereo({'on':0,'off':1}[cmd.get('stereo')]));

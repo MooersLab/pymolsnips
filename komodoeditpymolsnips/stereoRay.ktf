@@ -11,5 +11,4 @@
 stereo; 
 set ray_shadow, off;
 ray [[%tabstop:2400,1200]];
-png [[%tabstop:aaa]].png
-!@#_currentPos!@#_anchor
+png [[%tabstop:aaa]].png;

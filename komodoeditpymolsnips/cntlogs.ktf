@@ -1,0 +1,15 @@
+// komodo tool: cntlogs
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+print("Count the number of log image files in current directory.");
+print("Usage: cntlogs");
+myPath = os.getcwd();
+logCounter = len(glob.glob1(myPath,"*.log"));
+print("Number of number of log image files in the current directory: ", logCounter);

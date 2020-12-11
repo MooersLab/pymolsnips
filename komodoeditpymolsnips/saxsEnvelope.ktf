@@ -8,6 +8,6 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-alter [[%tabstop:refine_A_Ave_SM_015_0_370-374-0r]], vdw=3.0
-set solvent_radius = 3.0
-!@#_currentPos!@#_anchor
+# 1: enter the name of the bead model object;
+alter [[%tabstop:refine_A_Ave_SM_015_0_370-374-0r]], vdw=3.0;
+set solvent_radius = 3.0;

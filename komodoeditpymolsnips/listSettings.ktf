@@ -1,0 +1,11 @@
+// komodo tool: listSettings
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+[print("%s => %s" % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];

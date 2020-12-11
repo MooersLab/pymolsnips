@@ -9,4 +9,3 @@
 // version: 1.1.5
 // ==================
 print [[%tabstop:my_func]].__doc__;
-!@#_currentPos!@#_anchor

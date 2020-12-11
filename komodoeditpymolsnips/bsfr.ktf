@@ -1,0 +1,29 @@
+// komodo tool: bsfr
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# Edit the selection that is named ligand here.;
+create ligand, [[%tabstop:/bluComplex/C/A/1101]];
+preset.ball_and_stick(selection='ligand');
+util.cbaw ligand;
+set stick_color, white, ligand;
+set valence, off, ligand;
+unset valence;
+# above command is required after using preset;
+set sphere_color, black, elem C and ligand;
+set sphere_color, red, elem O and ligand;
+set sphere_color, blue, elem N and ligand;
+set sphere_color, lightblue, elem F and ligand;
+set stick_radius, 0.12;
+set sphere_quality, 4;
+set cartoon_ring_finder, 4, ligand;
+set cartoon_ring_mode, 3, ligand;
+set cartoon_ring_width, 0.12, ligand;
+set cartoon_ring_transparency, .0, ligand;
+show cartoon, ligand;

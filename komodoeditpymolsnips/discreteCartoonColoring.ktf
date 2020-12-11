@@ -8,5 +8,4 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-set cartoon_discrete_colors, on
-!@#_currentPos!@#_anchor
+set cartoon_discrete_colors, on;

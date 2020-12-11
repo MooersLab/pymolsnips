@@ -1,0 +1,11 @@
+// komodo tool: printVDWradii
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+iterate (resi [[%tabstop:101]]), print(name + " %.2f" % vdw);

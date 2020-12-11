@@ -1,0 +1,13 @@
+// komodo tool: importIPythonDisplay
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"

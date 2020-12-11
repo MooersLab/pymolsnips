@@ -8,17 +8,16 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-as spheres;    
-color gray30, chain %0;    
-color white, chain %1;    
-color green, name CL;    
-color brown, resn NAG;    
-color red, resi 381;    
-remove solvent;    
-unset specular;    
-set ray_trace_gain, 0;    
-set ray_trace_mode, 3;    
-bg_color white;    
-set ray_trace_color, black;    
-unset depth_cue;    
-!@#_currentPos!@#_anchor
+as spheres;
+color gray30, chain [[%tabstop:A]];
+color white, chain [[%tabstop:B]];
+color green, name CL;
+color brown, resn NAG;
+color red, resi 381;
+remove solvent;
+set specular, 0;
+set ray_trace_gain, 0;
+set ray_trace_mode, 3;
+bg_color white;
+set ray_trace_color, black;
+set depth_cue,0;

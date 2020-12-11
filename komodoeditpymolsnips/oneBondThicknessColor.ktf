@@ -1,0 +1,13 @@
+// komodo tool: oneBondThicknessColor
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# To change stick color and radius for the bond between atom 2 and 3;
+set_bond stick_color, [[%tabstop:yellow]], index 2, index 3;
+set_bond stick_radius, [[%tabstop:0.2]], index 2, index 3;

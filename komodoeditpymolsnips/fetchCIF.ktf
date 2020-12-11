@@ -8,5 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
+# Fetch the atomic coordinates as a cif file. Requires internet connection.
 fetch [[%tabstop:3nd4]], type=cif, async=0;
-!@#_currentPos!@#_anchor

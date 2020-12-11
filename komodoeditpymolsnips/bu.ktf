@@ -8,5 +8,6 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-run ~/Scripts/PyMOLScripts/quat.py; quat
-!@#_currentPos!@#_anchor
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/[[%tabstop:Scripts/PyMOLScripts]]/quat.py; quat;

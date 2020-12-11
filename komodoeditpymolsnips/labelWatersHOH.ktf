@@ -9,4 +9,3 @@
 // version: 1.1.5
 // ==================
 label resn HOH ,"%s%s" % (resn,resi);
-!@#_currentPos!@#_anchor

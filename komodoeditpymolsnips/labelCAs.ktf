@@ -9,4 +9,3 @@
 // version: 1.1.5
 // ==================
 label name CA,"%s%s" % (resn,resi);
-!@#_currentPos!@#_anchor

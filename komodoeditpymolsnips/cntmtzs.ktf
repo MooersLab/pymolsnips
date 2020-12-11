@@ -1,0 +1,15 @@
+// komodo tool: cntmtzs
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+print("Count the number of mtz structure factor files in current directory.");
+print("Usage: cntmtzs");
+myPath = os.getcwd();
+mtzCounter = len(glob.glob1(myPath,"*.mtz"));
+print("Number of number of mtz structure factor  files in the current directory: ", mtzCounter);

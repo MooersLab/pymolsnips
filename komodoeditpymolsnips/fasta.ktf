@@ -8,5 +8,4 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-print cmd.get_fastastr('all')
-!@#_currentPos!@#_anchor
+print cmd.get_fastastr("all")

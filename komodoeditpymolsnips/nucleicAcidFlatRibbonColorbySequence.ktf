@@ -1,0 +1,28 @@
+// komodo tool: nucleicAcidFlatRibbonColorbySequence
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+bg_color white;
+set cartoon_oval_length, [[%tabstop:1.85]];
+set cartoon_oval_width, [[%tabstop:0.5]];
+cartoon oval;
+set cartoon_ring_mode, [[%tabstop:3]];
+# set the color of the backbone oval;
+set cartoon_nucleic_acid_color, [[%tabstop:blue]];
+select rna_A, resn A;
+select rna_C, resn C;
+select rna_G, resn G;
+select rna_U, resn U;
+select dna_T, resn T;
+color [[%tabstop:yellow]], rna_A;
+color [[%tabstop:red]], rna_C; 
+color [[%tabstop:gray40]], rna_G;
+color [[%tabstop:palecyan]], rna_U;
+color [[%tabstop:brown]], dna_T;
+as cartoon;

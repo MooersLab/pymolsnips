@@ -8,5 +8,4 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-select substrates, organic;
-!@#_currentPos!@#_anchor
+select [[%tabstop:ligand]], organic;

@@ -1,0 +1,14 @@
+// komodo tool: loadAndAlignManyFiles2
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms;
+#  Yes, this construct is a list comprehension inside a list comprehension!;
+run [[%tabstop:~/Scripts/]]optAlignRNA.py;
+[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()];

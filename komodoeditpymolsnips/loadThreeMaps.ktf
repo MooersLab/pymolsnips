@@ -1,0 +1,22 @@
+// komodo tool: loadThreeMaps
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+load [[%tabstop:4dgr]].pdb;
+# Make sure to rename map file so that;
+# the root filename differs from pdb root filename;
+load [[%tabstop:4dgr]]_2fofc.ccp4, 2fofc;
+load [[%tabstop:4dgr]]_fofc.ccp4, fofc;
+select  [[%tabstop:glycan]], resid 200 or (resid 469:477);
+isomesh [[%tabstop:mesh1]], 2fofc, 1.0, [[%tabstop:glycan]];
+color density, [[%tabstop:mesh1]];
+isomesh [[%tabstop:mesh2]], fofc, 3.0, [[%tabstop:glycan]];
+color green, [[%tabstop:mesh2]];
+isomesh [[%tabstop:mesh3]], fofc, -3.0, [[%tabstop:glycan]];
+color red, [[%tabstop:mesh3]];

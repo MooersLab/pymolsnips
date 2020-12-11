@@ -1,0 +1,11 @@
+// komodo tool: symexp
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+symexp [[%tabstop:symm]], [[%tabstop:3fa0]], ([[%tabstop:3fa0]]), [[%tabstop:20]],[[%tabstop:1]];

@@ -9,4 +9,3 @@
 // version: 1.1.5
 // ==================
 select [[%tabstop:select1]], elem [[%tabstop:N]] and chain [[%tabstop:A]] and not resn [[%tabstop:LYS]];
-!@#_currentPos!@#_anchor

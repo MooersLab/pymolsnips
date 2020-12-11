@@ -1,0 +1,14 @@
+// komodo tool: printNamesCoordinates
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+stored.coords = []; iterate_state 1, (resi [[%tabstop:101]]), stored.coords.append([x,y,z]); 
+stored.names = [];  iterate_state 1, (resi [[%tabstop:101]]), stored.names.append([name]);
+stored.names3 = [tuple(i) for i in stored.names];
+[print(i,j) for i,j in(zip(stored.names3, stored.coords)];

@@ -8,7 +8,7 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-Tab trigger                  Description
+"""Tab trigger                  Description
 ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 antialias                    Set antialias to get smooth edges
 ao                           Ambient occlussion.
@@ -106,5 +106,5 @@ threeMaps                    Three electron density.
 turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.
-!@#_currentPos!@#_anchor
+writeCommandReference2HTML   Write the command reference to html file in the present working directory."""
+

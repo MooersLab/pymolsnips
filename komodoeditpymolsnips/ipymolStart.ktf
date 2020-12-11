@@ -1,0 +1,15 @@
+// komodo tool: ipymolStart
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# Start pymol in terminal with pymol -R;
+# Select pymol.python as kernel in juptyer;
+from ipymol import viewer as ipv;
+ipv.start() # Start PyMOL RPC server;
+

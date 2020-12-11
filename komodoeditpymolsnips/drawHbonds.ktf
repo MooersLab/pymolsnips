@@ -8,9 +8,9 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-hide everything, hydrogens
-hide labels
-set dash_color, [[%tabstop:black]][[%tabstop:yelow]] 
-set dash_gap, 0.4
-set dash_radius, 0.08
-!@#_currentPos!@#_anchor
+hide everything, hydrogens;
+hide labels;
+# set the color of the dashed lines representing the H-bond.;
+set dash_color, [[%tabstop:black]];
+set dash_gap, 0.4;
+set dash_radius, 0.08;

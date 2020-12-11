@@ -8,5 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-fetch [[%tabstop:3nd4]], type=fofc, async=0;
-!@#_currentPos!@#_anchor
+# fetch 2fofc map. The argument is its object name.;
+fetch [[%tabstop:3nd4]],  [[%tabstop:3nd4]]_2fofc, type=fofc, async=0;

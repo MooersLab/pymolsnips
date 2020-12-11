@@ -8,5 +8,13 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-png [[%tabstop:saveMe.png]]; 
-!@#_currentPos!@#_anchor
+# PyMOL writes out only png files. 
+# This may need to be converted to tiff.
+# See the png2tiff snippet for a bash script that converts all png files in a folder into tiff files.
+# 1: png filename
+# 2: x-dimension in pixels
+# 3: y-dimension in pixels, 1600 x 1000 approximates the golden ratio. Usually want a square for multipanel figures.
+# 4: dots per inch, 
+# 5: ray tracing off, 0; ray tracing on, 1
+# should also consider image without ray tracing shadows. 
+png [[%tabstop:saveMe]].png, [[%tabstop:1920]], [[%tabstop:1920]], [[%tabstop:600]], [[%tabstop:1]];

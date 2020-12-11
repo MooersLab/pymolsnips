@@ -10,4 +10,3 @@
 // ==================
 select altconf, alt [[%tabstop:b]]  # select B alternative locators;
 hide everything, altconf  # hide alt B locators;
-!@#_currentPos!@#_anchor

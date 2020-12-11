@@ -9,4 +9,3 @@
 // version: 1.1.5
 // ==================
 label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
-!@#_currentPos!@#_anchor

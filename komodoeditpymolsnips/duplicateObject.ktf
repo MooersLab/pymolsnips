@@ -8,5 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-create [[%tabstop:t4l]], [[%tabstop:1lw9]]; 
-!@#_currentPos!@#_anchor
+# Create an object with the first argument using the selection which is the second argument.;
+create [[%tabstop:t4l]], [[%tabstop:1lw9]];

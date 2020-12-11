@@ -1,0 +1,19 @@
+// komodo tool: displayFonts
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+python;
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+python end;
+cmd.set('label_size', 50);
+cmd.set('grid_mode');
+

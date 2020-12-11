@@ -11,4 +11,3 @@
 pseudoatom [[%tabstop:forLabel]];
 label [[%tabstop:forLabel]], '%0';
 set label_color, [[%tabstop:red]];
-!@#_currentPos!@#_anchor

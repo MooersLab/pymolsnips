@@ -1,0 +1,13 @@
+// komodo tool: drawLinks
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+# Requires draw_links.py http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py by Robert Campbell;
+# To connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18.;
+draw_links [[%tabstop:mol1]] & chain [[%tabstop:A]] & name  [[%tabstop:CA]] & resi [[%tabstop:1+6+7+8]], [[%tabstop:mol1]] & chain [[%tabstop:A]]& name [[%tabstop:CA]] & resi [[%tabstop:10+16+17+18]];

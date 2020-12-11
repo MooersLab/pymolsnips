@@ -12,5 +12,4 @@ stereo walleye;
 set ray_shadow, off; 
 #draw 3200,2000;
 draw [[%tabstop:1600,1000]]; 
-png [[%tabstop:aaa]].png
-!@#_currentPos!@#_anchor
+png [[%tabstop:aaa]].png;

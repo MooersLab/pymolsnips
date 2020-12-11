@@ -1,0 +1,15 @@
+// komodo tool: cntpdbs
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+print("Count the number of pdb files in the current directory.")
+print("Usage: cntpdb")
+myPath = os.getcwd()
+pdbCounter = len(glob.glob1(myPath,"*.pdb"))
+print("Number of pdb files in the current directory: ", pdbCounter)

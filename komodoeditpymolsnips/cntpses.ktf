@@ -1,0 +1,15 @@
+// komodo tool: cntpses
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+print("Count the number of *.pse (session) files in current directory.");
+print("Usage: cntpses");
+myPath = os.getcwd();
+pseCounter = len(glob.glob1(myPath,"*.pse"));
+print("Number of *.pse (session) files in the current directory: ", pseCounter);

@@ -1,0 +1,13 @@
+// komodo tool: brokenNucleicBackbone
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+#  >>> edit the selections below, which are ranges of residue numbers and edit the molecular object name (5fur).;
+[cmd.bond(f"/[[%tabstop:5fur]]//[[%tabstop:E]]/{i}/O3'", f"/[[%tabstop:5fur]]//[[%tabstop:E]]/{i+1}/P") for i in range([[%tabstop:1]], [[%tabstop:80]])]; 
+[cmd.bond(f"/[[%tabstop:5fur]]//[[%tabstop:F]]/{i}/O3'", f"/[[%tabstop:5fur]]//[[%tabstop:F]]/{i+1}/P") for i in range([[%tabstop:81]], [[%tabstop:160]])];

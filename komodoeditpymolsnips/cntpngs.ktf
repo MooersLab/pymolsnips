@@ -1,0 +1,15 @@
+// komodo tool: cntpngs
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+print("Count the number of png image files in current directory.");
+print("Usage: cntpngs");
+myPath = os.getcwd();
+pngCounter = len(glob.glob1(myPath,"*.png"));
+print("Number of number of png image files in the current directory: ", pngCounter);

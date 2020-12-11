@@ -10,4 +10,3 @@
 // ==================
 set label_distance_digits, [[%tabstop:2]];
 set label_angle_digits, [[%tabstop:2]];
-!@#_currentPos!@#_anchor

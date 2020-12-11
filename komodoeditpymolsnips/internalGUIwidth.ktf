@@ -8,5 +8,5 @@
 // type: snippet
 // version: 1.1.5
 // ==================
-internal_gui_width=%{1:20};
-!@#_currentPos!@#_anchor
+# set to 0 to make the internal gui vanish;
+set internal_gui_width=[[%tabstop:0]];

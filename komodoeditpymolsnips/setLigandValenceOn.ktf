@@ -1,0 +1,12 @@
+// komodo tool: setLigandValenceOn
+// ==================
+// auto_abbreviation: false
+// indent_relative: false
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==================
+#Set on the valence of the ligand only;
+set valence, on, resn [[%tabstop:RZS]]; set valence, off, not resn [[%tabstop:RZS]];
