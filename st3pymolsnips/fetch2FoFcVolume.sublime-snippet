@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+fetch ${1:3nd4}, type=2fofc, async=0;
+volume 2fofcmap, ${1:3nd4}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
+${0}
+]]></content>
+<tabTrigger>fetch2FoFcVolume</tabTrigger>
+<scope></scope>
+<caption>Fetch 2FoFc map as a volume.</caption>
+</snippet>

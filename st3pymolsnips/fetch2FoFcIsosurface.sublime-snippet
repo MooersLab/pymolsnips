@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+fetch ${1:3nd4}_2fofc, type=2fofc, async=0;
+isosurface 2fofcmap, ${1:3nd4}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
+${0}
+]]></content>
+<tabTrigger>fetch2FoFcIsosurface</tabTrigger>
+<scope></scope>
+<caption>Fetch 2FoFc map as an isosurface.</caption>
+</snippet>

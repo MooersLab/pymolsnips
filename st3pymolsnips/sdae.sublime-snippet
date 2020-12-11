@@ -1,0 +1,15 @@
+<snippet>
+<content><![CDATA[
+python;
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".png"); 
+end python;
+${0}
+]]></content>
+<tabTrigger>sdae</tabTrigger>
+<scope></scope>
+<caption>Save png flle with timestamp</caption>
+</snippet>
