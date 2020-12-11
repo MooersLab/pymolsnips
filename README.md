@@ -2,10 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4317774.svg)](https://doi.org/10.5281/zenodo.4317774)
-[![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
-![GitHub all releases](https://img.shields.io/github/downloads/MooersLab/pymolsnips/total)
 
 <!--
+Hit counter and download counters are not working.
+[![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
+![GitHub all releases](https://img.shields.io/github/downloads/MooersLab/pymolsnips/total)
 Get zendo badge at Zendo.
 Go to for https://hits.dwyl.com to hit counter (all-time hits starting December 1).
 Go to https://shields.io/category/version to generate release badge in Markdown.
