@@ -1,37 +1,53 @@
-snippet ao "Ambient occlussion." b 
+snippet ao "Apply the ambient occlussion effect to get the photorealistic effect." b 
 set_color oxygen, [1.0,0.4,0.4];
 set_color nitrogen, [0.5,0.5,1.0];
 remove solvent;
 as spheres;
+# the 'as' command is a shortcut for show_as
 util.cbaw;
+# 'cba' represents 'color by atom'. 
+# The last letter represents the colore of the carbon atom.
 bg white;
+# bg is an alias for bg_color or background color.
 set light_count,10;
+# light_count is the number of light sources. 
+# The max is 10. The defualt is 10.
 set spec_count,1;
+# Not documented on Wiki.
 set shininess, 10;
+# sets the shininess of the object.
 set specular,0.25;
+# Controls the amount of directly reflected light and not the shininess of the reflection.
 set ambient,0;
-set direct,0;
+# Controls the amount of ambient light. Default is 0. Ranges from -1 to 1.
+set direct,0;  
+# Not documented on Wiki.
 set reflect,1.5;
+# Controls the amount of light reflection and the effect that directional light has on shadows 
+# and the general lighting of the scene. Default value is 0.5.
 set ray_shadow_decay_factor, 0.1;
 set ray_shadow_decay_range, 2;
-unset depth_cue;
+set depth_cue, 0;
 ray;
-$0
+
+endsnippet
+ 
+snippet sas "Show the solvent excluded surface." b 
+set surface_solvent, ${1:on}
 endsnippet
  
 snippet ellipcol "Set ellipsoid color." b 
-set ellipsoid_color, ${1:color};
-$0
+# set the colore of the thermal ellipsoids;
+# PyMOL colors: https://pymolwiki.org/index.php/Color_Values;
+set ellipsoid_color, ${1:red};
 endsnippet
  
 snippet sigdist "set distance labels to display 2 decimals" b 
 set label_distance_digits, ${1:2};
-$0
 endsnippet
  
 snippet sigang "Set angle labels to display 2 decimals places" b 
 set label_angle_digits, ${1:2};
-$0
 endsnippet
  
 snippet bs "Ball and stick representation. " b 
@@ -41,7 +57,6 @@ set stick_ball, on;
 set stick_ball_ratio, 1.9;
 show nb_spheres;
 set nb_spheres_size=0.33;
-$0
 endsnippet
  
 snippet stack "Base-stacking figure." b 
@@ -57,9 +72,9 @@ set stick_ball, on;
 set stick_ball_ratio,1.9;
 set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);
 hide everything, element H;
-select carbon1, element C and (resi ${4:3} or resi ${5:8}) 
+select carbon1, element C and (resi ${4:3} or resi ${5:8}); 
 # select lower base pair;
-select carbon2, element C and (resi ${3:2} or resi ${6:9}) 
+select carbon2, element C and (resi ${3:2} or resi ${6:9});
 #select upper base pair;
 color gray70,carbon1;
 color gray10,carbon2;
@@ -77,138 +92,139 @@ set nb_spheres_size, 0.35;
 hide labels;
 ray 1600,1000;
 png ${1:4PCO}.png
-$0
+
 endsnippet
  
-snippet bu "Biological unit." b 
-run ~/Scripts/PyMOLScripts/quat.py; quat
-$0
+snippet bu "Generate the biological unit using the quat.py script." b 
+# Edit the path to the file quat.py.;
+# You may have to download it from the PyMOL Wiki page.;
+run ~/${1:Scripts/PyMOLScripts}/quat.py; quat;
 endsnippet
  
 snippet doubleBond "Valence bond. " b 
 set valence, 1; 
 set valence_mode, 1;
-$0
 endsnippet
  
-snippet cblind "Color blindness." b 
-run ~/Pymol-script-repo/colorblindfriendly.py;
+snippet cblind "Apply color blind friendly to ribbon diagrams." b 
+# Edit the path to the Pymol-script-repo in your computer account.;
+# See PyMOL wiki for more information about the Pymol-script-reo.;
+run ~/${1:Pymol-script-repo}/colorblindfriendly.py;
 as cartoon;
 color cb_red, ss H;
 color cb_yellow,ss S;
-color cb_green, ss L+; 
-$0
+color cb_green, ss L+;
 endsnippet
  
 snippet centerpi "Center pi." b 
+# Edit the atoms selected for positioning the pseudoatom.;
 pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;
 dist pi_cent////ps1, b/${4:U`15}/${5:aaa};
-$0
 endsnippet
  
 snippet cribbon "Color ribbon H red, strand yellow, loop green." b 
 as cartoon;
 color red, ss H;
 color yellow,ss S;
-color green, ss L+; 
-$0
+color green, ss L+;
 endsnippet
  
 snippet cspheres "Colored spheres." b 
-as spheres;    
-color gray30, chain %0;    
-color white, chain %1;    
-color green, name CL;    
-color brown, resn NAG;    
-color red, resi 381;    
-remove solvent;    
-unset specular;    
-set ray_trace_gain, 0;    
-set ray_trace_mode, 3;    
-bg_color white;    
-set ray_trace_color, black;    
-unset depth_cue;    
-$0
+as spheres;
+color gray30, chain ${1:A};
+color white, chain ${2:B};
+color green, name CL;
+color brown, resn NAG;
+color red, resi 381;
+remove solvent;
+set specular, 0;
+set ray_trace_gain, 0;
+set ray_trace_mode, 3;
+bg_color white;
+set ray_trace_color, black;
+set depth_cue,0;
 endsnippet
  
-snippet coordinate "Coordinate covalent bonds to metals and H-bonds friom RNA." b 
-viewport 900,600;    
-fetch 3nd4, type=pdb, async=0;    
-run ~/Scripts/PyMOLScripts/quat.py;    
-quat 3nd4;    
-show sticks;    
-set stick_radius=0.125;    
-hide everything, name H*;    
-bg_color white;        
-create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));        
-bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);    
-bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);        
-distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);    
-distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);    
-distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);    
-distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);    
-show nb_spheres;     
-set nb_spheres_size, .35;        
-distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;    
-distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;    
-distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;   
-distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;    
-distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;    
-distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    
-distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;    
-distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;    
-distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;    
-distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;    
-distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;    
-distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;    
-distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;    
-distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;   
- distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;    
-distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;    
-distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;    
-distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;        
-set depth_cue=0;    
-set ray_trace_fog=0;    
-set dash_color, black;    
-set label_font_id, 5;    
+snippet coordinate "Coordinate covalent bonds to metals and H-bonds from RNA." b 
+viewport 900,600;
+fetch 3nd4, type=pdb, async=0;
+run ~/Scripts/PyMOLScripts/quat.py;
+quat 3nd4;
+show sticks;
+set stick_radius=0.125;
+hide everything, name H*;
+bg_color white;
+create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));
+bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);
+distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);
+show nb_spheres; 
+set nb_spheres_size, .35;
+distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;
+distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;
+distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;
+distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;
+distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;
+distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;
+distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;
+distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;
+distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;
+distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;
+distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;
+distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;
+distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;
+distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;
+ distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;
+distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;
+distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;
+distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    
+set depth_cue=0;
+set ray_trace_fog=0;
+set dash_color, black;
+set label_font_id, 5;
 set label_size, 36;
-set label_position, (0.5, 1.0, 2.0);   
-set label_color, black;    
-set dash_gap, 0.2;    
-set dash_width, 2.0;    
+set label_position, (0.5, 1.0, 2.0);
+set label_color, black;
+set dash_gap, 0.2;
+set dash_width, 2.0;
 set dash_length, 0.2;
-set label_color, black;    
-set dash_gap, 0.2; 
+set label_color, black;
+set dash_gap, 0.2;
 set dash_width, 2.0;
 set dash_length, 0.2;
 select carbon, element C;
 color yellow, carbon;
 disable carbon;
-set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0) 
-$0
+set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)
 endsnippet
  
-snippet distance "H-bond distances." b 
-distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A}
-$0
+snippet distance "H-bond distance between a H-bond donor and acceptor." b 
+# Edit the name for the ditance, the selection criteria for atom 1, and the selection criteria for atom 2.;
+distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A};
 endsnippet
  
-snippet drawHbonds "Draw H-bonds. " b 
-hide everything, hydrogens
-hide labels
-set dash_color, ${1:black}${2:yelow} 
-set dash_gap, 0.4
-set dash_radius, 0.08
-$0
+snippet drawHbonds "Display H-bonds as dashes colored black. " b 
+hide everything, hydrogens;
+hide labels;
+# set the color of the dashed lines representing the H-bond.;
+set dash_color, ${1:black};
+set dash_gap, 0.4;
+set dash_radius, 0.08;
 endsnippet
  
-snippet carvedDensity "Carved electron density. " b 
+snippet carvedIsomesh "Carved isomesh representation of electron density. " b 
 delete all;
+# Fetch the coordinates. Need internet connection.
 fetch ${1:4dgr}, async=0;
+# Fetch the electron density map.
 fetch ${1:4dgr}, type=2fofc,async=0;
+# create a selection out of the glycan
 select ${2:LongGlycan}, resi ${3:469:477};
 orient ${2:LongGlycan};
 remove not ${2:LongGlycan};
@@ -245,22 +261,23 @@ set dash_radius, .05;
 set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
 preset.ball_and_stick("all",mode=1);
 draw;
-$0
 endsnippet
  
-snippet fetch2FoFc "Fetch 2FoFc map." b 
-fetch ${1:3nd4}, type=2fofc, async=0
-$0
+snippet fetch2FoFcIsomesh "Fetch 2FoFc map as an isomesh." b 
+# Fetch a 2fofc electron density map. Edit the PDB-ID code.;
+fetch ${1:3nd4}, ${1:3nd4}_2fofc, type=2fofc, async=0;
+# Render and display a contour of this map as chicken wire.;
+isomesh 2fofcmap, ${1:3nd4}_2fofc, 1, ${1:3nd4}, carve = 1.8;
 endsnippet
  
 snippet fetchCIF "Fetch cif file." b 
+# Fetch the atomic coordinates as a cif file. Requires internet connection.
 fetch ${1:3nd4}, type=cif, async=0;
-$0
 endsnippet
  
 snippet fetchFoFc "Fetch fofc map." b 
-fetch ${1:3nd4}, type=fofc, async=0;
-$0
+# fetch 2fofc map. The argument is its object name.;
+fetch ${1:3nd4},  ${1:3nd4}_2fofc, type=fofc, async=0;
 endsnippet
  
 snippet filledRing "Filled rings in nucleic acids. " b 
@@ -270,110 +287,87 @@ set cartoon_ladder_mode, 1;
 set cartoon_nucleic_acid_mode, 4;
 set cartoon_ring_transparency, 0.5;
 as cartoon;
-$0
 endsnippet
  
 snippet getCoordinates "Get coordinates. " b 
 print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');
-$0
 endsnippet
  
-snippet hbonddash "H-bond dashes." b 
+snippet hbonddash "Set up H-bond dashes." b 
 hide everything, hydrogens;
 hide labels;
 set dash_color, black; 
 set dash_gap, 0.4;
 set dash_radius, 0.08;
-$0
 endsnippet
  
-snippet hbond "Hbond setup. " b 
-hide labels;
-set dash_color, black ;
-set dash_length, ${1:0.15};
-set dash_gap, ${2:0.35};
-set dash_width,  ${3:3.0};
-$0
-endsnippet
- 
-snippet hidealtloc "Hide alt loc." b 
+snippet hidealtloc "Hide the b alternate locator." b 
 select altconf, alt ${1:b}  # select B alternative locators;
 hide everything, altconf  # hide alt B locators;
-$0
 endsnippet
  
 snippet labelResnResi "Label CA atom with single-letter residue name and residue number." b 
-label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
-$0
+label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi});
 endsnippet
  
 snippet labelSS "Label SS. " b 
-alter ${1:}, ss='%1';
+alter ${1:chain A}, ss='${2:helix}';
 label (%2),'%3';
-$0
 endsnippet
  
 snippet loadPDBbs "Load PDB ball-and-stick." b 
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
 hide (name H*);
 hide lines;
 show sticks;
 set stick_radius, ${2:1.2};
 set nb_sphere_radius, ${3:0.35};
 orient;
-$0
 endsnippet
  
 snippet loadPDBnb "Load PDB nb spheres. " b 
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
+fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;
 orient;
 set stick_radius, ${2:1.2};
 hide (name H*);
 set nb_sphere_size, ${3:0.35};
 set nb_spheres_quality, ${4:1};
 show nb_spheres;
-$0
 endsnippet
  
-snippet ms "Measure surface area. " b 
-fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
-select ${2:temp}, ${3:3nd3} and chain A;
-run ${3:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
+snippet ms "Measure surface area of the selection with the msms_pymol.py script. " b 
+fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;
+select ${2:temp}, ${1:3nd3} and chain ${4:A};
+run ${5:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};
 calc_msms_area ${2:temp};
-$0
 endsnippet
  
-snippet molscriptRibbon "Molscript ribbons." b 
+snippet molscriptRibbon "Show cartoon in the style of Molscript ribbons." b 
 set cartoon_highlight_color, grey;
 show cartoon;
 set cartoon_flat_sheets, 0;
 set cartoon_smooth_loops, 0;
 set cartoon_fancy_helices, 1;
-$0
 endsnippet
  
-snippet oneLetter "One letter amino acid. " b 
+snippet oneLetter "Switch from three letter code to one-letter code for amino acids. " b 
 one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%
 'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%
 'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%
-$0
 endsnippet
  
 snippet fasta "Print Fasta from PDB file. " b 
-print cmd.get_fastastr('all')
-$0
+print cmd.get_fastastr("all")
 endsnippet
  
 snippet pseudolabel "Position label with pseudoatom. " b 
 pseudoatom ${1:forLabel};
 label ${1:forLabel}, '%0';
 set label_color, ${2:red};
-$0
 endsnippet
  
-snippet rotate "Rotate about axis." b 
-rotate ${1:x}, ${2:45}, ${3:pept}
-$0
+snippet rotate "Rotate a selection about and axis by a given angle." b 
+rotate ${1:x}, ${2:45}, ${3:pept};
 endsnippet
  
 snippet stereoDraw "Stereo draw." b 
@@ -381,22 +375,20 @@ stereo walleye;
 set ray_shadow, off; 
 #draw 3200,2000;
 draw ${1:1600,1000}; 
-png ${2:aaa}.png
-$0
+png ${2:aaa}.png;
 endsnippet
  
 snippet stereoRay "Stereo ray." b 
 stereo; 
 set ray_shadow, off;
 ray ${1:2400,1200};
-png ${2:aaa}.png
-$0
+png ${2:aaa}.png;
 endsnippet
  
-snippet threeMaps "Three electron density. " b 
-load ${1:4dgr}.pdb
-# Make sure to rename map file so that 
-# the root filename differs from pdb root filename
+snippet loadThreeMaps "Three electron density as Isomesh. " b 
+load ${1:4dgr}.pdb;
+# Make sure to rename map file so that;
+# the root filename differs from pdb root filename;
 load ${1:4dgr}_2fofc.ccp4, 2fofc;
 load ${1:4dgr}_fofc.ccp4, fofc;
 select  ${2:glycan}, resid 200 or (resid 469:477);
@@ -406,58 +398,53 @@ isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};
 color green, ${4:mesh2};
 isomesh ${5:mesh3}, fofc, -3.0, ${2:glycan};
 color red, ${5:mesh3};
-$0
 endsnippet
  
 snippet turnAboutAxis "Turn about axis. " b 
 turn ${1:x},${2:90};
-$0
 endsnippet
  
 snippet volumeRamp "Volume ramp." b 
-cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
-$0
+cmd.volume_ramp_new("ramp_magenta", [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])
 endsnippet
  
 snippet solventRadius "Set radius of ball used to make solvent accessible surface." b 
 set solvent_radius, ${1:1.55};
-$0
-
 endsnippet
  
 snippet scaleRadiusColor "Scale the radius and color of atoms as spheres by property in the B-value column." b 
-bg_color white
-hide everything
-show spheres
-set  stick_radius = 0.1
-hide everything, HET
-show spheres, HET
-set sphere_quality=3
-show sticks, resi 1102
-from pymol import stored
-# set the stored array equal to the b−values; or use your own values 
-stored.bb = [ ]
-iterate, stored.bb.append(b)
-# execute a python−block
-python
-# scale the b−values
-M = max(stored.bb)
-scaledBB = map(lambda x: float (x/M), stored.bb)
-count = 0
-# set the sphere radii independently
+# Use snippets scaleRadiusColorpy and scaleRadiusColorPythonInsertpy for python scripts;
+bg_color white;
+hide everything;
+show spheres;
+set  stick_radius = 0.1;
+hide everything, HET;
+show spheres, HET;
+set sphere_quality=3;
+show sticks, resi ${1:1102};
+from pymol import stored;
+# set the stored array equal to the b−values or use your own values; 
+stored.bb = [ ];
+iterate all, stored.bb.append(b);
+# execute a python−block;
+python;
+# scale the b−values;
+M = max(stored.bb);
+scaledBB = map(lambda x: float (x/M), stored.bb);
+count = 0;
+# set the sphere radii independently;
+#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB];
 for x in scaledBB:
   cmd.set("sphere_scale", x ,"ID %s"%count)
   count = count + 1
-python end
-spectrum b, selection=4gdx
-space cmyk
-set specular_intensity , 0.25
-$0
+python end;
+spectrum b, selection=${2:4gdx};
+space cmyk;
+set specular_intensity , 0.25;
 endsnippet
  
 snippet rv "Return settings in rounded format." b 
 run roundview.py;
-$0
 endsnippet
  
 snippet spng "Save png flle with timestamp" b 
@@ -467,8 +454,7 @@ from pymol import cmd;
 DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
 s = str(DT); 
 cmd.save(stemName+s+".png"); 
-end python;
-$0
+python end;
 endsnippet
  
 snippet spse "Save pse flle with timestamp" b 
@@ -478,286 +464,259 @@ from pymol import cmd;
 DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
 s = str(DT); 
 cmd.save(stemName+s+".pse"); 
-end python;
-$0
+python end;
 endsnippet
  
-snippet sc222 "Run Tom Holder's supercell script to generate three cells in all directions." b 
-run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 2, 2, 2, , orange, supercell2, 1
-$0
+snippet sc222 "Run supercell script to generate three cells in all directions. This script was written by Thomas Holder." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 2, 2, , ${2:orange},  ${3:supercell1}, 1;
 endsnippet
  
 snippet pearl "The pearl effect is made with two spheres with the outer sphere being transparent." b 
-create ${1:sodium2}, ${2:sodium1}
-set sphere_transparency, 0.4, ${1:sodium2}
-set sphere_scale, 1.05, ${1:sodium2}
-ray
-$0
+create ${1:sodium2}, ${2:sodium1};
+set sphere_transparency, 0.4, ${1:sodium2};
+set sphere_scale, 1.05, ${1:sodium2};
+ray;
 endsnippet
  
 snippet fog "Blur the background atoms." b 
-set fog, 0
-$0
+set fog, 0;
 endsnippet
  
 snippet rmwater "Remove waters from molecular object." b 
-remove resn HOH
-$0
+remove resn HOH;
 endsnippet
  
 snippet setcolor "Set color name to a RGB code." b 
-set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}]
-color ${1:bark}, ${5:protein}
-$0
+set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}];
+color ${1:bark}, ${5:protein};
 endsnippet
  
 snippet duplicateObject "Duplicate object." b 
-create ${1:t4l}, ${2:1lw9}; 
-$0
+# Create an object with the first argument using the selection which is the second argument.;
+create ${1:t4l}, ${2:1lw9};
 endsnippet
  
 snippet selectChain "Select a chain. " b 
-select rna, chain B
-$0
+select ${1:rna}, ${2:chain B};
 endsnippet
  
 snippet selectResidues "Select residues by name." b 
 select aromatic, resn phe+tyr+trp;
-$0
 endsnippet
  
 snippet selectResi "Select residues by a range of numbers." b 
-select se;2. resi 1-100
-$0
+select ${!:se}; resi ${2: 1:100};
 endsnippet
  
-snippet selectElement "Select atoms by elemnt." b 
-select ${1:oxygen}, elem ${2:O}
-$0
+snippet selectElement "Select atoms by element." b 
+select ${1:oxygen}, elem ${2:O};
 endsnippet
  
 snippet selectName "Select atoms by name." b 
-select ${1:oxygen2}, name ${2:O2}
-$0
+select ${1:oxygen2}, name ${2:O2};
 endsnippet
  
 snippet selectHelices "Select atoms by alpha helices." b 
 select ${1:helices}, ss h; 
-$0
 endsnippet
  
 snippet selectStrands "Select atoms by beta strands." b 
 select ${1:strands}, ss s; 
-$0
 endsnippet
  
 snippet selectLoops "Select atoms by beta loops." b 
 select ${1:loops}, ss l;
-$0
 endsnippet
  
 snippet selectAllBut "Select all nitrogen atom in a selelction except from lysine." b 
 select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};
-$0
 endsnippet
  
 snippet selectAtomsAround "Select atoms within a radius around a ligand." b 
 select ${1:nearby}, resn ${2:drug} around ${3:5};
-$0
 endsnippet
  
 snippet selectResiduesAround "Select residues within a radius around a ligand." b 
 select ${1:nearby}, br. resn ${2:drug} around ${3:5};
-$0
 endsnippet
  
 snippet undoSelection "Undo a selection." b 
 disable ${1:sele}; 
-$0
 endsnippet
  
 snippet loadPDBfile "Load a pdb file in the current directory." b 
-load ${1:my.pdb};
-$0
+# Load into pymol a pdb file in the current directory.
+load ${1:my}.pdb;
 endsnippet
  
 snippet savePNG "Save a png file of current scene to the current directory." b 
-png ${1:saveMe.png}; 
-$0
+# PyMOL writes out only png files. 
+# This may need to be converted to tiff.
+# See the png2tiff snippet for a bash script that converts all png files in a folder into tiff files.
+# 1: png filename
+# 2: x-dimension in pixels
+# 3: y-dimension in pixels, 1600 x 1000 approximates the golden ratio. Usually want a square for multipanel figures.
+# 4: dots per inch, 
+# 5: ray tracing off, 0; ray tracing on, 1
+# should also consider image without ray tracing shadows. 
+png ${1:saveMe}.png, ${2:1920}, ${3:1920}, ${4:600}, ${5:1};
 endsnippet
  
 snippet ringMode "Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids." b 
 show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};
-$0
 endsnippet
  
 snippet sidehChainHelper "In cartoons, hide the backbone atoms of selected residues when showing then as sticks." b 
 set cartoon_side_chain_helper, on;
-$0
 endsnippet
  
 snippet extractPartObj "Create a new object from part of an existing object." b 
-extract new_obj, chain A
-$0
+extract new_obj, chain A;
 endsnippet
  
 snippet puttyCartoon "Create a putty cartoon." b 
 show cartoon;
 cartoon putty;
-unset cartoon_smooth_loops;
-unset cartoon_flat_sheets;
-$0
+set cartoon_smooth_loops, 0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+# unset cartoon_smooth_loops; 
+set cartoon_flat_sheets, 0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+# unset cartoon_smooth_loops; 
+set cartoon_smooth_loops,0;
+# The command below may be needed if the above setting does not work.
+# This can happen if using the presets.
+## unset cartoon_smooth_loops;
+
 endsnippet
  
-snippet hideSelection "Trun off magenta squares on current selection." b 
+snippet hideSelection "Turn off magenta squares on current selection." b 
 indicate none
-$0
 endsnippet
  
 snippet discreteCartoonColoring "Turn on discrete colors between secondary structure elements." b 
-set cartoon_discrete_colors, on
-$0
+set cartoon_discrete_colors, on;
 endsnippet
  
 snippet sc111 "Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
-run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 1, 1, 1, , orange, supercell1, 1
-$0
+# 1: change to your path to supercell.py.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;
 endsnippet
  
 snippet saxsEnvelope "Display SAXS envelope" b 
-alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0
-set solvent_radius = 3.0
-$0
+# 1: enter the name of the bead model object;
+alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0;
+set solvent_radius = 3.0;
 endsnippet
  
 snippet setpath "Set additional path for PyMOL to search on startup" b 
 os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
-$0
 endsnippet
  
 snippet fetchPath "Set path for location to save fetched pdb files. " b 
 set fetch_path, ${1:/Users/blaine/pdbFiles};
-$0
 endsnippet
  
-snippet antialias "Set antialias to get smooth edges" b 
+snippet antialias "Set antialias to on to get smoother edges." b 
 set antialias, 1;
-$0
 endsnippet
  
 snippet lspymolrc "Print list of active pymolrc files." b 
 print invocation.options.deferred;
-$0
 endsnippet
  
 snippet sigDigits "Set number of decimals places to show in distance labels. " b 
 set label_distance_digits, ${1:2};
 set label_angle_digits, ${2:2};
-$0
 endsnippet
  
-snippet labelCAs "Label the CA atoms with the Ala333 style format" b 
+snippet labelCAs "Label the CA atoms with the Ala333 style format." b 
 label name CA,"%s%s" % (resn,resi);
-$0
 endsnippet
  
-snippet labelWatersHOH "Label waters HOH." b 
+snippet labelWatersHOH "Label waters with HOH and their residue number." b 
 label resn HOH ,"%s%s" % (resn,resi);
-$0
 endsnippet
  
-snippet labelWatersW "Label waters W." b 
+snippet labelWatersW "Label waters with W and their reisude number." b 
 label resn HOH ,"W%s" % (resi);
-$0
 endsnippet
  
-snippet findHbonds "Find hbonds around a residue." b 
+snippet findHbonds "Find H-bonds around a residue." b 
 remove element h; distance hbonds, all, all, 3.2, mode=2;
-$0
 endsnippet
  
 snippet printBs "Print the B-factors of a residue. " b 
-remove element h; iterate resi %{1:133}, print resi, name,b;
-$0
+remove element h; iterate resi ${1: 1:13}, print(resi, name,b);
 endsnippet
  
-snippet labelMainChain "Label the main chain atoms by resn,resi,atom name." b 
+snippet labelMainChain "Label the main chain atoms with the following: resn,resi,atom name." b 
 label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
-$0
 endsnippet
  
 snippet printBspartB "Print B factors of part B of a residue." b 
-iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
-$0
+iterate resi ${1:38} and altloc ${2:B}, print resi, name, alt, b;
 endsnippet
  
-snippet printBs2digits "Print B-values for a residue with the B's rounded off to two decimal places." b 
-iterate (resi %{1:133}), print(name + " %.2f" % b);
-$0
+snippet printBs2digits "Print B--factors for a residue with the B-factors rounded off to two decimal places." b 
+iterate (resi ${1:133}), print(name + " %.2f" % b);
 endsnippet
  
 snippet writeCommandReference2HTML "Write the command reference to html file in the present working directory. " b 
 cmd.write_html_ref('pymol-command-ref.html');
-$0
-
 endsnippet
  
-snippet averageB "Average the B-factors by using  a regular list as opposed to PyMOL's stored list. Edit the selection as needed." b 
-""" Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed."""
+snippet averageB "Average the B-factors by using a regular list as opposed to a stored list in PyMOL. Edit the selection as needed." b 
+# Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.;
 Bfactors = []; 
+#  >>> edit the selection below, which is a range of residue numbers here.;
 iterate (resi ${1:133}), Bfactors.append(b);
 print("Sum = ", "%.2f" % (sum(Bfactors)));
 print("Number of atoms = ", len(Bfactors));
 print( 'Average B =' , "%.2f" % ( sum(Bfactors)/float(len(Bfactors))));
-$0
 endsnippet
  
-snippet aveB4resiX "AveBResiX, prints the resiude number and the average bfactor. " b 
-""""AveBResiX, prints the resiude number and the average bfactor. 
-Uses reduce and lambda, builtin Python functional porgramming functions. 
-Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum. 
-"""
-Bfactors = []; 
+snippet aveB4resiX "AveBResiX, prints the residue number and the average bfactor. " b 
+# AveBResiX, prints the resiude number and the average bfactor.;
+# Uses reduce and lambda, builtin Python functional porgramming functions.;
+# Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.; 
+Bfactors = [];
+# edit the selection below, which is a range of residue numbers here.;
 iterate (resi ${1:133}), Bfactors.append(b);
-print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) )
-$0
+print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) );
 endsnippet
  
 snippet printNameB4ResiX "Print name and b-factor for a residue." b 
-Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
-$0
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133})","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
 endsnippet
  
 snippet printResiResnNameB4ResiX "Print resn, resi, atom name, and b-factor. " b 
-Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133})","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
 endsnippet
  
 snippet printResiResnNameB4ResiXNoH "Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant." b 
-Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133 and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
-$0
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(${1:resi 133} and not elem H)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
 endsnippet
  
-snippet internalGUImode2  "Make the background of the internal gui transparent to expand viewport." b 
+snippet internalGUImode2 "Make the background of the internal gui transparent to expand viewport." b 
 internal_gui_mode=2;
-$0
 endsnippet
  
-snippet internalGUIwidth "Set the width of the internal gui. 
-" b 
-internal_gui_width=%{1:20};
-$0
+snippet internalGUIwidth "Set the width of the internal gui." b 
+# set to 0 to make the internal gui vanish;
+set internal_gui_width=${1:0};
 endsnippet
  
 snippet printDoc "Print document string of a function." b 
 print ${1:my_func}.__doc__;
-$0
 endsnippet
  
 snippet lsSnips "List all snips by tab trigger and description" b 
-Tab trigger                  Description
+"""Tab trigger                  Description
 ---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 antialias                    Set antialias to get smooth edges
 ao                           Ambient occlussion.
@@ -855,39 +814,2239 @@ threeMaps                    Three electron density.
 turnAboutAxis                Turn about axis.
 undoSelection                Undo a selection.
 volumeRamp                   Volume ramp.
-writeCommandReference2HTML   Write the command reference to html file in the present working directory.
-$0
+writeCommandReference2HTML   Write the command reference to html file in the present working directory."""
+
 endsnippet
  
-snippet his31asp70 "Asp70-His31 salt-bridge from T4 lysozyme. " b 
-fetch 1lw9, async=0; 
-zoom (resi 31 or resi 70); 
+snippet his31asp70 "Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. " b 
+fetch ${1:1lw9}, async=0; 
+zoom (${2:resi 31 or resi 70}); 
 preset.technical(selection='all'); 
-bg_color gray70; 
-clip slab, 7,(resi 31 or resi 70);
+bg_color ${3:gray70}; 
+clip slab, 7,(${4:resi 31 or resi 70});
 rock;
-$0
 endsnippet
  
 snippet waterTriple "triple water pentagon." b 
-fetch 1lw9, async=0; 
-zoom resi 313; 
+fetch ${1:lw9}, async=0; 
+# zoom in on the selection. Edit by chaning the residue number.
+zoom resi ${2:313}; 
 preset.technical(selection='all', mode=1);
-$0
 endsnippet
  
 snippet ligandSelect "Make selection of ligand atoms." b 
-select substrates, organic;
-$0
+select ${1:ligand}, organic;
 endsnippet
  
 snippet github "Print url of README.md file of the pymolsnips repository." b 
 https://github.com/MooersLab/pymolsnips/blob/master/README.md
-$0
 endsnippet
  
 snippet sigdihedral "Set dihedral labels to display 2 decimals places to the right of the decimal point." b 
 set label_dihedral_digits, ${1:2};
-$0
+endsnippet
+ 
+snippet stateOne "Select state 1 from a model with multiple states." b 
+cmd.create('newobject', 'oldobject', '1', '1');
+endsnippet
+ 
+snippet sc112 "Display all symmetry mates in two unit cells along the c axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 2, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc113 "Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 3, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc311 "Display all symmetry mates three three unit cells along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 3, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc131 "Display all symmetry mates in three unit cells along b. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 3, 1, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc211 "Display all symmetry mates in two unit cell along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 1, 1, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc121 "Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 2, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc122 "Display all symmetry mates in a 1 x 2 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 2, 2, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc221 "Display all symmetry mates in 2 x 2 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 2, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc212 "Display all symmetry mates in a 2 x 1 x 2 arrays of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 1, 2, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc133 "Display all symmetry mates in 1 x 3 x 3 array of unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 3, 3, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc313 "Display all symmetry mates in a 3 x 1 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 3, 1, 3, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc331 "Display all symmetry mates in 3 x 3 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 3, 3, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc233 "Display all symmetry mates in a 2 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 2, 3, 3, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc323 "Display all symmetry mates in a 3 x 2 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc332 "Display all symmetry mates in 3 x 3 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 3, 3, 2, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc333 "Display all symmetry mates in 3 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 3, 3, 3, , ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc114 "Display all symmetry mates in four unit cells stacked long c-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 4, ,  ${2:orange},  ${3:supercell1}, 1;
+
+endsnippet
+ 
+snippet sc141 "Display all symmetry mates in four unit cells stacked long b-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 4, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc411 "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 4, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet saln "Save an aln flle with a timestamp." b 
+python;
+import datetime;
+from pymol import cmd;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT);
+cmd.save(stemName+s+".aln");
+python end;
+endsnippet
+ 
+snippet sccp4 "Save electron density map flle with timestamp" b 
+python;
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".ccp4"); 
+python end;
+endsnippet
+ 
+snippet sdae "Save dae flle with timestamp" b 
+import datetime;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".dae"); 
+
+endsnippet
+ 
+snippet carvedIsosurface "Carved isosurface representation of electron density. " b 
+delete all;
+# Fetch the coordinates. Need internet connection.;
+fetch ${1:4dgr}, async=0;
+# Fetch the electron density map.;
+fetch ${1:4dgr}, type=2fofc,async=0;
+# create a selection out of the glycan;
+select ${2:LongGlycan}, resi ${3:469:477};
+orient ${2:LongGlycan};
+remove not ${2:LongGlycan};
+remove name H*;
+isosurface 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
+color density, 2fofcmap; 
+show sticks;
+show spheres;
+set stick_radius, .07;
+set sphere_scale, .19;
+set sphere_scale, .13, elem H;
+set bg_rgb=[1, 1, 1];
+set stick_quality, 50;
+set sphere_quality, 4;
+color gray85, elem C;
+color red, elem O;
+color slate, elem N;
+color gray98, elem H;
+set stick_color, gray50;
+set ray_trace_mode, 1;
+set ray_texture, 2;
+set antialias, 3;
+set ambient, 0.5;
+set spec_count, 5;
+set shininess, 50;
+set specular, 1;
+set reflect, .1;
+set dash_gap, 0;
+set dash_color, black;
+set dash_gap, .15;
+set dash_length, .05;
+set dash_round_ends, 0;
+set dash_radius, .05;
+set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
+preset.ball_and_stick("all",mode=1);
+draw;
+endsnippet
+ 
+snippet fetch2FoFcIsosurface "Fetch 2FoFc map as an isosurface." b 
+# Fetch a 2fofc electron density map. Edit the PDB-ID code. Use lowercase letter to select a single chain.;
+fetch ${1:3nd4}, ${1:3nd4}_2fofc, type=2fofc, async=0;
+# Render and display a contour of this map as a chicken wire representation.;
+isosurface 2fofcmap, ${1:3nd4}_2fofc, 1, ${1:3nd4}, carve = 1.8;
+endsnippet
+ 
+snippet threeMapsIsosurface "Three electron density as isosurface. " b 
+load ${1:4dgr}.pdb;
+# Make sure to rename map file so that ;
+# the root filename differs from pdb root filename;
+load ${1:4dgr}_2fofc.ccp4, 2fofc;
+load ${1:4dgr}_fofc.ccp4, fofc;
+select  ${2:glycan}, ${3:resid 200 or (resid 469:477)};
+isosurface ${4:mesh1}, 2fofc, 1.0, ${2:glycan};
+color density, ${4:mesh1};
+isosurface  ${5:mesh2}, fofc, 3.0, ${2:glycan};
+color green, ${5:mesh2};
+isosurface  ${6:mesh3}, fofc, -3.0, ${2:glycan};
+color red, ${6:mesh3};
+endsnippet
+ 
+snippet carvedVolume "Carved volume representation of electron density. " b 
+delete all;
+# Fetch the coordinates. Need internet connection.;
+fetch ${1:4dgr}, async=0;
+# Fetch the electron density map.;
+fetch ${1:4dgr}, type=2fofc,async=0;
+# create a selection out of the glycan;
+select ${2:LongGlycan}, resi ${3:469:477};
+# oreint the long axes of the object along the x-axis;
+orient ${2:LongGlycan};
+# remove everything except the glycan;
+remove not ${2:LongGlycan};
+# remove the remaining hydrogen atoms;
+remove name H*;
+# show the electron density map as a surface.
+surface 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
+color density, 2fofcmap; 
+show sticks;
+show spheres;
+set stick_radius, .07;
+set sphere_scale, .19;
+set sphere_scale, .13, elem H;
+set bg_rgb=[1, 1, 1];
+set stick_quality, 50;
+# make the spheres smooth with larger settings.;
+set sphere_quality, 4;
+# gray85 is off-white, gray0 is black;
+color gray85, elem C;
+color red, elem O;
+color slate, elem N;
+color gray98, elem H;
+set stick_color, gray50;
+set ray_trace_mode, 1;
+set ray_texture, 2;
+set antialias, 3;
+set ambient, 0.5;
+set spec_count, 5;
+set shininess, 50;
+set specular, 1;
+set reflect, .1;
+set dash_gap, 0;
+set dash_color, black;
+set dash_gap, .15;
+set dash_length, .05;
+set dash_round_ends, 0;
+set dash_radius, .05;
+set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);
+preset.ball_and_stick("all",mode=1);
+draw;
+endsnippet
+ 
+snippet fetch2FoFcVolume "Fetch 2FoFc map as a volume." b 
+fetch ${1:3nd4}, type=cif, async=0;
+fetch ${1:3nd4}, {1:3nd4}_2fofc, type=2fofc, async=0;
+# Render and display a contour of this map as a volume around a selection called LongGlycan.;
+volume 2fofcmap, ${1:3nd4}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;
+endsnippet
+ 
+snippet threeMapsVolume "Three electron density as volumes. " b 
+load ${1:4dgr}.pdb;
+# Make sure to rename map file so that ;
+# the root filename differs from pdb root filename;
+load ${1:4dgr}_2fofc.ccp4, 2fofc;
+load ${1:4dgr}_fofc.ccp4, fofc;
+select  ${2:glycan}, ${3:resid 200 or (resid 469:477)};
+volume ${4:mesh1}, 2fofc, 1.0, ${2:glycan};
+color density, ${4:mesh1};
+volume ${5:mesh2}, fofc, 3.0, ${2:glycan};
+color green, ${5:mesh2};
+volume ${6:mesh3}, fofc, -3.0, ${2:glycan};
+color red, ${6:mesh3};
+endsnippet
+ 
+snippet rvi "Return settings in rounded format while running PyMOL via the RCP server ipymol in a jupyter notebook. This is a modified version of the roundview.py script." b 
+def rvj(StoredView=0, decimal_places=2, outname="roundedview.txt"):
+    """
+    rvj() is a modification of the the rv() function (aka the roundview.py) 
+    so that it can run in Jupyter notebooks with the ipymol.viewer. 
+    A set_view string is printed to the noteobook in a format that is ready 
+    for reuse. 
+    
+    The ipymol module was developed by Carlos Hernandez:
+    
+    https://github.com/cxhernandez/ipymol
+    
+    The pre-requisites for installing ipymol are as follows:
+    
+    1. Make a jupyter notebook kernel for Python interpreter inside of 
+       the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for 
+       a description of how to make one.
+    2. Install the following build of ipymol at the PyMOL prompt.
+       You need to log into your GitHub account first.
+    
+    pip install git+pip install git+https://github.com/cxhernandez/ipymol.git@2a30d6ec1588434e6f0f72a1d572444f89ff535b
+    
+    3. Make a bash alias to this PyMOL app file.
+    
+    4. Launch the jupyter notebook and select the pymol.python kernel.
+    
+    5. Open a terminal instance from the File pulldown in jupyter notebook.
+    
+    6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.
+    
+    7. Enter the following code to load ipymol and conmect to PyMOL
+    
+    from ipymol import viewer as ipv
+    ipv.start()   # Start PyMOL RPC server
+    
+    Now you can change the scene manually and send the display as static 
+    image to a cell in the jupyter notebook.
+    
+    It is assumed that the viewer class of the ipymol moduel has been 
+    imported as ipv. 
+    
+    I made the following modifications of roundview.py.
+    The cmd.get_view was replaced with ipv.get_view.
+    The cmd.extend was replaced with ipv.extend.
+    The myRoundedList was returned for further processing.
+    
+    MIT License
+    
+    Copyright:
+    Blaine Mooers and the OU Board of Regents
+    Uniersity of Oklahoma Health Sciences Center
+    Oklahoma City, OK 73104
+    
+    29 April 2020
+    
+    """
+    
+ 
+    StoredView = int(StoredView)
+    decimal_places = int(decimal_places)
+ 
+    #call the get_view function
+ 
+    m = ipv.get_view(StoredView)
+ 
+ 
+    #Make a list of the elements in the orientation matrix.
+ 
+    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9],
+              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]
+ 
+    #Round off the matrix elements to two decimal places (two fractional places)
+    #This rounding approach solved the problem of unwanted
+    #whitespaces when I tried to use a string format statement
+ 
+    myRoundedList = [round(elem, decimal_places) for elem in myList]
+    
+    #x is the string template for the output. The whitespace is required
+    #between the "set_view" and "("
+ 
+    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'
+ 
+    # Print to the command history window.
+    print(x.format(*myRoundedList))
+ 
+    #Write to a text file.
+    myFile = open("roundedview.txt", "a")
+    myFile.write(x.format(*myRoundedList) + "")
+    myFile.close()
+    return myRoundedList
+ipv.extend("rv", rv)
+endsnippet
+ 
+snippet rdkrpcChem "Demo of the use of the RPC server with a drug compound via the rdkit python module." b 
+import os;
+import rdkit;
+from rdkit import Chem;
+from rdkit.Chem import AllChem;
+from rdkit.Chem import PyMol;
+
+s = PyMOL.MolViewer();
+mol = Chem.MolFromSmiles('${1:CCOCCn1c(C2CC[NH+](CCc3ccc(C(C)(C)C(=O)[O-])cc3)CC2)nc2ccccc21}');
+mol = AllChem.AddHs(mol);
+AllChem.EmbedMolecule(mol);
+AllChem.MMFFOptimizeMolecule(mol);
+s.ShowMol(mol, name = '${2:bilastine}', showOnly = False);
+s.Zoom('${2:bilastine}');
+s.SetDisplayStyle('${2:bilastine}', 'sticks');
+s.GetPNG(preDelay=5);
+endsnippet
+ 
+snippet kernel "A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels." b 
+framerule=2pt,
+framesep=2mm,
+framesep=2mm,
+breaklines=True,
+baselinestretch=1.2
+]{bash}
+{
+ "argv": [
+  "/Applications/PyMOL.app/Contents/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "pymol.python",
+ "language": "python"
+}
+endsnippet
+ 
+snippet rdkrpcProtein "Demo of the use of the RPC server with a protein via rdkit." b 
+from rdkit.Chem import PyMol;
+
+Usage=""""Start pymol from command line with -R flag.
+Select the pymol.python kernel in Jupyter notebook. """;
+
+s = PyMol.MolViewer();
+du = s.server.do;
+du('rein; bg_color white; fetch ${1:1lw9}, type=pdb, async=0, show;nb_spheres;set_view (${2:0.46,-0.28,-0.84,0.74,-0.41,0.54,-0.49,-0.87,0.02,0.0,0.0,-155.16,35.13,11.48,9.72,122.33,187.99,-20.0});');
+s.GetPNG(preDelay=3);
+du('png ${3:T4L600dpi}.png, dpi=600');
+endsnippet
+ 
+snippet ipymolStart "Code to start the RPC server with ipymol." b 
+# Start pymol in terminal with pymol -R;
+# Select pymol.python as kernel in juptyer;
+from ipymol import viewer as ipv;
+ipv.start() # Start PyMOL RPC server;
+
+endsnippet
+ 
+snippet ipymolProtein "Demo of the use of the RPC server with a protein via ipymol." b 
+# Create a kernel for PyMOL's python interpreter inside Jupyter;
+# See the kernel snippet for an example.;
+# See the README.md file on pymolsnips GItHub website;
+# https://github.com/MooersLab/pymilsnips;
+# for more details.;
+# Start pymol in terminal with pymol -R;
+# Select pymol.python as kernel in juptyer;
+from ipymol import viewer as ipv;
+# Start PyMOL RPC server;
+ipv.start(); 
+ipv.do('fetch ${1:1lw9}');
+ipv.do('rv');
+# The double parentheses are required when set_view is run this way.;
+ipv.set_view((-0.13,-0.4,-0.91,0.89,-0.45,0.07,-0.44,-0.8,0.41,0.0,0.0,-182.47,35.13,11.48,9.72,149.64,215.3,-20.0));
+ipv.do('AOD');
+ipv.png('${2:testipymolT4L}.png');
+endsnippet
+ 
+snippet rvr "Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script." b 
+def rvr(StoredView=0, decimal_places=2, outname="roundedview.txt"):
+   """MIT License
+    Copyright:
+    Blaine Mooers and the OU Board of Regents
+    University of Oklahoma Health Sciences Center
+    Oklahoma City, OK 73104
+    30 April 2020
+    
+    First run the following:
+    
+    from rdkit.Chem import PyMol
+    s = PyMol.MolViewer()
+    du = s.server.do
+
+    """
+    StoredView = int(StoredView) decimal_places = int(decimal_places)
+    #call the get_view function
+    m = s.get_view(StoredView)
+    #Make a list of the elements in the orientation matrix.
+    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9], 
+              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]
+    #Round off the matrix elements to two decimal places (two fractional places)
+    #This rounding approach solved the problem of unwanted
+    #whitespaces when I tried to use a string format statement
+    myRoundedList = [round(elem, decimal_places) for elem in myList]
+    #x is the string template for the output. The whitespace is required
+    #between the "set_view" and "("
+    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'
+    # Print to the command history window.
+    print(x.format(*myRoundedList))
+    #Write to a text file.
+    myFile = open("roundedview.txt", "a") myFile.write(x.format(*myRoundedList) + "") myFile.close()
+    return myRoundedList
+du.extend("rvr", rvr)
+
+endsnippet
+ 
+snippet cmddocs "Print in the command history window the docstrings of all of the functions in the cmd module." b 
+[help(i) for i in dir(cmd)];
+endsnippet
+ 
+snippet pymoldocs "Return to the command history window the docstrings for all of the functions in a module." b 
+[help(i) for i in dir(pymol)];
+endsnippet
+ 
+snippet numResiProtein "Print the number of residues in a protein." b 
+sel = 'polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+endsnippet
+ 
+snippet numResiProteinChainA "Print the number of residues in chain A of a protein." b 
+sel = '${1:chain A} and polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+endsnippet
+ 
+snippet numResiNucleic "Print the number of residues in a nulceic acid (all chains)." b 
+sel = 'polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+endsnippet
+ 
+snippet numResiNucleicChainA "Print the number of residues in a nulceic acid chain." b 
+sel = '${1:chain A} and polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+endsnippet
+ 
+snippet brokenNucleicBackbone "Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long." b 
+#  >>> edit the selections below, which are ranges of residue numbers and edit the molecular object name (5fur).;
+[cmd.bond(f"/${1:5fur}//${2:E}/{i}/O3'", f"/${1:5fur}//${2:E}/{i+1}/P") for i in range(${5:1}, ${6:80})]; 
+[cmd.bond(f"/${1:5fur}//${2:F}/{i}/O3'", f"/${1:5fur}//${2:F}/{i+1}/P") for i in range(${7:81}, ${8:160})];
+endsnippet
+ 
+snippet oneBondThicknessColor "To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
+" b 
+# To change stick color and radius for the bond between atom 2 and 3;
+set_bond stick_color, ${1:yellow}, index 2, index 3;
+set_bond stick_radius, ${2:0.2}, index 2, index 3;
+endsnippet
+ 
+snippet drawLinks "Connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18. Note that this example requires the draw_links.py [http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py] by Robert Campbell." b 
+# Requires draw_links.py http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py by Robert Campbell;
+# To connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18.;
+draw_links ${1:mol1} & chain ${2:A} & name  ${3:CA} & resi ${4:1+6+7+8}, ${5:mol1} & chain ${6:A}& name ${7:CA} & resi ${8:10+16+17+18};
+endsnippet
+ 
+snippet printPath "Print the path to the currently used PyMOL binary." b 
+# Print the path to the current used PyMOL binary.
+print pymol.__path__
+endsnippet
+ 
+snippet setLigandValenceOn "Turn on the ligand valence." b 
+#Set on the valence of the ligand only;
+set valence, on, resn ${1:RZS}; set valence, off, not resn ${2:RZS};
+endsnippet
+ 
+snippet presetDocs "Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset)." b 
+help(preset)
+endsnippet
+ 
+snippet helpDocs "Return the docustring for the help submodule. This command is more concise:  help help." b 
+help(help)
+endsnippet
+ 
+snippet loadAmberTrajs "The amber trajectories have to be loaded into the same object." b 
+load ${1:file}.top, ${2:protein};
+load ${1:file}.rst, ${2:protein};
+endsnippet
+ 
+snippet saveSeppy "Saves multiple objects into multiple files using an optional prefix name." b 
+from pymol import cmd
+import glob
+import re
+
+def saveSep(prefix=''):
+  """
+  save_sep <prefix>
+
+  saves multiple objects into multiple files using an optional prefix name.
+
+  e.g. save_sep prefix
+  """
+  obj_list = cmd.get_names("all")
+
+  if obj_list:
+    for i in range(len(obj_list)):
+      obj_name = "%s%s.pdb" % (prefix, obj_list[i])
+      cmd.save(obj_name, obj_list[i])
+      print("Saving %s" %  obj_name)
+  else:
+    print("No objects found")
+    
+cmd.extend('saveSep',saveSep)
+endsnippet
+ 
+snippet optAlignRNA "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures." b 
+#!python
+ 
+##############################################################################
+#
+# @SUMMARY: -- QKabsch.py.  A python implementation of the optimal superposition
+#     of two sets of vectors as proposed by Kabsch 1976 & 1978.
+#
+# @AUTHOR: Jason Vertrees
+# @COPYRIGHT: Jason Vertrees (C), 2005-2007
+# @LICENSE: Released under GPL:
+# This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+# Street, Fifth Floor, Boston, MA 02110-1301, USA 
+#
+# DATE  : 2007-01-01
+# REV   : 2
+# REQUIREMENTS: numpy
+#
+#
+# Modified optAlign.py to use C1' carbon atoms of RNA for alignment.
+# Jan. 29, 2020 
+# Blaine Mooers, PhD
+# Univ. of Oklahoma Health Sciences Center
+#
+#############################################################################
+from array import *
+ 
+# system stuff
+import os
+import copy
+ 
+# pretty printing
+import pprint
+ 
+# for importing as a plugin into PyMol
+from pymol import cmd
+from pymol import stored
+from pymol import selector
+ 
+# using numpy for linear algebra
+import numpy
+ 
+def optAlignRNA( sel1, sel2 ):
+	"""
+	optAlignRNA performs the Kabsch alignment algorithm upon the C1' carbons of two selections.
+	Example: optAlignRNA 1JU7 and i. 1-16 and n. C1', 1CLL and i. 4-146 and n. C1'
+ 
+	Two RMSDs are returned.  One comes from the Kabsch algorithm and the other from
+	PyMOL based upon your selections.
+	
+	This function can be run in a for loop to fit multiple structures  with a common prefix name:
+	
+	for x in cmd.get_names(): optAlignRNA(x, "1JU7_0001")
+	 
+	or get the rmsds for all combinations, do the following:
+	 
+	[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()]
+
+	"""
+	cmd.reset()
+ 
+	# make the lists for holding coordinates
+	# partial lists
+	stored.sel1 = []
+	stored.sel2 = []
+	# full lists
+	stored.mol1 = []
+	stored.mol2 = []
+ 
+	# -- CUT HERE
+	sel1 += " and N. C1'"
+	sel2 += " and N. C1'"
+	# -- CUT HERE
+ 
+	# Get the selected coordinates.  We
+	# align these coords.
+	cmd.iterate_state(1, selector.process(sel1), "stored.sel1.append([x,y,z])")
+	cmd.iterate_state(1, selector.process(sel2), "stored.sel2.append([x,y,z])")
+ 
+	# get molecule name
+	mol1 = cmd.identify(sel1,1)[0][0]
+	mol2 = cmd.identify(sel2,1)[0][0]
+ 
+	# Get all molecule coords.  We do this because
+	# we have to rotate the whole molcule, not just
+	# the aligned selection
+	cmd.iterate_state(1, mol1, "stored.mol1.append([x,y,z])")
+	cmd.iterate_state(1, mol2, "stored.mol2.append([x,y,z])")
+ 
+	# check for consistency
+	assert len(stored.sel1) == len(stored.sel2)
+	L = len(stored.sel1)
+	assert L > 0
+ 
+	# must alway center the two proteins to avoid
+	# affine transformations.  Center the two proteins
+	# to their selections.
+	COM1 = numpy.sum(stored.sel1,axis=0) / float(L)
+	COM2 = numpy.sum(stored.sel2,axis=0) / float(L)
+	stored.sel1 -= COM1
+	stored.sel2 -= COM2
+ 
+	# Initial residual, see Kabsch.
+	E0 = numpy.sum( numpy.sum(stored.sel1 * stored.sel1,axis=0),axis=0) + numpy.sum( numpy.sum(stored.sel2 * stored.sel2,axis=0),axis=0)
+ 
+	#
+	# This beautiful step provides the answer.  V and Wt are the orthonormal
+	# bases that when multiplied by each other give us the rotation matrix, U.
+	# S, (Sigma, from SVD) provides us with the error!  Isn't SVD great!
+	V, S, Wt = numpy.linalg.svd( numpy.dot( numpy.transpose(stored.sel2), stored.sel1))
+ 
+	# we already have our solution, in the results from SVD.
+	# we just need to check for reflections and then produce
+	# the rotation.  V and Wt are orthonormal, so their det's
+	# are +/-1.
+	reflect = float(str(float(numpy.linalg.det(V) * numpy.linalg.det(Wt))))
+ 
+	if reflect == -1.0:
+		S[-1] = -S[-1]
+		V[:,-1] = -V[:,-1]
+ 
+	RMSD = E0 - (2.0 * sum(S))
+	RMSD = numpy.sqrt(abs(RMSD / L))
+ 
+	#U is simply V*Wt
+	U = numpy.dot(V, Wt)
+ 
+	# rotate and translate the molecule
+	stored.sel2 = numpy.dot((stored.mol2 - COM2), U)
+	stored.sel2 = stored.sel2.tolist()
+	# center the molecule
+	stored.sel1 = stored.mol1 - COM1
+	stored.sel1 = stored.sel1.tolist()
+ 
+	# let PyMol know about the changes to the coordinates
+	cmd.alter_state(1,mol1,"(x,y,z)=stored.sel1.pop(0)")
+	cmd.alter_state(1,mol2,"(x,y,z)=stored.sel2.pop(0)")
+ 
+	#print("Moved: %s Reference: %s RMSD = %f" % mol1, mol2, RMSD)
+	print("% s, % s,% 5.3f" % (mol1, mol2, RMSD))
+ 
+	# make the alignment OBVIOUS
+	cmd.hide('everything')
+	cmd.show('ribbon', sel1 + ' or ' + sel2)
+	cmd.color('gray70', mol1 )
+	cmd.color('magenta', mol2 )
+	cmd.color('red', 'visible')
+	cmd.show('ribbon', 'not visible')
+	cmd.center('visible')
+	cmd.orient()
+	cmd.zoom('visible')
+ 
+cmd.extend("optAlignRNA", optAlignRNA)
+endsnippet
+ 
+snippet loadManyFiles "Load into PyMOL multiple files with a common file stem. The is a script by Robert Campbell that has been updated for Python3." b 
+# Copyright (c) 2004 Robert L. Campbell
+#
+# Modified for use with Python3.
+# Jan. 29, 2020 
+# Blaine Mooers, PhD
+# Univ. of Oklahoma Health Sciences Center
+#
+#
+from pymol import cmd
+import glob
+
+def loadFiles(files):
+  """
+  load_files <files>
+
+  loads multiple files (using filename globbing)
+  into a multiple objects named as the files are (e.g. collection of
+  downloaded PDB files).
+
+  e.g. load_files prot_*.pdb
+  """
+  file_list = glob.glob(files)
+  if file_list:
+    file_list.sort()
+    for i in file_list:
+      #obj_name = i.replace('.pdb','')
+      #cmd.load(file_list[i],obj_name)
+      cmd.load(i)
+  else:
+    print("No files found for pattern %s" % files)
+
+cmd.extend('loadFiles',loadFiles)
+endsnippet
+ 
+snippet loadAndAlignManyFiles3 "These are the instructions for loading and aligning multiple files." b 
+# To save a multiple models in a file to separate pdb files.
+run {1:~/Scripts/}saveSep.py
+saveSep 
+endsnippet
+ 
+snippet allPairs "This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures." b 
+[[${1:optAlignRNA}(x, y) for x in cmd.get_names()] for y in cmd.get_names()];
+endsnippet
+ 
+snippet dssrBlock1 "Combining DSSR block representation with regular PyMOL cartoons after loading the dssr_block.py script by Thomas Holder." b 
+reinitialize;
+run /Users/blaine/.pymol/startup/dssr_block.py;
+fetch 1ehz, async=0;
+as cartoon;
+set cartoon_ladder_radius, 0.1;
+set cartoon_ladder_color, gray;
+set cartoon_nucleic_acid_mode, 1;
+set cartoon_nucleic_acid_color, orange;
+orient;turn z,30; translate [0,5,0]
+dssr_block;
+png ~/dssrBlock1.png 1600,1600
+endsnippet
+ 
+snippet dssrBlock2 "DSSR block representation with fused blocks after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH." b 
+reinitialize;
+run /Users/blaine/.pymol/startup/dssr_block.py;
+set cartoon_nucleic_acid_color, orange;
+fetch 1ehz, async=0;
+dssr_block block_file=wc
+endsnippet
+ 
+snippet dssrBlock3 "DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH." b 
+reinitialize;
+# Edit the path to Thomas Holder's block script.;
+run ${1:"/Users/blaine/.pymol/startup/dssr_block.py;
+fetch ${2:2n2d}, async=0;
+dssr_block  ${2:2n2d}, 0;
+set all_states;
+endsnippet
+ 
+snippet dssrBlock4 "DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH." b 
+reinitialize;
+${1:run /Users/blaine/.pymol/startup/dssr_block.py};
+fetch ${2:1msy}, async=0;
+set cartoon_nucleic_acid_color, ${3:orange};
+dssr_block block_color=N red | minor 0.9 | major yellow;
+endsnippet
+ 
+snippet nucleicAcidCartoon "Settings for nucliec acid cartoon." b 
+# The dark blue used for electron density maps is called 'density'.;
+set cartoon_ladder_color, ${1:density};
+# The cartoon_ladder_radius should be renamed the cartoon_rung_radius. The dimensions are in Angstroms.;
+set cartoon_ladder_radius, ${2:0.2};
+set cartoon_nucleic_acid_color, ${3:red};
+# The cartoon ring modes range from 0 to 4.;
+set cartoon_ring_mode, ${4:2};
+endsnippet
+ 
+snippet nucleicAcidCartoon2Strands "Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. The set command has the syntax of setting_name [, setting_value [, selection [,state ]]] . In this case, the selection has to be global, object, object-state, or per-atom settings. It cannot be a named selection. This is a weak spot in PyMOL. Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. Many double-stranded helices have one strand in the asymmetric unit. The second strand is in the biological unit. The coordinates for the second strand are in the pdb1 file type at the PDB. The second strand is in the second state, which is equivalent to the second model in the pdb file. The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting). The bases are colored differently too (via the cartoon_ladder_color setting).
+" b 
+# There is not support for applying different settings to different selections.
+# Instead, this can be done for different objects.
+# Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands.
+# The set command as the syntax of  setting_name [, setting_value [, selection [,state ]]]
+# In this case, the selection has to be global, object, object-state, or per-atom settings.
+# It cannot be a named selection.
+# Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands.
+# Many double-stranded helices have one strand in the asymmetric unit.
+# The second strand is in the biological unit.;
+# The coordinates for the second strand are in the pdb1 file type at the PDB.;
+# The second strand is in the second state, which is equivalent to the second model in the pdb file.;
+# The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting).;
+# The bases are colored differently too (via the cartoon_ladder_color setting).;
+fetch ${1:3nd3}, ${2:3nd3}, type=${3:pdb1};
+set all_states, on;
+create chA, ${2:3nd3}, 1, 1;
+create chB, ${2:3nd3}, 2, 1;
+# colors only the backbone;
+set cartoon_nucleic_acid_color, ${4:magenta}, chA;
+set cartoon_nucleic_acid_color, ${5:orange}, chB;
+# color the bases;
+set cartoon_ladder_color,  ${6:density}, chA;
+set cartoon_ladder_color,  ${7:yellow}, chB;
+
+endsnippet
+ 
+snippet nucleicAcidColorbySequence "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid." b 
+select rna_A, resn A;
+select rna_C, resn C;
+select rna_G, resn G;
+select rna_U, resn U;
+select dna_T, resn T;
+color ${1:yellow}, rna_A;
+color ${2:red}, rna_C; 
+color ${3:gray40}, rna_G;
+color ${4:palecyan}, rna_U;
+color ${5:brown}, dna_T;
+endsnippet
+ 
+snippet nucleicAcidFlatRibbonColorbySequence "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid. It is dervied from the CR shortcut. The backcone is shown as a flatten ribbon." b 
+bg_color white;
+set cartoon_oval_length, ${1:1.85};
+set cartoon_oval_width, ${2:0.5};
+cartoon oval;
+set cartoon_ring_mode, ${3:3};
+# set the color of the backbone oval;
+set cartoon_nucleic_acid_color, ${4:blue};
+select rna_A, resn A;
+select rna_C, resn C;
+select rna_G, resn G;
+select rna_U, resn U;
+select dna_T, resn T;
+color ${5:yellow}, rna_A;
+color ${6:red}, rna_C; 
+color ${7:gray40}, rna_G;
+color ${8:palecyan}, rna_U;
+color ${9:brown}, dna_T;
+as cartoon;
+endsnippet
+ 
+snippet nucleicAcidCartoonFilledRings "The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py." b 
+bg_color white;
+show sticks;
+set cartoon_ring_mode, 3;
+set cartoon_ring_finder, 1;
+set cartoon_ladder_mode, 1;
+set cartoon_nucleic_acid_mode, 4;
+set cartoon_ring_transparency, 0.5;
+as cartoon;
+endsnippet
+ 
+snippet basePairStacking "This code make as standard base stacking diagram with ball and stick representation. " b 
+delete all;
+fetch 4PCO, type=pdb, async=0;
+select G2G3, ( ((resi 2 or resi 3) and chain A) or ((resi 8 or resi 9) and chain B));
+remove not G2G3;
+bg_color white;
+show sticks;
+set stick_radius=0.14;
+set stick_ball, on; 
+set stick_ball_ratio,1.9;
+set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7.24,9.55,11.78,29.46,57.91,-20.0);
+remove name H*;
+select carbon1, element C and (resi 3 or resi 8) 
+# select lower base pair;
+select carbon2, element C and (resi 2 or resi 9) 
+#select upper base pair;
+color gray70, carbon1;
+color gray10, carbon2;
+show sticks;
+space cmyk;
+distance hbond1, /4PCO//B/U`9/N3,/4PCO//A/G`2/O6;
+distance hbond2, /4PCO//B/U`9/O2,/4PCO//A/G`2/N1;
+distance hbond3, /4PCO//A/U`3/N3,/4PCO//B/G`8/O6;
+distance hbond4, /4PCO//A/U`3/O2,/4PCO//B/G`8/N1;
+color black, hbond1;
+color black, hbond2;
+color gray70, hbond3;
+color gray70, hbond4;
+show nb_spheres;
+set nb_spheres_size, 0.35;
+hide labels;
+ray 1600,1000;
+png 4PCO.png;
+
+endsnippet
+ 
+snippet nucleicAcidDumbellCartoonColorbySequence "This code colors by the nucleotides by base seqence. The backcone is shown as a flatten ribbon with rolled edges that give the dumbell effect. The code can be applied to any nucleic acid. The code is dervied from the CR and DU shortcuts. " b 
+bg_color white;
+set cartoon_oval_length, ${1:1.85}
+set cartoon_oval_width, ${2:0.5}
+cartoon oval;
+cartoon dumbbell;
+set cartoon_dumbbell_width, 0.2;
+set cartoon_dumbbell_radius, 0.4;
+set cartoon_ring_mode, ${3:3};
+# set the color of the backbone oval
+set cartoon_nucleic_acid_color, ${4:blue};
+select rna_A, resn A;
+select rna_C, resn C;
+select rna_G, resn G;
+select rna_U, resn U;
+select dna_T, resn T;
+color ${5:yellow}, rna_A;
+color ${6:red}, rna_C; 
+color ${7:gray40}, rna_G;
+color ${8:palecyan}, rna_U;
+color ${9:brown}, dna_T;
+as cartoon;
+endsnippet
+ 
+snippet stereokb "Set keyboard shortcut by mapping F1 to stereo." b 
+cmd.set_key('F1',lambda:cmd.stereo({'on':0,'off':1}[cmd.get('stereo')]));
+endsnippet
+ 
+snippet listSettings2 "Print to the screen the settings and their current parameter values." b 
+list = setting.get_name_list();[print("%s => %s" % (name, setting.get_setting_text(name))) for name in list];
+endsnippet
+ 
+snippet listSettings "Print to the screen the settings and their current parameter values. This is the more compact version." b 
+[print("%s => %s" % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];
+endsnippet
+ 
+snippet displayFonts "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts." b 
+python;
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+python end;
+cmd.set('label_size', 50);
+cmd.set('grid_mode');
+
+endsnippet
+ 
+snippet listObjects "Create a list of objects in the internal gui and print this list to the screen." b 
+objList = cmd.get_names("objects");print(objList);
+endsnippet
+ 
+snippet listLigandProteinDistances "Print a list of protein--ligand distances. Code by Dan Kulp. Updated for Python3." b 
+from pymol import cmd
+"""
+Find all distances betwen all ligand atoms and all protein atoms. 
+
+Adapted and updated from script by Dan Kulp posted here
+https://sourceforge.net/p/pymol/mailman/message/10097804/
+
+There are probably better solutions like finding just the 
+distances to proein atoms within a certain distance from 
+the ligand.
+
+Due to the nested for loops, this script is takes several second
+to run on a medium-sized human protein. This script is a 
+good candidate for vectorization. 
+
+It is also a good candiate for becoming a function and a shortcut. 
+
+"""
+
+# customize these lines to your protein.
+cmd.fetch("6NEC")
+cmd.select("prot","not resn XIN and not resn HOH and not chain C")
+cmd.select("lig", "resn XIN and not chain C")
+
+dist_list = {}
+pro_atoms = cmd.get_model("prot")
+lig_atoms = cmd.get_model("lig")
+
+for l_at in lig_atoms.atom:
+    for p_at in pro_atoms.atom:
+        dist_list[str(l_at.resn) +
+                     ":" +
+                      str(l_at.resi) +
+                      " " +
+                      l_at.name +
+                      " ---- " + 
+                      str(p_at.resn) +
+                      ":" +
+                      str(p_at.resi) +
+                      " " +
+                      p_at.name] = cmd.dist("foo", 
+                                            "index " +
+                                            str(l_at.index),"index " + str(p_at.index))
+        cmd.delete("foo")
+print("List of all pairwise ligand--protein atom-atom distances:")
+# [print("Distance of " + d + " is " + str(dist_list[d])) for d in dist_list.keys()]
+
+# More compact print statement. Need an f-string format statement.
+[print( d + " " + str(dist_list[d])) for d in dist_list.keys()]
+endsnippet
+ 
+snippet nucleicAcidBackboneTubesSticks "This code shows the cartoon backbone tube as 65% transparent. It hides the rungs of the cartoon. It shows all of the non-H atoms are sticks. The motivation is to have the cartoon highlight the backbone without dominanting the scene." b 
+set bg_rgb, white;
+hide everything, all;
+# Change to the name of your molecular object.;
+show cartoon, ${1:3nd3};
+set cartoon_sampling,1;
+set cartoon_tube_radius, 0.5;
+set cartoon_ladder_mode, 0;
+# Set to 0.0 to turn off transparency;
+set cartoon_transparency, ${2:0.65};
+# The default strick radisu is 0.25. I think it is too thick.;
+set stick_radius ${3:0.12};
+show sticks;
+hide sticks, element H;
+endsnippet
+ 
+snippet symexp "The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***." b 
+symexp ${1:symm}, ${2:3fa0}, (${2:3fa0}), ${3:20},${4:1};
+endsnippet
+ 
+snippet addAxis "Adds the function draw_axis(). Used to a symmetry axis, a ncs axis, or scale bar to a scene." b 
+python
+from pymol.cgo import *    # get constants
+from pymol import cmd
+
+import math
+
+class Counter:
+    """
+    draw_line
+    source https://www.pymolwiki.org/index.php/Symmetry_Axis
+    
+    Pymol script copyright Matthew O'Meara and Xavier Ambroggio 2007
+    
+    Under  GNU Free Documentation License 1.2
+    
+    Example:
+    
+    draw_axis(x=18.232, y=17.150, z=9.488,i=-.226639, j=0.708772, k=-.668039, r=1, b=0, g=0, width=1, length=100)
+    
+    Updated 15 June 2020 
+    Blaine Mooers
+    
+    Notes:
+    1) Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.
+    2) The postion (xyz) is the middle of the line, not one end as expected for a vector.
+    3) Another example: draw_axis(x=0, y=0, z=0,i=0, j=0, k=1, r=1, b=0, g=0, width=300, length=96) 
+    4) Changed print statement to Python3 print function.
+    5) Replaced cmd.extend() with function generator.
+    """
+   def __init__(self):
+       self.state = 1
+counter = Counter()
+
+@cmd.extend
+def draw_axis(x=None, y=None, z=None, i=None, j=None, k=None, length=20.0, r=1.0, g=1.0, b=1.0, width=1.0 ):
+   if x == None or y == None or z == None or i == None or j == None or k== None :
+       print('Usage: draw_axis x,y,z, i,k,j, length, r,g,b, width')
+       print('draw a line centered at (x,y,z) with the direction vector (i,j,k)')
+       print('length, color (r,g,b), and width arguments are optional')
+#        print 'For a fun example of the command, run draw_axis_example'
+   else :
+       x,y,z = float(x), float(y), float(z)
+       i,j,k = float(i), float(j), float(k)
+       r,g,b = float(r), float(g), float(b)
+       width = float(width)
+       length = float(length) / 2.0
+
+       x1,y1,z1 = (x+i*length,y+j*length,z+k*length)
+       x2,y2,z2 = (x-i*length,y-j*length,z-k*length)
+
+       obj = [
+           LINEWIDTH, width,
+           BEGIN, LINES,
+
+           COLOR,   r,  g,  b,
+           VERTEX, x1, y1, z1,
+           VERTEX, x2, y2, z2,
+
+           END
+           ]
+
+       cmd.load_cgo(obj,'axis'+str(counter.state))
+       counter.state += 1
+python end
+
+endsnippet
+ 
+snippet synch "Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns." b 
+cmd.sync(timeout=${1:1.0},poll=${2:0.05});
+endsnippet
+ 
+snippet renumResi "Add or substract a residue number offset." b 
+alter ${1:3fa0}, resi=str(int(resi)+${2:100});sort;
+endsnippet
+ 
+snippet renumAtoms "Add or substract a atom number offset." b 
+alter {$1:3fa0}, ID=ID+${2:100};
+sort;
+endsnippet
+ 
+snippet renameChain "Rename a chain. " b 
+alter ${1:3fa0} and chain ${2:A}, chain=${3:"C"};
+sort;
+endsnippet
+ 
+snippet printAtomNumbers "Print the atom number2 of a residue." b 
+iterate (resi ${1:1}), print(name + " %i${1:5}" % ID);
+endsnippet
+ 
+snippet printAtomNames "Print the atom names of a residue." b 
+iterate (resi ${1:101}), print(name);
+endsnippet
+ 
+snippet printBfactors "Print the bfactors of a residue." b 
+iterate (resi ${1:101}), print(name + " %.2f" % b);
+endsnippet
+ 
+snippet printVDWradii "Print the van der Waals radii of the atoms in of a residue." b 
+iterate (resi ${1:101}), print(name + " %.2f" % vdw);
+endsnippet
+ 
+snippet printCoordinates "Print the coordinates of the atoms in a residue." b 
+stored.coords = []; 
+iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); 
+[print(i) for i in stored.coords];
+endsnippet
+ 
+snippet printNamesCoordinates "Print the atom names and coordinates of the atoms in a residue." b 
+stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]); 
+stored.coords = []; iterate_state 1, (resi ${1:101})), stored.coords.append([x,y,z]); 
+[print(i,j) for i,j in zip(stored.names, stored.coords)];
+endsnippet
+ 
+snippet printNamesCoordinates "Print the atom names as tuples and coordinates of the atoms in a residue as a list." b 
+stored.coords = []; iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); 
+stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]);
+stored.names3 = [tuple(i) for i in stored.names];
+[print(i,j) for i,j in(zip(stored.names3, stored.coords)];
+endsnippet
+ 
+snippet emacsjupyterSourceBlock "Source block template in org-mode with emacs-jupyter package. " b 
+#+BEGIN_SRC jupyter-python :session py :kernel pymol.python :exports both :results raw drawer 
+from pymol import cmd
+cmd.do("reinitialize")
+cmd.bg_color("white")
+cmd.do("fetch 6VXX")
+cmd.do("zoom (resi 614 and chain A)")
+cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")
+cmd.do("set label_color, black; set label_size, 48")
+cmd.do("set stick_radius, 0.12")
+cmd.do("hide cartoon; show sticks")
+cmd.do("set ray_shadows, 0")
+cmd.do("draw")
+cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
+#+END_SRC
+
+#+RESULTS:
+endsnippet
+ 
+snippet obipythonSourceBlock "Source block template in org-mode with the ob-ipython package. " b 
+#+BEGIN_SRC ipython :session py :kernel pymol.python :exports both :results raw drawer 
+from pymol import cmd
+cmd.do("reinitialize")
+cmd.bg_color("white")
+cmd.do("fetch 6VXX")
+cmd.do("zoom (resi 614 and chain A)")
+cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")
+cmd.do("set label_color, black; set label_size, 48")
+cmd.do("set stick_radius, 0.12")
+cmd.do("hide cartoon; show sticks")
+cmd.do("set ray_shadows, 0")
+cmd.do("draw")
+cmd.do("png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600")
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
+#+END_SRC
+
+#+RESULTS:
+endsnippet
+ 
+snippet importPyMOLcmd "Import the cmd class from the pymol api." b 
+from pymol import cmd
+endsnippet
+ 
+snippet importIPythonDisplay "Imports for using IPython to display images loaded from disk in notebook cells." b 
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+endsnippet
+ 
+snippet loadImage "Load image." b 
+Image(filename = PATH +"${1:5da6orient}.png", width=${2:600}, height=${3:1000}, unconfined=True);
+endsnippet
+ 
+snippet imports4PyMOLjupyter "Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay." b 
+from pymol import cmd
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+endsnippet
+ 
+snippet getCoordinatespy "Python version of getCoordinates snippets. Note that the python2 print statement stills works  in pml scripts. " b 
+print(cmd.get_atom_coords(${1:'/4PCO//B/G`8/OP2'}));
+endsnippet
+ 
+snippet fastapy "Python version of the command to print the sequence from a PDB file in the fasta format." b 
+# Get the sequences of all molecular objects.;
+print(cmd.get_fastastr('${1:all}'));
+endsnippet
+ 
+snippet fetchThreeMaps "Display three electron density maps as isomesh. " b 
+fetch ${1:4dgr}, type=pdb;
+# Make sure to rename map file so that ;
+# the root filename differs from pdb root filename;
+fetch ${1:4dgr},  ${1:4dgr}_2fofc, type=2fofc;
+fetch ${1:4dgr}, ${1:4dgr}_fofc, type=fofc;
+select  ${2:glycan}, ${3:resid 200 or resid 469:477};
+isomesh ${4:mesh1}, 2fofc, 1.0, ${2:glycan};
+color density, ${4:mesh1};
+isomesh ${5:mesh2}, fofc, 3.0, ${2:glycan};
+color green, ${5:mesh2};
+isomesh ${6:mesh3}, fofc, -3.0, ${2:glycan};
+color red, ${6:mesh3};
+endsnippet
+ 
+snippet scaleRadiusColorpy "Scale the radius and color of atoms as spheres by property in the B-value column." b 
+cmd.do('bg_color white;')
+cmd.do('hide everything;')
+cmd.do('show spheres;')
+cmd.do('set  stick_radius = 0.1;')
+cmd.do('hide everything, HET;')
+cmd.do('show spheres, HET;')
+cmd.do('set sphere_quality=3;')
+cmd.do('show sticks, resi 1102;')
+cmd.do('from pymol import stored;')
+cmd.do('# set the stored array equal to the b−values or use your own values; ')
+cmd.do('stored.bb = [ ];')
+cmd.do('iterate all, stored.bb.append(b);')
+# scale the b−values;
+cmd.do('M = max(stored.bb);')
+cmd.do('scaledBB = map(lambda x: float (x/M), stored.bb);')
+count = 0;
+# set the sphere radii independently;
+for x in scaledBB:
+     cmd.set("sphere_scale", x ,"ID %s"%count)
+     count = count + 1
+cmd.do('spectrum b, selection=4gdx;')
+cmd.do('space cmyk;')
+cmd.do('set specular_intensity , 0.25;')
+endsnippet
+ 
+snippet scaleRadiusColorPythonInsertpy "Python block insert for scaleRadiusColorpy." b 
+# scale the b−values;
+M = max(stored.bb);
+scaledBB = map(lambda x: float (x/M), stored.bb);
+count = 0;
+# set the sphere radii independently;
+#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB]
+for x in scaledBB:
+  cmd.set("sphere_scale", x ,"ID %s"%count)
+  count = count + 1
+endsnippet
+ 
+snippet spngpy "Save png flle with timestamp" b 
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".png"); 
+
+endsnippet
+ 
+snippet displayFontspy "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts." b 
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+cmd.set('label_size', 50);
+cmd.set('grid_mode');
+
+endsnippet
+ 
+snippet aveB4resiXpy "AveBResiX, prints the residue number and the average bfactor. " b 
+# AveBResiX, prints the resiude number and the average bfactor.;
+# Uses reduce and lambda, builtin Python functional porgramming functions.;
+# Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.;
+Bfactors = [];
+# edit the selection below, which is a range of residue numbers here.;
+iterate (resi ${1:133}), Bfactors.append(b);
+print( "Average B-factor of residue ", %{1:133} , "   = ", "%.2f" %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) );
+endsnippet
+ 
+snippet sc441 "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 4, 4, 1, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc444 "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 4, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc414 "Display all symmetry mates in a 4 x 1 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 4, 1, 4, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc144 "Display all symmetry mates in in a 1 x 4 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sc444 "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/." b 
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 4, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;
+endsnippet
+ 
+snippet sdaepy "Save dae flle with timestamp" b 
+import datetime;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".dae"); 
+
+endsnippet
+ 
+snippet sccp4py "Save electron density map flle with timestamp" b 
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".ccp4"); 
+endsnippet
+ 
+snippet salnpy "Save an aln flle with a timestamp. Python version." b 
+import datetime;
+from pymol import cmd;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT);
+cmd.save(stemName+s+".aln");
+
+endsnippet
+ 
+snippet lspymolrcpy "Print list of active pymolrc files." b 
+print(invocation.options.deferred);
+endsnippet
+ 
+snippet printDocpy "Print document string of a function." b 
+print(${1:my_func}.__doc__);
+endsnippet
+ 
+snippet printPathpy "Print the path to the currently used PyMOL binary." b 
+# Print the path to the current used PyMOL binary.
+print(pymol.__path__)
+endsnippet
+ 
+snippet pymoldocspy "Return to the command history window the docstrings for all of the functions in a module." b 
+[help(i) for i in dir(pymol)];
+endsnippet
+ 
+snippet aobw "Ambient occlussion in grayscale." b 
+# Note: requires the gscale() function from pymolshortcuts.py.
+# Download this script from http://GitHub.com/MooersLab/pymolshortcuts.
+# Load the functions from this script with the command 'run pymolshortcuts.py'
+set_color oxygen, [1.0,0.4,0.4];
+set_color nitrogen, [0.5,0.5,1.0];
+remove solvent;
+as spheres;
+util.cbaw;
+bg white;
+gscale();
+set light_count,10;
+set spec_count,1;
+set shininess, 10;
+set specular,0.25;
+set ambient,0;
+set direct,0;
+set reflect,1.5;
+set ray_shadow_decay_factor, 0.1;
+set ray_shadow_decay_range, 2;
+set depth_cue, 0;
+ray;
+
+endsnippet
+ 
+snippet aod "Ambient occlussion with carbon atoms colored black." b 
+set_color oxygen, [1.0,0.4,0.4];
+set_color nitrogen, [0.5,0.5,1.0];
+remove solvent;
+as spheres;
+util.cbaw;
+bg white;
+set light_count,10;
+set spec_count,1;
+set shininess, 10;
+set specular,0.25;
+set ambient,0;
+set direct,0;
+set reflect,1.5;
+set ray_shadow_decay_factor, 0.1;
+set ray_shadow_decay_range, 2;
+color gray00, symbol c
+color gray90, symbol h
+set depth_cue, 0;
+ray;
+
+endsnippet
+ 
+snippet aodbw "Ambient occlussion in grayscale with carbon atoms colored black." b 
+# Note: requires the gscale() function from pymolshortcuts.py.
+# Download this script from http://GitHub.com/MooersLab/pymolshortcuts.
+# Load the functions from this script with the command 'run pymolshortcuts.py'
+set_color oxygen, [1.0,0.4,0.4];
+set_color nitrogen, [0.5,0.5,1.0];
+remove solvent;
+as spheres;
+util.cbaw;
+bg white;
+gscale();
+set light_count,10;
+set spec_count,1;
+set shininess, 10;
+set specular,0.25;
+set ambient,0;
+set direct,0;
+set reflect,1.5;
+set ray_shadow_decay_factor, 0.1;
+set ray_shadow_decay_range, 2;
+set depth_cue, 0;
+ray;
+
+endsnippet
+ 
+snippet addAxispy "Adds the function draw_axis(). Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene." b 
+from pymol.cgo import *    # get constants
+from pymol import cmd
+
+import math
+
+class Counter:
+    """
+    draw_line
+    source https://www.pymolwiki.org/index.php/Symmetry_Axis
+    
+    Pymol script copyright Matthew O'Meara and Xavier Ambroggio 2007
+    
+    Under  GNU Free Documentation License 1.2
+    
+    Example:
+    
+    draw_axis(x=18.232, y=17.150, z=9.488,i=-.226639, j=0.708772, k=-.668039, r=1, b=0, g=0, width=1, length=100)
+    
+    Updated 15 June 2020 
+    Blaine Mooers
+    
+    Notes:
+    1) Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.
+    2) The postion (xyz) is the middle of the line, not one end as expected for a vector.
+    3) Another example: draw_axis(x=0, y=0, z=0,i=0, j=0, k=1, r=1, b=0, g=0, width=300, length=96) 
+    4) Changed print statement to Python3 print function.
+    5) Replaced cmd.extend() with function generator.
+    """
+   def __init__(self):
+       self.state = 1
+counter = Counter()
+
+@cmd.extend
+def draw_axis(x=None, y=None, z=None, i=None, j=None, k=None, length=20.0, r=1.0, g=1.0, b=1.0, width=1.0 ):
+   if x == None or y == None or z == None or i == None or j == None or k== None :
+       print('Usage: draw_axis x,y,z, i,k,j, length, r,g,b, width')
+       print('draw a line centered at (x,y,z) with the direction vector (i,j,k)')
+       print('length, color (r,g,b), and width arguments are optional')
+#        print 'For a fun example of the command, run draw_axis_example'
+   else :
+       x,y,z = float(x), float(y), float(z)
+       i,j,k = float(i), float(j), float(k)
+       r,g,b = float(r), float(g), float(b)
+       width = float(width)
+       length = float(length) / 2.0
+
+       x1,y1,z1 = (x+i*length,y+j*length,z+k*length)
+       x2,y2,z2 = (x-i*length,y-j*length,z-k*length)
+
+       obj = [
+           LINEWIDTH, width,
+           BEGIN, LINES,
+
+           COLOR,   r,  g,  b,
+           VERTEX, x1, y1, z1,
+           VERTEX, x2, y2, z2,
+
+           END
+           ]
+
+       cmd.load_cgo(obj,'axis'+str(counter.state))
+       counter.state += 1
+
+endsnippet
+ 
+snippet grayscalepy "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via gscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command." b 
+def grayscale(selection="all"):
+    """Apply by entering grayscale()"""
+    cmd.color('grey64', 'elem Ac')
+    cmd.color('grey67', 'elem Al')
+    cmd.color('grey39', 'elem Am')
+    cmd.color('grey46', 'elem Sb')
+    cmd.color('grey75', 'elem Ar')
+    cmd.color('grey58', 'elem As')
+    cmd.color('grey33', 'elem At')
+    cmd.color('grey56', 'elem Ba')
+    cmd.color('grey40', 'elem Bk')
+    cmd.color('grey87', 'elem Be')
+    cmd.color('grey40', 'elem Bi')
+    cmd.color('grey20', 'elem Bh')
+    cmd.color('grey77', 'elem B')
+    cmd.color('grey26', 'elem Br')
+    cmd.color('grey86', 'elem Cd')
+    cmd.color('grey76', 'elem Ca')
+    cmd.color('grey34', 'elem Cf')
+    cmd.color('grey77', 'elem C')
+    cmd.color('grey98', 'elem Ce')
+    cmd.color('grey17', 'elem Cs')
+    cmd.color('grey70', 'elem Cl')
+    cmd.color('grey60', 'elem Cr')
+    cmd.color('grey64', 'elem Co')
+    cmd.color('grey54', 'elem Cu')
+    cmd.color('grey42', 'elem Cm')
+    cmd.color('grey89', 'elem D')
+    cmd.color('grey19', 'elem Db')
+    cmd.color('grey79', 'elem Dy')
+    cmd.color('grey29', 'elem Es')
+    cmd.color('grey67', 'elem Er')
+    cmd.color('grey85', 'elem Eu')
+    cmd.color('grey28', 'elem Fm')
+    cmd.color('grey93', 'elem F')
+    cmd.color('grey8', 'elem Fr')
+    cmd.color('grey82', 'elem Gd')
+    cmd.color('grey60', 'elem Ga')
+    cmd.color('grey52', 'elem Ge')
+    cmd.color('grey80', 'elem Au')
+    cmd.color('grey68', 'elem Hf')
+    cmd.color('grey20', 'elem Hs')
+    cmd.color('grey96', 'elem He')
+    cmd.color('grey75', 'elem Ho')
+    cmd.color('grey89', 'elem H')
+    cmd.color('grey49', 'elem In')
+    cmd.color('grey16', 'elem I')
+    cmd.color('grey29', 'elem Ir')
+    cmd.color('grey48', 'elem Fe')
+    cmd.color('grey65', 'elem Kr')
+    cmd.color('grey76', 'elem La')
+    cmd.color('grey19', 'elem Lr')
+    cmd.color('grey34', 'elem Pb')
+    cmd.color('grey60', 'elem Li')
+    cmd.color('grey48', 'elem Lu')
+    cmd.color('grey83', 'elem Mg')
+    cmd.color('grey52', 'elem Mn')
+    cmd.color('grey20', 'elem Mt')
+    cmd.color('grey23', 'elem Md')
+    cmd.color('grey72', 'elem Hg')
+    cmd.color('grey62', 'elem Mo')
+    cmd.color('grey93', 'elem Nd')
+    cmd.color('grey85', 'elem Ne')
+    cmd.color('grey43', 'elem Np')
+    cmd.color('grey67', 'elem Ni')
+    cmd.color('grey69', 'elem Nb')
+    cmd.color('grey25', 'elem N')
+    cmd.color('grey23', 'elem No')
+    cmd.color('grey36', 'elem Os')
+    cmd.color('grey44', 'elem O')
+    cmd.color('grey33', 'elem Pd')
+    cmd.color('grey57', 'elem P')
+    cmd.color('grey82', 'elem Pt')
+    cmd.color('grey37', 'elem Pu')
+    cmd.color('grey40', 'elem Po')
+    cmd.color('grey35', 'elem K')
+    cmd.color('grey95', 'elem Pr')
+    cmd.color('grey90', 'elem Pm')
+    cmd.color('grey52', 'elem Pa')
+    cmd.color('grey35', 'elem Ra')
+    cmd.color('grey46', 'elem Rn')
+    cmd.color('grey43', 'elem Re')
+    cmd.color('grey39', 'elem Rh')
+    cmd.color('grey27', 'elem Rb')
+    cmd.color('grey47', 'elem Ru')
+    cmd.color('grey19', 'elem Rf')
+    cmd.color('grey89', 'elem Sm')
+    cmd.color('grey90', 'elem Sc')
+    cmd.color('grey20', 'elem Sg')
+    cmd.color('grey66', 'elem Se')
+    cmd.color('grey80', 'elem Si')
+    cmd.color('grey75', 'elem Ag')
+    cmd.color('grey46', 'elem Na')
+    cmd.color('grey71', 'elem Sr')
+    cmd.color('grey76', 'elem S')
+    cmd.color('grey60', 'elem Ta')
+    cmd.color('grey53', 'elem Tc')
+    cmd.color('grey51', 'elem Te')
+    cmd.color('grey81', 'elem Tb')
+    cmd.color('grey39', 'elem Tl')
+    cmd.color('grey59', 'elem Th')
+    cmd.color('grey61', 'elem Tm')
+    cmd.color('grey48', 'elem Sn')
+    cmd.color('grey75', 'elem Ti')
+    cmd.color('grey50', 'elem W')
+    cmd.color('grey47', 'elem U')
+    cmd.color('grey65', 'elem V')
+    cmd.color('grey54', 'elem Xe')
+    cmd.color('grey55', 'elem Yb')
+    cmd.color('grey91', 'elem Y')
+    cmd.color('grey51', 'elem Zn')
+    cmd.color('grey81', 'elem Zr')
+cmd.extend('grayscale',grayscale)
+endsnippet
+ 
+snippet importShortcuts "Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv').." b 
+cmd.do('run /Users/blaine/Scripts/PyMOLScripts/pymolshortcuts.py')
+endsnippet
+ 
+snippet rv "Run the rv function from the pymolshortcuts.py file. " b 
+cmd.do('rv')
+endsnippet
+ 
+snippet AO "Run the AO function from the pymolshortcuts.py file to generate the photorealistic effect. " b 
+cmd.do('AO')
+endsnippet
+ 
+snippet AOBW "Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. " b 
+cmd.do('AOBW')
+endsnippet
+ 
+snippet AOD "Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black." b 
+cmd.do('AOD')
+endsnippet
+ 
+snippet AODBW "Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale. " b 
+cmd.do('AODBW')
+endsnippet
+ 
+snippet unitCellEdgesColorBlack "Color unit cell edges black. The settings for controlling the unit cell color are hard to find." b 
+# show the unit cell;
+show cell;
+color black, ${1:1lw9};
+# color by atom with carbons colored green,
+util.${2:cbag};
+set cgo_line_width, 2.5;
+png  ${3:testCell3}.png, ${4:1600},${5:1600};${6:600};${7:0}
+endsnippet
+ 
+snippet printColorByAtomCodes "Print the codes for color-by-atom (util.cba*) alternates." b 
+print('util.cbag, green carbons atoms \nutil.cbac, cyan carbon atoms \nutil.cbam, magenta carbon atoms \nutil.cbay, yellow carbons atoms \nutil.cbas, salmon carbons atoms \nutil.cbaw, white carbons atoms \nutil.cbab, slate carbons atoms \nutil.cbao, bright orange carbons atoms \nutil.cbap, purple carbons atoms \nutil.cbap, pink carbons atoms')
+endsnippet
+ 
+snippet grayscale "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via grayscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command." b 
+python
+def grayscale(selection="all"):
+    """Apply by entering grayscale"""
+    cmd.color('grey64', 'elem Ac')
+    cmd.color('grey67', 'elem Al')
+    cmd.color('grey39', 'elem Am')
+    cmd.color('grey46', 'elem Sb')
+    cmd.color('grey75', 'elem Ar')
+    cmd.color('grey58', 'elem As')
+    cmd.color('grey33', 'elem At')
+    cmd.color('grey56', 'elem Ba')
+    cmd.color('grey40', 'elem Bk')
+    cmd.color('grey87', 'elem Be')
+    cmd.color('grey40', 'elem Bi')
+    cmd.color('grey20', 'elem Bh')
+    cmd.color('grey77', 'elem B')
+    cmd.color('grey26', 'elem Br')
+    cmd.color('grey86', 'elem Cd')
+    cmd.color('grey76', 'elem Ca')
+    cmd.color('grey34', 'elem Cf')
+    cmd.color('grey77', 'elem C')
+    cmd.color('grey98', 'elem Ce')
+    cmd.color('grey17', 'elem Cs')
+    cmd.color('grey70', 'elem Cl')
+    cmd.color('grey60', 'elem Cr')
+    cmd.color('grey64', 'elem Co')
+    cmd.color('grey54', 'elem Cu')
+    cmd.color('grey42', 'elem Cm')
+    cmd.color('grey89', 'elem D')
+    cmd.color('grey19', 'elem Db')
+    cmd.color('grey79', 'elem Dy')
+    cmd.color('grey29', 'elem Es')
+    cmd.color('grey67', 'elem Er')
+    cmd.color('grey85', 'elem Eu')
+    cmd.color('grey28', 'elem Fm')
+    cmd.color('grey93', 'elem F')
+    cmd.color('grey8', 'elem Fr')
+    cmd.color('grey82', 'elem Gd')
+    cmd.color('grey60', 'elem Ga')
+    cmd.color('grey52', 'elem Ge')
+    cmd.color('grey80', 'elem Au')
+    cmd.color('grey68', 'elem Hf')
+    cmd.color('grey20', 'elem Hs')
+    cmd.color('grey96', 'elem He')
+    cmd.color('grey75', 'elem Ho')
+    cmd.color('grey89', 'elem H')
+    cmd.color('grey49', 'elem In')
+    cmd.color('grey16', 'elem I')
+    cmd.color('grey29', 'elem Ir')
+    cmd.color('grey48', 'elem Fe')
+    cmd.color('grey65', 'elem Kr')
+    cmd.color('grey76', 'elem La')
+    cmd.color('grey19', 'elem Lr')
+    cmd.color('grey34', 'elem Pb')
+    cmd.color('grey60', 'elem Li')
+    cmd.color('grey48', 'elem Lu')
+    cmd.color('grey83', 'elem Mg')
+    cmd.color('grey52', 'elem Mn')
+    cmd.color('grey20', 'elem Mt')
+    cmd.color('grey23', 'elem Md')
+    cmd.color('grey72', 'elem Hg')
+    cmd.color('grey62', 'elem Mo')
+    cmd.color('grey93', 'elem Nd')
+    cmd.color('grey85', 'elem Ne')
+    cmd.color('grey43', 'elem Np')
+    cmd.color('grey67', 'elem Ni')
+    cmd.color('grey69', 'elem Nb')
+    cmd.color('grey25', 'elem N')
+    cmd.color('grey23', 'elem No')
+    cmd.color('grey36', 'elem Os')
+    cmd.color('grey44', 'elem O')
+    cmd.color('grey33', 'elem Pd')
+    cmd.color('grey57', 'elem P')
+    cmd.color('grey82', 'elem Pt')
+    cmd.color('grey37', 'elem Pu')
+    cmd.color('grey40', 'elem Po')
+    cmd.color('grey35', 'elem K')
+    cmd.color('grey95', 'elem Pr')
+    cmd.color('grey90', 'elem Pm')
+    cmd.color('grey52', 'elem Pa')
+    cmd.color('grey35', 'elem Ra')
+    cmd.color('grey46', 'elem Rn')
+    cmd.color('grey43', 'elem Re')
+    cmd.color('grey39', 'elem Rh')
+    cmd.color('grey27', 'elem Rb')
+    cmd.color('grey47', 'elem Ru')
+    cmd.color('grey19', 'elem Rf')
+    cmd.color('grey89', 'elem Sm')
+    cmd.color('grey90', 'elem Sc')
+    cmd.color('grey20', 'elem Sg')
+    cmd.color('grey66', 'elem Se')
+    cmd.color('grey80', 'elem Si')
+    cmd.color('grey75', 'elem Ag')
+    cmd.color('grey46', 'elem Na')
+    cmd.color('grey71', 'elem Sr')
+    cmd.color('grey76', 'elem S')
+    cmd.color('grey60', 'elem Ta')
+    cmd.color('grey53', 'elem Tc')
+    cmd.color('grey51', 'elem Te')
+    cmd.color('grey81', 'elem Tb')
+    cmd.color('grey39', 'elem Tl')
+    cmd.color('grey59', 'elem Th')
+    cmd.color('grey61', 'elem Tm')
+    cmd.color('grey48', 'elem Sn')
+    cmd.color('grey75', 'elem Ti')
+    cmd.color('grey50', 'elem W')
+    cmd.color('grey47', 'elem U')
+    cmd.color('grey65', 'elem V')
+    cmd.color('grey54', 'elem Xe')
+    cmd.color('grey55', 'elem Yb')
+    cmd.color('grey91', 'elem Y')
+    cmd.color('grey51', 'elem Zn')
+    cmd.color('grey81', 'elem Zr')
+cmd.extend('grayscale',grayscale)
+python end
+
+endsnippet
+ 
+snippet yrb "Run the yrb function from the pymolshortcuts.py file. " b 
+cmd.do('yrb')
+endsnippet
+ 
+snippet timcolor "Run the timcolor function from the pymolshortcuts.py file to color atoms accordings to Tim Mather's biophysical coloring scheme for proteins.. " b 
+cmd.do('timcolor')
+endsnippet
+ 
+snippet colorh1 "Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. " b 
+cmd.do('colorh1')
+endsnippet
+ 
+snippet colorh2 "Run the colorh2 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 2. " b 
+cmd.do('colorh2')
+endsnippet
+ 
+snippet cav "Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces." b 
+cmd.do('cav')
+endsnippet
+ 
+snippet PE125 "Run the PE125 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.125 of the van der Waals surface." b 
+cmd.do('PE125')
+endsnippet
+ 
+snippet PE25 "Run the PE25 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.25 of the van der Waals surface." b 
+cmd.do('PE25')
+endsnippet
+ 
+snippet PE50 "Run the PE50 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.50 of the van der Waals surface." b 
+cmd.do('PE50')
+endsnippet
+ 
+snippet PE75 "Run the PE75 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.75 of the van der Waals surface." b 
+cmd.do('PE75')
+endsnippet
+ 
+snippet PE85 "Run the PE85 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.85 of the van der Waals surface." b 
+cmd.do('PE85')
+endsnippet
+ 
+snippet PE66 "Run the PE66 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.66 of the van der Waals surface." b 
+cmd.do('PE66')
+endsnippet
+ 
+snippet PE33 "Run the PE33 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.33 of the van der Waals surface." b 
+cmd.do('PE33')
+endsnippet
+ 
+snippet cntccp4emaps "Count number of *.ccp4 (electron density map) files in current directory." b 
+print("Count the number of ccp4 electron density files in current directory.");
+print("Usage: cntccp4s");
+myPath = os.getcwd();
+ccp4Counter = len(glob.glob1(myPath,"*.pse"));
+print("Number of number of ccp4 electron density files in the current directory: ", ccp4Counter);
+endsnippet
+ 
+snippet cntfiles "Count number of files in current directory." b 
+print("Count the files in the directory.")
+print("Usage: cntfiles.")
+# simple version for working with CWD
+print("Number of files in current working directory: ", len([name for name in os.listdir('.') if os.path.isfile(name)]))
+endsnippet
+ 
+snippet cntlogs "Count number of *.log files in current directory." b 
+print("Count the number of log image files in current directory.");
+print("Usage: cntlogs");
+myPath = os.getcwd();
+logCounter = len(glob.glob1(myPath,"*.log"));
+print("Number of number of log image files in the current directory: ", logCounter);
+endsnippet
+ 
+snippet cntmtzs "Count number of *.mtz files in current directory." b 
+print("Count the number of mtz structure factor files in current directory.");
+print("Usage: cntmtzs");
+myPath = os.getcwd();
+mtzCounter = len(glob.glob1(myPath,"*.mtz"));
+print("Number of number of mtz structure factor  files in the current directory: ", mtzCounter);
+endsnippet
+ 
+snippet cntpdbs "Count number of *.pdb files in current directory." b 
+print("Count the number of pdb files in the current directory.")
+print("Usage: cntpdb")
+myPath = os.getcwd()
+pdbCounter = len(glob.glob1(myPath,"*.pdb"))
+print("Number of pdb files in the current directory: ", pdbCounter)
+endsnippet
+ 
+snippet cntpmls "Count number of *.pml files in current directory." b 
+print("Count the number of pml (Pymol macro language) files in current directory.");
+print("Usage: cntpmls");
+myPath = os.getcwd();
+pmlCounter = len(glob.glob1(myPath,"*.pml"));
+print("Number of pml files in the current directory: ", pmlCounter);
+endsnippet
+ 
+snippet cntpngs "Count number of *.png files in current directory." b 
+print("Count the number of png image files in current directory.");
+print("Usage: cntpngs");
+myPath = os.getcwd();
+pngCounter = len(glob.glob1(myPath,"*.png"));
+print("Number of number of png image files in the current directory: ", pngCounter);
+endsnippet
+ 
+snippet cntpses "Count number of *.pse files in current directory." b 
+print("Count the number of *.pse (session) files in current directory.");
+print("Usage: cntpses");
+myPath = os.getcwd();
+pseCounter = len(glob.glob1(myPath,"*.pse"));
+print("Number of *.pse (session) files in the current directory: ", pseCounter);
+endsnippet
+ 
+snippet rmhb "Delete all H-bonds in the selection, which is all by default." b 
+cmd.delete('hbonds')
+endsnippet
+ 
+snippet hb "Creates an object of all H-bonds found by PyMOL." b 
+cmd.distance("hbonds", "all", "all", "3.2", mode="2")
+cmd.set("dash_gap","0.4")
+cmd.set("dash_color","grey30")
+cmd.set("dash_width","1.5")
+cmd.set("dash_length",".25")
+print("Enter 'rmhb' to remove the hbonds.")
+endsnippet
+ 
+snippet rmd "Remove all measurement objects in the interal GUI." b 
+cmd.do('delete measure*')
+cmd.do('delete m*_*')
+cmd.do('delete dist*')
+endsnippet
+ 
+snippet nmr "Show all models in a nmr structure." b 
+set all_states, on
+endsnippet
+ 
+snippet nmroff "Hide all but first model in a nmr structure." b 
+set all_states, off
+endsnippet
+ 
+snippet nmroffpy "Hide all but the first model in a nmr structure." b 
+cmd.do('set all_states, off')
+endsnippet
+ 
+snippet nmrpy "Show all models in a nmr structure." b 
+cmd.do('set all_states, on')
+endsnippet
+ 
+snippet loadAndAlignManyFiles1 "These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files." b 
+# To load a bunch of related files from inside PyMOL all at once;
+run ${1:~/Scripts/}loadFiles.py;
+loadFiles ${2:refine_*}.pdb;
+endsnippet
+ 
+snippet loadAndAlignManyFiles2 "To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms." b 
+# To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms;
+#  Yes, this construct is a list comprehension inside a list comprehension!;
+run ${1:~/Scripts/}optAlignRNA.py;
+[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()];
+endsnippet
+ 
+snippet optAlignRNA "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures." b 
+python
+ ##############################################################################
+#
+# @SUMMARY: -- QKabsch.py.  A python implementation of the optimal superposition
+#     of two sets of vectors as proposed by Kabsch 1976 & 1978.
+#
+# @AUTHOR: Jason Vertrees
+# @COPYRIGHT: Jason Vertrees (C), 2005-2007
+# @LICENSE: Released under GPL:
+# This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+# Street, Fifth Floor, Boston, MA 02110-1301, USA 
+#
+# DATE  : 2007-01-01
+# REV   : 2
+# REQUIREMENTS: numpy
+#
+#
+# Modified optAlign.py to use C1' carbon atoms of RNA for alignment.
+# Jan. 29, 2020 
+# Blaine Mooers, PhD
+# Univ. of Oklahoma Health Sciences Center
+#
+#############################################################################
+from array import *
+ 
+# system stuff
+import os
+import copy
+ 
+# pretty printing
+import pprint
+ 
+# for importing as a plugin into PyMol
+from pymol import cmd
+from pymol import stored
+from pymol import selector
+ 
+# using numpy for linear algebra
+import numpy
+ 
+def optAlignRNA( sel1, sel2 ):
+	"""
+	optAlignRNA performs the Kabsch alignment algorithm upon the C1' carbons of two selections.
+	Example: optAlignRNA 1JU7 and i. 1-16 and n. C1', 1CLL and i. 4-146 and n. C1'
+ 
+	Two RMSDs are returned.  One comes from the Kabsch algorithm and the other from
+	PyMOL based upon your selections.
+	
+	This function can be run in a for loop to fit multiple structures  with a common prefix name:
+	
+	for x in cmd.get_names(): optAlignRNA(x, "1JU7_0001")
+	 
+	or get the rmsds for all combinations, do the following:
+	 
+	[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()]
+
+	"""
+	cmd.reset()
+ 
+	# make the lists for holding coordinates
+	# partial lists
+	stored.sel1 = []
+	stored.sel2 = []
+	# full lists
+	stored.mol1 = []
+	stored.mol2 = []
+ 
+	# -- CUT HERE
+	sel1 += " and N. C1'"
+	sel2 += " and N. C1'"
+	# -- CUT HERE
+ 
+	# Get the selected coordinates.  We
+	# align these coords.
+	cmd.iterate_state(1, selector.process(sel1), "stored.sel1.append([x,y,z])")
+	cmd.iterate_state(1, selector.process(sel2), "stored.sel2.append([x,y,z])")
+ 
+	# get molecule name
+	mol1 = cmd.identify(sel1,1)[0][0]
+	mol2 = cmd.identify(sel2,1)[0][0]
+ 
+	# Get all molecule coords.  We do this because
+	# we have to rotate the whole molcule, not just
+	# the aligned selection
+	cmd.iterate_state(1, mol1, "stored.mol1.append([x,y,z])")
+	cmd.iterate_state(1, mol2, "stored.mol2.append([x,y,z])")
+ 
+	# check for consistency
+	assert len(stored.sel1) == len(stored.sel2)
+	L = len(stored.sel1)
+	assert L > 0
+ 
+	# must alway center the two proteins to avoid
+	# affine transformations.  Center the two proteins
+	# to their selections.
+	COM1 = numpy.sum(stored.sel1,axis=0) / float(L)
+	COM2 = numpy.sum(stored.sel2,axis=0) / float(L)
+	stored.sel1 -= COM1
+	stored.sel2 -= COM2
+ 
+	# Initial residual, see Kabsch.
+	E0 = numpy.sum( numpy.sum(stored.sel1 * stored.sel1,axis=0),axis=0) + numpy.sum( numpy.sum(stored.sel2 * stored.sel2,axis=0),axis=0)
+ 
+	#
+	# This beautiful step provides the answer.  V and Wt are the orthonormal
+	# bases that when multiplied by each other give us the rotation matrix, U.
+	# S, (Sigma, from SVD) provides us with the error!  Isn't SVD great!
+	V, S, Wt = numpy.linalg.svd( numpy.dot( numpy.transpose(stored.sel2), stored.sel1))
+ 
+	# we already have our solution, in the results from SVD.
+	# we just need to check for reflections and then produce
+	# the rotation.  V and Wt are orthonormal, so their det's
+	# are +/-1.
+	reflect = float(str(float(numpy.linalg.det(V) * numpy.linalg.det(Wt))))
+ 
+	if reflect == -1.0:
+		S[-1] = -S[-1]
+		V[:,-1] = -V[:,-1]
+ 
+	RMSD = E0 - (2.0 * sum(S))
+	RMSD = numpy.sqrt(abs(RMSD / L))
+ 
+	#U is simply V*Wt
+	U = numpy.dot(V, Wt)
+ 
+	# rotate and translate the molecule
+	stored.sel2 = numpy.dot((stored.mol2 - COM2), U)
+	stored.sel2 = stored.sel2.tolist()
+	# center the molecule
+	stored.sel1 = stored.mol1 - COM1
+	stored.sel1 = stored.sel1.tolist()
+ 
+	# let PyMol know about the changes to the coordinates
+	cmd.alter_state(1,mol1,"(x,y,z)=stored.sel1.pop(0)")
+	cmd.alter_state(1,mol2,"(x,y,z)=stored.sel2.pop(0)")
+ 
+	#print("Moved: %s Reference: %s RMSD = %f" % mol1, mol2, RMSD)
+	print("% s, % s,% 5.3f" % (mol1, mol2, RMSD))
+ 
+	# make the alignment OBVIOUS
+	cmd.hide('everything')
+	cmd.show('ribbon', sel1 + ' or ' + sel2)
+	cmd.color('gray70', mol1 )
+	cmd.color('magenta', mol2 )
+	cmd.color('red', 'visible')
+	cmd.show('ribbon', 'not visible')
+	cmd.center('visible')
+	cmd.orient()
+	cmd.zoom('visible')
+ 
+cmd.extend("optAlignRNA", optAlignRNA)
+python end
+endsnippet
+ 
+snippet ao "Apply the ambient occlussion effect to get the photorealistic effect." b 
+set_color oxygen, [1.0,0.4,0.4];
+set_color nitrogen, [0.5,0.5,1.0];
+remove solvent;
+as spheres;
+util.cbaw;
+bg white;
+set light_count,10;
+set spec_count,1;
+set shininess, 10;
+set specular,0.25;
+set ambient,0;
+set direct,0;
+set reflect,1.5;
+set ray_shadow_decay_factor, 0.1;
+set ray_shadow_decay_range, 2;
+set depth_cue, 0;
+ray;
+
+endsnippet
+ 
+snippet bsfr "Ball-and-stick plus filled rings. " b 
+# Edit the selection that is named ligand here.;
+create ligand, ${1:/bluComplex/C/A/1101};
+preset.ball_and_stick(selection='ligand');
+util.cbaw ligand;
+set stick_color, white, ligand;
+set valence, off, ligand;
+unset valence;
+# above command is required after using preset;
+set sphere_color, black, elem C and ligand;
+set sphere_color, red, elem O and ligand;
+set sphere_color, blue, elem N and ligand;
+set sphere_color, lightblue, elem F and ligand;
+set stick_radius, 0.12;
+set sphere_quality, 4;
+set cartoon_ring_finder, 4, ligand;
+set cartoon_ring_mode, 3, ligand;
+set cartoon_ring_width, 0.12, ligand;
+set cartoon_ring_transparency, .0, ligand;
+show cartoon, ligand;
+endsnippet
+ 
+snippet wallart "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"" b 
+# Reset hash_max from 100 to 2000 to enable the saving of images of large size for office wall hangings, eg. 30 x 30 inches. 
+hash_max=2000
+endsnippet
+ 
+snippet wallartpy "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"" b 
+# Reset hash_max from 100 to 2000 to enable the saving of images of large size for office wall hangings, eg. 30 x 30 inches.;
+cmd.do("hash_max=2000");
+endsnippet
+ 
+snippet cblindCartoon "Color cartoon with colorblind friendly colors. Requires that the pymolshortcuts.py file is loaded. This has been applied to PDB-ID 7JU6. The protein is human RET kinase, and the drug is selpercatinib, a FDA approved drug for treating several cancers." b 
+# CB is a shortcut or funtion in the pymolshortcut.py file.
+# Load this function by entering 'run pymolshortcuts.py' first.
+CB;
+color cb_lightblue, ss h;
+color cb_vermillion, ss s;
+color lightorange, ss l+'';
+
 endsnippet
  
