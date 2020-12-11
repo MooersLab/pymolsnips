@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 28862dd7-a1a3-4203-a2bc-86eba90ae6db
+# key: printBs2digits
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print B-values for a residue with the B's rounded off to two decimal places.
+## binding: "printBs2digits
+## condition: "text.pml
+# --
+
+% Print B-values for a residue with the B's rounded off to two decimal places.
+iterate (resi %{1:133}), print(name + " %.2f" % b);
+$0

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 7dc604bd-5fdb-476e-9853-f1b5b87df786
+# key: sc113
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+## binding: "sc113
+## condition: "text.pml
+# --
+
+% Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 1, 3, ,  ${2:orange},  ${3:supercell1}, 1;

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: a4cfe92c-b4f7-418b-b7b9-77b7471cb0d7
+# key: printResiResnNameB4ResiX
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print resn, resi, atom name, and b-factor. 
+## binding: "printResiResnNameB4ResiX
+## condition: "text.pml
+# --
+
+% Print resn, resi, atom name, and b-factor. 
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((resn,resi,name, b))", space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print("%s %s %s %.2f" % (i,j,k,l));
+$0

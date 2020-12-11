@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# uuid: 80b78873-d7dc-4a62-9507-26f0919eb905
+# key: cntpmls
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Count number of *.pml files in current directory.
+## binding: "cntpmls
+## condition: "text.pml
+# --
+
+% Count number of *.pml files in current directory.
+print("Count the number of pml (Pymol macro language) files in current directory.");
+print("Usage: cntpmls");
+myPath = os.getcwd();
+pmlCounter = len(glob.glob1(myPath,"*.pml"));
+print("Number of pml files in the current directory: ", pmlCounter);

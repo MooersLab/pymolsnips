@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# uuid: 5e3151d5-2d84-4e16-a992-d0478fe5e7e5
+# key: spse
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Save pse flle with timestamp
+## binding: "spse
+## condition: "text.pml
+# --
+
+% Save pse flle with timestamp
+python;
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".pse"); 
+end python;
+$0

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: b3b828e3-5dcc-47c9-85a7-535802e1b7a3
+# key: sc121
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+## binding: "sc121
+## condition: "text.pml
+# --
+
+% Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 2, 1, ,  ${2:orange},  ${3:supercell1}, 1;

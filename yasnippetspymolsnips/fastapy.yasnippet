@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 978f7e45-0c92-42d9-9380-11352d6c8604
+# key: fastapy
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Python version of the command to print the sequence from a PDB file in the fasta format.
+## binding: "fastapy
+## condition: "text.pml
+# --
+
+% Python version of the command to print the sequence from a PDB file in the fasta format.
+# Get the sequences of all molecular objects.;
+print(cmd.get_fastastr('${1:all}'));

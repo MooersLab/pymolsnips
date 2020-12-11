@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: a4e42248-c9cc-4eb4-a930-3103a3054373
+# key: selectAllBut
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Select all nitrogen atom in a selelction except from lysine.
+## binding: "selectAllBut
+## condition: "text.pml
+# --
+
+% Select all nitrogen atom in a selelction except from lysine.
+select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};
+$0

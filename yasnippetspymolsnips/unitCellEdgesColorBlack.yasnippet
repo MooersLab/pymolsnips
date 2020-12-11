@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# uuid: 2d3d36cd-a23a-404b-8946-a00c18a126b8
+# key: unitCellEdgesColorBlack
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Color unit cell edges black. The settings for controlling the unit cell color are hard to find.
+## binding: "unitCellEdgesColorBlack
+## condition: "text.pml
+# --
+
+% Color unit cell edges black. The settings for controlling the unit cell color are hard to find.
+# show the unit cell;
+show cell;
+color black, ${1:1lw9};
+# color by atom with carbons colored green,
+util.${2:cbag};
+set cgo_line_width, 2.5;
+png  ${3:testCell3}.png, ${4:1600},${5:1600};${6:600};${7:0}

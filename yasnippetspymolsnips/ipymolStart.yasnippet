@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# uuid: c551f095-8fb3-424d-abb8-90fb60f9ae80
+# key: ipymolStart
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Code to start the RPC server with ipymol.
+## binding: "ipymolStart
+## condition: "text.pml
+# --
+
+% Code to start the RPC server with ipymol.
+# Start pymol in terminal with pymol -R;
+# Select pymol.python as kernel in juptyer;
+from ipymol import viewer as ipv;
+ipv.start() # Start PyMOL RPC server;
+

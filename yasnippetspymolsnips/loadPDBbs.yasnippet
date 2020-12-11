@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# uuid: 7659db06-270f-44fd-ba66-01ce37e28e80
+# key: loadPDBbs
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Load PDB ball-and-stick.
+## binding: "loadPDBbs
+## condition: "text.pml
+# --
+
+% Load PDB ball-and-stick.
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0
+hide (name H*);
+hide lines;
+show sticks;
+set stick_radius, ${2:1.2};
+set nb_sphere_radius, ${3:0.35};
+orient;
+$0

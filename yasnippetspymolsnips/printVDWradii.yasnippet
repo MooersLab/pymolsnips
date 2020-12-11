@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 0333414f-9b3c-4460-9d6b-475670c4a1a9
+# key: printVDWradii
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print the van der Waals radii of the atoms in of a residue.
+## binding: "printVDWradii
+## condition: "text.pml
+# --
+
+% Print the van der Waals radii of the atoms in of a residue.
+iterate (resi ${1:101}), print(name + " %.2f" % vdw);

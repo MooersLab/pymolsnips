@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 6fe23082-f769-431d-bbbf-9bce29d05b1f
+# key: printNameB4ResiX
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print name and b-factor for a residue.
+## binding: "printNameB4ResiX
+## condition: "text.pml
+# --
+
+% Print name and b-factor for a residue.
+Bfac_dict = { 'Bfactors3' : [] };cmd.iterate("(resi 133)","Bfactors3.append((name, b))", space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print("%s %.2f" % (i,j));
+$0

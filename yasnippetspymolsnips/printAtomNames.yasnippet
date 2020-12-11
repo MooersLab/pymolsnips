@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 8ac3216f-8b6e-48e7-a3f2-470a7c37d9be
+# key: printAtomNames
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print the atom names of a residue.
+## binding: "printAtomNames
+## condition: "text.pml
+# --
+
+% Print the atom names of a residue.
+iterate (resi ${1:101}), print(name);

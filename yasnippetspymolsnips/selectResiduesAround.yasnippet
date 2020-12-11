@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 4e3e1b66-bc39-458c-8de9-f29f85567e3c
+# key: selectResiduesAround
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Select residues within a radius around a ligand.
+## binding: "selectResiduesAround
+## condition: "text.pml
+# --
+
+% Select residues within a radius around a ligand.
+select ${1:nearby}, br. resn ${2:drug} around ${3:5};
+$0

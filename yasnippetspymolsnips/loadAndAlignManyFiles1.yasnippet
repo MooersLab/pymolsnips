@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# uuid: e17ec382-fda1-4d4e-9253-be4b0a94b6a2
+# key: loadAndAlignManyFiles1
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.
+## binding: "loadAndAlignManyFiles1
+## condition: "text.pml
+# --
+
+% These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.
+# To load a bunch of related files from inside PyMOL all at once;
+run ${1:~/Scripts/}loadFiles.py;
+loadFiles ${2:refine_*}.pdb;

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# uuid: 26a27ef5-7701-4580-81a8-42dccdd7621b
+# key: brokenNucleicBackbone
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long.
+## binding: "brokenNucleicBackbone
+## condition: "text.pml
+# --
+
+% Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long.
+#  >>> edit the selections below, which are ranges of residue numbers and edit the molecular object name (5fur).;
+[cmd.bond(f"/${1:5fur}//${2:E}/{i}/O3'", f"/${1:5fur}//${2:E}/{i+1}/P") for i in range(${5:1}, ${6:80})]; 
+[cmd.bond(f"/${1:5fur}//${2:F}/{i}/O3'", f"/${1:5fur}//${2:F}/{i+1}/P") for i in range(${7:81}, ${8:160})];

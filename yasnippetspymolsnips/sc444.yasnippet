@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 72b80c67-b32f-44c2-a12b-daa7150ddb01
+# key: sc444
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+## binding: "sc444
+## condition: "text.pml
+# --
+
+% Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 4, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;

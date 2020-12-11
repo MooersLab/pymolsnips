@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: b03fc38e-b3af-4903-8d8a-cf2e9d5058cf
+# key: selectAtomsAround
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Select atoms within a radius around a ligand.
+## binding: "selectAtomsAround
+## condition: "text.pml
+# --
+
+% Select atoms within a radius around a ligand.
+select ${1:nearby}, resn ${2:drug} around ${3:5};
+$0

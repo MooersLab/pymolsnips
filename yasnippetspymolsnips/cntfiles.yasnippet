@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: 8f2e762e-88ef-4f1d-9019-b9e7d5b66d65
+# key: cntfiles
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Count number of files in current directory.
+## binding: "cntfiles
+## condition: "text.pml
+# --
+
+% Count number of files in current directory.
+print("Count the files in the directory.")
+print("Usage: cntfiles.")
+# simple version for working with CWD
+print("Number of files in current working directory: ", len([name for name in os.listdir('.') if os.path.isfile(name)]))

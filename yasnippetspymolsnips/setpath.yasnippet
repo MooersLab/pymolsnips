@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: b394b6af-8b46-449f-a976-9ecf58673fb6
+# key: setpath
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Set additional path for PyMOL to search on startup
+## binding: "setpath
+## condition: "text.pml
+# --
+
+% Set additional path for PyMOL to search on startup
+os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};
+$0

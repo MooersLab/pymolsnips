@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: 59db2258-3346-403f-9ee8-0e36970feba4
+# key: loadAmberTrajs
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: The amber trajectories have to be loaded into the same object.
+## binding: "loadAmberTrajs
+## condition: "text.pml
+# --
+
+% The amber trajectories have to be loaded into the same object.
+load ${1:file}.top, ${2:protein};
+load ${1:file}.rst, ${2:protein};

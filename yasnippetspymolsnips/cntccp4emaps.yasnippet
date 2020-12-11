@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# uuid: 8f1ed4d6-0b69-4126-ad70-f80719f32eac
+# key: cntccp4emaps
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Count number of *.ccp4 (electron density map) files in current directory.
+## binding: "cntccp4emaps
+## condition: "text.pml
+# --
+
+% Count number of *.ccp4 (electron density map) files in current directory.
+print("Count the number of ccp4 electron density files in current directory.");
+print("Usage: cntccp4s");
+myPath = os.getcwd();
+ccp4Counter = len(glob.glob1(myPath,"*.pse"));
+print("Number of number of ccp4 electron density files in the current directory: ", ccp4Counter);

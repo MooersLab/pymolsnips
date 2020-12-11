@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: b567d646-c2f6-4e20-a7a2-60b5e3aca8e6
+# key: printNamesCoordinates
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print the atom names as tuples and coordinates of the atoms in a residue as a list.
+## binding: "printNamesCoordinates
+## condition: "text.pml
+# --
+
+% Print the atom names as tuples and coordinates of the atoms in a residue as a list.
+stored.coords = []; iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); 
+stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]);
+stored.names3 = [tuple(i) for i in stored.names];
+[print(i,j) for i,j in(zip(stored.names3, stored.coords)];

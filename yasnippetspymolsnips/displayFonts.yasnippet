@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# uuid: 2475b7a8-d840-472a-9d57-34e6d9d68aaa
+# key: displayFonts
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.
+## binding: "displayFonts
+## condition: "text.pml
+# --
+
+% Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.
+python;
+for i in range(1,21):
+     name = 'label%d' % i;
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));
+     cmd.set('label_font_id', i, name);
+python end;
+cmd.set('label_size', 50);
+cmd.set('grid_mode');
+

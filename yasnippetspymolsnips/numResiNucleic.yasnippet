@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: c10a3519-39d3-4a55-a8e9-69f577a6eca4
+# key: numResiNucleic
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print the number of residues in a nulceic acid (all chains).
+## binding: "numResiNucleic
+## condition: "text.pml
+# --
+
+% Print the number of residues in a nulceic acid (all chains).
+sel = 'polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));

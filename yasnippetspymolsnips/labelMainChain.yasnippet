@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: f29c13d8-4bda-4171-8581-02975b8610e9
+# key: labelMainChain
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Label the main chain atoms by resn,resi,atom name.
+## binding: "labelMainChain
+## condition: "text.pml
+# --
+
+% Label the main chain atoms by resn,resi,atom name.
+label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
+$0

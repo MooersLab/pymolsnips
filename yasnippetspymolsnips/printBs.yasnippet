@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: b926393c-95a5-474c-b271-629a766c1b99
+# key: printBs
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print the B-factors of a residue. 
+## binding: "printBs
+## condition: "text.pml
+# --
+
+% Print the B-factors of a residue. 
+remove element h; iterate resi %{1:133}, print resi, name,b;
+$0

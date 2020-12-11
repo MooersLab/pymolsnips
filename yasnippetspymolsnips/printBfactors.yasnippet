@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: 5e854daa-f63c-464b-b416-d5f8eb0456ee
+# key: printBfactors
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print the bfactors of a residue.
+## binding: "printBfactors
+## condition: "text.pml
+# --
+
+% Print the bfactors of a residue.
+iterate (resi ${1:101}), print(name + " %.2f" % b);

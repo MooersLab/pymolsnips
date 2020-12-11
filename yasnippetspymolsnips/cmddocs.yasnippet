@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# uuid: f6c80259-add6-47a6-b97a-5e016148f894
+# key: cmddocs
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print in the command history window the docstrings of all of the functions in the cmd module.
+## binding: "cmddocs
+## condition: "text.pml
+# --
+
+% Print in the command history window the docstrings of all of the functions in the cmd module.
+[help(i) for i in dir(cmd)];

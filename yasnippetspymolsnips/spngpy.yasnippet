@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# uuid: 4291901a-bdf9-4ea7-9a3f-b04acab10e02
+# key: spngpy
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Save png flle with timestamp
+## binding: "spngpy
+## condition: "text.pml
+# --
+
+% Save png flle with timestamp
+import datetime;
+from pymol import cmd; 
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".png"); 
+

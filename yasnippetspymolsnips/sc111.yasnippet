@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# uuid: b74eae9f-f0a7-45c1-9104-d86458d94bd1
+# key: sc111
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+## binding: "sc111
+## condition: "text.pml
+# --
+
+% Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.
+run $HOME/Scripts/PyMOLscripts/supercell.py
+supercell 1, 1, 1, , orange, supercell1, 1
+$0

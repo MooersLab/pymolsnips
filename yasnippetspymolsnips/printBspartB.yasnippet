@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: ce92e6a2-7ad5-44df-85fa-b67cc3c9654c
+# key: printBspartB
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Print B factors of part B of a residue.
+## binding: "printBspartB
+## condition: "text.pml
+# --
+
+% Print B factors of part B of a residue.
+iterate resi %{1:38} and altloc %{2:B}, print resi, name, alt, b;
+$0

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: de55052b-7a12-48bc-95a8-0aeac0bcd572
+# key: labelResnResi
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Label CA atom with single-letter residue name and residue number.
+## binding: "labelResnResi
+## condition: "text.pml
+# --
+
+% Label CA atom with single-letter residue name and residue number.
+label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi}); 
+$0

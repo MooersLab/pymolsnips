@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# uuid: 5baec3c1-c65a-4232-91f9-85b7a63ef4a2
+# key: pearl
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: The pearl effect is made with two spheres with the outer sphere being transparent.
+## binding: "pearl
+## condition: "text.pml
+# --
+
+% The pearl effect is made with two spheres with the outer sphere being transparent.
+create ${1:sodium2}, ${2:sodium1}
+set sphere_transparency, 0.4, ${1:sodium2}
+set sphere_scale, 1.05, ${1:sodium2}
+ray
+$0

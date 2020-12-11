@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# uuid: c20d4499-abc8-4f9d-ba12-e0c7a1d8310e
+# key: loadPDBnb
+# contributor: Translated from textmate snippet by yasmate.rb
+# name: Load PDB nb spheres. 
+## binding: "loadPDBnb
+## condition: "text.pml
+# --
+
+% Load PDB nb spheres. 
+fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;
+orient;
+set stick_radius, ${2:1.2};
+hide (name H*);
+set nb_sphere_size, ${3:0.35};
+set nb_spheres_quality, ${4:1};
+show nb_spheres;
+$0
