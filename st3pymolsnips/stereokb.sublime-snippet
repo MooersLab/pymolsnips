@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.set_key('F1',lambda:cmd.stereo({'on':0,'off':1}[cmd.get('stereo')]));
+]]></content>
+<tabTrigger>stereokb</tabTrigger>
+<scope></scope>
+<caption>Set keyboard shortcut by mapping F1 to stereo.</caption>
+</snippet>

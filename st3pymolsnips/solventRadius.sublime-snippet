@@ -1,8 +1,6 @@
 <snippet>
 <content><![CDATA[
 set solvent_radius, ${1:1.55};
-${0}
-
 ]]></content>
 <tabTrigger>solventRadius</tabTrigger>
 <scope></scope>

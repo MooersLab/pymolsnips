@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 label name CA,"%s%s" % (resn,resi);
-${0}
 ]]></content>
 <tabTrigger>labelCAs</tabTrigger>
 <scope></scope>
-<caption>Label the CA atoms with the Ala333 style format</caption>
+<caption>Label the CA atoms with the Ala333 style format.</caption>
 </snippet>

@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 indicate none
-${0}
 ]]></content>
 <tabTrigger>hideSelection</tabTrigger>
 <scope></scope>
-<caption>Trun off magenta squares on current selection.</caption>
+<caption>Turn off magenta squares on current selection.</caption>
 </snippet>

@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-select se;2. resi 1-100
-${0}
+select ${!:se}; resi ${2: 1:100};
 ]]></content>
 <tabTrigger>selectResi</tabTrigger>
 <scope></scope>

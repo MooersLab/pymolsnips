@@ -1,14 +1,13 @@
 <snippet>
 <content><![CDATA[
-fetch 1lw9, async=0; 
-zoom (resi 31 or resi 70); 
+fetch ${1:1lw9}, async=0; 
+zoom (${2:resi 31 or resi 70}); 
 preset.technical(selection='all'); 
-bg_color gray70; 
-clip slab, 7,(resi 31 or resi 70);
+bg_color ${3:gray70}; 
+clip slab, 7,(${4:resi 31 or resi 70});
 rock;
-${0}
 ]]></content>
 <tabTrigger>his31asp70</tabTrigger>
 <scope></scope>
-<caption>Asp70-His31 salt-bridge from T4 lysozyme. </caption>
+<caption>Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. </caption>
 </snippet>

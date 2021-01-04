@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+cmd.do('delete measure*')
+cmd.do('delete m*_*')
+cmd.do('delete dist*')
+]]></content>
+<tabTrigger>rmd</tabTrigger>
+<scope></scope>
+<caption>Remove all measurement objects in the interal GUI.</caption>
+</snippet>

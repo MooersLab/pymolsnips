@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+set surface_solvent, ${1:on}
+]]></content>
+<tabTrigger>sas</tabTrigger>
+<scope></scope>
+<caption>Show the solvent excluded surface.</caption>
+</snippet>

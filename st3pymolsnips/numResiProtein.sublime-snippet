@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+sel = 'polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));
+]]></content>
+<tabTrigger>numResiProtein</tabTrigger>
+<scope></scope>
+<caption>Print the number of residues in a protein.</caption>
+</snippet>

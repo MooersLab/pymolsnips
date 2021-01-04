@@ -2,9 +2,8 @@
 <content><![CDATA[
 select altconf, alt ${1:b}  # select B alternative locators;
 hide everything, altconf  # hide alt B locators;
-${0}
 ]]></content>
 <tabTrigger>hidealtloc</tabTrigger>
 <scope></scope>
-<caption>Hide alt loc.</caption>
+<caption>Hide the b alternate locator.</caption>
 </snippet>

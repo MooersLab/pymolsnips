@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.delete('hbonds')
+]]></content>
+<tabTrigger>rmhb</tabTrigger>
+<scope></scope>
+<caption>Delete all H-bonds in the selection, which is all by default.</caption>
+</snippet>

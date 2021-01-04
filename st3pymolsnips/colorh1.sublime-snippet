@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('colorh1')
+]]></content>
+<tabTrigger>colorh1</tabTrigger>
+<scope></scope>
+<caption>Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. </caption>
+</snippet>

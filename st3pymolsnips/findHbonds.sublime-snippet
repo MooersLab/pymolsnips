@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 remove element h; distance hbonds, all, all, 3.2, mode=2;
-${0}
 ]]></content>
 <tabTrigger>findHbonds</tabTrigger>
 <scope></scope>
-<caption>Find hbonds around a residue.</caption>
+<caption>Find H-bonds around a residue.</caption>
 </snippet>

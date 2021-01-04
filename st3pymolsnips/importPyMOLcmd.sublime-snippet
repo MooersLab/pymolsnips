@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+from pymol import cmd
+]]></content>
+<tabTrigger>importPyMOLcmd</tabTrigger>
+<scope></scope>
+<caption>Import the cmd class from the pymol api.</caption>
+</snippet>

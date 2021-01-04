@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('PE125')
+]]></content>
+<tabTrigger>PE125</tabTrigger>
+<scope></scope>
+<caption>Run the PE125 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.125 of the van der Waals surface.</caption>
+</snippet>

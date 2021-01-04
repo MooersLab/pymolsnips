@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+load ${1:file}.top, ${2:protein};
+load ${1:file}.rst, ${2:protein};
+]]></content>
+<tabTrigger>loadAmberTrajs</tabTrigger>
+<scope></scope>
+<caption>The amber trajectories have to be loaded into the same object.</caption>
+</snippet>

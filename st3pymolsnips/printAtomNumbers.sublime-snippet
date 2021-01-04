@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+iterate (resi ${1:1}), print(name + " %i${1:5}" % ID);
+]]></content>
+<tabTrigger>printAtomNumbers</tabTrigger>
+<scope></scope>
+<caption>Print the atom number2 of a residue.</caption>
+</snippet>

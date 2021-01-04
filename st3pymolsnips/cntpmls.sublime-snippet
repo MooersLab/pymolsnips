@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+print("Count the number of pml (Pymol macro language) files in current directory.");
+print("Usage: cntpmls");
+myPath = os.getcwd();
+pmlCounter = len(glob.glob1(myPath,"*.pml"));
+print("Number of pml files in the current directory: ", pmlCounter);
+]]></content>
+<tabTrigger>cntpmls</tabTrigger>
+<scope></scope>
+<caption>Count number of *.pml files in current directory.</caption>
+</snippet>

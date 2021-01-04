@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+print(cmd.get_atom_coords(${1:'/4PCO//B/G`8/OP2'}));
+]]></content>
+<tabTrigger>getCoordinatespy</tabTrigger>
+<scope></scope>
+<caption>Python version of getCoordinates snippets. Note that the python2 print statement stills works  in pml scripts. </caption>
+</snippet>

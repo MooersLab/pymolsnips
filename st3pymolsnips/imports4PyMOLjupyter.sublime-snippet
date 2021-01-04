@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+from pymol import cmd
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+]]></content>
+<tabTrigger>imports4PyMOLjupyter</tabTrigger>
+<scope></scope>
+<caption>Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.</caption>
+</snippet>

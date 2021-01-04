@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
-run roundview.py;
-${0}
+cmd.do('rv')
 ]]></content>
 <tabTrigger>rv</tabTrigger>
 <scope></scope>
-<caption>Return settings in rounded format.</caption>
+<caption>Run the rv function from the pymolshortcuts.py file. </caption>
 </snippet>

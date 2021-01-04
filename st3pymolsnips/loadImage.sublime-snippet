@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+Image(filename = PATH +"${1:5da6orient}.png", width=${2:600}, height=${3:1000}, unconfined=True);
+]]></content>
+<tabTrigger>loadImage</tabTrigger>
+<scope></scope>
+<caption>Load image.</caption>
+</snippet>

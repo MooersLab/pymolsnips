@@ -5,11 +5,10 @@ import datetime;
 from pymol import cmd; 
 DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
 s = str(DT); 
-cmd.save(stemName+s+".png"); 
-end python;
-${0}
+cmd.save(stemName+s+".ccp4"); 
+python end;
 ]]></content>
 <tabTrigger>sccp4</tabTrigger>
 <scope></scope>
-<caption>Save png flle with timestamp</caption>
+<caption>Save electron density map flle with timestamp</caption>
 </snippet>

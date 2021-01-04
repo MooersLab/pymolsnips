@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-set cartoon_discrete_colors, on
-${0}
+set cartoon_discrete_colors, on;
 ]]></content>
 <tabTrigger>discreteCartoonColoring</tabTrigger>
 <scope></scope>

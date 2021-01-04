@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+set all_states, on
+]]></content>
+<tabTrigger>nmr</tabTrigger>
+<scope></scope>
+<caption>Show all models in a nmr structure.</caption>
+</snippet>

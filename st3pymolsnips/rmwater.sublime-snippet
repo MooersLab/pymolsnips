@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-remove resn HOH
-${0}
+remove resn HOH;
 ]]></content>
 <tabTrigger>rmwater</tabTrigger>
 <scope></scope>

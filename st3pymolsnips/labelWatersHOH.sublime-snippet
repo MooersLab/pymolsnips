@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 label resn HOH ,"%s%s" % (resn,resi);
-${0}
 ]]></content>
 <tabTrigger>labelWatersHOH</tabTrigger>
 <scope></scope>
-<caption>Label waters HOH.</caption>
+<caption>Label waters with HOH and their residue number.</caption>
 </snippet>

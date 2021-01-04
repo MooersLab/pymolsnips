@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 label name n+c+o+ca,"%s%s%s" % (resn,resi,name);
-${0}
 ]]></content>
 <tabTrigger>labelMainChain</tabTrigger>
 <scope></scope>
-<caption>Label the main chain atoms by resn,resi,atom name.</caption>
+<caption>Label the main chain atoms with the following: resn,resi,atom name.</caption>
 </snippet>

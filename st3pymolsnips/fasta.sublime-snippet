@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-print cmd.get_fastastr('all')
-${0}
+print cmd.get_fastastr("all")
 ]]></content>
 <tabTrigger>fasta</tabTrigger>
 <scope></scope>

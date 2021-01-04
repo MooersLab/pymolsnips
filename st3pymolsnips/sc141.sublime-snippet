@@ -1,10 +1,9 @@
 <snippet>
 <content><![CDATA[
-run $HOME/Scripts/PyMOLscripts/supercell.py
-supercell 1, 1, 1, , orange, supercell1, 1
-${0}
+run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;
+supercell 1, 4, 1, ,  ${2:orange},  ${3:supercell1}, 1;
 ]]></content>
 <tabTrigger>sc141</tabTrigger>
 <scope></scope>
-<caption>Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
+<caption>Display all symmetry mates in four unit cells stacked long b-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.</caption>
 </snippet>

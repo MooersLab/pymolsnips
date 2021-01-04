@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+#Set on the valence of the ligand only;
+set valence, on, resn ${1:RZS}; set valence, off, not resn ${2:RZS};
+]]></content>
+<tabTrigger>setLigandValenceOn</tabTrigger>
+<scope></scope>
+<caption>Turn on the ligand valence.</caption>
+</snippet>

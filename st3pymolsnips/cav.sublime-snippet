@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('cav')
+]]></content>
+<tabTrigger>cav</tabTrigger>
+<scope></scope>
+<caption>Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces.</caption>
+</snippet>

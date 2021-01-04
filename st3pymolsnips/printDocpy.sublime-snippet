@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+print(${1:my_func}.__doc__);
+]]></content>
+<tabTrigger>printDocpy</tabTrigger>
+<scope></scope>
+<caption>Print document string of a function.</caption>
+</snippet>

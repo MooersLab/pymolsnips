@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('PE33')
+]]></content>
+<tabTrigger>PE33</tabTrigger>
+<scope></scope>
+<caption>Run the PE33 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.33 of the van der Waals surface.</caption>
+</snippet>

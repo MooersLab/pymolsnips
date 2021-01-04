@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+set all_states, off
+]]></content>
+<tabTrigger>nmroff</tabTrigger>
+<scope></scope>
+<caption>Hide all but first model in a nmr structure.</caption>
+</snippet>

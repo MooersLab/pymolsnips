@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+[[${1:optAlignRNA}(x, y) for x in cmd.get_names()] for y in cmd.get_names()];
+]]></content>
+<tabTrigger>allPairs</tabTrigger>
+<scope></scope>
+<caption>This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures.</caption>
+</snippet>

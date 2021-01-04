@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+[help(i) for i in dir(pymol)];
+]]></content>
+<tabTrigger>pymoldocs</tabTrigger>
+<scope></scope>
+<caption>Return to the command history window the docstrings for all of the functions in a module.</caption>
+</snippet>

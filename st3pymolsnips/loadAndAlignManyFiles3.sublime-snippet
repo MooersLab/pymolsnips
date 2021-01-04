@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+# To save a multiple models in a file to separate pdb files.
+run {1:~/Scripts/}saveSep.py
+saveSep 
+]]></content>
+<tabTrigger>loadAndAlignManyFiles3</tabTrigger>
+<scope></scope>
+<caption>These are the instructions for loading and aligning multiple files.</caption>
+</snippet>

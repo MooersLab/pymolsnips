@@ -15,11 +15,11 @@ set direct,0;
 set reflect,1.5;
 set ray_shadow_decay_factor, 0.1;
 set ray_shadow_decay_range, 2;
-unset depth_cue;
+set depth_cue, 0;
 ray;
-${0}
+
 ]]></content>
 <tabTrigger>ao</tabTrigger>
 <scope></scope>
-<caption>Ambient occlussion.</caption>
+<caption>Apply the ambient occlussion effect to get the photorealistic effect.</caption>
 </snippet>

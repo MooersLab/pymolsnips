@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+iterate (resi ${1:101}), print(name + " %.2f" % b);
+]]></content>
+<tabTrigger>printBfactors</tabTrigger>
+<scope></scope>
+<caption>Print the bfactors of a residue.</caption>
+</snippet>

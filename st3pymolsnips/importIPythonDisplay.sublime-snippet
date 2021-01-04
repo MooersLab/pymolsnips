@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+from IPython.display import Image
+from IPython.core.display import HTML
+PATH = "/Users/blaine/"
+]]></content>
+<tabTrigger>importIPythonDisplay</tabTrigger>
+<scope></scope>
+<caption>Imports for using IPython to display images loaded from disk in notebook cells.</caption>
+</snippet>

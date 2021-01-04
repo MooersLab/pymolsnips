@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 set antialias, 1;
-${0}
 ]]></content>
 <tabTrigger>antialias</tabTrigger>
 <scope></scope>
-<caption>Set antialias to get smooth edges</caption>
+<caption>Set antialias to on to get smoother edges.</caption>
 </snippet>

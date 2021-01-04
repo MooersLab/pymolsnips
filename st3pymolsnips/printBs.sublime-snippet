@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-remove element h; iterate resi %{1:133}, print resi, name,b;
-${0}
+remove element h; iterate resi ${1: 1:13}, print(resi, name,b);
 ]]></content>
 <tabTrigger>printBs</tabTrigger>
 <scope></scope>

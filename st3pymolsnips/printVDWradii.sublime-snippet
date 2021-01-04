@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+iterate (resi ${1:101}), print(name + " %.2f" % vdw);
+]]></content>
+<tabTrigger>printVDWradii</tabTrigger>
+<scope></scope>
+<caption>Print the van der Waals radii of the atoms in of a residue.</caption>
+</snippet>

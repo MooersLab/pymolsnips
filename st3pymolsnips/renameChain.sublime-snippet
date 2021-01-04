@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+alter ${1:3fa0} and chain ${2:A}, chain=${3:"C"};
+sort;
+]]></content>
+<tabTrigger>renameChain</tabTrigger>
+<scope></scope>
+<caption>Rename a chain. </caption>
+</snippet>

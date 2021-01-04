@@ -1,0 +1,9 @@
+<snippet>
+<content><![CDATA[
+# Print the path to the current used PyMOL binary.
+print pymol.__path__
+]]></content>
+<tabTrigger>printPath</tabTrigger>
+<scope></scope>
+<caption>Print the path to the currently used PyMOL binary.</caption>
+</snippet>

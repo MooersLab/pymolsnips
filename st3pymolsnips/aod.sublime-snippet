@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('AOD')
+]]></content>
+<tabTrigger>AOD</tabTrigger>
+<scope></scope>
+<caption>Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black.</caption>
+</snippet>

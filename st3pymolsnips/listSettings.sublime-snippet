@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+[print("%s => %s" % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];
+]]></content>
+<tabTrigger>listSettings</tabTrigger>
+<scope></scope>
+<caption>Print to the screen the settings and their current parameter values. This is the more compact version.</caption>
+</snippet>

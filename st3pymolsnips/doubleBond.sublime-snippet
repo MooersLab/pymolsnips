@@ -2,7 +2,6 @@
 <content><![CDATA[
 set valence, 1; 
 set valence_mode, 1;
-${0}
 ]]></content>
 <tabTrigger>doubleBond</tabTrigger>
 <scope></scope>

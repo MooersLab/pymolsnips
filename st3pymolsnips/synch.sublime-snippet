@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.sync(timeout=${1:1.0},poll=${2:0.05});
+]]></content>
+<tabTrigger>synch</tabTrigger>
+<scope></scope>
+<caption>Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns.</caption>
+</snippet>

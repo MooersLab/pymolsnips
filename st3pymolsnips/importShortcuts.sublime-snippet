@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('run /Users/blaine/Scripts/PyMOLScripts/pymolshortcuts.py')
+]]></content>
+<tabTrigger>importShortcuts</tabTrigger>
+<scope></scope>
+<caption>Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv')..</caption>
+</snippet>

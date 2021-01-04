@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+cmd.do('set all_states, on')
+]]></content>
+<tabTrigger>nmrpy</tabTrigger>
+<scope></scope>
+<caption>Show all models in a nmr structure.</caption>
+</snippet>

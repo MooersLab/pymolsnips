@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-extract new_obj, chain A
-${0}
+extract new_obj, chain A;
 ]]></content>
 <tabTrigger>extractPartObj</tabTrigger>
 <scope></scope>

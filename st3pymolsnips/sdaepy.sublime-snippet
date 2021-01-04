@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+import datetime;
+DT =datetime.datetime.now().strftime("yr%Ymo%mday%dhr%Hmin%M");
+s = str(DT); 
+cmd.save(stemName+s+".dae"); 
+
+]]></content>
+<tabTrigger>sdaepy</tabTrigger>
+<scope></scope>
+<caption>Save dae flle with timestamp</caption>
+</snippet>

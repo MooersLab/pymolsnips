@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
 internal_gui_mode=2;
-${0}
 ]]></content>
-<tabTrigger>internalGUImode2 </tabTrigger>
+<tabTrigger>internalGUImode2</tabTrigger>
 <scope></scope>
 <caption>Make the background of the internal gui transparent to expand viewport.</caption>
 </snippet>

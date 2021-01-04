@@ -5,9 +5,8 @@ show cartoon;
 set cartoon_flat_sheets, 0;
 set cartoon_smooth_loops, 0;
 set cartoon_fancy_helices, 1;
-${0}
 ]]></content>
 <tabTrigger>molscriptRibbon</tabTrigger>
 <scope></scope>
-<caption>Molscript ribbons.</caption>
+<caption>Show cartoon in the style of Molscript ribbons.</caption>
 </snippet>

@@ -1,10 +1,9 @@
 <snippet>
 <content><![CDATA[
-create ${1:sodium2}, ${2:sodium1}
-set sphere_transparency, 0.4, ${1:sodium2}
-set sphere_scale, 1.05, ${1:sodium2}
-ray
-${0}
+create ${1:sodium2}, ${2:sodium1};
+set sphere_transparency, 0.4, ${1:sodium2};
+set sphere_scale, 1.05, ${1:sodium2};
+ray;
 ]]></content>
 <tabTrigger>pearl</tabTrigger>
 <scope></scope>

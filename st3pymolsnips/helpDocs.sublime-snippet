@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+help(help)
+]]></content>
+<tabTrigger>helpDocs</tabTrigger>
+<scope></scope>
+<caption>Return the docustring for the help submodule. This command is more concise:  help help.</caption>
+</snippet>

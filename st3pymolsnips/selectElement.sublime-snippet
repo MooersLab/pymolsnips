@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
-select ${1:oxygen}, elem ${2:O}
-${0}
+select ${1:oxygen}, elem ${2:O};
 ]]></content>
 <tabTrigger>selectElement</tabTrigger>
 <scope></scope>

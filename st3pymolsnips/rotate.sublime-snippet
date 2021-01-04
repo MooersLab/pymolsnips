@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
-rotate ${1:x}, ${2:45}, ${3:pept}
-${0}
+rotate ${1:x}, ${2:45}, ${3:pept};
 ]]></content>
 <tabTrigger>rotate</tabTrigger>
 <scope></scope>
-<caption>Rotate about axis.</caption>
+<caption>Rotate a selection about and axis by a given angle.</caption>
 </snippet>

@@ -1,9 +1,8 @@
 <snippet>
 <content><![CDATA[
-iterate (resi %{1:133}), print(name + " %.2f" % b);
-${0}
+iterate (resi ${1:133}), print(name + " %.2f" % b);
 ]]></content>
 <tabTrigger>printBs2digits</tabTrigger>
 <scope></scope>
-<caption>Print B-values for a residue with the B's rounded off to two decimal places.</caption>
+<caption>Print B--factors for a residue with the B-factors rounded off to two decimal places.</caption>
 </snippet>

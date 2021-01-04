@@ -1,10 +1,9 @@
 <snippet>
 <content><![CDATA[
-internal_gui_width=%{1:20};
-${0}
+# set to 0 to make the internal gui vanish;
+set internal_gui_width=${1:0};
 ]]></content>
 <tabTrigger>internalGUIwidth</tabTrigger>
 <scope></scope>
-<caption>Set the width of the internal gui. 
-</caption>
+<caption>Set the width of the internal gui.</caption>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+[help(i) for i in dir(cmd)];
+]]></content>
+<tabTrigger>cmddocs</tabTrigger>
+<scope></scope>
+<caption>Print in the command history window the docstrings of all of the functions in the cmd module.</caption>
+</snippet>
