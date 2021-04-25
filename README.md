@@ -1,4 +1,4 @@
-# pymolsnips: Templates for writing PyMOL scripts.
+# juptyerlabpymolpysnips: Templates for writing PyMOL scripts.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4317774.svg)](https://doi.org/10.5281/zenodo.4317774)
@@ -18,7 +18,7 @@ For more details on installing libraries for specific editors, go to the [GitHub
 
 ## Animated demo of snippet use in Visual Studio Code
 
-<p>The animation below demonstrates the use of the <b>ao</b> tab trigger in the text editor <em>Visual Studio Code</em> to insert 16 lines of code for generating the ambient occlusion effect.
+<p>The animation below demonstrates the use of the <b>ao</b> tab trigger in the text editor <em>Visual Studio Code</em> to insert 17 lines of code for generating the ambient occlusion effect.
 Two-levels of cascading menus appear.
 The menu on the left shows the alternate tab triggers that contain the letters <b>a</b> and <b>o</b>.
 The corresponding code for the selected tab trigger is displayed in the right window.
@@ -129,7 +129,7 @@ Try the **ao** snippet. You should get a result similar to the one should in the
 <a id="requests"><h2>Requests for new snippets and text editors</h2></a>
 
 Please use the **Issues tab** above to request support for additional text editors, to suggest additional snippets, or to ask questions.
-Alternatiley, you can send [e-mail](#contact-information) to me.
+Alternatively, you can send [e-mail](#contact-information) to me.
 
 Questions about PyMOL should be directed to the [PyMOL Mailing List](https://pymolwiki.org/index.php/PyMOL_mailing_list).
 
