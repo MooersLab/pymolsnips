@@ -334,7 +334,7 @@ This can serve as a guide to selecting a text editor.
 
 <p>
 <em>pymolsnips</em> is a library of pml code fragments that have been formatted for several popular <em>text editors</em>.
-Note the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: <em>word processors should never be used to store computer code!</em>
+Note that the word processors (e.g., MS Word, Libre Office, Open Office) are not included here: <em>word processors should never be used to store computer code!</em>
 If you do so, you can inadvertently pick up hidden characters that are hard to find and remove during debugging.
 In addition, word processing documents are usually binary files that are difficult to put under version control.
 </p>
@@ -351,7 +351,7 @@ Some editors take snippet libraries in one file while other editors require that
 Most editors have their own format for snippets.
 The user downloads the file or folder of snippet files for their text editor and then installs the snippets according to the requirements for a particular text editor.
 The one exception is the CudaText editor.
-The snippets come pre-installed with this editor.
+The pymolsnips snippets come pre-installed with this editor.
 </p>
 
 <p>
@@ -792,14 +792,14 @@ This law suggests that <em>Emacs</em> should be around for another 45 years.
 
 <p>
 Over 100 other variants of <em>Emacs</em> are available.
-<em>Spacemacs</em> is a version that has a gentler learning curve in part because it can be driven by a menu of commands that is readily accessible.
-<em>Spacemacs</em> allows the use of Vim key bindings, <em>Emacs</em> key bindings, or both.
+<em>Spacemacs</em> has a gentler learning curve in part because it can be driven by a menu of commands that is readily accessible.
+<em>Spacemacs</em> allows the use of <em>Vim</em> key bindings, <em>Emacs</em> key bindings, or both.
 <em>Spacemacs</em> does have its own keybindings that have to be mastered.
-This leads to the problem of needing to translate <em>Spacemacs</em> to Gnu <em>Emacs</em> and back again when tapping into external <em>Emacs</em> resources.
+This leads to the problem of needing to translate <em>Spacemacs</em> to <em>GNU Emacs</em> and back again when tapping into external <em>Emacs</em> resources.
 </p>
 	
 <p>	
-<em>Doom Emacs</em> and <em>Prelude Emacs</em> are additional off-shoots of <em>Emacs</em> that are suppose to be easier to adopt.
+<em>Doom Emacs</em> and <em>Prelude Emacs</em> are additional popular variants of <em>Emacs</em> that are suppose to be easier to adopt.
 They are similar to <em>Spacemacs</em>.
 </p>
 	
@@ -808,15 +808,16 @@ They are similar to <em>Spacemacs</em>.
 </p>
 	
 <p>	
-For several reasons, we recommend becoming productive in GNU <em>Emacs</em> first before trying the <em>Emacs</em> variants.
+For several reasons, we recommend becoming productive in  <em>GNU Emacs</em> first before trying the <em>Emacs</em> variants.
 First, the on-line resources that support mastery of GNU <em>Emacs</em> are far greater than the resources that support the variants.
-Second, the documentation for the variants assumes a significant amount of prior knowledge of GNU <em>Emacs</em>.
-Third, these variants run on top of GNU <em>Emacs</em>.
+Second, the documentation for the variants assume significant prior knowledge of <em>GNU Emacs</em>.
+Third, these variants run on top of <em>GNU Emacs</em>.
+You will eventually have to learn <em>GNU Emacs</em> as you master one of these variants.
 </p>
 	
 <p>	
-It takes one to two weeks of nibbling away at <em>Emacs</em> tutorials to become productive at text editing in <em>Emacs</em>.
-There is a built-in tutorial in <em>Emacs</em> as well as many on-line tutorials.
+It takes one to two weeks of nibbling away at <em>GNU Emacs</em> tutorials to become productive at text editing in <em>Emacs</em>.
+There is a built-in tutorial in <em>GNU Emacs</em> as well as many on-line tutorials.
 A visually appealing tutorial is available <a href="https://www.gnu.org/software/emacs/tour/">here</a>.
 </p>
 	
@@ -828,6 +829,7 @@ It takes a life-time to master <em>Emacs</em> hence <em>Emacs</em> is known as a
 <p>	
 The one danger of <em>Emacs</em> is that it is easy to spend countless of hours configuring the <em>init.el</em> file and adding additional packages.
 Many beginners spend too much time adding too many packages, most of which they never use.
+We know this from personal experience.
 As a beginner, you should ease off editing your <em>init.el</em> file if it has grown to 500 lines in the first several weeks of using <em>Emacs</em>.
 A good practice is to add one package at a time and master each added package before adding another new package.
 </p>
@@ -857,7 +859,7 @@ However, manual installation is often quite simple.
 </p>
 	
 <p>	
-The interface to <em>Emacs</em> is either a X-terminal window or a simple GUI that can be made complex by opening many <em>buffers</em>, which are like windows.
+The interface to <em>Emacs</em> is either an X-terminal window or a simple GUI that can be made complex by opening many <em>buffers</em>, which are like windows.
 The management and navigation of buffers is a skill that the beginner needs to master early.
 </p>
 
@@ -871,20 +873,20 @@ The remaining knowledge is easy to acquire on an <em>as-needed</em> basis.
 </p>
 	
 <p>	
-Vim users can quickly become productive in <em>Emacs</em> because the Vim key bindings are available through the add-on package called evil-mode.
-Mastery of the Vim key bindings in Vim is initially painful because it is like learning how to type for the first time.
-Here again, mastery of a few dozen key bindings will enable you to be productive in Vim and in Evil-mode in <em>Emacs</em>.
+<em>Vim</em> users can quickly become productive in <em>Emacs</em> because the <em>Vim</em>  key bindings are available through the add-on package called evil-mode.
+Mastery of the <em>Vim</em>  key bindings in <em>Vim</em>  is initially painful because it is like learning how to type for the first time.
+Here again, mastery of a few dozen key bindings will enable you to be productive in <em>Vim</em> and in Evil-mode in <em>Emacs</em>.
 <em>Vim</em> key bindings are thought to bear more efficient for editing text than <em>Emacs</em> key-bindings, so their availability in <em>Emacs</em> greatly enhances a <em>Vim</em> user's productivity in </em>Emacs</em>.
 </p>
 	
 <p>	
 Mastery of <em>Vim</em> key-bindings is a wise investment because they are available in many text editors and IDEs.
 They are even available in <em>Jupyter Notebooks</em>!
-In addition, Vim is more widely distributed than <em>Emacs</em>.
+In addition, <em>Vim</em> is more widely distributed than <em>Emacs</em>.
 </p>
 
 <p>
-If you are a user of national laboratory computer systems, be cautious with your fantasy of being able to transfer your <em>init.el</em> file and reestablish your <em>Emacs</em> computing environment.
+If you use a national laboratory computer system, restrain your fantasy of being able to transfer your <em>init.el</em> file and reestablish your <em>Emacs</em> computing environment.
 Many national facilities use Centos Linux and are unable or unwilling to make available the most recent stable version of <em>Emacs</em>.
 I have found that the available versions are several years out of date and hence difficult to install all of my favorite packages.
 It may take an hour of removing calls to install incompatible packages before you can establish a subset of your favorite packages.
@@ -913,18 +915,18 @@ The latter is done in an automated fashion by using the metadata in the pdf file
 
 <p>
 The <em>.emacs.d</em> configuration directory is a hidden directory in the home directory.
-It is the home of the installed packages and plugins.
-</p>
-
-<p>
+This directory is the home of the installed packages and plugins.
 The main configuration file resides is this directory and is named <em>init.el</em>.
-The <em>init.el</em> file is the analog of Vim's <em>.vimrc</em> configuration file.
+The <em>init.el</em> file is the analog of <em>Vim</em> 's <em>.vimrc</em> configuration file.
 The commands in the <em>init.el</em> file are written in elisp.
 Fortunately, <em>elisp</em> is easy to edit and augment without knowing much about how to program with <em>elisp</em>.
 </p>
 
 <p>
-I store my configuration in a <em>config.el</em> file (see file listing at top of page).
+  I store my configuration in a <em>config.org</em> file (see file listing at top of page).
+  The org file is written in org-mode markdown.
+  The lisp commands are placed in code blocks .
+  The code is extracted from the oth file and 
 </p>
 
 <h3>Installing <em>Emacs</em></h3>
@@ -934,7 +936,7 @@ Like <em>Vim</em>, <em>Emacs</em> can be installed as a stand-a-lone application
 <p>
 <em>Emacs</em> can be downloaded <a href="https://www.gnu.org/software/emacs/">from</a> and insalled with a platform specific installer.
 Older versions of <em>Emacs</em> comes pre-installed on Mac OS, but you may want a more recent version.
-You should remove the old version with the commands <code>sudo rm /usr/bin/emacs</code> and <code>sudo rm -rf /usr/share/emacs</code>.
+You should remove the old version(s) of Emacs with the commands <code>sudo rm /usr/bin/emacs</code> and <code>sudo rm -rf /usr/share/emacs</code>.
 Binaries for the Mac are <a href="https://emacsformacosx.com">available</a>.
 As of August 2020, version 27.1-1 is the stable release.
 </p>
@@ -965,7 +967,7 @@ This package is installed with a built-in package manager.
 </p>
 <p>
 Each snippet is stored in a single file.
-The files are stored in a subfolder in the hidden folder <code>~.eamcs.d/plugins/</code> in the home directory.
+The files are stored in a subfolder in the hidden folder <code>~/.eamcs.d/plugins</code> in the home directory.
 </p>
 
 <h1>Variants of <em>Emacs</em> to consider</h1>
@@ -1449,7 +1451,7 @@ You can make the tex larger for easier reading by entering <code>cmd-+</code> a 
 
 
 <a name='Neovim'><h2>Neovim</h2></a>
-This a recent branch of Vim.
+This a recent branch of <em>Vim</em>.
 Much of the  <a href=#Vim>Vim</a> section applies.
 
 
@@ -1457,9 +1459,9 @@ Much of the  <a href=#Vim>Vim</a> section applies.
 <a name="spacemacs"><h2>Spacemacs (Universal)</h2></a>
 
 <p>
-Spacemacs (pronounced <em>space macs</em>) is a <em>Vim</em> emulator that runs on top of <em>Emacs</em>.
+Spacemacs (pronounced <em>space macs</em>) runs on top of <em>Emacs</em>.
 Its command leader is the spacebar hence the word <em>space</em> in the name.
-It is very different from running the <em>Emacs</em> in evil-mode (evil-mode enables the use of Vim keybindings in <em>Emacs</em>).
+It is very different from running the <em>Emacs</em> in evil-mode (evil-mode enables the use of <em>Vim</em> keybindings in <em>Emacs</em>).
 As a result, it should be treated as a separate editor from <em>Emacs</em> and <em>Vim</em>.
 </p>
 
@@ -1467,7 +1469,7 @@ As a result, it should be treated as a separate editor from <em>Emacs</em> and <
 <em>Spacemacs</em> has its own set of mnemonic commands that you need to master.
 In other words, you will use <em>Vim</em>, <em>Emacs</em>, and <em>Spacemacs</em> commands in one editor.
 It might be less intimidating if you have mastered some of the basics of <em>Vim</em> and <em>Emacs</em>.
-<em>Spacemacs</em> does not go as far as allowing you to use Vim plugins and configurations although you do have full access to the emacs plugins which are known as packages.
+<em>Spacemacs</em> does not go as far as allowing you to use <em>Vim</em> plugins and configurations although you do have full access to the emacs plugins which are known as packages.
 </p>
 
 <h3>Installing and using snippets with Spacemacs</h3>
@@ -1656,7 +1658,7 @@ There are over 19,000 <a href="https://vimawesome.com/"><em>plugins available</e
 A newer branch of <em>Vim</em>called <em>neovim</em> is also available.
 <em>Vim</em> and <em>neovim</em> are available from software managers like MacPorts, fink, Homebrew, Anaconda, or it can be downloaded as a <a href="https://www.vim.org/download.php"> stand-alone application</a>.
 The standard versions of both run in the terminal.
-MacVim provides a GIU version of <em>Vim</em>.
+<em>MacVim</em> provides a GIU version of <em>Vim</em>.
 This version of <em>Vim</em> is integrated with Mac OS.
 Unless you a developer of GUI applications for the Mac, you probably want to stick to the terminal version
 </p>
@@ -1667,7 +1669,7 @@ It is useful to be conversant with several of the above package managers because
 That bug has been fixed in version 8.1.2152.
 I found that the MacPorts Vim was behind this version.
 I tried to compile <em>Vim</em>  version 8.2.12; I gave up due to inference with the conda in the <em>Julia</em> installed by <em>Homebrew</em>.
-So I gave up my approach using macports, and I installed Vim version 8.2.0 via <em>Homebrew</em>.
+So I gave up my approach using macports, and I installed <em>Vim</em> version 8.2.0 via <em>Homebrew</em>.
 This version worked fine.
 It has been automatically updated to 8.2.1950 when running <em>brew update</em>.
 </p>
