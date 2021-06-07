@@ -1,1866 +1,3672 @@
 {
 "ao": {
     "prefix": "ao",
-    "body": placeHolder,
+    "body": "set_color oxygen, [1.0,0.4,0.4];\n\
+set_color nitrogen, [0.5,0.5,1.0];\n\
+remove solvent;\n\
+as spheres;\n\
+# the 'as' command is a shortcut for show_as\n\
+util.cbaw;\n\
+# 'cba' represents 'color by atom'. \n\
+# The last letter represents the colore of the carbon atom.\n\
+bg white;\n\
+# bg is an alias for bg_color or background color.\n\
+set light_count,10;\n\
+# light_count is the number of light sources. \n\
+# The max is 10. The defualt is 10.\n\
+set spec_count,1;\n\
+# Not documented on Wiki.\n\
+set shininess, 10;\n\
+# sets the shininess of the object.\n\
+set specular,0.25;\n\
+# Controls the amount of directly reflected light and not the shininess of the reflection.\n\
+set ambient,0;\n\
+# Controls the amount of ambient light. Default is 0. Ranges from -1 to 1.\n\
+set direct,0;  \n\
+# Not documented on Wiki.\n\
+set reflect,1.5;\n\
+# Controls the amount of light reflection and the effect that directional light has on shadows \n\
+# and the general lighting of the scene. Default value is 0.5.\n\
+set ray_shadow_decay_factor, 0.1;\n\
+set ray_shadow_decay_range, 2;\n\
+set depth_cue, 0;\n\
+ray;\n\
+\n\
+${0}",
     "caption": "Apply the ambient occlussion effect to get the photorealistic effect.",
     "scope": "text.pml"
 },
 "sas": {
     "prefix": "sas",
-    "body": placeHolder,
+    "body": "set surface_solvent, ${1:on}\n\
+${0}",
     "caption": "Show the solvent excluded surface.",
     "scope": "text.pml"
 },
 "ellipcol": {
     "prefix": "ellipcol",
-    "body": placeHolder,
-    "caption": "Set ellipsoid color.",
+    "body": "set ellipsoid_color, ${1:red};\n\
+${0}",
+    "caption": "Set color of thernal ellipsoids. The PDB must have anisotopic temperature factors. See https://pymolwiki.org/index.php/Color_Values for the PyMOL colors.",
     "scope": "text.pml"
 },
 "sigdist": {
     "prefix": "sigdist",
-    "body": placeHolder,
-    "caption": "set distance labels to display 2 decimals",
+    "body": "set label_distance_digits, ${1:2};\n\
+${0}",
+    "caption": "Set distance labels to display 2 decimals.",
     "scope": "text.pml"
 },
 "sigang": {
     "prefix": "sigang",
-    "body": placeHolder,
-    "caption": "Set angle labels to display 2 decimals places",
+    "body": "set label_angle_digits, ${1:2};\n\
+${0}",
+    "caption": "Set angle labels to display 2 decimals places.",
     "scope": "text.pml"
 },
 "bs": {
     "prefix": "bs",
-    "body": placeHolder,
-    "caption": "Ball and stick representation. ",
+    "body": "show sticks;\n\
+set stick_radius, 0.12;\n\
+set stick_ball, on;\n\
+set stick_ball_ratio, 1.9;\n\
+show nb_spheres;\n\
+set nb_spheres_size=0.33;\n\
+${0}",
+    "caption": "Ball and stick representation.",
     "scope": "text.pml"
 },
 "stack": {
     "prefix": "stack",
-    "body": placeHolder,
+    "body": "delete all;\n\
+fetch ${1:4PCO}, type=pdb,async=0;\n\
+select ${2:G2G3}, ( ((resi ${3:2} or resi ${4:3}) and chain A) or ((resi ${5:8} or resi ${6:9}) and chain B) );\n\
+hide everything, element h; \n\
+remove not ${2:G2G3};\n\
+bg_color white;\n\
+show sticks;\n\
+set stick_radius=0.14;\n\
+set stick_ball, on; \n\
+set stick_ball_ratio,1.9;\n\
+set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7. 24,9.55,11.78,29.46,57.91,-20.0);\n\
+hide everything, element H;\n\
+select carbon1, element C and (resi ${4:3} or resi ${5:8}); \n\
+# select lower base pair;\n\
+select carbon2, element C and (resi ${3:2} or resi ${6:9});\n\
+#select upper base pair;\n\
+color gray70,carbon1;\n\
+color gray10,carbon2;\n\
+space cmyk;\n\
+distance hbond1,/${1:4PCO}//B/U`9/N3,/${1:4PCO}//A/G`2/O6;\n\
+distance hbond2,/${1:4PCO}//B/U`9/O2,/${1:4PCO}//A/G`2/N1;\n\
+distance hbond3,/${1:4PCO}//A/U`3/N3,/${1:4PCO}//B/G`8/O6;\n\
+distance hbond4,/${1:4PCO}//A/U`3/O2,/${1:4PCO}//B/G`8/N1;\n\
+color black, hbond1;\n\
+color black, hbond2;\n\
+color gray70, hbond3;\n\
+color gray70, hbond4;\n\
+show nb_spheres;\n\
+set nb_spheres_size, 0.35;\n\
+hide labels;\n\
+ray 1600,1000;\n\
+png ${1:4PCO}.png\n\
+\n\
+${0}",
     "caption": "Base-stacking figure.",
     "scope": "text.pml"
 },
 "bu": {
     "prefix": "bu",
-    "body": placeHolder,
+    "body": "# Edit the path to the file quat.py.;\n\
+# You may have to download it from the PyMOL Wiki page.;\n\
+run ~/${1:Scripts/PyMOLScripts}/quat.py; quat;\n\
+${0}",
     "caption": "Generate the biological unit using the quat.py script.",
     "scope": "text.pml"
 },
 "doubleBond": {
     "prefix": "doubleBond",
-    "body": placeHolder,
-    "caption": "Valence bond. ",
+    "body": "set valence, 1; \n\
+set valence_mode, 1;\n\
+${0}",
+    "caption": "Valence bond.",
     "scope": "text.pml"
 },
 "cblind": {
     "prefix": "cblind",
-    "body": placeHolder,
-    "caption": "Apply color blind friendly to ribbon diagrams.",
+    "body": "run ~/${1:Pymol-script-repo}/colorblindfriendly.py;\n\
+as cartoon;\n\
+color cb_red, ss H;\n\
+color cb_yellow,ss S;\n\
+color cb_green, ss L+;\n\
+${0}",
+    "caption": "Apply color blind friendly to ribbon diagrams. Edit the path to the Pymol-script-repo in your computer account. See PyMOL wiki for more information about the Pymol-script-reo.",
     "scope": "text.pml"
 },
 "centerpi": {
     "prefix": "centerpi",
-    "body": placeHolder,
-    "caption": "Center pi.",
+    "body": "pseudoatom pi_cent,/${1:3nd3}/${2:A}/${3:U`15}/cg+cz;\n\
+dist pi_cent////ps1, b/${4:U`15}/${5:aaa};\n\
+${0}",
+    "caption": "Center pi. Edit the atoms selected for positioning the pseudoatom.",
     "scope": "text.pml"
 },
 "cribbon": {
     "prefix": "cribbon",
-    "body": placeHolder,
+    "body": "as cartoon;\n\
+color red, ss H;\n\
+color yellow,ss S;\n\
+color green, ss L+;\n\
+${0}",
     "caption": "Color ribbon H red, strand yellow, loop green.",
     "scope": "text.pml"
 },
 "cspheres": {
     "prefix": "cspheres",
-    "body": placeHolder,
+    "body": "as spheres;\n\
+color gray30, chain ${1:A};\n\
+color white, chain ${2:B};\n\
+color green, name CL;\n\
+color brown, resn NAG;\n\
+color red, resi 381;\n\
+remove solvent;\n\
+set specular, 0;\n\
+set ray_trace_gain, 0;\n\
+set ray_trace_mode, 3;\n\
+bg_color white;\n\
+set ray_trace_color, black;\n\
+set depth_cue,0;\n\
+${0}",
     "caption": "Colored spheres.",
     "scope": "text.pml"
 },
 "coordinate": {
     "prefix": "coordinate",
-    "body": placeHolder,
+    "body": "viewport 900,600;\n\
+fetch 3nd4, type=pdb, async=0;\n\
+run ~/Scripts/PyMOLScripts/quat.py;\n\
+quat 3nd4;\n\
+show sticks;\n\
+set stick_radius=0.125;\n\
+hide everything, name H*;\n\
+bg_color white;\n\
+create coorCov, (3nd4_1 and (resi 19 or resi 119 or resi 219 or resi 319 or resi 419 or resi 519 or (resi 3 and name N7)));\n\
+bond (coorCov//A/NA`19/NA),(coorCov//A/A`3/N7);\n\
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`119/O);\n\
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`219/O);\n\
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`319/O);\n\
+bond (coorCov//A/NA`19/NA),(coorCov//A/HOH`519/O);\n\
+distance (3nd4_1 and chain Aand resi 19 and name NA), (3nd4_1 and chain A and resi 519);\n\
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 419);\n\
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 319);\n\
+distance (3nd4_1 and chain A and resi 19 and name NA), (3nd4_1 and chain A and resi 219);\n\
+show nb_spheres; \n\
+set nb_spheres_size, .35;\n\
+distance hbond1,/3nd4_1/1/A/HOH`119/O, /3nd4_1/1/A/A`3/OP2;\n\
+distance hbond2,/3nd4_1/1/A/HOH`319/O, /3nd4_1/1/A/A`3/OP2;\n\
+distance hbond3,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/HOH`119/O;\n\
+distance hbond4,/3nd4_1/1/A/G`4/N7,/3nd4_1/1/A/HOH`91/O;\n\
+distance hbond5,/3nd4_1/1/A/G`4/O6, /3nd4_1/1/A/HOH`419/O;\n\
+distance hbond6,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;\n\
+distance hbond7,/3nd4_1/1/A/HOH`319/O,/3nd4_1/1/A/G`2/OP2;\n\
+distance  hbond9,/3nd4_1/1/A/HOH`419/O,/3nd4_2/2/A/HOH`74/O;\n\
+distance hbond10,/3nd4_2/2/A/C`15/O2,/3nd4_1/1/A/G`2/N2;\n\
+distance hbond11, /3nd4_2/2/A/C`15/N3,/3nd4_1/1/A/G`2/N1;\n\
+distance hbond12,/3nd4_2/2/A/C`15/N4,/3nd4_1/1/A/G`2/O6;\n\
+distance hbond13, /3nd4_2/2/A/U`14/N3,/3nd4_1/1/A/A`3/N1;\n\
+distance hbond14,3nd4_2/2/A/U`14/O4,/3nd4_1/1/A/A`3/N6;\n\
+distance hbond15, /3nd4_2/2/A/C`13/N4,/3nd4_1/1/A/G`4/O6;\n\
+ distance hbond16,/3nd4_2/2/A/C`13/N3, /3nd4_1/1/A/G`4/N1;\n\
+distance hbond17, /3nd4_1/1/A/G`4/N2,/3nd4_2/2/A/C`13/O2;\n\
+distance hbond18,/3nd4_1/1/A/G`2/N2,/3nd4_2/2/A/C`15/O2;\n\
+distance hbond19,/3nd4_1/1/A/HOH`91/O,/3nd4_1/1/A/G`4/OP2;    \n\
+set depth_cue=0;\n\
+set ray_trace_fog=0;\n\
+set dash_color, black;\n\
+set label_font_id, 5;\n\
+set label_size, 36;\n\
+set label_position, (0.5, 1.0, 2.0);\n\
+set label_color, black;\n\
+set dash_gap, 0.2;\n\
+set dash_width, 2.0;\n\
+set dash_length, 0.2;\n\
+set label_color, black;\n\
+set dash_gap, 0.2;\n\
+set dash_width, 2.0;\n\
+set dash_length, 0.2;\n\
+select carbon, element C;\n\
+color yellow, carbon;\n\
+disable carbon;\n\
+set_view(-0.9,0.34,-0.26,0.33,0.18,-0.93,-0.27,-0.92,-0.28,-0.07,-0.23,-27.83,8.63,19.85,13.2,16.0,31.63,-20.0)\n\
+${0}",
     "caption": "Coordinate covalent bonds to metals and H-bonds from RNA.",
     "scope": "text.pml"
 },
 "distance": {
     "prefix": "distance",
-    "body": placeHolder,
+    "body": "# Edit the name for the ditance, the selection criteria for atom 1, and the selection criteria for atom 2.;\n\
+distance ${1:dist3}, ${2:/rcsb074137//B/IOD`605/I`B}, ${3:/rcsb074137//B/IOD`605/I`A};\n\
+${0}",
     "caption": "H-bond distance between a H-bond donor and acceptor.",
     "scope": "text.pml"
 },
 "drawHbonds": {
     "prefix": "drawHbonds",
-    "body": placeHolder,
-    "caption": "Display H-bonds as dashes colored black. ",
+    "body": "hide everything, hydrogens;\n\
+hide labels;\n\
+# set the color of the dashed lines representing the H-bond.;\n\
+set dash_color, ${1:black};\n\
+set dash_gap, 0.4;\n\
+set dash_radius, 0.08;\n\
+${0}",
+    "caption": "Display H-bonds as dashes colored black.",
     "scope": "text.pml"
 },
 "carvedIsomesh": {
     "prefix": "carvedIsomesh",
-    "body": placeHolder,
-    "caption": "Carved isomesh representation of electron density. ",
+    "body": "delete all;\n\
+# Fetch the coordinates. Need internet connection.\n\
+fetch ${1:4dgr}, async=0;\n\
+# Fetch the electron density map.\n\
+fetch ${1:4dgr}, type=2fofc,async=0;\n\
+# create a selection out of the glycan\n\
+select ${2:LongGlycan}, resi ${3:469:477};\n\
+orient ${2:LongGlycan};\n\
+remove not ${2:LongGlycan};\n\
+remove name H*;\n\
+isomesh 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;\n\
+color density, 2fofcmap; \n\
+show sticks;\n\
+show spheres;\n\
+set stick_radius, .07;\n\
+set sphere_scale, .19;\n\
+set sphere_scale, .13, elem H;\n\
+set bg_rgb=[1, 1, 1];\n\
+set stick_quality, 50;\n\
+set sphere_quality, 4;\n\
+color gray85, elem C;\n\
+color red, elem O;\n\
+color slate, elem N;\n\
+color gray98, elem H;\n\
+set stick_color, gray50;\n\
+set ray_trace_mode, 1;\n\
+set ray_texture, 2;\n\
+set antialias, 3;\n\
+set ambient, 0.5;\n\
+set spec_count, 5;\n\
+set shininess, 50;\n\
+set specular, 1;\n\
+set reflect, .1;\n\
+set dash_gap, 0;\n\
+set dash_color, black;\n\
+set dash_gap, .15;\n\
+set dash_length, .05;\n\
+set dash_round_ends, 0;\n\
+set dash_radius, .05;\n\
+set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);\n\
+preset.ball_and_stick('all',mode=1);\n\
+draw;\n\
+${0}",
+    "caption": "Carved isomesh representation of electron density.",
     "scope": "text.pml"
 },
 "fetch2FoFcIsomesh": {
     "prefix": "fetch2FoFcIsomesh",
-    "body": placeHolder,
+    "body": "fetch ${1:3nd4}, ${1:3nd4}_2fofc, type=2fofc, async=0;\n\
+isomesh 2fofcmap, ${1:3nd4}_2fofc, 1, ${1:3nd4}, carve = 1.8;\n\
+${0}",
     "caption": "Fetch 2FoFc map as an isomesh.",
     "scope": "text.pml"
 },
 "fetchCIF": {
     "prefix": "fetchCIF",
-    "body": placeHolder,
-    "caption": "Fetch cif file.",
+    "body": "fetch ${1:3nd4}, type=cif, async=0;\n\
+${0}",
+    "caption": "Fetch the atomic coordinates as a cif file from the PDB.",
     "scope": "text.pml"
 },
 "fetchFoFc": {
     "prefix": "fetchFoFc",
-    "body": placeHolder,
-    "caption": "Fetch fofc map.",
+    "body": "fetch ${1:3nd4},  ${1:3nd4}_fofc, type=fofc, async=0;\n\
+${0}",
+    "caption": "Fetch fofc map from the PDB.",
     "scope": "text.pml"
 },
 "filledRing": {
     "prefix": "filledRing",
-    "body": placeHolder,
-    "caption": "Filled rings in nucleic acids. ",
+    "body": "show sticks;set cartoon_ring_mode, 3;\n\
+set cartoon_ring_finder, 1;\n\
+set cartoon_ladder_mode, 1;\n\
+set cartoon_nucleic_acid_mode, 4;\n\
+set cartoon_ring_transparency, 0.5;\n\
+as cartoon;\n\
+${0}",
+    "caption": "Filled rings in nucleic acids.",
     "scope": "text.pml"
 },
 "getCoordinates": {
     "prefix": "getCoordinates",
-    "body": placeHolder,
-    "caption": "Get coordinates. ",
+    "body": "print cmd.get_atom_coords('${1:/4PCO//B/G`8/OP2}');\n\
+${0}",
+    "caption": "Get coordinates.",
     "scope": "text.pml"
 },
 "hbonddash": {
     "prefix": "hbonddash",
-    "body": placeHolder,
+    "body": "hide everything, hydrogens;\n\
+hide labels;\n\
+set dash_color, black; \n\
+set dash_gap, 0.4;\n\
+set dash_radius, 0.08;\n\
+${0}",
     "caption": "Set up H-bond dashes.",
     "scope": "text.pml"
 },
 "hidealtloc": {
     "prefix": "hidealtloc",
-    "body": placeHolder,
-    "caption": "Hide the b alternate locator.",
+    "body": "select altconf, alt ${1:b}  # select B alternative locators;\n\
+hide everything, altconf  # hide alt B locators;\n\
+${0}",
+    "caption": "Hide the partially occupied atoms with the part b alternate locator.",
     "scope": "text.pml"
 },
 "labelResnResi": {
     "prefix": "labelResnResi",
-    "body": placeHolder,
+    "body": "label name ca, '%s%s' %(one_letter[${1:resn}],${2:resi});\n\
+${0}",
     "caption": "Label CA atom with single-letter residue name and residue number.",
     "scope": "text.pml"
 },
 "labelSS": {
     "prefix": "labelSS",
-    "body": placeHolder,
-    "caption": "Label SS. ",
+    "body": "alter ${1:chain A}, ss='${2:helix}';\n\
+label (%2),'%3';\n\
+${0}",
+    "caption": "Label SS.",
     "scope": "text.pml"
 },
 "loadPDBbs": {
     "prefix": "loadPDBbs",
-    "body": placeHolder,
+    "body": "fetch ${1:3nd3},name=${1:3nd3}, type=pdb, async=0;\n\
+hide (name H*);\n\
+hide lines;\n\
+show sticks;\n\
+set stick_radius, ${2:1.2};\n\
+set nb_sphere_radius, ${3:0.35};\n\
+orient;\n\
+${0}",
     "caption": "Load PDB ball-and-stick.",
     "scope": "text.pml"
 },
 "loadPDBnb": {
     "prefix": "loadPDBnb",
-    "body": placeHolder,
-    "caption": "Load PDB nb spheres. ",
+    "body": "fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;\n\
+orient;\n\
+set stick_radius, ${2:1.2};\n\
+hide (name H*);\n\
+set nb_sphere_size, ${3:0.35};\n\
+set nb_spheres_quality, ${4:1};\n\
+show nb_spheres;\n\
+${0}",
+    "caption": "Load PDB nb spheres.",
     "scope": "text.pml"
 },
 "ms": {
     "prefix": "ms",
-    "body": placeHolder,
-    "caption": "Measure surface area of the selection with the msms_pymol.py script. ",
+    "body": "fetch ${1:3nd3}, name=${1:3nd3}, type=pdb, async=0;\n\
+select ${2:temp}, ${1:3nd3} and chain ${4:A};\n\
+run ${5:/Users/blaine-mooers/Scripts/PyMOLScripts/msms_pymol.py};\n\
+calc_msms_area ${2:temp};\n\
+${0}",
+    "caption": "Measure surface area of the selection with the msms_pymol.py script.",
     "scope": "text.pml"
 },
 "molscriptRibbon": {
     "prefix": "molscriptRibbon",
-    "body": placeHolder,
+    "body": "set cartoon_highlight_color, grey;\n\
+show cartoon;\n\
+set cartoon_flat_sheets, 0;\n\
+set cartoon_smooth_loops, 0;\n\
+set cartoon_fancy_helices, 1;\n\
+${0}",
     "caption": "Show cartoon in the style of Molscript ribbons.",
     "scope": "text.pml"
 },
 "oneLetter": {
     "prefix": "oneLetter",
-    "body": placeHolder,
-    "caption": "Switch from three letter code to one-letter code for amino acids. ",
+    "body": "one_leVer%={'VAL':'V',%'ILE':'I',%'LEU':'L',%'GLU':'E',%'GLN':'Q','ASP':'D',%\n\
+'ASN':'N',%'HIS':'H',%'TRP':'W',%'PHE':'F',%'TYR':'Y',%'ARG':'R',%'LYS':'K',%\n\
+'SER':'S',%'THR':'T',%'MET':'M',%'ALA':'A',%'GLY':'G',%'PRO':'P',%'CYS':'C'}%\n\
+${0}",
+    "caption": "Switch from three letter code to one-letter code for amino acids.",
     "scope": "text.pml"
 },
 "fasta": {
     "prefix": "fasta",
-    "body": placeHolder,
-    "caption": "Print Fasta from PDB file. ",
+    "body": "print cmd.get_fastastr('all')\n\
+${0}",
+    "caption": "Print Fasta from PDB file.",
     "scope": "text.pml"
 },
 "pseudolabel": {
     "prefix": "pseudolabel",
-    "body": placeHolder,
-    "caption": "Position label with pseudoatom. ",
+    "body": "pseudoatom ${1:forLabel};\n\
+label ${1:forLabel}, '%0';\n\
+set label_color, ${2:red};\n\
+${0}",
+    "caption": "Position label with pseudoatom.",
     "scope": "text.pml"
 },
 "rotate": {
     "prefix": "rotate",
-    "body": placeHolder,
+    "body": "rotate ${1:x}, ${2:45}, ${3:pept};\n\
+${0}",
     "caption": "Rotate a selection about and axis by a given angle.",
     "scope": "text.pml"
 },
 "stereoDraw": {
     "prefix": "stereoDraw",
-    "body": placeHolder,
+    "body": "stereo walleye; \n\
+set ray_shadow, off; \n\
+#draw 3200,2000;\n\
+draw ${1:1600,1000}; \n\
+png ${2:aaa}.png;\n\
+${0}",
     "caption": "Stereo draw.",
     "scope": "text.pml"
 },
 "stereoRay": {
     "prefix": "stereoRay",
-    "body": ["stereo;",
-"set ray_shadow, off;",
-"ray ${1:2400,1200};",
-"png ${2:aaa}.png;",
-"$0"],
+    "body": "stereo; \n\
+set ray_shadow, off;\n\
+ray ${1:2400,1200};\n\
+png ${2:aaa}.png;\n\
+${0}",
     "caption": "Stereo ray.",
     "scope": "text.pml"
 },
 "loadThreeMaps": {
     "prefix": "loadThreeMaps",
-    "body": placeHolder,
-    "caption": "Three electron density as Isomesh. ",
+    "body": "load ${1:4dgr}.pdb;\n\
+# Make sure to rename map file so that;\n\
+# the root filename differs from pdb root filename;\n\
+load ${1:4dgr}_2fofc.ccp4, 2fofc;\n\
+load ${1:4dgr}_fofc.ccp4, fofc;\n\
+select  ${2:glycan}, resid 200 or (resid 469:477);\n\
+isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};\n\
+color density, ${3:mesh1};\n\
+isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};\n\
+color green, ${4:mesh2};\n\
+isomesh ${5:mesh3}, fofc, -3.0, ${2:glycan};\n\
+color red, ${5:mesh3};\n\
+${0}",
+    "caption": "Three electron density as Isomesh.",
     "scope": "text.pml"
 },
 "turnAboutAxis": {
     "prefix": "turnAboutAxis",
-    "body": ["turn ${1:x},${2:90};",
-"$0"],
-    "caption": "Turn about axis. ",
+    "body": "turn ${1:x},${2:90};\n\
+${0}",
+    "caption": "Turn about axis.",
     "scope": "text.pml"
 },
 "volumeRamp": {
     "prefix": "volumeRamp",
-    "body": ["cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,]);",
-"$0"],
+    "body": "cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,])\n\
+${0}",
     "caption": "Volume ramp.",
     "scope": "text.pml"
 },
 "solventRadius": {
     "prefix": "solventRadius",
-    "body": ["set solvent_radius, ${1:1.55};",
-"${0}"],
+    "body": "set solvent_radius, ${1:1.55};\n\
+${0}",
     "caption": "Set radius of ball used to make solvent accessible surface.",
     "scope": "text.pml"
 },
 "scaleRadiusColor": {
     "prefix": "scaleRadiusColor",
-    "body": ["bg_color white;",
-"hide everything;",
-"show spheres;",
-"set  stick_radius = 0.1;",
-"hide everything, HET;",
-"show spheres, HET;",
-"set sphere_quality=3;",
-"show sticks, resi 1102;",
-"from pymol import stored;",
-"# set the stored array equal to the b−values; or use your own values ;",
-"stored.bb = [ ];",
-"iterate, stored.bb.append(b);",
-"# execute a python−block;",
-"python;",
-"# scale the b−values;",
-"M = max(stored.bb);",
-"scaledBB = map(lambda x: float (x/M), stored.bb);",
-"count = 0;",
-"# set the sphere radii independently;",
-"for x in scaledBB:",
-"  cmd.set('sphere_scale', x ,'ID %s'%count);",
-"  count = count + 1;",
-"python end;",
-"spectrum b, selection=4gdx;",
-"space cmyk;",
-"set specular_intensity , 0.25;",
-"${0}"]
-,
+    "body": "bg_color white;\n\
+hide everything;\n\
+show spheres;\n\
+set  stick_radius = 0.1;\n\
+hide everything, HET;\n\
+show spheres, HET;\n\
+set sphere_quality=3;\n\
+show sticks, resi ${1:1102};\n\
+from pymol import stored;\n\
+# set the stored array equal to the b−values or use your own values; \n\
+stored.bb = [ ];\n\
+iterate all, stored.bb.append(b);\n\
+# execute a python−block;\n\
+python;\n\
+# scale the b−values;\n\
+M = max(stored.bb);\n\
+scaledBB = map(lambda x: float (x/M), stored.bb);\n\
+count = 0;\n\
+# set the sphere radii independently;\n\
+#[(cmd.set('sphere_scale', x ,'ID %s'%count); count = count + 1) for x in scaledBB];\n\
+for x in scaledBB:\n\
+  cmd.set('sphere_scale', x ,'ID %s'%count)\n\
+  count = count + 1\n\
+python end;\n\
+spectrum b, selection=${2:4gdx};\n\
+space cmyk;\n\
+set specular_intensity , 0.25;\n\
+${0}",
     "caption": "Scale the radius and color of atoms as spheres by property in the B-value column.",
     "scope": "text.pml"
 },
 "rv": {
     "prefix": "rv",
-    "body": ["run roundview.py;",
-"${0}"],
+    "body": "run roundview.py;\n\
+${0}",
     "caption": "Return settings in rounded format.",
     "scope": "text.pml"
 },
 "spng": {
     "prefix": "spng",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.png');",
-"end python;",
-"$0"]
-,
-    "caption": "Save png flle with timestamp",
+    "body": "python;\n\
+import datetime;\n\
+from pymol import cmd; \n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.png'); \n\
+python end;\n\
+${0}",
+    "caption": "Save png flle with timestamp.",
     "scope": "text.pml"
 },
 "spse": {
     "prefix": "spse",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd;", 
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT); ",
-"cmd.save(stemName+s+'.png');", 
-"end python;", 
-"$0"],
+    "body": "python;\n\
+import datetime;\n\
+from pymol import cmd; \n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.pse'); \n\
+python end;\n\
+${0}",
     "caption": "Save pse flle with timestamp",
     "scope": "text.pml"
 },
 "sc222": {
     "prefix": "sc222",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 2, 2, 2, , orange, supercell2,1;",
-"$0"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 2, 2, 2, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Run supercell script to generate three cells in all directions. This script was written by Thomas Holder.",
     "scope": "text.pml"
 },
 "pearl": {
     "prefix": "pearl",
-    "body": placeHolder,
+    "body": "create ${1:sodium2}, ${2:sodium1};\n\
+set sphere_transparency, 0.4, ${1:sodium2};\n\
+set sphere_scale, 1.05, ${1:sodium2};\n\
+ray;\n\
+${0}",
     "caption": "The pearl effect is made with two spheres with the outer sphere being transparent.",
     "scope": "text.pml"
 },
 "fog": {
     "prefix": "fog",
-    "body": placeHolder,
+    "body": "set fog, 0;\n\
+${0}",
     "caption": "Blur the background atoms.",
     "scope": "text.pml"
 },
 "rmwater": {
     "prefix": "rmwater",
-    "body": ["remove resn HOH;", 
-"$0"],
+    "body": "remove resn HOH;\n\
+${0}",
     "caption": "Remove waters from molecular object.",
     "scope": "text.pml"
 },
 "setcolor": {
     "prefix": "setcolor",
-    "body": ["set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}];",
-"color ${1:bark}, ${5:protein};",
-"${0}"]
-,
+    "body": "set_color ${1:bark}, [${2:0.1, ${3:0.1}, ${4:0.1}];\n\
+color ${1:bark}, ${5:protein};\n\
+${0}",
     "caption": "Set color name to a RGB code.",
     "scope": "text.pml"
 },
 "duplicateObject": {
     "prefix": "duplicateObject",
-    "body": placeHolder,
-    "caption": "Duplicate object.",
+    "body": "create ${1:t4l}, ${2:1lw9};\n\
+${0}",
+    "caption": "Duplicate object. Create an object with the first argument using the selection which is the second argument.",
     "scope": "text.pml"
 },
 "selectChain": {
     "prefix": "selectChain",
-    "body": ["select ${1:rna}, chain ${2:B};",
-${0}],
-    "caption": "Select a chain. ",
+    "body": "select ${1:rna}, ${2:chain B};\n\
+${0}",
+    "caption": "Select a chain.",
     "scope": "text.pml"
 },
 "selectResidues": {
     "prefix": "selectResidues",
-    "body": ["select aromatic, resnphe+tyr+trp;", 
-"${0}"],
+    "body": "select aromatic, resn phe+tyr+trp;\n\
+${0}",
     "caption": "Select residues by name.",
     "scope": "text.pml"
 },
 "selectResi": {
     "prefix": "selectResi",
-    "body": ["select se;2. resi 1-100;",
-"$0"],
+    "body": "select ${!:se}; resi ${2: 1:100};\n\
+${0}",
     "caption": "Select residues by a range of numbers.",
     "scope": "text.pml"
 },
 "selectElement": {
     "prefix": "selectElement",
-    "body": ["select ${1:oxygen}, elem ${2:O};",
-"${0}"],
+    "body": "select ${1:oxygen}, elem ${2:O};\n\
+${0}",
     "caption": "Select atoms by element.",
     "scope": "text.pml"
 },
 "selectName": {
     "prefix": "selectName",
-    "body": ["select ${1:oxygen2}, name ${2:O2};","${0}"],
+    "body": "select ${1:oxygen2}, name ${2:O2};\n\
+${0}",
     "caption": "Select atoms by name.",
     "scope": "text.pml"
 },
 "selectHelices": {
     "prefix": "selectHelices",
-    "body": ["select ${1:helices}, ss h;","${0}"],
+    "body": "select ${1:helices}, ss h; \n\
+${0}",
     "caption": "Select atoms by alpha helices.",
     "scope": "text.pml"
 },
 "selectStrands": {
     "prefix": "selectStrands",
-    "body": ["select ${1:strands}, ss s;","${0}"],
+    "body": "select ${1:strands}, ss s; \n\
+${0}",
     "caption": "Select atoms by beta strands.",
     "scope": "text.pml"
 },
 "selectLoops": {
     "prefix": "selectLoops",
-    "body": ["select ${1:loops},  ss l;","${0}"],
+    "body": "select ${1:loops}, ss l;\n\
+${0}",
     "caption": "Select atoms by beta loops.",
     "scope": "text.pml"
 },
 "selectAllBut": {
     "prefix": "selectAllBut",
-    "body": ["select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};","${0}"],
+    "body": "select ${1:select1}, elem ${2:N} and chain ${3:A} and not resn ${4:LYS};\n\
+${0}",
     "caption": "Select all nitrogen atom in a selelction except from lysine.",
     "scope": "text.pml"
 },
 "selectAtomsAround": {
     "prefix": "selectAtomsAround",
-    "body": ["select ${1:nearby}, resn ${2:drug} around ${3:5};",
-"${0}"],
+    "body": "select ${1:nearby}, resn ${2:drug} around ${3:5};\n\
+${0}",
     "caption": "Select atoms within a radius around a ligand.",
     "scope": "text.pml"
 },
 "selectResiduesAround": {
     "prefix": "selectResiduesAround",
-    "body": ["select ${1:nearby}, br. resn ${2:drug} around ${3:5};",
-"${0}"],
+    "body": "select ${1:nearby}, br. resn ${2:drug} around ${3:5};\n\
+${0}",
     "caption": "Select residues within a radius around a ligand.",
     "scope": "text.pml"
 },
 "undoSelection": {
     "prefix": "undoSelection",
-    "body": ["disable ${1:sele};","${0}"],
+    "body": "disable ${1:sele}; \n\
+${0}",
     "caption": "Undo a selection.",
     "scope": "text.pml"
 },
 "loadPDBfile": {
     "prefix": "loadPDBfile",
-    "body": placeHolder,
+    "body": "load ${1:my}.pdb;\n\
+${0}",
     "caption": "Load a pdb file in the current directory.",
     "scope": "text.pml"
 },
 "savePNG": {
     "prefix": "savePNG",
-    "body": ["png ${1:saveMe.png};",
-"${0}"],
-    "caption": "Save a png file of current scene to the current directory.",
+    "body": "png ${1:saveMe}.png, ${2:1920}, ${3:1920}, ${4:600}, ${5:1};\n\
+${0}",
+    "caption": "# Save a png file of current scene to the current directory. PyMOL writes out only png files. This file may need to be converted to a tiff file. See the png2tiff snippet for a bash script that converts all png files in a folder into tiff files. 1: png filename. 2: x-dimension in pixels. 3: y-dimension in pixels, 1600 x 1000 approximates the golden ratio. Usually want a square for multipanel figures..4: dots per inch. 5: ray tracing off, 0; ray tracing on, 1 should also consider image without ray tracing shadows. ",
     "scope": "text.pml"
 },
 "ringMode": {
     "prefix": "ringMode",
-    "body": ["show cartoon, ${1:rna};", 
-"set cartoon_ring_mode, ${2:3};",
-"${0}"],
+    "body": "show cartoon, ${1:rna}; set cartoon_ring_mode, ${2:3};\n\
+${0}",
     "caption": "Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.",
     "scope": "text.pml"
 },
 "sidehChainHelper": {
     "prefix": "sidehChainHelper",
-    "body": ["set cartoon_side_chain_helper, on;","${0}"],
+    "body": "set cartoon_side_chain_helper, on;\n\
+${0}",
     "caption": "In cartoons, hide the backbone atoms of selected residues when showing then as sticks.",
     "scope": "text.pml"
 },
 "extractPartObj": {
     "prefix": "extractPartObj",
-    "body": placeHolder,
+    "body": "extract new_obj, chain A;\n\
+${0}",
     "caption": "Create a new object from part of an existing object.",
     "scope": "text.pml"
 },
 "puttyCartoon": {
     "prefix": "puttyCartoon",
-    "body": ["show cartoon;",
-"cartoon putty;",
-"unset cartoon_smooth_loops;",
-"unset cartoon_flat_sheets;",
-"${0}"]
-,
+    "body": "show cartoon;\n\
+cartoon putty;\n\
+set cartoon_smooth_loops, 0;\n\
+# The command below may be needed if the above setting does not work.\n\
+# This can happen if using the presets.\n\
+# unset cartoon_smooth_loops; \n\
+set cartoon_flat_sheets, 0;\n\
+# The command below may be needed if the above setting does not work.\n\
+# This can happen if using the presets.\n\
+# unset cartoon_smooth_loops; \n\
+set cartoon_smooth_loops,0;\n\
+# The command below may be needed if the above setting does not work.\n\
+# This can happen if using the presets.\n\
+## unset cartoon_smooth_loops;\n\
+\n\
+${0}",
     "caption": "Create a putty cartoon.",
     "scope": "text.pml"
 },
 "hideSelection": {
     "prefix": "hideSelection",
-    "body": placeHolder,
+    "body": "indicate none\n\
+${0}",
     "caption": "Turn off magenta squares on current selection.",
     "scope": "text.pml"
 },
 "discreteCartoonColoring": {
     "prefix": "discreteCartoonColoring",
-    "body": placeHolder,
+    "body": "set cartoon_discrete_colors, on;\n\
+${0}",
     "caption": "Turn on discrete colors between secondary structure elements.",
     "scope": "text.pml"
 },
 "sc111": {
     "prefix": "sc111",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
-    "caption": "Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
+    "caption": "Display all symmetry mates in one unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/. Change to your path to supercell.py.",
     "scope": "text.pml"
 },
 "saxsEnvelope": {
     "prefix": "saxsEnvelope",
-    "body": ["alter ${1:refine_A_Ave_SM_015_0_370-374-0r, vdw=3.0};", 
-"set solvent_radius = 3.0;",
-"${0}"],
-    "caption": "Display SAXS envelope",
+    "body": "alter ${1:refine_A_Ave_SM_015_0_370-374-0r}, vdw=3.0;\n\
+set solvent_radius = 3.0;\n\
+${0}",
+    "caption": "Display SAXS envelope. Edit to enter the name of the bead model object.",
     "scope": "text.pml"
 },
 "setpath": {
     "prefix": "setpath",
-    "body": ["os.environ["PATH"] += os.pathsep +${1: '/Applications/ATSAS/bin'};",
-"$0"]
-,
-    "caption": "Set additional path for PyMOL to search on startup",
+    "body": "os.environ['PATH'] += os.pathsep +${1: '~/ATSAS-3.0.3-1/bin'};\n\
+${0}",
+    "caption": "Set additional path for PyMOL to search on startup.",
     "scope": "text.pml"
 },
 "fetchPath": {
     "prefix": "fetchPath",
-    "body": placeHolder,
-    "caption": "Set path for location to save fetched pdb files. ",
+    "body": "set fetch_path, ${1:/Users/blaine/pdbFiles};\n\
+${0}",
+    "caption": "Set path for location to save fetched pdb files.",
     "scope": "text.pml"
 },
 "antialias": {
     "prefix": "antialias",
-    "body": placeHolder,
+    "body": "set antialias, 1;\n\
+${0}",
     "caption": "Set antialias to on to get smoother edges.",
     "scope": "text.pml"
 },
 "lspymolrc": {
     "prefix": "lspymolrc",
-    "body": placeHolder,
+    "body": "print invocation.options.deferred;\n\
+${0}",
     "caption": "Print list of active pymolrc files.",
     "scope": "text.pml"
 },
 "sigDigits": {
     "prefix": "sigDigits",
-    "body": ["set label_distance_digits, ${1:2};",
-"set label_angle_digits, ${2:2};",
-"$0"]
-,
-    "caption": "Set number of decimals places to show in distance labels. ",
+    "body": "set label_distance_digits, ${1:2};\n\
+set label_angle_digits, ${2:2};\n\
+${0}",
+    "caption": "Set number of decimals places to show in distance labels.",
     "scope": "text.pml"
 },
 "labelCAs": {
     "prefix": "labelCAs",
-    "body": placeHolder,
+    "body": "label name CA,'%s%s' % (resn,resi);\n\
+${0}",
     "caption": "Label the CA atoms with the Ala333 style format.",
     "scope": "text.pml"
 },
 "labelWatersHOH": {
     "prefix": "labelWatersHOH",
-    "body": placeHolder,
+    "body": "label resn HOH ,'%s%s' % (resn,resi);\n\
+${0}",
     "caption": "Label waters with HOH and their residue number.",
     "scope": "text.pml"
 },
 "labelWatersW": {
     "prefix": "labelWatersW",
-    "body": placeHolder,
+    "body": "label resn HOH ,'W%s' % (resi);\n\
+${0}",
     "caption": "Label waters with W and their reisude number.",
     "scope": "text.pml"
 },
 "findHbonds": {
     "prefix": "findHbonds",
-    "body": placeHolder,
+    "body": "remove element h; distance hbonds, all, all, 3.2, mode=2;\n\
+${0}",
     "caption": "Find H-bonds around a residue.",
     "scope": "text.pml"
 },
 "printBs": {
     "prefix": "printBs",
-    "body": placeHolder,
-    "caption": "Print the B-factors of a residue. ",
+    "body": "remove element h; iterate resi ${1: 1:13}, print(resi, name,b);\n\
+${0}",
+    "caption": "Print the B-factors of a residue.",
     "scope": "text.pml"
 },
 "labelMainChain": {
     "prefix": "labelMainChain",
-    "body": placeHolder,
+    "body": "label name n+c+o+ca,'%s%s%s' % (resn,resi,name);\n\
+${0}",
     "caption": "Label the main chain atoms with the following: resn,resi,atom name.",
     "scope": "text.pml"
 },
 "printBspartB": {
     "prefix": "printBspartB",
-    "body": placeHolder,
+    "body": "iterate resi ${1:38} and altloc ${2:B}, print resi, name, alt, b;\n\
+${0}",
     "caption": "Print B factors of part B of a residue.",
     "scope": "text.pml"
 },
 "printBs2digits": {
     "prefix": "printBs2digits",
-    "body": placeHolder,
+    "body": "iterate (resi ${1:133}), print(name + ' %.2f' % b);\n\
+${0}",
     "caption": "Print B--factors for a residue with the B-factors rounded off to two decimal places.",
     "scope": "text.pml"
 },
 "writeCommandReference2HTML": {
     "prefix": "writeCommandReference2HTML",
-    "body": ["cmd.write_html_ref('pymol-command-ref.html');",
-"$0"]
-,
+    "body": "cmd.write_html_ref('pymol-command-ref.html');\n\
+${0}",
     "caption": "Write the command reference to html file in the present working directory. ",
     "scope": "text.pml"
 },
 "averageB": {
     "prefix": "averageB",
-    "body": placeHolder,
-    "caption": "Average the B-factors by using a regular list as opposed to a stored list in PyMOL. Edit the selection as needed.",
+    "body": "Bfactors = []; \n\
+#  >>> edit the selection below, which is a range of residue numbers here.;\n\
+iterate (resi ${1:133}), Bfactors.append(b);\n\
+print('Sum = ', '%.2f' % (sum(Bfactors)));\n\
+print('Number of atoms = ', len(Bfactors));\n\
+print( 'Average B =' , '%.2f' % ( sum(Bfactors)/float(len(Bfactors))));\n\
+${0}",
+    "caption": "Average the B-factors by using a regular list as opposed to a stored list in PyMOL. Edit the selection as needed. ",
     "scope": "text.pml"
 },
 "aveB4resiX": {
     "prefix": "aveB4resiX",
-    "body": placeHolder,
-    "caption": "AveBResiX, prints the residue number and the average bfactor. ",
+    "body": "# ; \n\
+Bfactors = [];\n\
+# edit the selection below, which is a range of residue numbers here.;\n\
+iterate (resi ${1:133}), Bfactors.append(b);\n\
+print( 'Average B-factor of residue ', %{1:133} , '   = ', '%.2f' %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) );\n\
+${0}",
+    "caption": "Prints the residue number and the average bfactor. Uses reduce and lambda, builtin Python functional porgramming functions. Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.",
     "scope": "text.pml"
 },
 "printNameB4ResiX": {
     "prefix": "printNameB4ResiX",
-    "body": placeHolder,
+    "body": "Bfac_dict = { 'Bfactors3' : [] };cmd.iterate('(${1:resi 133})','Bfactors3.append((name, b))', space=Bfac_dict); for i,j in Bfac_dict['Bfactors3']: print('%s %.2f' % (i,j));\n\
+${0}",
     "caption": "Print name and b-factor for a residue.",
     "scope": "text.pml"
 },
 "printResiResnNameB4ResiX": {
     "prefix": "printResiResnNameB4ResiX",
-    "body": placeHolder,
+    "body": "Bfac_dict = { 'Bfactors3' : [] };cmd.iterate('(${1:resi 133})','Bfactors3.append((resn,resi,name, b))', space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print('%s %s %s %.2f' % (i,j,k,l));\n\
+${0}",
     "caption": "Print resn, resi, atom name, and b-factor. ",
     "scope": "text.pml"
 },
 "printResiResnNameB4ResiXNoH": {
     "prefix": "printResiResnNameB4ResiXNoH",
-    "body": placeHolder,
+    "body": "Bfac_dict = { 'Bfactors3' : [] };cmd.iterate('(${1:resi 133} and not elem H)','Bfactors3.append((resn,resi,name, b))', space=Bfac_dict); for i,j,k,l in Bfac_dict['Bfactors3']: print('%s %s %s %.2f' % (i,j,k,l));\n\
+${0}",
     "caption": "Print name and b-factor for a residue or residue range (e.g. 81:120). The noH variant.",
     "scope": "text.pml"
 },
 "internalGUImode2": {
     "prefix": "internalGUImode2",
-    "body": placeHolder,
+    "body": "internal_gui_mode=2;\n\
+${0}",
     "caption": "Make the background of the internal gui transparent to expand viewport.",
     "scope": "text.pml"
 },
 "internalGUIwidth": {
     "prefix": "internalGUIwidth",
-    "body": placeHolder,
-    "caption": "Set the width of the internal gui.",
+    "body": "set internal_gui_width=${1:0};\n\
+${0}",
+    "caption": "Set the width of the internal gui. Set to 0 to make the internal gui vanish.",
     "scope": "text.pml"
 },
 "printDoc": {
     "prefix": "printDoc",
-    "body": placeHolder,
+    "body": "print ${1:my_func}.__doc__;\n\
+${0}",
     "caption": "Print document string of a function.",
     "scope": "text.pml"
 },
 "lsSnips": {
     "prefix": "lsSnips",
-    "body": placeHolder,
-    "caption": "List all snips by tab trigger and description",
+    "body": "'''Tab trigger                  Description\n\
+---------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\
+antialias                    Set antialias to get smooth edges\n\
+ao                           Ambient occlussion.\n\
+aveB4resiX                   AveBResiX, prints the resiude number and the average bfactor.\n\
+                             Uses reduce and lambda, builtin Python functional porgramming functions.\n\
+                             Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.\n\
+averageB                     Uses a regular list as opposed to PyMOL's stored list. Edit the selection as needed.\n\
+bs                           Ball and stick representation.\n\
+bu                           Biological unit.\n\
+carvedDensity                Carved electron density.\n\
+cblind                       Color blindness.\n\
+centerpi                     Center pi.\n\
+coordinate                   Coordinate covalent bonds to metals and H-bonds friom RNA.\n\
+cribbon                      Color ribbon H red, strand yellow, loop green.\n\
+cspheres                     Colored spheres.\n\
+discreteCartoonColoring      Turn on discrete colors between secondary structure elements.\n\
+distance                     H-bond distances.\n\
+doubleBond                   Valence bond.\n\
+drawHbonds                   Draw H-bonds.\n\
+duplicateObject              Duplicate object.\n\
+ellipcol                     Set ellipsoid color.\n\
+extractPartObj               Create a new object from part of an existing object.\n\
+fasta                        Print Fasta from PDB file.\n\
+fetch2FoFc                   Fetch 2FoFc map.\n\
+fetchCIF                     Fetch cif file.\n\
+fetchFoFc                    Fetch fofc map.\n\
+fetchPath                    Set path for location to save fetched pdb files.\n\
+filledRing                   Filled rings in nucleic acids.\n\
+findHbonds                   Find hbonds around a residue.\n\
+fog                          Blur the background atoms.\n\
+getCoordinates               Get coordinates.\n\
+hbond                        Hbond setup.\n\
+hbonddash                    H-bond dashes.\n\
+hideSelection                Trun off magenta squares on current selection.\n\
+hidealtloc                   Hide alt loc.\n\
+internalGUImode2             Makes the background of the internal gui transparent with the viewport extended into this region of the gui. This may be a useful mode for workshops.\n\
+internalGUIwidth             Set the width of the internal gui.\n\
+labelCAs                     Label the CA atoms with the Ala333 style format\n\
+labelMainChain               Label the main chain atoms by resn,resi,atom name.\n\
+labelResnResi                Label CA atom with residue name and residue number.\n\
+labelSS                      Label SS.\n\
+labelWatersHOH               Label waters HOH.\n\
+labelWatersW                 Label waters W.\n\
+loadPDBbs                    Load PDB ball-and-stick.\n\
+loadPDBfile                  Load a pdb file in the current directory.\n\
+loadPDBnb                    Load PDB nb spheres.\n\
+lsSnips                      List all snips by tab trigger and description\n\
+lspymolrc                    Print list of active pymolrc files.\n\
+molscriptRibbon              Molscript ribbons.\n\
+ms                           Measure surface area.\n\
+oneLetter                    One letter amino acid.\n\
+pearl                        The pearl effect is made with two spheres with the outer sphere being transparent.\n\
+printBs                      Print the B-factors of a residue.\n\
+printBs2digits               Print B-values for a residue with the B's rounded off to two decimal places.\n\
+printBspartB                 Print B factors of part B of a rsidues.\n\
+printDoc                     Print document string of a function.\n\
+printNameB4ResiX             Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). Use the noH variant if H atoms are present.\n\
+printResiResnNameB4ResiX     Print resn, resi, atom name, and b-factor.\n\
+printResiResnNameB4ResiXNoH  Print name and b-factor for a rsidue. You can change this to a named selection or a residue range ( e.g., resi 133:155). The noH variant.\n\
+pseudolabel                  Position label with pseudoatom.\n\
+puttyCartoon                 Create a putty cartoon.\n\
+ringMode                     Set the ring mode to a value between 0  and 6 in cartoons of nucleic acids.\n\
+rmwater                      Remove waters from molecular object.\n\
+rotate                       Rotate about axis.\n\
+rv                           Return settings in rounded format.\n\
+savePNG                      Save a png file of current scene to the current directory.\n\
+saxsEnvelope                 Display SAXS envelope\n\
+sc111                        Display all symmetry mates in one unit cell. Asumes supercell.py (sse PyMOL Wiki) is in $HOME/Scripts/PyMOLscripts/.\n\
+sc222                        Run Tom Holder's supercell script to generate three cells in all directions.\n\
+scaleRadiusColor             Scale the radius and color of atoms as spheres by property in the B-value column.\n\
+selectAllBut                 Select all nitrogen atom in a selelction except from lysine.\n\
+selectAtomsAround            Select atoms within a radius around a ligand.\n\
+selectChain                  Select a chain.\n\
+selectElement                Select atoms by elemnt.\n\
+selectHelices                Select atoms by alpha helices.\n\
+selectLoops                  Select atoms by beta loops.\n\
+selectName                   Select atoms by name.\n\
+selectResi                   Select residues by a range of numbers.\n\
+selectResidues               Select residues by name.\n\
+selectResiduesAround         Select residues within a radius around a ligand.\n\
+selectStrands                Select atoms by beta strands.\n\
+setcolor                     Set color name to a RGB code.\n\
+setpath                      Set additional path for PyMOL to search on startup\n\
+sidehChainHelper             In cartoons, hide the backbone atoms of selected residues when showing then as sticks.\n\
+sigDigits                    Set number of decimals places to show in distance labels.\n\
+sigang                       Set angle labels to display 2 decimals places\n\
+sigdist                      set distance labels to display 2 decimals\n\
+solventRadius                Set radius of ball used to make solvent accessible surface.\n\
+spng                         Save png flle with timestamp\n\
+spse                         Save pse flle with timestamp\n\
+stack                        Base-stacking figure.\n\
+stereoDraw                   Stereo draw.\n\
+stereoRay                    Stereo ray.\n\
+threeMaps                    Three electron density.\n\
+turnAboutAxis                Turn about axis.\n\
+undoSelection                Undo a selection.\n\
+volumeRamp                   Volume ramp.\n\
+writeCommandReference2HTML   Write the command reference to html file in the present working directory.'''\n\
+\n\
+${0}",
+    "caption": "List all snips by tab trigger and description.",
     "scope": "text.pml"
 },
 "his31asp70": {
     "prefix": "his31asp70",
-    "body": placeHolder,
+    "body": "fetch ${1:1lw9}, async=0; \n\
+zoom (${2:resi 31 or resi 70}); \n\
+preset.technical(selection='all'); \n\
+bg_color ${3:gray70}; \n\
+clip slab, 7,(${4:resi 31 or resi 70});\n\
+rock;\n\
+${0}",
     "caption": "Display the famous Asp70-His31 salt-bridge from T4 lysozyme that contributes3-5 kcal/mol to protein stability. ",
     "scope": "text.pml"
 },
 "waterTriple": {
     "prefix": "waterTriple",
-    "body": ["fetch 1lw9, async=0;",
-"zoom resi 313;", 
-"preset.technical(selection='all', mode=1);",
-"${0}"]
-  
-,
-    "caption": "triple water pentagon.",
+    "body": "fetch ${1:lw9}, async=0; \n\
+zoom resi ${2:313}; \n\
+preset.technical(selection='all', mode=1);\n\
+${0}",
+    "caption": "Examples of a triple water pentagon. Zoom in on the selection. Edit by changing the residue number.",
     "scope": "text.pml"
 },
 "ligandSelect": {
     "prefix": "ligandSelect",
-    "body": placeHolder,
+    "body": "select ${1:ligand}, organic;\n\
+${0}",
     "caption": "Make selection of ligand atoms.",
     "scope": "text.pml"
 },
 "github": {
     "prefix": "github",
-    "body": placeHolder,
+    "body": "https://github.com/MooersLab/pymolsnips/blob/master/README.md\n\
+${0}",
     "caption": "Print url of README.md file of the pymolsnips repository.",
     "scope": "text.pml"
 },
 "sigdihedral": {
     "prefix": "sigdihedral",
-    "body": ["set label_dihedral_digits, ${1:2}"; \n${0}"]],
+    "body": "set label_dihedral_digits, ${1:2};\n\
+${0}",
     "caption": "Set dihedral labels to display 2 decimals places to the right of the decimal point.",
     "scope": "text.pml"
 },
 "stateOne": {
     "prefix": "stateOne",
-    "body": cmd.create('newobject', 'oldobject', '1', '1'),
+    "body": "cmd.create('newobject', 'oldobject', '1', '1');\n\
+${0}",
     "caption": "Select state 1 from a model with multiple states.",
     "scope": "text.pml"
 },
 "sc112": {
     "prefix": "sc112",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 1, 2, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in two unit cells along the c axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc113": {
     "prefix": "sc113",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 1, 3, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in three unit cels along c. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc311": {
     "prefix": "sc311",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 3, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates three three unit cells along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc131": {
     "prefix": "sc131",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 3, 1, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in three unit cells along b. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc211": {
     "prefix": "sc211",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 2, 1, 1, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in two unit cell along a. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc121": {
     "prefix": "sc121",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 2, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in two unit cells along the b axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc122": {
     "prefix": "sc122",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 2, 2, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 1 x 2 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc221": {
     "prefix": "sc221",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 2, 2, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in 2 x 2 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc212": {
     "prefix": "sc212",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 2, 1, 2, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 2 x 1 x 2 arrays of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc133": {
     "prefix": "sc133",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 3, 3, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in 1 x 3 x 3 array of unit cell. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc313": {
     "prefix": "sc313",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 3, 1, 3, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 3 x 1 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc331": {
     "prefix": "sc331",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 3, 3, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in 3 x 3 x 1 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc233": {
     "prefix": "sc233",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 2, 3, 3, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 2 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc323": {
     "prefix": "sc323",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 1, 1, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 3 x 2 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc332": {
     "prefix": "sc332",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 3, 3, 2, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in 3 x 3 x 2 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc333": {
     "prefix": "sc333",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 3, 3, 3, , ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in 3 x 3 x 3 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc114": {
     "prefix": "sc114",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 1, 4, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+\n\
+${0}",
     "caption": "Display all symmetry mates in four unit cells stacked long c-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc141": {
     "prefix": "sc141",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 4, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in four unit cells stacked long b-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc411": {
     "prefix": "sc411",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 4, 1, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "saln": {
     "prefix": "saln",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.aln');",
-"end python;",
-"$0"]
-,
+    "body": "python;\n\
+import datetime;\n\
+from pymol import cmd;\n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT);\n\
+cmd.save(stemName+s+'.aln');\n\
+python end;\n\
+${0}",
     "caption": "Save an aln flle with a timestamp.",
     "scope": "text.pml"
 },
 "sccp4": {
     "prefix": "sccp4",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.png');",
-"end python;",
-"$0"]
-,
-    "caption": "Save electron density map flle with timestamp",
+    "body": "python;\n\
+import datetime;\n\
+from pymol import cmd; \n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.ccp4'); \n\
+python end;\n\
+${0}",
+    "caption": "Save electron density map flle with timestamp.",
     "scope": "text.pml"
 },
 "sdae": {
     "prefix": "sdae",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.png');",
-"end python;",
-"$0"]
-,
-    "caption": "Save dae flle with timestamp",
+    "body": "import datetime;\n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.dae'); \n\
+\n\
+${0}",
+    "caption": "Save dae flle with timestamp.",
     "scope": "text.pml"
 },
 "carvedIsosurface": {
     "prefix": "carvedIsosurface",
-    "body": placeHolder,
-    "caption": "Carved isosurface representation of electron density. ",
+    "body": "delete all;\n\
+# Fetch the coordinates. Need internet connection.;\n\
+fetch ${1:4dgr}, async=0;\n\
+# Fetch the electron density map.;\n\
+fetch ${1:4dgr}, type=2fofc,async=0;\n\
+# create a selection out of the glycan;\n\
+select ${2:LongGlycan}, resi ${3:469:477};\n\
+orient ${2:LongGlycan};\n\
+remove not ${2:LongGlycan};\n\
+remove name H*;\n\
+isosurface 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;\n\
+color density, 2fofcmap; \n\
+show sticks;\n\
+show spheres;\n\
+set stick_radius, .07;\n\
+set sphere_scale, .19;\n\
+set sphere_scale, .13, elem H;\n\
+set bg_rgb=[1, 1, 1];\n\
+set stick_quality, 50;\n\
+set sphere_quality, 4;\n\
+color gray85, elem C;\n\
+color red, elem O;\n\
+color slate, elem N;\n\
+color gray98, elem H;\n\
+set stick_color, gray50;\n\
+set ray_trace_mode, 1;\n\
+set ray_texture, 2;\n\
+set antialias, 3;\n\
+set ambient, 0.5;\n\
+set spec_count, 5;\n\
+set shininess, 50;\n\
+set specular, 1;\n\
+set reflect, .1;\n\
+set dash_gap, 0;\n\
+set dash_color, black;\n\
+set dash_gap, .15;\n\
+set dash_length, .05;\n\
+set dash_round_ends, 0;\n\
+set dash_radius, .05;\n\
+set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);\n\
+preset.ball_and_stick('all',mode=1);\n\
+draw;\n\
+${0}",
+    "caption": "Carved isosurface representation of electron density.",
     "scope": "text.pml"
 },
 "fetch2FoFcIsosurface": {
     "prefix": "fetch2FoFcIsosurface",
-    "body": placeHolder,
-    "caption": "Fetch 2FoFc map as an isosurface.",
+    "body": "fetch ${1:3nd4}, ${1:3nd4}_2fofc, type=2fofc, async=0;\n\
+# Render and display a contour of this map as a chicken wire representation.;\n\
+isosurface 2fofcmap, ${1:3nd4}_2fofc, 1, ${1:3nd4}, carve = 1.8;\n\
+${0}",
+    "caption": "Fetch 2FoFc map as an isosurface. Edit the PDB-ID code. Use lowercase letter for the fifth character to select a single chain.",
     "scope": "text.pml"
 },
 "threeMapsIsosurface": {
     "prefix": "threeMapsIsosurface",
-    "body": ["load ${1:4dgr}.pdb;",
-"# Make sure to rename map file so that;",
-"# the root filename differs from pdb root filename;",
-"load ${1:4dgr}_2fofc.ccp4, 2fofc;",
-"load ${1:4dgr}_fofc.ccp4, fofc;",
-"select  ${2:glycan}, resid 200 or (resid 469:477);",
-"isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};",
-"color density, ${3:mesh1};",
-"isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};",
-"color green, ${4:mesh2};",
-"isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};",
-"color red, ${5:mesh2};",
-"${0}"],
-    "caption": "Three electron density as isosurface. ",
+    "body": "load ${1:4dgr}.pdb;\n\
+# Make sure to rename map file so that ;\n\
+# the root filename differs from pdb root filename;\n\
+load ${1:4dgr}_2fofc.ccp4, 2fofc;\n\
+load ${1:4dgr}_fofc.ccp4, fofc;\n\
+select  ${2:glycan}, ${3:resid 200 or (resid 469:477)};\n\
+isosurface ${4:mesh1}, 2fofc, 1.0, ${2:glycan};\n\
+color density, ${4:mesh1};\n\
+isosurface  ${5:mesh2}, fofc, 3.0, ${2:glycan};\n\
+color green, ${5:mesh2};\n\
+isosurface  ${6:mesh3}, fofc, -3.0, ${2:glycan};\n\
+color red, ${6:mesh3};\n\
+${0}",
+    "caption": "Display three electron density maps as isosurfaces.",
     "scope": "text.pml"
 },
 "carvedVolume": {
     "prefix": "carvedVolume",
-    "body": placeHolder,
-    "caption": "Carved volume representation of electron density. ",
+    "body": "delete all;\n\
+# Fetch the coordinates. Need internet connection.;\n\
+fetch ${1:4dgr}, async=0;\n\
+# Fetch the electron density map.;\n\
+fetch ${1:4dgr}, type=2fofc,async=0;\n\
+# create a selection out of the glycan;\n\
+select ${2:LongGlycan}, resi ${3:469:477};\n\
+# oreint the long axes of the object along the x-axis;\n\
+orient ${2:LongGlycan};\n\
+# remove everything except the glycan;\n\
+remove not ${2:LongGlycan};\n\
+# remove the remaining hydrogen atoms;\n\
+remove name H*;\n\
+# show the electron density map as a surface.\n\
+surface 2fofcmap, ${1:4dgr}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;\n\
+color density, 2fofcmap; \n\
+show sticks;\n\
+show spheres;\n\
+set stick_radius, .07;\n\
+set sphere_scale, .19;\n\
+set sphere_scale, .13, elem H;\n\
+set bg_rgb=[1, 1, 1];\n\
+set stick_quality, 50;\n\
+# make the spheres smooth with larger settings.;\n\
+set sphere_quality, 4;\n\
+# gray85 is off-white, gray0 is black;\n\
+color gray85, elem C;\n\
+color red, elem O;\n\
+color slate, elem N;\n\
+color gray98, elem H;\n\
+set stick_color, gray50;\n\
+set ray_trace_mode, 1;\n\
+set ray_texture, 2;\n\
+set antialias, 3;\n\
+set ambient, 0.5;\n\
+set spec_count, 5;\n\
+set shininess, 50;\n\
+set specular, 1;\n\
+set reflect, .1;\n\
+set dash_gap, 0;\n\
+set dash_color, black;\n\
+set dash_gap, .15;\n\
+set dash_length, .05;\n\
+set dash_round_ends, 0;\n\
+set dash_radius, .05;\n\
+set_view (0.34,-0.72,0.61,0.8,0.56,0.22,-0.51,0.4,0.77,0.0,0.0,-81.31,44.64,-9.02,58.62,65.34,97.28,-20.0);\n\
+preset.ball_and_stick('all',mode=1);\n\
+draw;\n\
+${0}",
+    "caption": "Carved volume representation of electron density.",
     "scope": "text.pml"
 },
 "fetch2FoFcVolume": {
     "prefix": "fetch2FoFcVolume",
-    "body": placeHolder,
+    "body": "fetch ${1:3nd4}, type=cif, async=0;\n\
+fetch ${1:3nd4}, {1:3nd4}_2fofc, type=2fofc, async=0;\n\
+# Render and display a contour of this map as a volume around a selection called LongGlycan.;\n\
+volume 2fofcmap, ${1:3nd4}_2fofc, 1, ${2:LongGlycan}, carve = 1.8;\n\
+${0}",
     "caption": "Fetch 2FoFc map as a volume.",
     "scope": "text.pml"
 },
 "threeMapsVolume": {
     "prefix": "threeMapsVolume",
-    "body": ["load ${1:4dgr}.pdb;",
-"# Make sure to rename map file so that;",
-"# the root filename differs from pdb root filename;",
-"load ${1:4dgr}_2fofc.ccp4, 2fofc;",
-"load ${1:4dgr}_fofc.ccp4, fofc;",
-"select  ${2:glycan}, resid 200 or (resid 469:477);",
-"isomesh ${3:mesh1}, 2fofc, 1.0, ${2:glycan};",
-"color density, ${3:mesh1};",
-"isomesh ${4:mesh2}, fofc, 3.0, ${2:glycan};",
-"color green, ${4:mesh2};",
-"isomesh ${5:mesh2}, fofc, -­3.0, ${2:glycan};",
-"color red, ${5:mesh2};",
-"${0}"],
-    "caption": "Three electron density as volumes. ",
+    "body": "load ${1:4dgr}.pdb;\n\
+# Make sure to rename map file so that ;\n\
+# the root filename differs from pdb root filename;\n\
+load ${1:4dgr}_2fofc.ccp4, 2fofc;\n\
+load ${1:4dgr}_fofc.ccp4, fofc;\n\
+select  ${2:glycan}, ${3:resid 200 or (resid 469:477)};\n\
+volume ${4:mesh1}, 2fofc, 1.0, ${2:glycan};\n\
+color density, ${4:mesh1};\n\
+volume ${5:mesh2}, fofc, 3.0, ${2:glycan};\n\
+color green, ${5:mesh2};\n\
+volume ${6:mesh3}, fofc, -3.0, ${2:glycan};\n\
+color red, ${6:mesh3};\n\
+${0}",
+    "caption": "Three electron density as volumes.",
     "scope": "text.pml"
 },
 "rvi": {
     "prefix": "rvi",
-    "body": placeHolder,
+    "body": "def rvj(StoredView=0, decimal_places=2, outname='roundedview.txt'):\n\
+    '''\n\
+    rvj() is a modification of the the rv() function (aka the roundview.py) \n\
+    so that it can run in Jupyter notebooks with the ipymol.viewer. \n\
+    A set_view string is printed to the noteobook in a format that is ready \n\
+    for reuse. \n\
+    \n\
+    The ipymol module was developed by Carlos Hernandez:\n\
+    \n\
+    https://github.com/cxhernandez/ipymol\n\
+    \n\
+    The pre-requisites for installing ipymol are as follows:\n\
+    \n\
+    1. Make a jupyter notebook kernel for Python interpreter inside of \n\
+       the Schrodinger PyMOL. See the PyMOL Snippets GitHub Page for \n\
+       a description of how to make one.\n\
+    2. Install the following build of ipymol at the PyMOL prompt.\n\
+       You need to log into your GitHub account first.\n\
+    \n\
+    pip install git+pip install git+https://github.com/cxhernandez/ipymol.git@2a30d6ec1588434e6f0f72a1d572444f89ff535b\n\
+    \n\
+    3. Make a bash alias to this PyMOL app file.\n\
+    \n\
+    4. Launch the jupyter notebook and select the pymol.python kernel.\n\
+    \n\
+    5. Open a terminal instance from the File pulldown in jupyter notebook.\n\
+    \n\
+    6. Enter `pymol -Rq` to launch an interactive instance of PyMOL.\n\
+    \n\
+    7. Enter the following code to load ipymol and conmect to PyMOL\n\
+    \n\
+    from ipymol import viewer as ipv\n\
+    ipv.start()   # Start PyMOL RPC server\n\
+    \n\
+    Now you can change the scene manually and send the display as static \n\
+    image to a cell in the jupyter notebook.\n\
+    \n\
+    It is assumed that the viewer class of the ipymol moduel has been \n\
+    imported as ipv. \n\
+    \n\
+    I made the following modifications of roundview.py.\n\
+    The cmd.get_view was replaced with ipv.get_view.\n\
+    The cmd.extend was replaced with ipv.extend.\n\
+    The myRoundedList was returned for further processing.\n\
+    \n\
+    MIT License\n\
+    \n\
+    Copyright:\n\
+    Blaine Mooers and the OU Board of Regents\n\
+    Uniersity of Oklahoma Health Sciences Center\n\
+    Oklahoma City, OK 73104\n\
+    \n\
+    29 April 2020\n\
+    \n\
+    '''\n\
+    \n\
+ \n\
+    StoredView = int(StoredView)\n\
+    decimal_places = int(decimal_places)\n\
+ \n\
+    #call the get_view function\n\
+ \n\
+    m = ipv.get_view(StoredView)\n\
+ \n\
+ \n\
+    #Make a list of the elements in the orientation matrix.\n\
+ \n\
+    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9],\n\
+              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]\n\
+ \n\
+    #Round off the matrix elements to two decimal places (two fractional places)\n\
+    #This rounding approach solved the problem of unwanted\n\
+    #whitespaces when I tried to use a string format statement\n\
+ \n\
+    myRoundedList = [round(elem, decimal_places) for elem in myList]\n\
+    \n\
+    #x is the string template for the output. The whitespace is required\n\
+    #between the 'set_view' and '('\n\
+ \n\
+    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'\n\
+ \n\
+    # Print to the command history window.\n\
+    print(x.format(*myRoundedList))\n\
+ \n\
+    #Write to a text file.\n\
+    myFile = open('roundedview.txt', 'a')\n\
+    myFile.write(x.format(*myRoundedList) + '')\n\
+    myFile.close()\n\
+    return myRoundedList\n\
+ipv.extend('rv', rv)\n\
+${0}",
     "caption": "Return settings in rounded format while running PyMOL via the RCP server ipymol in a jupyter notebook. This is a modified version of the roundview.py script.",
     "scope": "text.pml"
 },
 "rdkrpcChem": {
     "prefix": "rdkrpcChem",
-    "body": placeHolder,
+    "body": "import os;\n\
+import rdkit;\n\
+from rdkit import Chem;\n\
+from rdkit.Chem import AllChem;\n\
+from rdkit.Chem import PyMol;\n\
+\n\
+s = PyMOL.MolViewer();\n\
+mol = Chem.MolFromSmiles('${1:CCOCCn1c(C2CC[NH+](CCc3ccc(C(C)(C)C(=O)[O-])cc3)CC2)nc2ccccc21}');\n\
+mol = AllChem.AddHs(mol);\n\
+AllChem.EmbedMolecule(mol);\n\
+AllChem.MMFFOptimizeMolecule(mol);\n\
+s.ShowMol(mol, name = '${2:bilastine}', showOnly = False);\n\
+s.Zoom('${2:bilastine}');\n\
+s.SetDisplayStyle('${2:bilastine}', 'sticks');\n\
+s.GetPNG(preDelay=5);\n\
+${0}",
     "caption": "Demo of the use of the RPC server with a drug compound via the rdkit python module.",
     "scope": "text.pml"
 },
 "kernel": {
     "prefix": "kernel",
-    "body": placeHolder,
+    "body": "framerule=2pt,\n\
+framesep=2mm,\n\
+framesep=2mm,\n\
+breaklines=True,\n\
+baselinestretch=1.2\n\
+]{bash}\n\
+{\n\
+ 'argv': [\n\
+  '/Applications/PyMOL.app/Contents/bin/python',\n\
+  '-m',\n\
+  'ipykernel_launcher',\n\
+  '-f',\n\
+  '{connection_file}'\n\
+ ],\n\
+ 'display_name': 'pymol.python',\n\
+ 'language': 'python'\n\
+}\n\
+${0}",
     "caption": "A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels.",
     "scope": "text.pml"
 },
 "rdkrpcProtein": {
     "prefix": "rdkrpcProtein",
-    "body": placeHolder,
+    "body": "from rdkit.Chem import PyMol;\n\
+\n\
+Usage=''''Start pymol from command line with -R flag.\n\
+Select the pymol.python kernel in Jupyter notebook. ''';\n\
+\n\
+s = PyMol.MolViewer();\n\
+du = s.server.do;\n\
+du('rein; bg_color white; fetch ${1:1lw9}, type=pdb, async=0, show;nb_spheres;set_view (${2:0.46,-0.28,-0.84,0.74,-0.41,0.54,-0.49,-0.87,0.02,0.0,0.0,-155.16,35.13,11.48,9.72,122.33,187.99,-20.0});');\n\
+s.GetPNG(preDelay=3);\n\
+du('png ${3:T4L600dpi}.png, dpi=600');\n\
+${0}",
     "caption": "Demo of the use of the RPC server with a protein via rdkit.",
     "scope": "text.pml"
 },
 "ipymolStart": {
     "prefix": "ipymolStart",
-    "body": placeHolder,
-    "caption": "Code to start the RPC server with ipymol.",
+    "body": "from ipymol import viewer as ipv;\n\
+ipv.start() # Start PyMOL RPC server;\n\
+\n\
+${0}",
+    "caption": "Code to start the RPC server with ipymol. Start pymol in terminal with pymol -R; select pymol.python as the kernel in juptyer. You may have to create this kernel for the Python interpreter that is inside PyMOL.",
     "scope": "text.pml"
 },
 "ipymolProtein": {
     "prefix": "ipymolProtein",
-    "body": placeHolder,
+    "body": "# Create a kernel for PyMOL's python interpreter inside Jupyter;\n\
+# See the kernel snippet for an example.;\n\
+# See the README.md file on pymolsnips GItHub website;\n\
+# https://github.com/MooersLab/pymilsnips;\n\
+# for more details.;\n\
+# Start pymol in terminal with pymol -R;\n\
+# Select pymol.python as kernel in juptyer;\n\
+from ipymol import viewer as ipv;\n\
+# Start PyMOL RPC server;\n\
+ipv.start(); \n\
+ipv.do('fetch ${1:1lw9}');\n\
+ipv.do('rv');\n\
+# The double parentheses are required when set_view is run this way.;\n\
+ipv.set_view((-0.13,-0.4,-0.91,0.89,-0.45,0.07,-0.44,-0.8,0.41,0.0,0.0,-182.47,35.13,11.48,9.72,149.64,215.3,-20.0));\n\
+ipv.do('AOD');\n\
+ipv.png('${2:testipymolT4L}.png');\n\
+${0}",
     "caption": "Demo of the use of the RPC server with a protein via ipymol.",
     "scope": "text.pml"
 },
 "rvr": {
     "prefix": "rvr",
-    "body": placeHolder,
+    "body": "def rvr(StoredView=0, decimal_places=2, outname='roundedview.txt'):\n\
+   '''MIT License\n\
+    Copyright:\n\
+    Blaine Mooers and the OU Board of Regents\n\
+    University of Oklahoma Health Sciences Center\n\
+    Oklahoma City, OK 73104\n\
+    30 April 2020\n\
+    \n\
+    First run the following:\n\
+    \n\
+    from rdkit.Chem import PyMol\n\
+    s = PyMol.MolViewer()\n\
+    du = s.server.do\n\
+\n\
+    '''\n\
+    StoredView = int(StoredView) decimal_places = int(decimal_places)\n\
+    #call the get_view function\n\
+    m = s.get_view(StoredView)\n\
+    #Make a list of the elements in the orientation matrix.\n\
+    myList = [m[0], m[1], m[2], m[3], m[4], m[5], m[6],m[7], m[8], m[9], \n\
+              m[10], m[11], m[12], m[13], m[14],m[15], m[16], m[17]]\n\
+    #Round off the matrix elements to two decimal places (two fractional places)\n\
+    #This rounding approach solved the problem of unwanted\n\
+    #whitespaces when I tried to use a string format statement\n\
+    myRoundedList = [round(elem, decimal_places) for elem in myList]\n\
+    #x is the string template for the output. The whitespace is required\n\
+    #between the 'set_view' and '('\n\
+    x = 'set_view ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17});'\n\
+    # Print to the command history window.\n\
+    print(x.format(*myRoundedList))\n\
+    #Write to a text file.\n\
+    myFile = open('roundedview.txt', 'a') myFile.write(x.format(*myRoundedList) + '') myFile.close()\n\
+    return myRoundedList\n\
+du.extend('rvr', rvr)\n\
+\n\
+${0}",
     "caption": "Return settings in rounded format while running PyMOL via the RCP server rdkit in a jupyter notebook. This is a modified version of the roundview.py script.",
     "scope": "text.pml"
 },
 "cmddocs": {
     "prefix": "cmddocs",
-    "body": placeHolder,
+    "body": "[help(i) for i in dir(cmd)];\n\
+${0}",
     "caption": "Print in the command history window the docstrings of all of the functions in the cmd module.",
     "scope": "text.pml"
 },
 "pymoldocs": {
     "prefix": "pymoldocs",
-    "body": placeHolder,
+    "body": "[help(i) for i in dir(pymol)];\n\
+${0}",
     "caption": "Return to the command history window the docstrings for all of the functions in a module.",
     "scope": "text.pml"
 },
 "numResiProtein": {
     "prefix": "numResiProtein",
-    "body": placeHolder,
+    "body": "sel = 'polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));\n\
+${0}",
     "caption": "Print the number of residues in a protein.",
     "scope": "text.pml"
 },
 "numResiProteinChainA": {
     "prefix": "numResiProteinChainA",
-    "body": placeHolder,
+    "body": "sel = '${1:chain A} and polymer.protein'; print(len(set([(i.chain, i.resi, i.resn) for i in cmd.get_model(sel).atom])));\n\
+${0}",
     "caption": "Print the number of residues in chain A of a protein.",
     "scope": "text.pml"
 },
 "numResiNucleic": {
     "prefix": "numResiNucleic",
-    "body": placeHolder,
+    "body": "sel = 'polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));\n\
+${0}",
     "caption": "Print the number of residues in a nulceic acid (all chains).",
     "scope": "text.pml"
 },
 "numResiNucleicChainA": {
     "prefix": "numResiNucleicChainA",
-    "body": placeHolder,
+    "body": "sel = '${1:chain A} and polymer.nucleic'; print(len(set([(i.resi, i.resn) for i in cmd.get_model(sel).atom])));\n\
+${0}",
     "caption": "Print the number of residues in a nulceic acid chain.",
     "scope": "text.pml"
 },
 "brokenNucleicBackbone": {
     "prefix": "brokenNucleicBackbone",
-    "body": placeHolder,
-    "caption": "Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long.",
+    "body": "[cmd.bond(f'/${1:5fur}//${2:E}/{i}/O3'', f'/${1:5fur}//${2:E}/{i+1}/P') for i in range(${5:1}, ${6:80})]; \n\
+[cmd.bond(f'/${1:5fur}//${2:F}/{i}/O3'', f'/${1:5fur}//${2:F}/{i+1}/P') for i in range(${7:81}, ${8:160})];\n\
+${0}",
+    "caption": "Create bonds between phosphorous and O3* atoms in a low-resolution DNA structure that is 80 base pairs long. Edit the selections below, which are ranges of residue numbers and edit the molecular object name (5fur).",
     "scope": "text.pml"
 },
 "oneBondThicknessColor": {
     "prefix": "oneBondThicknessColor",
-    "body": placeHolder,
-    "caption": "To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.
-",
+    "body": "set_bond stick_color, ${1:yellow}, index 2, index 3;\n\
+set_bond stick_radius, ${2:0.2}, index 2, index 3;\n\
+${0}",
+    "caption": "To change stick color and radius for the bond between atom 2 and 3, use the set_bond command.",
     "scope": "text.pml"
 },
 "drawLinks": {
     "prefix": "drawLinks",
-    "body": placeHolder,
+    "body": "draw_links ${1:mol1} & chain ${2:A} & name  ${3:CA} & resi ${4:1+6+7+8}, ${5:mol1} & chain ${6:A}& name ${7:CA} & resi ${8:10+16+17+18};\n\
+${0}",
     "caption": "Connect the alpha carbons of residue 1 with 10, 6 with 16, 7  with 17 and 8 with 18. Note that this example requires the draw_links.py [http://pldserver1.biochem.queensu.ca/~rlc/work/pymol/draw_links.py] by Robert Campbell.",
     "scope": "text.pml"
 },
 "printPath": {
     "prefix": "printPath",
-    "body": placeHolder,
+    "body": "print(pymol.__path__)\n\
+${0}",
     "caption": "Print the path to the currently used PyMOL binary.",
     "scope": "text.pml"
 },
 "setLigandValenceOn": {
     "prefix": "setLigandValenceOn",
-    "body": placeHolder,
-    "caption": "Turn on the ligand valence.",
+    "body": "set valence, on, resn ${1:RZS}; set valence, off, not resn ${2:RZS};\n\
+${0}",
+    "caption": "Display the bond valence of ligands only.",
     "scope": "text.pml"
 },
 "presetDocs": {
     "prefix": "presetDocs",
-    "body": placeHolder,
-    "caption": "Return the docustring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset).",
+    "body": "help(preset)\n\
+${0}",
+    "caption": "Return the docstring for the preset submodule. The command help preset fails to return anything. The command help(pymol.preset) has the same effect as help(preset).",
     "scope": "text.pml"
 },
 "helpDocs": {
     "prefix": "helpDocs",
-    "body": placeHolder,
-    "caption": "Return the docustring for the help submodule. This command is more concise:  help help.",
+    "body": "help(help)\n\
+${0}",
+    "caption": "Return the docstring for the help submodule. This command is more concise:  help help.",
     "scope": "text.pml"
 },
 "loadAmberTrajs": {
     "prefix": "loadAmberTrajs",
-    "body": placeHolder,
+    "body": "load ${1:file}.top, ${2:protein};\n\
+load ${1:file}.rst, ${2:protein};\n\
+${0}",
     "caption": "The amber trajectories have to be loaded into the same object.",
     "scope": "text.pml"
 },
 "saveSeppy": {
     "prefix": "saveSeppy",
-    "body": placeHolder,
+    "body": "from pymol import cmd\n\
+import glob\n\
+import re\n\
+\n\
+def saveSep(prefix=''):\n\
+  '''\n\
+  save_sep <prefix>\n\
+\n\
+  saves multiple objects into multiple files using an optional prefix name.\n\
+\n\
+  e.g. save_sep prefix\n\
+  '''\n\
+  obj_list = cmd.get_names('all')\n\
+\n\
+  if obj_list:\n\
+    for i in range(len(obj_list)):\n\
+      obj_name = '%s%s.pdb' % (prefix, obj_list[i])\n\
+      cmd.save(obj_name, obj_list[i])\n\
+      print('Saving %s' %  obj_name)\n\
+  else:\n\
+    print('No objects found')\n\
+    \n\
+cmd.extend('saveSep',saveSep)\n\
+${0}",
     "caption": "Saves multiple objects into multiple files using an optional prefix name.",
     "scope": "text.pml"
 },
 "optAlignRNA": {
     "prefix": "optAlignRNA",
-    "body": placeHolder,
+    "body": "#!python\n\
+ \n\
+##############################################################################\n\
+#\n\
+# @SUMMARY: -- QKabsch.py.  A python implementation of the optimal superposition\n\
+#     of two sets of vectors as proposed by Kabsch 1976 & 1978.\n\
+#\n\
+# @AUTHOR: Jason Vertrees\n\
+# @COPYRIGHT: Jason Vertrees (C), 2005-2007\n\
+# @LICENSE: Released under GPL:\n\
+# This program is free software; you can redistribute it and/or modify\n\
+#    it under the terms of the GNU General Public License as published by\n\
+#    the Free Software Foundation; either version 2 of the License, or\n\
+#    (at your option) any later version.\n\
+# This program is distributed in the hope that it will be useful, but WITHOUT\n\
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n\
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\
+#\n\
+# You should have received a copy of the GNU General Public License along with\n\
+# this program; if not, write to the Free Software Foundation, Inc., 51 Franklin\n\
+# Street, Fifth Floor, Boston, MA 02110-1301, USA \n\
+#\n\
+# DATE  : 2007-01-01\n\
+# REV   : 2\n\
+# REQUIREMENTS: numpy\n\
+#\n\
+#\n\
+# Modified optAlign.py to use C1 prime carbon atoms of RNA for alignment.\n\
+# Jan. 29, 2020 \n\
+# Blaine Mooers, PhD\n\
+# Univ. of Oklahoma Health Sciences Center\n\
+#\n\
+#############################################################################\n\
+from array import *\n\
+ \n\
+# system stuff\n\
+import os\n\
+import copy\n\
+ \n\
+# pretty printing\n\
+import pprint\n\
+ \n\
+# for importing as a plugin into PyMol\n\
+from pymol import cmd\n\
+from pymol import stored\n\
+from pymol import selector\n\
+ \n\
+# using numpy for linear algebra\n\
+import numpy\n\
+ \n\
+def optAlignRNA( sel1, sel2 ):\n\
+    '''\n\
+    optAlignRNA performs the Kabsch alignment algorithm upon the C1' carbons of two selections.\n\
+    Example: optAlignRNA 1JU7 and i. 1-16 and n. C1', 1CLL and i. 4-146 and n. C1'\n\
+ \n\
+    Two RMSDs are returned.  One comes from the Kabsch algorithm and the other from\n\
+    PyMOL based upon your selections.\n\
+    \n\
+    This function can be run in a for loop to fit multiple structures  with a common prefix name:\n\
+    \n\
+    for x in cmd.get_names(): optAlignRNA(x, '1JU7_0001')\n\
+     \n\
+    or get the rmsds for all combinations, do the following:\n\
+     \n\
+    [[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()]\n\
+\n\
+    '''\n\
+    cmd.reset()\n\
+ \n\
+    # make the lists for holding coordinates\n\
+    # partial lists\n\
+    stored.sel1 = []\n\
+    stored.sel2 = []\n\
+    # full lists\n\
+    stored.mol1 = []\n\
+    stored.mol2 = []\n\
+ \n\
+    # -- CUT HERE\n\
+    sel1 += ' and N. C1''\n\
+    sel2 += ' and N. C1''\n\
+    # -- CUT HERE\n\
+ \n\
+    # Get the selected coordinates.  We\n\
+    # align these coords.\n\
+    cmd.iterate_state(1, selector.process(sel1), 'stored.sel1.append([x,y,z])')\n\
+    cmd.iterate_state(1, selector.process(sel2), 'stored.sel2.append([x,y,z])')\n\
+ \n\
+    # get molecule name\n\
+    mol1 = cmd.identify(sel1,1)[0][0]\n\
+    mol2 = cmd.identify(sel2,1)[0][0]\n\
+ \n\
+    # Get all molecule coords.  We do this because\n\
+    # we have to rotate the whole molcule, not just\n\
+    # the aligned selection\n\
+    cmd.iterate_state(1, mol1, 'stored.mol1.append([x,y,z])')\n\
+    cmd.iterate_state(1, mol2, 'stored.mol2.append([x,y,z])')\n\
+ \n\
+    # check for consistency\n\
+    assert len(stored.sel1) == len(stored.sel2)\n\
+    L = len(stored.sel1)\n\
+    assert L > 0\n\
+ \n\
+    # must alway center the two proteins to avoid\n\
+    # affine transformations.  Center the two proteins\n\
+    # to their selections.\n\
+    COM1 = numpy.sum(stored.sel1,axis=0) / float(L)\n\
+    COM2 = numpy.sum(stored.sel2,axis=0) / float(L)\n\
+    stored.sel1 -= COM1\n\
+    stored.sel2 -= COM2\n\
+ \n\
+    # Initial residual, see Kabsch.\n\
+    E0 = numpy.sum( numpy.sum(stored.sel1 * stored.sel1,axis=0),axis=0) + numpy.sum( numpy.sum(stored.sel2 * stored.sel2,axis=0),axis=0)\n\
+ \n\
+    #\n\
+    # This beautiful step provides the answer.  V and Wt are the orthonormal\n\
+    # bases that when multiplied by each other give us the rotation matrix, U.\n\
+    # S, (Sigma, from SVD) provides us with the error!  Isn't SVD great!\n\
+    V, S, Wt = numpy.linalg.svd( numpy.dot( numpy.transpose(stored.sel2), stored.sel1))\n\
+ \n\
+    # we already have our solution, in the results from SVD.\n\
+    # we just need to check for reflections and then produce\n\
+    # the rotation.  V and Wt are orthonormal, so their det's\n\
+    # are +/-1.\n\
+    reflect = float(str(float(numpy.linalg.det(V) * numpy.linalg.det(Wt))))\n\
+ \n\
+    if reflect == -1.0:\n\
+        S[-1] = -S[-1]\n\
+        V[:,-1] = -V[:,-1]\n\
+ \n\
+    RMSD = E0 - (2.0 * sum(S))\n\
+    RMSD = numpy.sqrt(abs(RMSD / L))\n\
+ \n\
+    #U is simply V*Wt\n\
+    U = numpy.dot(V, Wt)\n\
+ \n\
+    # rotate and translate the molecule\n\
+    stored.sel2 = numpy.dot((stored.mol2 - COM2), U)\n\
+    stored.sel2 = stored.sel2.tolist()\n\
+    # center the molecule\n\
+    stored.sel1 = stored.mol1 - COM1\n\
+    stored.sel1 = stored.sel1.tolist()\n\
+ \n\
+    # let PyMol know about the changes to the coordinates\n\
+    cmd.alter_state(1,mol1,'(x,y,z)=stored.sel1.pop(0)')\n\
+    cmd.alter_state(1,mol2,'(x,y,z)=stored.sel2.pop(0)')\n\
+ \n\
+    #print('Moved: %s Reference: %s RMSD = %f' % mol1, mol2, RMSD)\n\
+    print('% s, % s,% 5.3f' % (mol1, mol2, RMSD))\n\
+ \n\
+    # make the alignment OBVIOUS\n\
+    cmd.hide('everything')\n\
+    cmd.show('ribbon', sel1 + ' or ' + sel2)\n\
+    cmd.color('gray70', mol1 )\n\
+    cmd.color('magenta', mol2 )\n\
+    cmd.color('red', 'visible')\n\
+    cmd.show('ribbon', 'not visible')\n\
+    cmd.center('visible')\n\
+    cmd.orient()\n\
+    cmd.zoom('visible')\n\
+ \n\
+cmd.extend('optAlignRNA', optAlignRNA)\n\
+${0}",
     "caption": "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures.",
     "scope": "text.pml"
 },
 "loadManyFiles": {
     "prefix": "loadManyFiles",
-    "body": placeHolder,
+    "body": "# Copyright (c) 2004 Robert L. Campbell\n\
+#\n\
+# Modified for use with Python3.\n\
+# Jan. 29, 2020 \n\
+# Blaine Mooers, PhD\n\
+# Univ. of Oklahoma Health Sciences Center\n\
+#\n\
+#\n\
+from pymol import cmd\n\
+import glob\n\
+\n\
+def loadFiles(files):\n\
+  '''\n\
+  load_files <files>\n\
+\n\
+  loads multiple files (using filename globbing)\n\
+  into a multiple objects named as the files are (e.g. collection of\n\
+  downloaded PDB files).\n\
+\n\
+  e.g. load_files prot_*.pdb\n\
+  '''\n\
+  file_list = glob.glob(files)\n\
+  if file_list:\n\
+    file_list.sort()\n\
+    for i in file_list:\n\
+      #obj_name = i.replace('.pdb','')\n\
+      #cmd.load(file_list[i],obj_name)\n\
+      cmd.load(i)\n\
+  else:\n\
+    print('No files found for pattern %s' % files)\n\
+\n\
+cmd.extend('loadFiles',loadFiles)\n\
+${0}",
     "caption": "Load into PyMOL multiple files with a common file stem. The is a script by Robert Campbell that has been updated for Python3.",
     "scope": "text.pml"
 },
 "loadAndAlignManyFiles3": {
     "prefix": "loadAndAlignManyFiles3",
-    "body": placeHolder,
+    "body": "from pymol import cmd\n\
+import glob\n\
+import re\n\
+\n\
+\n\
+def saveSep(prefix=\'\'):\n\
+    '''\n\
+    Saves multiple objects into multiple files using an optional prefix name.\n\
+    This function is can save time.\n\
+\n\
+    Usage in PyMOL:\n\
+\n\
+    saveSep <prefix>\n\
+    \n\
+    Usage in pymol's Python API:\n\
+\n\
+    cmd.do('saveSep <prefix>')\n\
+ \n\
+    e.g. saveSep prefix\n\
+    '''\n\
+    obj_list = cmd.get_names('all')\n\
+\n\
+    if obj_list:\n\
+        for i in range(len(obj_list)):\n\
+            obj_name = '%s%s.pdb' % (prefix, obj_list[i])\n\
+            cmd.save(obj_name, obj_list[i])\n\
+            print('Saving %s' % obj_name)\n\
+    else:\n\
+        print('No objects found')\n\
+\n\
+\n\
+cmd.extend('saveSep', saveSep)\n\
+${0}",
     "caption": "These are the instructions for loading and aligning multiple files.",
     "scope": "text.pml"
 },
 "allPairs": {
     "prefix": "allPairs",
-    "body": placeHolder,
+    "body": "[[${1:optAlignRNA}(x, y) for x in cmd.get_names()] for y in cmd.get_names()];\n\
+${0}",
     "caption": "This is a two-fold nested list comprehension for any all-parwise operation on the currently loaded objects. Replace optAlginRNA with object from any other function that operations on a pair of structrures.",
     "scope": "text.pml"
 },
 "dssrBlock1": {
     "prefix": "dssrBlock1",
-    "body": placeHolder,
+    "body": "reinitialize;\n\
+run /Users/blaine/.pymol/startup/dssr_block.py;\n\
+fetch 1ehz, async=0;\n\
+as cartoon;\n\
+set cartoon_ladder_radius, 0.1;\n\
+set cartoon_ladder_color, gray;\n\
+set cartoon_nucleic_acid_mode, 1;\n\
+set cartoon_nucleic_acid_color, orange;\n\
+orient;turn z,30; translate [0,5,0]\n\
+dssr_block;\n\
+png ~/dssrBlock1.png 1600,1600\n\
+${0}",
     "caption": "Combining DSSR block representation with regular PyMOL cartoons after loading the dssr_block.py script by Thomas Holder.",
     "scope": "text.pml"
 },
 "dssrBlock2": {
     "prefix": "dssrBlock2",
-    "body": placeHolder,
+    "body": "reinitialize;\n\
+run /Users/blaine/.pymol/startup/dssr_block.py;\n\
+set cartoon_nucleic_acid_color, orange;\n\
+fetch 1ehz, async=0;\n\
+dssr_block block_file=wc\n\
+${0}",
     "caption": "DSSR block representation with fused blocks after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.",
     "scope": "text.pml"
 },
 "dssrBlock3": {
     "prefix": "dssrBlock3",
-    "body": placeHolder,
-    "caption": "DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.",
+    "body": "reinitialize;\n\
+run ${1:'/Users/blaine/.pymol/startup/dssr_block.py'};\n\
+fetch ${2:2n2d}, async=0;\n\
+dssr_block  ${2:2n2d}, 0;\n\
+set all_states;\n\
+${0}",
+    "caption": "DSSR block representation for a multi-state example after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH. Edit the path to Thomas Holder's block script.",
     "scope": "text.pml"
 },
 "dssrBlock4": {
     "prefix": "dssrBlock4",
-    "body": placeHolder,
+    "body": "reinitialize;\n\
+${1:run /Users/blaine/.pymol/startup/dssr_block.py};\n\
+fetch ${2:1msy}, async=0;\n\
+set cartoon_nucleic_acid_color, ${3:orange};\n\
+dssr_block block_color=N red | minor 0.9 | major yellow;\n\
+${0}",
     "caption": "DSSR block representation with custom coloring after loading the dssr_block.py script by Thomas Holder. The x3dna-dssr executable needs to be in the PATH.",
     "scope": "text.pml"
 },
 "nucleicAcidCartoon": {
     "prefix": "nucleicAcidCartoon",
-    "body": placeHolder,
-    "caption": "Settings for nucliec acid cartoon.",
+    "body": "set cartoon_ladder_radius, ${2:0.2};\n\
+set cartoon_nucleic_acid_color, ${3:red};\n\
+# The cartoon ring modes range from 0 to 4.;\n\
+set cartoon_ring_mode, ${4:2};\n\
+${0}",
+    "caption": "Settings for nucliec acid cartoon. The dark blue used for electron density maps is called `density`. The cartoon_ladder_radius should be renamed the cartoon_rung_radius. The dimensions are in Angstroms.",
     "scope": "text.pml"
 },
 "nucleicAcidCartoon2Strands": {
     "prefix": "nucleicAcidCartoon2Strands",
-    "body": placeHolder,
-    "caption": "Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. The set command has the syntax of setting_name [, setting_value [, selection [,state ]]] . In this case, the selection has to be global, object, object-state, or per-atom settings. It cannot be a named selection. This is a weak spot in PyMOL. Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. Many double-stranded helices have one strand in the asymmetric unit. The second strand is in the biological unit. The coordinates for the second strand are in the pdb1 file type at the PDB. The second strand is in the second state, which is equivalent to the second model in the pdb file. The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting). The bases are colored differently too (via the cartoon_ladder_color setting).
-",
+    "body": "fetch ${1:3nd3}, ${2:3nd3}, type=${3:pdb1};\n\
+set all_states, on;\n\
+create chA, ${2:3nd3}, 1, 1;\n\
+create chB, ${2:3nd3}, 2, 1;\n\
+# colors only the backbone;\n\
+set cartoon_nucleic_acid_color, ${4:magenta}, chA;\n\
+set cartoon_nucleic_acid_color, ${5:orange}, chB;\n\
+# color the bases;\n\
+set cartoon_ladder_color,  ${6:density}, chA;\n\
+set cartoon_ladder_color,  ${7:yellow}, chB;\n\
+${0}",
+    "caption": "Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. The set command has the syntax of setting_name [, setting_value [, selection [,state ]]] . In this case, the selection has to be global, object, object-state, or per-atom settings. It cannot be a named selection. This is a weak spot in PyMOL. Coloring two strand differently of a double helix makes it easier to for the viewer to distinguish the two strands. Many double-stranded helices have one strand in the asymmetric unit. The second strand is in the biological unit. The coordinates for the second strand are in the pdb1 file type at the PDB. The second strand is in the second state, which is equivalent to the second model in the pdb file. The strands are labeled chain A and B (via the cartoon_nucliec_acid_color setting). The bases are colored differently too (via the cartoon_ladder_color setting).",
     "scope": "text.pml"
 },
 "nucleicAcidColorbySequence": {
     "prefix": "nucleicAcidColorbySequence",
-    "body": placeHolder,
+    "body": "select rna_A, resn A;\n\
+select rna_C, resn C;\n\
+select rna_G, resn G;\n\
+select rna_U, resn U;\n\
+select dna_T, resn T;\n\
+color ${1:yellow}, rna_A;\n\
+color ${2:red}, rna_C; \n\
+color ${3:gray40}, rna_G;\n\
+color ${4:palecyan}, rna_U;\n\
+color ${5:brown}, dna_T;\n\
+${0}",
     "caption": "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid.",
     "scope": "text.pml"
 },
 "nucleicAcidFlatRibbonColorbySequence": {
     "prefix": "nucleicAcidFlatRibbonColorbySequence",
-    "body": placeHolder,
+    "body": "bg_color white;\n\
+set cartoon_oval_length, ${1:1.85};\n\
+set cartoon_oval_width, ${2:0.5};\n\
+cartoon oval;\n\
+set cartoon_ring_mode, ${3:3};\n\
+# set the color of the backbone oval;\n\
+set cartoon_nucleic_acid_color, ${4:blue};\n\
+select rna_A, resn A;\n\
+select rna_C, resn C;\n\
+select rna_G, resn G;\n\
+select rna_U, resn U;\n\
+select dna_T, resn T;\n\
+color ${5:yellow}, rna_A;\n\
+color ${6:red}, rna_C; \n\
+color ${7:gray40}, rna_G;\n\
+color ${8:palecyan}, rna_U;\n\
+color ${9:brown}, dna_T;\n\
+as cartoon;\n\
+${0}",
     "caption": "This code colors the nucleotides by base seqence. It can be applied to any nucleic acid. It is dervied from the CR shortcut. The backcone is shown as a flatten ribbon.",
     "scope": "text.pml"
 },
 "nucleicAcidCartoonFilledRings": {
     "prefix": "nucleicAcidCartoonFilledRings",
-    "body": placeHolder,
+    "body": "bg_color white;\n\
+show sticks;\n\
+set cartoon_ring_mode, 3;\n\
+set cartoon_ring_finder, 1;\n\
+set cartoon_ladder_mode, 1;\n\
+set cartoon_nucleic_acid_mode, 4;\n\
+set cartoon_ring_transparency, 0.5;\n\
+as cartoon;\n\
+${0}",
     "caption": "The code provides a cartoon of the loaded nucleic acid that has the ladder rungs replaced by filled rings that are colored by atom type. The code can be applied to any nucleic acid. It is derived from the FR shortuct in pymolshortcuts.py.",
     "scope": "text.pml"
 },
 "basePairStacking": {
     "prefix": "basePairStacking",
-    "body": placeHolder,
-    "caption": "This code make as standard base stacking diagram with ball and stick representation. ",
+    "body": "delete all;\n\
+fetch 4PCO, type=pdb, async=0;\n\
+select G2G3, ( ((resi 2 or resi 3) and chain A) or ((resi 8 or resi 9) and chain B));\n\
+remove not G2G3;\n\
+bg_color white;\n\
+show sticks;\n\
+set stick_radius=0.14;\n\
+set stick_ball, on; \n\
+set stick_ball_ratio,1.9;\n\
+set_view (-0.75,0.09,0.66,-0.2,0.92,-0.35,-0.64,-0.39,-0.67,-0.0,-0.0,-43.7,7.24,9.55,11.78,29.46,57.91,-20.0);\n\
+remove name H*;\n\
+select carbon1, element C and (resi 3 or resi 8) \n\
+# select lower base pair;\n\
+select carbon2, element C and (resi 2 or resi 9) \n\
+#select upper base pair;\n\
+color gray70, carbon1;\n\
+color gray10, carbon2;\n\
+show sticks;\n\
+space cmyk;\n\
+distance hbond1, /4PCO//B/U`9/N3,/4PCO//A/G`2/O6;\n\
+distance hbond2, /4PCO//B/U`9/O2,/4PCO//A/G`2/N1;\n\
+distance hbond3, /4PCO//A/U`3/N3,/4PCO//B/G`8/O6;\n\
+distance hbond4, /4PCO//A/U`3/O2,/4PCO//B/G`8/N1;\n\
+color black, hbond1;\n\
+color black, hbond2;\n\
+color gray70, hbond3;\n\
+color gray70, hbond4;\n\
+show nb_spheres;\n\
+set nb_spheres_size, 0.35;\n\
+hide labels;\n\
+ray 1600,1000;\n\
+png 4PCO.png;\n\
+\n\
+${0}",
+    "caption": "This code make as standard base stacking diagram with ball and stick representation.",
     "scope": "text.pml"
 },
 "nucleicAcidDumbellCartoonColorbySequence": {
     "prefix": "nucleicAcidDumbellCartoonColorbySequence",
-    "body": placeHolder,
-    "caption": "This code colors by the nucleotides by base seqence. The backcone is shown as a flatten ribbon with rolled edges that give the dumbell effect. The code can be applied to any nucleic acid. The code is dervied from the CR and DU shortcuts. ",
+    "body": "bg_color white;\n\
+set cartoon_oval_length, ${1:1.85}\n\
+set cartoon_oval_width, ${2:0.5}\n\
+cartoon oval;\n\
+cartoon dumbbell;\n\
+set cartoon_dumbbell_width, 0.2;\n\
+set cartoon_dumbbell_radius, 0.4;\n\
+set cartoon_ring_mode, ${3:3};\n\
+# set the color of the backbone oval\n\
+set cartoon_nucleic_acid_color, ${4:blue};\n\
+select rna_A, resn A;\n\
+select rna_C, resn C;\n\
+select rna_G, resn G;\n\
+select rna_U, resn U;\n\
+select dna_T, resn T;\n\
+color ${5:yellow}, rna_A;\n\
+color ${6:red}, rna_C; \n\
+color ${7:gray40}, rna_G;\n\
+color ${8:palecyan}, rna_U;\n\
+color ${9:brown}, dna_T;\n\
+as cartoon;\n\
+${0}",
+    "caption": "This code colors by the nucleotides by base seqence. The backcone is shown as a flatten ribbon with rolled edges that give the dumbell effect. The code can be applied to any nucleic acid. The code is dervied from the CR and DU shortcuts.",
     "scope": "text.pml"
 },
 "stereokb": {
     "prefix": "stereokb",
-    "body": placeHolder,
+    "body": "cmd.set_key('F1',lambda:cmd.stereo({'on':0,'off':1}[cmd.get('stereo')]));\n\
+${0}",
     "caption": "Set keyboard shortcut by mapping F1 to stereo.",
     "scope": "text.pml"
 },
 "listSettings2": {
     "prefix": "listSettings2",
-    "body": placeHolder,
+    "body": "list = setting.get_name_list();[print('%s => %s' % (name, setting.get_setting_text(name))) for name in list];\n\
+${0}",
     "caption": "Print to the screen the settings and their current parameter values.",
     "scope": "text.pml"
 },
 "listSettings": {
     "prefix": "listSettings",
-    "body": placeHolder,
+    "body": "[print('%s => %s' % (name, setting.get_setting_text(name))) for name in setting.get_name_list()];\n\
+${0}",
     "caption": "Print to the screen the settings and their current parameter values. This is the more compact version.",
     "scope": "text.pml"
 },
 "displayFonts": {
     "prefix": "displayFonts",
-    "body": placeHolder,
+    "body": "python;\n\
+for i in range(1,21):\n\
+     name = 'label%d' % i;\n\
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));\n\
+     cmd.set('label_font_id', i, name);\n\
+python end;\n\
+cmd.set('label_size', 50);\n\
+cmd.set('grid_mode');\n\
+\n\
+${0}",
     "caption": "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.",
     "scope": "text.pml"
 },
 "listObjects": {
     "prefix": "listObjects",
-    "body": placeHolder,
+    "body": "objList = cmd.get_names('objects');print(objList);\n\
+${0}",
     "caption": "Create a list of objects in the internal gui and print this list to the screen.",
     "scope": "text.pml"
 },
 "listLigandProteinDistances": {
     "prefix": "listLigandProteinDistances",
-    "body": placeHolder,
+    "body": "from pymol import cmd\n\
+'''\n\
+Find all distances betwen all ligand atoms and all protein atoms. \n\
+\n\
+Adapted and updated from script by Dan Kulp posted here\n\
+https://sourceforge.net/p/pymol/mailman/message/10097804/\n\
+\n\
+There are probably better solutions like finding just the \n\
+distances to proein atoms within a certain distance from \n\
+the ligand.\n\
+\n\
+Due to the nested for loops, this script is takes several second\n\
+to run on a medium-sized human protein. This script is a \n\
+good candidate for vectorization. \n\
+\n\
+It is also a good candiate for becoming a function and a shortcut. \n\
+\n\
+'''\n\
+\n\
+# customize these lines to your protein.\n\
+cmd.fetch('6NEC')\n\
+cmd.select('prot','not resn XIN and not resn HOH and not chain C')\n\
+cmd.select('lig', 'resn XIN and not chain C')\n\
+\n\
+dist_list = {}\n\
+pro_atoms = cmd.get_model('prot')\n\
+lig_atoms = cmd.get_model('lig')\n\
+\n\
+for l_at in lig_atoms.atom:\n\
+    for p_at in pro_atoms.atom:\n\
+        dist_list[str(l_at.resn) +\n\
+                     ':' +\n\
+                      str(l_at.resi) +\n\
+                      ' ' +\n\
+                      l_at.name +\n\
+                      ' ---- ' + \n\
+                      str(p_at.resn) +\n\
+                      ':' +\n\
+                      str(p_at.resi) +\n\
+                      ' ' +\n\
+                      p_at.name] = cmd.dist('foo', \n\
+                                            'index ' +\n\
+                                            str(l_at.index),'index ' + str(p_at.index))\n\
+        cmd.delete('foo')\n\
+print('List of all pairwise ligand--protein atom-atom distances:')\n\
+# [print('Distance of ' + d + ' is ' + str(dist_list[d])) for d in dist_list.keys()]\n\
+\n\
+# More compact print statement. Need an f-string format statement.\n\
+[print( d + ' ' + str(dist_list[d])) for d in dist_list.keys()]\n\
+${0}",
     "caption": "Print a list of protein--ligand distances. Code by Dan Kulp. Updated for Python3.",
     "scope": "text.pml"
 },
 "nucleicAcidBackboneTubesSticks": {
     "prefix": "nucleicAcidBackboneTubesSticks",
-    "body": placeHolder,
+    "body": "set bg_rgb, white;\n\
+hide everything, all;\n\
+# Change to the name of your molecular object.;\n\
+show cartoon, ${1:3nd3};\n\
+set cartoon_sampling,1;\n\
+set cartoon_tube_radius, 0.5;\n\
+set cartoon_ladder_mode, 0;\n\
+# Set to 0.0 to turn off transparency;\n\
+set cartoon_transparency, ${2:0.65};\n\
+# The default strick radisu is 0.25. I think it is too thick.;\n\
+set stick_radius ${3:0.12};\n\
+show sticks;\n\
+hide sticks, element H;\n\
+${0}",
     "caption": "This code shows the cartoon backbone tube as 65% transparent. It hides the rungs of the cartoon. It shows all of the non-H atoms are sticks. The motivation is to have the cartoon highlight the backbone without dominanting the scene.",
     "scope": "text.pml"
 },
 "symexp": {
     "prefix": "symexp",
-    "body": placeHolder,
+    "body": "symexp ${1:symm}, ${2:3fa0}, (${2:3fa0}), ${3:20},${4:1};\n\
+${0}",
     "caption": "The code expands the asymmetric unit. It like the generate symmetry mates command but it provides more control over the prefix name of the symmetry mates and the addition of unique segment identifiers for each symmetry mate. The usage: symexp prefix, object, (selection), cutoff, segidFlag. The cutoff is in Angstroms. The segidFlag set to 1 will add unique segids. For related functions, see SC***.",
     "scope": "text.pml"
 },
 "addAxis": {
     "prefix": "addAxis",
-    "body": placeHolder,
-    "caption": "Adds the function draw_axis(). Used to a symmetry axis, a ncs axis, or scale bar to a scene.",
+    "body": "python\n\
+from pymol.cgo import *    # get constants\n\
+from pymol import cmd\n\
+\n\
+import math\n\
+\n\
+class Counter:\n\
+    '''\n\
+    draw_line\n\
+    source https://www.pymolwiki.org/index.php/Symmetry_Axis\n\
+    \n\
+    Pymol script copyright Matthew O'Meara and Xavier Ambroggio 2007\n\
+    \n\
+    Under  GNU Free Documentation License 1.2\n\
+    \n\
+    Example:\n\
+    \n\
+    draw_axis(x=18.232, y=17.150, z=9.488,i=-.226639, j=0.708772, k=-.668039, r=1, b=0, g=0, width=1, length=100)\n\
+    \n\
+    Updated 15 June 2020 \n\
+    Blaine Mooers\n\
+    \n\
+    Notes:\n\
+    1) Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.\n\
+    2) The postion (xyz) is the middle of the line, not one end as expected for a vector.\n\
+    3) Another example: draw_axis(x=0, y=0, z=0,i=0, j=0, k=1, r=1, b=0, g=0, width=300, length=96) \n\
+    4) Changed print statement to Python3 print function.\n\
+    5) Replaced cmd.extend() with function generator.\n\
+    '''\n\
+   def __init__(self):\n\
+       self.state = 1\n\
+counter = Counter()\n\
+\n\
+@cmd.extend\n\
+def draw_axis(x=None, y=None, z=None, i=None, j=None, k=None, length=20.0, r=1.0, g=1.0, b=1.0, width=1.0 ):\n\
+   if x == None or y == None or z == None or i == None or j == None or k== None :\n\
+       print('Usage: draw_axis x,y,z, i,k,j, length, r,g,b, width')\n\
+       print('draw a line centered at (x,y,z) with the direction vector (i,j,k)')\n\
+       print('length, color (r,g,b), and width arguments are optional')\n\
+#        print 'For a fun example of the command, run draw_axis_example'\n\
+   else :\n\
+       x,y,z = float(x), float(y), float(z)\n\
+       i,j,k = float(i), float(j), float(k)\n\
+       r,g,b = float(r), float(g), float(b)\n\
+       width = float(width)\n\
+       length = float(length) / 2.0\n\
+\n\
+       x1,y1,z1 = (x+i*length,y+j*length,z+k*length)\n\
+       x2,y2,z2 = (x-i*length,y-j*length,z-k*length)\n\
+\n\
+       obj = [\n\
+           LINEWIDTH, width,\n\
+           BEGIN, LINES,\n\
+\n\
+           COLOR,   r,  g,  b,\n\
+           VERTEX, x1, y1, z1,\n\
+           VERTEX, x2, y2, z2,\n\
+\n\
+           END\n\
+           ]\n\
+\n\
+       cmd.load_cgo(obj,'axis'+str(counter.state))\n\
+       counter.state += 1\n\
+python end\n\
+\n\
+${0}",
+    "caption": "Adds the function draw_axis(). Used to draw a symmetry axis, a ncs axis, or scale bar to a scene.",
     "scope": "text.pml"
 },
 "synch": {
     "prefix": "synch",
-    "body": placeHolder,
-    "caption": "Wait unitl all current commands have been executed. A timeout ensures that that command ecentually returns.",
+    "body": "cmd.sync(timeout=${1:1.0},poll=${2:0.05});\n\
+${0}",
+    "caption": "Wait until all current commands have been executed. A timeout ensures that that command ecentually returns.",
     "scope": "text.pml"
 },
 "renumResi": {
     "prefix": "renumResi",
-    "body": placeHolder,
+    "body": "alter ${1:3fa0}, resi=str(int(resi)+${2:100});sort;\n\
+${0}",
     "caption": "Add or substract a residue number offset.",
     "scope": "text.pml"
 },
 "renumAtoms": {
     "prefix": "renumAtoms",
-    "body": placeHolder,
+    "body": "alter {$1:3fa0}, ID=ID+${2:100};\n\
+sort;\n\
+${0}",
     "caption": "Add or substract a atom number offset.",
     "scope": "text.pml"
 },
 "renameChain": {
     "prefix": "renameChain",
-    "body": placeHolder,
+    "body": "alter ${1:3fa0} and chain ${2:A}, chain=${3:'C'};\n\
+sort;\n\
+${0}",
     "caption": "Rename a chain. ",
     "scope": "text.pml"
 },
 "printAtomNumbers": {
     "prefix": "printAtomNumbers",
-    "body": placeHolder,
-    "caption": "Print the atom number2 of a residue.",
+    "body": "iterate (resi ${1:1}), print(name + ' %i${1:5}' % ID);\n\
+${0}",
+    "caption": "Print the atom name and number of a residue.",
     "scope": "text.pml"
 },
 "printAtomNames": {
     "prefix": "printAtomNames",
-    "body": placeHolder,
+    "body": "iterate (resi ${1:101}), print(name);\n\
+${0}",
     "caption": "Print the atom names of a residue.",
     "scope": "text.pml"
 },
 "printBfactors": {
     "prefix": "printBfactors",
-    "body": placeHolder,
+    "body": "iterate (resi ${1:101}), print(name + ' %.2f' % b);\n\
+${0}",
     "caption": "Print the bfactors of a residue.",
     "scope": "text.pml"
 },
 "printVDWradii": {
     "prefix": "printVDWradii",
-    "body": placeHolder,
+    "body": "iterate (resi ${1:101}), print(name + ' %.2f' % vdw);\n\
+${0}",
     "caption": "Print the van der Waals radii of the atoms in of a residue.",
     "scope": "text.pml"
 },
 "printCoordinates": {
     "prefix": "printCoordinates",
-    "body": placeHolder,
+    "body": "stored.coords = []; \n\
+iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); \n\
+[print(i) for i in stored.coords];\n\
+${0}",
     "caption": "Print the coordinates of the atoms in a residue.",
     "scope": "text.pml"
 },
 "printNamesCoordinates": {
     "prefix": "printNamesCoordinates",
-    "body": placeHolder,
+    "body": "stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]); \n\
+stored.coords = []; iterate_state 1, (resi ${1:101})), stored.coords.append([x,y,z]); \n\
+[print(i,j) for i,j in zip(stored.names, stored.coords)];\n\
+${0}",
     "caption": "Print the atom names and coordinates of the atoms in a residue.",
     "scope": "text.pml"
 },
 "printNamesCoordinates": {
     "prefix": "printNamesCoordinates",
-    "body": placeHolder,
+    "body": "stored.coords = []; iterate_state 1, (resi ${1:101}), stored.coords.append([x,y,z]); \n\
+stored.names = [];  iterate_state 1, (resi ${1:101}), stored.names.append([name]);\n\
+stored.names3 = [tuple(i) for i in stored.names];\n\
+[print(i,j) for i,j in(zip(stored.names3, stored.coords)];\n\
+${0}",
     "caption": "Print the atom names as tuples and coordinates of the atoms in a residue as a list.",
     "scope": "text.pml"
 },
 "emacsjupyterSourceBlock": {
     "prefix": "emacsjupyterSourceBlock",
-    "body": placeHolder,
-    "caption": "Source block template in org-mode with emacs-jupyter package. ",
+    "body": "#+BEGIN_SRC jupyter-python :session py :kernel pymol.python :exports both :results raw drawer \n\
+from pymol import cmd\n\
+cmd.do('reinitialize')\n\
+cmd.bg_color('white')\n\
+cmd.do('fetch 6VXX')\n\
+cmd.do('zoom (resi 614 and chain A)')\n\
+cmd.label(selection='chain A and resi 614 and name CB', expression=''%s-%s' % (resn,resi)')\n\
+cmd.do('set label_color, black; set label_size, 48')\n\
+cmd.do('set stick_radius, 0.12')\n\
+cmd.do('hide cartoon; show sticks')\n\
+cmd.do('set ray_shadows, 0')\n\
+cmd.do('draw')\n\
+cmd.do('png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600')\n\
+from IPython.display import Image\n\
+from IPython.core.display import HTML\n\
+PATH = '/Users/blaine/'\n\
+Image(filename = PATH + 'D614Gipython3.png', width=600, unconfined=True)\n\
+#+END_SRC\n\
+\n\
+#+RESULTS:\n\
+${0}",
+    "caption": "Source block template in org-mode with emacs-jupyter package.",
     "scope": "text.pml"
 },
 "obipythonSourceBlock": {
     "prefix": "obipythonSourceBlock",
-    "body": placeHolder,
-    "caption": "Source block template in org-mode with the ob-ipython package. ",
+    "body": "#+BEGIN_SRC ipython :session py :kernel pymol.python :exports both :results raw drawer \n\
+from pymol import cmd\n\
+cmd.do('reinitialize')\n\
+cmd.bg_color('white')\n\
+cmd.do('fetch 6VXX')\n\
+cmd.do('zoom (resi 614 and chain A)')\n\
+cmd.label(selection='chain A and resi 614 and name CB', expression=''%s-%s' % (resn,resi)')\n\
+cmd.do('set label_color, black; set label_size, 48')\n\
+cmd.do('set stick_radius, 0.12')\n\
+cmd.do('hide cartoon; show sticks')\n\
+cmd.do('set ray_shadows, 0')\n\
+cmd.do('draw')\n\
+cmd.do('png /Users/blaine/D614Gipython3.png, 600, 360, dpi=600')\n\
+from IPython.display import Image\n\
+from IPython.core.display import HTML\n\
+PATH = '/Users/blaine/'\n\
+Image(filename = PATH + 'D614Gipython3.png', width=600, unconfined=True)\n\
+#+END_SRC\n\
+\n\
+#+RESULTS:\n\
+${0}",
+    "caption": "Source block template in org-mode with the ob-ipython package.",
     "scope": "text.pml"
 },
 "importPyMOLcmd": {
     "prefix": "importPyMOLcmd",
-    "body": placeHolder,
+    "body": "from pymol import cmd\n\
+${0}",
     "caption": "Import the cmd class from the pymol api.",
     "scope": "text.pml"
 },
 "importIPythonDisplay": {
     "prefix": "importIPythonDisplay",
-    "body": placeHolder,
+    "body": "from IPython.display import Image\n\
+from IPython.core.display import HTML\n\
+PATH = '/Users/blaine/'\n\
+${0}",
     "caption": "Imports for using IPython to display images loaded from disk in notebook cells.",
     "scope": "text.pml"
 },
 "loadImage": {
     "prefix": "loadImage",
-    "body": placeHolder,
+    "body": "Image(filename = PATH +'${1:5da6orient}.png', width=${2:600}, height=${3:1000}, unconfined=True);\n\
+${0}",
     "caption": "Load image.",
     "scope": "text.pml"
 },
 "imports4PyMOLjupyter": {
     "prefix": "imports4PyMOLjupyter",
-    "body": placeHolder,
+    "body": "from pymol import cmd\n\
+from IPython.display import Image\n\
+from IPython.core.display import HTML\n\
+PATH = '/Users/blaine/'\n\
+${0}",
     "caption": "Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.",
     "scope": "text.pml"
 },
 "getCoordinatespy": {
     "prefix": "getCoordinatespy",
-    "body": placeHolder,
-    "caption": "Python version of getCoordinates snippets. Note that the python2 print statement stills works  in pml scripts. ",
+    "body": "print(cmd.get_atom_coords(${1:'/4PCO//B/G`8/OP2'}));\n\
+${0}",
+    "caption": "Python version of getCoordinates snippets. Note that the python2 print statement stills works  in pml scripts.",
     "scope": "text.pml"
 },
 "fastapy": {
     "prefix": "fastapy",
-    "body": placeHolder,
+    "body": "# Get the sequences of all molecular objects.;\n\
+print(cmd.get_fastastr('${1:all}'));\n\
+${0}",
     "caption": "Python version of the command to print the sequence from a PDB file in the fasta format.",
     "scope": "text.pml"
 },
 "fetchThreeMaps": {
     "prefix": "fetchThreeMaps",
-    "body": placeHolder,
-    "caption": "Display three electron density maps as isomesh. ",
+    "body": "fetch ${1:4dgr}, type=pdb;\n\
+# Make sure to rename map file so that ;\n\
+# the root filename differs from pdb root filename;\n\
+fetch ${1:4dgr},  ${1:4dgr}_2fofc, type=2fofc;\n\
+fetch ${1:4dgr}, ${1:4dgr}_fofc, type=fofc;\n\
+select  ${2:glycan}, ${3:resid 200 or resid 469:477};\n\
+isomesh ${4:mesh1}, 2fofc, 1.0, ${2:glycan};\n\
+color density, ${4:mesh1};\n\
+isomesh ${5:mesh2}, fofc, 3.0, ${2:glycan};\n\
+color green, ${5:mesh2};\n\
+isomesh ${6:mesh3}, fofc, -3.0, ${2:glycan};\n\
+color red, ${6:mesh3};\n\
+${0}",
+    "caption": "Display three electron density maps as isomesh.",
     "scope": "text.pml"
 },
 "scaleRadiusColorpy": {
     "prefix": "scaleRadiusColorpy",
-    "body": ["bg_color white;",
-"hide everything;",
-"show spheres;",
-"set  stick_radius = 0.1;",
-"hide everything, HET;",
-"show spheres, HET;",
-"set sphere_quality=3;",
-"show sticks, resi 1102;",
-"from pymol import stored;",
-"# set the stored array equal to the b−values; or use your own values ;",
-"stored.bb = [ ];",
-"iterate, stored.bb.append(b);",
-"# execute a python−block;",
-"python;",
-"# scale the b−values;",
-"M = max(stored.bb);",
-"scaledBB = map(lambda x: float (x/M), stored.bb);",
-"count = 0;",
-"# set the sphere radii independently;",
-"for x in scaledBB:",
-"  cmd.set('sphere_scale', x ,'ID %s'%count);",
-"  count = count + 1;",
-"python end;",
-"spectrum b, selection=4gdx;",
-"space cmyk;",
-"set specular_intensity , 0.25;",
-"${0}"]
-,
+    "body": "cmd.do('bg_color white;')\n\
+cmd.do('hide everything;')\n\
+cmd.do('show spheres;')\n\
+cmd.do('set  stick_radius = 0.1;')\n\
+cmd.do('hide everything, HET;')\n\
+cmd.do('show spheres, HET;')\n\
+cmd.do('set sphere_quality=3;')\n\
+cmd.do('show sticks, resi 1102;')\n\
+cmd.do('from pymol import stored;')\n\
+cmd.do('# set the stored array equal to the b−values or use your own values; ')\n\
+cmd.do('stored.bb = [ ];')\n\
+cmd.do('iterate all, stored.bb.append(b);')\n\
+# scale the b−values;\n\
+cmd.do('M = max(stored.bb);')\n\
+cmd.do('scaledBB = map(lambda x: float (x/M), stored.bb);')\n\
+count = 0;\n\
+# set the sphere radii independently;\n\
+for x in scaledBB:\n\
+     cmd.set('sphere_scale', x ,'ID %s'%count)\n\
+     count = count + 1\n\
+cmd.do('spectrum b, selection=4gdx;')\n\
+cmd.do('space cmyk;')\n\
+cmd.do('set specular_intensity , 0.25;')\n\
+${0}",
     "caption": "Scale the radius and color of atoms as spheres by property in the B-value column.",
     "scope": "text.pml"
 },
 "scaleRadiusColorPythonInsertpy": {
     "prefix": "scaleRadiusColorPythonInsertpy",
-    "body": ["bg_color white;",
-"hide everything;",
-"show spheres;",
-"set  stick_radius = 0.1;",
-"hide everything, HET;",
-"show spheres, HET;",
-"set sphere_quality=3;",
-"show sticks, resi 1102;",
-"from pymol import stored;",
-"# set the stored array equal to the b−values; or use your own values ;",
-"stored.bb = [ ];",
-"iterate, stored.bb.append(b);",
-"# execute a python−block;",
-"python;",
-"# scale the b−values;",
-"M = max(stored.bb);",
-"scaledBB = map(lambda x: float (x/M), stored.bb);",
-"count = 0;",
-"# set the sphere radii independently;",
-"for x in scaledBB:",
-"  cmd.set('sphere_scale', x ,'ID %s'%count);",
-"  count = count + 1;",
-"python end;",
-"spectrum b, selection=4gdx;",
-"space cmyk;",
-"set specular_intensity , 0.25;",
-"${0}"]
-,
+    "body": "# scale the b−values;\n\
+M = max(stored.bb);\n\
+scaledBB = map(lambda x: float (x/M), stored.bb);\n\
+count = 0;\n\
+# set the sphere radii independently;\n\
+#[(cmd.set('sphere_scale', x ,'ID %s'%count); count = count + 1) for x in scaledBB]\n\
+for x in scaledBB:\n\
+  cmd.set('sphere_scale', x ,'ID %s'%count)\n\
+  count = count + 1\n\
+${0}",
     "caption": "Python block insert for scaleRadiusColorpy.",
     "scope": "text.pml"
 },
 "spngpy": {
     "prefix": "spngpy",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.png');",
-"end python;",
-"$0"]
-,
-    "caption": "Save png flle with timestamp",
+    "body": "import datetime;\n\
+from pymol import cmd; \n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.png'); \n\
+\n\
+${0}",
+    "caption": "Save png flle with timestamp.",
     "scope": "text.pml"
 },
 "displayFontspy": {
     "prefix": "displayFontspy",
-    "body": placeHolder,
+    "body": "for i in range(1,21):\n\
+     name = 'label%d' % i;\n\
+     cmd.pseudoatom(name, label='label font id %d' % i, pos=(0,0,0));\n\
+     cmd.set('label_font_id', i, name);\n\
+cmd.set('label_size', 50);\n\
+cmd.set('grid_mode');\n\
+\n\
+${0}",
     "caption": "Print to the screen as labels the 21 font ids in their corresponding fonts in a grid. Each label is an object and appears in the internal gui. You can turn on and off the display of specific fonts.",
     "scope": "text.pml"
 },
 "aveB4resiXpy": {
     "prefix": "aveB4resiXpy",
-    "body": placeHolder,
-    "caption": "AveBResiX, prints the residue number and the average bfactor. ",
+    "body": "# AveBResiX, prints the resiude number and the average bfactor.;\n\
+# Uses reduce and lambda, builtin Python functional porgramming functions.;\n\
+# Note that you need to convert the length of the list of Bfactors from an integer to a float before division into the sum.;\n\
+Bfactors = [];\n\
+# edit the selection below, which is a range of residue numbers here.;\n\
+iterate (resi ${1:133}), Bfactors.append(b);\n\
+print( 'Average B-factor of residue ', %{1:133} , '   = ', '%.2f' %(reduce(lambda x, y: x + y, Bfactors) / float(len(Bfactors))) );\n\
+${0}",
+    "caption": "AveBResiX, prints the residue number and the average bfactor. Uses reduce and lambda, builtin Python functional porgramming functions. Note that you need to convert the length of the list of Bfactors from an integer.",
     "scope": "text.pml"
 },
 "sc441": {
     "prefix": "sc441",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 4, 4, 1, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in four unit cells stacked long a-axis. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc444": {
     "prefix": "sc444",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 4, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc414": {
     "prefix": "sc414",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 4, 1, 4, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 4 x 1 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc144": {
     "prefix": "sc144",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 1, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in in a 1 x 4 x 4 array. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sc444": {
     "prefix": "sc444",
-    "body": ["run $HOME/Scripts/PyMOLscripts/supercell.py;",
-"supercell 1, 1, 1, , orange, supercell1, 1;", 
-"${0}"]
-,
+    "body": "run $HOME/${1:Scripts/PyMOLscripts/}supercell.py;\n\
+supercell 4, 4, 4, ,  ${2:orange},  ${3:supercell1}, 1;\n\
+${0}",
     "caption": "Display all symmetry mates in a 4 x 4 x4 array of unit cells. Uses supercell.py in $HOME/Scripts/PyMOLscripts/.",
     "scope": "text.pml"
 },
 "sdaepy": {
     "prefix": "sdaepy",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.png');",
-"end python;",
-"$0"]
-,
-    "caption": "Save dae flle with timestamp",
+    "body": "import datetime;\n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.dae'); \n\
+\n\
+${0}",
+    "caption": "Save dae flle with timestamp.",
     "scope": "text.pml"
 },
 "sccp4py": {
     "prefix": "sccp4py",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.png');",
-"end python;",
-"$0"]
-,
-    "caption": "Save electron density map flle with timestamp",
+    "body": "import datetime;\n\
+from pymol import cmd; \n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT); \n\
+cmd.save(stemName+s+'.ccp4'); \n\
+${0}",
+    "caption": "Save electron density map flle with timestamp.",
     "scope": "text.pml"
 },
 "salnpy": {
     "prefix": "salnpy",
-    "body": ["python;",
-"import datetime;",
-"from pymol import cmd ;",
-"DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');",
-"s = str(DT) ;",
-"cmd.save(stemName+s+'.aln');",
-"end python;",
-"$0"]
-,
+    "body": "import datetime;\n\
+from pymol import cmd;\n\
+DT =datetime.datetime.now().strftime('yr%Ymo%mday%dhr%Hmin%M');\n\
+s = str(DT);\n\
+cmd.save(stemName+s+'.aln');\n\
+\n\
+${0}",
     "caption": "Save an aln flle with a timestamp. Python version.",
     "scope": "text.pml"
 },
 "lspymolrcpy": {
     "prefix": "lspymolrcpy",
-    "body": placeHolder,
+    "body": "print(invocation.options.deferred);\n\
+${0}",
     "caption": "Print list of active pymolrc files.",
     "scope": "text.pml"
 },
 "printDocpy": {
     "prefix": "printDocpy",
-    "body": placeHolder,
+    "body": "print(${1:my_func}.__doc__);\n\
+${0}",
     "caption": "Print document string of a function.",
     "scope": "text.pml"
 },
 "printPathpy": {
     "prefix": "printPathpy",
-    "body": placeHolder,
+    "body": "print(pymol.__path__)\n\
+${0}",
     "caption": "Print the path to the currently used PyMOL binary.",
     "scope": "text.pml"
 },
 "pymoldocspy": {
     "prefix": "pymoldocspy",
-    "body": placeHolder,
+    "body": "[help(i) for i in dir(pymol)];\n\
+${0}",
     "caption": "Return to the command history window the docstrings for all of the functions in a module.",
     "scope": "text.pml"
 },
 "aobw": {
     "prefix": "aobw",
-    "body": placeHolder,
+    "body": "# Note: requires the gscale() function from pymolshortcuts.py.\n\
+# Download this script from http://GitHub.com/MooersLab/pymolshortcuts.\n\
+# Load the functions from this script with the command 'run pymolshortcuts.py'\n\
+set_color oxygen, [1.0,0.4,0.4];\n\
+set_color nitrogen, [0.5,0.5,1.0];\n\
+remove solvent;\n\
+as spheres;\n\
+util.cbaw;\n\
+bg white;\n\
+gscale();\n\
+set light_count,10;\n\
+set spec_count,1;\n\
+set shininess, 10;\n\
+set specular,0.25;\n\
+set ambient,0;\n\
+set direct,0;\n\
+set reflect,1.5;\n\
+set ray_shadow_decay_factor, 0.1;\n\
+set ray_shadow_decay_range, 2;\n\
+set depth_cue, 0;\n\
+ray;\n\
+\n\
+${0}",
     "caption": "Ambient occlussion in grayscale.",
     "scope": "text.pml"
 },
 "aod": {
     "prefix": "aod",
-    "body": placeHolder,
+    "body": "set_color oxygen, [1.0,0.4,0.4];\n\
+set_color nitrogen, [0.5,0.5,1.0];\n\
+remove solvent;\n\
+as spheres;\n\
+util.cbaw;\n\
+bg white;\n\
+set light_count,10;\n\
+set spec_count,1;\n\
+set shininess, 10;\n\
+set specular,0.25;\n\
+set ambient,0;\n\
+set direct,0;\n\
+set reflect,1.5;\n\
+set ray_shadow_decay_factor, 0.1;\n\
+set ray_shadow_decay_range, 2;\n\
+color gray00, symbol c\n\
+color gray90, symbol h\n\
+set depth_cue, 0;\n\
+ray;\n\
+\n\
+${0}",
     "caption": "Ambient occlussion with carbon atoms colored black.",
     "scope": "text.pml"
 },
 "aodbw": {
     "prefix": "aodbw",
-    "body": placeHolder,
-    "caption": "Ambient occlussion in grayscale with carbon atoms colored black.",
+    "body": "set_color oxygen, [1.0,0.4,0.4];\n\
+set_color nitrogen, [0.5,0.5,1.0];\n\
+remove solvent;\n\
+as spheres;\n\
+util.cbaw;\n\
+bg white;\n\
+gscale();\n\
+set light_count,10;\n\
+set spec_count,1;\n\
+set shininess, 10;\n\
+set specular,0.25;\n\
+set ambient,0;\n\
+set direct,0;\n\
+set reflect,1.5;\n\
+set ray_shadow_decay_factor, 0.1;\n\
+set ray_shadow_decay_range, 2;\n\
+set depth_cue, 0;\n\
+ray;\n\
+\n\
+${0}",
+    "caption": "Ambient occlussion in grayscale with carbon atoms colored black. Note: requires the gscale() function from pymolshortcuts.py. Download this script from http://GitHub.com/MooersLab/pymolshortcuts. Load the functions from this script with the following command:  cmd.do('run pymolshortcuts.py').",
     "scope": "text.pml"
 },
 "addAxispy": {
     "prefix": "addAxispy",
-    "body": placeHolder,
+    "body": "from pymol.cgo import *    # get constants\n\
+from pymol import cmd\n\
+\n\
+import math\n\
+\n\
+class Counter:\n\
+    '''\n\
+    draw_line\n\
+    source https://www.pymolwiki.org/index.php/Symmetry_Axis\n\
+    \n\
+    Pymol script copyright Matthew O'Meara and Xavier Ambroggio 2007\n\
+    \n\
+    Under  GNU Free Documentation License 1.2\n\
+    \n\
+    Example:\n\
+    \n\
+    draw_axis(x=18.232, y=17.150, z=9.488,i=-.226639, j=0.708772, k=-.668039, r=1, b=0, g=0, width=1, length=100)\n\
+    \n\
+    Updated 15 June 2020 \n\
+    Blaine Mooers\n\
+    \n\
+    Notes:\n\
+    1) Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.\n\
+    2) The postion (xyz) is the middle of the line, not one end as expected for a vector.\n\
+    3) Another example: draw_axis(x=0, y=0, z=0,i=0, j=0, k=1, r=1, b=0, g=0, width=300, length=96) \n\
+    4) Changed print statement to Python3 print function.\n\
+    5) Replaced cmd.extend() with function generator.\n\
+    '''\n\
+   def __init__(self):\n\
+       self.state = 1\n\
+counter = Counter()\n\
+\n\
+@cmd.extend\n\
+def draw_axis(x=None, y=None, z=None, i=None, j=None, k=None, length=20.0, r=1.0, g=1.0, b=1.0, width=1.0 ):\n\
+   if x == None or y == None or z == None or i == None or j == None or k== None :\n\
+       print('Usage: draw_axis x,y,z, i,k,j, length, r,g,b, width')\n\
+       print('draw a line centered at (x,y,z) with the direction vector (i,j,k)')\n\
+       print('length, color (r,g,b), and width arguments are optional')\n\
+#        print 'For a fun example of the command, run draw_axis_example'\n\
+   else :\n\
+       x,y,z = float(x), float(y), float(z)\n\
+       i,j,k = float(i), float(j), float(k)\n\
+       r,g,b = float(r), float(g), float(b)\n\
+       width = float(width)\n\
+       length = float(length) / 2.0\n\
+\n\
+       x1,y1,z1 = (x+i*length,y+j*length,z+k*length)\n\
+       x2,y2,z2 = (x-i*length,y-j*length,z-k*length)\n\
+\n\
+       obj = [\n\
+           LINEWIDTH, width,\n\
+           BEGIN, LINES,\n\
+\n\
+           COLOR,   r,  g,  b,\n\
+           VERTEX, x1, y1, z1,\n\
+           VERTEX, x2, y2, z2,\n\
+\n\
+           END\n\
+           ]\n\
+\n\
+       cmd.load_cgo(obj,'axis'+str(counter.state))\n\
+       counter.state += 1\n\
+\n\
+${0}",
     "caption": "Adds the function draw_axis(). Could be useful for the adding a symmery axis, a ncs axis, or scale bar to a scene.",
     "scope": "text.pml"
 },
 "grayscalepy": {
     "prefix": "grayscalepy",
-    "body": placeHolder,
+    "body": "def grayscale(selection='all'):\n\
+    '''Apply by entering grayscale()'''\n\
+    cmd.color('grey64', 'elem Ac')\n\
+    cmd.color('grey67', 'elem Al')\n\
+    cmd.color('grey39', 'elem Am')\n\
+    cmd.color('grey46', 'elem Sb')\n\
+    cmd.color('grey75', 'elem Ar')\n\
+    cmd.color('grey58', 'elem As')\n\
+    cmd.color('grey33', 'elem At')\n\
+    cmd.color('grey56', 'elem Ba')\n\
+    cmd.color('grey40', 'elem Bk')\n\
+    cmd.color('grey87', 'elem Be')\n\
+    cmd.color('grey40', 'elem Bi')\n\
+    cmd.color('grey20', 'elem Bh')\n\
+    cmd.color('grey77', 'elem B')\n\
+    cmd.color('grey26', 'elem Br')\n\
+    cmd.color('grey86', 'elem Cd')\n\
+    cmd.color('grey76', 'elem Ca')\n\
+    cmd.color('grey34', 'elem Cf')\n\
+    cmd.color('grey77', 'elem C')\n\
+    cmd.color('grey98', 'elem Ce')\n\
+    cmd.color('grey17', 'elem Cs')\n\
+    cmd.color('grey70', 'elem Cl')\n\
+    cmd.color('grey60', 'elem Cr')\n\
+    cmd.color('grey64', 'elem Co')\n\
+    cmd.color('grey54', 'elem Cu')\n\
+    cmd.color('grey42', 'elem Cm')\n\
+    cmd.color('grey89', 'elem D')\n\
+    cmd.color('grey19', 'elem Db')\n\
+    cmd.color('grey79', 'elem Dy')\n\
+    cmd.color('grey29', 'elem Es')\n\
+    cmd.color('grey67', 'elem Er')\n\
+    cmd.color('grey85', 'elem Eu')\n\
+    cmd.color('grey28', 'elem Fm')\n\
+    cmd.color('grey93', 'elem F')\n\
+    cmd.color('grey8', 'elem Fr')\n\
+    cmd.color('grey82', 'elem Gd')\n\
+    cmd.color('grey60', 'elem Ga')\n\
+    cmd.color('grey52', 'elem Ge')\n\
+    cmd.color('grey80', 'elem Au')\n\
+    cmd.color('grey68', 'elem Hf')\n\
+    cmd.color('grey20', 'elem Hs')\n\
+    cmd.color('grey96', 'elem He')\n\
+    cmd.color('grey75', 'elem Ho')\n\
+    cmd.color('grey89', 'elem H')\n\
+    cmd.color('grey49', 'elem In')\n\
+    cmd.color('grey16', 'elem I')\n\
+    cmd.color('grey29', 'elem Ir')\n\
+    cmd.color('grey48', 'elem Fe')\n\
+    cmd.color('grey65', 'elem Kr')\n\
+    cmd.color('grey76', 'elem La')\n\
+    cmd.color('grey19', 'elem Lr')\n\
+    cmd.color('grey34', 'elem Pb')\n\
+    cmd.color('grey60', 'elem Li')\n\
+    cmd.color('grey48', 'elem Lu')\n\
+    cmd.color('grey83', 'elem Mg')\n\
+    cmd.color('grey52', 'elem Mn')\n\
+    cmd.color('grey20', 'elem Mt')\n\
+    cmd.color('grey23', 'elem Md')\n\
+    cmd.color('grey72', 'elem Hg')\n\
+    cmd.color('grey62', 'elem Mo')\n\
+    cmd.color('grey93', 'elem Nd')\n\
+    cmd.color('grey85', 'elem Ne')\n\
+    cmd.color('grey43', 'elem Np')\n\
+    cmd.color('grey67', 'elem Ni')\n\
+    cmd.color('grey69', 'elem Nb')\n\
+    cmd.color('grey25', 'elem N')\n\
+    cmd.color('grey23', 'elem No')\n\
+    cmd.color('grey36', 'elem Os')\n\
+    cmd.color('grey44', 'elem O')\n\
+    cmd.color('grey33', 'elem Pd')\n\
+    cmd.color('grey57', 'elem P')\n\
+    cmd.color('grey82', 'elem Pt')\n\
+    cmd.color('grey37', 'elem Pu')\n\
+    cmd.color('grey40', 'elem Po')\n\
+    cmd.color('grey35', 'elem K')\n\
+    cmd.color('grey95', 'elem Pr')\n\
+    cmd.color('grey90', 'elem Pm')\n\
+    cmd.color('grey52', 'elem Pa')\n\
+    cmd.color('grey35', 'elem Ra')\n\
+    cmd.color('grey46', 'elem Rn')\n\
+    cmd.color('grey43', 'elem Re')\n\
+    cmd.color('grey39', 'elem Rh')\n\
+    cmd.color('grey27', 'elem Rb')\n\
+    cmd.color('grey47', 'elem Ru')\n\
+    cmd.color('grey19', 'elem Rf')\n\
+    cmd.color('grey89', 'elem Sm')\n\
+    cmd.color('grey90', 'elem Sc')\n\
+    cmd.color('grey20', 'elem Sg')\n\
+    cmd.color('grey66', 'elem Se')\n\
+    cmd.color('grey80', 'elem Si')\n\
+    cmd.color('grey75', 'elem Ag')\n\
+    cmd.color('grey46', 'elem Na')\n\
+    cmd.color('grey71', 'elem Sr')\n\
+    cmd.color('grey76', 'elem S')\n\
+    cmd.color('grey60', 'elem Ta')\n\
+    cmd.color('grey53', 'elem Tc')\n\
+    cmd.color('grey51', 'elem Te')\n\
+    cmd.color('grey81', 'elem Tb')\n\
+    cmd.color('grey39', 'elem Tl')\n\
+    cmd.color('grey59', 'elem Th')\n\
+    cmd.color('grey61', 'elem Tm')\n\
+    cmd.color('grey48', 'elem Sn')\n\
+    cmd.color('grey75', 'elem Ti')\n\
+    cmd.color('grey50', 'elem W')\n\
+    cmd.color('grey47', 'elem U')\n\
+    cmd.color('grey65', 'elem V')\n\
+    cmd.color('grey54', 'elem Xe')\n\
+    cmd.color('grey55', 'elem Yb')\n\
+    cmd.color('grey91', 'elem Y')\n\
+    cmd.color('grey51', 'elem Zn')\n\
+    cmd.color('grey81', 'elem Zr')\n\
+cmd.extend('grayscale',grayscale)\n\
+${0}",
     "caption": "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via gscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command.",
     "scope": "text.pml"
 },
 "importShortcuts": {
     "prefix": "importShortcuts",
-    "body": placeHolder,
-    "caption": "Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv')..",
+    "body": "cmd.do('run /Users/blaine/Scripts/PyMOLScripts/pymolshortcuts.py')\n\
+${0}",
+    "caption": "Import for loading the functions in the pymolshortcuts.py file. These functions can be run inside cmd.do() without the trailing (). For example, cmd.do('rv').",
     "scope": "text.pml"
 },
 "rv": {
     "prefix": "rv",
-    "body": placeHolder,
-    "caption": "Run the rv function from the pymolshortcuts.py file. ",
+    "body": "cmd.do('rv')\n\
+${0}",
+    "caption": "Run the rv function from the pymolshortcuts.py file.",
     "scope": "text.pml"
 },
 "AO": {
     "prefix": "AO",
-    "body": placeHolder,
-    "caption": "Run the AO function from the pymolshortcuts.py file to generate the photorealistic effect. ",
+    "body": "cmd.do('AO')\n\
+${0}",
+    "caption": "Run the AO function from the pymolshortcuts.py file to generate the photorealistic effect.",
     "scope": "text.pml"
 },
 "AOBW": {
     "prefix": "AOBW",
-    "body": placeHolder,
-    "caption": "Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale. ",
+    "body": "cmd.do('AOBW')\n\
+${0}",
+    "caption": "Run the AOBW function from the pymolshortcuts.py file to generate photorealistic effect in grayscale.",
     "scope": "text.pml"
 },
 "AOD": {
     "prefix": "AOD",
-    "body": placeHolder,
+    "body": "cmd.do('AOD')\n\
+${0}",
     "caption": "Run the AOD function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black.",
     "scope": "text.pml"
 },
 "AODBW": {
     "prefix": "AODBW",
-    "body": placeHolder,
-    "caption": "Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale. ",
+    "body": "cmd.do('AODBW')\n\
+${0}",
+    "caption": "Run the AODBW function from the pymolshortcuts.py file to generate photorealistic effect with carbons colored black and all other atoms colored in grayscale.",
     "scope": "text.pml"
 },
 "unitCellEdgesColorBlack": {
     "prefix": "unitCellEdgesColorBlack",
-    "body": ["cmd.write_html_ref('pymol-command-ref.html');",
-"$0"]
-,
+    "body": "# show the unit cell;\n\
+show cell;\n\
+color black, ${1:1lw9};\n\
+# color by atom with carbons colored green,\n\
+util.${2:cbag};\n\
+set cgo_line_width, 2.5;\n\
+png  ${3:testCell3}.png, ${4:1600},${5:1600};${6:600};${7:0}\n\
+${0}",
     "caption": "Color unit cell edges black. The settings for controlling the unit cell color are hard to find.",
     "scope": "text.pml"
 },
 "printColorByAtomCodes": {
     "prefix": "printColorByAtomCodes",
-    "body": ["cmd.volume_ramp_new('ramp_magenta', [0.01, 1.00, 0.00, 1.00, 0.00, 4.01, 1.00, 0.00, 1.00, 0.10, 4.99, 1.00, 0.00, 1.00, 0.50,]);",
-"$0"],
+    "body": "print('util.cbag, green carbons atoms' + '\n' + 'util.cbac, cyan carbon atoms' + '\n' + 'util.cbam, magenta carbon atoms' + '\n' + 'util.cbay, yellow carbons atoms' + '\n'+ 'util.cbas, salmon carbons atoms' + '\n' + 'util.cbaw, white carbons atoms' + '\n' + 'util.cbab, slate carbons atoms' + '\n' + 'util.cbao, bright orange carbons atoms' + '\n' + 'util.cbap, purple carbons atoms' + '\n' +'util.cbak, pink carbons atoms')\n\
+${0}",
     "caption": "Print the codes for color-by-atom (util.cba*) alternates.",
     "scope": "text.pml"
 },
 "grayscale": {
     "prefix": "grayscale",
-    "body": placeHolder,
+    "body": "python\n\
+def grayscale(selection='all'):\n\
+    '''Apply by entering grayscale'''\n\
+    cmd.color('grey64', 'elem Ac')\n\
+    cmd.color('grey67', 'elem Al')\n\
+    cmd.color('grey39', 'elem Am')\n\
+    cmd.color('grey46', 'elem Sb')\n\
+    cmd.color('grey75', 'elem Ar')\n\
+    cmd.color('grey58', 'elem As')\n\
+    cmd.color('grey33', 'elem At')\n\
+    cmd.color('grey56', 'elem Ba')\n\
+    cmd.color('grey40', 'elem Bk')\n\
+    cmd.color('grey87', 'elem Be')\n\
+    cmd.color('grey40', 'elem Bi')\n\
+    cmd.color('grey20', 'elem Bh')\n\
+    cmd.color('grey77', 'elem B')\n\
+    cmd.color('grey26', 'elem Br')\n\
+    cmd.color('grey86', 'elem Cd')\n\
+    cmd.color('grey76', 'elem Ca')\n\
+    cmd.color('grey34', 'elem Cf')\n\
+    cmd.color('grey77', 'elem C')\n\
+    cmd.color('grey98', 'elem Ce')\n\
+    cmd.color('grey17', 'elem Cs')\n\
+    cmd.color('grey70', 'elem Cl')\n\
+    cmd.color('grey60', 'elem Cr')\n\
+    cmd.color('grey64', 'elem Co')\n\
+    cmd.color('grey54', 'elem Cu')\n\
+    cmd.color('grey42', 'elem Cm')\n\
+    cmd.color('grey89', 'elem D')\n\
+    cmd.color('grey19', 'elem Db')\n\
+    cmd.color('grey79', 'elem Dy')\n\
+    cmd.color('grey29', 'elem Es')\n\
+    cmd.color('grey67', 'elem Er')\n\
+    cmd.color('grey85', 'elem Eu')\n\
+    cmd.color('grey28', 'elem Fm')\n\
+    cmd.color('grey93', 'elem F')\n\
+    cmd.color('grey8', 'elem Fr')\n\
+    cmd.color('grey82', 'elem Gd')\n\
+    cmd.color('grey60', 'elem Ga')\n\
+    cmd.color('grey52', 'elem Ge')\n\
+    cmd.color('grey80', 'elem Au')\n\
+    cmd.color('grey68', 'elem Hf')\n\
+    cmd.color('grey20', 'elem Hs')\n\
+    cmd.color('grey96', 'elem He')\n\
+    cmd.color('grey75', 'elem Ho')\n\
+    cmd.color('grey89', 'elem H')\n\
+    cmd.color('grey49', 'elem In')\n\
+    cmd.color('grey16', 'elem I')\n\
+    cmd.color('grey29', 'elem Ir')\n\
+    cmd.color('grey48', 'elem Fe')\n\
+    cmd.color('grey65', 'elem Kr')\n\
+    cmd.color('grey76', 'elem La')\n\
+    cmd.color('grey19', 'elem Lr')\n\
+    cmd.color('grey34', 'elem Pb')\n\
+    cmd.color('grey60', 'elem Li')\n\
+    cmd.color('grey48', 'elem Lu')\n\
+    cmd.color('grey83', 'elem Mg')\n\
+    cmd.color('grey52', 'elem Mn')\n\
+    cmd.color('grey20', 'elem Mt')\n\
+    cmd.color('grey23', 'elem Md')\n\
+    cmd.color('grey72', 'elem Hg')\n\
+    cmd.color('grey62', 'elem Mo')\n\
+    cmd.color('grey93', 'elem Nd')\n\
+    cmd.color('grey85', 'elem Ne')\n\
+    cmd.color('grey43', 'elem Np')\n\
+    cmd.color('grey67', 'elem Ni')\n\
+    cmd.color('grey69', 'elem Nb')\n\
+    cmd.color('grey25', 'elem N')\n\
+    cmd.color('grey23', 'elem No')\n\
+    cmd.color('grey36', 'elem Os')\n\
+    cmd.color('grey44', 'elem O')\n\
+    cmd.color('grey33', 'elem Pd')\n\
+    cmd.color('grey57', 'elem P')\n\
+    cmd.color('grey82', 'elem Pt')\n\
+    cmd.color('grey37', 'elem Pu')\n\
+    cmd.color('grey40', 'elem Po')\n\
+    cmd.color('grey35', 'elem K')\n\
+    cmd.color('grey95', 'elem Pr')\n\
+    cmd.color('grey90', 'elem Pm')\n\
+    cmd.color('grey52', 'elem Pa')\n\
+    cmd.color('grey35', 'elem Ra')\n\
+    cmd.color('grey46', 'elem Rn')\n\
+    cmd.color('grey43', 'elem Re')\n\
+    cmd.color('grey39', 'elem Rh')\n\
+    cmd.color('grey27', 'elem Rb')\n\
+    cmd.color('grey47', 'elem Ru')\n\
+    cmd.color('grey19', 'elem Rf')\n\
+    cmd.color('grey89', 'elem Sm')\n\
+    cmd.color('grey90', 'elem Sc')\n\
+    cmd.color('grey20', 'elem Sg')\n\
+    cmd.color('grey66', 'elem Se')\n\
+    cmd.color('grey80', 'elem Si')\n\
+    cmd.color('grey75', 'elem Ag')\n\
+    cmd.color('grey46', 'elem Na')\n\
+    cmd.color('grey71', 'elem Sr')\n\
+    cmd.color('grey76', 'elem S')\n\
+    cmd.color('grey60', 'elem Ta')\n\
+    cmd.color('grey53', 'elem Tc')\n\
+    cmd.color('grey51', 'elem Te')\n\
+    cmd.color('grey81', 'elem Tb')\n\
+    cmd.color('grey39', 'elem Tl')\n\
+    cmd.color('grey59', 'elem Th')\n\
+    cmd.color('grey61', 'elem Tm')\n\
+    cmd.color('grey48', 'elem Sn')\n\
+    cmd.color('grey75', 'elem Ti')\n\
+    cmd.color('grey50', 'elem W')\n\
+    cmd.color('grey47', 'elem U')\n\
+    cmd.color('grey65', 'elem V')\n\
+    cmd.color('grey54', 'elem Xe')\n\
+    cmd.color('grey55', 'elem Yb')\n\
+    cmd.color('grey91', 'elem Y')\n\
+    cmd.color('grey51', 'elem Zn')\n\
+    cmd.color('grey81', 'elem Zr')\n\
+cmd.extend('grayscale',grayscale)\n\
+python end\n\
+\n\
+${0}",
     "caption": "Apply grayscale coloring using a grayscale version of the PyMOL colors for the elements. This is a Python function. It is invoked in a script file via grayscale(). There is a corresponding gscale shortcut in pymolshortcuts.py that is invoked in a pml script by entering gsale if the functions in pymolshortcuts.py have been loaded with the run pymolshortcuts.py command.",
     "scope": "text.pml"
 },
 "yrb": {
     "prefix": "yrb",
-    "body": placeHolder,
+    "body": "cmd.do('yrb')\n\
+${0}",
     "caption": "Run the yrb function from the pymolshortcuts.py file. ",
     "scope": "text.pml"
 },
 "timcolor": {
     "prefix": "timcolor",
-    "body": placeHolder,
-    "caption": "Run the timcolor function from the pymolshortcuts.py file to color atoms accordings to Tim Mather's biophysical coloring scheme for proteins.. ",
+    "body": "cmd.do('timcolor')\n\
+${0}",
+    "caption": "Run the timcolor function from the pymolshortcuts.py file to color atoms accordings to Tim Mather's biophysical coloring scheme for proteins.",
     "scope": "text.pml"
 },
 "colorh1": {
     "prefix": "colorh1",
-    "body": placeHolder,
-    "caption": "Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1. ",
+    "body": "cmd.do('colorh1')\n\
+${0}",
+    "caption": "Run the colorh1 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 1.",
     "scope": "text.pml"
 },
 "colorh2": {
     "prefix": "colorh2",
-    "body": placeHolder,
-    "caption": "Run the colorh2 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 2. ",
+    "body": "cmd.do('colorh2')\n\
+${0}",
+    "caption": "Run the colorh2 function from the pymolshortcuts.py file to color protein molecules according to the Eisenberg hydrophobicity scale, scheme 2.",
     "scope": "text.pml"
 },
 "cav": {
     "prefix": "cav",
-    "body": placeHolder,
+    "body": "cmd.do('cav')\n\
+${0}",
     "caption": "Run the cav function from the pymolshortcuts.py file to show buried cavities and pockets as molecular surfaces.",
     "scope": "text.pml"
 },
 "PE125": {
     "prefix": "PE125",
-    "body": placeHolder,
+    "body": "cmd.do('PE125')\n\
+${0}",
     "caption": "Run the PE125 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.125 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "PE25": {
     "prefix": "PE25",
-    "body": placeHolder,
+    "body": "cmd.do('PE25')\n\
+${0}",
     "caption": "Run the PE25 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.25 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "PE50": {
     "prefix": "PE50",
-    "body": placeHolder,
+    "body": "cmd.do('PE50')\n\
+${0}",
     "caption": "Run the PE50 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.50 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "PE75": {
     "prefix": "PE75",
-    "body": placeHolder,
+    "body": "cmd.do('PE75')\n\
+${0}",
     "caption": "Run the PE75 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.75 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "PE85": {
     "prefix": "PE85",
-    "body": placeHolder,
+    "body": "cmd.do('PE85')\n\
+${0}",
     "caption": "Run the PE85 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.85 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "PE66": {
     "prefix": "PE66",
-    "body": placeHolder,
+    "body": "cmd.do('PE66')\n\
+${0}",
     "caption": "Run the PE66 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.66 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "PE33": {
     "prefix": "PE33",
-    "body": placeHolder,
+    "body": "cmd.do('PE33')\n\
+${0}",
     "caption": "Run the PE33 function from the pymolshortcuts.py file to show the pearl effect with the inner sphere scaled by 0.33 of the van der Waals surface.",
     "scope": "text.pml"
 },
 "cntccp4emaps": {
     "prefix": "cntccp4emaps",
-    "body": placeHolder,
+    "body": "print('Count the number of ccp4 electron density files in current directory.');\n\
+print('Usage: cntccp4s');\n\
+myPath = os.getcwd();\n\
+ccp4Counter = len(glob.glob1(myPath,'*.pse'));\n\
+print('Number of number of ccp4 electron density files in the current directory: ', ccp4Counter);\n\
+${0}",
     "caption": "Count number of *.ccp4 (electron density map) files in current directory.",
     "scope": "text.pml"
 },
 "cntfiles": {
     "prefix": "cntfiles",
-    "body": placeHolder,
+    "body": "print('Count the files in the directory.')\n\
+print('Usage: cntfiles.')\n\
+# simple version for working with CWD\n\
+print('Number of files in current working directory: ', len([name for name in os.listdir('.') if os.path.isfile(name)]))\n\
+${0}",
     "caption": "Count number of files in current directory.",
     "scope": "text.pml"
 },
 "cntlogs": {
     "prefix": "cntlogs",
-    "body": placeHolder,
+    "body": "print('Count the number of log image files in current directory.');\n\
+print('Usage: cntlogs');\n\
+myPath = os.getcwd();\n\
+logCounter = len(glob.glob1(myPath,'*.log'));\n\
+print('Number of number of log image files in the current directory: ', logCounter);\n\
+${0}",
     "caption": "Count number of *.log files in current directory.",
     "scope": "text.pml"
 },
 "cntmtzs": {
     "prefix": "cntmtzs",
-    "body": placeHolder,
+    "body": "print('Count the number of mtz structure factor files in current directory.');\n\
+print('Usage: cntmtzs');\n\
+myPath = os.getcwd();\n\
+mtzCounter = len(glob.glob1(myPath,'*.mtz'));\n\
+print('Number of number of mtz structure factor  files in the current directory: ', mtzCounter);\n\
+${0}",
     "caption": "Count number of *.mtz files in current directory.",
     "scope": "text.pml"
 },
 "cntpdbs": {
     "prefix": "cntpdbs",
-    "body": placeHolder,
+    "body": "print('Count the number of pdb files in the current directory.')\n\
+print('Usage: cntpdb')\n\
+myPath = os.getcwd()\n\
+pdbCounter = len(glob.glob1(myPath,'*.pdb'))\n\
+print('Number of pdb files in the current directory: ', pdbCounter)\n\
+${0}",
     "caption": "Count number of *.pdb files in current directory.",
     "scope": "text.pml"
 },
 "cntpmls": {
     "prefix": "cntpmls",
-    "body": placeHolder,
+    "body": "print('Count the number of pml (Pymol macro language) files in current directory.');\n\
+print('Usage: cntpmls');\n\
+myPath = os.getcwd();\n\
+pmlCounter = len(glob.glob1(myPath,'*.pml'));\n\
+print('Number of pml files in the current directory: ', pmlCounter);\n\
+${0}",
     "caption": "Count number of *.pml files in current directory.",
     "scope": "text.pml"
 },
 "cntpngs": {
     "prefix": "cntpngs",
-    "body": placeHolder,
+    "body": "print('Count the number of png image files in current directory.');\n\
+print('Usage: cntpngs');\n\
+myPath = os.getcwd();\n\
+pngCounter = len(glob.glob1(myPath,'*.png'));\n\
+print('Number of number of png image files in the current directory: ', pngCounter);\n\
+${0}",
     "caption": "Count number of *.png files in current directory.",
     "scope": "text.pml"
 },
 "cntpses": {
     "prefix": "cntpses",
-    "body": placeHolder,
+    "body": "print('Count the number of *.pse (session) files in current directory.');\n\
+print('Usage: cntpses');\n\
+myPath = os.getcwd();\n\
+pseCounter = len(glob.glob1(myPath,'*.pse'));\n\
+print('Number of *.pse (session) files in the current directory: ', pseCounter);\n\
+${0}",
     "caption": "Count number of *.pse files in current directory.",
     "scope": "text.pml"
 },
 "rmhb": {
     "prefix": "rmhb",
-    "body": placeHolder,
+    "body": "cmd.delete('hbonds')\n\
+${0}",
     "caption": "Delete all H-bonds in the selection, which is all by default.",
     "scope": "text.pml"
 },
 "hb": {
     "prefix": "hb",
-    "body": placeHolder,
+    "body": "cmd.distance('hbonds', 'all', 'all', '3.2', mode='2')\n\
+cmd.set('dash_gap','0.4')\n\
+cmd.set('dash_color','grey30')\n\
+cmd.set('dash_width','1.5')\n\
+cmd.set('dash_length','.25')\n\
+print('Enter rmhb to remove the hbonds.')\n\
+${0}",
     "caption": "Creates an object of all H-bonds found by PyMOL.",
     "scope": "text.pml"
 },
 "rmd": {
     "prefix": "rmd",
-    "body": placeHolder,
+    "body": "cmd.do('delete measure*')\n\
+cmd.do('delete m*_*')\n\
+cmd.do('delete dist*')\n\
+${0}",
     "caption": "Remove all measurement objects in the interal GUI.",
     "scope": "text.pml"
 },
 "nmr": {
     "prefix": "nmr",
-    "body": placeHolder,
+    "body": "set all_states, on\n\
+${0}",
     "caption": "Show all models in a nmr structure.",
     "scope": "text.pml"
 },
 "nmroff": {
     "prefix": "nmroff",
-    "body": placeHolder,
+    "body": "set all_states, off\n\
+${0}",
     "caption": "Hide all but first model in a nmr structure.",
     "scope": "text.pml"
 },
 "nmroffpy": {
     "prefix": "nmroffpy",
-    "body": placeHolder,
+    "body": "cmd.do('set all_states, off')\n\
+${0}",
     "caption": "Hide all but the first model in a nmr structure.",
     "scope": "text.pml"
 },
 "nmrpy": {
     "prefix": "nmrpy",
-    "body": placeHolder,
+    "body": "cmd.do('set all_states, on')\n\
+${0}",
     "caption": "Show all models in a nmr structure.",
     "scope": "text.pml"
 },
 "loadAndAlignManyFiles1": {
     "prefix": "loadAndAlignManyFiles1",
-    "body": placeHolder,
+    "body": "# Copyright (c) 2004 Robert L. Campbell\n\
+#\n\
+# Modified for use with Python3.\n\
+# Jan. 29, 2020 \n\
+# Blaine Mooers, PhD\n\
+# Univ. of Oklahoma Health Sciences Center\n\
+#\n\
+#\n\
+from pymol import cmd\n\
+import glob\n\
+\n\
+def loadFiles(files):\n\
+  '''\n\
+  load_files <files>\n\
+\n\
+  loads multiple files (using filename globbing)\n\
+  into a multiple objects named as the files are (e.g. collection of\n\
+  downloaded PDB files).\n\
+\n\
+  e.g. load_files prot_*.pdb\n\
+  '''\n\
+  file_list = glob.glob(files)\n\
+  if file_list:\n\
+    file_list.sort()\n\
+    for i in file_list:\n\
+      cmd.load(i)\n\
+  else:\n\
+    print('No files found for pattern %s' % files)\n\
+\n\
+cmd.extend('loadFiles',loadFiles)\n\
+\n\
+${0}",
     "caption": "These are the instructions for loading and aligning multiple files. To save multiple models in a file to separate pdb files.",
     "scope": "text.pml"
 },
 "loadAndAlignManyFiles2": {
     "prefix": "loadAndAlignManyFiles2",
-    "body": placeHolder,
+    "body": "#  Yes, this construct is a list comprehension inside a list comprehension!;\n\
+run ${1:~/Scripts/}optAlignRNA.py;\n\
+[[optAlignRNA(x, y) for x in cmd.get_names()] for y in cmd.get_names()];\n\
+${0}",
     "caption": "To align all of the loaded RNA structures in all possible combinations by their C1' carbon atoms.",
-    "scope": "text.pml"
-},
-"optAlignRNA": {
-    "prefix": "optAlignRNA",
-    "body": placeHolder,
-    "caption": "OptiAlign.py by Jason Vertree modified for aligning multiple RNA structures.",
     "scope": "text.pml"
 },
 "ao": {
     "prefix": "ao",
-    "body": placeHolder,
+    "body": "set_color oxygen, [1.0,0.4,0.4];\n\
+set_color nitrogen, [0.5,0.5,1.0];\n\
+remove solvent;\n\
+as spheres;\n\
+util.cbaw;\n\
+bg white;\n\
+set light_count,10;\n\
+set spec_count,1;\n\
+set shininess, 10;\n\
+set specular,0.25;\n\
+set ambient,0;\n\
+set direct,0;\n\
+set reflect,1.5;\n\
+set ray_shadow_decay_factor, 0.1;\n\
+set ray_shadow_decay_range, 2;\n\
+set depth_cue, 0;\n\
+ray;\n\
+\n\
+${0}",
     "caption": "Apply the ambient occlussion effect to get the photorealistic effect.",
     "scope": "text.pml"
 },
 "bsfr": {
     "prefix": "bsfr",
-    "body": placeHolder,
-    "caption": "Ball-and-stick plus filled rings. ",
+    "body": "# Edit the selection that is named ligand here.;\n\
+create ligand, ${1:/bluComplex/C/A/1101};\n\
+preset.ball_and_stick(selection='ligand');\n\
+util.cbaw ligand;\n\
+set stick_color, white, ligand;\n\
+set valence, off, ligand;\n\
+unset valence;\n\
+# above command is required after using preset;\n\
+set sphere_color, black, elem C and ligand;\n\
+set sphere_color, red, elem O and ligand;\n\
+set sphere_color, blue, elem N and ligand;\n\
+set sphere_color, lightblue, elem F and ligand;\n\
+set stick_radius, 0.12;\n\
+set sphere_quality, 4;\n\
+set cartoon_ring_finder, 4, ligand;\n\
+set cartoon_ring_mode, 3, ligand;\n\
+set cartoon_ring_width, 0.12, ligand;\n\
+set cartoon_ring_transparency, .0, ligand;\n\
+show cartoon, ligand;\n\
+${0}",
+    "caption": "Ball-and-stick plus filled ring representation for ligands.",
     "scope": "text.pml"
 },
 "wallart": {
     "prefix": "wallart",
-    "body": placeHolder,
-    "caption": "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"",
+    "body": "# Reset hash_max from 100 to 2000 to enable the saving of images of large size for office wall hangings, eg. 30 x 30 inches. \n\
+hash_max=2000\n\
+${0}",
+    "caption": "Reset hash_max from 100 to 2000 to enable the saving of 28 inches by 28 inches.",
     "scope": "text.pml"
 },
 "wallartpy": {
     "prefix": "wallartpy",
-    "body": placeHolder,
-    "caption": "Reset hash_max from 100 to 2000 to enable the saving of 28" by 28"",
+    "body": "# Reset hash_max from 100 to 2000 to enable the saving of images of large size for office wall hangings, eg. 30 x 30 inches.;\n\
+cmd.do('hash_max=2000');\n\
+${0}",
+    "caption": "Reset hash_max from 100 to 2000 to enable the saving of 28 inches by 28 inches.",
     "scope": "text.pml"
 },
 "cblindCartoon": {
     "prefix": "cblindCartoon",
-    "body": placeHolder,
+    "body": "CB;\n\
+color cb_lightblue, ss h;\n\
+color cb_vermillion, ss s;\n\
+color lightorange, ss l+'';\n\
+\n\
+${0}",
     "caption": "Color cartoon with colorblind friendly colors. Requires that the pymolshortcuts.py file is loaded. This has been applied to PDB-ID 7JU6. The protein is human RET kinase, and the drug is selpercatinib, a FDA approved drug for treating several cancers.",
+    "scope": "text.pml"
+},
+"importPyMOLandShortcuts": {
+    "prefix": "importPyMOLandShortcuts",
+    "body": "from pymol import cmd\n\
+from IPython.display import Image\n\
+PATH = '${1:/Users/blaine/}'\n\
+cmd.do('run ${2:/Users/blaine/Scripts/PyMOLScripts/pymolshortcuts.py')\n\
+${0}",
+    "caption": "Imports needed for most uses of pymol in Jupyter. Combination of importPyMOL and importPythonDisplay.",
     "scope": "text.pml"
 },
