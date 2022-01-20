@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4317774.svg)](https://doi.org/10.5281/zenodo.4317774)
-
+![Version](https://img.shields.io/static/v1?label=pymolpysnips&message=0.1&color=brightcolor)
 <!--
 Hit counter and download counters are not working.
 [![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
