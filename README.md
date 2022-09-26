@@ -174,14 +174,17 @@ Mooers, BHM, Brown, ME. Templates for writing PyMOL scripts. Protein Science. 20
 For BibTex library.bib file:
 
 ```bibtex
-@article{mooers2020templates,
-  title={Templates for Writing PyMOL Scripts},
-  author={Mooers, Blaine HM and Brown, Marina},
+@article{mooers2021templates,
+  title={Templates for writing PyMOL scripts},
+  author={Mooers, Blaine HM and Brown, Marina E},
   journal={Protein Science},
-  year={2020},
-  publisher={Wiley Online Library},
+  volume={30},
+  number={1},
+  pages={262--269},
+  year={2021},
+  publisher={Wiley Online Library}
   url={https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.3997}
-  doi=(10.1002/pro.3997)
+  doi={10.1002/pro.3997}
   abstract={PyMOL commands are used to exert exquisite control over the 
   appearance of a molecular model.This control has made PyMOL popular 
   for making images of protein structures for publications and presentations. 
@@ -206,12 +209,15 @@ For ENDNOTE library.enw file.
 
 ```bash
 %0 Journal Article
-%T Templates for Writing PyMOL Scripts
+%T Templates for writing PyMOL scripts
 %A Mooers, Blaine HM
-%A Brown, Marina
+%A Brown, Marina E
 %J Protein Science
+%V 30
+%N 1
+%P 262-269
 %@ 0961-8368
-%D 2020
+%D 2021
 %I Wiley Online Library
 ```
 
@@ -228,3 +234,5 @@ For ENDNOTE library.enw file.
 - [colabOpenSourcePyMOLpySnips](https://github.com/MooersLab/colabOpenSourcePyMOLpySnips)
 - [colabPyMOLpySnips](https://github.com/MooersLab/colabPyMOLpySnips)
 - [PyMOLwallhangings](https://github.com/MooersLab/PyMOLwallhangings)
+
+[Return to Table of Contents](#table-of-contents)
