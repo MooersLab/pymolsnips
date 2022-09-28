@@ -13,8 +13,21 @@ Go to https://shields.io/category/version to generate release badge in Markdown.
 Go to https://shields.io/downloads to generate badge for all downloads.
 -->
 
-
 For more details on installing libraries for specific editors, go to the [GitHub Page](https://mooerslab.github.io/pymolsnips/).
+
+## Related Repos
+
+- [easypymol](https://github.com/MooersLab/EasyPyMOL/edit/master/README.md)
+- [pymolshortcuts (useful for non-coders)](https://github.com/MooersLab/pymolshortcuts)
+- [orgpymolpysnips](https://github.com/MooersLab/orgpymolpysnips)
+- [rstudiopymolpysnips](https://github.com/MooersLab/rstudiopymolpysnips)
+- [taggedpymolpysnips](https://github.com/MooersLab/taggedpymolpysnips)
+- [jupyterlabpymolpysnips](https://github.com/MooersLab/jupyterlabpymolpysnips)
+- [colabOpenSourcePyMOLpySnips](https://github.com/MooersLab/colabOpenSourcePyMOLpySnips)
+- [colabPyMOLpySnips](https://github.com/MooersLab/colabPyMOLpySnips)
+- [PyMOLwallhangings](https://github.com/MooersLab/PyMOLwallhangings)
+
+[Return to Table of Contents](#table-of-contents)
 
 ## Animated demo of snippet use in Visual Studio Code
 
@@ -220,19 +233,5 @@ For ENDNOTE library.enw file.
 %D 2021
 %I Wiley Online Library
 ```
-
-[Return to Table of Contents](#table-of-contents)
-
-## Related Repos
-
-- [easypymol](https://github.com/MooersLab/EasyPyMOL/edit/master/README.md)
-- [pymolshortcuts](https://github.com/MooersLab/pymolshortcuts)
-- [orgpymolpysnips](https://github.com/MooersLab/orgpymolpysnips)
-- [rstudiopymolpysnips](https://github.com/MooersLab/rstudiopymolpysnips)
-- [taggedpymolpysnips](https://github.com/MooersLab/taggedpymolpysnips)
-- [jupyterlabpymolpysnips](https://github.com/MooersLab/jupyterlabpymolpysnips)
-- [colabOpenSourcePyMOLpySnips](https://github.com/MooersLab/colabOpenSourcePyMOLpySnips)
-- [colabPyMOLpySnips](https://github.com/MooersLab/colabPyMOLpySnips)
-- [PyMOLwallhangings](https://github.com/MooersLab/PyMOLwallhangings)
 
 [Return to Table of Contents](#table-of-contents)
