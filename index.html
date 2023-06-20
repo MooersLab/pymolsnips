@@ -2287,41 +2287,19 @@ The latter feature is very helpful for avoiding the insertion of the wrong snipp
 	<p> I assume that VS Code has already been installed and is operating correcty on Windows 10 or 11.</p>
 
 	<ol>
-	<li>Install BioSnyntax package from the VSC marketplace. This will enable recognition of PyMOL script files with the file extension pml. See animation below.</li>
-        
-	<p align="center"><img src="gifs/VSCaoSnip2.gif"></p>
- 
+	<li>Install BioSnyntax package from the VSC marketplace. This will enable recognition of PyMOL script files with the file extension pml. See animation below. You will be asked to select a theme, just select bioSyntax.</li>
+        <p align="center"><img src="gifs/VSCbioSyntax.gif"></p>
 	<li>Download the pml.json file from pymolsnips/vscpymolsnips</li>
 	<li> Move this file to <code> \Users\<yourname>\AppData\Roaming\Code\User\snippets\ </code>
 (AppData may be hidden if you use the Windows GUI to move the file. Instead, open the Command Prompt and use the Unix cmv command to move the pml.json file into the snippets folder.)</li>
         <li> To test, open a new file and set its file type by selecting <b>pml</b> via the language selector in the lower righthand corner of the VSC GUI. Now type ao​ and hit tab. This should insert the ao snippet for ambient occlusion. </li>
 	</ol>
-
+<p align="center"><img src="gifs/VSCaoSnip2.gif"></p>
+ 
 <p>
 If you already have a <em>pml</em> file for snippets, simply append the <em>pml.json</em> file to the existing file (by copying and pasting).
 </p>
-
-
-
-<b> To install BioSyntax:</b>	
-<p>
-To install <em>bioSyntax</em> via <em>View &rarr; Extensions</em>.
-Search for <em>bioSyntax</em> and hit the <b>Install</b> button.
-You will be asked to select a theme, just select bioSyntax.
-</p>
-
-
-<p align="center"><img src="gifs/VSCbioSyntax.gif"></p>
-
-<p>
-Open a file with a <em>.pml</em> file extension.
-You should see <em>pml</em> in the lower right on the bottom panel.
-Type the tab trigger <b>ao</b> to try inserting the snippet for the ambient occlusion effect.
-You should see syntax highlighting.
-</p>
-
-<p align="center"><img src="gifs/VSCaoSnip2.gif"></p>
-
+	
 <p>
 <em>VSC</em> also supports the use of mirrored tab stops.
 In the example shown below, I am using the snippet <em>threeMaps</em>.
