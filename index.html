@@ -2282,36 +2282,30 @@ The latter feature is very helpful for avoiding the insertion of the wrong snipp
 </p>
 
 
-<b>Installing and using snippets with Visual Studio Code</b>
+<b>Installing and using snippets with Visual Studio Code, Windows:</b>
+
+	<p> I assume that VS Code has already been installed and is operating correcty on Windows 10 or 11.</p>
+
+	<ol>
+	<li>Install BioSnyntax package from the VSC marketplace. This will enable recognition of PyMOL script files with the file extension pml. See animation below.</li>
+        
+	<p align="center"><img src="gifs/VSCaoSnip2.gif"></p>
+ 
+	<li>Download the pml.json file from pymolsnips/vscpymolsnips</li>
+	<li> Move this file to <code> \Users\<yourname>\AppData\Roaming\Code\User\snippets\ </code>
+(AppData may be hidden if you use the Windows GUI to move the file. Instead, open the Command Prompt and use the Unix cmv command to move the pml.json file into the snippets folder.)</li>
+        <li> To test, open a new file and set its file type by selecting <b>pml</b> via the language selector in the lower righthand corner of the VSC GUI. Now type ao​ and hit tab. This should insert the ao snippet for ambient occlusion. </li>
+	</ol>
 
 <p>
-Windows users will need to install the 'Remote - WSL' extension for the windows/Linux system.
-A prompt should pop-up during your first launch of <em>VSC</em>. Install this.
-</p>
-
-<p>
-From the above folder <em>vscpymolsnips</em>, download and move the file <em>pml.json</em> to <code>~/Library/Application\ Support/Code/User/snippets</code> on the Mac; on windows,<code>$HOME/APPDATA\Roaming\Code\User\snippets\pml.json</code>; on Linux, <code>$HOME/.config/Code/User/snippets/pml.json</code>.
-</p>
-
-<p>
-For Mac users in the <em>vscpymolsnips</em> folder:
-</p>
-
-
-<pre>
-<code>
-mv pml.json ~/Library/Application\ Support/Code/User/snippets
-</code>
-</pre>
-
-<p>
-For Windows users, select the settings button (gear icon) in the bottom left corner. 
-Go to <em>Settings &rarr; User Snippets &rarr; pml</em>.
 If you already have a <em>pml</em> file for snippets, simply append the <em>pml.json</em> file to the existing file (by copying and pasting).
 </p>
 
+
+
+<b> To install BioSyntax:</b>	
 <p>
-Next, install <em>bioSyntax</em> via <em>View &rarr; Extensions</em>.
+To install <em>bioSyntax</em> via <em>View &rarr; Extensions</em>.
 Search for <em>bioSyntax</em> and hit the <b>Install</b> button.
 You will be asked to select a theme, just select bioSyntax.
 </p>
