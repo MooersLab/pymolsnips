@@ -1,16 +1,17 @@
-# pymolpysnips: Templates for writing PyMOL scripts.
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4317774.svg)](https://doi.org/10.5281/zenodo.4317774)
-![Version](https://img.shields.io/static/v1?label=pymolpysnips&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=pymolpysnips&message=0.2&color=brightcolor)
+
+# pymolpysnips: Templates for writing PyMOL scripts.
+
 <!--
 Hit counter and download counters are not working.
 [![HitCount](http://hits.dwyl.com/MooersLab/pymolsnips.svg)](http://hits.dwyl.com/MooersLab/pymolsnips)
 ![GitHub all releases](https://img.shields.io/github/downloads/MooersLab/pymolsnips/total)
 Get zendo badge at Zendo.
-Go to for https://hits.dwyl.com to hit counter (all-time hits starting December 1).
-Go to https://shields.io/category/version to generate release badge in Markdown.
-Go to https://shields.io/downloads to generate badge for all downloads.
+Go to https://hits.dwyl.com to hit the counter (all-time hits starting December 1).
+Go to https://shields.io/category/version to generate a release badge in Markdown.
+Go to https://shields.io/downloads to generate a badge for all downloads.
 -->
 
 For more details on installing libraries for specific editors, go to the [GitHub Page](https://mooerslab.github.io/pymolsnips/).
@@ -32,7 +33,7 @@ For more details on installing libraries for specific editors, go to the [GitHub
 ## Animated demo of snippet use in Visual Studio Code
 
 <p>The animation below demonstrates the use of the <b>ao</b> tab trigger in the text editor <em>Visual Studio Code</em> to insert 17 lines of code for generating the ambient occlusion effect.
-Two-levels of cascading menus appear.
+Two levels of cascading menus appear.
 The menu on the left shows the alternate tab triggers that contain the letters <b>a</b> and <b>o</b>.
 The corresponding code for the selected tab trigger is displayed in the right window.
 By entering these two letters, you have inserted 16 lines of code!
@@ -44,22 +45,22 @@ The result of applying a variant of the above code to a 27-nucleotide RNA hairpi
 
 <p align="center"><img src="./images/5d99AOD.png" alt="HTML5 Icon" style="width:364px;height:630px;"></p>
 
-There is not an option in a pulldown menu in PyMOL to make such an image: A script is required.
+To make such an image, PyMOL does not have a pulldown menu option; a script is required.
 
-This code can be applied to any molecular object in PyMOL's veiwport, not just RNA.
+This code can be applied to any molecular object in PyMOL's viewport, not just RNA.
 
 If you are not ready to write PyMOL scripts, please consider using [PyMOL shortcuts](https://github.com/MooersLab/pymolshortcuts) to enhance your productivity in PyMOL interactive sessions.
-For example, the above ambient occlussion effect can be invoked at anytime by entering `AO` at the PyMOL prompt, if the pymolshortcuts.py file has been loaded.
+For example, the above ambient occlusion effect can be invoked at any time by entering `AO` at the PyMOL prompt if the pymolshortcuts.py file has been loaded.
 
 ## Application Description
 
-The pymolsnips library contains 256 code fragments (i.e, templates or snippets) written in the PyMOL macro language (pml) for eighteen text editors.
+The pymolsnips library contains 256 code fragments (i.e., templates or snippets) written in the PyMOL macro language (pml) for eighteen text editors.
 It is highly likely that you have experience with one of these text editors.
 If you want support for an additional text editor, please open an issue under the issues tab above or send me an e-mail. 
 My contact information is at the bottom.
 
 Note that each line in a snippet is terminated with a semicolon. 
-This means that a user can copy multilines of code out of their script file and paste those multiple lines at the PyMOL prompt in one operation. 
+This means that a user can copy multiple lines of code out of their script file and paste them at the PyMOL prompt in one operation. 
 This is an alternative to saving and reloading the script file.
 
 For more details on using the snippets, a gallery of output, the supported text editors, **library installation**, and the content of the library, please see the associated [GitHub Page](https://mooerslab.github.io/pymolsnips/).
@@ -101,7 +102,7 @@ Note that multiple versions of PyMOL can operate side-by-side on a computer: You
 <a id="installation"><h2>Installation</h2></a>
 
 Unfortunately, GitHub does not yet provide an easy way to download part of a repository. 
-It is easier to download the whole repository, pull out the parts that you need, and delete the rest.
+It is easier to download the whole repository, select the necessary parts, and delete the rest.
 Setting up and maintaining 18 separate repositories was too unwieldy.
 
 Download all of the libraries by using the command `git clone https://github.com/MooersLab/pymolsnips.git` in a terminal window if you have *git* installed.
@@ -134,14 +135,14 @@ These gifs convey the essential knowledge in seconds.
 
 <a id="testing"><h2>Testing</h2></a>
 
-Try the **ao** snippet. You should get a result similar to the one should in the demo above.
+Try the **ao** snippet. You should get a result similar to the one in the demo above.
 
 [Return to Table of Contents](#table-of-contents)
 
 
 <a id="requests"><h2>Requests for new snippets and text editors</h2></a>
 
-Please use the **Issues tab** above to request support for additional text editors, to suggest additional snippets, or to ask questions.
+Please use the **Issues tab** above to request support for additional text editors, suggest additional snippets, or ask questions.
 Alternatively, you can send [e-mail](#contact-information) to me.
 
 Questions about PyMOL should be directed to the [PyMOL Mailing List](https://pymolwiki.org/index.php/PyMOL_mailing_list).
@@ -151,7 +152,7 @@ Questions about PyMOL should be directed to the [PyMOL Mailing List](https://pym
 
 <a id="bugreports"><h2>Bug reports</h2></a>
 
-Use the **Issues tab** above to report bugs or send [e-mail](#contact-information) to me.
+Please use the **Issues tab** above to report bugs or send me [e-mail](# contact information) via the form.
 Refer bugs in the text editors to the developers of the text editors.
 
 [Return to Table of Contents](#table-of-contents)
@@ -175,14 +176,10 @@ I can be reached via the Issue tab above or via e-mail: `blaine-mooers at ouhsc.
 <a id="citation"><h2>Citation</h2></a>
 
 
-If you use this library to make figures for publication, please site the following publication:
+If you use this library to make figures for publication, please cite the following publication:
 
 
-Mooers, B. H., & Brown, M. (2020). Templates for Writing PyMOL Scripts. Protein Science. 30 Nov. 10.1002/pro.3997
-
-OR
-
-Mooers, BHM, Brown, ME. Templates for writing PyMOL scripts. Protein Science. 2020; 1–8. https://doi.org/10.1002/pro.3997
+Mooers, BHM, Brown, ME. Templates for writing PyMOL scripts. Protein Science. 2021; 262--269. https://doi.org/10.1002/pro.3997
 
 For BibTex library.bib file:
 
@@ -199,7 +196,7 @@ For BibTex library.bib file:
   url={https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.3997}
   doi={10.1002/pro.3997}
   abstract={PyMOL commands are used to exert exquisite control over the 
-  appearance of a molecular model.This control has made PyMOL popular 
+  appearance of a molecular model. This control has made PyMOL popular 
   for making images of protein structures for publications and presentations. 
   However, many users have poor recall of the commands due to infrequent 
   use of PyMOL. This poor recall hinders the writing of new code in scripts. 
@@ -233,5 +230,16 @@ For ENDNOTE library.enw file.
 %D 2021
 %I Wiley Online Library
 ```
+
+|Version      | Changes                                                                                                                                    | Date                 |
+|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
+| Version 0.2 |  Added funding and update table                                                                                                             | 2024 April 13        |
+
+
+
+## Funding
+- NIH: R01 CA242845, R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel); P20GM103640 and P30GM145423 (PI: A. West)
+
 
 [Return to Table of Contents](#table-of-contents)
